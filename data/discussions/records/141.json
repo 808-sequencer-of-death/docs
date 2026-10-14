@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-141",
+  "node_id": "D_kwDOOxfoic4AmT-1",
+  "number": 141,
+  "title": "May 13 20x Community Update Special Event: Independent Assessor Roundtable",
+  "url": "https://github.com/FedRAMP/community/discussions/141",
+  "category": "20x Discussion",
+  "category_slug": "20x-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "emu-gov",
+  "author_is_official": true,
+  "created_at": "2026-05-11T20:21:49Z",
+  "updated_at": "2026-06-18T19:41:35Z",
+  "last_edited_at": "2026-05-12T00:51:48Z",
+  "closed": true,
+  "closed_at": "2026-06-18T19:41:35Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "### Please join us for an [extended special event](https://www.fedramp.gov/event/20x-cwg-2026-05-13/) as we get to hear from members of our 20x Independent Assessor Community!\r\n\r\n### Special Guests\r\n---\r\n#### Lunarline\r\nLesley Hess, FedRAMP Lead\r\n\r\n> As the 3PAO Lead for Lunarline, Lesley Hess directs the FedRAMP Program for the industry’s longest accredited 3PAO. She maintains executive oversight of all cybersecurity assessment activities and acts as the authoritative point of contact for the FedRAMP PMO, bridging the gap between legacy expertise and modern compliance requirements.\r\n\r\n#### Fortreum\r\nDavid Clevenger, Director\r\n\r\n> Currently serving as the Director over the entire Fortreum practice that performs FedRAMP, CMMC, PCI, ISO, SOC, HIPAA, FISMA, CJIS, NIST 800-171 and other similar frameworks.\r\n\r\n#### First Information Technology Services (FITS)\r\nEric Moss, Principal Information Security Consultant\r\n\r\n> Primarily FedRAMP Lead Assessor. Additionally FedRAMP advisor, and CMMC assessor depending on current workflow.\r\n\r\n#### Coalfire Systems, Inc.\r\nJorden Foster, Senior Director, Assessment \r\n\r\n> Jorden is a leader within Coalfire’s 3PAO, responsible for methodology and accreditation oversight. He supports client assessments across multiple frameworks with a focus on FedRAMP.\r\n\r\n### Planned Agenda\r\n---\r\n\r\nTime | Topic\r\n-- | --\r\n1:00 PM | Welcome and Opening Remarks (3 mins)\r\n1:03 PM | FedRAMP 20x Community Updates (2 mins)FedRAMP Cybersecurity Service\r\n1:05 PM | Kick-off Roundtable (10 mins)Purpose of the discussion, reminder about 3PAO vs Independent Assessment Services2min intro for each panelistJordan, Eric, Lesley, David\r\n1:15 PM | Independent Assessor Roundtable Discussion: Assessing 20x (40 mins)An interactive discussion with assessors sharing insights and experiences from the first two phases.\r\n2:05 PM | Q&A (20 min)\r\n2:25 PM | Closing Remarks and Next Steps (5 min)\r\n2:30 PM | End Session\r\n\r\n### Questions\r\n---\r\nEdit: updated questions - originals were first draft 😫 \r\n\r\n1. So, FedRAMP 20x has been a bit of a wild ride for assessors. You’ve all been involved through Phase 1 and Phase 2. What was the craziest thing you had to deal with?\r\n\r\n2. On the other hand, what was the coolest thing you dealt with?\r\n\r\n3. One of the biggest changes in the pilots, especially in phase 2, was the idea that it’s actually okay for assessors to talk about stuff with their customers, even to hand out a pro-tip or two, instead of the OG model where you just had to write them up angry reports. How’d that go? Should we keep that model?\r\n\r\n4. Assessors are always asking FedRAMP to basically write out 500-page super explicit detailed step-by-step instructions for everything, but that’s kinda not how technology works with so many different ways to do things and stuff changing all of the time. How do y’all plan on handling this in the future as FedRAMP continues to optimize for variance and expert analysis instead of everyone meeting the same checkbox in the same way?\r\n\r\n5. What are some of the biggest things you’d like to see officially change for independent assessors in the modern FR approach?\r\n\r\n##### Open Q&A:\r\nIf you have other questions for 20x participants, you can ask them in this thread in advance or using the Q&A featuring during the meeting!",
+  "comment_count": 0,
+  "comments": [],
+  "answer_url": null,
+  "participants": [
+    "emu-gov"
+  ],
+  "official_responses": [],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://www.fedramp.gov/event/20x-cwg-2026-05-13/"
+    ],
+    "topics": [
+      "20x",
+      "3pao"
+    ]
+  },
+  "content_hash": "cc4135a7120b376b3ecd790a91ecc0b656728d1980e852747ac7d04a8a3b4a25",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

@@ -1,0 +1,76 @@
+---
+title: "Cryptographic module use"
+description: "You must document the cryptographic modules that protect federal customer data, and how strongly you are expected to use validated modules depends on your class."
+sidebarTitle: "CMU: Cryptographic modules"
+---
+
+<Info>
+  **Official source:** [Cryptographic Module Use](https://www.fedramp.gov/2026/reference/cryptographic-module-use/) (`CMU`), FedRAMP Consolidated Rules release `2026.10.14.01`. This page is a plain-English summary. The official rule text governs.
+</Info>
+
+## In short
+
+You must document every cryptographic module you use to protect federal customer data, and say whether each one is validated under the NIST Cryptographic Module Validation Program (CMVP) or is an update stream of a validated module. Whether you must actually use validated modules depends on your class: Class D MUST, Class C SHOULD, and Class A and B MAY. You SHOULD also configure agency tenants to use validated modules by default where they are available.
+
+## Who it applies to
+
+| Subset | Types | Paths | Classes | Audience |
+| --- | --- | --- | --- | --- |
+| [Cloud Service Provider Responsibilities](https://www.fedramp.gov/2026/reference/cryptographic-module-use/#cloud-service-provider-responsibilities) (`CMU-CSO`) | 20x, Rev5 | Program, Agency | Class B, Class C, Class D | Providers |
+
+<Note>
+  The subset applicability lists Class B, C and D. The statement for `CMU-CSO-UVM` also includes a Class A variant, which is shown below as published.
+</Note>
+
+## Key dates
+
+| Milestone | 20x | Rev5 |
+| --- | --- | --- |
+| Status | Required (Consolidated Rules for 2026) | Required (Consolidated Rules for 2026) |
+| Optional adoption allowed | `2026-07-04` | `2026-07-04` |
+| Obtaining initial certification | `2026-07-04` | `2027-01-01` |
+| Maintaining ongoing certification | `2027-01-01` | `2027-01-01` |
+| Grace period ends | On the first FedRAMP independent assessment started after `2027-01-01` | `2027-06-01` |
+
+## What you need to do
+
+Key terms: [federal customer data](https://www.fedramp.gov/2026/definitions/#federal-customer-data) and [validation](https://www.fedramp.gov/2026/definitions/#validation).
+
+### Cloud service provider responsibilities
+
+| Rule | Force | What it means for you |
+| --- | --- | --- |
+| [`CMU-CSO-CMD`](https://www.fedramp.gov/2026/reference/cryptographic-module-use/#cryptographic-module-documentation) | MUST | For each service (or group of services using the same modules) that uses cryptography to protect federal customer data, document the cryptographic modules used and whether each is CMVP-validated or an update stream of a validated module. |
+| [`CMU-CSO-UVM`](https://www.fedramp.gov/2026/reference/cryptographic-module-use/#using-validated-cryptographic-modules) | Varies by class | Use cryptographic modules, or update streams of modules, with active CMVP validations when using cryptography to protect federal customer data. See [Differences by class](#differences-by-class). |
+| [`CMU-CSO-CAT`](https://www.fedramp.gov/2026/reference/cryptographic-module-use/#configuration-of-agency-tenants) | SHOULD | By default, configure agency tenants to use cryptographic services built on modules (or update streams) with active CMVP validations, when such modules are available. |
+
+<Warning>
+  **Update streams don't cover new algorithms.** The official note on `CMU-CSO-UVM` says a cryptographic module includes specific algorithms. If an update stream adds algorithms that were never validated, those new algorithms are not covered as update stream usage under these rules.
+</Warning>
+
+## Differences by class
+
+`CMU-CSO-UVM` (Using Validated Cryptographic Modules):
+
+| Class | Force | Statement in brief |
+| --- | --- | --- |
+| Class A | MAY | You may use modules or update streams with active CMVP validations to protect federal customer data. |
+| Class B | MAY | You may use modules or update streams with active CMVP validations to protect federal customer data. |
+| Class C | SHOULD | You should use modules or update streams with active CMVP validations to protect federal customer data. |
+| Class D | MUST | You must use modules or update streams with active CMVP validations to protect federal customer data. |
+
+## What FedRAMP staff have said
+
+<Note>
+  **New algorithms in an upstream release are not covered.** On `2026-09-24`, `pete-gov` said that when a module is validated, its algorithms are validated. You can use an upstream release's updated versions of the algorithms that were validated, but new algorithms added in that release are not upstream versions of a validated module. His example: in Bouncy Castle 2.2, AES-KWP (validated in 2.0) counts, while CRYSTALS-Kyber (not in the 2.0 validation) does not. He also noted that the legacy crypto policy has been replaced by this ruleset. [Discussion #174 comment](https://github.com/FedRAMP/community/discussions/174#discussioncomment-18588032)
+</Note>
+
+<Note>
+  **Post-quantum cryptography.** On `2026-09-16`, `pete-gov` said FedRAMP does not currently treat quantum-vulnerable cryptography as a vulnerability and will follow CISA guidance. He said Class D offerings are required to use only CMVP-validated modules or their upstream versions to protect federal customer data. No agency had yet asked FedRAMP for waivers to use non-validated PQC libraries, but FedRAMP would be open to that after consulting CISA and NIST. He expected the next big update to be to some CMU rules, to align with upcoming CISA guidance on cryptographic bills of materials. [Discussion #174 comment](https://github.com/FedRAMP/community/discussions/174#discussioncomment-18471207)
+</Note>
+
+## Related
+
+- [Key Security Indicators](/rules/key-security-indicators): `KSI-SVC-SIN` (Securing Information) covers encrypting or otherwise securing information.
+- [Vulnerability detection and response](/rules/vulnerability-detection-and-response)
+- [Notable staff answers](/discussions/notable-staff-answers)

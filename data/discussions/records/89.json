@@ -1,0 +1,284 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-89",
+  "node_id": "D_kwDOOxfoic4AiF1h",
+  "number": 89,
+  "title": "20x Phase Two Pilot Q&A (old)",
+  "url": "https://github.com/FedRAMP/community/discussions/89",
+  "category": "20x Discussion",
+  "category_slug": "20x-discussion",
+  "labels": [
+    "FedRAMP Official"
+  ],
+  "is_official_thread": true,
+  "is_rfc": false,
+  "author": "emu-gov",
+  "author_is_official": true,
+  "created_at": "2025-09-23T11:52:41Z",
+  "updated_at": "2025-11-20T18:31:25Z",
+  "last_edited_at": "2025-11-20T18:31:25Z",
+  "closed": true,
+  "closed_at": "2025-11-18T16:26:38Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 2,
+  "body": "The Phase Two Q&A has moved to this thread: https://github.com/FedRAMP/community/discussions/101\r\n\r\nThank you!",
+  "comment_count": 7,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4A3RDs",
+      "url": "https://github.com/FedRAMP/community/discussions/89#discussioncomment-14487788",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2025-09-23T14:52:19Z",
+      "updated_at": "2025-09-23T14:52:21Z",
+      "upvotes": 6,
+      "minimized": false,
+      "body": "Some additional background to boost this thread over the course of Phase Two:\r\n\r\nDuring Phase One we found ourselves answering a LOT of the same questions over and over again via email from many different people. On a day to day basis while delivering a product it is always easier to simply respond to these messages and move on than it is to carve out time to compile all of these questions into information that can be shared publicly (and there's always the vibe that \"maybe this will be the last email I get asking about this thing?\"). It also cuts down a bit on transparency and maybe means folks are missing out on key information.\r\n\r\nTo balance this in Phase Two we will require folks to ask general questions in this Community Working Group on threads like this (or make your own thread) for full transparency, re-usability, and clarity. Questions via email should be reserved for specific sensitive or private questions.",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A3txC",
+      "url": "https://github.com/FedRAMP/community/discussions/89#discussioncomment-14605378",
+      "author": "lneeper",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2025-10-06T13:51:19Z",
+      "updated_at": "2025-10-06T13:51:20Z",
+      "upvotes": 2,
+      "minimized": false,
+      "body": "How will the selection process for the 10 Phase Two systems work?  Will FedRAMP hand select the systems and notify the CSP's from the details that are provided within the Participation Request Form link?  What is the rough timeline on when this selection and notification will take place?",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A3tzJ",
+          "url": "https://github.com/FedRAMP/community/discussions/89#discussioncomment-14605513",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2025-10-06T14:04:53Z",
+          "updated_at": "2025-10-06T14:05:50Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "The intent is not to select 10 services who will then choose to participate in the pilot. We're targeting 10 systems as a goal of the number of cloud services that we anticipate will be able to both meet the pilot requirements and that we will be able to review and authorize during the pilot window. We will review the most complete submissions during the pilot to determine where to prioritize resources.\r\n\r\nI think folks really need to dig into the initially posted authorization requirements for Phase Two; given the lack of existing tools to perform most of the required actions and ongoing maintenance at this time, it's quite unlikely that many folks will be able to turn around a complete submission in two months. This is really targeted at folks that will build the tools to be used by others and therefore don't mind building them for themselves or companies that are willing to invest considerably in building the tooling to maintain their own authorization.\r\n\r\nWe can't speculate on timelines/etc. at this time given the lapse in appropriations affecting everything: https://fedramp.gov/shutdown"
+        },
+        {
+          "id": "DC_kwDOOxfoic4A4J6L",
+          "url": "https://github.com/FedRAMP/community/discussions/89#discussioncomment-14720651",
+          "author": "comradelemoncake",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-10-19T08:22:25Z",
+          "updated_at": "2025-10-19T08:22:26Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "@pete-gov > This is really targeted at folks that will build the tools to be used by others and therefore don't mind building them for themselves or companies that are willing to invest considerably in building the tooling to maintain their own authorization.\r\n\r\nInteresting. "
+        }
+      ],
+      "replies_total": 2,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A3_iT",
+      "url": "https://github.com/FedRAMP/community/discussions/89#discussioncomment-14678163",
+      "author": "ElaineFR",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2025-10-14T16:14:44Z",
+      "updated_at": "2025-10-14T16:14:49Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Hello @pete-gov! For Phase 2 pilot, I am checking to see if FIPS will continue to be the only acceptable encryption mechanism, or if other industry standard encryption will be considered with 20x. Any clarification here would be very helpful!",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A3_uQ",
+          "url": "https://github.com/FedRAMP/community/discussions/89#discussioncomment-14678928",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2025-10-14T17:50:00Z",
+          "updated_at": "2025-10-14T17:50:01Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "[FedRAMP's Policy for Cryptographic Module Selection and Use](https://www.fedramp.gov/resources/documents/FedRAMP_Policy_for_Cryptographic_Module_Selection_v1.1.0.pdf) applies to all FedRAMP authorizations, including 20x (currently); though I will admit we haven't strictly enforced it during the 20x Low Pilot as part of risk accepting certain variances for the Low threshold. Instead we expect documentation about decisions to be made so that authorizing officials can make risk-based decisions related to the use of encryption by the CSP. It is important to note that FedRAMP's policy on use of cryptographic modules is scoped only to specific parts of services where encryption is used to protect agency customer information and that update streams are acceptable; this means things like the classic \"FIPS Mode\" in an operating system may not be necessary.\r\n\r\nWe have a [Roadmap item](https://github.com/orgs/FedRAMP/projects/25/views/1?pane=issue&itemId=113682922&issue=FedRAMP%7Croadmap%7C35) to address some underlying issues with that FedRAMP policy for 20x, related to application of federal requirements to commercial entities, and would expect to formalize this and make clear how all of these apply prior to formalizing the new 20x authorization paths. \r\n\r\nFor Phase Two we will try to publish some additional guidance on expectations here in advance for Moderate.\r\n\r\n"
+        },
+        {
+          "id": "DC_kwDOOxfoic4A4AOi",
+          "url": "https://github.com/FedRAMP/community/discussions/89#discussioncomment-14680994",
+          "author": "ElaineFR",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-10-14T22:45:48Z",
+          "updated_at": "2025-10-14T22:45:49Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thank you!"
+        }
+      ],
+      "replies_total": 2,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A4R7X",
+      "url": "https://github.com/FedRAMP/community/discussions/89#discussioncomment-14753495",
+      "author": "ElaineFR",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2025-10-22T17:00:14Z",
+      "updated_at": "2025-10-22T17:00:15Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Good afternoon @pete-gov ! Question: are there any specific requirements for bringing AI products into scope for FR20x? ",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A4R_y",
+          "url": "https://github.com/FedRAMP/community/discussions/89#discussioncomment-14753778",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2025-10-22T17:35:24Z",
+          "updated_at": "2025-10-22T17:35:25Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> Good afternoon @pete-gov ! Question: are there any specific requirements for bringing AI products into scope for FR20x?\r\n\r\nThe [Minimum Assessment Standard](https://github.com/FedRAMP/docs/blob/main/markdown/FRMR.MAS.minimum-assessment-standard.md) applies regardless. \r\n\r\nFedRAMP doesn't have LLM-related specific requirements (e.g. \"AI safety\" etc.). FedRAMP is focused on information flows and risk to federal customer data; that's universally applied any time any service is likely to handle federal customer data or impact the confidentiality, integrity, or available of federal customer data. The thing that matters about AI-based services is what they do with customer data and how information flows are protected, not that there is an LLM involved or not. \r\n\r\nServices that leverage LLMs can do a very wide variety of things in a wide variety of ways and unlike many other traditional services are likely to put federal customer data at risk in a very different way. If customer data is flowing to a third-party AI-based service then you should expect additional scrutiny on your justification, mitigation measures, compensating controls, and the potential impact of using such a service (FRR-MAS-03). For example if an LLM-based service is given permissions to do crazy stuff then it will get flagged the same as any other service that has permissions to do crazy stuff."
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A4kn4",
+      "url": "https://github.com/FedRAMP/community/discussions/89#discussioncomment-14830072",
+      "author": "lneeper",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2025-10-30T18:15:14Z",
+      "updated_at": "2025-10-30T18:15:15Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "When made publicly available will IaaS systems be considered?",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A4r6r",
+          "url": "https://github.com/FedRAMP/community/discussions/89#discussioncomment-14859947",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2025-11-03T15:31:16Z",
+          "updated_at": "2025-11-03T15:31:18Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "It would depend on the architecture of the IaaS and whether or not it can inherit security from another FedRAMP Authorized IaaS/PaaS - if it's a standalone running its own physical infrastructure and datacenters then no, FedRAMP 20x will not cover that use case until we target hyperscale IaaS/PaaS providers (which will also benefit normal ones)."
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A5MyN",
+      "url": "https://github.com/FedRAMP/community/discussions/89#discussioncomment-14994573",
+      "author": "jphilput2",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2025-11-17T21:51:33Z",
+      "updated_at": "2025-11-17T21:51:34Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Are there any changes to the rules around impact level for the different phases?  For example, could a company with a Moderate impact use phase 1, or would they need to wait for phase 2?",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A5O1a",
+      "url": "https://github.com/FedRAMP/community/discussions/89#discussioncomment-15002970",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2025-11-18T16:26:38Z",
+      "updated_at": "2025-11-18T16:26:40Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Closing this discussion considering new 20xP2 requirements being published today to avoid confusion with previous answers.",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "ElaineFR",
+    "comradelemoncake",
+    "emu-gov",
+    "jphilput2",
+    "lneeper",
+    "pete-gov"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/89#discussioncomment-14487788",
+      "author": "pete-gov",
+      "created_at": "2025-09-23T14:52:19Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/89#discussioncomment-15002970",
+      "author": "pete-gov",
+      "created_at": "2025-11-18T16:26:38Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/89#discussioncomment-14605513",
+      "author": "pete-gov",
+      "created_at": "2025-10-06T14:04:53Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/89#discussioncomment-14678928",
+      "author": "pete-gov",
+      "created_at": "2025-10-14T17:50:00Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/89#discussioncomment-14753778",
+      "author": "pete-gov",
+      "created_at": "2025-10-22T17:35:24Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/89#discussioncomment-14859947",
+      "author": "pete-gov",
+      "created_at": "2025-11-03T15:31:16Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [
+      "FRR-MAS-03"
+    ],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [
+      101
+    ],
+    "urls": [
+      "https://fedramp.gov/shutdown",
+      "https://github.com/FedRAMP/community/discussions/101",
+      "https://github.com/FedRAMP/docs/blob/main/markdown/FRMR.MAS.minimum-assessment-standard.md",
+      "https://github.com/orgs/FedRAMP/projects/25/views/1?pane=issue&itemId=113682922&issue=FedRAMP%7Croadmap%7C35",
+      "https://www.fedramp.gov/resources/documents/FedRAMP_Policy_for_Cryptographic_Module_Selection_v1.1.0.pdf"
+    ],
+    "topics": [
+      "20x",
+      "crypto_fips"
+    ]
+  },
+  "content_hash": "8a3e5066ea84d3361c6526f3d243d4d2578322d1d13ca04529bb984ea591a7c1",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

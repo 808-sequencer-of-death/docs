@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-162",
+  "node_id": "D_kwDOOxfoic4AoeA2",
+  "number": 162,
+  "title": "20x Pilot Certification Conversion",
+  "url": "https://github.com/FedRAMP/community/discussions/162",
+  "category": "20x Discussion",
+  "category_slug": "20x-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "gmengelberg",
+  "author_is_official": false,
+  "created_at": "2026-08-13T18:58:28Z",
+  "updated_at": "2026-09-09T17:31:02Z",
+  "last_edited_at": null,
+  "closed": true,
+  "closed_at": "2026-09-09T17:31:02Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "- When does a Class C Pilot participant need to deliver the annual submission or final submission package. Per the reference is sounds like 1/1/2027.\r\n- Does the verification/validation process need to occur all at once, or can it be spread over a period of time (e.g., months)?\r\n\r\nReference: https://www.youtube.com/watch?v=9WBfn-UHtpY&t=1449s",
+  "comment_count": 1,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4BEum9",
+      "url": "https://github.com/FedRAMP/community/discussions/162#discussioncomment-18016701",
+      "author": "emu-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2026-08-14T11:44:32Z",
+      "updated_at": "2026-08-14T11:44:32Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "The [maintain timelines](https://www.fedramp.gov/2026/providers/updating/deadlines/20x/) are what what we are targeting which can be different based on the specific Ruleset.\r\n\r\nAdoption and the IVV can absolutely be spread out and in fact, they have to show progress quarterly in order to maintain pilot certification status. \r\n\r\nWe don't have much guidance or an internal submission/review process yet for 20x AAs, but that will come out as we get closer to the end of the year. In the meantime, any pilot folks who want to get it out of the way can just submit for B/C Certification once that opens. ",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "emu-gov",
+    "gmengelberg"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/162#discussioncomment-18016701",
+      "author": "emu-gov",
+      "created_at": "2026-08-14T11:44:32Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://www.fedramp.gov/2026/providers/updating/deadlines/20x/",
+      "https://www.youtube.com/watch?v=9WBfn-UHtpY&t=1449s"
+    ],
+    "topics": [
+      "20x",
+      "class_c"
+    ]
+  },
+  "content_hash": "3e6c6294fa86e43def63c1cafb32b7b7655e52a9a14cbccda1171e134d6dc1cb",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

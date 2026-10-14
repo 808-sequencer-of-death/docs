@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-97",
+  "node_id": "D_kwDOOxfoic4AiqNw",
+  "number": 97,
+  "title": "Using Prowler to give your org a 20x Gap",
+  "url": "https://github.com/FedRAMP/community/discussions/97",
+  "category": "20x Discussion",
+  "category_slug": "20x-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "ethanolivertroy",
+  "author_is_official": false,
+  "created_at": "2025-10-29T16:56:57Z",
+  "updated_at": "2026-02-11T22:10:07Z",
+  "last_edited_at": null,
+  "closed": true,
+  "closed_at": "2026-02-11T22:10:07Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "\r\nhttps://github.com/user-attachments/assets/4f674d16-3702-43c7-83f0-82dd29b20a1e\r\n\r\nhttps://github.com/prowler-cloud/prowler/pull/8512\r\n\r\nThis covers AWS, GCP, and Azure for Low KSIs\r\n\r\nIt's not a full continuous compliance solution but can help folks identify gaps\r\n\r\nHope it helps!",
+  "comment_count": 0,
+  "comments": [],
+  "answer_url": null,
+  "participants": [
+    "ethanolivertroy"
+  ],
+  "official_responses": [],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://github.com/prowler-cloud/prowler/pull/8512",
+      "https://github.com/user-attachments/assets/4f674d16-3702-43c7-83f0-82dd29b20a1e"
+    ],
+    "topics": [
+      "20x",
+      "ksi"
+    ]
+  },
+  "content_hash": "7d3467476fbc01175bbfd2170ccacecf09f02443b83b6d89c0989e4f9a297e5d",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

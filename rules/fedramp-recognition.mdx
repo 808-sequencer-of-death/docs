@@ -1,0 +1,90 @@
+---
+title: "FedRAMP recognition"
+description: "The rules independent assessors must follow to become and stay FedRAMP Recognized, and what that means when you choose an assessor."
+sidebarTitle: "REC: Assessor recognition"
+---
+
+<Info>
+  **Official source:** [FedRAMP Recognition of Independent Assessment Services](https://www.fedramp.gov/2026/reference/fedramp-recognition/) (`REC`), FedRAMP Consolidated Rules release `2026.10.14.01`. This page is a plain-English summary. The official rule text governs.
+</Info>
+
+## In short
+
+This ruleset binds FedRAMP and independent assessors, not cloud service providers. It sets out how an assessor obtains and keeps FedRAMP Recognition: A2LA accreditation, a minimum number of assessments, performance standards, foreign-interest reporting and separation from advisory work. For you, the key points are that FedRAMP MUST NOT accept attestations from assessors who aren't FedRAMP Recognized, and an assessor MUST NOT assess your offering within 2 years of advising or consulting on it.
+
+## Who it applies to
+
+| Subset | Audience |
+| --- | --- |
+| [FedRAMP Responsibilities](https://www.fedramp.gov/2026/reference/fedramp-recognition/#fedramp-responsibilities) (`REC-FRP`) | FedRAMP, when evaluating assessors for initial or ongoing FedRAMP Recognition |
+| [General Independent Assessor Responsibilities](https://www.fedramp.gov/2026/reference/fedramp-recognition/#general-independent-assessor-responsibilities) (`REC-IAS`) | Assessors seeking to obtain or maintain FedRAMP Recognition |
+
+The upstream page lists only the audience for these subsets. It doesn't list certification types, paths or classes. The ruleset is tagged for both 20x and Rev5.
+
+## Key dates
+
+The same dates apply to 20x and Rev5.
+
+| Milestone | Date |
+| --- | --- |
+| Status | Required (Consolidated Rules for 2026) |
+| Optional adoption allowed | `2026-07-04` |
+| Obtaining initial certification | `2026-07-04` |
+| Maintaining ongoing certification | `2026-07-04` |
+| Grace period ends | `2026-07-04` |
+
+## Why this matters to you as a CSP
+
+You don't have obligations under this ruleset, but it affects who can assess you:
+
+- **Only recognized assessors count.** FedRAMP MUST NOT accept verification, validation or other attestations from assessors who aren't FedRAMP Recognized (`REC-FRP-RAO`). The [IVV ruleset](/rules/independent-verification-and-validation) requires your annual assessment to be done with a FedRAMP Recognized independent assessment service (`IVV-CSO-FIA`).
+- **Your advisor can't be your assessor for 2 years.** An assessor MUST NOT perform a FedRAMP independent assessment of your offering within 2 years after providing advisory or consulting services for it, unless FedRAMP publishes a specific exception (`REC-IAS-SEP`).
+- **Recognition can lapse.** FedRAMP removes recognition immediately when A2LA reports that an assessor's accreditation has lapsed (`REC-IAS-ACC`). An assessor that misses A2LA's 75-day corrective action window is designated In Remediation on the FedRAMP Marketplace (`REC-IAS-ANR`, `REC-IAS-RAS`).
+- **Unqualified staff produce invalid work.** Deliverables prepared by personnel who don't meet the required role qualifications are invalid for FedRAMP purposes (`REC-IAS-INV`).
+- **You can expect certain standards.** Assessors must meet performance standards that include complete first submissions, on-time delivery, accurate testing, independence from provider demands, and chain of custody for the evidence you supply (`REC-IAS-PST`).
+
+## What you need to do
+
+### FedRAMP responsibilities
+
+| Rule | Force | What it means for you |
+| --- | --- | --- |
+| [`REC-FRP-FOC`](https://www.fedramp.gov/2026/reference/fedramp-recognition/#foreign-ownership-collection) | MUST | FedRAMP keeps a process to collect foreign ownership, control or influence declarations, and updates, from recognized assessors. |
+| [`REC-FRP-RAO`](https://www.fedramp.gov/2026/reference/fedramp-recognition/#recognized-assessors-only) | MUST NOT | FedRAMP won't accept verification, validation or other attestations from assessors who aren't FedRAMP Recognized. Use a recognized assessor. |
+| [`REC-FRP-DRD`](https://www.fedramp.gov/2026/reference/fedramp-recognition/#double-revocation-disqualification) | MUST NOT | FedRAMP won't restore recognition to an assessor whose recognition it has revoked 2 times. |
+
+### General independent assessor responsibilities
+
+| Rule | Force | What it means for you |
+| --- | --- | --- |
+| [`REC-IAS-ACC`](https://www.fedramp.gov/2026/reference/fedramp-recognition/#a2la-accreditation) | MUST | Assessors need and must keep accreditation through the A2LA Cybersecurity Inspection Body Program. FedRAMP removes recognition immediately after A2LA reports a lapse. |
+| [`REC-IAS-ADA`](https://www.fedramp.gov/2026/reference/fedramp-recognition/#actually-do-assessments) | MUST | Assessors must complete at least 2 initial or ongoing assessments for Class B, C or D certifications every 2 years. FedRAMP warns them 6 months before they would lose recognition and asks for a corrective action plan. |
+| [`REC-IAS-PSC`](https://www.fedramp.gov/2026/reference/fedramp-recognition/#policy-and-standards-compliance) | MUST | Assessors must stay compliant with the latest A2LA R311 requirements for FedRAMP. |
+| [`REC-IAS-ANR`](https://www.fedramp.gov/2026/reference/fedramp-recognition/#annual-surveillance-assessment) | MUST | Assessors must pass an annual A2LA surveillance assessment. Missing the 75-day fix window leads to In Remediation status on the Marketplace and a corrective action plan. |
+| [`REC-IAS-RAS`](https://www.fedramp.gov/2026/reference/fedramp-recognition/#full-a2la-reassessment) | MUST | Assessors must pass a full A2LA reassessment at least every 2 years, with the same 75-day corrective action window. |
+| [`REC-IAS-RAR`](https://www.fedramp.gov/2026/reference/fedramp-recognition/#re-entry-after-revocation) | MUST | After revocation, assessors must meet all A2LA re-entry conditions before regaining recognition. |
+| [`REC-IAS-RQU`](https://www.fedramp.gov/2026/reference/fedramp-recognition/#roles-and-qualifications) | MUST | Assessors must staff FedRAMP assessments with all roles A2LA R311 requires, filled by qualified personnel, unless FedRAMP publishes a scoped exception. |
+| [`REC-IAS-AFI`](https://www.fedramp.gov/2026/reference/fedramp-recognition/#annual-foreign-interest-reports) | MUST | Assessors must report foreign interest, influence or control to FedRAMP annually, using the FedRAMP Foreign Ownership, Control, or Influence Declaration Form. |
+| [`REC-IAS-CFI`](https://www.fedramp.gov/2026/reference/fedramp-recognition/#changes-in-foreign-interest) | MUST | Assessors must report changes in foreign ownership or control within 48 hours, using the same form. |
+| [`REC-IAS-PST`](https://www.fedramp.gov/2026/reference/fedramp-recognition/#performance-standards) | MUST | Assessors must meet FedRAMP performance standards for deliverables: complete packages, quality, format, timeliness, testing accuracy, assessment integrity and chain of custody. |
+| [`REC-IAS-CAP`](https://www.fedramp.gov/2026/reference/fedramp-recognition/#corrective-action-plan) | MUST | Assessors must supply a corrective action plan when FedRAMP requires one for performance deficiencies or organizational risks. |
+| [`REC-IAS-INV`](https://www.fedramp.gov/2026/reference/fedramp-recognition/#invalid-deliverables) | MUST | Assessors must treat deliverables from personnel who don't meet role qualifications as invalid for FedRAMP purposes. |
+| [`REC-IAS-SEP`](https://www.fedramp.gov/2026/reference/fedramp-recognition/#advisory-separation) | MUST NOT | Assessors must not assess an offering within 2 years after advising or consulting on it, unless FedRAMP publishes a scoped exception. |
+
+## What FedRAMP staff have said
+
+These comments were made on `2026-02-12` during public comment on RFC-0021, before the Consolidated Rules launched on `2026-06-24`.
+
+<Note>
+  **"FedRAMP Recognized independent assessor" replaces "3PAO."** `pete-gov` said a FedRAMP Recognized independent assessor and a 3PAO are "the same thing," with terminology updated to align with the law and OMB M-24-15. He said FedRAMP had not announced plans to change the recognition process. [Discussion #115 comment](https://github.com/FedRAMP/community/discussions/115#discussioncomment-15786728)
+</Note>
+
+<Note>
+  **A2LA accreditation is the first step, not the whole process.** `pete-gov` said FedRAMP recognition and A2LA accreditation are separate processes, quoting A2LA R311 that accreditation is the first step in gaining FedRAMP recognition. [Discussion #115 comment](https://github.com/FedRAMP/community/discussions/115#discussioncomment-15786007)
+</Note>
+
+## Related
+
+- [Independent verification and validation](/rules/independent-verification-and-validation)
+- [Marketplace listing](/rules/marketplace-listing)
+- [RFC history](/discussions/rfc-history)

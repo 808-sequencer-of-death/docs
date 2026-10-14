@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-104",
+  "node_id": "D_kwDOOxfoic4AjOsc",
+  "number": 104,
+  "title": "Policies needed for 20x",
+  "url": "https://github.com/FedRAMP/community/discussions/104",
+  "category": "20x Discussion",
+  "category_slug": "20x-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "iteuscher",
+  "author_is_official": false,
+  "created_at": "2025-12-10T21:51:41Z",
+  "updated_at": "2026-02-11T22:09:45Z",
+  "last_edited_at": null,
+  "closed": true,
+  "closed_at": "2026-02-11T22:09:45Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "I recently had a conversation with someone interested in FedRAMP 20x who asked: \r\n**Do we still need to do all of the FedRAMP policies/plans?** \r\n\r\nThey are going through the process of revising and approving their info sec policies and asked what they would need to adjust or focus on specifically for FedRAMP 20x. \r\n\r\nI wanted to share my thoughts on responding to this question and validate it with the community as I probably missed something. I imagine many CSPs will have a similar question as they approach FedRAMP 20x because FedRAMP Rev 5 required specific templated policies (e.g.: Information System Contingency Plan (ISCP), Incident Response Plan (IRP), SSP Appendix C, F, G, H, I, N, P, etc.) \r\n\r\nHere is my response. Feel free to add to this or critique where I've missed. \r\n\r\n-----\r\n\r\nThere is a requirement for FedRAMP 20x that says\r\n> Have policies outlining the security objectives of all information resources. KSI-PIY-02\r\n\r\nwhich is obviously broad and all encompassing and means you will want to have security policies for everything in the environment but they do NOT need to be in a specific FedRAMP template as they used to be required for Rev 5. You can likely pull directly from your latest corporate InfoSec policies for this requirement as it is not required (or recommended) to create separate policies for FedRAMP here.\r\n\r\nThere are a few policies that have specific requirements from FedRAMP for FedRAMP 20x authorization. Those are:\r\n1. Change Management Policy\r\n\r\n- **KSI-CMT-04**: Have a documented change management procedure.\r\n\r\n2. Vulnerability Management/Patch Management Policy\r\n\r\n- This will need to meet the requirements of the FedRAMP Vulnerability Detection and Response Standard: https://www.fedramp.gov/docs/vulnerability-detection-and-response/ \r\n- Specifically there are SLAs about the response/remediation times needed for various severities of vulnerabilities.\r\n\r\n3. Third-Party Risk Management Policy\r\n- **KSI-PIY-07**: Document risk management decisions for software supply chain security.\r\n- The other guidance here is from the Third-Party Information Resources (TPR) KSI family \r\n- **KSI-TPR-01**: Identify all third-party information resources\r\n- **KSI-TPR-02**: Regularly confirm that services handling federal information are FedRAMP authorized\r\n- **KSI-TPR-03**: Identify and prioritize mitigation of potential supply chain risks\r\n- **KSI-TPR-04**: Monitor third party software information resources for upstream vulnerabilities \r\n\r\n4. Incident Response Policy/Procedure \r\n- **KSI-INR-01**: Always follow a documented incident response procedure.\r\n- This will need to meet the requirements of the FedRAMP Incident Communications Procedures Standard: https://www.fedramp.gov/docs/incident-communications-procedures/\r\n\r\n5. Recovery Plan\r\n- **KSI-RPL-02**: Develop and maintain a recovery plan that aligns with the defined recovery objectives [RPO and RTO].\r\n\r\n-----\r\n\r\nWhat would you add to or change on this list? \r\n\r\n-- Isaac Teuscher (Paramify)",
+  "comment_count": 2,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4A6E_I",
+      "url": "https://github.com/FedRAMP/community/discussions/104#discussioncomment-15224776",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2025-12-10T22:40:36Z",
+      "updated_at": "2025-12-10T22:40:36Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "I'll just add up front to be super clear that **none** of the Rev5 SSP Appendices are required by 20x - all of the expected materials are addressed in Key Security Indicators (especially in the KSI-AFR family). \r\n\r\nI also want to point out that when KSIs say \"document X\" it doesn't necessary require a human memo written in prose. For [KSI-AFR-04 Vulnerability Detection and Response](https://www.fedramp.gov/docs/key-security-indicators/#ksi-afr-04-vulnerability-detection-and-response) for example one could theoretically document everything necessary in the configuration of a tool/platform that can do all of those things then present the configuration itself as documentation.\r\n\r\nGenerally this type of approach would be preferred; don't much care what you think you should be doing but we really do care what you're actually doing.\r\n\r\nFinal related point - a lot of the underlying FRR's point towards a need for documentation or similar in a way that can be mapped to some KSI's. For example, [KSI-CMT-04 Change Management Procedure](https://www.fedramp.gov/docs/key-security-indicators/#ksi-cmt-04-change-management-procedure) requires you to always follow a documented change management procedure while the SCN, PVA, and VDR all require you to do a bunch of things with changes in various places - so all of those need to be mapped to KSI-CMT-04. (Note: the updated KSI here is \"always follow\" not just \"have\" a change management procedure ;)\r\n\r\nOther things that might benefit from a policy, even if it's informal for just grounding before implementing and formalizing:\r\n\r\n- Any time something is done [_persistently_](https://www.fedramp.gov/docs/fedramp-definitions/#persistently) there must be a documented set of activities (though this can and should be documented in code whenever possible, sometimes it will make sense to have written goals too)\r\n- [FRR-MAS-01 Cloud Service Offering Identification](https://www.fedramp.gov/docs/minimum-assessment-scope/#frr-mas-01-cloud-service-offering-identification) certainly would benefit from a plan for how the MAS will be maintained\r\n- [FRR-ADS-01 Public Information](https://www.fedramp.gov/docs/authorization-data-sharing/#frr-ads-01-public-information) plus the following ADS requirements would probably benefit from a plan about how this will be maintained \r\n- [FRR-ADS-03 Detailed Service List](https://www.fedramp.gov/docs/authorization-data-sharing/#frr-ads-03-detailed-service-list) **definitely** would benefit from a plan, especially since it seems like no cloud service provider does a good job of maintaining such lists already.\r\n- [FRR-CCM-01 Ongoing Authorization Reports](https://www.fedramp.gov/docs/collaborative-continuous-monitoring/#frr-ccm-01-ongoing-authorization-reports) et al - folks definitely should have policies on how they're going to handle all the CCM stuff\r\n- [FRR-RSC-01 Top-Level Administrative Accounts Guidance](https://www.fedramp.gov/docs/recommended-secure-configuration/#frr-rsc-01-top-level-administrative-accounts-guidance) et al probably needs a plan\r\n\r\netc.\r\n\r\nBasically we didn't eliminate prose with 20x (far from it), but we've tried to limit it to be used for specific goals that are validated by automation. Whenever possible these plans or policies should be as simple as heck and align with whatever is in the best interest of the provider.\r\n\r\n**Random fun fact:** In the phase 1 pilot a BUNCH of folks had an RPO/RTO policy written out that said things like \"our RPO is within 6 hours\" then had their systems configured to do snapshots every 24 hours or similar. It was kinda mind blowing and shows why the written policy isn't that important.",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A6Jt6",
+      "url": "https://github.com/FedRAMP/community/discussions/104#discussioncomment-15244154",
+      "author": "iteuscher",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2025-12-12T22:07:09Z",
+      "updated_at": "2025-12-12T22:07:09Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Thanks Pete, really helpful perspective as always! I referenced the old version of KSI-CMT-04 🤦‍♂️ sorry about that. I like what you said that \"[we] don't much care what you think you should be doing but we really do care what you're actually doing.\" ",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "iteuscher",
+    "pete-gov"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/104#discussioncomment-15224776",
+      "author": "pete-gov",
+      "created_at": "2025-12-10T22:40:36Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [
+      "FRR-ADS-01",
+      "FRR-ADS-03",
+      "FRR-CCM-01",
+      "FRR-MAS-01",
+      "FRR-RSC-01",
+      "KSI-AFR",
+      "KSI-AFR-04",
+      "KSI-CMT-04",
+      "KSI-INR-01",
+      "KSI-PIY-02",
+      "KSI-PIY-07",
+      "KSI-RPL-02",
+      "KSI-TPR-01",
+      "KSI-TPR-02",
+      "KSI-TPR-03",
+      "KSI-TPR-04"
+    ],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://www.fedramp.gov/docs/authorization-data-sharing/#frr-ads-01-public-information",
+      "https://www.fedramp.gov/docs/authorization-data-sharing/#frr-ads-03-detailed-service-list",
+      "https://www.fedramp.gov/docs/collaborative-continuous-monitoring/#frr-ccm-01-ongoing-authorization-reports",
+      "https://www.fedramp.gov/docs/fedramp-definitions/#persistently",
+      "https://www.fedramp.gov/docs/incident-communications-procedures/",
+      "https://www.fedramp.gov/docs/key-security-indicators/#ksi-afr-04-vulnerability-detection-and-response",
+      "https://www.fedramp.gov/docs/key-security-indicators/#ksi-cmt-04-change-management-procedure",
+      "https://www.fedramp.gov/docs/minimum-assessment-scope/#frr-mas-01-cloud-service-offering-identification",
+      "https://www.fedramp.gov/docs/recommended-secure-configuration/#frr-rsc-01-top-level-administrative-accounts-guidance",
+      "https://www.fedramp.gov/docs/vulnerability-detection-and-response/"
+    ],
+    "topics": [
+      "20x",
+      "ksi",
+      "rev5",
+      "vulnerability_mgmt"
+    ]
+  },
+  "content_hash": "c62b9277b558073f2798cf85c5dcece5b5569ac05ba2411db394693e7897f69c",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

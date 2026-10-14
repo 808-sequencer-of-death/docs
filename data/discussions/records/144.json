@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-144",
+  "node_id": "D_kwDOOxfoic4AnK4C",
+  "number": 144,
+  "title": "Questions Regarding FedRAMP 20x Phase 3 Transition and Authorization Pathways",
+  "url": "https://github.com/FedRAMP/community/discussions/144",
+  "category": "Rev5 Discussion",
+  "category_slug": "rev5-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "philipdank",
+  "author_is_official": false,
+  "created_at": "2026-06-16T15:14:57Z",
+  "updated_at": "2026-06-24T21:38:57Z",
+  "last_edited_at": null,
+  "closed": true,
+  "closed_at": "2026-06-24T21:34:41Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "I have a few questions regarding FedRAMP 20x Phase 3 and the available authorization pathways:\r\n\r\nIf a system is currently listed as FedRAMP Ready (RAR), are there any additional requirements or steps needed to transition to a formal FedRAMP 20x Class C designation?\r\nFor a system that has already achieved FedRAMP Ready status, should the organization continue pursuing the traditional FedRAMP Rev. 5 authorization process with an agency sponsor, or would it be more appropriate to prepare for and pursue the FedRAMP 20x assessment pathway?\r\nIf both pathways remain viable options, what factors should be considered when determining whether to continue with the traditional authorization route versus transitioning to the FedRAMP 20x framework?",
+  "comment_count": 1,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4BCFxv",
+      "url": "https://github.com/FedRAMP/community/discussions/144#discussioncomment-17325167",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2026-06-16T15:21:58Z",
+      "updated_at": "2026-06-16T15:21:58Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "> If a system is currently listed as FedRAMP Ready (RAR), are there any additional requirements or steps needed to transition to a formal FedRAMP 20x Class C designation? \r\n\r\nYes - we've outlined the expectations [in the Certification Path section](https://preview.fedramp.gov/2026/providers/start/path/#temporary-rev5-program-certification-availability-for-class-b-and-c) of the Public Preview of the Consolidated Rules for 2026. Some of this content is incomplete but will be finalized when these rules become official.\r\n\r\nIn short, folks will need to commit to implementing all of the required changes to the Rev5 process by February 2027 to receive a FedRAMP Rev5 Class C Program Certification based on FedRAMP Ready.\r\n\r\n> For a system that has already achieved FedRAMP Ready status, should the organization continue pursuing the traditional FedRAMP Rev. 5 authorization process with an agency sponsor, or would it be more appropriate to prepare for and pursue the FedRAMP 20x assessment pathway? \r\n\r\nCloud service providers need to make this decision on their own based on the information available to the public; FedRAMP can't make recommendations or provide business advice.\r\n\r\n> If both pathways remain viable options, what factors should be considered when determining whether to continue with the traditional authorization route versus transitioning to the FedRAMP 20x framework?\r\n\r\nThe most important factor to consider from FedRAMP's perspective is that Rev5 is considered a legacy process that is actively being replaced by 20x.\r\n",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BCefw",
+          "url": "https://github.com/FedRAMP/community/discussions/144#discussioncomment-17426416",
+          "author": "philipdank",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-06-24T21:38:57Z",
+          "updated_at": "2026-06-24T21:38:57Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thank you for the detailed response and clarification. I appreciate you taking the time to provide additional context around the Certification Path section and the transition from the FedRAMP Rev. 5 process to FedRAMP 20x."
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "pete-gov",
+    "philipdank"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/144#discussioncomment-17325167",
+      "author": "pete-gov",
+      "created_at": "2026-06-16T15:21:58Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://preview.fedramp.gov/2026/providers/start/path/#temporary-rev5-program-certification-availability-for-class-b-and-c"
+    ],
+    "topics": [
+      "20x",
+      "agency_authorization",
+      "class_c",
+      "rev5"
+    ]
+  },
+  "content_hash": "2d4fcad47b9a25734f812da2017d8fac067333eb82cb37d8cfed4cfded285e07",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

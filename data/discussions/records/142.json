@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-142",
+  "node_id": "D_kwDOOxfoic4Am6jf",
+  "number": 142,
+  "title": "Practitioner Framework for Safety-Relevance Interpretation in SBOM/VEX-Driven FedRAMP Risk Decisions",
+  "url": "https://github.com/FedRAMP/community/discussions/142",
+  "category": "Rev5 Discussion",
+  "category_slug": "rev5-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "devashridatta-dotcom",
+  "author_is_official": false,
+  "created_at": "2026-06-05T02:31:14Z",
+  "updated_at": "2026-06-24T21:34:44Z",
+  "last_edited_at": null,
+  "closed": true,
+  "closed_at": "2026-06-24T21:34:44Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "As federal mandates increasingly require SBOM submissions from Cloud Service Providers, a persistent operational gap has emerged: there is no standardized, repeatable logic for translating SBOM and VEX data into defensible risk-acceptance decisions that satisfy FedRAMP audit baselines.\r\nAuthorizing Officials and CSPs can now see vulnerabilities at scale. The harder problem is adjudicating them, determining whether a given finding warrants immediate remediation, POA&M deferral, or formal risk acceptance — in a way that is consistent, auditable, and not solely dependent on CVSS scores.\r\nWhat I've been working on\r\nI developed a Safety Relevance Interpretation Framework, a lightweight model that addresses a specific gap in current VEX-based workflows: the absence of a structured method for evaluating whether a vulnerability has functional or safety significance within a federal deployment context.\r\nThe framework evaluates three factors in combination:\r\n\r\nSafety and Functional Relevance: Does the vulnerability touch federal data boundaries, system integrity functions, or safety-critical execution paths?\r\nVEX Applicability and Exploitability Context: Is it technically exploitable in the actual runtime environment, given component reachability and deployment configuration?\r\nLifecycle Stage: Is the affected component in active deployment, legacy isolation, or end-of-life status?\r\n\r\nThese inputs feed a structured decision logic that produces one of four outcomes: immediate remediation, monitored deferral, formal risk acceptance, or escalation, each with a documented justification trail.\r\nThe intent is to give AOs and CSPs a repeatable, audit-ready interpretation layer on top of raw SBOM/VEX output, rather than leaving each team to construct ad hoc logic under time pressure.\r\nInviting feedback\r\nI'm sharing this here to get practitioner and community input, particularly from those working on continuous monitoring workflows, POA&M processes, or SBOM ingestion pipelines. Specifically interested in:\r\n\r\nWhether safety relevance as a first-order factor reflects how AOs currently evaluate findings\r\nWhere the logic breaks down at scale or across heterogeneous component inventories\r\nAny alignment gaps with existing FedRAMP Rev 5 or OSCAL guidance\r\n\r\nHappy to share more details on the decision logic in the follow-up discussion.\r\nDevashri Datta, Independent Researcher, Software Supply Chain Security\r\n\r\n",
+  "comment_count": 2,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4BB63B",
+      "url": "https://github.com/FedRAMP/community/discussions/142#discussioncomment-17280449",
+      "author": "devashridatta-dotcom",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-06-12T13:17:09Z",
+      "updated_at": "2026-06-12T13:17:09Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Hi @FedRAMP-PMO / community team, \r\n\r\nI wanted to gently bump this discussion to see if there are any initial thoughts or if this topic is currently being reviewed internally. If any further clarification or context on this proposal/issue would be helpful, please let me know. \r\n\r\nLooking forward to your guidance!",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BB64_",
+          "url": "https://github.com/FedRAMP/community/discussions/142#discussioncomment-17280575",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-06-12T13:30:06Z",
+          "updated_at": "2026-06-12T13:30:06Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Hey Devashri - we'd recommend reviewing our [Vulnerability Detection and Response](https://preview.fedramp.gov/2026/reference/vulnerability-detection-and-response/) ruleset, which outlines the high-level approach that FedRAMP expects cloud service providers to take on vulnerability detection. We very deliberately leave the details of the approach up to each cloud service provider based on what's appropriate for their own individual environment and business goals."
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BB67K",
+      "url": "https://github.com/FedRAMP/community/discussions/142#discussioncomment-17280714",
+      "author": "devashridatta-dotcom",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-06-12T13:45:10Z",
+      "updated_at": "2026-06-12T13:45:10Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Thanks Pete really appreciate you pointing me to the Vulnerability Detection and Response ruleset.\r\nI completely understand and agree with you, the intention to keep the guidance outcome-focused and allow CSPs flexibility in how they operationalize it based on their environment and business context.\r\nWhat I’m exploring here isn’t meant to prescribe a single implementation approach, but rather to make some of the implicit decision logic around vulnerability relevance more explicit and auditable, especially in the context of SBOM/VEX-driven workflows.\r\nIn practice, it seems like CSPs are already making nuanced determinations (e.g., exploitability in context, deployment exposure, mission impact), but those decisions can be inconsistently represented or difficult to trace during assessment.\r\nMy goal is to see whether a lightweight, structured interpretation layer could help standardize that reasoning without constraining how CSPs implement their underlying processes.\r\nWould definitely welcome any perspective on how much variability you’re seeing today in how CSPs justify vulnerability relevance or risk acceptance decisions within the current ruleset.",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "devashridatta-dotcom",
+    "pete-gov"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/142#discussioncomment-17280575",
+      "author": "pete-gov",
+      "created_at": "2026-06-12T13:30:06Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://preview.fedramp.gov/2026/reference/vulnerability-detection-and-response/"
+    ],
+    "topics": [
+      "conmon",
+      "oscal",
+      "poam",
+      "rev5",
+      "vulnerability_mgmt"
+    ]
+  },
+  "content_hash": "c809505a6982c6955e140c564e34a6ef3086b61b7da72fc61cc28fb0f9962340",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

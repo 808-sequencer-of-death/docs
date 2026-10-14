@@ -1,20 +1,45 @@
 ---
-title: "Introduction"
-description: "Welcome to your project"
+title: "FedRAMP 2026 knowledge base"
+description: "Plain-English summaries of the FedRAMP Consolidated Rules for 2026 and what FedRAMP staff say about them, written for cloud service providers."
+sidebarTitle: "Home"
 ---
 
-Write a short description of your product here. What it does, who it's for, and what they can accomplish with it.
+This site explains the [FedRAMP Consolidated Rules for 2026](https://www.fedramp.gov/2026/) in plain English. It also tracks what FedRAMP staff say about those rules in the [FedRAMP community discussions](https://github.com/FedRAMP/community/discussions).
 
-<Tip>
-  Ready to make this your own? Start by editing this page. Update your `docs.json` file to customize your site. Then fill out the [Quickstart](/quickstart) page.
-</Tip>
+## Who it's for
 
-<Card title="Quickstart" icon="rocket" href="/quickstart">
-  This card links to the quickstart page in your project.
-</Card>
-<Card title="Components" icon="puzzle-piece" href="https://mintlify.com/docs/components">
-  Add cards, callouts, steps, tabs, and more to design and structure your pages.
-</Card>
-<Card title="Settings" icon="gear" href="https://mintlify.com/docs/organize/settings">
-  Set your site name, branding, and navigation in the `docs.json` file.
-</Card>
+This site is for teams at cloud service providers (CSPs) that hold, or are working toward, a FedRAMP Certification.
+
+- **Executives** get the bottom line first: what each ruleset makes you do, by when, and how strict it is.
+- **Engineers and compliance leads** get the detail: every rule ID, its force (MUST, SHOULD or MAY), class differences, timeframes and the deliverables you have to produce.
+
+<Warning>
+  **These summaries aren't the rules.** The official text at [fedramp.gov/2026](https://www.fedramp.gov/2026/) governs. FedRAMP's machine-readable source of truth is the [FedRAMP Rules repository](https://github.com/FedRAMP/rules). Every summary here links to the official rule it describes, so check the source before you act on anything.
+</Warning>
+
+## How this site stays current
+
+- **Nightly sync.** Every night, automation pulls the latest [FedRAMP/2026-markdown](https://github.com/FedRAMP/2026-markdown) release (the Markdown edition of the official rules) and the latest posts from the [FedRAMP community discussions](https://github.com/FedRAMP/community/discussions).
+- **Human review.** Every update to this site is reviewed by a person before it's published. Nothing goes live automatically.
+- **Staff versus community.** Discussion digests quote only FedRAMP staff posts as FedRAMP positions. Community comments are context, not guidance. A staff comment never overrides the published rule.
+- **Release tracking.** Each rule summary names the upstream release it was checked against. The current release is `2026.10.14.01`. See [What changed](/changelog) for the history.
+
+## Start here
+
+<CardGroup cols={3}>
+  <Card title="Rule summaries" icon="book-open" href="/rules">
+    What each ruleset requires, who it applies to, key dates, and a provider's step-by-step path through the rules.
+  </Card>
+  <Card title="Discussion digests" icon="comments" href="/discussions">
+    What FedRAMP staff have said in the community discussions, with links to each comment.
+  </Card>
+  <Card title="What changed" icon="clock-rotate-left" href="/changelog">
+    Upstream rule releases and updates to this site, newest first.
+  </Card>
+</CardGroup>
+
+## Other official resources
+
+- [FedRAMP Consolidated Rules for 2026](https://www.fedramp.gov/2026/): the official human-readable rules and narrative.
+- [FedRAMP Definitions](https://www.fedramp.gov/2026/definitions/): defined terms that change how a rule reads.
+- [FedRAMP Help](https://help.fedramp.gov): help articles and the official request forms.

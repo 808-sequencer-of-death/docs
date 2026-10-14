@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-32",
+  "node_id": "D_kwDOOxfoic4AgAbG",
+  "number": 32,
+  "title": "Paramify - FedRAMP 20x Phase One Pilot Draft Submission",
+  "url": "https://github.com/FedRAMP/community/discussions/32",
+  "category": "20x Discussion",
+  "category_slug": "20x-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "iteuscher",
+  "author_is_official": false,
+  "created_at": "2025-05-29T20:55:16Z",
+  "updated_at": "2025-08-25T14:26:49Z",
+  "last_edited_at": "2025-05-29T20:58:55Z",
+  "closed": true,
+  "closed_at": "2025-08-25T14:26:49Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 8,
+  "body": "**Paramify** has published a 20x Phase One Pilot Draft Submission available at: \r\n**https://github.com/paramify/fedramp-20x-pilot** \r\n\r\n**Summary of 20x Draft Submission**\r\nParamify's draft submission focuses on the method used to track and assess KSIs, generate a machine readable package, continuously monitor and report on implementation status and issues. As a draft, this submission does not constitute a complete, finalized package, but is intended to demonstrate our process and solicit feedback on improvements to meet the goals of FedRAMP 20x. The proposed YAML machine-readable schema is available for review and feedback. Paramify is working with Schellman as 3PAO. We look forward to the community's feedback! \r\n\r\n\r\n[Edit] Kenny made me add this \r\n![2302fd40-cfed-4683-9101-92f15ff6bff5_1080x1080](https://github.com/user-attachments/assets/e66b1f4f-332b-48f9-9018-2e2c87108970)",
+  "comment_count": 1,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4AyylV",
+      "url": "https://github.com/FedRAMP/community/discussions/32#discussioncomment-13314389",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2025-05-29T21:27:33Z",
+      "updated_at": "2025-05-29T21:27:33Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "I regret to inform you that government regulations prevent us from prioritizing submissions or immediately granting automatic FedRAMP authorizations on the basis of dank cats. 😭 Someone on the team will crack into this shortly, and I'm excited to see what other folks say about it as well.\r\n\r\nAt a quick glance this sure is shiny.",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "iteuscher",
+    "pete-gov"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/32#discussioncomment-13314389",
+      "author": "pete-gov",
+      "created_at": "2025-05-29T21:27:33Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://github.com/paramify/fedramp-20x-pilot**",
+      "https://github.com/user-attachments/assets/e66b1f4f-332b-48f9-9018-2e2c87108970"
+    ],
+    "topics": [
+      "20x",
+      "3pao",
+      "ksi",
+      "machine_readable"
+    ]
+  },
+  "content_hash": "7ea68433d57c09502da5e88fbec0b6148cbbf5f4bb4dfb4fa7ac8140fe654ec5",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

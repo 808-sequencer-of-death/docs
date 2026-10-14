@@ -1,0 +1,115 @@
+---
+title: "Addressing FedRAMP communication"
+description: "Maintain a FedRAMP Security Inbox that reliably receives FedRAMP email, and complete the required actions in Emergency and Emergency Test messages within the stated timeframe."
+sidebarTitle: "AFC: FedRAMP communication"
+---
+
+<Info>
+  **Official source:** [Addressing FedRAMP Communication](https://www.fedramp.gov/2026/reference/addressing-fedramp-communication/) (`AFC`), FedRAMP Consolidated Rules release `2026.10.14.01`. This page is a plain-English summary. The official rule text governs.
+</Info>
+
+## In short
+
+You must keep a FedRAMP Security Inbox (FSI), an email address where FedRAMP can always reach your security and compliance staff. Mail must get through without CAPTCHAs, portals or other hurdles. FedRAMP marks urgent messages as **Emergency**, **Emergency Test** or **Important**. You MUST complete the actions in Emergency and Emergency Test messages within the timeframe in the message, and you SHOULD do the same for Important messages. Missing an Emergency deadline will result in corrective action. These rules already apply: the grace period ended on 2026-07-01.
+
+## Who it applies to
+
+| Subset | Type | Path | Class | Audience |
+| --- | --- | --- | --- | --- |
+| [FedRAMP Responsibilities](https://www.fedramp.gov/2026/reference/addressing-fedramp-communication/#fedramp-responsibilities) | 20x, Rev5 | Program, Agency | B, C, D | FedRAMP |
+| [General Provider Responsibilities](https://www.fedramp.gov/2026/reference/addressing-fedramp-communication/#general-provider-responsibilities) | 20x, Rev5 | Program, Agency | B, C, D | Providers |
+
+Upstream says the provider rules apply to "providers with any type of FedRAMP Certification."
+
+<Note>
+  The subsets list Classes B, C and D, but `AFC-FRP-ERT` gives a default timeframe for Class A. For Class A, [`FRC-CLA-MFR`](https://www.fedramp.gov/2026/reference/fedramp-certification/#mandatory-fedramp-rules-for-class-a) makes `AFC-CSO-INB`, `AFC-CSO-RCV` and `AFC-CSO-CRA` mandatory.
+</Note>
+
+## Key dates
+
+The same dates apply to 20x and Rev5. Upstream lists no optional adoption date for this ruleset.
+
+| | 20x and Rev5 |
+| --- | --- |
+| Status | Required (Consolidated Rules for 2026) |
+| Obtaining initial certification | 2026-01-05 |
+| Maintaining ongoing certification | 2026-01-05 |
+| Grace period ends | 2026-07-01 |
+
+## What you need to do
+
+### General provider responsibilities
+
+| Rule | Force | What it means for you |
+| --- | --- | --- |
+| [`AFC-CSO-INB`](https://www.fedramp.gov/2026/reference/addressing-fedramp-communication/#maintain-a-fedramp-security-inbox) | MUST | Establish and maintain an email address to receive messages from FedRAMP. This is your FedRAMP Security Inbox (FSI). |
+| [`AFC-CSO-NOC`](https://www.fedramp.gov/2026/reference/addressing-fedramp-communication/#notification-of-changes) | MUST | Immediately notify FedRAMP of any change to your FSI address, using the [CSP Notification of Changes form](https://help.fedramp.gov/hc/en-us/requests/new?ticket_form_id=51829466938011). |
+| [`AFC-CSO-TFG`](https://www.fedramp.gov/2026/reference/addressing-fedramp-communication/#trust-fedrampgov-and-gsagov) | MUST | Treat any email from an `@fedramp.gov` or `@gsa.gov` address as coming from FedRAMP by default. If you confirm it came from someone other than FedRAMP, the FSI rules no longer apply to it. |
+| [`AFC-CSO-RCV`](https://www.fedramp.gov/2026/reference/addressing-fedramp-communication/#receive-email-without-disruption) | MUST | Receive and react to FedRAMP email without disruption and without requiring extra actions from FedRAMP, such as completing a CAPTCHA or logging into a customer portal. |
+| [`AFC-CSO-CRA`](https://www.fedramp.gov/2026/reference/addressing-fedramp-communication/#complete-required-actions) | MUST | Complete the required actions in Emergency or Emergency Test messages within the timeframe in the message. The note says timeframes may vary by class. |
+| [`AFC-CSO-EMR`](https://www.fedramp.gov/2026/reference/addressing-fedramp-communication/#emergency-message-routing) | MUST | Route Emergency messages to a senior security official for awareness. You decide who that is. |
+| [`AFC-CSO-IMA`](https://www.fedramp.gov/2026/reference/addressing-fedramp-communication/#important-message-actions) | SHOULD | Complete the required actions in Important messages within the timeframe in the message. |
+| [`AFC-CSO-ACK`](https://www.fedramp.gov/2026/reference/addressing-fedramp-communication/#acknowledge-receipt) | SHOULD | Promptly and automatically acknowledge receipt of messages from FedRAMP in your FSI. |
+
+<Warning>
+  Upstream warns against using a personal email tied to one person as the FSI, because of the risk to future communications after a change in personnel.
+</Warning>
+
+The notes on `AFC-CSO-INB` say that unless told otherwise, FedRAMP uses the Security Email listed on the FedRAMP Marketplace. If you set up a new inbox that is different from that Security Email, you must notify FedRAMP under `AFC-CSO-NOC`.
+
+### FedRAMP responsibilities
+
+These rules bind FedRAMP. They tell you what a legitimate FedRAMP message looks like and what to expect from it.
+
+| Rule | Force | What it means for you |
+| --- | --- | --- |
+| [`AFC-FRP-VRE`](https://www.fedramp.gov/2026/reference/addressing-fedramp-communication/#verified-emails) | MUST | FedRAMP sends from official `@fedramp.gov` or `@gsa.gov` addresses with SPF, DKIM and DMARC configured. The note says anyone at GSA can send from these domains, and FedRAMP staff names usually, but not always, include "FedRAMP" or "F20B." |
+| [`AFC-FRP-CDS`](https://www.fedramp.gov/2026/reference/addressing-fedramp-communication/#criticality-designators) | MUST | FedRAMP puts a criticality designator (Emergency, Emergency Test or Important) in the subject line of any message that needs an elevated reaction. See [message designators](#message-designators). |
+| [`AFC-FRP-UFS`](https://www.fedramp.gov/2026/reference/addressing-fedramp-communication/#use-fedramp_security-email-in-emergencies) | MUST | FedRAMP sends Emergency and Emergency Test messages from `fedramp_security@gsa.gov` or `fedramp_security@fedramp.gov`. |
+| [`AFC-FRP-PNT`](https://www.fedramp.gov/2026/reference/addressing-fedramp-communication/#public-notice-of-emergency-tests) | MUST | FedRAMP posts a public notice at least 10 business days before sending an Emergency Test message, explaining the likely expected actions and timeframes. Notices appear at [FedRAMP Public Notices](https://www.fedramp.gov/notices). The notes say public notice may also include blog posts, social media, Community Update announcements or e-blasts. |
+| [`AFC-FRP-RQA`](https://www.fedramp.gov/2026/reference/addressing-fedramp-communication/#required-actions) | MUST | FedRAMP clearly states the required actions in the body of messages that need an elevated reaction. |
+| [`AFC-FRP-ERT`](https://www.fedramp.gov/2026/reference/addressing-fedramp-communication/#elevated-reaction-timeframes) | MUST | FedRAMP clearly states the deadline for the required actions. For Emergency and Emergency Test messages, the default timeframes to provide an estimated resolution time vary by class. See [differences by class](#differences-by-class). |
+| [`AFC-FRP-COR`](https://www.fedramp.gov/2026/reference/addressing-fedramp-communication/#explain-corrective-actions) | MUST | FedRAMP states the corrective actions that will follow if you don't complete the required actions. These range from negative ratings on the FedRAMP Marketplace to suspension of FedRAMP Certification. |
+| [`AFC-FRP-RPM`](https://www.fedramp.gov/2026/reference/addressing-fedramp-communication/#reaction-metrics) | MAY | FedRAMP may track and publicly share how long providers take to complete the actions in elevated-reaction messages. |
+
+### Message designators
+
+From `AFC-FRP-CDS`:
+
+| Designator | What it means | Consequence of missing the timeframe |
+| --- | --- | --- |
+| Emergency | A potential incident or crisis that needs an extremely urgent reaction. Messages contain aggressive timeframes. | Will result in corrective action |
+| Emergency Test | An extremely urgent test of your FSI's functionality and effectiveness. Messages contain aggressive timeframes. | Will result in corrective action |
+| Important | An important issue you need to address. Messages contain reasonable timeframes. | May result in corrective action |
+| None | General communication. No elevated reaction needed. Resolve in the normal course of business. | None stated |
+
+## Differences by class
+
+`AFC-FRP-ERT` sets FedRAMP's default timeframes for you to provide an estimated resolution time for Emergency and Emergency Test messages. The actual timeframe for required actions is whatever the message states (`AFC-CSO-CRA`), and it varies by situation.
+
+| Class | Default timeframe for Emergency and Emergency Test messages |
+| --- | --- |
+| Class A | By 3:00 p.m. Eastern Time on the 5th business day |
+| Class B | By 3:00 p.m. Eastern Time on the 3rd business day |
+| Class C | By 3:00 p.m. Eastern Time on the 2nd business day |
+| Class D | Within 12 hours |
+
+The `AFC-FRP-ERT` note says Class D providers are expected to react to Emergency messages (including tests) as fast as befits a service where a slow reaction might have a severe or debilitating customer effect on the U.S. Government. Some Emergency messages may require a faster reaction, and all should be addressed as quickly as possible.
+
+## What FedRAMP staff have said
+
+<Note>
+  **AFC is already required.** AFC and the Secure Configuration Guide rules are required now. The grace period ended on 2026-07-01, including for new submissions. [emu-gov, 2026-07-10, discussion #146](https://github.com/FedRAMP/community/discussions/146#discussioncomment-17596382)
+</Note>
+
+<Note>
+  **FSI tests are also how FedRAMP checks your transition.** For providers with an active certification, FedRAMP will request status on adopting the 2026 rules mostly alongside the quarterly FSI testing, including around maintain dates. [paulagosta, 2026-08-19, discussion #146](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18081891) and [2026-09-22](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18558623). See also [paulagosta, 2026-07-23, discussion #147](https://github.com/FedRAMP/community/discussions/147#discussioncomment-17755820).
+</Note>
+
+## Related
+
+- [Incident evaluation and communication](/rules/incident-evaluation-and-communication): reporting incidents to `fedramp_security@fedramp.gov`
+- [Marketplace listing](/rules/marketplace-listing): the Security Email on your listing
+- [FedRAMP certification](/rules/fedramp-certification)
+- [Secure configuration guide](/rules/secure-configuration-guide)
+- [Rev5 questions on the 2026 rules](/discussions/rev5-cr26-questions)

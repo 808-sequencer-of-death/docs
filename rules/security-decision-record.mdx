@@ -1,0 +1,144 @@
+---
+title: "Security decision record"
+description: "Keep a verified and validated record, in human-readable and JSON formats, of how you meet each applicable FedRAMP rule, Key Security Indicator and Rev5 control."
+sidebarTitle: "SDR: Security decision record"
+---
+
+<Info>
+  **Official source:** [Security Decision Record](https://www.fedramp.gov/2026/reference/security-decision-record/) (`SDR`), FedRAMP Consolidated Rules release `2026.10.14.01`. This page is a plain-English summary. The official rule text governs.
+</Info>
+
+## In short
+
+The Security Decision Record (SDR) replaces the traditional System Security Plan. It is a persistently maintained, verified and validated record of the security decisions you make over the life of your cloud service offering. For every applicable FedRAMP rule you must explain how you follow it (or why you don't and the resulting risk), show your own verification and validation, and include your assessor's independent verification and validation. 20x providers add summaries for each Key Security Indicator, and Rev5 providers add summaries for each Rev5 control.
+
+## Who it applies to
+
+| Subset | Type | Path | Class | Audience |
+| --- | --- | --- | --- | --- |
+| [General Provider Responsibilities](https://www.fedramp.gov/2026/reference/security-decision-record/#general-provider-responsibilities) | 20x, Rev5 | Program, Agency | B, C, D | Providers |
+| [20x-Specific Provider Responsibilities](https://www.fedramp.gov/2026/reference/security-decision-record/#20x-specific-provider-responsibilities) | 20x | Program | B, C, D | Providers |
+| [Rev5-Specific Provider Responsibilities](https://www.fedramp.gov/2026/reference/security-decision-record/#rev5-specific-provider-responsibilities) | Rev5 | Program, Agency | B, C, D | Providers |
+
+<Note>
+  The 20x subset lists Classes B, C and D, but [`SDR-CSX-KMT`](https://www.fedramp.gov/2026/reference/security-decision-record/#key-security-indicator-metrics) includes a Class A variant (MAY).
+</Note>
+
+## Key dates
+
+| | 20x | Rev5 |
+| --- | --- | --- |
+| Status | Required (Consolidated Rules for 2026) | Required (Consolidated Rules for 2026) |
+| Optional adoption allowed | 2026-07-04 | 2026-07-04 |
+| Obtaining initial certification | 2026-07-04 | 2027-01-01 |
+| Maintaining ongoing certification | 2027-01-01 | 2027-08-01 |
+| Grace period ends | First FedRAMP independent assessment started after 2027-01-01 | First FedRAMP independent assessment started after 2027-08-01 |
+
+## What you need to do
+
+The JSON format follows the [FedRAMP Security Decision Record schema](https://fedramp.gov/schemas/fedramp-security-decision-record-schema-2026-06-24.json).
+
+### General provider responsibilities (20x and Rev5)
+
+| Rule | Force | What it means for you |
+| --- | --- | --- |
+| [`SDR-CSO-FRR`](https://www.fedramp.gov/2026/reference/security-decision-record/#fedramp-rules) | MUST | Supply an SDR, in human-readable and JSON formats, with the seven items listed below for each applicable FedRAMP rule. |
+| [`SDR-CSO-MTD`](https://www.fedramp.gov/2026/reference/security-decision-record/#security-decision-record-metadata) | MUST | Include basic metadata: version, date and time of last update, and source of update. |
+
+For each applicable FedRAMP rule, `SDR-CSO-FRR` requires at least:
+
+1. An explanation of how you follow the rule, or the reason you don't and the resulting risk to customers.
+2. Verification that the implementation is appropriate for the rule, or that a senior official accepted the reason for not implementing it.
+3. Validation that the implementation is in place and working as intended, or that a senior official accepted the reason for not implementing it.
+4. Independent verification.
+5. Independent validation.
+6. Any responses or clarifications to comments in the independent verification or validation.
+7. Rule-specific artifacts, if applicable.
+
+### 20x-specific provider responsibilities
+
+| Rule | Force | What it means for you |
+| --- | --- | --- |
+| [`SDR-CSX-KSI`](https://www.fedramp.gov/2026/reference/security-decision-record/#key-security-indicators) | MUST | Include short, simple, high-level summaries of the five items listed below for each applicable Key Security Indicator. |
+| [`SDR-CSX-KMT`](https://www.fedramp.gov/2026/reference/security-decision-record/#key-security-indicator-metrics) | Varies by class (MAY for A, SHOULD for B, MUST for C and D) | Include historical metrics for each applicable Key Security Indicator. See [differences by class](#differences-by-class). |
+
+For each applicable Key Security Indicator, `SDR-CSX-KSI` requires summaries of at least:
+
+1. The measures (and their objectives) that demonstrate the indicator, or the reason you have no measures and the resulting risk to customers.
+2. The cycle for any measures you implement persistently, if applicable.
+3. Verification that the measures demonstrate the indicator, or that the reason for not having them is accepted.
+4. Verification that your automation is accurate and sufficient to demonstrate appropriate measures, or that automation isn't necessary for each measure.
+5. Validation that the measures are accurately produced, in place and working as intended, or that the reason for not having them is valid.
+
+<Note>
+  The note on `SDR-CSX-KMT` says that for initial certification, if your service hasn't been running with related metrics for the required period, you will need to have mechanisms in place and agree to meet the requirement.
+</Note>
+
+### Rev5-specific provider responsibilities
+
+| Rule | Force | What it means for you |
+| --- | --- | --- |
+| [`SDR-CSF-CTF`](https://www.fedramp.gov/2026/reference/security-decision-record/#rev5-controls) | MUST | Include short, simple, high-level summaries of the nine items listed below for each applicable Rev5 control. |
+
+For each applicable Rev5 control, `SDR-CSF-CTF` requires summaries of at least:
+
+1. Any organization-defined parameter values.
+2. Implementation status: Implemented, Partially Implemented, Planned, Alternative Implementation or Not Applicable.
+3. The mechanisms or activities that address the control, including inheritance from another cloud service offering if applicable.
+4. The verification in place to ensure the implementation is appropriate for the control.
+5. The validation in place to ensure the implementation is working as intended.
+6. Independent verification.
+7. Independent validation.
+8. Any responses or clarifications to comments in the independent verification or validation.
+9. Control-specific artifacts, if applicable.
+
+## Differences by class
+
+`SDR-CSX-KMT` (Key Security Indicator Metrics) varies by class. The [2026-10-08 release](https://www.fedramp.gov/2026/changelog/) changed Class B from MUST to SHOULD and clarified that persistent validation status is one of the metrics.
+
+| Class | Force | What to include for each applicable Key Security Indicator |
+| --- | --- | --- |
+| A | MAY | Historical metrics (no minimum set). |
+| B | SHOULD | A summary of each metric over the past 30 days, and a summary of the metric up to the past year (where available). |
+| C | MUST | A summary of each metric over the past 30 days, a summary of the metric up to the past year (where available), and all daily metric data, including status of persistent validation, up to the past year (where available). |
+| D | MUST | Significantly supersede the minimum requirements for lower classes. Specifics will be set during the 20x Phase 4 Pilot. |
+
+## What FedRAMP staff have said
+
+<Note>
+  **Describe how and show the result.** On 2026-10-13, **pete-gov** said `SDR-CSO-FRR` asks for a lot, and most of it isn't structured in the schema. You must provide both summaries of how things are done and verification and validation that they are being done that way. Asked to confirm, **pete-gov** said yes: you provide both an explanation of the steps you take to verify and validate, and the results of performing them. **pete-gov** also said schemas aren't templates: follow the rules, not the schemas. [Discussion #146 comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18903706), [follow-up](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18904503)
+</Note>
+
+<Note>
+  **You own all SDR content.** On 2026-09-08, **pete-gov** said the provider is responsible for all content in its SDR, including the independent verification and validation that the assessor supplies under [`IVV-IAS-SUM`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#assessment-summary). The assessor verifies inclusion under `IVV-IAS-VIP`. For `SDR-CSX-KSI`, the assessor verifies and validates what you supply for all five items for each KSI. The assessor doesn't supply your tests and evidence. [Discussion #169 comment](https://github.com/FedRAMP/community/discussions/169#discussioncomment-18357017), [follow-up](https://github.com/FedRAMP/community/discussions/169#discussioncomment-18357430)
+</Note>
+
+<Note>
+  **Where independent results come from.** On 2026-10-13, **pete-gov** said `IVV-IAS-SUM` is the instruction to the assessor to supply the information for items 4 and 5 of `SDR-CSO-FRR` (independent verification and validation). [Discussion #146 comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18904451)
+</Note>
+
+<Note>
+  **Organizing SDR responses.** On 2026-09-01, **dan-fedramp** said you are encouraged to organize SDR responses in whatever way communicates your solution and residual risk to an agency reviewer, including combining data into a single field. **dan-fedramp** also said `SDR-CSO-FRR` and `SDR-CSF-CTF` aren't meant to make you re-list every requirement or control response. For those two rules, describe the process that ensures compliance, for example how your GRC tool generates the SDR, a script that checks completeness and format, and that script's output for the current version. [Discussion #146 comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18235313)
+</Note>
+
+<Note>
+  **"Source of update" metadata.** On 2026-08-17, **dan-fedramp** said "Source of update" in `SDR-CSO-MTD` tells the reviewer whether the update is regular and recurring or prompted by an unusual event. There are no prescribed values. Examples are a process such as continuous monitoring, SCN or incident response. [Discussion #147 comment](https://github.com/FedRAMP/community/discussions/147#discussioncomment-18056301)
+</Note>
+
+<Note>
+  **Artifact links.** On 2026-08-18, **paulagosta** said artifacts should support the machine-readable answers, not replace them (for example, linking the same SRTM for every item of `SDR-CSF-CTF`). On 2026-08-24, **emu-gov** said direct links are best when an artifact isn't in the SDR itself. "See Trust Center" can cause delays, and FedRAMP will push back on submissions where reviewers can't find the files. [Discussion #147 comment (paulagosta)](https://github.com/FedRAMP/community/discussions/147#discussioncomment-18064901), [Discussion #147 comment (emu-gov)](https://github.com/FedRAMP/community/discussions/147#discussioncomment-18136501)
+</Note>
+
+<Note>
+  **Rev5 transition timing.** On 2026-09-22, **pete-gov** said there is a grace period for everything in Rev5. For some rulesets, such as the SDR, it is based on when the first FedRAMP independent assessment (annual assessment) starts, not when it ends. A provider finishing an annual assessment in December 2026 can early adopt or wait until its next assessment starts. On 2026-08-27, **paulagosta** suggested using item 8 of `SDR-CSF-CTF` to note the assessment date when independent verification and validation came from earlier annual assessments. [Discussion #146 comment (pete-gov)](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18558926), [Discussion #146 comment (paulagosta)](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18179917)
+</Note>
+
+## Related
+
+- [Certification package overview](/rules/certification-package-overview)
+- [FedRAMP certification](/rules/fedramp-certification): `FRC-CSO-PKG` requires the package to include SDR information.
+- [Independent verification and validation](/rules/independent-verification-and-validation)
+- [Key security indicators](/rules/key-security-indicators)
+- [Rev5 questions on the Consolidated Rules for 2026](/discussions/rev5-cr26-questions)
+- [20x questions on the Consolidated Rules for 2026](/discussions/20x-cr26-questions)
+- [Provider deliverables](/rules/provider-deliverables)

@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-94",
+  "node_id": "D_kwDOOxfoic4AiOKw",
+  "number": 94,
+  "title": "Aeroplicity - FedRAMP 20x Phase Two Pilot Draft",
+  "url": "https://github.com/FedRAMP/community/discussions/94",
+  "category": "20x Discussion",
+  "category_slug": "20x-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "jerome-miastkowski",
+  "author_is_official": false,
+  "created_at": "2025-10-01T18:01:50Z",
+  "updated_at": "2025-11-18T16:23:03Z",
+  "last_edited_at": null,
+  "closed": true,
+  "closed_at": "2025-11-18T16:23:03Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 2,
+  "body": "Aeroplicity is committed to full transparency in our approach to FedRAMP 20x. Our goal is to help strengthen the overall program and give back to the community. It’s been inspiring to see the diverse approaches and contributions from others so far.\r\n\r\nWe have been actively implementing the requirements as part of the FedRAMP 20x Phase One Pilot. With our implementation of the Moderate KSIs nearly complete, we’re excited about the potential opportunity to participate in the Phase Two Pilot.\r\n\r\nYou can view our draft public repo @ https://github.com/aero-plicity/fedramp-20x-public\r\n\r\nYou can also view our live Trust Center @ https://aeroplicity.com/trust-center\r\n\r\nA huge thanks to @pete-gov and team for modernizing the FedRAMP Authorization process.",
+  "comment_count": 0,
+  "comments": [],
+  "answer_url": null,
+  "participants": [
+    "jerome-miastkowski"
+  ],
+  "official_responses": [],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://aeroplicity.com/trust-center",
+      "https://github.com/aero-plicity/fedramp-20x-public"
+    ],
+    "topics": [
+      "20x",
+      "ksi",
+      "trust_center"
+    ]
+  },
+  "content_hash": "726d8d2f1c860027e79273f3b85c7d8fc35c0e02c0f27786b503ede1d04e9e68",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

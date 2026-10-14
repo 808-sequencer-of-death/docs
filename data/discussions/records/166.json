@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-166",
+  "node_id": "D_kwDOOxfoic4Ao14e",
+  "number": 166,
+  "title": "Issues with FedRAMP Schema Validator",
+  "url": "https://github.com/FedRAMP/community/discussions/166",
+  "category": "20x Discussion",
+  "category_slug": "20x-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "gmengelberg",
+  "author_is_official": false,
+  "created_at": "2026-08-28T18:22:54Z",
+  "updated_at": "2026-09-09T17:33:39Z",
+  "last_edited_at": null,
+  "closed": true,
+  "closed_at": "2026-09-09T17:33:39Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "There may be an issue w/ the [FedRAMP Schema Validator](https://www.fedramp.gov/schemas/validator/?schema=fedramp-security-decision-record-schema-2026-06-24.json) processing valid SDRs. The validator returns `no schema with key or ref \"https://json-schema.org/draft/2020-12/schema\"` which suggests the validator is unable to resolve the draft 2020-12 meta-schema.\r\n\r\nLocal testing by multiple parties using valid SDRs pass successfully.",
+  "comment_count": 1,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4BFZvy",
+      "url": "https://github.com/FedRAMP/community/discussions/166#discussioncomment-18193394",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2026-08-28T20:36:51Z",
+      "updated_at": "2026-08-28T20:36:51Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Hi @gmengelberg - thank you for the heads up, we're tracking this error but haven't prioritized fixing as the schema on the website is provided for convenience. Sounds like you've already separately validated so you should be good!\r\n\r\nHopefully we'll have the web validator updated soon, and we'll also be sure to add a disclaimer that it shouldn't be relied on for any production use.",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BFZwr",
+          "url": "https://github.com/FedRAMP/community/discussions/166#discussioncomment-18193451",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-08-28T20:46:09Z",
+          "updated_at": "2026-08-28T20:46:09Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "I'm being told a fix was already posted but won't have a chance to double check myself today!"
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "gmengelberg",
+    "pete-gov"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/166#discussioncomment-18193394",
+      "author": "pete-gov",
+      "created_at": "2026-08-28T20:36:51Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/166#discussioncomment-18193451",
+      "author": "pete-gov",
+      "created_at": "2026-08-28T20:46:09Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://json-schema.org/draft/2020-12/schema",
+      "https://www.fedramp.gov/schemas/validator/?schema=fedramp-security-decision-record-schema-2026-06-24.json"
+    ],
+    "topics": [
+      "machine_readable"
+    ]
+  },
+  "content_hash": "35a854f0361ce178f355f404c64bc4ae5161152812cf56665f2260227bfe0b12",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

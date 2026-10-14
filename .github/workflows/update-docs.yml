@@ -1,0 +1,133 @@
+name: Update docs
+
+# Reads what the nightly sync changed, has Claude update the affected Mintlify
+# pages and the changelog, and opens a PR for review. Never pushes to main.
+
+on:
+  workflow_dispatch:
+    inputs:
+      base:
+        description: "Commit before the sync (default: parent of head)"
+        required: false
+        type: string
+      head:
+        description: "Sync commit to process (default: latest commit on main)"
+        required: false
+        type: string
+
+permissions:
+  contents: write      # push the update branch
+  pull-requests: write # open the PR
+
+concurrency:
+  group: update-docs
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Work out the range to process
+        id: range
+        env:
+          INPUT_HEAD: ${{ inputs.head }}
+          INPUT_BASE: ${{ inputs.base }}
+        run: |
+          HEAD_SHA=$(git rev-parse --verify "${INPUT_HEAD:-HEAD}^{commit}")
+          BASE_SHA=$(git rev-parse --verify "${INPUT_BASE:-$HEAD_SHA~1}^{commit}")
+          echo "base=$BASE_SHA" >> "$GITHUB_OUTPUT"
+          echo "head=$HEAD_SHA" >> "$GITHUB_OUTPUT"
+          echo "branch=auto/update-$(date -u +%Y-%m-%d)-${{ github.run_id }}" >> "$GITHUB_OUTPUT"
+          {
+            echo "## Changed source files ($BASE_SHA..$HEAD_SHA)"
+            git diff --stat=200 "$BASE_SHA" "$HEAD_SHA" -- upstream data ':(exclude)data/discussions/state.sqlite' | tail -n 80
+            echo
+            echo "## New, updated or removed discussions"
+            git diff "$BASE_SHA" "$HEAD_SHA" -- 'data/discussions/changes/*.jsonl' | grep '^+{' | cut -c2- || true
+          } > "$RUNNER_TEMP/changes.md"
+          cat "$RUNNER_TEMP/changes.md"
+          {
+            echo 'summary<<CHANGES_EOF'
+            cat "$RUNNER_TEMP/changes.md"
+            echo 'CHANGES_EOF'
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Create the update branch
+        run: git switch -c "${{ steps.range.outputs.branch }}"
+
+      - name: Update pages with Claude
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          github_token: ${{ github.token }}
+          prompt: |
+            You maintain this Mintlify site of FedRAMP rule summaries and discussion digests for CSP clients.
+            Read CLAUDE.md first and follow it exactly, especially the content rules and the update agent procedure.
+
+            The nightly sync committed new source data in ${{ steps.range.outputs.base }}..${{ steps.range.outputs.head }}.
+            Inspect it with `git diff ${{ steps.range.outputs.base }} ${{ steps.range.outputs.head }} -- upstream` and by reading the
+            listed data/discussions/records/<number>.json files.
+
+            ${{ steps.range.outputs.summary }}
+
+            Your task:
+            1. Update every rules/ and discussions/ page affected by these changes. Change nothing that isn't affected.
+            2. Add one entry at the top of changelog.mdx for today's date describing what changed upstream and in discussions,
+               linking the official sources and the pages you updated.
+            3. Write a short PR description to .pr-body.md in the repo root: what changed upstream, which pages you edited and why,
+               and anything a human reviewer should double-check (uncertain readings, staff statements that conflict with the rules).
+
+            Hard limits: don't edit upstream/, data/, scripts/ or .github/. Don't run git commit, git push or create branches;
+            the workflow does that. Never invent guidance; if the sources are unclear, say so in .pr-body.md.
+          claude_args: |
+            --model claude-sonnet-5-5
+            --max-turns 60
+            --max-budget-usd 5
+            --allowedTools "Read,Edit,Write,Glob,Grep,Bash(git diff:*),Bash(git log:*),Bash(git show:*),Bash(ls:*),Bash(jq:*)"
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+
+      - name: Validate the Mintlify build
+        id: validate
+        continue-on-error: true
+        run: |
+          npx --yes mint@4 validate
+          npx --yes mint@4 broken-links
+
+      - name: Open a pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          BODY_FILE=.pr-body.md
+          [ -f "$BODY_FILE" ] || echo "Claude didn't write a PR description." > "$BODY_FILE"
+          mv "$BODY_FILE" "$RUNNER_TEMP/pr-body.md"
+          {
+            echo
+            echo "---"
+            echo "Source range: \`${{ steps.range.outputs.base }}..${{ steps.range.outputs.head }}\`"
+            echo "Mintlify build check: **${{ steps.validate.outcome }}**"
+            echo "Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          } >> "$RUNNER_TEMP/pr-body.md"
+
+          # Only commit site content; ignore anything else Claude may have touched.
+          git add -A -- '*.mdx' docs.json
+          if git diff --cached --quiet; then
+            echo "Claude made no page changes. No PR opened."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -q -m "Update docs for sync ${{ steps.range.outputs.head }}"
+          git push -u origin "${{ steps.range.outputs.branch }}"
+          TITLE="Docs update: $(date -u +%Y-%m-%d)"
+          [ "${{ steps.validate.outcome }}" = "success" ] || TITLE="$TITLE [build check failed]"
+          gh pr create --base main --head "${{ steps.range.outputs.branch }}" \
+            --title "$TITLE" --body-file "$RUNNER_TEMP/pr-body.md"

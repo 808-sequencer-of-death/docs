@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-57",
+  "node_id": "D_kwDOOxfoic4Agg_a",
+  "number": 57,
+  "title": "Monthly Community Working Group Meetings",
+  "url": "https://github.com/FedRAMP/community/discussions/57",
+  "category": "Announcements",
+  "category_slug": "announcements",
+  "labels": [
+    "FedRAMP Official"
+  ],
+  "is_official_thread": true,
+  "is_rfc": false,
+  "author": "emu-gov",
+  "author_is_official": true,
+  "created_at": "2025-07-02T18:50:06Z",
+  "updated_at": "2025-07-25T16:20:58Z",
+  "last_edited_at": null,
+  "closed": true,
+  "closed_at": "2025-07-25T16:20:58Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 2,
+  "body": "The Rev 5 & 20x Community Working Group Meetings are shifting from biweekly to monthly. Zoom meeting links will remain the same and times will be updated NLT next week.\r\n* 23 July - next 20x meeting (monthly on 4th Wednesday)\r\n* 6 Aug - next Rev 5 meeting (monthly on 1st Wednesday)\r\n\r\nWith the uptick in 20x pilot submissions and SCN beta testing beginning, this change will allow the FedRAMP PMO to focus on quality over quantity 💎 ",
+  "comment_count": 0,
+  "comments": [],
+  "answer_url": null,
+  "participants": [
+    "emu-gov"
+  ],
+  "official_responses": [],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [],
+    "topics": [
+      "20x",
+      "rev5"
+    ]
+  },
+  "content_hash": "bbc8c99c8cc616ccdd5b4c45a7e1e7132c1543506bdc748b40efddfdf79082ea",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

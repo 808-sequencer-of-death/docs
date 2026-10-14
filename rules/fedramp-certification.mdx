@@ -1,0 +1,241 @@
+---
+title: "FedRAMP certification"
+description: "How your cloud service offering obtains and keeps a FedRAMP Certification: the package, the application, Class A, class changes, and the 20x and Rev5 specifics."
+sidebarTitle: "FRC: FedRAMP certification"
+---
+
+<Info>
+  **Official source:** [FedRAMP Certification](https://www.fedramp.gov/2026/reference/fedramp-certification/) (`FRC`), FedRAMP Consolidated Rules release `2026.10.14.01`. This page is a plain-English summary. The official rule text governs.
+</Info>
+
+## In short
+
+This ruleset is the front door to FedRAMP. You pick a target [Certification Profile](https://www.fedramp.gov/2026/definitions/#certification-profile), build a complete FedRAMP Certification Package, get listed in the Marketplace, and then apply yourself through the official form. You can't use a third party to apply for you. Class A (20x only) lets you start from an existing SOC 2 Type II, GovRAMP or FedRAMP Rev5 assessment. Classes B, C and D need a fresh independent assessment. Rev5 adds a control baseline per class, and legacy FedRAMP Ready offerings MUST convert to a FedRAMP Certification.
+
+## Who it applies to
+
+All rules here apply to cloud service providers. Each subset narrows the scope further:
+
+| Subset | Type | Path | Class |
+| --- | --- | --- | --- |
+| General Provider Responsibilities (`FRC-CSO`) | 20x, Rev5 | Program, Agency | A, B, C, D |
+| FedRAMP Class A Certification Rules (`FRC-CLA`) | 20x | Program | A |
+| Applying for FedRAMP Certification (`FRC-APP`) | 20x, Rev5 | Program, Agency | A, B, C, D |
+| Applying with an Agency Sponsor (`FRC-APS`) | Rev5 | Agency | B, C, D |
+| Changing Certification Class (`FRC-CCL`) | Rev5 | Agency | B, C, D |
+| 20x-Specific Provider Responsibilities (`FRC-CSX`) | 20x | Program | B, C, D |
+| Rev5-Specific Provider Responsibilities (`FRC-CSF`) | Rev5 | Program, Agency | B, C, D |
+
+<Note>
+  The `FRC-CSX` subset header lists Classes B, C and D, but `FRC-CSX-VVK` and `FRC-CSX-VVR` also carry a Class A variant (MAY). Likewise, the `FRC-CCL` subset is scoped to Rev5 Agency Classes B to D, while the notes on `FRC-CCL-UCC` and `FRC-CCL-DCC` describe moves to and from Class A. The upstream changelog records this narrowing. Check the [official page](https://www.fedramp.gov/2026/reference/fedramp-certification/) if your case depends on it.
+</Note>
+
+## Key dates
+
+From the ruleset's "Effective Date(s)" blocks:
+
+| Milestone | 20x | Rev5 |
+| --- | --- | --- |
+| Status | Required (Consolidated Rules for 2026) | Required (Consolidated Rules for 2026) |
+| Optional adoption allowed | 2026-07-04 | 2026-07-04 |
+| Obtaining initial certification | 2026-07-04 | 2027-01-01 |
+| Maintaining ongoing certification | 2027-01-01 | 2027-01-01 |
+| Grace period ends | On the first FedRAMP independent assessment started after 2027-01-01 | On the first FedRAMP independent assessment started after 2027-01-01 |
+
+Other dates that matter for this ruleset:
+
+- **2026-11-17:** the earliest deadline for FedRAMP Rev5 Ready offerings to convert to a FedRAMP Certification. The actual deadline is the later of this date and the expiration of your annual assessment (`FRC-CSF-RDY`).
+- **2027-06-11:** FedRAMP stops accepting applications for new FedRAMP Rev5 Certifications ([Important Deadlines](https://www.fedramp.gov/2026/providers/updating/deadlines/)).
+- **2027-12-31:** legacy FedRAMP Ready status is removed entirely (`FRC-CSF-RDY`).
+- **2028-02-01:** all grace periods for the Consolidated Rules for 2026 expire ([Important Deadlines](https://www.fedramp.gov/2026/providers/updating/deadlines/)).
+
+For what "obtain", "maintain" and "grace period" mean, see [Important Deadlines](https://www.fedramp.gov/2026/providers/updating/deadlines/).
+
+## What you need to do
+
+### General provider responsibilities (`FRC-CSO`)
+
+Applies to every provider obtaining or maintaining any FedRAMP Certification.
+
+| Rule | Force | What it means for you |
+| --- | --- | --- |
+| [`FRC-CSO-FCP`](https://www.fedramp.gov/2026/reference/fedramp-certification/#fedramp-certification-profile) | MUST | Pick a target FedRAMP Certification Profile and apply all relevant [FedRAMP Practices](https://www.fedramp.gov/2026/definitions/#fedramp-practices) to your offering. Information resources MAY vary by security category based on the information they handle. |
+| [`FRC-CSO-PKG`](https://www.fedramp.gov/2026/reference/fedramp-certification/#fedramp-certification-package) | MUST | Give FedRAMP a complete Certification Package for initial certification. At minimum it includes an offering overview (`CPO-CSO-OVR`), implementation, validation and assessment information for each relevant requirement, control or KSI (`SDR-CSO-FRR`), and a real or example Ongoing Certification Report (`CCM-OCR-AVL`). Applies to all classes. |
+| [`FRC-CSO-JSN`](https://www.fedramp.gov/2026/reference/fedramp-certification/#fedramp-json-schemas) | MUST | When a rule names a FedRAMP JSON schema, supply JSON that validates against it. Public JSON MUST work with modern web frameworks: allow cross-origin access (CORS) and send `Content-Type: application/json` and `X-Content-Type-Options: nosniff`. |
+| [`FRC-CSO-MRA`](https://www.fedramp.gov/2026/reference/fedramp-certification/#maintain-responsibility-and-accountability) | MUST | You stay accountable for the accuracy and completeness of the whole package, even when an assessor, advisor or tool supplies information for you. |
+| [`FRC-CSO-POP`](https://www.fedramp.gov/2026/reference/fedramp-certification/#pick-one-program-certification-type) | MUST NOT | Don't seek both a Rev5 Program Certification and a 20x Program Certification for the same offering. Pick one. A Rev5 Agency Certification plus a 20x Program Certification isn't prohibited, but FedRAMP strongly discourages it. |
+
+<Tip>
+  The upstream notes on `FRC-CSO-JSN` say the FedRAMP Schema Validator on fedramp.gov won't work properly if CORS isn't configured. If a web app can't read your JSON without bypassing browser security defaults, "there has likely been a problem."
+</Tip>
+
+### FedRAMP Class A certification rules (`FRC-CLA`)
+
+Applies only to 20x Program Certification at Class A.
+
+| Rule | Force | What it means for you |
+| --- | --- | --- |
+| [`FRC-CLA-ASF`](https://www.fedramp.gov/2026/reference/fedramp-certification/#approved-alternative-security-frameworks) | MUST | Within the past 12 months, complete a certification (or equivalent, including any independent assessment) under one of: FedRAMP Rev5 (including FedRAMP Ready) at any historical impact level, SOC 2 Type II, or GovRAMP at any impact level. |
+| [`FRC-CLA-EAM`](https://www.fedramp.gov/2026/reference/fedramp-certification/#external-assessment-materials) | MUST | Give [all necessary parties](https://www.fedramp.gov/2026/definitions/#all-necessary-parties) the materials from that assessment. SOC 2 Type II: the complete report, bridge or gap letter if applicable, verified audit engagement documentation, the estimated schedule for the next report, and supplemental evidence if applicable. FedRAMP Ready: the Readiness Assessment Report, Security Assessment Plan and anything else FedRAMP requires. GovRAMP: the Readiness Assessment Report, Security Assessment Plan and anything else GovRAMP requires. |
+| [`FRC-CLA-MFR`](https://www.fedramp.gov/2026/reference/fedramp-certification/#mandatory-fedramp-rules-for-class-a) | MUST | Address every `FRC-CLA` rule plus the mandatory list below, and put the artifacts or information mapping for all of them in your Certification Package. |
+| [`FRC-CLA-RFR`](https://www.fedramp.gov/2026/reference/fedramp-certification/#recommended-fedramp-rules-for-class-a) | SHOULD | Address the recommended list below, where applicable. |
+| [`FRC-CLA-OFR`](https://www.fedramp.gov/2026/reference/fedramp-certification/#address-optional-fedramp-rules-for-class-a) | MAY | You can also address the optional list below, where applicable. |
+| [`FRC-CLA-IVV`](https://www.fedramp.gov/2026/reference/fedramp-certification/#optional-independent-verification-and-validation) | MAY | You can have a FedRAMP Recognized assessor verify and validate your package before you submit it. It isn't required. |
+
+<AccordionGroup>
+  <Accordion title="Mandatory rules for Class A (FRC-CLA-MFR)">
+    You MUST address all of these and include artifacts or an information mapping for each in your package:
+
+    - FedRAMP Certification: `FRC-CSO-PKG`, `FRC-CSO-JSN`, `FRC-CSO-POP` (this page)
+    - Minimum Assessment Scope: `MAS-CSO-IIR` ([summary](/rules/minimum-assessment-scope))
+    - Certification Data Sharing: `CDS-CSO-PUB`, `CDS-CSO-UTC`, `CDS-UTC-AAD` ([summary](/rules/certification-data-sharing))
+    - Addressing FedRAMP Communication: `AFC-CSO-INB`, `AFC-CSO-RCV`, `AFC-CSO-CRA` ([summary](/rules/addressing-fedramp-communication))
+    - Incident Evaluation and Communication: `IEC-CSO-EFR`, `IEC-CSO-FIR` ([summary](/rules/incident-evaluation-and-communication))
+    - Vulnerability Detection and Response: `VDR-CSO-DET` ([summary](/rules/vulnerability-detection-and-response))
+    - Collaborative Continuous Monitoring: `CCM-OCR-AVL`, `CCM-OCR-NRD` ([summary](/rules/collaborative-continuous-monitoring))
+    - Independent Verification and Validation: `IVV-CSX-AIA` ([summary](/rules/independent-verification-and-validation))
+    - Key Security Indicators: `KSI-CMT-LMC`, `KSI-CNA-RNT`, `KSI-CED-RAT`, `KSI-IAM-AAM`, `KSI-IAM-APM`, `KSI-INR-RIR`, `KSI-SVC-SIN` ([summary](/rules/key-security-indicators))
+
+    The upstream notes add three points. Some of these rules have no counterpart in external frameworks, so you may need new processes. Write a summary detailed enough that reviewers don't need to dig into your SOC 2 or other materials ("see SOC 2 report" isn't helpful). You must cover the listed KSIs to get Class A even if you plan to move to a Rev5 Program Certification later.
+  </Accordion>
+  <Accordion title="Recommended rules for Class A (FRC-CLA-RFR)">
+    You SHOULD address these, if applicable:
+
+    - Certification Data Sharing: `CDS-CSO-AVR`
+    - Certification Package Overview: `CPO-CSF-CPM`, `CPO-CSX-CPM`
+    - Incident Evaluation and Communication: `IEC-CSO-IIR`, `IEC-CSO-OIR`
+    - Vulnerability Detection and Response: `VDR-TFR-MVX`, `VDR-TFR-PCD`, `VDR-TFR-PDD`, `VDR-TFR-PSD`, `VDR-TFR-PVR`
+    - Vulnerability Evaluation and Reporting: `VER-TFR-EVU`
+  </Accordion>
+  <Accordion title="Optional rules for Class A (FRC-CLA-OFR)">
+    You MAY address these, if applicable:
+
+    - Collaborative Continuous Monitoring: `CCM-QTR-MTG`
+    - Certification Data Sharing: `CDS-CSO-PSM`
+    - Cryptographic Module Use: `CMU-CSO-UVM`
+    - FedRAMP Certification: `FRC-APP-FIA`
+    - Independent Verification and Validation: `IVV-CSO-FIA`
+    - Security Decision Record: `SDR-CSX-KMT`
+    - Vulnerability Evaluation and Reporting: `VER-TFR-IRI`, `VER-TFR-MRH`, `VER-TFR-NRI`
+  </Accordion>
+</AccordionGroup>
+
+### Applying for FedRAMP certification (`FRC-APP`)
+
+Applies once you've met all other relevant rules and are ready to apply, for any class.
+
+| Rule | Force | What it means for you |
+| --- | --- | --- |
+| [`FRC-APP-MLF`](https://www.fedramp.gov/2026/reference/fedramp-certification/#marketplace-listing-first) | MUST | Get listed in the FedRAMP Marketplace before you apply, meeting `MKT-CSO-MLR`, `MKT-CSO-PML`, `MKT-IIP-AGU` and `MKT-IIP-DCP`. See [Marketplace listing](/rules/marketplace-listing). |
+| [`FRC-APP-AFC`](https://www.fedramp.gov/2026/reference/fedramp-certification/#applying-for-fedramp-certification_1) | MUST | Complete the [\[For CSPs\] FedRAMP Certification Application Form](https://help.fedramp.gov/hc/en-us/requests/new?ticket_form_id=51137131584283) in full to request an initial assessment by FedRAMP. |
+| [`FRC-APP-FCP`](https://www.fedramp.gov/2026/reference/fedramp-certification/#fresh-fedramp-certification-package) | MUST | Submit a fresh initial package that shows the offering's current status, verified and validated by you within the previous 7 days. |
+| [`FRC-APP-FIA`](https://www.fedramp.gov/2026/reference/fedramp-certification/#fresh-independent-assessment) | Varies by class | Supply a fresh initial FedRAMP independent assessment by a FedRAMP Recognized assessor, completed within the previous 3 months. MAY for Class A, MUST for Classes B, C and D. |
+| [`FRC-APP-NTP`](https://www.fedramp.gov/2026/reference/fedramp-certification/#no-third-party-applicants) | MUST NOT | Don't let a third party, including your assessor, apply for you. Third parties can still help you prepare the application and materials. |
+| [`FRC-APP-USA`](https://www.fedramp.gov/2026/reference/fedramp-certification/#updating-stale-assessments) | MAY | If your initial independent assessment is stale, a FedRAMP Recognized assessor can review the changes since then instead of a full re-assessment. This isn't allowed if the stale assessment is more than 9 months old. |
+
+### Applying with an agency sponsor (`FRC-APS`)
+
+Applies to Rev5 Agency Certification, Classes B to D.
+
+| Rule | Force | What it means for you |
+| --- | --- | --- |
+| [`FRC-APS-ATO`](https://www.fedramp.gov/2026/reference/fedramp-certification/#agency-authorization-to-operate) | MUST | Finish the Authorization to Operate (ATO) process with your agency sponsor first. It ends with a formal signed ATO letter that the agency sends to FedRAMP over official government channels. |
+
+### Changing certification class (`FRC-CCL`)
+
+Applies to Rev5 Agency Certification, Classes B to D.
+
+| Rule | Force | What it means for you |
+| --- | --- | --- |
+| [`FRC-CCL-UCC`](https://www.fedramp.gov/2026/reference/fedramp-certification/#upgrading-certification-class) | MUST | To move up a class, apply for a new FedRAMP Certification. You must meet all applicable requirements before you apply. |
+| [`FRC-CCL-DCC`](https://www.fedramp.gov/2026/reference/fedramp-certification/#downgrading-certification-class) | MUST | To move down a class, apply for a new FedRAMP Certification. |
+| [`FRC-CCL-DNP`](https://www.fedramp.gov/2026/reference/fedramp-certification/#downgrade-notification-period) | SHOULD | Tell all necessary parties at least 120 days before you downgrade or cancel your FedRAMP Certification. |
+
+The upstream notes list the upgrade paths (A to B, C or D; B to C or D; C to D) and downgrade paths (D to C, B or A; C to B or A; B to A). FedRAMP's preferred upgrade approach is to improve within your current class until you meet the target class, then apply. The notes also warn that downgrading or canceling has "severe negative consequences" for you and your agency customers.
+
+### 20x-specific provider responsibilities (`FRC-CSX`)
+
+Applies to 20x Program Certification.
+
+| Rule | Force | What it means for you |
+| --- | --- | --- |
+| [`FRC-CSX-VVK`](https://www.fedramp.gov/2026/reference/fedramp-certification/#automated-verification-and-validation-of-key-security-indicators) | Varies by class | Use automated methods to persistently verify and validate the accuracy and completeness of your Key Security Indicators. The minimum number of methods per KSI rises with class. See the class table below. |
+| [`FRC-CSX-VVR`](https://www.fedramp.gov/2026/reference/fedramp-certification/#automated-verification-and-validation-of-fedramp-rules) | Varies by class | Use automated methods to persistently verify and validate your Security Decision Record for FedRAMP rules, when applicable. MAY for Class A, SHOULD for Classes B, C and D. |
+| [`FRC-CSX-MAS`](https://www.fedramp.gov/2026/reference/fedramp-certification/#application-within-mas) | SHOULD | Apply all Key Security Indicators to everything in your offering that's inside the [Minimum Assessment Scope](/rules/minimum-assessment-scope). |
+
+### Rev5-specific provider responsibilities (`FRC-CSF`)
+
+Applies to Rev5 Certification (Program and Agency), Classes B to D.
+
+| Rule | Force | What it means for you |
+| --- | --- | --- |
+| [`FRC-CSF-BSL`](https://www.fedramp.gov/2026/reference/fedramp-certification/#fedramp-rev5-baselines) | MUST | Include at least your class's NIST SP 800-53 Rev. 5 control baseline in your Security Decision Record. The official page lists every control. Class B has 155 entries, Class C has 322 and Class D has 409 (controls plus enhancements, as counted from the upstream list). |
+| [`FRC-CSF-ACP`](https://www.fedramp.gov/2026/reference/fedramp-certification/#assign-control-parameters) | MUST | Assign every organization-defined control parameter, following [FedRAMP Rev5 Controls Guidance](https://www.fedramp.gov/2026/reference/rev5-control-guidance/), and document every assignment in your Security Decision Record. |
+| [`FRC-CSF-FFG`](https://www.fedramp.gov/2026/reference/fedramp-certification/#follow-fedramp-rev5-controls-guidance) | MUST | Follow FedRAMP Rev5 Controls Guidance when you implement and document all applicable controls. |
+| [`FRC-CSF-RDY`](https://www.fedramp.gov/2026/reference/fedramp-certification/#fedramp-ready-conversion) | MUST | If you hold FedRAMP Rev5 Ready status, convert to a FedRAMP Certification by the later of your annual assessment's expiration or 2026-11-17. Legacy FedRAMP Ready status is removed entirely on 2027-12-31. |
+
+<Note>
+  The upstream notes on `FRC-CSF-RDY` say the simplest conversion in most cases is to a FedRAMP 20x Class A Certification. Offerings that don't convert, or don't meet the criteria, are renamed Legacy FedRAMP Ready and otherwise retired from FedRAMP Ready.
+</Note>
+
+## Differences by class
+
+Three rules vary by class. Each class has its own statement upstream.
+
+| Rule | Class A | Class B | Class C | Class D |
+| --- | --- | --- | --- | --- |
+| `FRC-APP-FIA` fresh independent assessment (within 3 months) | MAY | MUST | MUST | MUST |
+| `FRC-CSX-VVK` automated KSI verification and validation | MAY (no minimum) | SHOULD, at least 1 automated method per KSI | MUST, at least 2 automated methods per KSI | MUST, at least 4 automated methods per KSI |
+| `FRC-CSX-VVR` automated Security Decision Record verification and validation | MAY | SHOULD | SHOULD | SHOULD |
+
+`FRC-CSF-BSL` also differs by class, but only in which controls you must include (Classes B, C and D). There is no Rev5 Class A baseline.
+
+## What FedRAMP staff have said
+
+Staff answers explain how FedRAMP applies the rules. They don't change the published text, which governs.
+
+<Note>
+  **Class A doesn't need an independent assessment.** You can get listed with a Class A Certification without an independent assessor performing verification and validation. Two Class A certified providers had none (emu-gov, 2026-09-09, [discussion #147](https://github.com/FedRAMP/community/discussions/147#discussioncomment-18369371)). FedRAMP added that the MAY in these rules is deliberate and "not a trap." Having an assessor double-check first might make things smoother, but it's "absolutely 100% not expected" (pete-gov, 2026-09-09, [discussion #147](https://github.com/FedRAMP/community/discussions/147#discussioncomment-18371743)). Related rules: `FRC-CLA-IVV`, `FRC-APP-FIA`.
+</Note>
+
+<Note>
+  **Self-hosted and hybrid offerings can get Class A.** Class A is open to offerings with hybrid or on-premises infrastructure. To go higher you'd move to Rev5 Class B, C or D until a higher 20x pathway exists (emu-gov, 2026-07-09, [discussion #147](https://github.com/FedRAMP/community/discussions/147#discussioncomment-17587637)). A provider running its own infrastructure can't advance to 20x Class B or above until self-hosted rules are in place, but could move to Rev5 Class B or above (pete-gov, 2026-10-13, [discussion #147](https://github.com/FedRAMP/community/discussions/147#discussioncomment-18903498)).
+</Note>
+
+<Note>
+  **Moving from Class A to Class B or C.** You can apply for any Class B or C path you qualify for whenever you're ready after Class A, or skip Class A entirely. As of 2026-08-07, staff said 20x Class B and C would open on 2026-08-31, Rev5 Class B and C were open but needed a sponsor, and Rev5 Program Class B and C (from 2026-08-10) needed you to qualify through Lost Sponsor or Ready Conversion (nicole-gov, [discussion #147](https://github.com/FedRAMP/community/discussions/147#discussioncomment-17936879); see also [this comment](https://github.com/FedRAMP/community/discussions/147#discussioncomment-17936636)). A Class C review after Class A is still your "initial certification." FedRAMP's Class A report includes feedback for moving up to Class B or C (emu-gov, 2026-09-02, [discussion #147](https://github.com/FedRAMP/community/discussions/147#discussioncomment-18249814)). That answer was given about `FRC-CSX-MOT`, which was removed on 2026-10-08.
+</Note>
+
+<Note>
+  **Pick one Program Certification type.** You can't have a 20x Certification and a Rev5 Program Certification. A conversion from FedRAMP Ready to a Rev5 Class B or above Program Certification still needs everything a full Rev5 certification needs, including a full assessment, and you can't convert until you meet all of the requirements (pete-gov, 2026-07-24, [discussion #147](https://github.com/FedRAMP/community/discussions/147#discussioncomment-17768441)). A Rev5 Program Certification without a sponsor also requires agreeing to follow all CR26 Rev5 rules by 2027-02-19 (pete-gov, 2026-07-24, [discussion #147](https://github.com/FedRAMP/community/discussions/147#discussioncomment-17771823)). Related rule: `FRC-CSO-POP`.
+</Note>
+
+<Note>
+  **FedRAMP Ready goes away.** `FRC-CSF-RDY` is the only rule that applies to FedRAMP Ready offerings. There's no mapping or replacement, and you need to switch to a FedRAMP Certification (pete-gov, 2026-07-17, [discussion #152](https://github.com/FedRAMP/community/discussions/152#discussioncomment-17673555)). Ready status expires 365 days after it's granted by default. If you apply for the limited Ready (RAR) conversion, FedRAMP decides with you whether to move you to Initial Implementation after kick-off or keep you in Ready until day 366 (paulagosta, 2026-08-12, [discussion #159](https://github.com/FedRAMP/community/discussions/159#discussioncomment-17993470)).
+</Note>
+
+<Note>
+  **Public JSON must be web-readable.** In a case where a Trust Center served a CPO JSON file as `application/octet-stream`, FedRAMP said it would update the rules so public JSON can be consumed directly by web applications, including FedRAMP's own (pete-gov, 2026-09-17, [discussion #175](https://github.com/FedRAMP/community/discussions/175#discussioncomment-18480627)). Strict web interoperability applies to required public JSON and to Marketplace listing data, and an RFC would follow for JSON behind a Trust Center login (pete-gov, 2026-09-17, [discussion #175](https://github.com/FedRAMP/community/discussions/175#discussioncomment-18482587)). The rule change landed in `FRC-CSO-JSN` on 2026-10-05.
+</Note>
+
+<Note>
+  **You decide what counts as a distinct automated method.** For `FRC-CSX-VVK`, how you separate automated methods is up to you. FedRAMP will include its own report on how assuring and diverse your methods are during certification (pete-gov, 2026-09-18, [discussion #176](https://github.com/FedRAMP/community/discussions/176#discussioncomment-18501048)).
+</Note>
+
+<Note>
+  **Rev5 application cutoff.** FedRAMP won't grant Rev5 Certification to any provider after 2027-06-11. In-process agency certifications must be complete, and you must have applied, by that date (pete-gov, 2026-07-31, [discussion #146](https://github.com/FedRAMP/community/discussions/146#discussioncomment-17855511)).
+</Note>
+
+<Note>
+  **Reusing recent assessments.** CR26 rules allow reuse of assessment results if there are no major changes and a "fresh" assessment confirms this. Assessments for a new certification are meant to focus on the deltas. Existing LI-SaaS authorizations are grandfathered into Rev5 Class B for now, and an RFC on LI-SaaS migration is planned (pete-gov, 2026-10-08, [discussion #146](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18817999)). Related rules: `FRC-APP-FIA`, `FRC-APP-USA`.
+</Note>
+
+## Related
+
+- [Marketplace listing](/rules/marketplace-listing): the listing you need before you apply (`FRC-APP-MLF`)
+- [Certification package overview](/rules/certification-package-overview) and [Security decision record](/rules/security-decision-record): what goes in the package (`FRC-CSO-PKG`)
+- [Certification data sharing](/rules/certification-data-sharing): public information and Trust Centers
+- [Key security indicators](/rules/key-security-indicators) and [Minimum assessment scope](/rules/minimum-assessment-scope): the 20x rules behind `FRC-CSX`
+- [Independent verification and validation](/rules/independent-verification-and-validation): assessment rules
+- [20x CR26 questions](/discussions/20x-cr26-questions) and [Rev5 CR26 questions](/discussions/rev5-cr26-questions): discussion digests
+- Official: [Choosing a Certification Path](https://www.fedramp.gov/2026/providers/start/path/) and [Important Deadlines](https://www.fedramp.gov/2026/providers/updating/deadlines/)

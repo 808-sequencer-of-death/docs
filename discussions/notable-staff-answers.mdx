@@ -1,0 +1,388 @@
+---
+title: "Notable staff answers"
+description: "FedRAMP staff answers from community threads active since 2026-06, other than the main Rev5 and 20x CR26 Q&A threads and the RFC threads."
+sidebarTitle: "Notable staff answers"
+---
+
+<Info>
+  **Threads covered:** community discussions updated on or after 2026-06-01 that have at least one FedRAMP staff post. This excludes [#146](/discussions/rev5-cr26-questions), [#147](/discussions/20x-cr26-questions) and RFC threads, which are covered in [RFC history](/discussions/rfc-history). Newest threads come first. **Last reviewed:** 2026-10-14 against upstream release `2026.10.14.01`. Staff answers are paraphrased. Follow each link for the exact wording. Staff statements don't change the published rules. Where they conflict, the [official rules](https://www.fedramp.gov/2026/) govern.
+</Info>
+
+<Note>
+  Several threads below were active before the Consolidated Rules for 2026 (CR26) were published on 2026-06-24, and were last updated around that date. Staff posts from before 2026-06-24 cite draft or pilot material. Check them against the current rules before relying on them.
+
+  Every thread below up to #173 was closed between 2026-06-24 and 2026-09-16. Unanswered follow-ups in those threads may never get a reply. Threads #174 through #178 were still open as of 2026-10-14.
+</Note>
+
+## #178 What evidence shows a service is intended for agency use
+
+[Thread](https://github.com/FedRAMP/community/discussions/178) (20x Discussion, opened 2026-10-09).
+
+**Bottom line:** [`MKT-IIP-AGU`](https://www.fedramp.gov/2026/reference/marketplace-listing/#agency-use-cases) is an attestation from your business about what your product is designed to do. It isn't evidence from an agency.
+
+<Note>
+  **pete-gov, 2026-10-13** ([comment](https://github.com/FedRAMP/community/discussions/178#discussioncomment-18903470)):
+  - The demonstration comes from you, not an authorizing official. It's a claim that you intend to take part in the Marketplace, and you must not make a false claim.
+  - Adding unrelated applications to an offering because one has an agency use case goes against minimum assessment scope principles.
+  - To show indirect use, name the FedRAMP-certified offerings that use your product.
+  - The same offering can serve commercial and government customers.
+  - You must provide the demonstration when you request a Marketplace listing.
+</Note>
+
+**Open questions:** none raised after the staff reply.
+
+## #177 Updating assessment content in the SDR
+
+[Thread](https://github.com/FedRAMP/community/discussions/177) (20x Discussion, opened 2026-09-30).
+
+**Bottom line:** SDR content can and should change during an assessment. If the assessor finds an issue you agree with, fix it and have it reassessed before you submit.
+
+<Note>
+  **pete-gov, 2026-10-02** ([comment](https://github.com/FedRAMP/community/discussions/177#discussioncomment-18716701)): SDR information should change throughout an assessment. Fix agreed issues and have them reassessed before submitting to FedRAMP.
+</Note>
+
+**Open questions:** after an assessment ends, can the provider update the assessor-supplied `frrAssessment` or `ksiAssessment` content to show a discrepancy is fixed, or must the assessor return? ([follow-up](https://github.com/FedRAMP/community/discussions/177#discussioncomment-18723607)). See [`IVV-CSO-ICP`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#inclusion-in-certification-package): you MUST supply assessment results "without inappropriate modification."
+
+## #176 What counts as an automated method for KSI validation
+
+[Thread](https://github.com/FedRAMP/community/discussions/176) (20x Discussion, opened 2026-09-18).
+
+**Bottom line:** You decide what counts as a distinct automated method under [`FRC-CSX-VVK`](https://www.fedramp.gov/2026/reference/fedramp-certification/#automated-verification-and-validation-of-key-security-indicators). FedRAMP reports on how assuring and diverse it finds your methods.
+
+<Note>
+  **pete-gov, 2026-09-18** ([comment](https://github.com/FedRAMP/community/discussions/176#discussioncomment-18501048)): It's up to the provider. Choose methods that assure customers you protect their information. During certification, FedRAMP will include its own report on how useful and diverse your methods are.
+</Note>
+
+For reference, `FRC-CSX-VVK` varies by class. Class A MAY use automated methods. Class B SHOULD use at least 1 per KSI. Class C MUST use at least 2 per KSI. Class D MUST use at least 4 per KSI.
+
+**Open questions:** none raised after the staff reply.
+
+## #175 Content-Type for FedRAMP JSON artifacts
+
+[Thread](https://github.com/FedRAMP/community/discussions/175) (20x Discussion, opened 2026-09-17).
+
+**Bottom line:** Public JSON data must work directly with standard web applications. That means CORS and `Content-Type: application/json`. FedRAMP added this to `FRC-CSO-JSN` on 2026-10-05. For JSON behind trust center authentication, staff said an RFC and public discussion would come first.
+
+<Note>
+  **pete-gov, 2026-09-17** ([comment](https://github.com/FedRAMP/community/discussions/175#discussioncomment-18480627)): FedRAMP planned to update the rules so that sharing JSON means web applications can consume it directly, without download and re-upload. FedRAMP can't accept data it can't consume.
+</Note>
+
+<Note>
+  **pete-gov, 2026-09-17** ([comment](https://github.com/FedRAMP/community/discussions/175#discussioncomment-18481945)): Web applications, including FedRAMP's, often enforce these headers. Staff suggested planning for API requirements in the Consolidated Rules for 2027.
+</Note>
+
+<Note>
+  **pete-gov, 2026-09-17** ([comment](https://github.com/FedRAMP/community/discussions/175#discussioncomment-18481144)): Expect occasional quick rule tweaks in response to real-world problems. The current ask is simple web interoperability.
+</Note>
+
+<Note>
+  **pete-gov, 2026-09-17** ([comment](https://github.com/FedRAMP/community/discussions/175#discussioncomment-18482587)) and his follow-ups ([1](https://github.com/FedRAMP/community/discussions/175#discussioncomment-18482982), [2](https://github.com/FedRAMP/community/discussions/175#discussioncomment-18483556)):
+  - In the near term, web interoperability will be strictly required for JSON that must be public, such as [`CDS-CSO-PUB`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#public-information) and [`CDS-CSO-SVC`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#public-service-list), and for Marketplace data.
+  - JSON behind a trust center login will get public discussion and an RFC first.
+  - Pete agreed the requirement wasn't clear enough in the rules.
+  - He asked participants to write their own posts rather than have AI agents converse for them.
+</Note>
+
+<Info>
+  **Since applied upstream.** On 2026-10-05, [`FRC-CSO-JSN`](https://www.fedramp.gov/2026/reference/fedramp-certification/#fedramp-json-schemas) was updated: "public JSON data MUST be supplied in a manner compatible with modern web frameworks." It lists CORS access and headers that include at least `Content-Type` set to `application/json` and `X-Content-Type-Options: nosniff`. The rule text doesn't extend this to JSON behind trust center authentication.
+</Info>
+
+**Open questions:** no staff answer yet on whether a Box OAuth client-credentials setup meets [`CDS-TRC-PAC`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#programmatic-access). The same goes for whether FedRAMP will publish an interoperability or federation profile for authenticated trust center access ([question](https://github.com/FedRAMP/community/discussions/175#discussioncomment-18481938)).
+
+## #174 Post-quantum cryptography and update streams
+
+[Thread](https://github.com/FedRAMP/community/discussions/174) (Rev5 Discussion, opened 2026-09-16).
+
+**Bottom line:** FedRAMP doesn't currently treat quantum-vulnerable cryptography as a vulnerability. It will follow CISA guidance. New algorithms added to an update stream aren't covered by the original module's validation, and `CMU-CSO-UVM` now says so.
+
+<Note>
+  **pete-gov, 2026-09-16** ([comment](https://github.com/FedRAMP/community/discussions/174#discussioncomment-18471207)):
+  - Direction on post-quantum cryptography comes from Executive Order 14112 and the NIST, CISA and FAR Council tasks under it. FedRAMP is waiting on that guidance.
+  - Quantum-vulnerable cryptography isn't a vulnerability "at this time."
+  - Class D must use CMVP-validated modules or their upstream versions.
+  - No agency has asked for a waiver to use non-validated PQC libraries. FedRAMP would be open to one after consulting CISA and NIST.
+  - The next likely `CMU` change is alignment with CISA guidance on cryptographic bills of materials.
+</Note>
+
+<Note>
+  **pete-gov, 2026-09-24** ([comment](https://github.com/FedRAMP/community/discussions/174#discussioncomment-18588032)): The linked crypto policy is legacy. See the [CR26 rules](https://www.fedramp.gov/2026/reference/cryptographic-module-use/) instead. An upstream release is an upstream version only for algorithms that were in the validated module. Example: AES-KWP in Bouncy Castle 2.2 qualifies. CRYSTALS-Kyber, which Bouncy Castle 2.0 didn't include, doesn't.
+</Note>
+
+<Note>
+  **pete-gov, 2026-09-17** ([comment](https://github.com/FedRAMP/community/discussions/174#discussioncomment-18482911)): FedRAMP can't advise on lobbying. NIST and CISA are the responsible parties.
+</Note>
+
+<Info>
+  **Since applied upstream.** On 2026-10-05, [`CMU-CSO-UVM`](https://www.fedramp.gov/2026/reference/cryptographic-module-use/#using-validated-cryptographic-modules) gained a note: new algorithms in an update stream that were never validated aren't covered by update stream usage. Separately, the open [RFC-0035](https://github.com/FedRAMP/community/discussions/179) proposes changing Class D from MUST to SHOULD. That's a proposal only. The current Class D force is MUST. See [Cryptographic module use](/rules/cryptographic-module-use).
+</Info>
+
+**Open questions:** none raised after the staff replies.
+
+## #169 Who fills in assessor content in the SDR
+
+[Thread](https://github.com/FedRAMP/community/discussions/169) (20x Discussion, opened 2026-09-08).
+
+**Bottom line:** You're responsible for all SDR content. The assessor supplies results for you to include, then verifies you included them.
+
+<Note>
+  **pete-gov, 2026-09-08** ([comment](https://github.com/FedRAMP/community/discussions/169#discussioncomment-18357017)): Pete cited [`IVV-CSO-ICP`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#inclusion-in-certification-package), [`IVV-IAS-SUM`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#assessment-summary) and [`IVV-IAS-VIP`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#verify-inclusion-in-certification-package). The provider fills in every SDR field. `frrAssessment` uses information from the assessor.
+</Note>
+
+<Note>
+  **pete-gov, 2026-09-08** ([comment](https://github.com/FedRAMP/community/discussions/169#discussioncomment-18357430)): The provider fills in `ksiTests` and `ksiEvidence` to address item 5 of [`SDR-CSX-KSI`](https://www.fedramp.gov/2026/reference/security-decision-record/#key-security-indicators). The assessor verifies and validates every rule and every KSI, but doesn't supply your tests or evidence. Staff may revisit these schema field names in CR27.
+</Note>
+
+**Open questions:** none raised after the staff replies.
+
+## #168 Is a trust center part of the offering?
+
+[Thread](https://github.com/FedRAMP/community/discussions/168) (20x Discussion, opened 2026-09-03).
+
+**Bottom line:** It depends on what you put in the trust center. Apply [`MAS-CSO-IIR`](https://www.fedramp.gov/2026/reference/minimum-assessment-scope/#identify-information-resources). It covers resources that handle federal customer data **or** are likely to affect its confidentiality, integrity or availability.
+
+<Note>
+  **pete-gov, 2026-09-03** ([comment](https://github.com/FedRAMP/community/discussions/168#discussioncomment-18277999)): If your package information is shared responsibly, the trust center may reasonably be out of scope. If it holds information an attacker could likely use against the offering, it's in scope. Either way, secure it.
+</Note>
+
+**Open questions:** none raised after the staff reply.
+
+## #166 Web schema validator error
+
+[Thread](https://github.com/FedRAMP/community/discussions/166) (20x Discussion, opened 2026-08-28).
+
+**Bottom line:** The fedramp.gov validator is a convenience tool. Validating locally is fine.
+
+<Note>
+  **pete-gov, 2026-08-28** ([comment](https://github.com/FedRAMP/community/discussions/166#discussioncomment-18193394), [follow-up](https://github.com/FedRAMP/community/discussions/166#discussioncomment-18193451)): FedRAMP was tracking the validator's draft 2020-12 meta-schema error and reported that a fix had been posted. FedRAMP planned to add a disclaimer that the web validator shouldn't be relied on for production use.
+</Note>
+
+**Open questions:** none.
+
+## #165 Moving from Class C to Class D
+
+[Thread](https://github.com/FedRAMP/community/discussions/165) (Rev5 Discussion, opened 2026-08-26).
+
+**Bottom line:** A Rev5 Class C to D uplift is still possible, but the complete package, including the uplift ATO, must reach FedRAMP by 2027-06-11.
+
+<Note>
+  **paulagosta, 2026-08-26** ([comment](https://github.com/FedRAMP/community/discussions/165#discussioncomment-18163267)): An uplift should come from agency need. FedRAMP won't accept an uplift or new Rev5 package after 2027-06-11, and it must include all required materials. Whether it's feasible depends on your Class D assessment readiness and the agency's ATO timeline. The 20x Class D pilot wasn't open yet.
+</Note>
+
+**Open questions:** how long a new Rev5 Class D certification would last before a move to 20x is required, and whether Class D needs an agency sponsor ([follow-up](https://github.com/FedRAMP/community/discussions/165#discussioncomment-18163965)). For the 20x Class D proposal, see [RFC-0033](https://github.com/FedRAMP/community/discussions/170).
+
+## #164 Missing structured timeframes on five rules
+
+[Thread](https://github.com/FedRAMP/community/discussions/164) (20x Discussion, opened 2026-08-24).
+
+**Bottom line:** The missing `timeframe_type` and `timeframe_num` fields were an oversight. They were fixed in the September 13 release.
+
+<Note>
+  **pete-gov, 2026-09-09** ([comment](https://github.com/FedRAMP/community/discussions/164#discussioncomment-18372913)) and **2026-09-13** ([comment](https://github.com/FedRAMP/community/discussions/164#discussioncomment-18425464)): Pete set the timeframes mostly by hand and missed these. He said the fix would ship in version `2026.09.13.01`, with optional `timeframe_num_min` and `timeframe_num_max` added for the one two-sided rule.
+</Note>
+
+<Info>
+  **Since applied upstream.** The upstream changelog records the structured timeframes for `VDR-TFR-NMV`, `CCM-OCR-AVL`, `IVV-CSF-MCA`, `MKT-IIP-DLA`, `MKT-CAS-RFR` and `CCM-QTR-SAR` under release `2026.09.13.02`, not `.01`.
+</Info>
+
+**Open questions:** none.
+
+## #162 Converting a 20x pilot certification
+
+[Thread](https://github.com/FedRAMP/community/discussions/162) (20x Discussion, opened 2026-08-13).
+
+**Bottom line:** Pilot participants should target the [20x maintaining dates](https://www.fedramp.gov/2026/providers/updating/deadlines/20x/). They can spread adoption and independent verification and validation over time.
+
+<Note>
+  **emu-gov, 2026-08-14** ([comment](https://github.com/FedRAMP/community/discussions/162#discussioncomment-18016701)): Adoption and independent verification and validation can be spread out. Pilot participants must show progress quarterly to keep pilot status. Guidance on the 20x annual assessment process would come later. Participants can also simply apply for Class B or C once that opens.
+</Note>
+
+**Open questions:** the 20x annual assessment submission and review process hadn't been published as of the staff post.
+
+## #159 Rev5 Ready Conversion and Lost Sponsor forms
+
+[Thread](https://github.com/FedRAMP/community/discussions/159) (Rev5 Discussion, opened 2026-08-10 by `paulagosta`).
+
+**Bottom line:** The forms opened on 2026-08-10. Check that you qualify under the [path page](https://www.fedramp.gov/2026/providers/start/path/) before you apply.
+
+<Note>
+  **paulagosta, 2026-08-12** ([comment](https://github.com/FedRAMP/community/discussions/159#discussioncomment-17993470)): FedRAMP Ready status expires 365 days after it's granted. After a Ready Conversion kickoff, FedRAMP can switch you to Initial Implementation or leave you as Ready until expiry. When you submit your package, you go In Process.
+</Note>
+
+**Open questions:** none.
+
+## #156 What must happen by the June 2027 Rev5 deadline
+
+[Thread](https://github.com/FedRAMP/community/discussions/156) (Rev5 Discussion, opened 2026-08-03).
+
+**Bottom line:** By 2027-06-11, a complete Rev5 package, with an agency ATO unless you're on the sponsorless path, must be in active FedRAMP review and meet CR26 requirements.
+
+<Note>
+  **paulagosta, 2026-08-03** ([comment](https://github.com/FedRAMP/community/discussions/156#discussioncomment-17884433)): You must be in active FedRAMP review by 2027-06-11, with a complete package and an active agency ATO, unless you're on the limited sponsorless path. You must also meet CR26 requirements when you submit. FedRAMP won't accept Rev5 submissions after that date. See the [timeline](https://www.fedramp.gov/2026/timeline/).
+</Note>
+
+**Open questions:** none.
+
+## #154 Sharing packages with other providers
+
+[Thread](https://github.com/FedRAMP/community/discussions/154) (Rev5 Discussion, opened 2026-07-23).
+
+**Bottom line:** FedRAMP doesn't control provider-to-provider package access. Packages belong to the provider that creates them.
+
+<Note>
+  **pete-gov, 2026-07-24** ([comment](https://github.com/FedRAMP/community/discussions/154#discussioncomment-17765277)): FedRAMP manages access only for agencies. Under [`CDS-CSO-RPS`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#responsible-public-package-sharing), FedRAMP claims no ownership of packages and won't penalize responsible sharing.
+</Note>
+
+**Open questions:** none.
+
+## #153 Data-quality review of the CR26 JSON
+
+[Thread](https://github.com/FedRAMP/community/discussions/153) (20x Discussion, opened 2026-07-20).
+
+**Bottom line:** Subsets that apply to only one framework are declared in `info.20x.subsets` or `info.rev5.subsets`. Read those as well as the shared `info.subsets`.
+
+<Note>
+  **pete-gov, 2026-07-20** ([comment](https://github.com/FedRAMP/community/discussions/153#discussioncomment-17705910)): `CSF` is Rev5-only and `CSX` is 20x-only, and each is declared in its framework block. Each rule has either a top-level `statement` or `varies_by_class`, as the schema requires.
+</Note>
+
+**Open questions:** whether FedRAMP will give presentation guidance for rules that exist only per class ([follow-up](https://github.com/FedRAMP/community/discussions/153#discussioncomment-17706504)).
+
+## #152 Which Rev5 rules apply to FedRAMP Ready offerings
+
+[Thread](https://github.com/FedRAMP/community/discussions/152) (Rev5 Discussion, opened 2026-07-17).
+
+**Bottom line:** Only one rule applies to FedRAMP Ready: [`FRC-CSF-RDY`](https://www.fedramp.gov/2026/reference/fedramp-certification/#fedramp-ready-conversion). FedRAMP Ready doesn't map to any new status.
+
+<Note>
+  **pete-gov, 2026-07-17** ([comment](https://github.com/FedRAMP/community/discussions/152#discussioncomment-17673555)): FedRAMP Ready has no mapping or replacement. Convert to a FedRAMP certification. `FRC-CSF-RDY` says Ready providers MUST convert by the later of their annual assessment expiry or November 17, 2026, and that Ready status is removed on December 31, 2027.
+</Note>
+
+**Open questions:** whether Ready Conversion applicants need an agency sponsor ([follow-up](https://github.com/FedRAMP/community/discussions/152#discussioncomment-17676883)). Staff answered this in #147: Rev5 needs a sponsor except on the temporary Class B and C program path ([comment](https://github.com/FedRAMP/community/discussions/147#discussioncomment-17771823)).
+
+## #144 Paths for FedRAMP Ready offerings (pre-release)
+
+[Thread](https://github.com/FedRAMP/community/discussions/144) (Rev5 Discussion, opened 2026-06-16).
+
+**Bottom line:** Ready providers can get a Rev5 Class C program certification if they commit to the CR26 Rev5 changes by February 2027. FedRAMP considers Rev5 a legacy process being replaced by 20x.
+
+<Note>
+  **pete-gov, 2026-06-16** ([comment](https://github.com/FedRAMP/community/discussions/144#discussioncomment-17325167)): Posted before CR26 was final. FedRAMP can't give business advice on choosing Rev5 or 20x. FedRAMP's main consideration is that Rev5 is legacy.
+</Note>
+
+**Open questions:** none.
+
+## #143 BOD 26-04 and existing Rev5 authorizations
+
+[Thread](https://github.com/FedRAMP/community/discussions/143) (Rev5 Discussion, opened 2026-06-12).
+
+**Bottom line:** Following the VDR and VER rules meets BOD 26-04 by default. FedRAMP's response was [NTC-0014](https://www.fedramp.gov/notices/0014/).
+
+<Note>
+  **pete-gov, 2026-06-12** ([comment](https://github.com/FedRAMP/community/discussions/143#discussioncomment-17283100)) and **2026-06-18** ([comment](https://github.com/FedRAMP/community/discussions/143#discussioncomment-17356303)): Providers following [VDR](/rules/vulnerability-detection-and-response) and [VER](/rules/vulnerability-evaluation-and-reporting) are good with BOD 26-04. The follow-up pointed to NTC-0014. The current VDR and VER dates are 2026-12-07, with grace ending 2027-03-07.
+</Note>
+
+**Open questions:** none.
+
+## #142 SBOM and VEX risk framework (community proposal)
+
+[Thread](https://github.com/FedRAMP/community/discussions/142) (Rev5 Discussion, opened 2026-06-05).
+
+**Bottom line:** FedRAMP deliberately leaves the details of vulnerability detection to each provider.
+
+<Note>
+  **pete-gov, 2026-06-12** ([comment](https://github.com/FedRAMP/community/discussions/142#discussioncomment-17280575)): See the [VDR](/rules/vulnerability-detection-and-response) rules for the high-level approach. Implementation details are up to each provider.
+</Note>
+
+**Open questions:** the proposer's follow-up on how much providers vary in justifying risk acceptance went unanswered.
+
+## #139 Inventory components and evidence (pre-release)
+
+[Thread](https://github.com/FedRAMP/community/discussions/139) (Rev5 Discussion, opened 2026-04-13). All staff posts are from 2026-04-30 and 2026-05-01, before CR26 was published.
+
+**Bottom line:** FedRAMP won't define a "unique" inventory component. You define your criteria and explain the logic.
+
+<Note>
+  **dan-fedramp, 2026-04-30** ([comment](https://github.com/FedRAMP/community/discussions/139#discussioncomment-16770450)): The provider defines and explains its inventory criteria. For example, explain why many instances of one image count as one component. Quantitative data is most useful for tracking one service over time, not for comparing vendors.
+</Note>
+
+<Note>
+  **pete-gov, 2026-04-30** ([comment](https://github.com/FedRAMP/community/discussions/139#discussioncomment-16770945), [comment](https://github.com/FedRAMP/community/discussions/139#discussioncomment-16771986), [comment](https://github.com/FedRAMP/community/discussions/139#discussioncomment-16772659)) and **2026-05-01** ([comment](https://github.com/FedRAMP/community/discussions/139#discussioncomment-16780506)): Each agency sets its own security expectations. FedRAMP's role is to make enough information available for agencies to decide. FedRAMP still has a few hundred rules, controls and indicators that must be addressed, verified and validated. No canonical identifier such as PURL is required.
+</Note>
+
+**Open questions:** none from staff. See the current [`MAS-CSO-IIR`](https://www.fedramp.gov/2026/reference/minimum-assessment-scope/#identify-information-resources) and [`VDR-CSO-SIR`](https://www.fedramp.gov/2026/reference/vulnerability-detection-and-response/#sampling).
+
+## #137 General Rev5 Q&A before CR26 (closed)
+
+[Thread](https://github.com/FedRAMP/community/discussions/137) (Rev5 Discussion, opened 2026-03-21, closed 2026-06-24 in favor of [#146](/discussions/rev5-cr26-questions)).
+
+**Bottom line:** There is no lead agency for continuous monitoring. Expect VDR adoption to go through the significant change process. FedRAMP-assigned control parameters were removed on purpose, following RFC feedback.
+
+<Note>
+  **pete-gov, 2026-04-02** ([comment](https://github.com/FedRAMP/community/discussions/137#discussioncomment-16426675)): The Rev5 minimum assessment scope effectively replaces SSP sections 6 through 9. A high-quality SSP might already meet it, but that's unlikely.
+</Note>
+
+<Note>
+  **pete-gov, 2026-04-08** ([comment](https://github.com/FedRAMP/community/discussions/137#discussioncomment-16488230)): A responsibly prepared security package shouldn't be highly sensitive. Nothing in the rules stops a provider from publishing its security materials. Don't put information in them that's likely to lead to compromise.
+</Note>
+
+<Note>
+  **pete-gov, 2026-05-29** ([comment](https://github.com/FedRAMP/community/discussions/137#discussioncomment-17104831)): No lead agency exists once a provider sets up a collaborative ConMon charter or implements [`CCM`](/rules/collaborative-continuous-monitoring). The `CCM`, `SCN` and `VDR` rulesets make it explicit that providers must support all agency customers.
+</Note>
+
+<Note>
+  **pete-gov, 2026-06-18** ([comment](https://github.com/FedRAMP/community/discussions/137#discussioncomment-17356258), [follow-up](https://github.com/FedRAMP/community/discussions/137#discussioncomment-17356288)):
+  - Take a legacy finding to your collaborative ConMon group, then tell info@fedramp.gov the result. FedRAMP will mediate if the group can't agree.
+  - Follow the significant change process for VDR adoption. Incremental adaptive or routine changes are likely better than one transformative change.
+  - If CISA moves its deadline, FedRAMP will move its deadline.
+</Note>
+
+<Note>
+  **pete-gov, 2026-06-17** ([comment](https://github.com/FedRAMP/community/discussions/137#discussioncomment-17343241)) and **2026-06-20** ([comment](https://github.com/FedRAMP/community/discussions/137#discussioncomment-17374554)): FedRAMP removed its specific control parameters and requirements based on feedback across many RFCs, not one dedicated RFC. Pete said FedRAMP isn't a regulator. In his view, FedRAMP-assigned parameters led to stagnation. Changing a control parameter would usually be a significant change.
+</Note>
+
+<Note>
+  **pete-gov, 2026-06-19** ([comment](https://github.com/FedRAMP/community/discussions/137#discussioncomment-17358907)): Every agency must meet BOD 26-04 by 2026-12-07, so providers should expect fast agency approval of VDR-related changes. CISA gives agencies no grace period. FedRAMP's 3-month grace period is only about revocation.
+</Note>
+
+**Open questions:** none open. The thread was closed and moved to #146.
+
+## #38 Balancing Rev5 against 20x (closed)
+
+[Thread](https://github.com/FedRAMP/community/discussions/38) (Rev5 Announcements, opened 2025-06-06 by `pete-gov`, closed 2026-06-24). The thread covered the Balance Improvement Release (BIR) program, which CR26 has since replaced.
+
+**Bottom line:** Rule IDs mentioned in this thread, such as `VDR-RPT-VDT`, `VDR-RPT-AVI` and `VDR-EVA-GRV`, are BIR or draft IDs. In CR26, these requirements are in the [VER](/rules/vulnerability-evaluation-and-reporting) ruleset as [`VER-RPT-VDT`](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#vulnerability-details), [`VER-RPT-AVI`](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#accepted-vulnerability-info) and [`VER-EVA-GRV`](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#group-vulnerabilities).
+
+<Note>
+  **pete-gov, 2026-03-05** ([comment](https://github.com/FedRAMP/community/discussions/38#discussioncomment-16014755)): VDR timeframes are in calendar days unless they say "business days." The class tabs refer to the service's certification level, not CVSS severity.
+</Note>
+
+<Note>
+  **pete-gov, 2026-05-22** ([comment](https://github.com/FedRAMP/community/discussions/38#discussioncomment-17024140)) and **2026-05-29** ([comment](https://github.com/FedRAMP/community/discussions/38#discussioncomment-17105084)):
+  - Vulnerability reports should be a plain export from your vulnerability tracking system, not a place where you make decisions.
+  - One schema can cover both active and accepted vulnerabilities, with some fields left blank.
+  - Grouping and sampling should cut reporting volume a lot.
+  - Detailed fields also show your process works, which matters at initial certification and annual review.
+</Note>
+
+<Note>
+  **pete-gov, 2026-05-29** ([comment](https://github.com/FedRAMP/community/discussions/38#discussioncomment-17105360)): FedRAMP is moving away from standard artifacts. Assessors should verify and validate that you meet the requirements, not demand a format. FedRAMP has no "partial remediation." You partially mitigate, fully mitigate or remediate. SHOULD rules let you do the right thing rather than the merely compliant thing.
+</Note>
+
+<Note>
+  **pete-gov, 2026-06-24** ([comment](https://github.com/FedRAMP/community/discussions/38#discussioncomment-17426419)): The thread would close when CR26 was released. Remaining VDR feedback would go into FAQs on [help.fedramp.gov](https://help.fedramp.gov).
+</Note>
+
+**Open questions:** how grouping fits with per-vulnerability detection and evaluation times in `VER-RPT-VDT`, and whether about 300 container CVEs can really shrink to fewer than 10 report rows ([follow-up](https://github.com/FedRAMP/community/discussions/38#discussioncomment-17167034)). Staff hadn't answered that or the beta feedback from 2026-06-03 and 2026-06-08 when the thread closed.
+
+## Other threads with staff posts
+
+These threads also had staff posts but no CR26 rule positions:
+
+- [#173](https://github.com/FedRAMP/community/discussions/173): a corrected meeting link for the 2026-09-16 Assessors and Advisors Community Update.
+- [#148](https://github.com/FedRAMP/community/discussions/148): slides for the 2026-07-08 20x Community Update ([comment](https://github.com/FedRAMP/community/discussions/148#discussioncomment-17576324)).
+- [#101](https://github.com/FedRAMP/community/discussions/101) and [#100](https://github.com/FedRAMP/community/discussions/100): 20x Phase 2 pilot Q&A from 2025-11 to 2026-06. Staff closed #101 on 2026-06-24 when the pilot ended ([comment](https://github.com/FedRAMP/community/discussions/101#discussioncomment-17426385)). Pilot answers predate CR26, and staff have said legacy pilot material no longer applies ([#147 comment](https://github.com/FedRAMP/community/discussions/147#discussioncomment-17438908)).
+
+## Related
+
+- [Rev5 questions on the Consolidated Rules for 2026](/discussions/rev5-cr26-questions)
+- [20x questions on the Consolidated Rules for 2026](/discussions/20x-cr26-questions)
+- [RFC history](/discussions/rfc-history)

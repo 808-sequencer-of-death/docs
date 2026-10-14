@@ -1,0 +1,747 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-85",
+  "node_id": "D_kwDOOxfoic4Ah3e4",
+  "number": 85,
+  "title": "Q&A and Casual Discussion on Phase Two RFCs (14, 15, 16, 17, 18)",
+  "url": "https://github.com/FedRAMP/community/discussions/85",
+  "category": "General RFC Discussion",
+  "category_slug": "general-rfc-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": true,
+  "author": "pete-gov",
+  "author_is_official": true,
+  "created_at": "2025-09-10T18:34:31Z",
+  "updated_at": "2025-11-18T16:22:12Z",
+  "last_edited_at": "2025-10-01T12:40:46Z",
+  "closed": true,
+  "closed_at": "2025-11-18T16:22:12Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "**The primary purpose of public comment is for FedRAMP to _receive_ information and opinions** by giving \"interested persons an opportunity to participate in the rule making through submission of written data, views, or arguments\" (per the Administrative Procedures Act). FedRAMP does not respond to questions in public comments and they are the most difficult form of public comment to consider because the commenter's view, argument, or opinion can only be inferred.\r\n\r\n### This thread can be used for casual discussion about active RFCs outside of the formal public comment process. \r\n\r\nFedRAMP may participate and occasionally respond to questions in this discussion if it does not appear to be influencing public comment.\r\n\r\nThis thread is for the five 20x Phase Two RFCs released in September, 2025:\r\n\r\n- [RFC-0014 Phase Two Key Security Indicators](https://github.com/FedRAMP/community/discussions/83)\r\n- [RFC-0015 Recommended Secure Configuration](https://github.com/FedRAMP/community/discussions/84)\r\n- [RFC-0016 Collaborative Continuous Monitoring](https://github.com/FedRAMP/community/discussions/87)\r\n- [RFC-0017 Persistent Validation and Assessment](https://github.com/FedRAMP/community/discussions/88)\r\n- [RFC-0018 FedRAMP Security Inbox Requirements](https://github.com/FedRAMP/community/discussions/92)\r\n\r\nCheers!",
+  "comment_count": 11,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4A21zn",
+      "url": "https://github.com/FedRAMP/community/discussions/85#discussioncomment-14376167",
+      "author": "jdettweiler",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2025-09-11T16:27:18Z",
+      "updated_at": "2025-09-11T16:27:19Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "I'd like to drop my formal comments from RFC-0014 in this channel as well. Would love to have some conversations and back and forth on some of the new KSI changes and additions: \r\n\r\nThere are some interesting updates in this RFC release, please consider the following feedback: \r\n\r\n**KSI-CED-01**: - Update was clearly made to include all required training based on the moderate baseline, why was contingency plan training excluded? Should it be included? I know most organizations combine IR/CP training into functional and tabletop exercises but was just curious if the exclusion was an oversight or purposeful. \r\n\r\n**KSI-CMT-01:** - Clearly the change from “system” to “service” was very purposeful, but to me “system” seemed to be all inclusive while “service” seems to scope the KSI requirements to a subset. Is there an explanation for this very purposeful word change? Would it be possible to add the definition of “service” and “system” to the [FRMR.FRD](https://github.com/FedRAMP/docs/blob/main/markdown/FRMR.FRD.fedramp-definitions.md) definitions? \r\n\r\n**KSI-CMT-03:** - The use of the word “persistent” [based on the definition](https://github.com/FedRAMP/docs/blob/main/markdown/FRMR.FRD.fedramp-definitions.md#frd-all-38): “Occurring in a firm, steady way that is repeated over a long period of time” and associating it with changes creates a slight dichotomy. For “routine recurring” changes, I can see this meaning that each time one of these changes is pushed, there should be a way to demonstrate it was tested prior to production and then post deployment (i.e., impacts to configuration/security baseline based on change). I assume this is why “prior to deployment” wording was removed indicating a desire to know impacts of change as part of deployment pipelines AND on production system state. \r\n\r\nHowever, Adaptive, Transformative and Impact Categorization changes do not occur with a “persistent” frequency and thus requiring “persistent” automated testing and validation is open for interpretation. Is the meaning of the KSI to determine, for these types of changes, that automated testing is performed as part of the deployment pipeline and once deployed to production, whenever one of these changes occur? \r\n\r\nEssentially, is the objective of this KSI concerned with the automation around the testing of changes when they occur as opposed to any sort of automation that runs on a persistent basis to determine ongoing state of the production system? \r\n\r\nIn addition, I suspect that FedRAMP stripped out the \"prior to deployment\" part because for many CSPs, automated testing prior to deployment is likely conducted outside of the authorized boundary (e.g., system where staging is not within boundary, so generating automated validation for this may be out of scope for them). Testing and validating prior to deployment seem like a best practice that should always be encouraged, so removing it from KSI-CMT-03 feels odd. It also seems to go against CM-3.2 that FedRAMP has mapped to this KSI; CM-3.2 mentions testing & validation of changes to the system before finalizing the implementation of the changes.\r\n\r\nWhen I look at some of the other controls that FedRAMP has mapped to this KSI (particularly CM-4.2 & SI-2), it seems like FedRAMP is shifting the focus of the KSI to configuration and vulnerability scanning coverage to include newly deployed components. If that is indeed the case, FedRAMP should reword the KSI to be clearer and update mapped controls accordingly.\r\n\r\n**KSI-CMT-04:** Suggest using the term “Regularly” as opposed to “Consistently” since there is a definition of that term in [FRMR.FRD](https://github.com/FedRAMP/docs/blob/main/markdown/FRMR.FRD.fedramp-definitions.md#frd-all-07). Or, if “Consistently” is used it should be explicitly defined in that document. \r\n\r\n**KSI-CNA-01:** - Suggest adding the term “Machine-Based” to FRMR.FRD and explicitly defining it. This addition seems to scope the KSI requirement and it’s important to understand the definition to understand what has explicitly been scoped out of the KSI. \r\n\r\n**KSI-CNA-05:** The addition of \"unwanted spam\" in the same KSI seems a bit awkward because “denial of service” and “unwanted spam” are not necessarily related in most cases.  Additionally, there are many other common cloud attacks that are not included in this KSI. FedRAMP should consider reframing this KSI so it is broader but allows CSPs to demonstrate (in an automated way) that they employ a multi-layered defense against the most common attacks.  Alternatively, FedRAMP should split this into separate more specific KSIs (e.g., one specific to DDoS, another for spam).\r\n\r\n**KSI-IAM-05:** - To be honest, this is an incredibly vague KSI that could mean just about anything in both its prior and proposed wordings. Could the PMO explain how the wording change better fits their objective of this KSI? This explicit explanation might help to understand what specific objective the PMO would like to achieve with this KSI. \r\nIn addition, Zero trust is well understood in the community and is the direction most organizations and the federal government are shifting to. It would be better for FedRAMP to align and perhaps be even more specific with regards to which ZT capabilities are references / should be in scope for this KSI.\r\n\r\n**KSI INR and KSI-INR-01:** - The change in wording justifies a definition of “Incident Response” in FRMR.FRD. \r\n\r\n**KSI-MLA-03:** Given the “FedRAMP Vulnerability and Detection standard” that is now referenced in this KSI was just released this week, and how significant a change it is compared to rev 5 vulnerability management policies and procedures, I would expect most CSPs will need a transition period to fully meet those requirements. \r\n\r\n**KSI-PIY-01:** - A definition of  “Authoritative Sources” in FRMR.FRD would provide a lot of clarification around this KSI. \r\n\r\n**KSI-PIY-06:** - Suggest defining “commitment to delivering a secure service” in FRMR.FRD. This KSI is terribly vague. Without some sort of explicit definition of what a true “commitment” is (e.g., a specific minimum percentage of annual budget per time period, or X amount of overall company personnel dedicated X amount of hours per time period), this KSI doesn’t do anything. I understand the argument would be: “This varies from organization to organization”. My counter argument to that is: “I agree, and thus if an organization could provide nearly anything to demonstrate compliance with KSI, there’s no quantitative value in the KSI and it should be removed from the baseline”. A potential wording update for the KSI could be: \"Persistently review and harden machine-based information system resources to improve security\"\r\n\r\n**KSI-SVC-01:** - Suggest definition of “Continuously” as its own line item in FRMR.FDR. It is currently defined under “Persistently”, but if it’s going to be used as target objectives, it needs to have its own line item. Suggest defining “opportunities to improve security” in FRMR.FDR. As with the previous PIY-06, lacking any real quantitative objective removes the validity of the KSI. \r\n\r\n**KSI-SVC-03:** - The removal of “all federal and sensitive” seems to be a step backwards. The focus of 20x, in my interpretation, is to protect sensitive federal data. By utilizing the term “information” here, the door has been opened to once again include all information within the system, whether or not there is a valid reason to have non-encrypted, no sensitive data. The term “by default” needs to be defined in FRMR.FRD. To me “default” represents a state of data. I could start with data that is encrypted by “default” and then run a process which changes the data’s default state. At that point, does it still need to be encrypted? \r\n\r\n**KSI-SVC-04:** - Suggest defining “automation” in FRMR.FDR. \r\n\r\n**KSI-SVC-05:** - Suggest creating an entirely new draft standard to define this KSI. Specifically, “cryptographic methods to validate the integrity of machine-based information resources”. There are just too many ways to `skin a cat` here. A standard with definitions and examples is needed to better understand. \r\n\r\n**KSI-TPR-01:** - The wording change has made to this KSI is far less quantitative and thus far more difficult (if not impossible) to achieve automated, machine-readable reporting on. The previous iteration was quantitative (e.g., I can have automated look at the state of my system to identify APIs in use, and documentation to evaluate documented lists of third-party providers). The new wording introduces too many variables. If desired state is to ensure CSP is following the Minimum Assessment Standards, suggest taking the relevant sections of that standard and creating quantitative KSIs based on each relevant section. \r\n\r\n**KSI-CED-03:** - Suggest adding “Best Practices for delivering secure software” to FRMR.FRD. A possible suggestion here – I assume FedRAMP would like to see something more valuable than a “check the box” compliance exercise where high-level engineers are forced to take a useless LMS-based software design module on an annual basis. How about a FedRAMP Standard around certification requirements for system roles, with an understanding that maintenance of industry-recognized certifications through CPE programs is sufficient to be considered “ongoing role-based training”? \r\n\r\n**KSI-IAM-07:** - I interpret “list of information resources” to be the system inventory. Can the terminology be changed to something more akin to: “Document the event types that will be monitored, logged, and audited for all resources defined in the system inventory.” Also suggest defining – “event types”, “monitor”, “logging” and “auditing” in FRMR.FRD. I have concern around this KSI being too broad in nature, but explicit definitions may help scope its requirements. \r\n\r\n**KSI-CNA-08:** - Suggest defining “security posture” and “automated enforcement” in FRMR.FRD. This KSI opens a `can of worms` - I am concerned because the referenced associated controls are “CA-2.1, CA-7.1”. To me this indicates that the expectation is that all services that would be evaluated as part of security assessment and/or continuous monitoring require automatic enforcement. This requirement seems far too broad. Think about something like a finding against AT-2, or PS-3, how would “automatic enforcement” of findings against the security posture of these occur? This KSI needs to be scoped – I assume it’s after reasonable automation to support the system security posture, but that’s not how it currently reads. \r\n\r\nIn addition, careful consideration needs to be taken here. In my opinion, the only way to truly implement this would be through an Agentic AI-based approach within the management plane. “Automated Enforcement” requires agents with access to tools that have been granted privileges in the environment in order to implement in a meaningful way, as the KSI is currently documented. There are true security considerations that need to be examined and better understood before those types of agents are deployed, ecosystem wide. Forcing that type of change via a KSI, may be a larger scope than will be supported in the ecosystem as part of 20x and will lead to further agency pushback. \r\n\r\nI really think some scoping and deconstruction of this KSI into its component parts is required. \r\n\r\n**KSI-MLA-08:** - Suggest defining “just in time access” in FRMR.FDR. Curious why this KSI has been scoped specifically to “access to log data”? Interestingly, the associated control is SI-11. Is there any further clarity that can be provided around what is meant by “log data”? Maybe defined in FRMR.FDR? \r\n\r\n**KSI-SVC-08:** - How does this KSI differ in objective from KSI-CMT-03? My assumption of the point of CMT-03 is to automatically test and validate changes so that you aren’t introducing negative affects into the environment. This KSI seems like a `hat on a hat`. \r\n\r\n**KSI-SVC-09:** - See my comments on KSI-SVC-05 – There are just too many possibilities around acceptable means of  “continuously validate the authenticity and integrity of communications” \r\n\r\n**KSI-SVC-10** – Suggest defining “unwanted information” in FRMR.FDR. I think a lot of clarity needs to be added to this KSI? What is the objective state that is being sought? I feel like this is targeted at some sort of very specific scenario. In its current iteration, I can’t figure out what “removing unwanted information” actually means? Is this a “data sanitization” process? Is this tied to some sort of desired action in the system (e.g., removal of databases, objects in object stores, etc.) and thus tied to some sort of expected log entry?",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A22WB",
+          "url": "https://github.com/FedRAMP/community/discussions/85#discussioncomment-14378369",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2025-09-11T21:21:54Z",
+          "updated_at": "2025-09-11T21:21:55Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thanks for posting these up over here for discussion too Johann! FedRAMP still can't really interact with casual comments if they are exactly the same as formal public comment; we're strictly limited in participation to avoid giving any appearance that we are trying to influence public comments. This creates a deeply awkward situation and I can't propose any solutions that involve changing your public comments as then I would clearly be influencing public comment. 🤷 These rules are so weird for us too, thanks for understanding.\r\n\r\nGiven that members of the public may submit multiple comments, I'll engage in a strictly limited manner _for public awareness_ on some of the **questions** raised in this discussion. We will consider the full content of your public comment appropriately along with any follow up.\r\n\r\nBroadly to a few of your questions - this is Phase Two _pilot_. In the Phase Two pilot we are explicitly and deliberately encouraging a wide variety of approaches in order to see how effectively folks can demonstrate different things, just like Phase One. Almost any time there's a question about how to implement a KSI our default is actually to turn that around and ask the CSP the question back. Folks should really be thinking about this as an opportunity to demonstrate capabilities, not as a list of things that need to be met.\r\n\r\n> **KSI-CMT-01**: \"Is there an explanation for this very purposeful word change? \"\r\n\r\nWe wanted to broaden this to stop people from over-indexing on operating systems (it's a thing) and continue our gradual change from \"system\" to \"service\" - because these requirements apply to services, not systems. Something more like \"log and monitor modifications to the cloud service offering\" might be more clear. Also noticed we missed updating this in the primary KSI description itself, oops.\r\n\r\n> **KSI-CMT-03**: \"Is the meaning of the KSI to determine ... ?\"\r\n\r\nThere should be a persistent process applied to different types of changes that take place at intentional and documented times in the lifecycle of the change. That may be before, during, and after a change for some changes, or only before for other changes, or done after on a regular basis for others. \r\n\r\n> **KSI-IAM-05**: \"Could the PMO explain how the wording change better fits their objective of this KSI?\"\r\n\r\nThis KSI as originally written was one that participants in the Phase One pilot struggled with frequently and clarifying the intent as being specific to ensuring identity and access management systems were designed with the assumption of compromise helped more folks demonstrate how they had done that.\r\n\r\nMight be worth remembering that 20x is not targeted at folks who are familiar with the federal space.\r\n\r\n> **KSI-SVC-03**:  \"At that point, does it still need to be encrypted?\"\r\n\r\nIn this case \"by default\" is intended in the plain language meaning, i.e. do it unless you have a reason not to. In general encrypt everything. I have a hard time believing any reasonable person is going to argue that unencrypting a bunch of previously encrypted data and leaving it lying around is a secure design decision that makes sense to them. :p\r\n\r\nRegarding removal of federal information, this is part of a shift towards acknowledging that cloud service providers can't know what is federal information and what isn't - they can only know what is information their customers have put into the system, therefore should encrypt that information by default. \r\n\r\n> **KSI-MLA-08:** \" Is there any further clarity that can be provided around what is meant by “log data”? \"\r\n\r\n... I don't even with this Johann. 🤣 Too many scars over wack arguments between people! I don't anticipate needing to clarify what log data is but if that's a common thread in public comments we'll do it if we have to. We ended up defining \"machine-readable\" after enough people wanted to argue about it. 🧯 \r\n\r\nAs to why this was added for moderate, KSI-IAM-04 is focused on accounts and services and we wanted to be very clear that access to log data itself should be managed at moderate based on the risk of sensitive information that can exist in log data.\r\n\r\n> **KSI-SVC-08:** \"How does this KSI differ in objective from KSI-CMT-03?\"\r\n\r\nKSI-CMT-03 doesn't prevents you from intentionally making a change that leaves behind residual issues; this is a step up that explicitly adds this requirement that we think should be managed at the service configuration level rather than the change management level because change management might not assess this.\r\n\r\ne.g. You might decide to move from one database to another and validate following KSI-CMT-03 that the new database has everything you need and the change worked great and everything is happy and everything is using the new database. KSI-SVC-08 expects you to actually turn off, stop using, and properly dispose of information in the old database.\r\n\r\n**KSI-SVC-10:** \"What is the objective state that is being sought?\"\r\n\r\nThis has considerable room for improvement, yay for public comment! 😀  The intent is to ensure that cloud service providers don't retain customer data after the customer no longer wants that data to be stored by the cloud service provider. A common example of this is spillage (where someone put something they shouldn't have into a cloud service offering) but there are plenty of other circumstances at the moderate level where the government might want information removed entirely from a service offering.\r\n\r\n---\r\n\r\nAll of the above information shared for public awareness based on early questions raised by a public comment and do not reflect endorsement of the linked public comment or intent to influence public commenters by FedRAMP. "
+        },
+        {
+          "id": "DC_kwDOOxfoic4A3PWt",
+          "url": "https://github.com/FedRAMP/community/discussions/85#discussioncomment-14480813",
+          "author": "iteuscher",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-09-22T21:05:28Z",
+          "updated_at": "2025-09-22T21:05:28Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Appreciate the discussion on KSI-SVC-10. I think there needs to be a distinction between a spillage type event where someone puts data into a CSO that shouldn't be there (and may need to create a support ticket to resolve it) versus a typical delete in the UI (average user mis-spells something and deletes it) because otherwise this KSI potentially sets privacy against availability in a way that most CSPs don't want to support. For example there are frequently customers who \"delete\" data accidentally and then ask for a restore from backup to retrieve data that they deleted. If this KSI prevents a CSP from being able to provide restore from backup for customers who inadvertently delete data it may be placing privacy ahead of availability. But in the case of a recognized spillage or data oversharing with the CSP there should be a process to remove that data. I assume that's what the \"if appropriate\" is getting at."
+        },
+        {
+          "id": "DC_kwDOOxfoic4A3Pa4",
+          "url": "https://github.com/FedRAMP/community/discussions/85#discussioncomment-14481080",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2025-09-22T21:59:12Z",
+          "updated_at": "2025-09-22T21:59:13Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> For example there are frequently customers who \"delete\" data accidentally and then ask for a restore from backup to retrieve data that they deleted. \r\n\r\nConcur - \"unwanted\" is doing a big lift here, most backups would be wanted as part of the service. There's tons of room to clarify this, we were like \"we'll do technical assistance to explain it\" but that always comes later.\r\n\r\nThe target is effectively this: If an agency customer wants data removed from your platform, you need to be able to remove that information entirely (or at least show that it will be removed automatically etc. and how). This is similar to what most private sector customers would expect but agencies have a particular need to be able to do this that means you need to know what level of demand you can meet.\r\n\r\nFor backups, from a technical perspective, the worst case architecture here is making sure all customer backup data is encrypted with a unique key that just be deleted in a break glass situation; much simpler than digging through snapshots/archives/etc."
+        }
+      ],
+      "replies_total": 3,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A24W9",
+      "url": "https://github.com/FedRAMP/community/discussions/85#discussioncomment-14386621",
+      "author": "ethanolivertroy",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2025-09-12T17:04:51Z",
+      "updated_at": "2025-09-12T17:04:53Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Why the emphasis on **machine-based** in the new KSIs?",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A24bA",
+          "url": "https://github.com/FedRAMP/community/discussions/85#discussioncomment-14386880",
+          "author": "Rene2mt",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-09-12T17:40:34Z",
+          "updated_at": "2025-09-12T17:40:34Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "@ethanolivertroy I think its because FedRAMP's definition of [information resources](https://github.com/FedRAMP/docs/blob/main/markdown/FRMR.FRD.fedramp-definitions.md#frd-all-02) is broad and includes info about \"personnel, equipment, funds, etc.\".  Focusing the KSIs on **machine-based** places more focus on the system or service itself, which is probably more measurable and capable of being reported on in an automated way."
+        },
+        {
+          "id": "DC_kwDOOxfoic4A24jf",
+          "url": "https://github.com/FedRAMP/community/discussions/85#discussioncomment-14387423",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2025-09-12T18:58:49Z",
+          "updated_at": "2025-09-12T18:58:49Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Yes, that's exactly right! We're starting to clarify in areas where the realistic expectation is that something will only apply to machine-based information resources versus all information resources. This started out in the [Vulnerability Detection and Response Standard](https://github.com/FedRAMP/docs/blob/main/markdown/FRMR.VDR.vulnerability-detection-and-response.md) when we realized there were times when specific requirements or recommendations should be focused or only applied to machines.\r\n\r\nSo, for example, with KSI-CNA-01 you don't need to limit inbound and outbound traffic of your personnel, and KSI-SVC-01 doesn't  require you to harden your office space, and KSI-SVC-04 doesn't expect you to automate your bill payment, KSI-SVC-05 doesn't require you to use cryptographic methods to verify that people at your office are the same people you hired, etc."
+        },
+        {
+          "id": "DC_kwDOOxfoic4A29ue",
+          "url": "https://github.com/FedRAMP/community/discussions/85#discussioncomment-14408606",
+          "author": "tnnrjmsn-eit",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-09-15T21:14:00Z",
+          "updated_at": "2025-09-15T21:17:50Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Perhaps there needs to be some clarifying language in the updated KSI-PIY-01, too, then, i.e., I wonder if you ~do we~ mean for CSPs to generate inventories of personnel, funds, etc. from (an) authoritative source(s) here too.~?~\r\n\r\n> KSI-PIY-01:\r\n> Previous: Have an up-to-date information resource inventory or code defining all deployed assets, software, and services\r\n> Updated: Generate inventories of information resources from authoritative sources\r\n\r\n[edited to rephrase from Q to comment]"
+        },
+        {
+          "id": "DC_kwDOOxfoic4A29xb",
+          "url": "https://github.com/FedRAMP/community/discussions/85#discussioncomment-14408795",
+          "author": "tnnrjmsn-eit",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-09-15T21:49:55Z",
+          "updated_at": "2025-09-15T21:49:56Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> Perhaps there needs to be some clarifying language in the updated KSI-PIY-01, too, then, i.e., I wonder if you ~do we~ mean for CSPs to generate inventories of personnel, funds, etc. from (an) authoritative source(s) here too.~?~\r\n> \r\n> > KSI-PIY-01:\r\n> > Previous: Have an up-to-date information resource inventory or code defining all deployed assets, software, and services\r\n> > Updated: Generate inventories of information resources from authoritative sources\r\n> \r\n> [edited to rephrase from Q to comment]\r\n\r\nI've added a Public Comment too: https://github.com/FedRAMP/community/discussions/83#discussioncomment-14408779"
+        },
+        {
+          "id": "DC_kwDOOxfoic4A2_iI",
+          "url": "https://github.com/FedRAMP/community/discussions/85#discussioncomment-14416008",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2025-09-16T13:27:51Z",
+          "updated_at": "2025-09-16T13:28:29Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> Perhaps there needs to be some clarifying language in the updated KSI-PIY-01, too, then, i.e., I wonder if you ~do we~ mean for CSPs to generate inventories of personnel, funds, etc. from (an) authoritative source(s) here too.~?~\r\n\r\nThis is one of those where yes, I would definitely expect a secure cloud service provider to understand who their employees are at any given point, which team they are on, what role they are in, etc. Same for how they are funding different lines of business, etc. If you aren't inventorying and managing non-machine-based information resources then how can you ensure the security of your machine-based ones?\r\n\r\n(wouldn't expect a CSP to share these details with the government but would absolutely expect them to demonstrate to an assessor that they inventory them)\r\n\r\n"
+        }
+      ],
+      "replies_total": 5,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A28r5",
+      "url": "https://github.com/FedRAMP/community/discussions/85#discussioncomment-14404345",
+      "author": "yungcero",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2025-09-15T14:20:47Z",
+      "updated_at": "2025-09-15T14:20:48Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "I agree with @jdettweiler's comments on KSI-CED-03. A good standard that engineers can reference will be useful to ensure that \"best practices in delivering secure software\" are covered in whatever training meets the requirement's intent. But overall, I feel as if it's not a strong control but more of an HR checkbox. If the intent was to have security baked in at the developer level, then maybe KSI-CED-03 has to get split more to define what is role-specific. For example, `Require secure coding standards training for development and engineering staff writing software (mapped to OWASP/CERT/etc?)` and `Require configuration and deployment security training for development and engineering staff deploying applications (or something similar).` In that case, if you have a web developer configuring a CI/CD pipeline, then they take both. But the web developer who never touches a single yaml file only takes training that is relevant. In this way, it defines a key indicator that can be mapped easily. Thoughts? Also.... I hope that I am on the right path. This is my first time interacting with this community, and I hope I can contribute in a beneficial manner!",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A3A-O",
+      "url": "https://github.com/FedRAMP/community/discussions/85#discussioncomment-14421902",
+      "author": "wisecryptic",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2025-09-16T23:13:35Z",
+      "updated_at": "2025-09-16T23:13:35Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "I have a general comment on the sustainability of forthcoming guidance. As FedRAMP adds additional terms, rules, and frameworks, how are we going to keep this grokable (lets get that added to FedRAMP definitions ;) for those new to FedRAMP? I am nervous that CSPs, particularly SMBs and disruptors, will get more and more lost in the FedRAMP requirement maelstrom while experts and consultants will find more and more opportunities to bill for non-value-added work.\r\nI certainly sympathize with the difficulties of trying for clarity in the past and with those csps getting caught in an ambiguity trap rather than the over-prescription trap.\r\nAdditionally, the new rules, definitions, and work are generally helpful and respond to real problems/gaps from the past.\r\nBut how are we going to keep people from getting lost in the sauce? is there organization or structure that has greater groking power than a set of documents each with a set of rules, guidelines, etc.? Will we need to outsource knowledge of process to machines because no one will be able to keep track of everything? is that the best approach to make FedRAMP more accessible?\r\nIf I get time this fiscal q1, I will deep dive this topic and essay some solutions. I would appreciate any input, especially if I am missing some big picture stuff in my point-in-time observation.",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A3BK3",
+          "url": "https://github.com/FedRAMP/community/discussions/85#discussioncomment-14422711",
+          "author": "ethanolivertroy",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-09-17T02:00:18Z",
+          "updated_at": "2025-09-17T02:00:18Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "No one will be able to read?"
+        },
+        {
+          "id": "DC_kwDOOxfoic4A3Czz",
+          "url": "https://github.com/FedRAMP/community/discussions/85#discussioncomment-14429427",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2025-09-17T13:54:51Z",
+          "updated_at": "2025-09-17T13:54:53Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "The net sum information that you need to understand about FedRAMP under 20x will be a fraction of what it was before, and we'll make sure to keep things continually updated and in a clean state similar to monitoring releases vs nightly build branches in software; folks who want to pay attention to the bleeding edge can, those who don't need to shouldn't.\r\n\r\nThen I'm hoping with machine-readable docs there will be plenty of opportunity for refinement; folks will be able to generate topic-specific items, worksheets, etc. out of them by filtering for things like requirement level, impact level, who it affects, and eventually things like what part of the authorization process it applies, what team might be impacted, etc. Plus the ability to generate single documents or web-readable indexes that combine everything into one place should be of benefit.\r\n\r\nThe most important thing to me is removing the idea that there is some \"secret information\" that you need to pay someone for because there are years and years of random cruft built up that is confusing, contradictory, partially in draft, etc. spread across hundreds of documents. \r\n\r\nFedRAMP will always be complex enough that subject matter expertise will be valuable, but it should be something like kubernetes - if you want to try to dabble with it you can, and if you want to sorta spin something small up you can, but if you want to run it at scale you probably need someone that has done it before.\r\n"
+        },
+        {
+          "id": "DC_kwDOOxfoic4A3DTD",
+          "url": "https://github.com/FedRAMP/community/discussions/85#discussioncomment-14431427",
+          "author": "wisecryptic",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-09-17T15:52:19Z",
+          "updated_at": "2025-09-17T15:52:19Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thanks for the check-in. agreed that FedRAMP is inevitably complex. thanks for all your work."
+        }
+      ],
+      "replies_total": 3,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A3Gg1",
+      "url": "https://github.com/FedRAMP/community/discussions/85#discussioncomment-14444597",
+      "author": "fortetroy",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2025-09-18T14:34:59Z",
+      "updated_at": "2025-09-18T14:35:00Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "![a6h7ud](https://github.com/user-attachments/assets/9c1c0ce1-6134-4fe5-9529-eb7779edaf64)\r\n",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A3Gjl",
+          "url": "https://github.com/FedRAMP/community/discussions/85#discussioncomment-14444773",
+          "author": "tnnrjmsn-eit",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-09-18T14:54:34Z",
+          "updated_at": "2025-09-18T14:54:34Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "@fortetroy, I think we'll be okay. 😅 \r\n> FedRAMP will always be complex enough that subject matter expertise will be valuable,"
+        },
+        {
+          "id": "DC_kwDOOxfoic4A3My9",
+          "url": "https://github.com/FedRAMP/community/discussions/85#discussioncomment-14470333",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2025-09-21T20:52:39Z",
+          "updated_at": "2025-09-21T20:52:40Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Figured I'd pop in to say that FedRAMP may do the assessment directly for 20x for certain prioritized critical or emerging technologies to speed up authorization time when urgency is a factor. We wrote this standard with this in mind; it might've caused a lot of confusion about FedRAMP's role in a direct assessment if all of the requirements and recommendations were written for third-party assessment organizations."
+        },
+        {
+          "id": "DC_kwDOOxfoic4A3ety",
+          "url": "https://github.com/FedRAMP/community/discussions/85#discussioncomment-14543730",
+          "author": "ChanceofClouds",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-09-29T15:54:07Z",
+          "updated_at": "2025-09-29T15:54:08Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Is there any concern for this in terms of potential corruption or abuse? Example, if you know someone in an administration, you might be able to get your product listed as critical and avoid paying for an initial 3PAO assessment? Will there be strict requirements on what type of product would fall under this exception and which committee/entity would be allowed to rule on this?"
+        },
+        {
+          "id": "DC_kwDOOxfoic4A3e0w",
+          "url": "https://github.com/FedRAMP/community/discussions/85#discussioncomment-14544176",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2025-09-29T16:47:29Z",
+          "updated_at": "2025-09-29T16:47:30Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> Will there be strict requirements on what type of product would fall under this exception and which committee/entity would be allowed to rule on this?\r\n\r\nFedRAMP prioritization is outlined in the law and re-emphasized in policy under M-24-15; prioritizations like the [AI Prioritization](https://fedramp.gov/ai) are developed by FedRAMP in consultation with the FedRAMP Board and the CIO Council (and the GSA Office of General Counsel). \r\n"
+        }
+      ],
+      "replies_total": 4,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A3PXy",
+      "url": "https://github.com/FedRAMP/community/discussions/85#discussioncomment-14480882",
+      "author": "iteuscher",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2025-09-22T21:17:08Z",
+      "updated_at": "2025-09-22T21:17:09Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "In [RFC 17](https://github.com/FedRAMP/community/discussions/88), FRR-PVA-01 does \"for each Key Security Indicator\" refer to the validation level e.g.: one simple high-level summary for KSI-CNA-01, a second high-level summary for KSI-CNA-02, a third for KSI-CNA-03 or does it refer to the KSI category level e.g.: one summary for all CNA validations, a second summary for all SVC validations, etc? \r\n\r\nI assume that the summary and details on how each validation is made would be granular at the KSI validation level eg: KSI-CNA-01, -02, -03 in order to be specific to the requirement of the KSI validation but the phrase \"each Key Security Indicator\" makes me wonder if the summary should be at the higher level category grouping.  \r\n\r\n> FRR-PVA-01\r\n> Providers MUST maintain simple high-level summaries of at least the following for each Key Security Indicator\r\n> Goals for how it will be implemented and validated, including clear pass/fail criteria and traceability\r\n> The consolidated information resources that will be validated (this should be a high-level consolidated summary such as “all employees with privileged access that are members of the Admin group”)\r\n> ...\r\n\r\nThanks, \r\nIsaac Teuscher (Paramify)",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A3PbI",
+          "url": "https://github.com/FedRAMP/community/discussions/85#discussioncomment-14481096",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2025-09-22T22:03:31Z",
+          "updated_at": "2025-09-22T22:03:32Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Haha yeah I think this is just because everyone (including us) tends to think of each of the #'d validations as being KSIs so things like this slip by. Maybe we need to just lean in on that and move back towards like KSI families w/ individual KSIs since that's basically what we're doing in practice.\r\n\r\nBut yes, confirming the intent is summaries for each validation. And these summaries should really be able to be used as the the business goals agreed to by the engineering and compliance and executive teams rather than something built for FedRAMP."
+        },
+        {
+          "id": "DC_kwDOOxfoic4A3Pfc",
+          "url": "https://github.com/FedRAMP/community/discussions/85#discussioncomment-14481372",
+          "author": "iteuscher",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-09-22T23:08:06Z",
+          "updated_at": "2025-09-22T23:08:07Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Sounds good! Thank you for clarifying. I do the same thing by calling each KSI validation a KSI and calling the KSI categories \"families\" after the 800-53 style. Old habits die hard I guess "
+        }
+      ],
+      "replies_total": 2,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A3h4Z",
+      "url": "https://github.com/FedRAMP/community/discussions/85#discussioncomment-14556697",
+      "author": "mjprager",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2025-09-30T20:49:48Z",
+      "updated_at": "2025-09-30T20:49:50Z",
+      "upvotes": 2,
+      "minimized": false,
+      "body": "Discussions allowed for RFC 18 here as well?\r\n\r\nIf so, would like to express concern about having severe penalties (CAP) on first failure, relying on _emails_ not received/acked in time. _Emails_ seems antithetical to our shared goals for FedRAMP 20X automation, and going straight to a suspension/CAP when dependent on an unreliable technology and human processes for adherence to a very short SLA for response is a very draconian escalation. <she says casually but earnestly>\r\n\r\nWhat is the strict definition of \"senior security official\"? I or my ConMon team has historically answered on behalf of my org for Emergency Directives, and they are usually straightforward to answer (because almost always, we're either already aware and working on it, or have zero impact - can't remember one where the ED is where we first heard about a vuln). Is this really saying that I now will need to always have those routed to a senior security official like a CVP? It's unclear whether they will be able to in turn delegate to me to ack and address?\r\n\r\nDo we really feel that email is \"reliable\" if we are trying to ensure \"Federal agencies will have a reliable way to contact security teams at cloud service providers\"? \r\n\r\nA small nitpick, but also seems fair to ask for: Is FedRAMP committing to an SLA for acknowledging and implementing submitted changes to the \"their FedRAMP Security Inbox by emailing [info@fedramp.gov](mailto:info@fedramp.gov) with the name and FedRAMP ID of the cloud service offering and the updated email address\"?\r\n\r\nWho are \"all necessary parties (other than FedRAMP)\" that we will now be committed to ack and address? If a random contractor at an org with a .gov or .mil email (legit or faked) asks us any question related to FedRAMP or security, the way this reads now is that we're required to route it to a senior security official, cannot use any spam filters (because that might result in not addressing without human review), and every single one needs to be addressed within 1 business day -- or we are immediately suspended for a minimum of 30 days and publicly placed on a Corrective Action Plan... on the very first failure, and/or for any/all emails sent to that mailbox...? \r\n\r\nThis seems super severe, TBH. At a bare minimum, it needs to be not _all_ emails sent to that box, but only ones that are clearly called out as an \"urgent security notification\" in some pre-agreed upon fashion. \r\n\r\nI'm not sure that different standards should be applied based on impact level (an emergency directive comes with clear timelines to respond within its own language - if it's a big deal, it's a big deal for all CSPs, not a tiered big deal).\r\n\r\nI get and appreciate that FedRAMP found a hygiene issue of not having up to date contacts, and it should be addressed by the associated parties, and reasonable processes in place to keep such severe drift from happening again (such as the quarterly testing). \r\n\r\nRespectfully, and casually, :)\r\nMelissa",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A3h5V",
+          "url": "https://github.com/FedRAMP/community/discussions/85#discussioncomment-14556757",
+          "author": "nicole-gov",
+          "author_association": "NONE",
+          "is_official": true,
+          "created_at": "2025-09-30T20:56:57Z",
+          "updated_at": "2025-09-30T20:56:57Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Good point! I just updated the discussion post to include RFC-0018! "
+        },
+        {
+          "id": "DC_kwDOOxfoic4A3jnt",
+          "url": "https://github.com/FedRAMP/community/discussions/85#discussioncomment-14563821",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2025-10-01T13:50:41Z",
+          "updated_at": "2025-10-01T13:50:42Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> If so, would like to express concern about having severe penalties (CAP) on first failure, relying on _emails_ not received/acked in time. _Emails_ seems antithetical to our shared goals for FedRAMP 20X automation, and going straight to a suspension/CAP when dependent on an unreliable technology and human processes for adherence to a very short SLA for response is a very draconian escalation.\r\n\r\nBusinesses with FedRAMP authorizations should consider urgent communication from FedRAMP to be the highest priority messages on behalf of all of their government customers; it's pretty much the one time where there is zero margin. Responding within the timeframes proposed (or alternatives based on feedback) are not that unreasonable against typical high quality SLAs for customer support. \r\n \r\n> What is the strict definition of \"senior security official\"?\r\n\r\nThis, like always, is up to the CSP to define and apply; you know who senior security officials in your organization with the authority to respond to messages from FedRAMP are, you know how and when to route things to a more senior official if it's appropriate, etc. Also these senior security officials don't have to be receiving all messages from the inbox, just messages originating from .gov or .mil addresses.\r\n\r\nThe point is primarily that if this inbox is monitored by general customer support or similar staff that they have a process to immediately route urgent messages from FedRAMP to the proper officials.\r\n\r\n> Do we really feel that email is \"reliable\" if we are trying to ensure \"Federal agencies will have a reliable way to contact security teams at cloud service providers\"?\r\n\r\nIt's the only option at the moment for FedRAMP that can scale comms to everyone.\r\n \r\n> Who are \"all necessary parties (other than FedRAMP)\" that we will now be committed to ack and address? \r\n\r\n[All Necessary Parties](https://github.com/FedRAMP/docs/blob/main/markdown/FRMR.FRD.fedramp-definitions.md#frd-all-18) is defined in FRR-FRD-18 as \"All entities whose interests are affected directly by activity related to a specific cloud service offering in the context of a FedRAMP authorization. This always includes FedRAMP and any agency customer who is operating the cloud service offering, but may include additional parties depending on agreements made by the cloud service provider (such as consultants or third-party assessors). Potential agency customers or third-party cloud service providers should also be included in most cases but this is not a mandatory requirement under FedRAMP as ultimately the cloud service provider may choose who they wish to do business with.\"\r\n\r\nThe CSP should know their necessary parties.\r\n\r\n> This seems super severe, TBH. At a bare minimum, it needs to be not _all_ emails sent to that box, but only ones that are clearly called out as an \"urgent security notification\" in some pre-agreed upon fashion.\r\n\r\nIt's definitely intended to be severe - having a human acknowledge and address security communications from the government within a short time-frame is something we'd expect CSPs doing business with the government to prioritize."
+        },
+        {
+          "id": "DC_kwDOOxfoic4A3xYH",
+          "url": "https://github.com/FedRAMP/community/discussions/85#discussioncomment-14620167",
+          "author": "wisecryptic",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-10-07T22:38:49Z",
+          "updated_at": "2025-10-07T22:38:50Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "@mjprager I had the same thoughts reading the standard. The trick is that there could be extremely time-sensitive communications that need to be sent, and like pete said, there is nothing besides email that is rolled out en masse. One rock and one hard spot.\r\nseparating the signal from the noise is what is most important in this case. \r\n\r\nHow does a public inbox getting anything and everything sort out this one important message? technically not just one. There may be very urgent agency emails in certain circumstances (lets say they need to check for a breach imminently).\r\n\r\nIt would be good if we could key in on something in the email. Something that signals - hey, this is a do now thing. Then engineers could script it to go into an incident queue where CSPs have processes in place to handle it. I can think of keying in on a list of specialized email addresses or perhaps a combination of trusted address (CISO@state.gov) and subject or body string ('act or CAP'ed :)'. JK, don't do that one, you will get meme'd to the full extent of the law)"
+        },
+        {
+          "id": "DC_kwDOOxfoic4A3xZX",
+          "url": "https://github.com/FedRAMP/community/discussions/85#discussioncomment-14620247",
+          "author": "wisecryptic",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-10-07T22:54:45Z",
+          "updated_at": "2025-10-07T22:54:45Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "It seems clear that from the one side, Gov realized that a critical system was unreliable and from the other side, a sizeable portion of the CSPs aren't thinking about incident response like they should, which unfortunately mars the required trust that the FedRAMP program needs to run smoothly and efficiently. Hence a very strong reaction.\r\n\r\nI believe a side effect of rolling this out 'as is' will be the dilution of the seriousness of the CAP. Or, to maintain the CAP's importance, FedRAMP will need to show lenience in whatever cases they can, formally CAPing the clearly negligent (even then, how many are there?)\r\n\r\nOn the other hand, some CSPs will probably have a poor guy wired to that inbox the first few months. For as long as the CISO can justify before another executive decides the time to monitor is waste that needs to be re-allocated. Then they will get cap'ed anyway, boohoo, the guy gets his thankless job back for another year.\r\n\r\nI'm going to propose that FedRAMP (and/or other agencies) issue a trusted list of senders that require an immediate response IF they include \"Action Required: Urgent\" in the body of the email. That may be over-prescriptive but the guy wired to the inbox will thank me.\r\n"
+        }
+      ],
+      "replies_total": 4,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A3jtl",
+      "url": "https://github.com/FedRAMP/community/discussions/85#discussioncomment-14564197",
+      "author": "kcarr91",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2025-10-01T14:31:37Z",
+      "updated_at": "2025-10-01T14:31:38Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "RFC 18 \r\n@pete-gov does the PMO have a way to publicly hide a CSP's FedRAMP Security Inbox (FSI) while still making it available to agencies?   \r\n\r\nWe get a lot sales spam to these inboxes that are publicly posted as companies know they are monitored by security/compliance staff.  While if someone abuses these mailboxes, we just block that entire company’s domain from sending future emails it is still an annoyance.  I’m sure other CSPs are dealing with the same thing. \r\n",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A3juq",
+          "url": "https://github.com/FedRAMP/community/discussions/85#discussioncomment-14564266",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2025-10-01T14:39:32Z",
+          "updated_at": "2025-10-01T14:39:32Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "It's never a good idea to assume an email address is secret or hidden, so I think we'd just expect allow listing emails from .gov and .mil domains that have the appropriate verification in place (BOD 18-01 requires agencies to have valid SPF/DMARC records). A modern service should have plenty of ways to sort the randos from the actual .gov/.mil senders."
+        },
+        {
+          "id": "DC_kwDOOxfoic4A3j13",
+          "url": "https://github.com/FedRAMP/community/discussions/85#discussioncomment-14564727",
+          "author": "ChanceofClouds",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-10-01T15:24:04Z",
+          "updated_at": "2025-10-01T15:24:06Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "You could also create special rules that will forward the emails sent to the security inbox to the key security personnel when the sender has a .gov/.mil account"
+        },
+        {
+          "id": "DC_kwDOOxfoic4A3j5V",
+          "url": "https://github.com/FedRAMP/community/discussions/85#discussioncomment-14564949",
+          "author": "kcarr91",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-10-01T15:44:00Z",
+          "updated_at": "2025-10-01T15:44:00Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Ya I was just curious if there was an easy way to reduce the overall spam for everyone rather than hundreds CSP dealing with it individually.    \r\n\r\nAck we can easily limit this inbox to just .gov or .mil domains however we quiet often get emails from contractors working on behalf of the government to review packages and they are using their contractor .com email domain.  I am sure that is against agency policy but does happen. \r\n\r\nOn the plus side, the bad sales emails written by people not understanding FedRAMP produces some good humor to laugh at internally. "
+        },
+        {
+          "id": "DC_kwDOOxfoic4A3j6c",
+          "url": "https://github.com/FedRAMP/community/discussions/85#discussioncomment-14565020",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2025-10-01T15:50:25Z",
+          "updated_at": "2025-10-01T15:50:26Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "lol you'd be amazed how many emails I get at pete@fedramp.gov from folks wanting to help me get FedRAMP authorization! 😆 I feel ya."
+        }
+      ],
+      "replies_total": 4,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A3kD2",
+      "url": "https://github.com/FedRAMP/community/discussions/85#discussioncomment-14565622",
+      "author": "TM-Microsoft",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2025-10-01T17:07:12Z",
+      "updated_at": "2025-10-01T17:07:13Z",
+      "upvotes": 2,
+      "minimized": false,
+      "body": "RFC-0018 \r\n@pete-gov since the FedRAMP Marketplace only includes two email categories, Sales and Security, the Security email is currently used for both security-related issues and general inquiries. Would FedRAMP be open to adding a separate category for general questions to help streamline communication?",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A3kGs",
+          "url": "https://github.com/FedRAMP/community/discussions/85#discussioncomment-14565804",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2025-10-01T17:25:17Z",
+          "updated_at": "2025-10-01T17:25:18Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Absolutely, recommend flagging this in formal comment too!\r\n\r\nUnder the Authorization Data Standard you can add whatever information you want as well."
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A31_Y",
+      "url": "https://github.com/FedRAMP/community/discussions/85#discussioncomment-14639064",
+      "author": "wisecryptic",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2025-10-09T16:28:34Z",
+      "updated_at": "2025-10-09T16:28:35Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "RFC 17:\r\nFRR-PVA-TF-MO-01 and ...02, should 'machine-based' and 'non-machine-based' be _italicized_ instead of 'information' resources?\r\n\r\nFRR-PVA-AA-10\r\nwhat is the thinking behind this requirement? AOs, to my knowledge, rely on an Assessor's recommendation as evidence that the Assessor finds things in generally good order. Is the intent to phase this out and change the role of assessor as a pure 3rd party review without comment?",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A32Hu",
+          "url": "https://github.com/FedRAMP/community/discussions/85#discussioncomment-14639598",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2025-10-09T17:24:32Z",
+          "updated_at": "2025-10-09T17:24:33Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": ">  FRR-PVA-TF-MO-01 and ...02, should 'machine-based' and 'non-machine-based' be italicized instead of 'information' resources?\r\n\r\nIt's getting a bit clumsy but the italics are for formally defined terms that are being used in the context of their formal definition:\r\n\r\n- Information resource is defined in [FRD-ALL-02](https://github.com/FedRAMP/docs/blob/main/markdown/FRMR.FRD.fedramp-definitions.md#frd-all-02). \r\n- machine-based and non-machine-based are not formally defined because they are (in theory) plain language and shouldn't need a specific definition in the FedRAMP context\r\n\r\n> what is the thinking behind this requirement? AOs, to my knowledge, rely on an Assessor's recommendation as evidence that the Assessor finds things in generally good order. \r\n\r\nNote this standard applies **only** to 20x and will not apply to Rev5, so it doesn't change the role of the assessor in the traditional process. We don't feel the need to change this for Rev5 as at least initial assessments will halt for Rev5 within the next year or two and it would take that long to change direction.\r\n\r\nFor the 20x process, we want to be clear and explicit that the role of the assessor is not to determine if something meets FedRAMP requirements and should receive an authorization; their role is to ensure that FedRAMP has sufficient accurate and confirmed information to make the authorization determination. This is because both the FedRAMP Authorization Act and M-24-15 require FedRAMP itself to perform the final assessment and make that determination (especially for program authorizations).\r\n\r\n> Is the intent to phase this out and change the role of assessor as a pure 3rd party review without comment?\r\n\r\nWe expect the assessor to \"analyze, validate, and attest to the quality and compliance of security assessment materials provided by cloud service providers\" (44 USC § 3611) - including comments on that; but we do not want them to make an overall \"this passes FedRAMP requirements\" type of recommendation as FedRAMP must determine that itself.\r\n\r\nA benefit of this is that it removes the extremely common complaint from CSPs that 3PAOs hold them hostage over a final recommendation while also addressing the opposite-side complaint from 3PAOs that it hurts their business to fail a CSP. \r\n\r\nIt also allows us to open up dialogue between the 3PAO and CSP because there is less of a potential conflict of interest if the 3PAO is not making what appears to be a final determination about the CSPs security posture."
+        },
+        {
+          "id": "DC_kwDOOxfoic4A4Pam",
+          "url": "https://github.com/FedRAMP/community/discussions/85#discussioncomment-14743206",
+          "author": "wisecryptic",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-10-21T18:02:02Z",
+          "updated_at": "2025-10-21T18:02:03Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "That makes a LOT of sense."
+        }
+      ],
+      "replies_total": 2,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A4P3F",
+      "url": "https://github.com/FedRAMP/community/discussions/85#discussioncomment-14745029",
+      "author": "wisecryptic",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2025-10-21T22:46:07Z",
+      "updated_at": "2025-10-21T22:46:08Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "in the RFC-0016 comments, https://github.com/FedRAMP/community/discussions/87, someone commented that FedRAMP would make the 20x authorizations and be the ultimate authorizing entity. I believe this is framed wrong. My understanding is that FedRAMP would list CSPs with no initial agency as authorized, but that each agency still need to issue an ATO and, even with the presumption of adequacy, need to continually review and approve use.\r\n\r\nis there a clarifying document on this?",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A4RgD",
+          "url": "https://github.com/FedRAMP/community/discussions/85#discussioncomment-14751747",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2025-10-22T13:59:11Z",
+          "updated_at": "2025-10-22T13:59:12Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> in the RFC-0016 comments, #87, someone commented that FedRAMP would make the 20x authorizations and be the ultimate authorizing entity. I believe this is framed wrong. My understanding is that FedRAMP would list CSPs with no initial agency as authorized, but that each agency still need to issue an ATO and, even with the presumption of adequacy, need to continually review and approve use.\r\n> \r\n> is there a clarifying document on this?\r\n\r\n**tl;dr:** \"FedRAMP authorization\" != \"Authorization to Operate\" - there is absolutely no such thing as a \"FedRAMP ATO\" and never will be.\r\n\r\nIt's such a complicated thing to explain and goes against so much historical understanding and many years of people having silly dreams about a world where a centralized FedRAMP would just do \"all the things\" on behalf of the federal government... The nutshell is that a FedRAMP authorization is (and always has been) an assurance that there's a package available for an agency to use, and that federal agencies do (and always have had) have the responsibility to ATO their own systems based on the materials in those packages. \r\n\r\nThere is a common misunderstanding about things like a \"FedRAMP ATO\" resulting from the unfortunate plain-language use of the word `authorization` regarding FedRAMP assessments vs the formal term `Authorization to Operate` defined in the A-130 and various NIST materials, combined with the original FedRAMP concept of a \"JAB P-ATO\" wherein a group of authorizing officials **did** perform an ATO on a cloud service **but only for themselves.** That's all gone now so it doesn't much matter:\r\n\r\n- 44 USC § 3608 establishes FedRAMP to provide \"a standardized, resuable approach to security assessment and authorization for cloud computing products and services...\" FedRAMP is charged, similar to NIST, with the developing a process to be used by agencies; it is **not** granted authority to accept risk (or other responsibilities under 44 USC § 35) on behalf of agencies.\r\n\r\n- 44 USC § 3607 (b) (7) defines `FedRAMP Authorization` as a \"**certification** that a cloud computing product or service has-- (A) completed a FedRAMP authorization process, as determined by the Administrator; or (B) received a FedRAMP provisional authorization to operate, as determined by the FedRAMP Board\"\r\n\r\n  - The second definition there, (B), does not apply under current policy - M-24-15's Section IV on The FedRAMP Authorization Process explains in section (d) that \"the FedRAMP Board engages with the FedRAMP PMO and its processes as a whole and is not expected to participate in the approval of individual authorization packages.\"\r\n\r\n- OMB's A-130 defines `Authorization to Operate` as \"the official management decision given by a senior Federal official or officials to authorize operation of an information system and to **explicitly accept the risk to agency operations** (including mission, functions, image, or reputation), agency assets, individuals, other organizations, and the Nation based on the implementation of an agreed-upon set of security and privacy controls\" \r\n\r\n- Nothing in the FedRAMP Authorization Act (44 USC § 3607-3616) or OMB Memorandum M-24-15 grants FedRAMP any authority or ability to accept the risk to agency operations on behalf of a senior official of that agency. FedRAMP simply provides the process for them to follow. (it's my personal opinion that it would be absolutely insane to even consider the idea of FedRAMP actually accepting this risk on behalf of all agencies - it would be the most effective way to ensure the FedRAMP process is entirely impossible because no sane individual will accept risk on behalf of the entire government)\r\n\r\n- 44 USC § 3613, reinforced by guidance in M-24-15, requires agencies to use the reusable approach built by FedRAMP (including supporting policies/etc.) in the use of cloud computing products and services. This exists in the same body of law and policy as FISMA/etc. and is equally applicable, meaning FedRAMP determines how agency should best manage cloud computing products and services in a way that supersedes (but must be consistent with) NIST guidelines.\r\n\r\nWhat does this all mean?\r\n\r\n1. FedRAMP determines how cloud services will be Authorized to Operate by the government and is expected to provide an initial assessment of all cloud services along with continuous monitoring procedures (and many other things) to be used by agencies in making a determination about how they will operate a cloud service. This is a `FedRAMP authorization.`. **This is not an Authorization to Operate (ATO).** FedRAMP is not responsible for operating any cloud service.\r\n\r\n2. Agencies reusing FedRAMP materials in their use of a cloud service, creating an agency information system that leverages those materials. Agencies are expected by law and policy to follow the RMF process to properly implement such an information system, including providing an Authorization to Operate. Notably, agencies can only provide an Authorization to Operate for an information system that is operated by or on behalf of the agency, and cannot do so for a commercial cloud service directly - instead the agency must leverage that commercial cloud service as a dependent part of an agency ATO for their use of the service. Each agency has a legal and policy-based responsibility to ensure their particular use of a cloud service is secure based on their specific information needs.\r\n\r\nThere's a ton of nuance here that most people don't follow and aren't able to follow because the interactions between these new laws and policies and old laws and policies are quite complicated. FedRAMP is working with OMB, the Board, and many various councils to help produce more clear materials to help agencies understand that changes to laws and policies mean that...  things change.\r\n\r\n**Providing formal explanations of all of this is on the to-do list.** It's complicated though, especially by all the slop out there.\r\n"
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "ChanceofClouds",
+    "Rene2mt",
+    "TM-Microsoft",
+    "ethanolivertroy",
+    "fortetroy",
+    "iteuscher",
+    "jdettweiler",
+    "kcarr91",
+    "mjprager",
+    "nicole-gov",
+    "pete-gov",
+    "tnnrjmsn-eit",
+    "wisecryptic",
+    "yungcero"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/85#discussioncomment-14378369",
+      "author": "pete-gov",
+      "created_at": "2025-09-11T21:21:54Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/85#discussioncomment-14481080",
+      "author": "pete-gov",
+      "created_at": "2025-09-22T21:59:12Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/85#discussioncomment-14387423",
+      "author": "pete-gov",
+      "created_at": "2025-09-12T18:58:49Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/85#discussioncomment-14416008",
+      "author": "pete-gov",
+      "created_at": "2025-09-16T13:27:51Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/85#discussioncomment-14429427",
+      "author": "pete-gov",
+      "created_at": "2025-09-17T13:54:51Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/85#discussioncomment-14470333",
+      "author": "pete-gov",
+      "created_at": "2025-09-21T20:52:39Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/85#discussioncomment-14544176",
+      "author": "pete-gov",
+      "created_at": "2025-09-29T16:47:29Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/85#discussioncomment-14481096",
+      "author": "pete-gov",
+      "created_at": "2025-09-22T22:03:31Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/85#discussioncomment-14556757",
+      "author": "nicole-gov",
+      "created_at": "2025-09-30T20:56:57Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/85#discussioncomment-14563821",
+      "author": "pete-gov",
+      "created_at": "2025-10-01T13:50:41Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/85#discussioncomment-14564266",
+      "author": "pete-gov",
+      "created_at": "2025-10-01T14:39:32Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/85#discussioncomment-14565020",
+      "author": "pete-gov",
+      "created_at": "2025-10-01T15:50:25Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/85#discussioncomment-14565804",
+      "author": "pete-gov",
+      "created_at": "2025-10-01T17:25:17Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/85#discussioncomment-14639598",
+      "author": "pete-gov",
+      "created_at": "2025-10-09T17:24:32Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/85#discussioncomment-14751747",
+      "author": "pete-gov",
+      "created_at": "2025-10-22T13:59:11Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [
+      "FRD-ALL-02",
+      "FRR-FRD-18",
+      "FRR-PVA-01",
+      "FRR-PVA-AA-10",
+      "FRR-PVA-TF-MO",
+      "KSI-CED-01",
+      "KSI-CED-03",
+      "KSI-CMT-01",
+      "KSI-CMT-03",
+      "KSI-CMT-04",
+      "KSI-CNA-01",
+      "KSI-CNA-02",
+      "KSI-CNA-03",
+      "KSI-CNA-05",
+      "KSI-CNA-08",
+      "KSI-IAM-04",
+      "KSI-IAM-05",
+      "KSI-IAM-07",
+      "KSI-INR-01",
+      "KSI-MLA-03",
+      "KSI-MLA-08",
+      "KSI-PIY-01",
+      "KSI-PIY-06",
+      "KSI-SVC-01",
+      "KSI-SVC-03",
+      "KSI-SVC-04",
+      "KSI-SVC-05",
+      "KSI-SVC-08",
+      "KSI-SVC-09",
+      "KSI-SVC-10",
+      "KSI-TPR-01"
+    ],
+    "rfc_ids": [
+      "RFC-0014",
+      "RFC-0015",
+      "RFC-0016",
+      "RFC-0017",
+      "RFC-0018"
+    ],
+    "nist_controls": [
+      "AT-2",
+      "CA-2",
+      "CA-7",
+      "CM-3",
+      "CM-4",
+      "PS-3",
+      "SI-11",
+      "SI-2"
+    ],
+    "discussion_refs": [
+      83,
+      84,
+      87,
+      88,
+      92
+    ],
+    "urls": [
+      "https://fedramp.gov/ai",
+      "https://github.com/FedRAMP/community/discussions/83",
+      "https://github.com/FedRAMP/community/discussions/83#discussioncomment-14408779",
+      "https://github.com/FedRAMP/community/discussions/84",
+      "https://github.com/FedRAMP/community/discussions/87",
+      "https://github.com/FedRAMP/community/discussions/87,",
+      "https://github.com/FedRAMP/community/discussions/88",
+      "https://github.com/FedRAMP/community/discussions/92",
+      "https://github.com/FedRAMP/docs/blob/main/markdown/FRMR.FRD.fedramp-definitions.md",
+      "https://github.com/FedRAMP/docs/blob/main/markdown/FRMR.FRD.fedramp-definitions.md#frd-all-02",
+      "https://github.com/FedRAMP/docs/blob/main/markdown/FRMR.FRD.fedramp-definitions.md#frd-all-07",
+      "https://github.com/FedRAMP/docs/blob/main/markdown/FRMR.FRD.fedramp-definitions.md#frd-all-18",
+      "https://github.com/FedRAMP/docs/blob/main/markdown/FRMR.FRD.fedramp-definitions.md#frd-all-38",
+      "https://github.com/FedRAMP/docs/blob/main/markdown/FRMR.VDR.vulnerability-detection-and-response.md",
+      "https://github.com/user-attachments/assets/9c1c0ce1-6134-4fe5-9529-eb7779edaf64"
+    ],
+    "topics": [
+      "20x",
+      "3pao",
+      "conmon",
+      "crypto_fips",
+      "ksi",
+      "machine_readable",
+      "marketplace",
+      "rev5",
+      "vulnerability_mgmt"
+    ]
+  },
+  "content_hash": "9d097b1361176ab3a13278bb3fbac62a611fc678afb37541a399ab1c6bfbd6f4",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

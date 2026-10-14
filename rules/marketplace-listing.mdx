@@ -1,0 +1,127 @@
+---
+title: "Marketplace listing"
+description: "What you must publish and submit to get your cloud service offering, assessment service or advisory service listed in the FedRAMP Marketplace."
+sidebarTitle: "MKT: Marketplace listing"
+---
+
+<Info>
+  **Official source:** [Marketplace Listing](https://www.fedramp.gov/2026/reference/marketplace-listing/) (`MKT`), FedRAMP Consolidated Rules release `2026.10.14.01`. This page is a plain-English summary. The official rule text governs.
+</Info>
+
+## In short
+
+Every cloud service provider needs a FedRAMP Marketplace listing in the Initial Implementation Phase before it can apply for FedRAMP Certification. To get one, you publish required public information, request the listing through the official form (not email), and show your offering is meant for direct or indirect agency use. Once listed, you must publish progress at least quarterly and schedule a Class B, C or D assessment within 2 years, or FedRAMP removes the listing. Assessors and advisors have their own, shorter listing rules.
+
+## Who it applies to
+
+| Subset | Type | Path | Class | Audience |
+| --- | --- | --- | --- | --- |
+| FedRAMP Responsibilities (`MKT-FRP`) | 20x, Rev5 | Program, Agency | A, B, C, D | FedRAMP |
+| General Provider Responsibilities (`MKT-CSO`) | 20x, Rev5 | Program, Agency | A, B, C, D | Providers |
+| General Assessor Responsibilities (`MKT-IAS`) | Not specified | Not specified | Not specified | Assessors |
+| General Advisor Responsibilities (`MKT-CAS`) | Not specified | Not specified | Not specified | Advisors |
+| Provider Responsibilities for Initial Implementation Phase Listings (`MKT-IIP`) | 20x, Rev5 | Program, Agency | Not specified | Providers |
+
+Upstream says all cloud service providers must get an Initial Implementation Phase listing before they can apply for FedRAMP Certification. `FRC-APP-MLF` makes this a MUST (see [FedRAMP certification](/rules/fedramp-certification)).
+
+## Key dates
+
+The ruleset has one "Effective Date(s)" block for both 20x and Rev5:
+
+| Milestone | 20x and Rev5 |
+| --- | --- |
+| Status | Required (Consolidated Rules for 2026) |
+| Optional adoption allowed | 2026-07-04 |
+| Obtaining initial certification | 2026-07-04 |
+| Maintaining ongoing certification | 2026-07-04 |
+| Grace period ends | 2026-07-04 |
+
+There's no grace period beyond 2026-07-04. The same dates appear in the [20x](https://www.fedramp.gov/2026/providers/updating/deadlines/20x/) and [Rev5](https://www.fedramp.gov/2026/providers/updating/deadlines/rev5/) deadline tables.
+
+## What you need to do
+
+### FedRAMP responsibilities (`MKT-FRP`)
+
+This rule binds FedRAMP, not you, but it decides whether your offering can be listed at all.
+
+| Rule | Force | What it means for you |
+| --- | --- | --- |
+| [`MKT-FRP-SOF`](https://www.fedramp.gov/2026/reference/marketplace-listing/#scope-of-fedramp) | MUST NOT | FedRAMP won't list your offering or do any certification work unless it decides the offering is within the [scope of FedRAMP](https://fedramp.gov/scope). |
+
+### General provider responsibilities (`MKT-CSO`)
+
+| Rule | Force | What it means for you |
+| --- | --- | --- |
+| [`MKT-CSO-MLR`](https://www.fedramp.gov/2026/reference/marketplace-listing/#marketplace-listing-requirements) | MUST | To apply for a new listing or update an existing one, address at least `CDS-CSO-PUB` (Public Information). See [Certification data sharing](/rules/certification-data-sharing). |
+| [`MKT-CSO-PML`](https://www.fedramp.gov/2026/reference/marketplace-listing/#provider-marketplace-listing-requests) | MUST | Request your listing through the [FedRAMP Marketplace Provider Listing Request Form](https://help.fedramp.gov/hc/en-us/requests/new?ticket_form_id=50939227168027). FedRAMP doesn't accept listing applications by email. |
+
+### Initial Implementation Phase listings (`MKT-IIP`)
+
+For providers actively preparing for FedRAMP Certification.
+
+| Rule | Force | What it means for you |
+| --- | --- | --- |
+| [`MKT-IIP-AGU`](https://www.fedramp.gov/2026/reference/marketplace-listing/#agency-use-cases) | MUST | Show the offering is intended for direct use (agencies use it in a federal information system under 44 USC § 3506, with an agency ATO) or indirect use (it's a [third-party information resource](https://www.fedramp.gov/2026/definitions/#third-party-information-resource) inside other offerings that agencies use). |
+| [`MKT-IIP-DCP`](https://www.fedramp.gov/2026/reference/marketplace-listing/#demonstrating-continuous-progress) | MUST | Show continuous progress toward certification in your [Trust Center](https://www.fedramp.gov/2026/definitions/#trust-center) or website, updated at least quarterly, measured against your own documented goals and milestones. |
+| [`MKT-IIP-DLA`](https://www.fedramp.gov/2026/reference/marketplace-listing/#deadline-for-assessment) | MUST | Within 2 years of your initial listing, show that a Class B, C or D assessment is scheduled. If you don't, FedRAMP removes the listing until you provide evidence of a scheduled assessment. |
+
+<Note>
+  The upstream notes on `MKT-IIP-AGU` say FedRAMP won't list products outside its statutory scope. Services that private companies use only to meet other compliance requirements, such as CMMC, are out of scope unless they also meet a direct or indirect agency use case. The note on `MKT-IIP-DCP` says to treat progress reporting as "a marketing and customer experience challenge instead of a compliance challenge."
+</Note>
+
+### Assessor responsibilities (`MKT-IAS`)
+
+For independent assessment services that want a listing.
+
+| Rule | Force | What it means for you |
+| --- | --- | --- |
+| [`MKT-IAS-OFR`](https://www.fedramp.gov/2026/reference/marketplace-listing/#only-fedramp-recognized-assessors) | MUST | Obtain and keep FedRAMP Recognition to be listed. See [FedRAMP recognition](/rules/fedramp-recognition). |
+| [`MKT-IAS-WEB`](https://www.fedramp.gov/2026/reference/marketplace-listing/#website-requirements-for-assessors) | MUST | Publish a website with, in human-readable and JSON formats: a general description of the service, contact information, the types of independent services offered, and optionally customer attestations or references. The related schema is the [FedRAMP Assessor Information Schema](https://fedramp.gov/schemas/fedramp-assessor-information-schema-2026-06-24.json). |
+| [`MKT-IAS-LRQ`](https://www.fedramp.gov/2026/reference/marketplace-listing/#listing-requests-for-assessors) | MUST | Request a listing through the [\[For Assessors\] Marketplace Listing Request Form](https://help.fedramp.gov/hc/en-us/requests/new?ticket_form_id=54220455254427). |
+
+### Advisor responsibilities (`MKT-CAS`)
+
+For consulting and advisory services that want a listing.
+
+| Rule | Force | What it means for you |
+| --- | --- | --- |
+| [`MKT-CAS-WEB`](https://www.fedramp.gov/2026/reference/marketplace-listing/#website-requirements-for-advisors) | MUST | Publish a website with, in consistent machine-readable and human-readable formats: a general description of the service, contact information, the types of services offered, and optionally customer attestations or references. The related schema is the [FedRAMP Advisory Service Information Schema](https://fedramp.gov/schemas/fedramp-advisor-information-schema-2026-06-24.json). |
+| [`MKT-CAS-LRQ`](https://www.fedramp.gov/2026/reference/marketplace-listing/#listing-requests-for-advisors) | MUST | Request a listing through the [\[For Advisors\] Marketplace Listing Request Form](https://help.fedramp.gov/hc/en-us/requests/new?ticket_form_id=52060327520795). |
+| [`MKT-CAS-RFR`](https://www.fedramp.gov/2026/reference/marketplace-listing/#advisor-responses-to-fedramp) | MUST | Reply within 5 business days to every request from an `@fedramp.gov` or `@gsa.gov` address sent to your listed contact. |
+
+<Warning>
+  **Corrective actions for `MKT-CAS-RFR`.** If an advisor misses the 5-business-day window, FedRAMP sends a follow-up. If the advisor misses that too, FedRAMP removes the listing. A removed advisor can't be listed again for at least 6 months unless there are extenuating circumstances.
+</Warning>
+
+## What FedRAMP staff have said
+
+Staff answers explain how FedRAMP applies the rules. They don't change the published text, which governs.
+
+<Note>
+  **What an Initial Implementation listing needs.** You don't need a full FedRAMP-compatible Trust Center to be listed. `MKT-CSO-MLR` brings in `CDS-CSO-PUB`, so the available public information must be shared in human-readable and JSON formats, though much of it won't yet be "available" or "applicable" at this stage. `MKT-CSO-PML` requires the form. `MKT-IIP-AGU`, `MKT-IIP-DCP` and `MKT-IIP-DLA` must be available in some fashion. A public FedRAMP landing page with all of that information counts as "a basic FedRAMP-compatible Trust Center" (pete-gov, 2026-09-02, [discussion #147](https://github.com/FedRAMP/community/discussions/147#discussioncomment-18255553)).
+</Note>
+
+<Note>
+  **Showing agency use (`MKT-IIP-AGU`).** The evidence is about what your product is designed to do, not what agencies say. It comes from your business as an attestation, not from an agency, so "Don't make false claims!" For indirect use, the simplest proof is to show which FedRAMP Certified offerings use your product. Commercial and government customers can use the same offering. You must provide this when you request the listing (pete-gov, 2026-10-13, [discussion #178](https://github.com/FedRAMP/community/discussions/178#discussioncomment-18903470)). In the same answer, staff called bundling several applications into one boundary to stretch a single use case against the principles of the minimum assessment scope, while noting that isn't an explicit rule.
+</Note>
+
+<Note>
+  **Features versus separate offerings.** A standalone product with its own team, assurance support and Certification Package is a separate cloud service offering with its own listing. A feature or capability without a standalone package, continuous monitoring or sales pipeline is part of the parent offering and is listed as a service within the parent listing. All FedRAMP requirements must be met to keep a listing (pete-gov, 2026-09-09, [discussion #147](https://github.com/FedRAMP/community/discussions/147#discussioncomment-18369926)).
+</Note>
+
+<Note>
+  **Listing data must be web-readable.** Strict web interoperability (CORS and a correct content type) applies to the public JSON needed for a Marketplace listing: "if your Marketplace data isn't compatible with basic web interoperability standards then we can't use it" (pete-gov, 2026-09-17, [discussion #175](https://github.com/FedRAMP/community/discussions/175#discussioncomment-18482587)). This is now written into `FRC-CSO-JSN`.
+</Note>
+
+<Note>
+  **FedRAMP Ready and Initial Implementation.** Legacy Ready status expires 365 days after it's granted by default. For offerings that apply for the limited Ready (RAR) conversion, FedRAMP decides with the provider whether to switch to Initial Implementation after kick-off or at day 366. Once the package is submitted, the offering moves to FedRAMP In Process status (paulagosta, 2026-08-12, [discussion #159](https://github.com/FedRAMP/community/discussions/159#discussioncomment-17993470)).
+</Note>
+
+## Related
+
+- [FedRAMP certification](/rules/fedramp-certification): `FRC-APP-MLF` requires this listing before you apply
+- [Certification data sharing](/rules/certification-data-sharing): `CDS-CSO-PUB` public information
+- [FedRAMP recognition](/rules/fedramp-recognition): recognition for listed assessors
+- [Minimum assessment scope](/rules/minimum-assessment-scope): what belongs in your offering
+- [20x CR26 questions](/discussions/20x-cr26-questions) and [Notable staff answers](/discussions/notable-staff-answers)
+- Official: [Important Deadlines](https://www.fedramp.gov/2026/providers/updating/deadlines/)

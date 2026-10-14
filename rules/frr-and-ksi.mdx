@@ -1,0 +1,124 @@
+---
+title: "FRR and KSI"
+description: "How the FedRAMP process rules (FRR) and the Key Security Indicators (KSI) differ, how they connect, and where Rev5 control guidance fits."
+sidebarTitle: "FRR and KSI"
+---
+
+<Info>
+  **Official source:** [Complete Ruleset Reference](https://www.fedramp.gov/2026/reference/complete-rulesets/), [Key Security Indicators](https://www.fedramp.gov/2026/reference/key-security-indicators/) and [Rev5 Control Guidance](https://www.fedramp.gov/2026/reference/rev5-control-guidance/), FedRAMP Consolidated Rules release `2026.10.14.01`. This page is a plain-English guide. The official text governs.
+</Info>
+
+## In short
+
+The FedRAMP Rules (FRR) tell each party **what to do and when**, with an explicit force (MUST, SHOULD or MAY) on every rule. The Key Security Indicators (KSI) describe **what security capabilities a 20x offering must show**. KSI statements carry no force keyword of their own. The FRR rules connect them: they make you summarize, automate, measure and independently assess each indicator.
+
+## The core distinction
+
+| | FedRAMP Rules (FRR) | Key Security Indicators (KSI) |
+| --- | --- | --- |
+| What it governs | Who must do what, and when | What security capability must exist |
+| Nature | Process and timing obligations | Capability and outcome statements |
+| Force | Explicit MUST, MUST NOT, SHOULD, SHOULD NOT or MAY on each rule | No force keyword in the statement |
+| Structure | 17 rulesets, then subsets, then 245 rules | 10 themes, then 46 indicators |
+| Applies to | 20x and Rev5, depending on the subset | 20x only |
+| Related NIST SP 800-53 controls | Listed on 35 rules | Listed on 45 of 46 indicators |
+
+**One-liner:** FRR tells you what to do and when, with the force of a rule. KSI tells you what a secure 20x offering looks like.
+
+## Who the FRR rules apply to
+
+By subset audience, the 245 FRR rules break down as:
+
+| Audience | Rules |
+| --- | --- |
+| Providers | 179 |
+| Agencies | 24 |
+| Assessors | 23 |
+| FedRAMP | 16 |
+| Advisors | 3 |
+
+This is overwhelmingly a provider rulebook. See [Rule summaries](/rules) for every ruleset.
+
+## The Key Security Indicator themes
+
+| Theme | Code | Indicators |
+| --- | --- | --- |
+| Cybersecurity Education | `CED` | 1 |
+| Change Management | `CMT` | 4 |
+| Cloud Native Architecture | `CNA` | 8 |
+| Identity and Access Management | `IAM` | 6 |
+| Incident Response | `INR` | 3 |
+| Monitoring, Logging, and Auditing | `MLA` | 5 |
+| Policy and Inventory | `PIY` | 5 |
+| Recovery Planning | `RPL` | 4 |
+| Supply Chain Risk | `SCR` | 2 |
+| Service Configuration | `SVC` | 8 |
+
+Indicator IDs follow `KSI-THEME-KEY`, such as `KSI-CED-RAT` (Reviewing All Training). See the [Key Security Indicators summary](/rules/key-security-indicators) for each one.
+
+### How indicators vary by class
+
+- **Class A** uses 7 indicators, the ones listed in [`FRC-CLA-MFR`](https://www.fedramp.gov/2026/reference/fedramp-certification/#mandatory-fedramp-rules-for-class-a): `KSI-CED-RAT`, `KSI-CMT-LMC`, `KSI-CNA-RNT`, `KSI-IAM-AAM`, `KSI-IAM-APM`, `KSI-INR-RIR` and `KSI-SVC-SIN`. The rule's note says you need these even if you plan to move to a Rev5 path later.
+- **Classes B and C** use all 46 indicators ([20x Ruleset Reference](https://www.fedramp.gov/2026/reference/20x/)).
+- **Five indicators are marked "Optional" for Class B** and stated without that label for Class C: `KSI-CNA-EIS` (Enforcing Intended State), `KSI-MLA-ALA` (Authorizing Log Access), `KSI-SVC-PRR` (Preventing Residual Risk), `KSI-SVC-RUD` (Removing Unwanted Data) and `KSI-SVC-VCM` (Validating Communications).
+- **Class D** isn't available for 20x yet. FedRAMP lists it as coming in 2027 ([Choosing a Certification Path](https://www.fedramp.gov/2026/providers/start/path/)).
+
+## How FRR and KSI connect
+
+### 1. FRR rules make the indicators enforceable
+
+Because KSI statements have no force of their own, the obligations come from FRR rules that name them:
+
+| Rule | Force | What it requires for indicators |
+| --- | --- | --- |
+| [`FRC-CLA-MFR`](https://www.fedramp.gov/2026/reference/fedramp-certification/#mandatory-fedramp-rules-for-class-a) | MUST | Class A: address 7 named indicators, with artifacts or an information mapping in the package. |
+| [`SDR-CSX-KSI`](https://www.fedramp.gov/2026/reference/security-decision-record/#key-security-indicators) | MUST | Summarize, verify and validate each applicable indicator in your Security Decision Record. |
+| [`SDR-CSX-KMT`](https://www.fedramp.gov/2026/reference/security-decision-record/#key-security-indicator-metrics) | A: MAY, B: SHOULD, C: MUST, D: MUST | Include historical metrics for each indicator. |
+| [`FRC-CSX-VVK`](https://www.fedramp.gov/2026/reference/fedramp-certification/#automated-verification-and-validation-of-key-security-indicators) | A: MAY, B: SHOULD, C: MUST, D: MUST | Automate verification and validation: at least 1, 2 or 4 automated methods per indicator for Classes B, C and D. |
+| [`FRC-CSX-MAS`](https://www.fedramp.gov/2026/reference/fedramp-certification/#application-within-mas) | SHOULD | Apply all indicators to everything in your Minimum Assessment Scope. |
+| [`IVV-CSX-AIA`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#annual-independent-assessments-for-20x) | MUST | Classes B to D: include all indicators in an independent assessment every year. Class A: meet your alternative framework's expectations. |
+| [`SCN-CSO-INF`](https://www.fedramp.gov/2026/reference/significant-change-notification/#required-information) | MUST | Every significant change notification includes the plan for verifying impacted indicators (or Rev5 controls). |
+
+### 2. Both now map to NIST SP 800-53
+
+- **KSI:** 45 of the 46 indicators list related SP 800-53 controls, covering 302 unique controls and enhancements across 16 families. The only indicator without a mapping is `KSI-PIY-RES` (Reviewing Executive Support).
+- **FRR:** 35 rules list related controls, covering 59 unique controls and enhancements. Most are in Vulnerability Detection and Response (10 rules), Incident Evaluation and Communication (4) and Vulnerability Evaluation and Reporting (4).
+- **These mappings changed recently.** The per-rule changelogs record control-mapping updates dated 2026-10-13 on all 35 mapped FRR rules and 40 indicators. The release notes for `2026.10.14.01` don't mention them, so check the per-rule changelog on the official page when you rely on a mapping.
+
+If your team thinks in controls, the indicators are still the main bridge: they carry far more mappings than the FRR rules.
+
+<Warning>
+  A control mapping is a pointer, not the requirement. The rule or indicator statement is what you must meet. A mapping doesn't prove that implementing the control satisfies the statement.
+</Warning>
+
+### 3. Shared definitions
+
+FRR rules and KSI statements both use [FedRAMP Definitions](https://www.fedramp.gov/2026/definitions/), such as "persistently", "information resource" and "machine-based information resources". A defined term has the same meaning in both, so read the definition before you interpret either.
+
+## Where Rev5 control guidance fits
+
+The [Rev5 Control Guidance](https://www.fedramp.gov/2026/reference/rev5-control-guidance/) collection (`CTL`) holds FedRAMP guidance and organization-assigned parameter values for NIST SP 800-53 Rev. 5 controls. Rev5 providers MUST follow it ([`FRC-CSF-FFG`](https://www.fedramp.gov/2026/reference/fedramp-certification/#follow-fedramp-rev5-controls-guidance)) and use it when assigning parameters ([`FRC-CSF-ACP`](https://www.fedramp.gov/2026/reference/fedramp-certification/#assign-control-parameters)).
+
+It's a partial guidance layer, not a full control catalog:
+
+- It has 79 entries across 14 control families.
+- Of the 302 controls the indicators reference, 70 have a guidance entry.
+- Three families that indicators reference have no guidance entries at all: AT (Awareness and Training), PL (Planning) and PM (Program Management).
+
+Your Rev5 baseline is set separately, by class, in [`FRC-CSF-BSL`](https://www.fedramp.gov/2026/reference/fedramp-certification/#fedramp-rev5-baselines): 155, 322 or 409 controls for Classes B, C and D.
+
+## Status and timing
+
+- Every FRR ruleset has the status Stable except Agency Use (`AGU`), which FedRAMP lists as Placeholder ([Complete Ruleset Reference](https://www.fedramp.gov/2026/reference/complete-rulesets/)).
+- "Is this in effect?" is a per-ruleset question. Each ruleset has its own optional adoption, obtaining, maintaining and grace dates, and they differ between 20x and Rev5. See [Key dates](/rules#key-dates).
+
+## A short way to explain it
+
+> FRR tells providers what to do and when, with the force of a rule. KSI describes what security capabilities a 20x offering must have. The indicators become obligations through FRR rules that require you to summarize them, automate their validation, report their metrics and have them independently assessed every year. Both now point to NIST SP 800-53 controls, with the indicators carrying most of the mappings.
+
+## Related
+
+- [Rule summaries: start here](/rules)
+- [Key Security Indicators](/rules/key-security-indicators)
+- [Provider deliverables](/rules/provider-deliverables)
+- [FedRAMP certification](/rules/fedramp-certification)

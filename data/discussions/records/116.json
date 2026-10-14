@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-116",
+  "node_id": "D_kwDOOxfoic4AjpRa",
+  "number": 116,
+  "title": "Corrective Action/Public Notification comments",
+  "url": "https://github.com/FedRAMP/community/discussions/116",
+  "category": "General RFC Discussion",
+  "category_slug": "general-rfc-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": true,
+  "author": "jsantore-cgc",
+  "author_is_official": false,
+  "created_at": "2026-01-14T16:30:01Z",
+  "updated_at": "2026-01-14T19:39:59Z",
+  "last_edited_at": "2026-01-14T19:39:59Z",
+  "closed": true,
+  "closed_at": "2026-01-14T19:39:02Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "**Please note:** To keep RFC-0019 - RFC-0024 in one place, [this comment was moved to the general discussion thread here](https://github.com/FedRAMP/community/discussions/115#discussioncomment-15499482). Apologies for any confusion.\r\n\r\n---\r\n\r\nLet's try this again.  After a wonderfully eloquent, convincing, and dare I say poetic discussion about this, my attempts to post failed, and all of that work went to /dev/null never to be seen again.  So I will try this again.\r\n\r\nWith many of the new RFCs, we see a lot of public notice of corrections.  I'm not sure philosophically I agree with this, but put that aside for a moment.  Any time there is a public punitive mechanism, there needs to be checks and balances, appeals, and other clearly defined processes to ensure fairness.\r\n\r\nThe 3PAO corrective action details are in the Performance Management section (pg 4) of the Obligations and Performance Guide:\r\nhttps://www.fedramp.gov/resources/documents/3PAO_Obligations_and_Performance_Standards.pdf\r\n\r\nThe CSP corrective action details are in the Continuous Monitoring Playbook\r\nhttps://www.fedramp.gov/docs/rev5/playbook/csp/continuous-monitoring/performance-management/#performance-management-for-ongoing-authorization\r\n\r\nIn both cases, there is an implied buffer before things are publicly posted:\r\nFor the 3PAO, it says this under Consultation (which is still, technically part of 'corrective \r\n\r\n>:A Consultation notice is sent from FedRAMP, to the 3PAO and CSP (for RAR\r\nsubmissions) or to the 3PAO, CSP, and initial authorizing agency (for initial\r\nauthorization and annual assessment package submissions), notifying the\r\n3PAO of specific deficiencies in their performance\r\n○ FedRAMP informs the 3PAO that their “Consultation” status will\r\n**not be reflected on their FedRAMP Marketplace page**\r\n○ FedRAMP will require a meeting with 3PAO representatives to\r\ndiscuss the specific deficiencies in the 3PAO’s performance\r\n**_(emphasis mine)_**\r\n\r\nFor the CSP, it starts with a Detailed Finding Review (DFR) prior to escalation to a CAP.\r\n\r\nMy concern is that starting with public notification/punitive measures acts to undermine good faith.  Different stakeholders, operating transparently and in good faith, can have valid disagreements which do need to be discussed and resolved, but we shouldn't immediately jump to a CAP/public shaming.  At least not initially.  That forces people to be adversarial from the start, inhibits transparency, and forces everyone to play defense.  I think we all agree that this is not in the best interest of our shared mission: securing and protecting government systems and data.\r\n\r\nUnfortunately, it didn't always play out that way historically.  There was no presumption of good faith, and disciplinary measures were often meted out unlaterally with no mechanism to appeal.  Thankfully, most of these typically got resolved with no harm and no foul, and did not (and should not) necessarily require public notification.  There are potentially large sums of money and contractual obligations at stake here, and so corrective actions should be tempered with an initial presumption of good faith, and have a process for review and appeal.  \r\n\r\nEven things we think are cut and dried aren't always.  Consider the the RFC for 'Recommended Secure Configuration' (which is required, not recommended, but whatever...)  Of those 10 standards, only two are technically 'MUST' but even there, there's room for interpretation and the guidance isn't always explicit.  Let's say I, as a CSP, work in good faith to meet all 10 standards and upon review, FedRAMP does not agree with my interpretation.  Again, I'm operating in good faith, transparently, and collaboratively.  If FedRAMP does not agree, it seems reasonable to assume the next step is a discussion, and a cure period before there is any formal corrective action.\r\n\r\nI agree, bad faith in our world is bad and should be punished harshly and swiftly.  Even still, though, there needs to be an adjudication of whether something was actually bad faith, and not just honest mistake.  \r\n\r\nAlso, the more I read some of the RFCs, the more 'corrective action will include...' type language which does not completely align with the 3PAO Obligations and Performance Guide and CSP Continuous Monitoring Playbook (e.g. unable to resubmit for X months or whatever).\r\n\r\nSince it looks like we're moving in the way of stricter corrective action and public notification, I think fairness and reasonableness requires both more clear definitions of these (perhaps an RFC itself?), as well as predefined mechanisms for appeal and review.   \r\n\r\n",
+  "comment_count": 1,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4A7IDd",
+      "url": "https://github.com/FedRAMP/community/discussions/116#discussioncomment-15499485",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2026-01-14T19:39:02Z",
+      "updated_at": "2026-01-14T19:39:02Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Hi @jsantore-cgc - I'm going to move this comment into the [General discussion and Q&A thread](https://github.com/FedRAMP/community/discussions/115) for these RFCs to keep things a bit organized, then close this post. I want to make sure everyone dropping into that thread gets to see this as well.\r\n\r\nNew post: https://github.com/FedRAMP/community/discussions/115#discussioncomment-15499482",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "jsantore-cgc",
+    "pete-gov"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/116#discussioncomment-15499485",
+      "author": "pete-gov",
+      "created_at": "2026-01-14T19:39:02Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [
+      "RFC-0019",
+      "RFC-0024"
+    ],
+    "nist_controls": [],
+    "discussion_refs": [
+      115
+    ],
+    "urls": [
+      "https://github.com/FedRAMP/community/discussions/115",
+      "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15499482",
+      "https://www.fedramp.gov/docs/rev5/playbook/csp/continuous-monitoring/performance-management/#performance-management-for-ongoing-authorization",
+      "https://www.fedramp.gov/resources/documents/3PAO_Obligations_and_Performance_Standards.pdf"
+    ],
+    "topics": [
+      "3pao",
+      "conmon",
+      "marketplace",
+      "rev5"
+    ]
+  },
+  "content_hash": "9be698a298d543c6f06c85228dfe152eb11631302c88c38d2f593dc16d6ef01b",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

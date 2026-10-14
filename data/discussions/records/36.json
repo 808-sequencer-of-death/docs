@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-36",
+  "node_id": "D_kwDOOxfoic4AgFbf",
+  "number": 36,
+  "title": "KSI Comparison Tool (draft KSIs -> new updated KSIs)",
+  "url": "https://github.com/FedRAMP/community/discussions/36",
+  "category": "20x Discussion",
+  "category_slug": "20x-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "iteuscher",
+  "author_is_official": false,
+  "created_at": "2025-06-03T19:15:59Z",
+  "updated_at": "2025-08-25T16:46:10Z",
+  "last_edited_at": null,
+  "closed": true,
+  "closed_at": "2025-08-25T16:46:10Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 3,
+  "body": "If it's useful to anyone transitioning work done for the old draft KSIs 25.04 (April, 2025) to the new version 25.05 (May, 2025) I put together a comparison of the changes made to the KSIs. Available as an interactive website [here](https://iteuscher.github.io/fedramp20x/KSI_comparison/KSI_comparison.html). Standalone HTML file can be downloaded [here](https://github.com/paramify/fedramp-20x-pilot/blob/main/KSI_comparison/KSI_comparison.html).\r\n\r\nor a spreadsheet... \r\n[ksi_comparison.csv](https://github.com/user-attachments/files/20579493/ksi_comparison.csv)\r\n\r\nThere are brief notes showing the changes made to the wording where applicable and mapping from the old KSI IDs to the new KSI IDs. Let me know if you have any questions or find changes that should be made.\r\n\r\nIn total here are the changes:\r\n    Modified: 30\r\n    Reordered: 2\r\n    Added: 6\r\n    Removed: 3\r\n    Same: 13\r\n\r\n![Screenshot 2025-06-03 at 12 35 07 PM](https://github.com/user-attachments/assets/a3ffa7a7-55d5-47ff-b1f8-f34dd4999031)\r\n\r\nI couldn't bring myself to only include the spreadsheet as it feels antithetical to the goals of 20x :) \r\n\r\n-- Isaac Teuscher (Paramify)",
+  "comment_count": 1,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4Ay9qd",
+      "url": "https://github.com/FedRAMP/community/discussions/36#discussioncomment-13359773",
+      "author": "Rene2mt",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2025-06-03T19:21:29Z",
+      "updated_at": "2025-06-03T19:21:30Z",
+      "upvotes": 2,
+      "minimized": false,
+      "body": "That's awesome @iteuscher 🙌🏾   Thanks for sharing",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "Rene2mt",
+    "iteuscher"
+  ],
+  "official_responses": [],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://github.com/paramify/fedramp-20x-pilot/blob/main/KSI_comparison/KSI_comparison.html",
+      "https://github.com/user-attachments/assets/a3ffa7a7-55d5-47ff-b1f8-f34dd4999031",
+      "https://github.com/user-attachments/files/20579493/ksi_comparison.csv",
+      "https://iteuscher.github.io/fedramp20x/KSI_comparison/KSI_comparison.html"
+    ],
+    "topics": [
+      "20x",
+      "ksi"
+    ]
+  },
+  "content_hash": "f45143d11bd0ed11792897a95c4735518ea0b8e5a3515bfb2d6114864bbf748f",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

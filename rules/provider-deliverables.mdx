@@ -1,0 +1,223 @@
+---
+title: "Provider deliverables"
+description: "Every FedRAMP rule that makes a provider produce a document, report, dataset, published data, form or notification, with its force and JSON schema."
+sidebarTitle: "Provider deliverables"
+---
+
+<Info>
+  **Official source:** [FedRAMP Complete Ruleset Reference](https://www.fedramp.gov/2026/reference/complete-rulesets/), FedRAMP Consolidated Rules release `2026.10.14.01`. This page is a plain-English index. The official rule text governs, so follow each link before you build anything.
+</Info>
+
+## In short
+
+Across the 245 rules in the Consolidated Rules, **72 rules make a provider produce something**: a document, report, dataset, published web data, form or notification with required content. Another 14 rules set deliverables for assessors, advisors, agencies and FedRAMP.
+
+- 61 of the 72 provider deliverables are MUST in at least one class.
+- 19 of them name a FedRAMP JSON schema. When a rule names a schema, your JSON MUST validate against it, and public JSON MUST work with standard web applications ([`FRC-CSO-JSN`](https://www.fedramp.gov/2026/reference/fedramp-certification/#fedramp-json-schemas)).
+- 24 rules notify someone through a specific channel, such as a FedRAMP form or `fedramp_security@fedramp.gov`. They're listed in [Notification channels](#notification-channels).
+
+## How this list was built
+
+- **Included:** a rule is listed when its statement (or a class-specific statement) requires you to create, supply, publish or maintain a defined output.
+- **Force:** a single value means the force is the same for every class. Otherwise each class is listed, for example "A: MAY, B: MUST, C: MUST, D: MUST". Rev5-only rules have no Class A.
+- **Deliverable column:** a short summary written for this site. The Rule, Force and Schema columns come straight from the upstream rule text.
+
+### What's not included, and why
+
+- **Process and behavior rules.** Examples: vulnerability detection and response (`VDR-CSO-DET`), vulnerability evaluation (`VER-EVA-ELX`, `VER-EVA-EIR`, `VER-EVA-EPA`), incident evaluation and rating (`IEC-CSO-EFR`, `IEC-CSO-EFI`) and change evaluation (`SCN-CSO-EVA`). The records they produce are captured by the reporting rules listed below.
+- **Capability and infrastructure rules.** Examples: the FedRAMP Security Inbox rules (`AFC-CSO-INB`), using a trust center (`CDS-CSO-UTC`) and the configuration comparison, export and API capabilities (`SCG-ENH-CMP`, `SCG-ENH-EXP`, `SCG-ENH-API`).
+- **Package maintenance cadence.** `CPO-CSX-CPM` and `CPO-CSF-CPM` set how often you refresh the package, not a new output. See [Certification package overview](/rules/certification-package-overview).
+- **Notifications without required content.** `AFC-CSO-NOC`, `CDS-UTC-AAD` and `FRC-CCL-DNP` require you to notify someone but don't specify the content. The first two have a named FedRAMP form, so they appear in [Notification channels](#notification-channels).
+- **Schema-tagged activities.** `CDS-CSO-UTC`, `IEC-CSO-EFI` and `SCN-CSO-EVA` name a JSON schema, but the rule is an activity. The schema shows where the result ends up (the package overview, incident reports and change notifications).
+- **Judgment calls.** `MAS-CSO-IIR` and `MAS-CSO-FLO` say "identify" and "document", but `CPO-CSO-OVR` pulls both into the package overview, so they're included. `MAS-CSO-MDI` (include metadata in scope) is a scoping rule, so it isn't.
+
+## Provider deliverables
+
+### Certification package: core documents
+
+| Rule | Name | Force | Deliverable | JSON schema |
+| --- | --- | --- | --- | --- |
+| [`FRC-CSO-PKG`](https://www.fedramp.gov/2026/reference/fedramp-certification/#fedramp-certification-package) | FedRAMP Certification Package | MUST | Complete package for initial certification: package overview, Security Decision Record information, and a real or example Ongoing Certification Report | Certification Package Overview |
+| [`CPO-CSO-OVR`](https://www.fedramp.gov/2026/reference/certification-package-overview/#overview-of-the-cloud-service-offering) | Overview of the Cloud Service Offering | MUST | Certification Package Overview in human-readable and JSON formats | Certification Package Overview |
+| [`CPO-CSO-MTD`](https://www.fedramp.gov/2026/reference/certification-package-overview/#certification-package-overview-metadata) | Certification Package Overview Metadata | MUST | Overview metadata: accountable official's name, title and contact details, version, date and time of last update, source of update | |
+| [`CPO-CSO-OSA`](https://www.fedramp.gov/2026/reference/certification-package-overview/#overall-summary-of-assessment-in-certification-package) | Overall Summary of Assessment in Certification Package | A: MAY, B: MUST, C: MUST, D: MUST | The assessor's overall assessment summary, included in the package overview | |
+| [`SDR-CSO-FRR`](https://www.fedramp.gov/2026/reference/security-decision-record/#fedramp-rules) | FedRAMP Rules | MUST | Security Decision Record in human-readable and JSON formats: explanation, verification, validation, independent verification and validation, responses and artifacts for each applicable rule | Security Decision Record |
+| [`SDR-CSO-MTD`](https://www.fedramp.gov/2026/reference/security-decision-record/#security-decision-record-metadata) | Security Decision Record Metadata | MUST | Record metadata: version, date and time of last update, source of update | |
+| [`SDR-CSX-KSI`](https://www.fedramp.gov/2026/reference/security-decision-record/#key-security-indicators) | Key Security Indicators | MUST | 20x: a summary for each applicable Key Security Indicator in the Security Decision Record | Security Decision Record |
+| [`SDR-CSX-KMT`](https://www.fedramp.gov/2026/reference/security-decision-record/#key-security-indicator-metrics) | Key Security Indicator Metrics | A: MAY, B: SHOULD, C: MUST, D: MUST | 20x: historical metrics in the Security Decision Record. B and C: 30-day and up-to-one-year summaries. C adds all daily data, including persistent validation status. D: requirements that significantly exceed lower classes, to be set during the 20x Phase 4 Pilot | Security Decision Record |
+| [`SDR-CSF-CTF`](https://www.fedramp.gov/2026/reference/security-decision-record/#rev5-controls) | Rev5 Controls | MUST | Rev5: a summary for each applicable control (parameters, implementation status, mechanisms, verification, validation, independent verification and validation) | |
+| [`FRC-CSF-BSL`](https://www.fedramp.gov/2026/reference/fedramp-certification/#fedramp-rev5-baselines) | FedRAMP Rev5 Baselines | B: MUST, C: MUST, D: MUST | Rev5: the Security Decision Record covers at least the class baseline (155, 322 or 409 controls for B, C or D) | |
+| [`FRC-CSF-ACP`](https://www.fedramp.gov/2026/reference/fedramp-certification/#assign-control-parameters) | Assign Control Parameters | MUST | Rev5: every organization-defined parameter assignment, documented in the Security Decision Record | |
+| [`FRC-CLA-MFR`](https://www.fedramp.gov/2026/reference/fedramp-certification/#mandatory-fedramp-rules-for-class-a) | Mandatory FedRAMP Rules for Class A | MUST | Class A: artifacts or an information mapping in the package for every mandatory Class A rule | |
+| [`FRC-CLA-EAM`](https://www.fedramp.gov/2026/reference/fedramp-certification/#external-assessment-materials) | External Assessment Materials | MUST | Class A: materials from your alternative framework. SOC 2 Type II: full report, bridge or gap letter, audit engagement documentation, schedule for the next report. FedRAMP Ready or GovRAMP: Readiness Assessment Report, Security Assessment Plan and other required materials | |
+| [`FRC-APP-FCP`](https://www.fedramp.gov/2026/reference/fedramp-certification/#fresh-fedramp-certification-package) | Fresh FedRAMP Certification Package | MUST | Initial package verified and validated by you within the previous 7 days | |
+| [`FRC-APP-FIA`](https://www.fedramp.gov/2026/reference/fedramp-certification/#fresh-independent-assessment) | Fresh Independent Assessment | A: MAY, B: MUST, C: MUST, D: MUST | Initial independent assessment by a FedRAMP Recognized assessor, completed within the previous 3 months | |
+| [`FRC-APP-AFC`](https://www.fedramp.gov/2026/reference/fedramp-certification/#applying-for-fedramp-certification_1) | Applying for FedRAMP Certification | MUST | FedRAMP Certification Application Form, completed in full | |
+
+### Certification package: scope, cryptography, policies, configuration and assessment evidence
+
+| Rule | Name | Force | Deliverable | JSON schema |
+| --- | --- | --- | --- | --- |
+| [`MAS-CSO-IIR`](https://www.fedramp.gov/2026/reference/minimum-assessment-scope/#identify-information-resources) | Identify Information Resources | MUST | The set of information resources in your cloud service offering | |
+| [`MAS-CSO-FLO`](https://www.fedramp.gov/2026/reference/minimum-assessment-scope/#information-flows-and-security-categories) | Information Flows and Security Categories | MUST | Documentation of information flows and security categories for all resources | |
+| [`MAS-CSO-TPR`](https://www.fedramp.gov/2026/reference/minimum-assessment-scope/#third-party-information-resources) | Third-Party Information Resources | MUST | For each third-party resource: usage and configuration, justification, mitigations, compensating controls | Certification Package Overview |
+| [`MAS-CSO-SUP`](https://www.fedramp.gov/2026/reference/minimum-assessment-scope/#supplemental-information) | Supplemental Information | MAY | Optional supplement about resources outside the offering, clearly marked and separated | |
+| [`CMU-CSO-CMD`](https://www.fedramp.gov/2026/reference/cryptographic-module-use/#cryptographic-module-documentation) | Cryptographic Module Documentation | MUST | The cryptographic modules used per service, including NIST CMVP validation status | |
+| [`CDS-CSO-IRP`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#include-relevant-policies) | Include Relevant Policies | MUST | All relevant policies and procedures, plus a human- and machine-readable index (name, file, summary, word count, version, last update, related practices) | |
+| [`SCG-CSO-RSC`](https://www.fedramp.gov/2026/reference/secure-configuration-guide/#recommended-secure-configuration) | Recommended Secure Configuration | MUST | Secure Configuration Guide: top-level administrative account instructions and security settings | Certification Package Overview |
+| [`SCG-CSO-AUP`](https://www.fedramp.gov/2026/reference/secure-configuration-guide/#use-instructions) | Use Instructions | MUST | Instructions in the package for getting and using the Secure Configuration Guide | |
+| [`SCG-CSO-PUB`](https://www.fedramp.gov/2026/reference/secure-configuration-guide/#public-secure-configuration-guidance) | Public Secure Configuration Guidance | SHOULD | A public version of the Secure Configuration Guide | |
+| [`SCG-ENH-MRG`](https://www.fedramp.gov/2026/reference/secure-configuration-guide/#machine-readable-guidance) | Machine-Readable Guidance | SHOULD | A machine-readable Secure Configuration Guide | |
+| [`SCG-ENH-VRH`](https://www.fedramp.gov/2026/reference/secure-configuration-guide/#versioning-and-release-history) | Versioning and Release History | SHOULD | Versioning and release history for recommended secure defaults | |
+| [`IVV-CSO-ICP`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#inclusion-in-certification-package) | Inclusion in Certification Package | MUST | Independent assessment results in the package, without inappropriate modification | |
+| [`IVV-CSO-SEI`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#supply-evidence-of-implementation) | Supply Evidence of Implementation | MUST | Evidence of implementation for assessors (the result of verification) | |
+| [`IVV-CSO-SEE`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#supply-evidence-of-effectiveness) | Supply Evidence of Effectiveness | MUST | Evidence of effectiveness for assessors (the result of validation) | |
+| [`IVV-CSO-DUS`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#document-use-of-representative-samples) | Document Use of Representative Samples | MUST | An explanation of any representative sampling | |
+| [`IVV-CSO-STE`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#supply-technical-explanations) | Supply Technical Explanations | SHOULD | Technical explanations and demonstrations for assessors | |
+
+### Public and trust center data
+
+| Rule | Name | Force | Deliverable | JSON schema |
+| --- | --- | --- | --- | --- |
+| [`CDS-CSO-PUB`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#public-information) | Public Information | MUST | Public offering information in human-readable and JSON formats (16 items, including FedRAMP ID, contacts, a browser-displayable logo image link, next report date and assessor) | Certification Package Overview |
+| [`CDS-CSO-SVC`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#public-service-list) | Public Service List | MUST | A public list of services and their security categories | Certification Package Overview |
+| [`CDS-CSO-FRC`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#fedramp-certification-reports) | FedRAMP Certification Reports | MUST | FedRAMP Certification Reports added to your certification data within 2 weeks of receipt | |
+| [`CDS-CSO-AVR`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#availability-reporting) | Availability Reporting | A: SHOULD, B: MUST, C: MUST, D: MUST | An availability web service: current status and at least the past 30 days, in human- and machine-readable formats, available even when the offering is down | |
+| [`CDS-CSO-HAD`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#historical-fedramp-certification-data) | Historical FedRAMP Certification Data | MUST | Snapshots of certification data aligned to each Ongoing Certification Report, kept for the life of the certification | |
+| [`CDS-CSO-PSM`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#per-service-certification-materials) | Per-Service Certification Materials | A: MAY, B: MAY, C: MAY, D: MUST | Per-service certification materials | |
+| [`CDS-TRC-PAC`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#programmatic-access) | Programmatic Access | MUST | Documented programmatic access to all certification data | |
+| [`CDS-TRC-AAI`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#agency-access-inventory) | Agency Access Inventory | MUST | Inventory and history of agency users and systems with access, available to FedRAMP on request | |
+| [`CDS-TRC-ACL`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#access-logging) | Access Logging | MUST | Access logs, with summaries kept for at least 6 months | |
+| [`CDS-CSF-TCM`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#trust-center-migration) | Trust Center Migration | MUST | Rev5: a migration notice to all necessary parties, and instructions in your USDA Connect folders for using the trust center | |
+| [`CCM-OCR-NRD`](https://www.fedramp.gov/2026/reference/collaborative-continuous-monitoring/#next-report-date) | Next Report Date | MUST | Target date of the next Ongoing Certification Report, with your public data | |
+| [`CCM-QTR-NRD`](https://www.fedramp.gov/2026/reference/collaborative-continuous-monitoring/#next-review-date) | Next Review Date | MUST | Target date of the next Quarterly Review, with your public data | |
+| [`MKT-IIP-DCP`](https://www.fedramp.gov/2026/reference/marketplace-listing/#demonstrating-continuous-progress) | Demonstrating Continuous Progress | MUST | Progress against your goals and milestones, in your trust center or website, updated at least quarterly | |
+| [`MKT-CSO-PML`](https://www.fedramp.gov/2026/reference/marketplace-listing/#provider-marketplace-listing-requests) | Provider Marketplace Listing Requests | MUST | The FedRAMP Marketplace listing request form | |
+
+### Continuous monitoring and vulnerability reports
+
+| Rule | Name | Force | Deliverable | JSON schema |
+| --- | --- | --- | --- | --- |
+| [`CCM-OCR-AVL`](https://www.fedramp.gov/2026/reference/collaborative-continuous-monitoring/#report-availability) | Report Availability | MUST | Ongoing Certification Report every 3 months, covering (if applicable) changes, planned changes, accepted vulnerabilities, transformative changes, updated recommendations, agencies using the product, reportable incidents (or an attestation of none) and lessons learned | Ongoing Certification Report |
+| [`CCM-OCR-AFS`](https://www.fedramp.gov/2026/reference/collaborative-continuous-monitoring/#anonymized-feedback-summary) | Anonymized Feedback Summary | MUST | An anonymized summary of feedback and questions on each Ongoing Certification Report | |
+| [`CCM-QTR-REG`](https://www.fedramp.gov/2026/reference/collaborative-continuous-monitoring/#meeting-registration-info) | Meeting Registration Info | MUST | A Quarterly Review registration link or calendar file | |
+| [`CCM-QTR-RTR`](https://www.fedramp.gov/2026/reference/collaborative-continuous-monitoring/#recordtranscribe-reviews) | Record/Transcribe Reviews | SHOULD | A Quarterly Review recording or transcript | |
+| [`VER-RPT-PER`](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#persistent-reporting) | Persistent Reporting | MUST | Persistent vulnerability detection and response reports covering all activity since the last report | Vulnerability Detail Report |
+| [`VER-RPT-VDT`](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#vulnerability-details) | Vulnerability Details | MUST | The required fields for each detected vulnerability in those reports | Vulnerability Detail Report |
+| [`VER-RPT-AVI`](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#accepted-vulnerability-info) | Accepted Vulnerability Info | MUST | The required fields for each accepted vulnerability in those reports | Accepted Vulnerability Info |
+| [`VER-TFR-MHR`](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#monthly-activity-report) | Monthly Activity Report | MUST | A human-readable vulnerability activity report, at least monthly | |
+| [`VER-TFR-MRH`](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#historical-activity) | Historical Activity | A: MAY, B: SHOULD, C: SHOULD, D: SHOULD | Recent historical vulnerability activity in JSON for automated retrieval, updated every month (A and B), 14 days (C) or 7 days (D) | Historical VER Activity |
+| [`VER-RPT-HLO`](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#high-level-overviews) | High-Level Overviews | SHOULD | High-level overviews of all detection activity, such as disclosure programs, bug bounties and penetration tests | |
+
+### Incident reports
+
+| Rule | Name | Force | Deliverable | JSON schema |
+| --- | --- | --- | --- | --- |
+| [`IEC-CSO-IIR`](https://www.fedramp.gov/2026/reference/incident-evaluation-and-communication/#initial-incident-report) | Initial Incident Report | A: SHOULD, B: MUST, C: MUST, D: MUST | Initial Incident Report with 8 listed items, due within PAIN-based timeframes that vary by class | Incident Report |
+| [`IEC-CSO-OIR`](https://www.fedramp.gov/2026/reference/incident-evaluation-and-communication/#ongoing-incident-reports) | Ongoing Incident Reports | A: SHOULD, B: MUST, C: MUST, D: MUST | Ongoing reports with updates plus incident activity, indicators of compromise, related CVEs, root cause and response activities | Incident Report |
+| [`IEC-CSO-FIR`](https://www.fedramp.gov/2026/reference/incident-evaluation-and-communication/#final-incident-report) | Final Incident Report | A: MUST, B: MUST, C: MUST, D: MUST | Final Incident Report once the incident is resolved and recovery is complete | Incident Report |
+
+### Significant change notifications
+
+| Rule | Name | Force | Deliverable | JSON schema |
+| --- | --- | --- | --- | --- |
+| [`SCN-CSO-INF`](https://www.fedramp.gov/2026/reference/significant-change-notification/#required-information) | Required Information | MUST | Notification content: 10 required items, including the impact analysis and the approver's name and title | Significant Change Notification |
+| [`SCN-CSO-HRM`](https://www.fedramp.gov/2026/reference/significant-change-notification/#human-and-machine-readable-notifications) | Human and Machine-Readable Notifications | MUST | All notifications and related audit records in human-readable and JSON formats | Significant Change Notification |
+| [`SCN-CSO-MAR`](https://www.fedramp.gov/2026/reference/significant-change-notification/#maintain-audit-records) | Maintain Audit Records | MUST | Auditable records of your change evaluations, available to FedRAMP on request | |
+| [`SCN-CSO-HIS`](https://www.fedramp.gov/2026/reference/significant-change-notification/#historical-notifications) | Historical Notifications | MUST | 12 months of notifications kept with your certification data | |
+| [`SCN-ADP-NTF`](https://www.fedramp.gov/2026/reference/significant-change-notification/#notification-requirements) | Notification Requirements | MUST | Adaptive change notice within 10 business days of finishing, with any new risks | |
+| [`SCN-TRF-NIP`](https://www.fedramp.gov/2026/reference/significant-change-notification/#notification-of-initial-plans) | Notification of Initial Plans | MUST | Transformative change: initial plans at least 30 business days before starting | |
+| [`SCN-TRF-NFP`](https://www.fedramp.gov/2026/reference/significant-change-notification/#notification-of-final-plans) | Notification of Final Plans | MUST | Transformative change: final plans at least 10 business days before starting | |
+| [`SCN-TRF-NAF`](https://www.fedramp.gov/2026/reference/significant-change-notification/#notification-after-finishing) | Notification After Finishing | MUST | Transformative change: notice within 5 business days after finishing | |
+| [`SCN-TRF-NAV`](https://www.fedramp.gov/2026/reference/significant-change-notification/#notification-after-verification) | Notification After Verification | MUST | Transformative change: notice within 5 business days after verification, with new risks and the security assessment report if applicable | |
+| [`SCN-TRF-UPD`](https://www.fedramp.gov/2026/reference/significant-change-notification/#update-documentation) | Update Documentation | MUST | Updated service documentation within 30 business days after finishing | |
+| [`SCN-TRF-TPR`](https://www.fedramp.gov/2026/reference/significant-change-notification/#third-party-review) | Third-Party Review | SHOULD | A third-party assessor's review of a planned transformative change, when human validation is needed | |
+| [`SCN-CSO-EMG`](https://www.fedramp.gov/2026/reference/significant-change-notification/#emergency-changes) | Emergency Changes | MAY | After an emergency change: all notification materials, supplied retroactively. The rule is MAY, but the follow-up steps inside it are MUST | |
+| [`SCN-CSO-NOM`](https://www.fedramp.gov/2026/reference/significant-change-notification/#notification-mechanisms) | Notification Mechanisms | MAY | Your notification mechanism, documented in the package | |
+
+## Deliverables for other parties
+
+### Assessors
+
+| Rule | Name | Force | Deliverable | JSON schema |
+| --- | --- | --- | --- | --- |
+| [`IVV-IAS-SUM`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#assessment-summary) | Assessment Summary | MUST | A summary of the assessment process and findings for each FedRAMP practice, for your Security Decision Record | |
+| [`IVV-IAS-OSA`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#overall-summary-of-assessment) | Overall Summary of Assessment | MUST | An overall summary of results, including failures and disputes, for your package overview | |
+| [`MKT-IAS-WEB`](https://www.fedramp.gov/2026/reference/marketplace-listing/#website-requirements-for-assessors) | Website Requirements for Assessors | MUST | A public website in human-readable and JSON formats | Assessor Information |
+| [`MKT-IAS-LRQ`](https://www.fedramp.gov/2026/reference/marketplace-listing/#listing-requests-for-assessors) | Listing Requests for Assessors | MUST | The Assessor Listing Request Form | |
+| [`REC-IAS-AFI`](https://www.fedramp.gov/2026/reference/fedramp-recognition/#annual-foreign-interest-reports) | Annual Foreign Interest Reports | MUST | An annual foreign interest report | |
+| [`REC-IAS-CFI`](https://www.fedramp.gov/2026/reference/fedramp-recognition/#changes-in-foreign-interest) | Changes in Foreign Interest | MUST | An updated foreign interest report within 48 hours of a change | |
+| [`REC-IAS-CAP`](https://www.fedramp.gov/2026/reference/fedramp-recognition/#corrective-action-plan) | Corrective Action Plan | MUST | A corrective action plan, when FedRAMP requires one | |
+
+### Advisors
+
+| Rule | Name | Force | Deliverable | JSON schema |
+| --- | --- | --- | --- | --- |
+| [`MKT-CAS-WEB`](https://www.fedramp.gov/2026/reference/marketplace-listing/#website-requirements-for-advisors) | Website Requirements for Advisors | MUST | A public website in consistent human- and machine-readable formats | Advisor Information |
+| [`MKT-CAS-LRQ`](https://www.fedramp.gov/2026/reference/marketplace-listing/#listing-requests-for-advisors) | Listing Requests for Advisors | MUST | The Advisor Listing Request Form | |
+
+### Agencies
+
+| Rule | Name | Force | Deliverable | JSON schema |
+| --- | --- | --- | --- | --- |
+| [`AGU-AGC-NAA`](https://www.fedramp.gov/2026/reference/agency-use/#notify-fedramp-after-authorization) | Notify FedRAMP After Authorization | MUST | A copy of the ATO letter plus the information on the Submit an ATO Letter form | |
+| [`AGU-AGC-AIP`](https://www.fedramp.gov/2026/reference/agency-use/#agency-internal-policies) | Agency Internal Policies | MUST | Agency-wide policy aligned with OMB M-24-15 | |
+| [`VER-AGM-MAP`](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#maintain-agency-plans-of-action-and-milestones) | Maintain Agency Plans of Action and Milestones | SHOULD | Agency Plans of Action and Milestones built from your vulnerability information, when relevant | |
+
+### FedRAMP
+
+| Rule | Name | Force | Deliverable | JSON schema |
+| --- | --- | --- | --- | --- |
+| [`AFC-FRP-PNT`](https://www.fedramp.gov/2026/reference/addressing-fedramp-communication/#public-notice-of-emergency-tests) | Public Notice of Emergency Tests | MUST | A public notice at least 10 business days before an Emergency Test | |
+| [`AFC-FRP-RPM`](https://www.fedramp.gov/2026/reference/addressing-fedramp-communication/#reaction-metrics) | Reaction Metrics | MAY | Public metrics on how fast providers act on elevated messages | |
+
+## Notification channels
+
+These rules carry an official "notification requirement" block that names where the notice goes.
+
+| Rule | Who notifies | Channel |
+| --- | --- | --- |
+| [`AFC-CSO-NOC`](https://www.fedramp.gov/2026/reference/addressing-fedramp-communication/#notification-of-changes) | Provider | FedRAMP form: [CSP] Notification of Changes |
+| [`CDS-UTC-AAD`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#agency-access-denial) | Provider | FedRAMP form: [CSP] Agency Access Denial |
+| [`CDS-CSF-TCM`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#trust-center-migration) | Provider (Rev5) | `info@fedramp.gov`, and each agency customer's security contact |
+| [`FRC-APP-AFC`](https://www.fedramp.gov/2026/reference/fedramp-certification/#applying-for-fedramp-certification_1) | Provider | FedRAMP form: [For CSPs] FedRAMP Certification Application Form |
+| [`MKT-CSO-PML`](https://www.fedramp.gov/2026/reference/marketplace-listing/#provider-marketplace-listing-requests) | Provider | FedRAMP form: FedRAMP Marketplace Provider Listing Request Form |
+| [`IEC-CSO-IIR`](https://www.fedramp.gov/2026/reference/incident-evaluation-and-communication/#initial-incident-report), [`IEC-CSO-OIR`](https://www.fedramp.gov/2026/reference/incident-evaluation-and-communication/#ongoing-incident-reports), [`IEC-CSO-FIR`](https://www.fedramp.gov/2026/reference/incident-evaluation-and-communication/#final-incident-report) | Provider | `fedramp_security@fedramp.gov`; each agency's incident reporting procedure; an update in your trust center (or USDA Connect) |
+| [`SCN-ADP-NTF`](https://www.fedramp.gov/2026/reference/significant-change-notification/#notification-requirements), [`SCN-TRF-NIP`](https://www.fedramp.gov/2026/reference/significant-change-notification/#notification-of-initial-plans), [`SCN-TRF-NFP`](https://www.fedramp.gov/2026/reference/significant-change-notification/#notification-of-final-plans), [`SCN-TRF-NAF`](https://www.fedramp.gov/2026/reference/significant-change-notification/#notification-after-finishing), [`SCN-TRF-NAV`](https://www.fedramp.gov/2026/reference/significant-change-notification/#notification-after-verification) | Provider | An update to your FedRAMP Certification Data for all necessary parties |
+| [`REC-IAS-AFI`](https://www.fedramp.gov/2026/reference/fedramp-recognition/#annual-foreign-interest-reports), [`REC-IAS-CFI`](https://www.fedramp.gov/2026/reference/fedramp-recognition/#changes-in-foreign-interest) | Assessor | FedRAMP form: Foreign Ownership, Control, or Influence Declaration Form |
+| [`MKT-IAS-LRQ`](https://www.fedramp.gov/2026/reference/marketplace-listing/#listing-requests-for-assessors) | Assessor | FedRAMP form: [For Assessors] Marketplace Listing Request Form |
+| [`MKT-CAS-LRQ`](https://www.fedramp.gov/2026/reference/marketplace-listing/#listing-requests-for-advisors) | Advisor | FedRAMP form: [For Advisors] Marketplace Listing Request Form |
+| [`AGU-AGC-NAA`](https://www.fedramp.gov/2026/reference/agency-use/#notify-fedramp-after-authorization) | Agency | FedRAMP form: Submit an ATO Letter |
+| [`AGU-AGC-NAI`](https://www.fedramp.gov/2026/reference/agency-use/#notify-additional-information-requests) | Agency | FedRAMP form for additional information or security requirement requests |
+| [`AGU-AGC-NAR`](https://www.fedramp.gov/2026/reference/agency-use/#no-additional-security-requirements), [`AGU-AGC-TPP`](https://www.fedramp.gov/2026/reference/agency-use/#no-certification-type-or-path-preferences) | Agency | `info@fedramp.gov` |
+| [`AGU-USE-NFC`](https://www.fedramp.gov/2026/reference/agency-use/#notify-fedramp-of-monitoring-concerns) | Agency | FedRAMP form: Report Concerns on Ongoing Certifications |
+| [`AGU-USE-NPC`](https://www.fedramp.gov/2026/reference/agency-use/#notify-provider-of-concerns) | Agency | The provider's security contact |
+| [`AFC-FRP-PNT`](https://www.fedramp.gov/2026/reference/addressing-fedramp-communication/#public-notice-of-emergency-tests) | FedRAMP | [FedRAMP Public Notices](https://www.fedramp.gov/notices) |
+
+The forms themselves are linked from each rule on the official pages and from [FedRAMP Help](https://help.fedramp.gov).
+
+## FedRAMP JSON schemas named in the rules
+
+Every schema is published at `https://fedramp.gov/schemas/fedramp-NAME-schema-2026-06-24.json`.
+
+| Schema | Rules that name it |
+| --- | --- |
+| [Certification Package Overview](https://fedramp.gov/schemas/fedramp-certification-package-overview-schema-2026-06-24.json) | `FRC-CSO-PKG`, `CPO-CSO-OVR`, `CDS-CSO-PUB`, `CDS-CSO-SVC`, `CDS-CSO-UTC`, `MAS-CSO-TPR`, `SCG-CSO-RSC` |
+| [Security Decision Record](https://fedramp.gov/schemas/fedramp-security-decision-record-schema-2026-06-24.json) | `SDR-CSO-FRR`, `SDR-CSX-KSI`, `SDR-CSX-KMT` |
+| [Ongoing Certification Report](https://fedramp.gov/schemas/fedramp-ongoing-certification-report-schema-2026-06-24.json) | `CCM-OCR-AVL` |
+| [Incident Report](https://fedramp.gov/schemas/fedramp-incident-report-schema-2026-06-24.json) | `IEC-CSO-IIR`, `IEC-CSO-OIR`, `IEC-CSO-FIR`, `IEC-CSO-EFI` |
+| [Significant Change Notifications](https://fedramp.gov/schemas/fedramp-significant-change-notifications-schema-2026-06-24.json) | `SCN-CSO-EVA`, `SCN-CSO-INF`, `SCN-CSO-HRM` |
+| [Vulnerability Detail Report](https://fedramp.gov/schemas/fedramp-vulnerability-detail-report-schema-2026-06-24.json) | `VER-RPT-PER`, `VER-RPT-VDT` |
+| [Accepted Vulnerability Info](https://fedramp.gov/schemas/fedramp-accepted-vulnerability-info-schema-2026-06-24.json) | `VER-RPT-AVI` |
+| [Historical VER Activity](https://fedramp.gov/schemas/fedramp-historical-ver-activity-schema-2026-06-24.json) | `VER-TFR-MRH` |
+| [Assessor Information](https://fedramp.gov/schemas/fedramp-assessor-information-schema-2026-06-24.json) | `MKT-IAS-WEB` |
+| [Advisor Information](https://fedramp.gov/schemas/fedramp-advisor-information-schema-2026-06-24.json) | `MKT-CAS-WEB` |
+
+That's 24 rules in total. Since release `2026.10.05.01`, [`FRC-CSO-JSN`](https://www.fedramp.gov/2026/reference/fedramp-certification/#fedramp-json-schemas) also says public JSON MUST be usable by web applications on other domains, with CORS allowing access and headers such as `Content-Type: application/json` and `X-Content-Type-Options: nosniff`.
+
+## Related
+
+- [Rule summaries: start here](/rules)
+- [FRR and KSI](/rules/frr-and-ksi)
+- [Certification package overview](/rules/certification-package-overview)
+- [Security decision record](/rules/security-decision-record)

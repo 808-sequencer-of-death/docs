@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-44",
+  "node_id": "D_kwDOOxfoic4AgSx6",
+  "number": 44,
+  "title": "VILLA-TECH INC. -- FedRAMP 20x draft",
+  "url": "https://github.com/FedRAMP/community/discussions/44",
+  "category": "20x Discussion",
+  "category_slug": "20x-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "dresendiz-villa-tech",
+  "author_is_official": false,
+  "created_at": "2025-06-17T22:23:44Z",
+  "updated_at": "2025-08-25T16:45:30Z",
+  "last_edited_at": "2025-06-17T22:24:31Z",
+  "closed": true,
+  "closed_at": "2025-08-25T16:45:30Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "Dear FedRAMP Community,\r\n\r\nWe are excited to present Villa Tech Inc.'s draft submission for the FedRAMP 20x pilot program. Your feedback is invaluable to us as we aim to refine and enhance our approach. We welcome any and all suggestions to help shape our final submission. Thank you for your support and insights!\r\n\r\nPlease find our publicly accessible GitHub repo here: https://github.com/VILLA-TECH-Inc/VT-FedRAMP20x-Phase-One-Pilot-Draft",
+  "comment_count": 1,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4AzleW",
+      "url": "https://github.com/FedRAMP/community/discussions/44#discussioncomment-13522838",
+      "author": "judgesma",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2025-06-19T18:08:20Z",
+      "updated_at": "2025-06-19T18:08:21Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Thanks for sharing.   Your input on \"KSI-CED: Cybersecurity Education:  A secure cloud service provider will continuously educate their employees on cybersecurity measures, testing them regularly to ensure their knowledge is satisfactory.\"   seems to show a check for crypto/encryption, this should be under KSI-SVC.",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "dresendiz-villa-tech",
+    "judgesma"
+  ],
+  "official_responses": [],
+  "entities": {
+    "rule_ids": [
+      "KSI-CED",
+      "KSI-SVC"
+    ],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://github.com/VILLA-TECH-Inc/VT-FedRAMP20x-Phase-One-Pilot-Draft"
+    ],
+    "topics": [
+      "20x",
+      "ksi"
+    ]
+  },
+  "content_hash": "34193f78b5b29945b912818a7ef9763daf4e58a048affda29bcc51fb256ef739",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

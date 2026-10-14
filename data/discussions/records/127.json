@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-127",
+  "node_id": "D_kwDOOxfoic4Ak8cX",
+  "number": 127,
+  "title": "General discussion and Q&A for RFC-0031 Incident Communications Procedures",
+  "url": "https://github.com/FedRAMP/community/discussions/127",
+  "category": "General RFC Discussion",
+  "category_slug": "general-rfc-discussion",
+  "labels": [
+    "FedRAMP Official"
+  ],
+  "is_official_thread": true,
+  "is_rfc": true,
+  "author": "rhoesing",
+  "author_is_official": false,
+  "created_at": "2026-03-18T14:55:43Z",
+  "updated_at": "2026-05-13T17:25:19Z",
+  "last_edited_at": "2026-04-08T22:10:45Z",
+  "closed": true,
+  "closed_at": "2026-05-13T17:24:38Z",
+  "locked": true,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "This thread is for any general questions or discussion that isn't related to formal public comment on RFC-0031, Incident Communications Procedures.\r\n\r\nFolks from FedRAMP may participate in this thread and answer questions/etc. in a way that isn't possible in the formal public comment threads.",
+  "comment_count": 3,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4A-7Dn",
+      "url": "https://github.com/FedRAMP/community/discussions/127#discussioncomment-16494823",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2026-04-08T22:11:08Z",
+      "updated_at": "2026-04-08T22:11:08Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "(note, I repurposed this thread for RFC-0031 since no one was using it for RFC-0025, pew pew)",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A--Vg",
+      "url": "https://github.com/FedRAMP/community/discussions/127#discussioncomment-16508256",
+      "author": "hitecherik",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-04-09T20:33:56Z",
+      "updated_at": "2026-04-09T20:33:56Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "What is the intention behind the proposed requirement that Moderate/High providers report service status and historical availability information publicly, rather than in an environment accessible only to the customer / FedRAMP?",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A--Zg",
+          "url": "https://github.com/FedRAMP/community/discussions/127#discussioncomment-16508512",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-04-09T21:09:23Z",
+          "updated_at": "2026-04-09T21:09:23Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Reason for public vs private: Managing API keys, identities, etc. for many different services gets very complicated, and it's basically impossible for FR or CISA to do this at scale. Requiring these services to make availability information available in a public status page means FR and CISA can directly ingest this automatically with minimum investment. \r\n\r\nCommercial cloud services and most gov clouds already do this, so it also enables such services to leverage existing capabilities and processes without having to create gov-specific versions or reporting. An automated page like this also is a lot less effort than notifying every agency and FR and CISA every time there's an availability incident, so it should reduce burden on most cloud services.\r\n\r\nIn general, public status pages are also a high quality customer experience signal and are worth investing in for any service. "
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A_eUO",
+      "url": "https://github.com/FedRAMP/community/discussions/127#discussioncomment-16639246",
+      "author": "TM-Microsoft",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-04-20T17:31:38Z",
+      "updated_at": "2026-04-20T17:31:38Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "FRD-INT Incident - The updated definition of “incident” appears to increase the scope of impact consideration from federal customer data to all customer data. Under this change, would a CSP then be required to report to the PMO on impacts affecting commercial, state, or local customers, or do reporting obligations remain limited to impacts involving federal customers and federal data?",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A_eVN",
+          "url": "https://github.com/FedRAMP/community/discussions/127#discussioncomment-16639309",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-04-20T17:37:09Z",
+          "updated_at": "2026-04-20T17:37:09Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "No, the rest of the policy clarifies when reporting is necessary by establishing criteria for federal reportable incidents."
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "TM-Microsoft",
+    "hitecherik",
+    "pete-gov",
+    "rhoesing"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/127#discussioncomment-16494823",
+      "author": "pete-gov",
+      "created_at": "2026-04-08T22:11:08Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/127#discussioncomment-16508512",
+      "author": "pete-gov",
+      "created_at": "2026-04-09T21:09:23Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/127#discussioncomment-16639309",
+      "author": "pete-gov",
+      "created_at": "2026-04-20T17:37:09Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [
+      "FRD-INT"
+    ],
+    "rfc_ids": [
+      "RFC-0025",
+      "RFC-0031"
+    ],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [],
+    "topics": []
+  },
+  "content_hash": "6ed20669dae72deb1d8f42b7109ae74f97667148d896c4b87e81d1bbbe8cf519",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

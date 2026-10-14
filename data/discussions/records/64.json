@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-64",
+  "node_id": "D_kwDOOxfoic4AhAUC",
+  "number": 64,
+  "title": "In person assessment requirements for 20x",
+  "url": "https://github.com/FedRAMP/community/discussions/64",
+  "category": "20x Discussion",
+  "category_slug": "20x-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "DrSC-IA",
+  "author_is_official": false,
+  "created_at": "2025-07-29T16:23:15Z",
+  "updated_at": "2025-08-25T14:22:46Z",
+  "last_edited_at": null,
+  "closed": true,
+  "closed_at": "2025-08-25T14:22:46Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "Are there any in person requirements for 3PAOs performing 20x assessments? ",
+  "comment_count": 1,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4A1IOz",
+      "url": "https://github.com/FedRAMP/community/discussions/64#discussioncomment-13927347",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2025-07-29T21:44:45Z",
+      "updated_at": "2025-07-29T21:44:45Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "> Are there any in person requirements for 3PAOs performing 20x assessments?\r\n\r\nNot from the FedRAMP side.",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "DrSC-IA",
+    "pete-gov"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/64#discussioncomment-13927347",
+      "author": "pete-gov",
+      "created_at": "2025-07-29T21:44:45Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [],
+    "topics": [
+      "20x",
+      "3pao"
+    ]
+  },
+  "content_hash": "3ed61dc0bbe698eba12c3948c9814534efd50f12767bd37371a5d042b04afa09",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

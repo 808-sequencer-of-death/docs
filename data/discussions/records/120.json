@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-120",
+  "node_id": "D_kwDOOxfoic4Aj2NW",
+  "number": 120,
+  "title": "Enforcement of Recommended Secure Configuration",
+  "url": "https://github.com/FedRAMP/community/discussions/120",
+  "category": "Rev5 Discussion",
+  "category_slug": "rev5-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "bradbartholomewwiz",
+  "author_is_official": false,
+  "created_at": "2026-01-27T22:21:16Z",
+  "updated_at": "2026-02-11T22:12:06Z",
+  "last_edited_at": null,
+  "closed": true,
+  "closed_at": "2026-02-11T22:12:06Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 2,
+  "body": "The deadline for mandatory adoption of the Recommended Secure Configuration of March 1st is rapidly approaching.\r\n\r\nIn the standard it says \"FedRAMP will begin enforcement of this process after March 1, 2026. Providers who do not have Recommended Secure Configuration guidance that meets the requirements and recommendations in this document will receive corrective action.\"\r\n\r\nIs there guidance on how CSPs should demonstrate this?  \r\n\r\nFRR-RSC-09 Publish Guidance says that is should be publicly available.  Do we need to provide that public link to the PMO?  Will this be referenced from our Marketplace entry?  Should this be referenced in our package documentation?\r\n\r\nAny guidance here will be appreciated to make sure we can demonstrate our compliance and how it will be enforced.\r\n\r\nThanks!",
+  "comment_count": 1,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4A7mGc",
+      "url": "https://github.com/FedRAMP/community/discussions/120#discussioncomment-15622556",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2026-01-27T23:05:20Z",
+      "updated_at": "2026-01-27T23:05:20Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "It is somewhat deliberately up to the CSP to determine the most effective way to ensure this information is available to potential and current agency customers. This should be a customer experience activity and not just a compliance activity. :)\r\n\r\n> Is there guidance on how CSPs should demonstrate this?\r\n\r\nWe are planning on sending out a survey to all providers (via their FedRAMP Security Inbox) to gather information about how they are meeting these requirements. As long as you're working towards making this information available and also meet the requirements in the FSI, you'll be fine!",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "bradbartholomewwiz",
+    "pete-gov"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/120#discussioncomment-15622556",
+      "author": "pete-gov",
+      "created_at": "2026-01-27T23:05:20Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [
+      "FRR-RSC-09"
+    ],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [],
+    "topics": [
+      "marketplace"
+    ]
+  },
+  "content_hash": "80a05a867c12517218f455656a02f1e55f6466b148f6049f081d0ac0cd3ee3eb",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

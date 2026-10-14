@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-52",
+  "node_id": "D_kwDOOxfoic4Age6m",
+  "number": 52,
+  "title": "Anitian FedFlex - FedRAMP 20x Final Submission",
+  "url": "https://github.com/FedRAMP/community/discussions/52",
+  "category": "20x Discussion",
+  "category_slug": "20x-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "mmcveigh6",
+  "author_is_official": false,
+  "created_at": "2025-06-30T20:13:16Z",
+  "updated_at": "2025-11-18T16:25:04Z",
+  "last_edited_at": null,
+  "closed": true,
+  "closed_at": "2025-11-18T16:25:04Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "We formally submit our [final public package](https://github.com/anitianinc/anitian-fedflex-fedramp-20x) in partnership with our 3PAO, A-LIGN. Details for the private portion of the assessment have been provided directly to the PMO. ",
+  "comment_count": 0,
+  "comments": [],
+  "answer_url": null,
+  "participants": [
+    "mmcveigh6"
+  ],
+  "official_responses": [],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://github.com/anitianinc/anitian-fedflex-fedramp-20x"
+    ],
+    "topics": [
+      "20x",
+      "3pao"
+    ]
+  },
+  "content_hash": "5c97f537944c5bb470f3b80e78364fb703edfadf24369e4d574baf4c52bad9ce",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

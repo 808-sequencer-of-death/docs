@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-106",
+  "node_id": "D_kwDOOxfoic4AjWai",
+  "number": 106,
+  "title": "Broken link to CSP training module: 201-B: How to Write a Control",
+  "url": "https://github.com/FedRAMP/community/discussions/106",
+  "category": "Rev5 Discussion",
+  "category_slug": "rev5-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "burkestar",
+  "author_is_official": false,
+  "created_at": "2025-12-20T14:39:02Z",
+  "updated_at": "2026-02-11T22:09:27Z",
+  "last_edited_at": null,
+  "closed": true,
+  "closed_at": "2026-02-11T22:09:27Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "I noticed a broken link in the [Agency Authorization Kickoff Architecture Briefing Guidance](https://www.fedramp.gov/resources/templates/FedRAMP-Agency-Authorization-Kickoff-Architecture-Briefing-Guidance.pdf) under **SSP Tips for Success** that links to [CSP training module: 201-B: How to Write a Control](https://www.fedramp.gov/training#cloud-service-providers) which gives a 404 Page Not Found.\r\n\r\nIs that training material still available somewhere or it was outdated and shouldn't be relied upon anymore?  Or was it supplanted with something better?\r\n\r\nI was able to find an [older version of it indexed in the Wayback Machine](https://web.archive.org/web/20230302174733/https://www.fedramp.gov/assets/resources/training/201-B-FedRAMP-Training-How-to-Write-a-Control.pdf) with the PDF available but the Youtube video no longer exists.\r\n\r\nI really appreciate the open community you've created for CSPs to get help and the opportunity to shape the future of FedRAMP program.\r\n\r\nThanks!",
+  "comment_count": 1,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4A6oy5",
+      "url": "https://github.com/FedRAMP/community/discussions/106#discussioncomment-15371449",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2025-12-29T22:27:19Z",
+      "updated_at": "2025-12-29T22:27:19Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "> I noticed a broken link in the [Agency Authorization Kickoff Architecture Briefing Guidance](https://www.fedramp.gov/resources/templates/FedRAMP-Agency-Authorization-Kickoff-Architecture-Briefing-Guidance.pdf) under **SSP Tips for Success** that links to [CSP training module: 201-B: How to Write a Control](https://www.fedramp.gov/training#cloud-service-providers) which gives a 404 Page Not Found.\r\n> \r\n> Is that training material still available somewhere or it was outdated and shouldn't be relied upon anymore? Or was it supplanted with something better?\r\n\r\nHmmm, sorry about this, we don't provide training material like this anymore - it was indeed super outdated and confusing, and we aren't able to maintain that type of material. I'll add tracking down these bad links to our list of things to do so we can remove them!",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "burkestar",
+    "pete-gov"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/106#discussioncomment-15371449",
+      "author": "pete-gov",
+      "created_at": "2025-12-29T22:27:19Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://web.archive.org/web/20230302174733/https://www.fedramp.gov/assets/resources/training/201-B-FedRAMP-Training-How-to-Write-a-Control.pdf",
+      "https://www.fedramp.gov/resources/templates/FedRAMP-Agency-Authorization-Kickoff-Architecture-Briefing-Guidance.pdf",
+      "https://www.fedramp.gov/training#cloud-service-providers"
+    ],
+    "topics": [
+      "agency_authorization"
+    ]
+  },
+  "content_hash": "cb58dcead8b3b318e8353b5a5bfdad76cd26def13e0b2590f0575dc495e6ae3a",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

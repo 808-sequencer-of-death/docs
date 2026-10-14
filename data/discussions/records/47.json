@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-47",
+  "node_id": "D_kwDOOxfoic4AgXiw",
+  "number": 47,
+  "title": "June 25 20x CWG Special Edition: Panel Discussion w/ 20xP1 Participants!",
+  "url": "https://github.com/FedRAMP/community/discussions/47",
+  "category": "20x Discussion",
+  "category_slug": "20x-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "pete-gov",
+  "author_is_official": true,
+  "created_at": "2025-06-23T15:20:00Z",
+  "updated_at": "2025-06-28T15:17:58Z",
+  "last_edited_at": "2025-06-23T18:37:18Z",
+  "closed": true,
+  "closed_at": "2025-06-28T15:17:58Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 4,
+  "body": "### Please join us this [Wednesday, June 25 from 1pm to 2pm](https://gsa.zoomgov.com/meeting/register/FpW3sJuBRxag_1Mz49J0Cw) for a special extended 20x Community Working Group meeting to hear from active members of the FedRAMP Community! \r\n\r\n> If you're already registered, make a note of that bonus +30min that won't show up on your calendar! And if you can't make it, no worries, we'll [post it on youtube](https://www.youtube.com/c/fedramp) with all of our other Community Working Group meetings.\r\n\r\n## Special Guests\r\n\r\n- **Chad Spears, Director of Security Operations** for [InfusionPoints](https://infusionpoints.com/): Chad has 17 years of Information Technology experience serving as a Network Administrator, Infrastructure Supervisor, IT Director, and currently is the Director of NSOC and Operations at InfusionPoints.\r\n\r\n- **Robert Ficcaglia, Chief Technology Officer** for [SunStone Secure](https://sunstonesecure.com/): Robert is CTO and co-founder of SunStone where he leads AI engineering and CISO automation efforts. He has led security and engineering teams in Silicon Valley for over 25 years and leads several security and compliance open source groups in Cloud Native Computing Foundation (CNCF). He has been supporting multiple FedRAMP CSPs hands on pre-ATO through ConMon since 2019.\r\n\r\n- **Christian Baer, Technical Fellow** for [Schellman](https://schellman.com): Christian played a key role in overseeing Vanta's 20x pilot assessment.\r\n\r\n- **Isaac Teuscher** for [Paramify](https://paramify.com): Isaac leads the technical implementation of cloud and AI-driven security at Paramify. Focusing on cloud-native security, his work includes infrastructure hardening, Kubernetes deployments, and SIEM integration for continuous monitoring. He also manages corporate cybersecurity functions such as risk management, compliance, and endpoint security, supporting initiatives aligned with NIST 800-53 and FedRAMP. He collaborates with executive teams to build practical, scalable security programs that meet the highest federal compliance standards.\r\n\r\n- **Arpita Husain, Security Analyst** for [Vanta](https://vanta.com)\r\n\r\n- **Gary Guercio, Vice President, Service Delivery** for [Fortreum](https://fortreum.com)\r\n\r\n\r\n\r\n## Agenda\r\n\r\n| Time    | Topic                                                                                                                                                                                                         |\r\n| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\r\n| 1:00 PM | Welcome and Opening Remarks (3 min)   |                                                                                                                                                                    \r\n| 1:03 PM | FedRAMP 20x Community Working Group Updates (7 min)<br>FedRAMP 20x advocates provide updates on actions since the last working group meeting and some of the action from the working group forum threads. |\r\n| 1:10 PM | Phase One Pilot Discussion: A Jam Session with 20x1 Participants (35 min)<br>An interactive discussion with 20x1 pilot participants sharing insights and experiences from the first phase.                |\r\n| 1:45 PM | Q&A (10 min)                                                                                                                                                                                                  |\r\n| 1:55 PM | Closing Remarks and Next Steps (5 min)                                                                                                                                                                        |\r\n| 2:00 PM | End Session        \r\n\r\n## Planned Questions\r\n\r\n**CSPs:**\r\n\r\n1. Which KSI was the most challenging to automate and how did you address it?\r\n2. What led you to selecting the specific type of machine readable format for your submission?\r\n3. One of our goals with 20x is to set the conditions for industry to automate. Where were you able to take the biggest swing from an innovation perspective that you wouldn’t have been able to do under the traditional Rev 5 process?\r\n4. Which KSI(s) do you think have the greatest impact on the security posture of your cloud service offering?\r\n5. How did you decide what to post publicly, how to set up access requirements, and whether you include evidence initially or provide later?\r\n6. Is the end state of this process a moderate or high authorization?  If so, how are you using the lessons learned from this iteration to inform the next stage?\r\n\r\n**3PAOs:**\r\n\r\n7. What KSIs are more difficult and / or expensive to assess?\r\n8. Explain the differences in the role of a 3PAO in 20x versus traditional Rev 5 assessment processes.\r\n9. How did you approach the validation of automation with the 20x KSIs?\r\n\r\n\r\n**Any:**\r\n\r\n10. What was most challenging about the submission process?\r\n11. What advice do you have for other CSPs about 20x submissions?\r\n12. What was the most helpful resource for you (e.g., website information, CWGs, GitHub discussions, pre-submission feedback provided by FedRAMP)?\r\n\r\n**Open Q&A:**\r\n\r\nIf you have other questions for 20x participants, you can ask them in this thread in advance or using the Q&A featuring during the meeting!\r\n",
+  "comment_count": 1,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4Az5pC",
+      "url": "https://github.com/FedRAMP/community/discussions/47#discussioncomment-13605442",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2025-06-28T15:17:58Z",
+      "updated_at": "2025-06-28T15:17:59Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "You can catch this event on youtube here: https://www.youtube.com/watch?v=t2RHRWXcsIs",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "pete-gov"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/47#discussioncomment-13605442",
+      "author": "pete-gov",
+      "created_at": "2025-06-28T15:17:58Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://fortreum.com",
+      "https://gsa.zoomgov.com/meeting/register/FpW3sJuBRxag_1Mz49J0Cw",
+      "https://infusionpoints.com/",
+      "https://paramify.com",
+      "https://schellman.com",
+      "https://sunstonesecure.com/",
+      "https://vanta.com",
+      "https://www.youtube.com/c/fedramp",
+      "https://www.youtube.com/watch?v=t2RHRWXcsIs"
+    ],
+    "topics": [
+      "20x",
+      "3pao",
+      "conmon",
+      "ksi",
+      "machine_readable",
+      "rev5"
+    ]
+  },
+  "content_hash": "0893fd23a8be3285f8e7bdaa957e530b5eac668c9c852f001cd37800e477d1ec",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

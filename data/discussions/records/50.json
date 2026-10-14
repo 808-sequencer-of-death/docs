@@ -1,0 +1,266 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-50",
+  "node_id": "D_kwDOOxfoic4AgdJF",
+  "number": 50,
+  "title": "Machine Readable (FRMR) docs // discussions and updates",
+  "url": "https://github.com/FedRAMP/community/discussions/50",
+  "category": "20x Discussion",
+  "category_slug": "20x-discussion",
+  "labels": [
+    "FedRAMP Official"
+  ],
+  "is_official_thread": true,
+  "is_rfc": false,
+  "author": "pete-gov",
+  "author_is_official": true,
+  "created_at": "2025-06-28T15:36:55Z",
+  "updated_at": "2025-08-25T14:21:51Z",
+  "last_edited_at": null,
+  "closed": true,
+  "closed_at": "2025-08-25T14:21:51Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "FedRAMP intends to fully support machine-readable documentation for rules and requirements related to 20x. Our initial work is available publicly in the following GitHub repository:\r\n\r\nhttps://github.com/FedRAMP/docs/\r\n\r\nWe have disabled collaboration on that repository for now to limit confusion so I'm creating a thread here for discussion, updates, etc. We're currently using the underlying JSON data to generate markdown and PDF documents and intend to release all future 20x docs in this format.\r\n\r\nFeedback, suggestions, forks, conversions, etc. are deeply welcome!\r\n\r\n---\r\n\r\n### Updates\r\n\r\n- **2025-06-28**: v.0.2.0 has been released with updates to Key Security Indicators (25.05C)\r\n\r\n  - Mappings to SP 800-53 controls have been added to the KSI JSON\r\n  - These updates _should not_ have materially changed the KSIs, we did quite a bit of automated and manual double checking but if you notice something please let me know.\r\n  - Human readable versions with controls are available separately now (the default will not include the reference mappings)\r\n    - https://github.com/FedRAMP/docs/blob/main/markdown/FRMR.KSI.key-security-indicators-with-controls.md\r\n    - https://github.com/FedRAMP/docs/blob/main/pdf/FRMR.KSI.key-security-indicators-with-controls.pdf\r\n\r\n",
+  "comment_count": 4,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4A0J5Y",
+      "url": "https://github.com/FedRAMP/community/discussions/50#discussioncomment-13672024",
+      "author": "fortetroy",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2025-07-06T01:51:34Z",
+      "updated_at": "2025-07-06T01:51:35Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Is the expectation that these `reference` controls will need to be tested for each KSI? ",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A0J5b",
+          "url": "https://github.com/FedRAMP/community/discussions/50#discussioncomment-13672027",
+          "author": "fortetroy",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-07-06T01:52:33Z",
+          "updated_at": "2025-07-06T01:52:35Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Asking because the original draft KSIs had NIST control references, then they were removed, and now they're back again. "
+        },
+        {
+          "id": "DC_kwDOOxfoic4A0MtK",
+          "url": "https://github.com/FedRAMP/community/discussions/50#discussioncomment-13683530",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2025-07-07T12:29:49Z",
+          "updated_at": "2025-07-07T12:29:49Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> Is the expectation that these `reference` controls will need to be tested for each KSI?\r\n\r\nNegative. Note the sections in the SP 800-53A and SP 800-53B quoted in the Background section on capabilities for additional background.\r\n\r\nKSIs represent the security capabilities FedRAMP expects cloud service offerings to have and authorization decisions should be made based on these capabilities. These capabilities are based on controls or groups of controls for reference, to generally help folks understand the underlying goals and how capabilities connect to traditional processes, but the expectation remains that the capabilities described by the Key Security Indicators will be applied, assessed, and/or validated rather than focusing on individual underlying controls.\r\n\r\n"
+        }
+      ],
+      "replies_total": 2,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A0TBg",
+      "url": "https://github.com/FedRAMP/community/discussions/50#discussioncomment-13709408",
+      "author": "ChanceofClouds",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2025-07-09T13:34:48Z",
+      "updated_at": "2025-07-09T13:34:49Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Hello,\r\n\r\nMinor typo in FRMR.KSI.key-security-indicators-with-controls.md:\r\nKSI-INR-03\r\nGenerate after action reports and regularly incorporate lessons learned into operations].\r\n\r\nBracket at the end of the KSI description.",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A0Tc-",
+          "url": "https://github.com/FedRAMP/community/discussions/50#discussioncomment-13711166",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2025-07-09T16:28:40Z",
+          "updated_at": "2025-07-09T16:28:41Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Awesome, thank you for flagging this! [Fixed here](https://github.com/FedRAMP/docs/commit/396f419fac348005abb2f1d8fddb3b00477c26f6)."
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A0Trd",
+      "url": "https://github.com/FedRAMP/community/discussions/50#discussioncomment-13712093",
+      "author": "fortetroy",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2025-07-09T18:18:36Z",
+      "updated_at": "2025-07-09T18:18:36Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "\"Underlying JSON data to generate markdown and PDF documents and intend to release all future 20x docs in this format\"\r\n\r\nWould this be an acceptable format for CSOs to submit policy documentation over Microsoft Word's .docx?\r\n\r\nMarkdown it greppable so it'll lend toward better automation for some of the documentation based KSIs relating to policies, procedures, etc  ",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A0Tus",
+          "url": "https://github.com/FedRAMP/community/discussions/50#discussioncomment-13712300",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2025-07-09T18:40:47Z",
+          "updated_at": "2025-07-09T18:40:47Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "For 20x submissions, absolutely nothing wrong with text or markdown. I've been curious to see if folks would gravitate towards that type of submission over docx or pdf and have been a bit surprised they haven't! "
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A0Wi7",
+      "url": "https://github.com/FedRAMP/community/discussions/50#discussioncomment-13723835",
+      "author": "jimFortreum",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2025-07-10T18:07:13Z",
+      "updated_at": "2025-07-10T18:07:13Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "We need to start thinking less about machine-readable formats in the age of AI and more about self-describing metadata standards.  With AI, near real-time format translation is available today, converting files on the fly based on users' or system input needs.  Structured formats still ensure interoperability across systems but are now less about what formats/applications are required and more about telling an AI system to summarize the document.   CSPs can provide their RAR and SAR descriptions in JSON, but once shared, one can process the file using AI to rephrase the text and give a human-readable format.  As file extensions and data evolve to carry self-describing metadata (like JSON), file extensions will fall away. Concentrating on the self-describing metadata standards like OSCAL or whatever standard emerges is more important than a file being in a machine-readable format.   Modifying OSCAL/some standard for KSIs for 20xP1/P2 will support faster automation of security assessments than just requesting machine-readable formats, because all formats are machine-readable, right.     CSPs can upload data to AI systems and tell it to convert the data into OSCAL format as a JSON file.   It comes down to what self-describing metadata the 20xP1 program desires, because I have AI to convert that data into whatever format is desired. ",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A0WmI",
+          "url": "https://github.com/FedRAMP/community/discussions/50#discussioncomment-13724040",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2025-07-10T18:27:56Z",
+          "updated_at": "2025-07-10T18:27:57Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "We're definitely interested in seeing all the different ways people leverage the structured information we provide! One of the concerns I've seen with AI translations is inconsistency, whether by prompt/context or model, and the simplest way to avoid that is to use a structured data source."
+        },
+        {
+          "id": "DC_kwDOOxfoic4A0Wos",
+          "url": "https://github.com/FedRAMP/community/discussions/50#discussioncomment-13724204",
+          "author": "jimFortreum",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-07-10T18:46:55Z",
+          "updated_at": "2025-07-10T18:46:56Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Absolutely, without a self-describing metadata standard AI translation will be what the AI thinks.  Garbage in = garbage out is still true for AI. "
+        },
+        {
+          "id": "DC_kwDOOxfoic4A0WrE",
+          "url": "https://github.com/FedRAMP/community/discussions/50#discussioncomment-13724356",
+          "author": "BenFoogler",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-07-10T19:05:09Z",
+          "updated_at": "2025-07-10T19:05:12Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "I think what's tricky with AI, or more specifically, when an LLM is involved, is that you could feed it 100% accurate data (i.e. not garbage), and still get inaccurate or unreliable results. You can tell an AI to convert data into OSCAL, but you'd still have to QA the output and fix any 'hallucinations' that are introduced because the AI by design has converted all your data into variables and values that may not match the original input. My concern is using AI to produce content quickly, but then the QA process taking just as long or longer than it would have to develop a machine-readable data architecture from the start."
+        },
+        {
+          "id": "DC_kwDOOxfoic4A0Wu1",
+          "url": "https://github.com/FedRAMP/community/discussions/50#discussioncomment-13724597",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2025-07-10T19:26:50Z",
+          "updated_at": "2025-07-10T19:26:55Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Beeennnnnnnnn!!!! Hey. Sup. 😎 \r\n\r\nAgreed - fun fact, when I first converted some of these materials into JSON, I spent a bunch of time restructuring the word docs into a consistent format and messing with prompts and models to convert them into JSON, but the JSON for each would have variances in it that I kept having to add to context to work around (Claude 3.5 got real close tho). \r\n\r\nAfter probably a couple hours of experimentation I just switched over and manually created a JSON structure and copy/pasted everything into it in <30min. Same situation with moving back from JSON to Markdown - consistency across different materials just wasn't there, hence the use of a manually developed handlebar template."
+        },
+        {
+          "id": "DC_kwDOOxfoic4A0qyu",
+          "url": "https://github.com/FedRAMP/community/discussions/50#discussioncomment-13806766",
+          "author": "fortetroy",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-07-18T14:23:54Z",
+          "updated_at": "2025-07-18T14:23:55Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Sounds like a job for a smaller, local, fine-tuned model. Just some thing to think about - https://youtu.be/pTaSDVz0gok?si=6RslPjx3KUQ9p1uR"
+        }
+      ],
+      "replies_total": 5,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "BenFoogler",
+    "ChanceofClouds",
+    "fortetroy",
+    "jimFortreum",
+    "pete-gov"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/50#discussioncomment-13683530",
+      "author": "pete-gov",
+      "created_at": "2025-07-07T12:29:49Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/50#discussioncomment-13711166",
+      "author": "pete-gov",
+      "created_at": "2025-07-09T16:28:40Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/50#discussioncomment-13712300",
+      "author": "pete-gov",
+      "created_at": "2025-07-09T18:40:47Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/50#discussioncomment-13724040",
+      "author": "pete-gov",
+      "created_at": "2025-07-10T18:27:56Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/50#discussioncomment-13724597",
+      "author": "pete-gov",
+      "created_at": "2025-07-10T19:26:50Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [
+      "KSI-INR-03"
+    ],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://github.com/FedRAMP/docs/",
+      "https://github.com/FedRAMP/docs/blob/main/markdown/FRMR.KSI.key-security-indicators-with-controls.md",
+      "https://github.com/FedRAMP/docs/blob/main/pdf/FRMR.KSI.key-security-indicators-with-controls.pdf",
+      "https://github.com/FedRAMP/docs/commit/396f419fac348005abb2f1d8fddb3b00477c26f6",
+      "https://youtu.be/pTaSDVz0gok?si=6RslPjx3KUQ9p1uR"
+    ],
+    "topics": [
+      "20x",
+      "ksi",
+      "machine_readable",
+      "oscal"
+    ]
+  },
+  "content_hash": "69ee0bf347f16f0539fd629b66ab140f99ab417a2b5d9adc761d88486c02c7b5",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

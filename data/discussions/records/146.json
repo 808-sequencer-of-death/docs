@@ -1,0 +1,2413 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-146",
+  "node_id": "D_kwDOOxfoic4AnWbB",
+  "number": 146,
+  "title": "Rev5 questions and discussion on the Consolidated Rules for 2026 (or Legacy)",
+  "url": "https://github.com/FedRAMP/community/discussions/146",
+  "category": "Rev5 Discussion",
+  "category_slug": "rev5-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "pete-gov",
+  "author_is_official": true,
+  "created_at": "2026-06-24T21:49:44Z",
+  "updated_at": "2026-10-14T21:37:37Z",
+  "last_edited_at": null,
+  "closed": false,
+  "closed_at": null,
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "## This thread is for any and all Q&A or general discussion related to FedRAMP Rev5 in general that does not need to have its own thread.\r\n\r\nFedRAMP released the [Consolidated Rules for 2026](https://www.fedramp.gov/2026/) on June 24, 2026 with a considerable set of changes for FedRAMP Rev5 that will apply to all cloud service providers.\r\n\r\nThese changes include:\r\n\r\n- Mandatory adoption of the Vulnerability Detection and Response and Vulnerability Evaluation and Reporting rules by December 6, 2026 in response to CISA BOD 26-04\r\n- Changes to assessments for Rev5 to align more like assessments for 20x - focusing on verification and validation instead of just control implementation.\r\n- Replacement of most FedRAMP templates with a new Certification Package Overview and Security Decision Record\r\n- Removal of many FedRAMP-assigned control parameters and a lot of older FedRAMP control guidance\r\n- Mandatory adoption of many other Balance Improvement Releases through 2027\r\n- A requirement to address all FedRAMP Rules within the Security Decision Record, instead of only addressing controls\r\n\r\nSome of these changes take effect for all cloud service providers on certain dates no matter what, others take effect at the next annual assessment. In general, these are sweeping changes that will require all cloud service providers to begin planning now to continue to meet FedRAMP Rev5 requirements.\r\n\r\nHistorical materials are available at [https://fedramp.gov/legacy](https://fedramp.gov/legacy).\r\n\r\n---\r\n\r\nYou may see some of the following folks from FedRAMP responding in this thread:\r\n\r\n- `pete-gov` - Pete, FedRAMP Director\r\n- `nicole-gov` - Nicole, Security Director\r\n- `dan-fedramp` - Dan, Lead Cloud Security Engineer\r\n- `paulagosta` - Paul, Lead Cloud Security Engineer (Bastion)\r\n- `emu-gov` - Emu, Lead Cloud Security Engineer (Vanguard)\r\n- `rhoesing` - Ryan, Chief of Staff & Policy Branch Chief",
+  "comment_count": 39,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4BChJy",
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-17437298",
+      "author": "ricmarreycoal",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-06-25T17:51:55Z",
+      "updated_at": "2026-06-25T17:51:55Z",
+      "upvotes": 2,
+      "minimized": false,
+      "body": "\r\nCan you confirm whether the March 7, 2027 grace period defined in NTC-0014 remains accurate and unchanged?\r\n\r\nSpecifically, is this grace period still authoritative, or has it been superseded or modified by the CR26 Consolidated Rules timeline, including the January 1, 2027 mandatory adoption date?\r\n \r\nAs per NTC-0014:\r\n\r\n\"FedRAMP will provide a grace period through March 7, 2027 where cloud service offerings may maintain their FedRAMP Certification under a corrective action plan (which will include notice to all agencies). After this date, FedRAMP Certification will be revoked for all cloud service offerings not following these rules.\"\r\n",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BChQ-",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-17437758",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-06-25T18:53:44Z",
+          "updated_at": "2026-06-25T18:53:44Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Hey ricmarrey coal - different aspects of the Consolidated Rules for 2026 have different timelines. The applicability and timelines are at the top of each ruleset, and are collected for [Rev5 here](https://www.fedramp.gov/2026/providers/updating/deadlines/rev5/) and [20x here](https://www.fedramp.gov/2026/providers/updating/deadlines/20x/).\r\n\r\nIf you check either the Rev5 CSP section or the reference section for both the VDR and VER you will see that they reflect the timelines from NTC-0014:\r\n\r\n- [Vulnerability Detection and Response](https://www.fedramp.gov/2026/reference/vulnerability-detection-and-response/)\r\n- [Vulnerability Evaluation and Reporting](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/)\r\n\r\nThe key bit is the info box at the top of each policy which includes the deadlines for providers seeking to obtain FedRAMP Certification (2026-12-07) and those seeking to maintain it (2026-12-07). Each document also confirms a grace period ending 2027-03-07.\r\n\r\n<img width=\"485\" height=\"225\" alt=\"Screenshot 2026-06-25 at 2 50 59 PM\" src=\"https://github.com/user-attachments/assets/1d5ff955-1a3d-4d69-909a-f017f72f3c47\" />\r\n\r\n"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BChaa",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-17438362",
+          "author": "judgecspab-max",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-06-25T20:22:44Z",
+          "updated_at": "2026-06-25T20:22:44Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "I get 404 errors on most of the Links, for example:\r\n\r\nReview the FedRAMP Consolidated Rules for 2026.  https://www.fedramp.gov/2026/\r\n\r\nIs it just me?\r\n"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BChhw",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-17438832",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-06-25T21:23:42Z",
+          "updated_at": "2026-06-25T21:23:42Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> I get 404 errors on most of the Links, for example:\r\n\r\nWe're having some sort of problem with the way our website hosting provider is rendering out pages that is causing some links not to work properly when you click on them within fedramp.gov - they all work when you hit reload or click on them from elsewhere or even open them in a new tab.\r\n\r\nFor example if you click on the link that you pasted here, it works. 🤷  I'm going to keep trying to track this down tonight.\r\n"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BChh2",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-17438838",
+          "author": "v-mhahnfirstinfotech",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-06-25T21:24:40Z",
+          "updated_at": "2026-06-25T21:24:40Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "@judgecspab-max - several links seem to land on error pages, but you can usually resolve by refreshing the URL. Not sure why they won't land properly. For example, using Edge, this link:\r\n\r\n<img width=\"408\" height=\"300\" alt=\"image\" src=\"https://github.com/user-attachments/assets/fa7b279f-07aa-43a6-944c-43310b0bc405\" />\r\n\r\n\r\ntakes me here:\r\n\r\n<img width=\"391\" height=\"323\" alt=\"image\" src=\"https://github.com/user-attachments/assets/f3248534-df1c-4f2b-9bf6-044c03ccdd91\" />\r\n\r\n\r\nbut then I do a refresh on that and it takes me to the page."
+        },
+        {
+          "id": "DC_kwDOOxfoic4BChms",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-17439148",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-06-25T22:14:37Z",
+          "updated_at": "2026-06-25T22:14:37Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "I think I've tracked this down to an issue with sveltekit capturing the link to route it within an SPA refresh instead of treating it like a static route. Not sure why this behavior didn't appear until yesterday in production since we've been using this methodology for the `/docs` for a long time but it was likely a confluence of some version updates and other changes... we had a LOT of changes queued up on the site. \r\n\r\nI've pushed a fix that detects the static routes and forces a full browser reload for those routes to bypass the capture and it appears to work - I can no longer replicate the 404 popping up when clicking a link to `/2026` `/legacy` or `/join` within fedramp.gov.\r\n\r\nPlease let me know if you have any further issues and I'll check back in later tonight!"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BChp6",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-17439354",
+          "author": "v-mhahnfirstinfotech",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-06-25T23:03:33Z",
+          "updated_at": "2026-06-25T23:03:33Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Yes! The links I recall having issues seem to work now, for me.\r\n\r\nThanks for all the work and related updates you've been doing to get CR26 published!"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BCjAG",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-17444870",
+          "author": "judgecspab-max",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-06-26T11:57:28Z",
+          "updated_at": "2026-06-26T11:57:28Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "All good now!"
+        }
+      ],
+      "replies_total": 7,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BCjzC",
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-17448130",
+      "author": "judgecspab-max",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-06-26T17:58:18Z",
+      "updated_at": "2026-06-26T17:58:18Z",
+      "upvotes": 2,
+      "minimized": false,
+      "body": "After review of the[ Rev 5 SCN process ](https://www.fedramp.gov/2026/reference/rev5/d/significant-change-notification/)  ahead of the July 4 optional adoption date, we noticed the published schema (fedramp-significant-change-notification-schema-2026-06-24.json) does not match the SCN-CSO-INF required fields SCN-CSO-INF, which mandates 10 fields in every notification. \r\n\r\nThe schema marks only 3 as required (certificationPackageOverviewUri, changeType, changeDescription) and does not include:\r\n1. \"Name and title of approver\" (SCN-CSO-INF field 10)\r\n2. \"Summary of any new risks identified and/or vulnerabilities\" (SCN-ADP-NTF for adaptive changes)\r\n**Recommendation:**   Schema match the stable SCN-CSO-INF required fields",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BCkf1",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-17450997",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-06-27T02:05:43Z",
+          "updated_at": "2026-06-27T02:05:43Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "For CR26 we wanted to make the schemas **absolutely minimal** to allow providers initial flexibility while we were doing some weird new stuff. The schemas thus reflect a sort of skeleton to build around rather than an attempt at a complete constraining way of approaching data sharing. It was a deliberate choice to avoid any situations where people might interpret the schema as a ghost rule - follow the actual written rules, not templates or schemas.\r\n\r\nWe'll likely add a FAQ to help.fedramp.gov about this. And CR27 may explore stricter structures once everyone spends more time approaching this problem in different ways."
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BCppF",
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-17472069",
+      "author": "judgecspab-max",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-06-29T13:35:52Z",
+      "updated_at": "2026-06-29T13:35:52Z",
+      "upvotes": 2,
+      "minimized": false,
+      "body": "Thanks Pete--I appreciate the approach your describe, however, the schema marks 3 fields as \"required\" with one, _certificationPackageOverviewUri_ not even being in SCN-CSO-INF.   Can we change \"required\" to \"recommended\"?",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BCtnE",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-17488324",
+          "author": "dan-fedramp",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-06-30T18:42:54Z",
+          "updated_at": "2026-06-30T18:42:54Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "The Certification Package Overview is a separate schema that contains metadata about the CSO including your FedRAMP ID, Provider Name, Service Name, etc. We decided to include the CPO uri in all of the schemas rather than asking providers to duplicate this information across every submission."
+        },
+        {
+          "id": "DC_kwDOOxfoic4BGdjA",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18471104",
+          "author": "PeterWeiler",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-09-16T20:15:29Z",
+          "updated_at": "2026-09-16T20:15:29Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "@dan-fedramp The 2026.09.13.02 update moved the CPO Maintain date to 2027-07-01.  Multiple rules with reporting requirements hit their Maintain dates in Dec / Jan.  How should CSPs handle the mandatory certificationPackageOverviewUri field of those JSON schemas given CPO-CSO-OVR may not be fully implemented?"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BGdlE",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18471236",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-09-16T20:25:32Z",
+          "updated_at": "2026-09-16T20:25:32Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "You have a bit of flexibility to address this in whatever way provides the best customer experience. I'd probably point those to a URL that shows the implementation status and progress of the related ruleset."
+        }
+      ],
+      "replies_total": 3,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BDDM9",
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-17576765",
+      "author": "v-mhahnfirstinfotech",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-07-08T19:37:50Z",
+      "updated_at": "2026-07-08T19:37:50Z",
+      "upvotes": 3,
+      "minimized": false,
+      "body": "If going for a *new* Rev5 certification prior to Jan 1, 2027, are CSPs required to follow the new CR26 Rev5 baseline/control guidance, or can they still use the old Legacy Rev5 parameters, SSP templates, SAP/SAR templates, etc? Similarly for assessors, for new Rev5 certification assessments prior to Jan 1, are they required to assess against the new CR26 Rev5 baseline/control guidance, or should/can they continue to follow the Legacy Rev5 rules/templates? Or is this choice up to the CSP/agency?\r\n\r\nI think I can intuit the answer from the Important Dates/Deadlines, without an explicit statement about which elements of Legacy Rev5 are still officially allowed (though maybe I am just not finding that statement) - which is that this is ultimately up to what the agency customer wants/agrees to with the CSP. Ie, the assessor can assess against the set of rules they are directed to assess by the CSP/agency, whether Legacy Rev5 or CR26 Rev5, up until a given CR26 rule or the full CR26 ruleset is explicitly stated to be mandatory for Rev5.\r\n\r\nThis is especially relevant to CSPs who were already well along the path toward Rev5 and did not want to wait for the finalized CR26 rules to be available. For example, if they are about to be assessed now or in the next few months, and had worked over X time period to set up their system/documentation/etc using Legacy Rev5 rules, templates, etc.\r\n\r\nCorollary - what needs to be done by Jan 1, 2027 - is it enough to have completed the Legacy Rev5 assessment with the assessor, or does the agency/FedRAMP need to also approve the Legacy Rev5 certification prior to Jan 1?",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BDF2Q",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-17587600",
+          "author": "emu-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-07-09T17:01:42Z",
+          "updated_at": "2026-07-09T17:01:42Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "The obtain dates are for any new submissions or class changes (like in the case of an uplift).\r\n\r\nAnything submitted to FedRAMP on or after January 1st needs to either conform with the new rules or risk denial. There might be cases for a temporary certification for truly unfortunate circumstances, but keep your receipts!"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BDGVm",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-17589606",
+          "author": "v-mhahnfirstinfotech",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-07-09T21:37:36Z",
+          "updated_at": "2026-07-09T23:03:46Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thanks @emu-gov - I think that somewhat answers the corollary question (ie, the need to actually officially submit to FedRAMP prior to Jan 1 to be safe), but what about for submissions prior to Jan 1 related to the assessment process and artifacts. Could you please confirm and/or comment on what I was intuiting for those in the first two paragraphs?"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BDH_e",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-17596382",
+          "author": "emu-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-07-10T12:08:32Z",
+          "updated_at": "2026-07-10T12:08:32Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Addressing FedRAMP Communication (AFC) and Secure Configuration Guide (SCG) are required now. The grace period ended July 1st 2026, but as those requirements were communicated at the beginning of the year, that should not come as a surprise, though some might have only been tracking for existing certifications and not new submissions.\r\n\r\nOptional early adoption of CR26 started July 4th. We anticipate receiving packages of many shapes and sizes between now and January 1st. Some will be legacy Rev5 (+ AFC & SCG), others might be 100% CR26, others might be legacy Rev5 + AFC, SCG, VER & VDR, and still others might be some bespoke combination.\r\n\r\nPackage composition would be a conversation between provider, assessor and agency, but keep the obtain dates top of mind! Remember that agencies have adoption timelines for BOD 26-04, so early adoption of VDR/VER could really benefit them, too.\r\n\r\nWe recognize some folks are in-flight and have made investments in legacy processes and materials. We can't give business advice or give specific council on how each provider should approach. That is why we built CR26 in the open, provided the flexibility of early adoption, and gave about 6 months of lead time for new submissions."
+        },
+        {
+          "id": "DC_kwDOOxfoic4BDIq-",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-17599166",
+          "author": "v-mhahnfirstinfotech",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-07-10T17:03:15Z",
+          "updated_at": "2026-07-10T17:03:15Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Great - thank you Emu!"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BDXv2",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-17660918",
+          "author": "cbiggsrun",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-07-16T11:21:25Z",
+          "updated_at": "2026-07-16T11:24:00Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "@emu-gov Just to make sure we're crystal clear on this: If a CSP has been preparing for months for a traditional (legacy) Rev 5 assessment and has their assessment in Nov or Dec 2026, if they submit the package to FedRAMP January 2, it must be prepared according to the CR26 rules (e.g., include a CPO and SDR instead of an SSP, include VDR/VER reports instead of a POA&M, include machine-readable output, etc.)? It would be rejected if it didn't follow the CR26 rules?"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BDX7V",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-17661653",
+          "author": "emu-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-07-16T12:43:38Z",
+          "updated_at": "2026-07-16T16:08:59Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "I am completely biased, but I tend to think we are pretty reasonable people — as an example, the lost sponsor / ready conversion pathways were created because some providers got stuck in extenuating circumstances. \r\n\r\nThe rules have specific dates so we can get this party started. If you are late to that party, the door might be locked. Lots can happen between now and January. We could be overwhelmed with reviews, a shutdown could halt existing agency reviews, your dog could eat your SSP appendices, etc. \r\n\r\nStuff happens in this biz and we will do our best to respond as reasonable humans, but if it is Nov and you haven't even looked at VDR / VER, your head is not in the game."
+        }
+      ],
+      "replies_total": 6,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BEErC",
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-17844930",
+      "author": "gmengelberg",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-07-30T20:20:44Z",
+      "updated_at": "2026-07-30T20:20:44Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "For a Rev5 Class C (Moderate) CSO with multiple agency ATOs, what are the consequences if they do not implement any CR26 Rev5 rules? At which date would they be exposed to those consequences?",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BEEwn",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-17845287",
+          "author": "emu-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-07-30T20:50:16Z",
+          "updated_at": "2026-07-30T20:50:16Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Corrective action, then revocation of FedRAMP Certification. \r\n\r\nhttps://www.fedramp.gov/2026/providers/updating/deadlines/#important-deadlines"
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BEE03",
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-17845559",
+      "author": "Abe205",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-07-30T21:26:54Z",
+      "updated_at": "2026-07-30T21:26:54Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "For the CDS-TRC-USH Rev. 5 requirement stating that “Trust Centers MUST share FedRAMP certification data with all necessary parties without interruption,” we are considering leveraging our Trust Center as the primary mechanism for providing stakeholders, including agency customers, with access to certification information.\r\n\r\nUnder this model, we, as the Cloud Service Provider (CSP), would retain responsibility for provisioning and deprovisioning access to the Trust Center. Our interpretation is that the existence of a dedicated Trust Center, combined with an established operational process and support team responsible for managing access, satisfies the intent of providing certification data to authorized stakeholders without interruption.\r\nCurrently, we operate a proprietary Trust Center; however, certain agency customers are unable to access the site because their internal IT policies block access to our Trust Center domain. In these cases, we provide an alternative access method through secure, time-bound links and reissue access as needed to ensure that authorized customers can obtain the required certification data. This limitation is outside of our control as a CSP, as the access restrictions originate from the customer’s network and security policies.\r\n\r\nGiven that we maintain a dedicated process and team to provision access, support affected customers, and provide alternative access mechanisms when necessary to the same Trust  Center, our position is that these customer-imposed network restrictions should not constitute noncompliance with the “without interruption” requirement. We believe we are taking reasonable and proactive measures to ensure continuous availability of certification information to authorized parties despite circumstances that are outside our direct control. Do you have any concerns or objections to this interpretation and approach?\r\n",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BEGj-",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-17852670",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-07-31T10:37:56Z",
+          "updated_at": "2026-07-31T10:40:48Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "In general the trust center requirements are designed to allow a cloud service provider to be thoughtful and intentional about sharing information with customers while focusing on the best customer experience to help them retain and satisfy their customers. That's why they're relatively minimal. \r\n\r\nIf agencies are routinely telling FedRAMP that they don't have the access they need to a cloud service provider's trust center, then we'd be likely to conclude that the rules aren't being met. And sometimes agencies reach out to us to complain about how shoddy someone's trust center is, and in those situations we're likely to consider other actions in the long run (such as public marketplace listings that identify the minimal compliance and access problems so agencies are aware in advance).\r\n\r\nFR doesn't make recommendations but focusing on a high quality customer experience over a minimally-compliant one is the preferred approach.\r\n\r\nAnd an opinionated comment: Agencies should unblock the domains of trust centers for services they use as part of their ATO, it's bonkers that this is a thing. Sometimes though trust centers require weird proprietary integrations that aren't feasible though, and that can create problems that aren't as simple as unblocking a website (for example, I've seen trust centers that we at GSA are unable to access because they expect an account with an identity provider that is not authorized for use at GSA, that's an incredibly poor customer experience).\r\n"
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BEHK6",
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-17855162",
+      "author": "cbiggsrun",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-07-31T14:59:22Z",
+      "updated_at": "2026-07-31T14:59:22Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "I know the answer to this question will be \"we're reasonable people\", but confusion is still rampant. For the deadline where \"FedRAMP will stop accepting any new FedRAMP Rev5 Certifications on June 11, 2027,\" does this mean a CSP cannot apply for a new Rev5 Marketplace Listing after June 10, 2027? Or FedRAMP will not accept Rev5 packages for CSPs who are already in process? Thanks.",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BEHQX",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-17855511",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-07-31T15:39:33Z",
+          "updated_at": "2026-07-31T15:40:30Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> I know the answer to this question will be \"we're reasonable people\", but confusion is still rampant. For the deadline where \"FedRAMP will stop accepting any new FedRAMP Rev5 Certifications on June 11, 2027,\" does this mean a CSP cannot apply for a new Rev5 Marketplace Listing after June 10, 2027? Or FedRAMP will not accept Rev5 packages for CSPs who are already in process? Thanks.\r\n\r\nThe current line is clear: [FedRAMP will no longer accept applications for new FedRAMP Rev5 Certifications.](https://www.fedramp.gov/2026/timeline/)\r\n\r\nFedRAMP Rev5 Certification will not be granted to any cloud service provider after June 11, 2027. All in process agency certifications must be completed and the cloud service provider must have applied for their FedRAMP Certification by June 11, 2027. Any cloud service provider that is still In Process will no longer be able to complete that process because they will not be able to apply for FedRAMP Rev5 Certification.\r\n\r\nThis is the direction we are operating under today, and have made clear to the public and to every federal agency nearly a year in advance. \r\n\r\nThe reality on June 11, 2027 may change based on the situation a year from now, but anyone making an assumption that it will change is taking quite a risk.\r\n\r\n\r\n\r\n"
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BEUGU",
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-17908116",
+      "author": "badgerinspace",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-08-05T15:05:45Z",
+      "updated_at": "2026-08-05T15:05:45Z",
+      "upvotes": 3,
+      "minimized": false,
+      "body": "[VDR-TFR-NMV](https://www.fedramp.gov/2026/reference/vulnerability-detection-and-response/#non-machine-verification-and-validation) states \"Providers MUST verify and validate the status of non-machine-based information resources at least once every 3 months\" and once you break down the definitions, I'm interpreting the requirement as:\r\n\r\n\"CSPs must verify and validate documentation, personnel, and budgets every 3 months\"\r\n- Where verification effectively means: \"collecting some sort of evidence that documentation, personnel records, and budgets are actually being followed\" and\r\n- Where validation effectively means: \"checking that the collected evidence shows documentation personnel records and budgets are being followed correctly\"\r\n\r\nIs this an accurate interpretation of the requirements involved? And while the -1 controls in each control family in Rev5 would revert back to the ODPs, wouldn't this effectively create a new and different requirement for the policies and procedures (as well as various other documents)? Instead of reviewing them every 1/3 years, now they'd need to be verified and validated every 3 months. And then finally, if all of the above is true, would it make sense to notate this on the \"Rev5 Control Guidance\" page, given there's no direct mention that a VDR rule is impacting documentation?",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BFBwc",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18095132",
+          "author": "badgerinspace",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-08-20T15:15:29Z",
+          "updated_at": "2026-08-20T15:15:29Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Hello, any follow up on the above question?"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BGKC_",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18391231",
+          "author": "mmaesc1",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-09-10T19:36:39Z",
+          "updated_at": "2026-09-10T19:36:39Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Same question from the tooling angle. If VDR-TFR-NMV means documentation, personnel and budgets get verified and validated every 3 months, should those show up in the MAS inventory (MAS-CSO-IIR) with a last verified date, the same way machine resources are tracked under VDR-TFR-MVF? Trying to decide whether they are inventory rows or live somewhere else."
+        },
+        {
+          "id": "DC_kwDOOxfoic4BGSV_",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18425215",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-09-13T20:14:18Z",
+          "updated_at": "2026-09-13T20:14:18Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Apologies for the delayed response:\r\n\r\n> \"CSPs must verify and validate documentation, personnel, and budgets every 3 months\"\r\n>\r\n>    Where verification effectively means: \"collecting some sort of evidence that documentation, personnel records, and budgets are actually being followed\" and\r\n>    Where validation effectively means: \"checking that the collected evidence shows documentation personnel records and budgets are being followed correctly\"\r\n>\r\n> Is this an accurate interpretation of the requirements involved?\r\n\r\nYes! This is exactly what's intended and is a perfect of example of drawing all the reusable definitions/etc. into a more human-approachable phrasing. \r\n\r\n> Instead of reviewing them every 1/3 years, now they'd need to be verified and validated every 3 months. \r\n\r\nYes.\r\n\r\n> And then finally, if all of the above is true, would it make sense to notate this on the \"Rev5 Control Guidance\" page, given there's no direct mention that a VDR rule is impacting documentation?\r\n\r\nThe SP 800-53 Rev5 -01 controls don't require verification and validation in the same way the VDR does. Reviewing and updating policies is not the same as verifying the policies are in place and validating that they are working. You can do the latter frequently without needing to do the former - though in a situation where a verification or validation fails, you'd probably want to consider updating the policy. Same thing if a law or rule changes which might trigger the need to develop/document/disseminate updated policies - but if there's no law/rules changes then no trigger to develop/document/disseminate. \r\n\r\nI guess we could require an ODP for the typical (-01 c.2) enhancements including \"failing a check in the VDR\" for the organization-defined events but that seems unnecessary since it's built into the VDR?\r\n\r\nDoes that make sense? \r\n\r\n> Same question from the tooling angle. If VDR-TFR-NMV means documentation, personnel and budgets get verified and validated every 3 months, should those show up in the MAS inventory (MAS-CSO-IIR) with a last verified date, the same way machine resources are tracked under VDR-TFR-MVF? Trying to decide whether they are inventory rows or live somewhere else.\r\n\r\nIt makes sense to track last verified dates in the MAS, but you'd also summarize this verification and validation in your vulnerability detection and response activity reports.\r\n\r\n\r\n"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BGVg7",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18438203",
+          "author": "badgerinspace",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-09-14T18:26:04Z",
+          "updated_at": "2026-09-14T18:26:04Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thanks @pete-gov, if I'm understanding your response correctly, it sounds like VDR-TFR-NMV applies to the -01 controls, so CSPs will be expected to follow their own established review/update cadence (base control language) for policies and procedures as well as validating and verifying the same policies and procedures. These timelines could be entirely independent of each other, depending on CSP choices.\r\n\r\nI think it would be a good idea to notate on the [Rev5 Control Guidance](https://www.fedramp.gov/2026/reference/rev5-control-guidance/) page that the -01 controls (and other documentation-focused controls) must follow the VDR rules, or at least that specific rule. Similar to how the RA-05 controls state the following:\r\n\r\n_Follow the FedRAMP Vulnerability Detection and Response and Vulnerability Evaluation and Reporting rules._\r\n\r\nWithout the callout on documentation controls needing to meet rule VDR-TFR-NMV, CSPs reading the Control Guidance page would have to know to cross-reference between that page and the VDR. Even making a callout at the top of the page as a general \"rule of thumb\" for controls requiring documentation would help and be a far easier update than adding every documentation control to the page just to notate that VDR-TFR-NMV requirements must be met."
+        }
+      ],
+      "replies_total": 4,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BEVG1",
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-17912245",
+      "author": "gmengelberg",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-08-05T21:19:19Z",
+      "updated_at": "2026-08-05T21:19:19Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "We have a Class D CSO with an existing Rev5 Agency ATO that does not meet the Cloud Native Architecture (KSI-CNA) requirement. Since no current 20x pathway exists for a non-cloud-native CSO of this Certification Class, we request clarification on the following:\r\n \r\n**Pathway & Timeline**\r\n- Is KSI-CNA waivable, or is it a hard knockout?\r\n- Does the Jan 1, 2027 mandatory CR26 deadline apply to this CSO despite no pathway?\r\n- What should we do in the interim — pause, remediate, or hold status quo?\r\n\r\n**ATO Continuity**\r\n- Does the existing Rev5 ATO remain valid on current terms until sunset, regardless of 20x pathway status?\r\n- Can the CSO still be leveraged by other CSOs?\r\n\r\n**Marketplace Listing**\r\n- Does the listing stay active while the CSO is blocked from 20x?\r\n- What would trigger a change, what notice would we receive, and when would we receive it?\r\n\r\n**Tracking & Escalation**\r\n- Is this pathway gap already logged (RFC, NTC, tracking number)?\r\n- Can PMO provide a point of contact for follow-up?",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BEXFR",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-17920337",
+          "author": "paulagosta",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-08-06T11:53:01Z",
+          "updated_at": "2026-08-06T11:53:01Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "George,\r\n\r\n20x Class D Pathways and Rules are not out yet.  As discussed yesterday, we have a pending RFC expected to be published this month or early next month that will deal with Class D 20x pilots and submissions.  Class D Pilot is expected to commence ~Oct-Mar.  This will drive alot of your answers, but I will answer the ones we do know.  \r\n\r\n**Does the existing Rev5 ATO remain valid on current terms until sunset, regardless of 20x pathway status?**\r\nRev 5 Certifications will remain in place as long as continue your FedRAMP obligations and transition appropriately to the CR26 Rulesets.\r\n\r\n**Can the CSO still be leveraged by other CSOs?**\r\nYes\r\n\r\n**Does the listing stay active while the CSO is blocked from 20x?**\r\nYour certification stays active until you stop adhering to required FedRAMP obligations to include CR26 requirements, you tell us you no longer want to be on marketplace, or we decommission Rev 5.  \r\n\r\n**What would trigger a change, what notice would we receive, and when would we receive it?**\r\nWe have a pending RFC expected to be published this month or early next month that will deal with Class D 20x pilots and submissions.  Class D Pilot is expected to commence ~Oct-Mar.\r\n\r\nThere are plenty of ways to receive information.  \r\nAttend the 20x Community update. https://www.fedramp.gov/event/20x-cwg-2026-08-12/\r\nSubscribe to our RSS Feed https://www.fedramp.gov/changelog/rss.xml\r\n\r\n**Is this pathway gap already logged (RFC, NTC, tracking number)?**\r\nSee answer above about the RFC.  \r\n\r\n**Can PMO provide a point of contact for follow-up?**\r\nIf you have general questions, please post them here.  If you have something that is solely unique to you, then email info@fedramp.gov.  \r\n\r\nPaul"
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BEVcZ",
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-17913625",
+      "author": "sboyce-sheidt",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-08-05T23:27:27Z",
+      "updated_at": "2026-08-05T23:27:27Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Did I hear correctly on this afternoon's CWG call, that if a Rev5 CSP doesn't adopt VDR and VER by 12/7/26 they will be considered non-compliant and labeled as such on the Marketplace?  So, even though there is a grace until 3/7/27 we are non-compliant on 12/8/26 if we haven't adopted all of VDR and VER?  I also heard that we could let FedRAMP PMO know where we are in implementation and supply a CAP to get there by 3/7/27. Does that mean if we provide implementation status and CAP to get there by 3/7/27 that we wouldn't be labeled as non-compliant on Marketplace?\r\n\r\nAlso, wondering if a Significant Change Assessment is considered an independent assessment for Grace Ends.  We are a Rev 5 CSP who has their annual assessment in November 2026 who will receive SAR after 1/1/2027.  Do we have a grace period until our next assessment in November 2027, or do we have to adopt the 1/1/2027 rulesets with our first Significant Change Assessment in 2027? Or must we adopt 1/1/2027 rulesets with our November 2026 annual assessment? ",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BEXBi",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-17920098",
+          "author": "paulagosta",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-08-06T11:34:18Z",
+          "updated_at": "2026-08-06T11:34:18Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "The VDR/VER requirement dates are tied to CISA BOD 26-04.  It was released on 10 June 2027 and latest implementation requirements were 180  days, which come out to about 7 Dec 2026 so we adjusted our dates for VDR/VER to align.\r\n\r\nIn general, if you don't meet in your case maintain dates, you should expect a CAP.  The CAP should have a fix NLT than date tied to the grace period and listed as deficient in the MP.  Once the grace period passes, you should expect to be pulled from marketplace and FedRAMP completely.  \r\n\r\nFirst Independent Assessment was meant to cover Initial Rev 5 Assessments and Annual Assessments, not SC support.  Please also note, that the the grace date is tied to you assessment START date, not the DUE date.  There are only a handful of CR26 rules tied to your Independant Assessment start date.  This was done because transitioning to these outside of the AA window doesn't make sense for the most part.       \r\n\r\nSo if your AA's have started every Nov, the rules explicitly tied to \"On the first FedRAMP independent assessment started after 2027-01-01\" would be tied to your Nov 2027 Assessment.  "
+        },
+        {
+          "id": "DC_kwDOOxfoic4BEh3d",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-17964509",
+          "author": "zeesharfcspab",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-08-10T14:48:41Z",
+          "updated_at": "2026-08-10T14:48:41Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "@paulagosta Thank you for clarifying that the grace date is tied to the assessment START date and applies to annual assessments only. Very helpful.\r\n\r\nFollow-up to confirm our understanding: We are an existing Rev5 Class C and Class D CSP. Our next annual assessment starts in October 2026 (before Jan 1, 2027) and will complete approximately September 2027. Based on your clarification, we understand that:\r\n\r\nOur October 2026 assessment (started before Jan 1, 2027) follows the legacy methodology\r\nThe IVV grace (\"first FedRAMP independent assessment started after 2027-01-01\") means IVV rules apply to our NEXT annual assessment starting ~October 2027\r\nNo CAP is issued between January 1, 2027 and October 2027 for IVV because the obligation has not yet been triggered\r\nCan you confirm this interpretation is correct — that we have until our next annual assessment (~October 2027) to fully transition to the CR2026 IVV rules, with no compliance gap or CAP in the interim?\r\n\r\nAdditionally: at that first assessment under the new IVV rules (~October 2027), is the expected scope the full Rev5 baseline (all 322 Class C / 409 Class D controls) or the annual mandatory controls (80/101 per IVV-CSF-AIA) with the new methodology (IVV-CSO-SEI, IVV-CSO-SEE, IVV-IAS-VIM/VEF) applied?"
+        }
+      ],
+      "replies_total": 2,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BEvdY",
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18020184",
+      "author": "badgerinspace",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-08-14T17:09:09Z",
+      "updated_at": "2026-08-14T17:09:09Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "For [VDR-CSO-SIR](https://www.fedramp.gov/2026/reference/vulnerability-detection-and-response/#sampling), the following is written: \"_Providers MAY sample effectively identical information resources..._\". This points to sampling being a optional rule, but not strictly necessary.\r\n\r\nHowever, a later VDR rule, [VDR-TFR-PSD](https://www.fedramp.gov/2026/reference/vulnerability-detection-and-response/#persistent-sample-detection), states the following: \"_Providers with Class C Certifications SHOULD persistently perform vulnerability detection on representative samples of similar machine-based information resources, at least once every 3 days._\"\r\n\r\nUnderstanding that technically SHOULD rules have some wiggle room, does the combination of these two rules read as:\r\n- A) Sampling is optional and if you do sampling, you should perform scans at least once every 3 days or\r\n- B) Sampling is not optional and you should perform scans at least once every 3 days or\r\n- C) Is something else intended?",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BEv0q",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18021674",
+          "author": "dan-fedramp",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-08-14T20:01:10Z",
+          "updated_at": "2026-08-14T20:01:10Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "[VDR-CSO-SIR](https://www.fedramp.gov/2026/reference/vulnerability-detection-and-response/#sampling) is simply saying that if you have identical resources, e.g. multiple containers spawned from the same image, it is OK to address any other monitoring requirements by selecting a sample of the identical instances rather than repeating the monitoring on every instance. \r\n\r\n[VDR-TFR-PSD](https://www.fedramp.gov/2026/reference/vulnerability-detection-and-response/#persistent-sample-detection) specifically requires vulnerability detection every 3 days. This detection cna be achieved by scanning all system components or by scanning samples of identical components. \r\n\r\nSampling is always optional.\r\n\r\n"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BEv6K",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18022026",
+          "author": "badgerinspace",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-08-14T20:42:16Z",
+          "updated_at": "2026-08-14T20:45:36Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thanks for the response Dan. That makes sense with VDR-CSO-SIR, but the way you worded your response on language of VDR-TFR-PSD makes it sound like the rule states detection must be done every 3 days, _sampling or not_. But that's not the language used in the rule. The rule explicitly states \"_on representative samples_\". If it's intended to cover all detection, sampling-based or not, I suggest an update to the rule language is needed."
+        }
+      ],
+      "replies_total": 2,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BE7ai",
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18069154",
+      "author": "mpg-CF",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-08-18T16:56:51Z",
+      "updated_at": "2026-08-18T16:58:19Z",
+      "upvotes": 2,
+      "minimized": false,
+      "body": "I have similar questions as @zeesharfcspab stated in a comment above.\r\n\r\nFor CSPs who completed their legacy Rev5 annual assessment before CR26 Rev5 was published, and whose next annual assessment does not begin again until H1 of 2027. This creates a window where several rulesets reach their maintain date without an intervening FedRAMP independent assessment. I am trying to confirm how conformance is demonstrated in the interim to avoid the stated CAP that will be given to CSPs if the maintain date is not met (stated in the CR26 Rev5 community update 8/5). My questions are as follows:\r\n\r\n1. For CSPs in the above scenario, what do CSPs need to provide to show implementation for rulesets such as CMU, FRC, IEC, IVV, MAS, CPO by the stated maintain dates if no annual assessment under CR26 is complete due to the regular annual cadence being in H1? Is it applicable to point to an upcoming annual assessment, for a rule like IVV-CSO-FIA or IVV-CSO-ICP, to show implementation in the meantime?\r\n2. SDR-CSF-CTF requires independent verification and validation fields for each control in the baseline (Class D - 409), but IVV-CSF-MCA allows coverage across three years. For a Class C/D offering, how should those fields be populated for controls not yet assessed under CR26 but have been assessed in the last three years against legacy Rev5 requirements?\r\n3. The CPO grace period seems to have a typo as the maintain date is after the grace period date. Are these flipped?",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BE-hj",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18081891",
+          "author": "paulagosta",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-08-19T15:48:39Z",
+          "updated_at": "2026-08-19T15:48:39Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "1. Status requests for transition to CR26 rules will happen mostly in conjunction with the FSI quarterly testing.   There is only one rule on the Rev 5 side that requires you to inform FedRAMP and that is CDS, since for the most part it will require action on our end if you are in Connect.  \r\n\r\nFor rules that have a grace period tied to your AA date (there are 5), we will still do a status check through FSI around the maintain dates, but will request you planned timeline if you haven't transitioned due to your AA cycle date.  \r\n\r\n2.  Those controls were assessed within the last 3 years, prior to CR26 if you are on an AA cycle.  You should treat the answer no differently and should be able to pull from previous SSP/SRTMs.  \r\n\r\n3. I don't see the issue in regards to CPO typo.  CPO Maintain date is listed as 2027-01-01 and the Grace period is listed as \"On the first FedRAMP independent assessment started after 2027-01-01\".  Can you point me to your reference?  \r\n"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BFM4m",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18140710",
+          "author": "mpg-CF",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-08-24T21:59:21Z",
+          "updated_at": "2026-08-25T13:17:40Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Hi @paulagosta, \r\nThank you for your reply! I wanted to follow-up on a couple of your answers and get some clarity. \r\n\r\n1. It was stated on the Rev5 Community Update on August 5th that CSPs who do not meet the maintain dates for rulesets will receive a CAP and it will be posted on the marketplace. Are you saying that for CSPs in the scenario I described in my original post, they will not receive a CAP due to their normal AA cadence timing but need to provide a \"planned timeline\" around the 1/1/27 maintain dates at the \"status check\"?\r\n2. One of the differences from legacy FR Rev5 to FR CR26 Rev5 is the verification and validation values. Since past AA assessments did not use these values in the SRTMs, can CSPs/IAs use the legacy Rev5 values within the SDR until those controls have been tested with the IVV? \r\n3. Located in this link. On the CPO row the maintain date is 2027-07-01 and the grace period is the first AA after 2027-01-01: https://www.fedramp.gov/2026/providers/updating/deadlines/rev5/#rev5-deadlines\r\n\r\n4. Another question for you! For CSPs who currently hold a FedRAMP cert and since \"Federal agency sponsorship responsibilities end when the cloud service offering receives a FedRAMP Certification\", can a CSP reset their AA cadence by performing and submitting their next AA earlier so future assessment are conducted within a year of that submission? I don't see any rules stating otherwise but just wanted to make sure. \r\n"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BFSme",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18164126",
+          "author": "mpg-CF",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-08-26T15:03:22Z",
+          "updated_at": "2026-08-26T15:03:22Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "HI @paulagosta @emu-gov just wanted to follow-up on the above. Thank you!"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BFS4H",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18165255",
+          "author": "paulagosta",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-08-26T16:44:04Z",
+          "updated_at": "2026-08-26T16:44:04Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Apologies for missing this.  \r\n\r\n1. Yes.  Your grace period will be tied to your H1 2027 assessment in your scenario, which should be CR26 compliant for those five rules.  Prior to that you should know the plan and timeline and it should be within 12 months of your last assessment.\r\n\r\n2. Yes.  I assume you are talking FedRAMP Parameters for controls.  Honestly, I assume most CSPs who already are certified probably stayed with the current values, since changes in those parameters should go through the SCR/SCN process and will probably happen slowly.  Happy to be wrong if that is not the case and adjustments are being made where it makes sense for CSPs. \r\n\r\n3. This was by design.  \r\n\r\n4.  Earlier yes... later no. You can change cadence to earlier, but know that your early cadence must be maintained in the outyears. \r\n\r\nOnce again, apologies for missing this and thanks for the bump."
+        },
+        {
+          "id": "DC_kwDOOxfoic4BFWA7",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18178107",
+          "author": "patnichols79",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-08-27T16:11:05Z",
+          "updated_at": "2026-08-27T16:11:05Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": " @paulagosta.  Looking at your above, still a bit confused.  Do you mind clarifying the following:\r\n\r\n1- Does this mean no CAP will be given if a CSP has a plan to meet the ruleset by the next annual assessment even if it is within the grace period? \r\n\r\n2- Historically FedRAMP SRTMs have tested examine, interview, test. When the IA is filling out the SDR for the 2/3 sample not going to be tested in the next AA, how should they fill out the verification and validation statements if they were not tested against the new defined requirement? \r\n\r\n3- So it was by design to have a maintain date after the grace period starts for Rev5 CPO but for 20X it is before? Both paths have 2 different dates for CPO where the rest align. These seems like a typo."
+        },
+        {
+          "id": "DC_kwDOOxfoic4BFWdN",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18179917",
+          "author": "paulagosta",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-08-27T19:37:00Z",
+          "updated_at": "2026-08-27T19:37:00Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Pat\r\n\r\n1.  For those five rules, Yes. You should expect to be able to answer this with time and plan on your maintain date (most likely through the next FSI test).\r\n\r\n2.  This is a great questions and transcends multiple rulesets (SDR and IVV). \r\n\r\nWithin the SDR, providers MUST also include short and simple high-level summaries of at least the following for each applicable Rev5 Control... This includes 6. Independent verification.  7. Independent validation and 8. Any responses or clarifications to the comments in the independent verification or validation.\r\n\r\nTo me, 8 is where a provider should differentiate those previous controls validation (6/7) and identify in (8) the date of assessment for annual assessments.\r\n\r\n3.  I clearly cannot differentiate between 7s and 1s.  I dont know how many times I looked at this and still read both dates 01/01/2027 and couldnt figure out what the issue is.  I put in a request to update.  @mpg-CF I owe you an apology and a cold drink for reading what I want.  "
+        },
+        {
+          "id": "DC_kwDOOxfoic4BFWkf",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18180383",
+          "author": "mpg-CF",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-08-27T20:45:29Z",
+          "updated_at": "2026-08-27T20:45:29Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "I will absolutely take you up on the drink (!) but no apology needed. We are all figuring this out together and I appreciate how responsive you have been. Thank you for the clarity and I will let you know the next time I am in DC ;)\r\nThank you @paulagosta & @patnichols79 "
+        },
+        {
+          "id": "DC_kwDOOxfoic4BFWvB",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18181057",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-08-27T22:13:58Z",
+          "updated_at": "2026-08-27T22:13:58Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> The CPO grace period seems to have a typo as the maintain date is after the grace period date. Are these flipped?\r\n\r\nJust following up after Paul to double confirm that these are supposed to be different for 20x vs Rev5, but yes the Grace Ends for the CPO should be on the first FedRAMP independent assessment after 2027-07-01, not the first assessment after 2027-01-01. Good catch."
+        }
+      ],
+      "replies_total": 8,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BE_YV",
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18085397",
+      "author": "ElaineFR",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-08-19T23:11:31Z",
+      "updated_at": "2026-08-19T23:11:31Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Hello! Question: for an existing Rev 5 adoption of CR 26, I understand that the only rules we are required to implement are those classified as \"Rev 5\" and \"All,\" and that any that are labeled 20x would be filtered out. Can I get a confirmation on this please? We want to make sure we scope correctly. ",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BFBQJ",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18093065",
+          "author": "emu-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-08-20T12:18:46Z",
+          "updated_at": "2026-08-20T12:18:46Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "You are correct, only rules with applicability for Rev5 would have to be met in a Rev5 Certification.\r\n\r\nALL 15 Rulesets (AFC, CDS, VDR, etc.) are applicable to both Rev5 & 20x. The big difference is Controls (Rev5) vs KSIs (20x).\r\n\r\nThe Subsets within each Ruleset identify the applicability (Type, Path, Class, Audience). So rules nested under a Subset with REV5 applicability would be in scope. Some rules have differences based on Class at the rule level as well."
+        },
+        {
+          "id": "DC_kwDOOxfoic4BFBi6",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18094266",
+          "author": "ElaineFR",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-08-20T13:51:23Z",
+          "updated_at": "2026-08-20T13:51:23Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "This is incredibly helpful, thanks!! I was overscoping this till Secure IT shared this with me yesterday. Appreciate the confirmation! 🙏🏻 "
+        }
+      ],
+      "replies_total": 2,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BFFHV",
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18108885",
+      "author": "ElaineFR",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-08-21T17:15:12Z",
+      "updated_at": "2026-08-21T17:15:12Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Hello, for a Lost Sponsor/Readiness Conversion Rev 5 path, what deliverables are expected at our next annual assessment? I understand that SAP/SAR/RET are legacy now, so it would be great to get clarity on scoping the audit with our independent assessor. Thank you! (and happy Friday!!)",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BFL3g",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18136544",
+          "author": "ElaineFR",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-08-24T14:38:48Z",
+          "updated_at": "2026-08-24T14:38:48Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "@emu-gov, @paulagosta, can you help with this question please? ^^ 😊 "
+        },
+        {
+          "id": "DC_kwDOOxfoic4BFMRJ",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18138185",
+          "author": "paulagosta",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-08-24T16:48:13Z",
+          "updated_at": "2026-08-24T16:48:13Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Your Certification Package Overview and Security Decision Record will contain your assessment results now.  "
+        },
+        {
+          "id": "DC_kwDOOxfoic4BFMXX",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18138583",
+          "author": "ElaineFR",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-08-24T17:30:37Z",
+          "updated_at": "2026-08-24T17:30:37Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "@paulagosta, thank you!! Additionally, what is the expectation for Rev 5 POA&M reporting? It seems to me that with VER-RPT-NID, we should **not** be publishing a traditional monthly POA&M, but only including information per VDR/VER specifications. \n\nCan you please confirm? "
+        },
+        {
+          "id": "DC_kwDOOxfoic4BFMov",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18139695",
+          "author": "paulagosta",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-08-24T19:38:52Z",
+          "updated_at": "2026-08-24T19:38:52Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Elaine,\r\n\r\nYes.  When you transition to VDR/VER, POA&M requirements go away.  You will transition to FedRAMP Vulnerability Detail Report (VER-RPT-VDT) and a human readable Monthly Activity Report (VER-TFR-MHR).\r\n\r\nYour tempo for agency meetings also changes to a quarterly requirement in accordance with Collaborative Continuous Monitoring (CCM-QTR-MTG).  "
+        },
+        {
+          "id": "DC_kwDOOxfoic4BFMv5",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18140153",
+          "author": "ElaineFR",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-08-24T20:39:53Z",
+          "updated_at": "2026-08-24T20:39:53Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Great!! Thank you! "
+        },
+        {
+          "id": "DC_kwDOOxfoic4BFNV9",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18142589",
+          "author": "ElaineFR",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-08-25T02:53:04Z",
+          "updated_at": "2026-08-25T02:53:04Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "@paulagosta, I am advising my leadership team to push VDR/VER to GovRAMP in place of the traditional conmon. We can still pay their $1000 / month fee, but I cannot fathom running both processes. \n\nI know you can't offer business advice here, but have you heard other providers' stance on this? Do you know if others intend to use VDR/VER in place of monthly POA&M and conmon processes outside of FedRAMP? "
+        },
+        {
+          "id": "DC_kwDOOxfoic4BFPUz",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18150707",
+          "author": "paulagosta",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-08-25T15:53:37Z",
+          "updated_at": "2026-08-25T15:53:37Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Elaine,\r\n\r\nThere are consortiums that have active agency in multiple xxxRAMP spaces that hold practitioner meetings for these types of discussion and actions.  \r\n\r\nThis is not an endorsement by any means, but multiple members of the PMO are speaking at an event hosted by one of those consortiums in Sep.  The second day is open to all FedRAMP stakeholders.  https://www.fedramp.gov/event/FR-day-fall-26/"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BFPhZ",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18151513",
+          "author": "ElaineFR",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-08-25T17:12:13Z",
+          "updated_at": "2026-08-27T00:13:28Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Paul, thank you - planning to be there! And it would seem with every question you answer, I think of three more. 🤦🏼‍♀️ \r\n\r\nWith CR26, what is the best way to prep for our next assessment? I was thinking we update all legacy docs - but because of SDR and CPO, would it be sufficient to ask our assessor to tailor the next assessment to CR26 Rev 5 only? We don't want to overscope by dragging our entire Rev 5 package in, if it isn't needed. \r\n\r\nAdditionally, I heard someone say today that eventually, all providers will be expected to adopt 20x by 2028. Is that true? \r\n"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BFTV2",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18167158",
+          "author": "ElaineFR",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-08-26T19:54:28Z",
+          "updated_at": "2026-08-27T00:09:46Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "@paulagosta, bumping this one up! 🙏🏻 "
+        }
+      ],
+      "replies_total": 9,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BFMGS",
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18137490",
+      "author": "pdudek-3PAO",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-08-24T15:45:25Z",
+      "updated_at": "2026-08-24T15:45:25Z",
+      "upvotes": 2,
+      "minimized": false,
+      "body": "Hello, for CSPs with an existing Rev5 Class C certification looking to uplift their offering to Rev5 Class D via agency sponsor, will this have to be completed/submitted by the June 2027 Rev5 cutoff for new Rev5 submissions? Thanks!",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BFMQg",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18138144",
+          "author": "paulagosta",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-08-24T16:43:35Z",
+          "updated_at": "2026-08-24T16:43:35Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Pete,\r\n\r\n100% Yes.  We will not accept a Rev 5 uplift or net-new Certification after June 11, 2027.  It doesnt matter what date they entered the agency pipeline.  "
+        },
+        {
+          "id": "DC_kwDOOxfoic4BFMQ_",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18138175",
+          "author": "pdudek-3PAO",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-08-24T16:45:49Z",
+          "updated_at": "2026-08-24T16:45:49Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thanks, Paul!"
+        }
+      ],
+      "replies_total": 2,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BFPzT",
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18152659",
+      "author": "badgerinspace",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-08-25T19:11:50Z",
+      "updated_at": "2026-08-26T03:19:38Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Hello, after reviewing the timelines and process involved for adopting VDR/VER for CSPs, I have several questions:\r\n\r\n- Is it accurate to say that while there are deadlines of Dec 7th and March 7th involved, there's no external validation or verification that what a CSP claims to be in place, actually is? In other words, a CSP could claim to be meeting the requirements, but won't actually get tested against this until their next annual assessment; is that accurate?\r\n- If CSPs are following the SCR process still, do they need to complete a SCR to adopt VDR/VER processes, considering it's a large change to how vulnerabilities are processed and reported?\r\n- If CSPs are following the SCN process, do they need to complete a SCN? If so, would this be considered a transformative SCN and (likely) trigger an assessment of the change from an independent assessor?\r\n\r\nIf a SCR isn't required or a transformative SCN assessment isn't required, is there anything in place to validate and verify that a CSP is following VDR/VER before their next annual assessment?",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BFSGS",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18162066",
+          "author": "paulagosta",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-08-26T12:01:53Z",
+          "updated_at": "2026-08-26T12:50:16Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "1. If you are claiming that you are VDR or VER compliant there will be evidence within your repo and within your ConMon optempo and outputs.  Agencies participating in ConMon should be able to easily identify who has changed and identify deficiencies to FedRAMP.  We will work with our agency liaisons and our monthly agency touchpoints to ensure they are prepared.  CSPs should work with them as part of their ConMon processes, to ensure you all are aligned.  Changes to VDR/VER should trigger a Significant Change so there will also be historic change information and impact in your repo and your agency should be engaged during that process.\r\n\r\nI'm a little worried about what this question is getting at, but if anyone purposely misrepresents their status to FedRAMP or their Agencies, I will recommend to leadership that we bypass a CAP and go straight to delisting.  \r\n\r\n2. Yes.  VDR and VER will most likely affect controls (probably CA-1, CA-5, CA-7) and should be treated as a significant change, regardless if you follow SCR or SCN.  For the control snipers out there... there are probably more controls affected, but its early and I am still on my first coffee.\r\n\r\n3.  Yes.  We expect most of these to be adaptive, but the reality is going to be dependent on the changes you need to make to be compliant.  SCN-ADP-NTF contains a section called \"Tips on adaptive changes\" that has some circumstances listed out as well as a similar section in Transformative section (look at key tests).  Also, if your transition to VDR/VER  is transformative, Independent validation is only required where human validation is needed.\r\n"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BFShZ",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18163801",
+          "author": "badgerinspace",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-08-26T14:34:07Z",
+          "updated_at": "2026-08-26T14:34:07Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thanks Paul, appreciate the clarity! To clarify why I'm asking these questions, I'm not looking to exploit potential loopholes or gaps in coverage, but to have a solid backing on why \"xyz thing must be done on this timeline\" and to understand the consequences if they aren't. From an advisory standpoint, I'm hearing arguments trying to pick apart the guidance and find loopholes, so any info like what you've provided helps reinforce that these timelines cannot be skipped or cheated.\r\n\r\nAppreciate all the feedback!"
+        }
+      ],
+      "replies_total": 2,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BFSxz",
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18164851",
+      "author": "ericmoss54",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-08-26T16:08:51Z",
+      "updated_at": "2026-08-26T16:08:51Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Question for rev 5 going forward: Previously, the PMO has assigned specific testing methods (Examine, Interview, Test) for each assessment procedure in its templates. Going forward, is this now at the discretion of the 3PAO what methods are used for each assessment procedure? \r\n\r\n800-53A defines these methods, but doesn't offer specific guidance about how these are set other than we are not expected to use all methods on all procedures. ",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BFTCL",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18165899",
+          "author": "paulagosta",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-08-26T17:50:18Z",
+          "updated_at": "2026-08-26T17:50:18Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Eric,\r\n\r\nIf you are following legacy processes and templates, continue to use the SRTM requirements.  If your unique situation requires/needs deviation or the totality of control can be assessed differently, document the what and why and make the adjustment. The SAP Section 5.1 has a section for \"alternative control implementations\" and \"deviations from the defined methodology.\"\r\n\r\nIf you are following the CR26 IV&V Ruleset the test method is not prescribed.  Independent Assessors should defined the correct test using 800-53A as a guideline.  \r\n\r\nBefore it is asked, yes you can continue to use the old SRTM test types in IV&V, but it is not required.   "
+        },
+        {
+          "id": "DC_kwDOOxfoic4BFVjn",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18176231",
+          "author": "jsantore-sf",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-08-27T13:26:55Z",
+          "updated_at": "2026-08-27T13:26:55Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "@ericmoss54: As one of the people involved in updating the SRTM from Rev 4 to Rev 5, I can say that the EIT designations were subjective and not proscriptive (and this caused some confusion actually, and apparently still does).  This structure was based on the prior Rev 4 SRTM/Test Case Workbook. Further discussions with the FedRAMP reviewers at the time, they seemed to not care which test method as long as the assessor sufficiently was able to validate the control.  Basically, use the method or methods that work best to do so.  \r\n\r\nI can't speak for the current PMO reviewers, but I don't believe they are being doctrinaire regarding the test methods either.  If you have a reason for deviating from the SRTM methods, I would think you'd be ok as long as you can defend the rationale.  "
+        },
+        {
+          "id": "DC_kwDOOxfoic4BFV23",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18177463",
+          "author": "ericmoss54",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-08-27T15:09:14Z",
+          "updated_at": "2026-08-27T15:09:14Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "@paulagosta I appreciate the feedback\r\n@jsantore-sf Thanks for the confirmation as well. We've run across some periodically where we have to test another way for one reason or another. I just wanted confirmation what the PMO's expectations were here.\r\n"
+        }
+      ],
+      "replies_total": 3,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BFS8w",
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18165552",
+      "author": "TM-Microsoft",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-08-26T17:14:23Z",
+      "updated_at": "2026-08-26T17:14:23Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Hi FedRAMP Team,\r\nWe're looking for clarification on how the JSON schema should represent the data points for the SDR‑CSO‑FRR and SDR‑CSF‑CTF rules.\r\n \r\nSpecifically:\r\nShould the data outputs for these rules be captured as separate fields within the JSON schema, or is it acceptable for FedRAMP purposes to combine the data into a single field, which would help narrate the implementation, verification, and validation a bit easier, as long as the CSP clearly documents the structure?",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BFTAC",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18165762",
+          "author": "paulagosta",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-08-26T17:34:52Z",
+          "updated_at": "2026-08-26T17:34:52Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "@dan-fedramp built and tested all of the schemas.  He is out this week, but I tagged him, so when he gets back and is rested he can answer.  "
+        },
+        {
+          "id": "DC_kwDOOxfoic4BFj-x",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18235313",
+          "author": "dan-fedramp",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-09-01T14:41:34Z",
+          "updated_at": "2026-09-01T14:41:34Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "CSPs are encouraged to organize their responses in the SDR in a way that makes sense and effectively communicates the CSPs solution including any residual risk to an Agency reviewer.  If combining the data into a single field makes the most sense then you are encouraged to do so. \r\n\r\nOne additional note on SDR‑CSO‑FRR and SDR‑CSF‑CTF in particular. These requirements are not intended to have the CSP re-list all of their requirement/control responses. Rather the response to these requirements should describe the process used to ensure compliance. For example, implementation might describe how the CSP's GRC tool generates the SDR. Verification could be a script used to validate the completeness and format of the SDR that is run as part of a publication workflow. And the validation would be the output of the script for the current SDR version."
+        }
+      ],
+      "replies_total": 2,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BGBnq",
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18356714",
+      "author": "adamstc1",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-09-08T20:53:00Z",
+      "updated_at": "2026-09-08T20:53:00Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "FedRAMP team,\r\n\r\nWe believe there's a little ambiguity in how the VDR-TFR-PVR remediation clock is determined when a vulnerability is evaluated. \r\n\r\nThe text in question under VDR-TFR-PVR:\r\n\"Providers with Class C Certifications SHOULD partially mitigate vulnerabilities, fully mitigate vulnerabilities, or remediate vulnerabilities to a lower Potential Agency Impact N-rating within the timeframes from evaluation shown below, factoring for the current Potential Agency Impact N-rating. . . .\"\r\n\r\n**Is the deadline for remediation or PAIN downgrades based on the initial evaluation date? Or is the deadline recalculated based on movement to a lower PAIN rating (or even LEV/IRV value)?**\r\n\r\nAs an example for Rev5 Class C providers:\r\n- Let's say we have a PAIN-3, LEV+IRV vulnerability detected on 9/1 and evaluated on 9/2. \r\n- This deadline to act on this vulnerability is 16 days from evaluation, which is would 9/18.\r\n- 16 days later on 9/18, we apply a mitigation that makes it PAIN-2, LEV+NIRV, which has a deadline of 128 days.\r\n- Is the new deadline 9/18 + 128 days based on the movement to a lower PAIN rating? or always based on the original evaluation 9/2 + 128 days?\r\n\r\nAppreciate any clarity you all could provide here.",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BGBqg",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18356896",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-09-08T21:10:26Z",
+          "updated_at": "2026-09-08T21:10:26Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> We believe there's a little ambiguity in how the VDR-TFR-PVR remediation clock is determined when a vulnerability is evaluated.\r\n\r\nIf you stick to the wording it should be fine, I think there's just a habit that's formed from previous guidance that the counter never reset if you mitigated vulnerabilities (which was bad). The wording in the rule is deliberate and intended to eliminate that ambiguity - the goal is to reduce the PAIN.\r\n\r\nThe outcome of a successful mitigation of PAIN should be a new evaluation which determines there is a different set of risks and the clock resets based on that evaluation. The deadlines take this into account.\r\n\r\n> Is the deadline for remediation or PAIN downgrades based on the initial evaluation date? Or is the deadline recalculated based on movement to a lower PAIN rating (or even LEV/IRV value)?\r\n\r\nThe clock is intended to reset when mitigations have meaningfully reframed the vulnerability, because all of the risks/etc. have changed. The goal is to encourage mitigation as the highest priority - you should never wait for a remediation to be available when you can apply mitigations to reduce the potential of a vulnerability to be exploited or the potential damage. \r\n\r\nAs a reminder, these \"deadlines\" are intended to be absolute worst-case and will be exceeded consistently by providers with good security programs. :)\r\n\r\n> Is the new deadline 9/18 + 128 days based on the movement to a lower PAIN rating?\r\n\r\nYes."
+        },
+        {
+          "id": "DC_kwDOOxfoic4BGBzs",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18357484",
+          "author": "adamstc1",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-09-08T22:01:10Z",
+          "updated_at": "2026-09-08T22:01:10Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thanks Pete for the quickly reply and clarity here."
+        }
+      ],
+      "replies_total": 2,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BGKCy",
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18391218",
+      "author": "mmaesc1",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-09-10T19:34:51Z",
+      "updated_at": "2026-09-10T19:34:51Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Question on VER-EVA-EPA. The N4 and N5 definitions turn on how many agencies are affected, and FRD-PAI says the impact is cumulative across all agencies using the service. So does a vulnerability on a shared resource (say a core database that several agencies sit on) rate N4 or N5 because of breadth, even if the hit to any one agency would only be N3?\r\n\r\nAnd is the expectation that we work that out from the inventory, which resources serve which agencies, rather than estimate it per vulnerability by hand? We build tooling and want to compute this the way you intend.",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BGKDs",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18391276",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-09-10T19:41:37Z",
+          "updated_at": "2026-09-10T19:41:37Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "The PAIN rating is based on cumulative effect to the federal government, so yep - if it's disruptive to one customer then N3 but disruptive to more than one then N4. You example of a vuln on a shared resource such as a core database would be likely to affect all customers so it increases the PAIN.\r\n\r\n> And is the expectation that we work that out from the inventory, which resources serve which agencies, rather than estimate it per vulnerability by hand? We build tooling and want to compute this the way you intend.\r\n\r\nYes, absolutely - a simple rules engine should be able to address many cases, but the nuance will vary a lot depending on your own technical environment. We've seen situations where infrastructure is configured such that it's easy to identify problems with a specific tenant in a specific area that aren't likely to affect others and folks should use that to lower the PAIN automatically... for example, if only one of your agency customers is using a particular sub-service then vulnerabilities in that sub-service can be automatically scoped to that customer easily."
+        },
+        {
+          "id": "DC_kwDOOxfoic4BGMdJ",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18401097",
+          "author": "mmaesc1",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-09-11T12:58:39Z",
+          "updated_at": "2026-09-11T12:58:39Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "thanks!\r\n"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BGMnK",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18401738",
+          "author": "ExtremoPenguin",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-09-11T13:42:59Z",
+          "updated_at": "2026-09-11T13:43:43Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Some follow up questions:\r\n1) If a CSO currently has only one agency customer, would N5 never apply since there are not multiple federal agencies to be impacted?\r\n2) If a CSO is still seeking its first federal customer, how should N ratings be evaluated since they all require impact to at least one agency.\r\n3) For a CSO that is not directly used by agencies but is leveraged by other CSOs that may or may not have agency customers, how should you evaluate the number of impacted agencies?\r\n\r\nIt feels like the conservative, simpler, and more correct security-wise approach for most CSOs would be to evaluate all vulnerabilities as if they impact multiple agencies."
+        },
+        {
+          "id": "DC_kwDOOxfoic4BGMx_",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18402431",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-09-11T14:35:45Z",
+          "updated_at": "2026-09-11T14:35:45Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> 1. If a CSO currently has only one agency customer, would N5 never apply since there are not multiple federal agencies to be impacted?\r\n\r\nCorrect.\r\n\r\n> 2. If a CSO is still seeking its first federal customer, how should N ratings be evaluated since they all require impact to at least one agency.\r\n\r\nThere is no PAIN without agency impact, however if a cloud service offering has no data to provide about their historical handling of vulnerabilities then it may be difficult to assess the quality of their vulnerability detection and response program. We don't have hard requirements here but would expect folks who take this seriously to simulate PAIN or apply it to their commercial customers/etc.\r\n\r\n> 3. For a CSO that is not directly used by agencies but is leveraged by other CSOs that may or may not have agency customers, how should you evaluate the number of impacted agencies?\r\n\r\nThe VER is focused entirely on requirements for reporting to likely or certainly impacted federal customers. It does not weigh in on requirements for reporting to commercial customers because that would be outside the scope of FedRAMP's authority.\r\n\r\nThere is no direct PAIN in this case, same as #2, so it is up to the cloud service offering to demonstrate their commitment to their commercial customers. Cloud service offerings that use other cloud services should address risks in their MAS.\r\n\r\n> It feels like the conservative, simpler, and more correct security-wise approach for most CSOs would be to evaluate all vulnerabilities as if they impact multiple agencies.\r\n\r\nYes. The VDR/VER are designed to allowed both qualitative and quantitative assessment of how effective a cloud service offering's vulnerability detection and response is, and how seriously they take such activities. Cloud service offerings that prioritize responding to any potentially serious vulnerability, regardless of potential agency impact, are more likely to score higher when evaluated for their performance and capabilities in this area...  especially compared to cloud service offerings that barely meet deadlines and rarely respond to vulnerabilities as a priority.\r\n\r\n"
+        }
+      ],
+      "replies_total": 4,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BGMdO",
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18401102",
+      "author": "mmaesc1",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-09-11T12:59:02Z",
+      "updated_at": "2026-09-11T12:59:02Z",
+      "upvotes": 2,
+      "minimized": false,
+      "body": "We build GRC tooling for Rev5 providers. A question we keep getting from providers and their advisors: after a provider adopts VDR/VER and stops producing a POA&M, some agency AOs are expected to keep asking for the legacy POA&M and SSP anyway, at least for a while. AGU-AGC-NAR reads like an agency needs a head-of-agency determination and has to notify FedRAMP before requiring anything beyond the FedRAMP package. In practice, what does FedRAMP expect a provider to do when an agency asks for legacy artifacts after December 7? Point them at the rule, produce both for a transition period, or something else?\r\n\r\n\r\n\r\n\r\n\r\n",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BGMjS",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18401490",
+          "author": "paulagosta",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-09-11T13:23:07Z",
+          "updated_at": "2026-09-11T13:23:07Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "1. Your FedRAMP Certification is tied to your adherence to FedRAMP rules and requirements. \r\n\r\n2. FedRAMP Authorization Act, (Section 3614 #3) Requires Agencies \"to the extent practicable, for any cloud computing product or service the agency seeks to authorize that has received a FedRAMP authorization, **use the existing assessments of security controls and materials** within any FedRAMP authorization package for that cloud computing product or service.\"   If an agency has unique needs above FedRAMP requirements, they have always been allowed to require those and we regularly see these in Rev5 for some agencies (as noted above).  I would check with your agency contracts for specific terminology and requirements outside of FedRAMP. \r\n\r\n3. For your SSP, the CPO and SDR require a machine and human readable version.  The majority of components in an SSP reside within the CPO and SDR.  They will still receive the same information. \r\n\r\n4. VDR/VER transitions are tied to CISA BOD 26-04.  The entire Agency (not just FedRAMP CSPs) will be required to move to a VDR/VER like process.  Our 12/07 date is explicitly tied to the BOD Phase II timeline so that Federal and FedRAMP CSP requirements and dates aligned.  \r\n\r\n "
+        },
+        {
+          "id": "DC_kwDOOxfoic4BGMwq",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18402346",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-09-11T14:28:28Z",
+          "updated_at": "2026-09-11T14:28:28Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "To add, FedRAMP is not in a business relationship with any cloud service providers. Cloud service providers and agencies enter into contracts about what the cloud service provider will do, and the agency should be expected as a customer to have additional expectations. If a customer using a product asks a business for something that customer wants, what should the business do? \r\n\r\nThe only time when FedRAMP would chime in on anything like that is if a customer is asking for something that would jeopardize the FedRAMP Certification of that business. In that case, FedRAMP would expect the business to navigate this by finding a way to meet FedRAMP requirements while addressing their customer needs regardless.\r\n\r\n> In practice, what does FedRAMP expect a provider to do when an agency asks for legacy artifacts after December 7? \r\n\r\nFedRAMP expects providers to work with their customers to ensure they have a positive customer experience with the product they are offering.\r\n\r\nIn the particular case of requesting additional materials such as an OG POA&M, that is a trivial request that has no relation whatsoever to the FedRAMP Certification and is not even an additional security requirement. It's an agency customer asking for some custom information in a custom spreadsheet. This has no negative impact on a FedRAMP Certification or a businesses ability to deliver required materials to other agency customers. \r\n\r\nAnd for any business that is adopting modern tooling to manage the VDR/VER requirements, it should be a trivially automatable output to provide to customers that want it.\r\n"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BGNBU",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18403412",
+          "author": "mpg-CF",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-09-11T16:13:33Z",
+          "updated_at": "2026-09-11T16:13:53Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Hey @pete-gov , \r\n\r\nI had a CSP point me to the following section of the FR CR26 rule/requirements. Can you help me understand how this is applied based on your above comment? \r\n\r\nhttps://www.fedramp.gov/2026/agencies/use/ongoing/poams/#:~:text=Cloud%20service%20providers%20should%20not%20be%20expected%20to%20convert%20their%20vulnerability%20lists%2C%20product%20security"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BGNGs",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18403756",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-09-11T16:50:43Z",
+          "updated_at": "2026-09-11T16:50:56Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> I had a CSP point me to the following section of the FR CR26 rule/requirements. Can you help me understand how this is applied based on your above comment?\r\n\r\nAgencies are required to create POA&Ms for their federal information systems as appropriate. Their federal information systems may use external cloud services. For an agency POA&M to be valid, they must have the authority and capability to effect the plan of action. POA&Ms that a cloud service provider makes are for themselves and their own system, not the agency information system that uses their services. They inform the agency of the risks of continuing to use that service.\r\n\r\nAn agency cannot take a POA&M directly from a cloud service provider and apply it to their agency information system because the agency does not have any responsibility or authority to actually see the plan through. They can, however, take this type of information and use it to create their own POA&Ms based on the information provided by the external service.\r\n\r\nThe linked admonition is intended to make that separation. A cloud service provider can maintain POA&Ms for its service, and an agency can use those POA&Ms to create their own POA&Ms. As agencies are used to do things for their POA&Ms in a certain way, it makes sense that some of them will want to receive vulnerability information in a traditional POA&M format instead of translating other provider-supplied information. \r\n\r\n**Example:**\r\n\r\n1. A cloud service provider identifies a vulnerability in their system where the SSL library on their servers needs to be updated. They create a plan to mitigate or remediate this vulnerability. They share this plan with their agency customers. \r\n\r\n2. The agency has no authority or capability to take action on this plan. They must wait for the cloud service provider to mitigate or remediate the vulnerability. They will assess the potential impact to their own use of the system and may determine an agency POA&M is necessary. That POA&M may say \"we will halt use of this external service until the SSL library is updated\" etc.\r\n\r\nHistorically some agencies would unfortunately copy/paste any POA&M from the provider instead of properly addressing the risk of the provider supplied POA&M information by creating an agency POA&M based on the provider POA&M. They did this because sentences like the above are confusing AF, and applying the same terms in the same way creates situations where agencies incorrectly understood the cloud service provider to managing the agency risks on their behalf. Agencies should not do that, it's bad, it's dangerous, and it's wrong.\r\n\r\nThe information in # 1 can be in many different formats; FedRAMP has an opinion on the standardized way to share that, and it is required to maintain FedRAMP Certification. We no longer call it a POA&M or structure it in the way agencies structure their POA&Ms partially to make it clear to everyone involved that agencies must manage the portions of their risk that are under their authority and control and cannot delegate this to an external service.\r\n\r\n"
+        }
+      ],
+      "replies_total": 4,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BGNWg",
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18404768",
+      "author": "badgerinspace",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-09-11T18:26:22Z",
+      "updated_at": "2026-09-11T18:26:22Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "What is the process FedRAMP is planning on implementing for CSPs not meeting the Dec 7th deadline for VDR/VER? Will they be forced onto a CAP if they're meeting 80% of the rules or is there a specific threshold expected for when a CAP will get issued?\r\n\r\nAdditionally, if a CAP is determined to be applicable for a CSP, what methods will FedRAMP use for labeling/notifications? Historically there have been callouts via email or on FedRAMP's meetings for non-compliant CSPs, but I believe it was also previously mentioned that CSPs could be labeled as non-compliant or on a CAP directly on the marketplace. Is there clarification around how this process would work and what CSPs could expect here?",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BGNdc",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18405212",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-09-11T19:14:24Z",
+          "updated_at": "2026-09-11T19:14:24Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "The core of the December 7 deadline is based on the expectations set by CISA BOD 26-04 - CISA has told all agencies they have until that time to reach Phase III wherein they are ensuring all information systems have adopted a risk-based approach to prioritization and remediation of vulnerabilities. How FedRAMP responds after this deadline will depend on how CISA responds government-wide - CISA might do anything from extending the deadline to mandating that systems not following the updated approach be turned off. \r\n\r\n[Understanding Ruleset Effective Dates](https://www.fedramp.gov/2026/providers/updating/deadlines/?h=%22grace+period%22#understanding-ruleset-effective-dates) in the Important Deadlines section for Cloud Service Providers explains what the Maintain and Grace Ends dates mean:\r\n\r\nAfter December 7, 2026, FedRAMP will request a corrective action plan from cloud services that do not meet the VDR/VER rules. This corrective action plan will be expected to show how the provider will meet the VDR/VER rules. This should not be a burden for any provider because any responsible provider will already be working through a plan to adopt these rules and will just need to share that with us and their agency customers.\r\n\r\nCloud service providers that do not meet FedRAMP's ongoing requirements for FedRAMP Certification are moved into an \"In Remediation\" status - this will include any provider that does not meet the VDR/VER rules on December 7, 2026. FedRAMP also communicates directly with agencies to ensure they are aware the cloud services they are using have significant gaps like this.\r\n\r\nAfter March 7, 2027, FedRAMP will revoke FedRAMP Certification from cloud services that do not meet the VDR/VER rules.\r\n\r\n"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BGNh8",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18405500",
+          "author": "badgerinspace",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-09-11T19:47:03Z",
+          "updated_at": "2026-09-11T19:47:03Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thanks @pete-gov , appreciate the clarity. I see now that the marketplace has a \"In Remediation\" Status option for just the occasion."
+        },
+        {
+          "id": "DC_kwDOOxfoic4BGSpc",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18426460",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-09-13T23:01:11Z",
+          "updated_at": "2026-09-13T23:01:11Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "We used the In Remediation status recently after [NOTICE-0016](https://www.fedramp.gov/notices/0016/) as well - thankfully all of the cloud service offerings that were moved into that status were able to rapidly take corrective action to be moved out of it already so there are no examples to see currently. :)"
+        }
+      ],
+      "replies_total": 3,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BGy0q",
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18558250",
+      "author": "patnichols79",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-09-22T20:17:25Z",
+      "updated_at": "2026-09-22T20:17:25Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "If an IA is starting an assessment in October and ending end of December, is the IA required to provide IV&V statements/write-ups for the Rulesets that are in place (ie: AFC, SCG, MKT, VDR/VER), if so, how does the CSP answer those if the SDR isn't required until 2027?  Also, should this Annual Assessment Submission packet that is finalized in December be packaged as a CR26 assessment or should the IA deliver the assessment results with the traditional SAP/SAR since not all the rulesets are required? ",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BGy4-",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18558526",
+          "author": "paulagosta",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-09-22T20:45:24Z",
+          "updated_at": "2026-09-22T20:45:24Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Pat,\r\n\r\nWe adjusted the required [Initial Package Checklist](https://www.fedramp.gov/legacy/assets/LEGACY_FedRAMP-Initial-Certification-Package-Checklist.xlsx) to accommodate CR26 Rules while things are in motion.  If you open the form in excel, you will see that you are required to identify the CR26 rulesets you are conformant to.  If you identify that you are not conformant to a ruleset past the grace period date, it will tell you not to submit, assuming you opened it in excel.  You are also required to show location evidence for rulesets.  \r\n\r\nAdding these to the SAP/SAR gets you bonus points, but remember there is generally a multi-month gap between your assessment and when FedRAMP gets a package and some of these may become due during that gap which is why we chose to add this to the package checklist.\r\n\r\nPaul\r\n\r\n\r\n"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BGy6L",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18558603",
+          "author": "lesley-hess",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-09-22T20:55:04Z",
+          "updated_at": "2026-09-22T20:55:04Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "So the Legacy Initial package checklist is also for CSPs currently in the marketplace conducting their annual assessment prior to Jan1/during the transition period?"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BGy6f",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18558623",
+          "author": "paulagosta",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-09-22T20:57:38Z",
+          "updated_at": "2026-09-22T20:57:49Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Negative.  If you have an active FedRAMP Certification, we will use the FSI quarterly tests to check status of CR26 implementation.  We cannot do that for someone undergoing an initial certification, so we added it to the initial package checklist. "
+        },
+        {
+          "id": "DC_kwDOOxfoic4BGy7G",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18558662",
+          "author": "lesley-hess",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-09-22T21:00:48Z",
+          "updated_at": "2026-09-22T21:00:48Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thanks, Paul!  The original question was about an annual assessment so I wanted to clarify for the community. "
+        },
+        {
+          "id": "DC_kwDOOxfoic4BGy7X",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18558679",
+          "author": "patnichols79",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-09-22T21:03:25Z",
+          "updated_at": "2026-09-22T21:03:25Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "That's correct the original question was about an Annual Assessment, not an Initial and was more so tailored to a IA and not a CSP that is conducting the assessment. "
+        },
+        {
+          "id": "DC_kwDOOxfoic4BGy7Z",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18558681",
+          "author": "paulagosta",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-09-22T21:03:30Z",
+          "updated_at": "2026-09-22T21:03:30Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Lesley. Thanks for the catch.  I read the statement as if it was an initial, which is why I added the context about agency involvement.  Pat did clearly say annual in his second line and I missed it.  Apologies.  "
+        },
+        {
+          "id": "DC_kwDOOxfoic4BGy_O",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18558926",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-09-22T21:39:11Z",
+          "updated_at": "2026-09-22T21:39:11Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> If an IA is starting an assessment in October and ending end of December, is the IA required to provide IV&V statements/write-ups for the Rulesets that are in place (ie: AFC, SCG, MKT, VDR/VER), if so, how does the CSP answer those if the SDR isn't required until 2027? \r\n\r\nThe CSP and IAS should split the difference here on implementing as much as they can within scope so that they don't have to do it again a bit later. It's flexible though. Roll your own supplement. For SCG, for example, we just asked folks to link us to it.\r\n\r\nDecember/January is going to be a weird time, make the right choice based on the CSPs needs, and the CSP should demonstrate they're aware of the upcoming changes and working towards them, and it'll probably be all right.\r\n\r\n> Also, should this Annual Assessment Submission packet that is finalized in December be packaged as a CR26 assessment or should the IA deliver the assessment results with the traditional SAP/SAR since not all the rulesets are required?\r\n\r\nAll the CR26 rules are available for early adoption, so it's up to the CSP how they want to deliver if it's happening in December. As a reminder, there's a grace period for **everything** in Rev5. For some of those (like the SDR), the grace period is based on when the first FedRAMP independent assessment (aka annual assessment) starts, not when it ends. So someone completing an annual assessment in December can early adopt everything or make a choice to push off a whole bunch of stuff until their next assessment starts in Sep 2027."
+        },
+        {
+          "id": "DC_kwDOOxfoic4BIOjQ",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18933968",
+          "author": "rrising-xai",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-10-14T20:54:09Z",
+          "updated_at": "2026-10-14T20:54:09Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "@paulagosta thank you for the Initial Package Checklist. that's very helpful. One possible gap: the MAS, CPO and SDR rows calculate Action Required from the Assessment Completion Date (B7). On the deadlines page, though, the grace period for those rulesets runs to \"the first FedRAMP independent assessment started after\" 2027-01-01, 2027-07-01 and 2027-08-01. But you noted elsewhere that these should be tied to when your assessment started.\r\n\r\nShould the checklist get an Assessment Start Date field which the MAS CPO and SDR action required formulas use? Or am i misunderstanding? \r\n\r\nAlso want to verify that if we carry a low POAM for VER/VDR, that we can show this is resolved/implemented just through the VER reports instead of an independent validation/assessment."
+        }
+      ],
+      "replies_total": 8,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BG2S2",
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18572470",
+      "author": "TM-Microsoft",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-09-23T20:50:51Z",
+      "updated_at": "2026-09-23T20:50:51Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Hello FedRAMP team,\r\n\r\nCould you clarify how Verification and Validation relate to Test of Design (TOD) and Test of Effectiveness (TOE)? Would it be appropriate to map Verification to TOD and Validation to TOE, or does FedRAMP intend a different distinction?",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BG2id",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18573469",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-09-23T23:25:20Z",
+          "updated_at": "2026-09-23T23:25:20Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Hmm. I'm not sure these are directly 1:1 mapped. We align with ISO IV&V in our use of verification and validation - I think in practice both the test of design and test of effectiveness are aspects of validation, but we don't generally use that terminology in FedRAMP so I might be missing practical use nuance. Here's how I read this question, but please don't consider this a formal thing since we don't use those terms (and please feel free to correct my misunderstanding):\r\n\r\n- Test of Design: \"is a control capable of doing the job\" -> validation: \"is it suitable for intended use\"... seems right.\r\n- Test of Effectiveness: does it actually do the job? -> validation: \"and supports the expected security outcomes\" ... seems right.\r\n\r\nVerification is confirming it's _actually there._ Neither the test of design or test of effectiveness seem to directly apply there, though one would say it's hard to test effectiveness without verifying?\r\n\r\nWith verification & validation, take a rule like \"Providers MUST have a web page that says 'hello world' so folks can quickly see it\" and apply V&V:\r\n\r\n(1) Verification: Look, it's a web page, it says hello world, it's there, cool it's fulfilled and I verified. ✅ \r\n\r\n(2) Validation: The web page doesn't use https, the background is white and the hello world text is in white on a div that requires scrolling for thirty seconds, and the web page is only online 5min a day. Obviously, this page is not suitable for its intended use and isn't even always there for people to see it, so it fails validation. ❌ \r\n\r\nI think in that super hacky example, TOE and TOD are both taking place primarily in validation, but TOD is also applying partially in verification?"
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BHH5N",
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18644557",
+      "author": "pd-sek",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-09-28T17:38:50Z",
+      "updated_at": "2026-09-28T17:38:50Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Follow-up on VER-EVA-EPA: does a vulnerability inherit its component's PAIN?\r\n\r\nThis builds on the question from @mmaesc1 on 2026-09-10 about shared resources and computing PAIN from the inventory ([link](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18391218)), and @pete-gov's reply beneath it confirming that PAIN is cumulative across agencies, that a rules engine over the inventory is the intended approach, and that ratings can be scoped down where a sub-service is isolated to one customer.\r\n\r\nWe are building that rules engine and want to confirm how the component and the vulnerability combine before we finish it.\r\n\r\nQuestion 1. Two readings of VER-EVA-EPA seem possible.\r\n\r\n(a) Each vulnerability carries the PAIN of the component it sits on, since that is what agencies would feel if the component were fully compromised. A read-only information disclosure in a library on a shared database that serves several agencies would rate N5, the same as a flaw that gives full control of that database.\r\n\r\n(b) The component sets a ceiling, and the vulnerability's own achievable effect places it at or below that ceiling. The same read-only disclosure would rate N2 (narrow customer effect) if exploitation cannot expose most federal customer data and cannot interrupt the service, while the full-control flaw on the same database would still rate N5.\r\n\r\nWhich is intended? Or are both acceptable, provided the method is documented and applied consistently?\r\n\r\nQuestion 2. If reading (b) is acceptable, is a two-stage method acceptable: a rule-based first pass that assigns a provisional PAIN from the component (which agencies it serves, what federal customer data it handles), followed by an adjustment per vulnerability using its technical impact, reachability and exploitability, with both stages recorded in the evaluation?\r\n\r\nWe understand from the August 5 community update that defaulting high is acceptable. Our question is about the other direction: whether a documented method may rate a vulnerability below its component's ceiling when its achievable effect is narrower, so that the VDR-TFR-PVR windows and the set agencies review under VER-AGM-RVR track the risk to them rather than the component's worst case.\r\n\r\nThanks.",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BHH_I",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18644936",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-09-28T18:04:21Z",
+          "updated_at": "2026-09-28T18:04:21Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> Which is intended? Or are both acceptable, provided the method is documented and applied consistently?\r\n\r\nThis would vary depending on the vulnerability. In that example:\r\n\r\n(a) A vulnerability that allows complete exposure of all data, or the ability to change and manipulate all data, might have a minimum PAIN equal to the PAIN of the component.\r\n\r\n(b) A vulnerability that might allow the existence of certain types of data to be exposed without directly impacting the CIA of that data could be much lower than the PAIN of the component. \r\n\r\n(c) A vulnerability where perhaps a single non-critical column could be manipulated such that a certain type of document wouldn't be available would be much lower than the PAIN of the component.\r\n\r\n(d) A vulnerability where all data could be exposed but it requires ritual sacrifice of a still-functioning PS1 on Halloween on the front lawn of the datacenter facility would have a very PAIN but would not likely be exploitable.\r\n\r\netc.\r\n\r\nThe goal of evaluation is to sorta start by assuming the worst, then understand the mitigating circumstances that would make it less bad. There are a TON of ways that a centralized database could be exploited while having minimal customer effects on the agencies using the related service.\r\n\r\n> Question 2. If reading (b) is acceptable, is a two-stage method acceptable: a rule-based first pass that assigns a provisional PAIN from the component (which agencies it serves, what federal customer data it handles), followed by an adjustment per vulnerability using its technical impact, reachability and exploitability, with both stages recorded in the evaluation?\r\n\r\nYes and no - adjustment using its technical impact: yes. That would be adjustments made similar to my examples above - there's a big difference between pwning a database and stealing a single tenant's internal document hashes. Technical impact absolutely matters for PAIN. **It should be incredibly rare for a PAIN5 vulnerability to hit even core components that are used by every customer.**\r\n\r\nAdjustment using reachability and exploitability: no. PAIN is intended to be part of a tripod:\r\n\r\n(1) Is it likely exploitable? (VER-EVA-ELX)\r\n(2) Is it internet-reachable? (VER-EVA-EIR)\r\n(3) What is the PAIN if it it _is_ exploited?\r\n\r\nAll 3 of those should be answered. A PAIN5 that is not internet reachable or likely exploitable (such as example (d) in my response above) should still be mitigated, but it's far less urgent. Goal here is to mitigate quickly.\r\n\r\n> Our question is about the other direction: whether a documented method may rate a vulnerability below its component's ceiling when its achievable effect is narrower, so that the VDR-TFR-PVR windows and the set agencies review under VER-AGM-RVR track the risk to them rather than the component's worst case.\r\n\r\nYes, this is STRONGLY ENCOURAGED. It is the intent of the rules. :)\r\n"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BHQ-2",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18681782",
+          "author": "pd-sek",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-09-30T15:12:20Z",
+          "updated_at": "2026-09-30T15:12:20Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thanks for the clarity and your prompt response!"
+        }
+      ],
+      "replies_total": 2,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BHV-c",
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18702236",
+      "author": "alexmellott",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-10-01T17:06:01Z",
+      "updated_at": "2026-10-01T17:06:01Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Hi PMO team. I have a question regarding the JSON schema for the FedRAMP Common Definitions. Is there a particular reason for vulnerabilities why for the `vulnerabilityDetail` object that the field `potentialAgencyImpact` is considered optional? It seems like that should be a required field (unless the view is, if a vulnerability doesn't affect an agency, then we would just omit this).",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BHZh4",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18716792",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-10-02T14:24:19Z",
+          "updated_at": "2026-10-02T14:24:19Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "The schemas aren't designed to enforce any rules, so the requirements in there are based around the minimum structure necessary. It doesn't matter if something is optional or required in the schema itself when it comes to determining if providing that information is optional or required.\r\n\r\nThere may be situations where a provider wants to supply information about a vulnerability that doesn't have a PAIN rating - for example, the PAIN rating isn't applicable for false positives."
+        },
+        {
+          "id": "DC_kwDOOxfoic4BHbC_",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18723007",
+          "author": "alexmellott",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-10-02T22:18:02Z",
+          "updated_at": "2026-10-02T22:18:02Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thanks @pete-gov!"
+        }
+      ],
+      "replies_total": 2,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BHXrA",
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18709184",
+      "author": "nathan-gov",
+      "author_association": "NONE",
+      "is_official": true,
+      "created_at": "2026-10-02T04:22:46Z",
+      "updated_at": "2026-10-02T04:24:53Z",
+      "upvotes": 2,
+      "minimized": false,
+      "body": "For existing Rev5 Class C CSP that has not yet implemented CDS/Trust Center capabilities, can FedRAMP clarify the expected interim reporting mechanism for VER?\r\n\r\n1. May the CSP continue using its existing USDA Connect Community Portal secure folders for the required at-least-monthly human-readable VER reporting?\r\n2. For VER-TFR-MRH, would placing an updated JSON file in the USDA Connect Community Portal secure folders at least every 14 days satisfy the expectation to make recent historical VDR activity available for automated retrieval, or is an API or similar programmatic retrieval mechanism expected during the interim period?\r\n3. If USDA Connect does not satisfy either requirement, what interim mechanism should existing Rev5 CSPs use prior to CDS implementation?\r\n\r\nWe noted the guidance indicating that additional reporting guidance will be provided for offerings not yet following the CDS rules and want to make sure this interim implementation is aligned with FedRAMP's intent.",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BHY9y",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18714482",
+          "author": "paulagosta",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-10-02T11:31:01Z",
+          "updated_at": "2026-10-02T11:31:56Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Nathan,\r\n\r\nGreat questions.\r\n\r\n1.  Yes.  If the CSP hasnt transitioned to a CDS trust center, please use your current mechanism for sharing ConMon materials.  For most Class B and C that is connect.gov.  For Class D, that is whatever internal mechanism is being leveraged by the CSP/agency.\r\n2. Yes as an intermediary.  The long term goal would be programmatic access and the ability to leverage that on the gov side.  I realize that means two potentially moving targets or multiple depending on how many agencies are leveraging. \r\n3. N/A\r\n\r\nIf there are deviations that work better for the CSP and Gov ConMon teams, work through those as part of what should be the SCN notification process and/or ConMon meetings.  \r\n\r\nPaul"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BHZ7t",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18718445",
+          "author": "nathan-gov",
+          "author_association": "NONE",
+          "is_official": true,
+          "created_at": "2026-10-02T16:19:10Z",
+          "updated_at": "2026-10-02T16:19:10Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Paul, thank you for the clarification. One implementation follow-up: our existing Connect.gov ConMon area has separate locations for vulnerability scans, monthly ConMon reports, and monthly POA&M/inventory, but our CSP account cannot create new folders.\r\n\r\nWhere should we upload the monthly human-readable VER report and the historical VDR JSON updated at least every 14 days? Should we use an existing location, or request that FedRAMP create dedicated VER/VDR locations? If new locations are needed, should we email info@fedramp.gov?"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BHaNR",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18719569",
+          "author": "paulagosta",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-10-02T17:38:26Z",
+          "updated_at": "2026-10-02T17:38:26Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Connect doesnt have a way to mass add folders with our current permission sets. We dont have the bandwidth to create 400+ new folders just for a few months use.  \r\n\r\nTransitions to VDR and VER should be done through an SCR/SCN.  The SCN/SCR to transition to VDR/VER should outline the where, this way there is always a paper trail.  Alternatively it can be documented as part of your monthly ConMon brief prior to the transition.  This way if anyone ever questions there is a paper trail indicating all parties were informed, and the rest of the papertrail should exist in the folders chosen.  \r\n\r\nThis is ultimately why we had our VDR/VER dates pushed right, but when BOD 26-04 came out we adjusted this timeline to have parity with the gov requirement side, but it puts folks who havent transitioned to CDS early in a weird spot.  All that to say I appreciate the questions and thank you for pointing out something I think some folks are probably trying to navigate.\r\n\r\nPaul"
+        }
+      ],
+      "replies_total": 3,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BHY-Y",
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18714520",
+      "author": "pd-sek",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-10-02T11:36:09Z",
+      "updated_at": "2026-10-02T11:36:09Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "**Do false positives need PAIN, IRV, and LEV? (VER-EVA-EPA / EIR / ELX)**\r\n\r\nVER-EVA-EPA, VER-EVA-EIR, and VER-EVA-ELX are MUST rules that apply to all \"detected vulnerabilities.\" FRD-FPV defines a false positive as \"a detected vulnerability that is not actually present in an exploitable state,\" and its note says it applies only if the vulnerability \"is not and was not present.\"\r\n\r\n**Why this is unclear to us**\r\n\r\n_Reading 1: false positives still require PAIN, IRV, and LEV._\r\nFRD-FPV defines a false positive as a detected vulnerability. VER-EVA-EPA, VER-EVA-EIR, and VER-EVA-ELX apply to all detected vulnerabilities, and none of them exempts false positives. On this reading, a false positive needs a PAIN rating and IRV and LEV determinations, the same as any other finding.\r\n\r\n_Reading 2: these evaluations don't apply once a finding is determined to be a false positive._\r\nA false positive is \"not actually present in an exploitable state,\" so estimating the impact of exploiting it, or whether it is reachable or likely exploitable, has little meaning. VER-RPT-VDT also says providers report its fields \"(if applicable),\" which suggests PAIN, IRV, and LEV may be reported as not applicable for a false positive.\r\n\r\nWhich is intended? ",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BHZEN",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18714893",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-10-02T12:10:02Z",
+          "updated_at": "2026-10-02T12:10:46Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "It's both, but reading 2 in effect.\r\n\r\nIf you identify a vulnerability following [VER-EVA-EFP Evaluate False Positives](https://www.google.com/url?q=https://github.com/FedRAMP/community/discussions/146&source=chat&ust=1791028483675000&usg=AOvVaw2A_lKdilbcCGeAxGfzhOJ_) and determine it is a false positive vulnerability then you have also immediately completed the remaining required evaluations.\r\n\r\nThe exploitability of a false positive vulnerability is null. The internet-reachability of a false positive vulnerability is null. The PAIN of a false positive vulnerability is null. The factors under VER-EVA-EFA Evaluation Factors are all null. This evaluation applies automatically. Therefore, as you said, these evaluations may be reported as not applicable, null, irrelevant, or whatever you think best communicates the lack of risk from a false positive vulnerability.\r\n\r\nIf it were me, I'd probably report false positives as Accepted Vulnerabilities in a specific \"false positive\" grouping ([VER-EVA-GRV Group Vulnerabilities](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#group-vulnerabilities)). There may be other ways to best present this information to customers though!\r\n\r\nI've also taken a note to clarify [VER-EVA-EPA Estimate Potential Agency Impact](url) with the ability to assign PAIN 0 or N/A."
+        },
+        {
+          "id": "DC_kwDOOxfoic4BHZHZ",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18715097",
+          "author": "pd-sek",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-10-02T12:25:26Z",
+          "updated_at": "2026-10-02T12:25:26Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thanks for the clarity Pete!"
+        }
+      ],
+      "replies_total": 2,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BHfHH",
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18739655",
+      "author": "nathan-gov",
+      "author_association": "NONE",
+      "is_official": true,
+      "created_at": "2026-10-04T05:34:33Z",
+      "updated_at": "2026-10-04T05:34:33Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "**VDR/VER December 7 implementation and evidence expectations for existing Rev5 Class C CSPs**\r\n\r\nFor an existing Rev5 Class C CSP transitioning to VDR/VER by the December 7, 2026 maintain date, could FedRAMP clarify what must be in place for the CSP to be considered as meeting the VDR/VER rules as of that date?\r\n\r\n**1. Implementation state:** What VDR and VER capabilities and processes should be operational by December 7 for an existing Rev5 Class C CSP?\r\n\r\n**2. Evidence:** What evidence should the CSP retain to demonstrate that VDR/VER was implemented and operating as of the December 7 maintain date? For example, procedures, evaluation/response records, remediation tracking, reporting outputs, or other implementation evidence.\r\n\r\n**3. Documentation:** Are updates to SSP/control narratives, ConMon procedures, Security Decision Record content, or other certification artifacts expected by December 7, or may those documentation updates be completed through the normal certification/assessment cycle?\r\n\r\n**4. Assessment timing:** Is the expectation that the CSP adopt and operate VDR/VER by December 7, with independent verification/validation occurring later through the normal assessment cycle unless otherwise required?\r\n\r\n**5. MUST vs. SHOULD:** For purposes of determining whether a CSP “meets the VDR/VER rules” on December 7, how should CSPs treat applicable SHOULD requirements? If a CSP has a valid, documented justification for deviating from a SHOULD requirement, would that still be considered compliant with the rules, or would the CSP be expected to enter the corrective-action/In Remediation process?\r\n\r\nWe want to make sure our December 7 readiness activities are aligned with FedRAMP’s expectations and that we understand both the implementation and evidence threshold before the maintain date.",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BHjt1",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18758517",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-10-05T11:39:59Z",
+          "updated_at": "2026-10-05T11:40:24Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> 1. Implementation state: What VDR and VER capabilities and processes should be operational by December 7 for an existing Rev5 Class C CSP?\r\n\r\nAll of the applicable VDR and VER rules must be addressed.\r\n\r\n> 2. Evidence: What evidence should the CSP retain to demonstrate that VDR/VER was implemented and operating as of the December 7 maintain date? For example, procedures, evaluation/response records, remediation tracking, reporting outputs, or other implementation evidence.\r\n\r\nThe reports required under the [Reporting](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#reporting) subset of the VER are sufficient evidence until an SDR is updated. Legacy folks may wish to update the appropriate vulnerability and continuous monitoring controls in their SSP. \r\n\r\n> 3. Documentation: Are updates to SSP/control narratives, ConMon procedures, Security Decision Record content, or other certification artifacts expected by December 7, or may those documentation updates be completed through the normal certification/assessment cycle?\r\n\r\nThese aren't _required_ by December 7, but it would be a better experience and practice to do so. Trying to work out what the status of a certification package is from significant changes is frustrating for customers. The \"annual package maintenance\" expectation of Rev5 is one of the biggest problems that 20x addresses.\r\n\r\n> 4. Assessment timing: Is the expectation that the CSP adopt and operate VDR/VER by December 7, with independent verification/validation occurring later through the normal assessment cycle unless otherwise required?\r\n\r\nYes.\r\n\r\n> 5. MUST vs. SHOULD: For purposes of determining whether a CSP “meets the VDR/VER rules” on December 7, how should CSPs treat applicable SHOULD requirements? If a CSP has a valid, documented justification for deviating from a SHOULD requirement, would that still be considered compliant with the rules, or would the CSP be expected to enter the corrective-action/In Remediation process?\r\n\r\nhttps://www.fedramp.gov/2026/rules/#force-of-the-rule\r\n\r\nAs long as SHOULD rules are addressed, explained, and the risk posed to agency customers as a result of the decision is identified, then it is \"compliant.\"\r\n\r\nIt's always important to remember the two sides of FedRAMP rules though - they indicate what the minimum necessary to maintain a FedRAMP Certification, not necessarily what is necessary to keep an agency customer happy for their particular use cases.\r\n\r\nYou could, for example, not implement any of the SHOULD rules in the VDR/VER and provide good reasons for those (cost, complexity, risk, inapplicability, etc.). FedRAMP will allow you to maintain your FedRAMP Certification in this case. Agency customers, under pressure from CISA to product proof of updated procedures, may feel differently.\r\n"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BHj2u",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18759086",
+          "author": "nicole-gov",
+          "author_association": "NONE",
+          "is_official": true,
+          "created_at": "2026-10-05T12:31:47Z",
+          "updated_at": "2026-10-05T12:31:47Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "@nathan-gov Pete alluded to this in his response, but to make it more clear, implementing VDR/VER is likely a significant change to how you handle and report vulnerabilities today. This should trigger the significant change ruleset so that you clearly communicate these changes, impacts, and timelines to your customers. "
+        }
+      ],
+      "replies_total": 2,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BHtPh",
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18797537",
+      "author": "mattguy101",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-10-07T16:05:20Z",
+      "updated_at": "2026-10-07T16:05:20Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Does FedRAMP currently (or near future) provide any reciprocity pathway whereby an existing DoW IL4/IL5 authorization can be recognized toward obtaining a FedRAMP 20x Certification or Rev 5 Authorization?\r\nIf no, how should a CSP with a DoW PA and Agency ATO (Rev5) go about getting a FedRAMP PA/ Marketplace Listing?\r\n",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BHtRa",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18797658",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-10-07T16:16:03Z",
+          "updated_at": "2026-10-07T16:16:03Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "DISA or your agency ATO holder can sponsor you for an agency Rev5 certification, or you can separately build a FedRAMP 20x certification package and apply for program certification."
+        },
+        {
+          "id": "DC_kwDOOxfoic4BIB1g",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18881888",
+          "author": "mattguy101",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-10-12T13:59:19Z",
+          "updated_at": "2026-10-12T13:59:19Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Pete, thank you for clarifying the current position on DISA-to-FedRAMP reciprocity.\r\n\r\nFor a CSP with an active DISA IL5 PA and an existing DoD Agency ATO, I'm trying to understand the practical requirements for pursuing FedRAMP Rev. 5 Agency Certification.\r\n\r\nIf the DoD Agency agrees to sponsor the CSO, can FedRAMP leverage the existing DISA assessment package and agency authorization without requiring a new comprehensive 3PAO assessment, assuming any FedRAMP-specific gaps and applicable CR26 requirements are addressed?\r\n\r\nAdditionally, can the CSO obtain an Initial Implementation Phase Marketplace listing while working through those gaps, or must DISA first formally initiate the FedRAMP sponsorship process?\r\n\r\nI'm trying to determine whether the existing DISA authorization provides a meaningful reduction in the certification effort, beyond simply reusing documentation."
+        }
+      ],
+      "replies_total": 2,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BHtk5",
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18798905",
+      "author": "Fcsech",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-10-07T17:41:09Z",
+      "updated_at": "2026-10-07T17:41:09Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Can the PMO share some insight into the decision for CSPs to publicly share Public Information (CDS-CSO-PUB) about their service offerings? I have been completing these for our service offerings and am finding that the majority of this information is already available on the FedRAMP Marketplace. Missing fields — such as a link to the SGC, a link to the Trust Center, and the Next Ongoing Certification Report Date — could easily be added to the Marketplace instead.\r\n\r\nConsolidating this information on the Marketplace seems like a clear win for agencies - it would give them a true one-stop-shop for everything they need on a service offering and would remove them having to track all of this down per service offering.\r\n\r\nOn a related note, does the PMO have any Marketplace enhancements planned? For example, allowing agencies to subscribe to specific service offering pages and be notified when updates are made. This would be especially valuable for SCNs and when new services are authorized under an existing service offering.",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BHtwU",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18799636",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-10-07T18:28:18Z",
+          "updated_at": "2026-10-07T18:28:18Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "We want cloud service providers to own the information, which we then import into the Marketplace. The info is all still in the Marketplace, we just don't manage it via email requests to make updates. It also makes it easy for agencies to grab this info programmatically directly from the CSP for the latest."
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BHt3W",
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18800086",
+      "author": "badgerinspace",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-10-07T18:53:36Z",
+      "updated_at": "2026-10-07T18:53:36Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "For [VDR-CSO-DET](https://www.fedramp.gov/2026/reference/vulnerability-detection-and-response/#vulnerability-detection) (Vulnerability Detection), can FedRAMP clarify a few details around what's expected? Specifically around the following:\r\n- SCA / code scans - are results here expected to be included in VDR and reporting?\r\n- Supply chain monitoring - are SBOM scans expected here or something else?\r\n\r\nTraditionally, SCA / code scans have of course been required by FedRAMP to be done, but not required to be reported in ConMon, since ConMon focuses largely on the established inventory. These scans typically create extra noise and can generate thousands of vulnerabilities that are often dependent on upstream codebases. Is this type of data expected in VDR / VER tracking, triaging, and reporting?\r\n\r\nSimilar question for supply chain monitoring, what would FedRAMP consider a vulnerability here? Is there an expectation of SBOM scans or something else? SBOMs have never been specifically required and would have redundant information with things like container scans, but what is expected here?",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BHyOm",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18817958",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-10-08T14:37:08Z",
+          "updated_at": "2026-10-08T14:37:08Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "These rules are all written intentionally to allow cloud service providers to determine the best and most appropriate approach for their own environment/business/strategy, then to document and share that approach so that customer agencies can determine if it's appropriate for their particular use cases and needs. \r\n\r\nWe do strongly recommend that logical groupings be used at scale to reduce noise. The intent of VDR/VER is two-fold:\r\n\r\n(1) Provide assurance that vulnerability detection and response is done (detailed overall reports and summaries for reference)\r\n(2) Provide warnings and timely information that explains the risk to customer agency data so customers can make informed risk management decisions, as needed\r\n\r\nFedRAMP isn't setting an explicit \"this is how you do vulnerability detection and response\" technical process because it would immediately be out of date and not apply to many cloud services. Do good security and assure your customers that you do so."
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BHxvu",
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18815982",
+      "author": "mjadali",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-10-08T12:44:48Z",
+      "updated_at": "2026-10-08T12:44:48Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "For an existing FedRAMP-authorized LI-SaaS CSP, can you clarify the expectations and process for transitioning to FedRAMP Rev5 Class B cert under the CR26 rules?\r\n\r\nSpecifically, looking to understand the following:\r\n1. Automatic Transition: Will existing LI-SaaS authorizations automatically transition to Rev5 Class B cert, allowing CSPs to continue their normal annual assessment cycle while incorporating the applicable Class B baseline and CR26 requirements?\r\n\r\n2. Full Reassessment: Or, are existing LI-SaaS CSPs expected to undergo a new assessment of all applicable Class B controls and submit a complete Rev5 Class B package before the June 11, 2027, deadline?\r\n\r\n3. Delta Assessment: If a new Class B package is required, would FedRAMP accept a delta assessment covering the additional controls and requirements between LI-SaaS and Class B, rather than a full reassessment? For example, if a CSP completed its annual LI-SaaS assessment within the last four months and wants to transition to Class B in January or February 2027, could the recent assessment results be leveraged alongside a targeted delta assessment to support the Class B cert?\r\n\r\nEssentially trying to understand whether this transition is intended to be handled through the existing annual assessment process or requires a separate certification effort, and to what extent recent assessment results can be leveraged to avoid duplicative testing/costs. Any clarification would be much appreciated. Thank you in advance!",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BHyPP",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18817999",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-10-08T14:40:01Z",
+          "updated_at": "2026-10-08T14:41:55Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "The intent is for Li-SaaS to either migrate to a FedRAMP 20x Class B or a full FedRAMP Rev5 Class B - we have automatically grandfathered all Li-SaaS into Rev5 Class B for now, but haven't provided formal instructions or expectations for the migration. We've talked about this in the last couple Rev5 Community Updates that the goal is to post an RFC specific to Li-SaaS soon.\r\n\r\nFor the moment, if folks with a Li-SaaS are not prepared to recertify with a Full FedRAMP Rev5 or 20x Class B, they should just continue with the legacy Li-SaaS. Our migration timelines will provide at least a year runway.\r\n\r\n> Essentially trying to understand whether this transition is intended to be handled through the existing annual assessment process or requires a separate certification effort, and to what extent recent assessment results can be leveraged to avoid duplicative testing/costs. Any clarification would be much appreciated. \r\n\r\nAs a general note, the CR26 rules enable reuse of assessment results as long as there aren't major changes and there is a \"fresh\" assessment that confirms this (which makes things much faster/easier). The intent is that assessments for a new Certification focus on the deltas from previous assessments. So there should be significant leveraging of existing recent assessments to avoid duplicative assessment costs."
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BH28u",
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18837294",
+      "author": "mpg-CF",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-10-09T14:33:32Z",
+      "updated_at": "2026-10-09T14:33:32Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "I have a quick question regarding IVV-IAS-SUM vs IVV-IAS-OSA. \r\nFor the IVV-IAS-SUM, is this simply the output of the IA providing the provider verification, validation and gap statements (where applicable) for each rule/control that is then documented in line in the SDR? Or another a single paragraph of assessment processes/findings similar to IVV-IAS-OSA? ",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BIHJb",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18903643",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-10-13T15:01:36Z",
+          "updated_at": "2026-10-13T15:01:36Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "IVV-IAS-SUM is a summary of verification and validation for each FedRAMP Practice. \"We checked that air filter thing, made sure all the bolts were torqued down properly, talked with Jim, everything looked shiny.\"\r\n\r\nIVV-IAS-OSA is an overall summary of everything in the assessment, or a summary of all of the IVV-IAS-SUMs. \"Car's in tip top shape, ready to rock, all fluids changed, no weird noises, great car, 10/10, would buy.\""
+        },
+        {
+          "id": "DC_kwDOOxfoic4BIHPV",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18904021",
+          "author": "mpg-CF",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-10-13T15:22:19Z",
+          "updated_at": "2026-10-13T15:22:19Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thank you @pete-gov for the reply. Rules SDR-CSO-FRR & SDR-CSF-CTF have the IA providing the verification & validation statements for each rule and control. I take it that the location of the IVV-IAS-SUM within the SDR is up to the CSP to incorporate where it is most applicable (since there is no template) and likely would be listed with every control/rule along with the other SDR requirements.\r\n\r\nIf the IA needs to provide a 1) verification statement, 2) validation statement and a 3) summary of both statements (IVV-IAS-SUM) isn't the third redundant/repetitive? Can you help me see what the vision is for this rule so we can best incorporate it?"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BIHWD",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18904451",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-10-13T15:47:46Z",
+          "updated_at": "2026-10-13T15:47:46Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> Rules SDR-CSO-FRR & SDR-CSF-CTF have the IA providing the verification & validation statements for each rule and control. I take it that the location of the IVV-IAS-SUM within the SDR is up to the CSP to incorporate where it is most applicable (since there is no template) and likely would be listed with every control/rule along with the other SDR requirements.\r\n\r\nIVV-IAS-SUM is the instruction to the independent assessor to supply the information needed for #'s 4 and 5 in SDR-CSO-FRR so that there are clear expectations about where that comes from.\r\n\r\nOtherwise some assessors would be like \"well FedRAMP never told me I had to give you that\" or some cloud service providers would say \"oh well I'm not going to use the information you gave me in the assessment\" etc. 😭 \r\n\r\n"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BIHWk",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18904484",
+          "author": "mpg-CF",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-10-13T15:49:33Z",
+          "updated_at": "2026-10-13T15:51:02Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Fantastic, this is what I thought the intent was. It is the actual requirement for the IA deliver the IVV statements to the CSP and the CSP documents them in the SDR in their proper line items. "
+        }
+      ],
+      "replies_total": 4,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BH4LW",
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18842326",
+      "author": "PeterWeiler",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-10-09T20:07:57Z",
+      "updated_at": "2026-10-09T20:07:57Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Quick question on the wording used in `SDR-CSO-FRR` and `SDR-CSF-CTF` for verification / validation\r\n\r\n`SDR-CSO-FRR` reads as though we provide the output of the verification / validation activity (\"_Validation that the implementation **is in place and working** as intended_\")\r\n\r\n`SDR-CSO-CRF` reads as though we provide a summary of how we perform the verification / validation (\"_The validation **that is in place to ensure** the implementation is working as intended_\")\r\n\r\nLooking at the SDR schema, `validationStatement` (\"_Description of the **how** the control/requirement/ksi **is validated** by the CSP internally._\") makes me think the intended reading of `SDR-CSO-FRR` and `SDR-CSF-CTF` is \"provide an explanation of what's being done to verify / validate\", not the output from performing the verification / validation activity.\r\n\r\nIs that accurate?",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BIHKa",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18903706",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-10-13T15:04:33Z",
+          "updated_at": "2026-10-13T15:04:33Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Remember, schemas are not templates, follow the rules not the schemas, the schema is just a top level opinionated structure for some stuff. They are intended to be improved on based on specific circumstances and the customer experience. The notes in the schema are really just notes about what particular structure and not a rule.\r\n\r\nSDR-CSO-FRR asks for a LOT of stuff. Most of it isn't structured in the schema. You need to provide not only summaries of how things are done but also verification and validation that they're being done that way. All of those things. \r\n"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BIHVP",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18904399",
+          "author": "PeterWeiler",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-10-13T15:45:34Z",
+          "updated_at": "2026-10-13T15:45:34Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thanks @pete-gov.  Understood that the schema is just guidance, and we need to roll our own JSON that meets the rules while confirming to the schema.\r\n\r\nJust to confirm...you're saying the intended reading of those lines (FRR #2+#3 & CTR #4+#5) is that we provide **both** an explanation of what is being performed (steps) to verify + validate, **and** the results of having performed (output) the verification + validation?\r\n\r\nFRR reads like it's looking for the output, while CTR reads like it's looking for steps; want to make sure I'm not misreading them."
+        },
+        {
+          "id": "DC_kwDOOxfoic4BIHW3",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18904503",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-10-13T15:50:56Z",
+          "updated_at": "2026-10-13T15:50:56Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> Just to confirm...you're saying the intended reading of those lines (FRR https://github.com/FedRAMP/community/discussions/2+https://github.com/FedRAMP/community/discussions/3 & CTR https://github.com/FedRAMP/community/discussions/4+https://github.com/FedRAMP/community/discussions/5) is that we provide both an explanation of what is being performed (steps) to verify + validate, and the results of having performed (output) the verification + validation?\r\n\r\nYes. For example:\r\n\r\n- Explanation: We change the oil every 10,000 miles and have an alert that makes it unbearable to drive until the oil has been changed after 9,000 miles.\r\n- The oil was last changed at 9,012 miles. The current oil has 6,083 miles left until the alert goes off. Jim, who drives the truck, has PTSD and no longer wishes to drive.\r\n"
+        }
+      ],
+      "replies_total": 3,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BIHP4",
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18904056",
+      "author": "mpg-CF",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-10-13T15:24:34Z",
+      "updated_at": "2026-10-13T15:24:34Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "@pete-gov @paulagosta\r\nI believe this is noted somewhere but wanted to confirm. If a CSP starts a Legacy Rev5 annual assessment (SAP, SARs, etc) in November 2026 and it is submitted in March in 2027, will this be accepted to maintain their FedRAMP certification? Then next November they will do a full CR26 Rev5 annual. Am I understanding this correctly that CSPs can submit Legacy Rev5 Packages in 2027 if the start date is in 2026 as long as they also meet the ruleset maintain dates?",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BIHTr",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18904299",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-10-13T15:40:06Z",
+          "updated_at": "2026-10-13T15:40:18Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> I believe this is noted somewhere but wanted to confirm. If a CSP starts a Legacy Rev5 annual assessment (SAP, SARs, etc) in November 2026 and it is submitted in March in 2027, will this be accepted to maintain their FedRAMP certification? Then next November they will do a full CR26 Rev5 annual. Am I understanding this correctly that CSPs can submit Legacy Rev5 Packages in 2027 if the start date is in 2026 as long as they also meet the ruleset maintain dates?\r\n\r\nYes, though of course we would discourage folks from putting off adopting the new rules until many months later. "
+        },
+        {
+          "id": "DC_kwDOOxfoic4BIHT_",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18904319",
+          "author": "mpg-CF",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-10-13T15:41:31Z",
+          "updated_at": "2026-10-13T15:41:31Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Got it, thank you Pete. "
+        }
+      ],
+      "replies_total": 2,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BIIXK",
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18908618",
+      "author": "MrbLab",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-10-13T20:10:36Z",
+      "updated_at": "2026-10-13T20:10:36Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Has anyone seen guidance on the best approach for handling existing vulnerabilities when transitioning to VDR/VER? Should CSPs:\r\n1. Reevaluate all existing vulnerabilities using PAIN ratings and reset their remediation SLAs from the transition date?\r\n2. Reevaluate all existing vulnerabilities using PAIN ratings but calculate remediation deadlines from their original detection dates?\r\n3. Maintain legacy SLAs for existing vulnerabilities and apply PAIN based SLAs only to newly discovered vulnerabilities?\r\n\r\nThank you in advance.",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BIIli",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18909538",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-10-13T21:17:21Z",
+          "updated_at": "2026-10-13T21:17:21Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "CISA BOD 26-04 proposed a staged implementation where rules were put in place and then implemented, but the key point is that at the beginning of Phase III, within 180 days of issuance, agencies are expected to remediate each vulnerability as quickly as possible and no later than the timelines/etc. You can't just leave a bunch of old stuff lying around and not get to it, everything needs to be getting handled.\r\n\r\nNote that the VDR does not calculate deadlines from detection time, it calculates them from evaluation time. It simply expects you to report on the time between detection and evaluation and expects you to begin evaluation **promptly.** It is certain fair for the deltas between those dates to be longer than normal during a transition from one approach to another approach.\r\n\r\nThe best approach is to begin implementing the new rules now: start performing the required steps with older stuff lying around to determine if you even need it lying anymore (CISA indicated that likely 90% or more of current vulnerabilities are not likely exploitable and have a likely PAIN of 1 or 0, so you just saved a lot of work). Then prioritize the stuff that you look at and realize it's an actual serious problem that you should've fixed 2 weeks ago but ignored because you had 30 days. Then start reporting on all of that stuff. And then bringing in new vulnerabilities, repeat."
+        },
+        {
+          "id": "DC_kwDOOxfoic4BIIpd",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18909789",
+          "author": "nathan-gov",
+          "author_association": "NONE",
+          "is_official": true,
+          "created_at": "2026-10-13T21:36:15Z",
+          "updated_at": "2026-10-13T21:36:15Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "For long standing vulnerabilities with a previously agency-acknowledged POA&M remediation milestone, can a newly evaluated PAIN-based remediation deadline supersede those commitments, or must the CSP obtain agency concurrence before revising the existing milestones?"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BIMA5",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18923577",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-10-14T12:12:34Z",
+          "updated_at": "2026-10-14T12:14:42Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> For long standing vulnerabilities with a previously agency-acknowledged POA&M remediation milestone, can a newly evaluated PAIN-based remediation deadline supersede those commitments, or must the CSP obtain agency concurrence before revising the existing milestones?\r\n\r\nMost historical \"long standing\" POA&M milestones are simply an Accepted Vulnerability in the VDR, and can just be moved over and tracked as such. \r\n\r\nEdit to add: There's no FR requirement about a cloud service obtaining concurrence from an agency customer to accept vulnerabilities/etc. anymore as there's no JAB/sponsor after initial Certification. There may be existing contracts/agreements with particular customers about such things though! "
+        }
+      ],
+      "replies_total": 3,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BIOpT",
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18934355",
+      "author": "mpg-CF",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-10-14T21:19:56Z",
+      "updated_at": "2026-10-14T21:19:56Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Hi @pete-gov,\r\n\r\nAnother question for you, this time on IVV-IAS-VIP. The rule requires the IA to verify that information supplied during the assessment is included in the Certification Package without inappropriate modification. It doesn't say how the IA reports that verification or how the IA gets access to the final package.\r\n\r\n1. What is FedRAMP's expectations for the IA to communicate the results of the VIP review? \r\n2. Should the IA's access to the provider's trust center be treated as required in order to validate this rule? The definition of \"All Necessary Parties\" says independent assessors may be included depending on the provider's agreements, so access isn't guaranteed.\r\n\r\nThanks!",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BIOsl",
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18934565",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2026-10-14T21:37:36Z",
+      "updated_at": "2026-10-14T21:37:36Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "> Hi @pete-gov,\n> \n> It doesn't say how the IA reports that verification or how the IA gets access to the final package.\n\nThat's up to two consenting businesses to figure out. This rule isn't about starting a fight, it's simply about making sure you have something to point to in your contract as part of the agreement.\n\n> 1. What is FedRAMP's expectations for the IA to communicate the results of the VIP review?\n\nThe cloud service provider has a rule that says they included your stuff. They get in trouble if they make false claims. They confirm the IA did the expected bits by showing us the information included.\n \n> 2. Should the IA's access to the provider's trust center be treated as required in order to validate this rule? \n\nThat's a business thing between the IA and the CSP. If you're an IA and the CSP won't give you access to their trust center then it would be pretty hard for you to meet the terms of your agreement with them right?\n\nFR isn't going to tell businesses that they have to let other businesses do things to them. We expect the CSP to meet all of the rules. They have to pay an IA to help them do a lot of that. If they try to block the IA that they paid from doing stuff that's a CSP/IA business problem, not a FR problem.\n\n",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "Abe205",
+    "ElaineFR",
+    "ExtremoPenguin",
+    "Fcsech",
+    "MrbLab",
+    "PeterWeiler",
+    "TM-Microsoft",
+    "adamstc1",
+    "alexmellott",
+    "badgerinspace",
+    "cbiggsrun",
+    "dan-fedramp",
+    "emu-gov",
+    "ericmoss54",
+    "gmengelberg",
+    "jsantore-sf",
+    "judgecspab-max",
+    "lesley-hess",
+    "mattguy101",
+    "mjadali",
+    "mmaesc1",
+    "mpg-CF",
+    "nathan-gov",
+    "nicole-gov",
+    "patnichols79",
+    "paulagosta",
+    "pd-sek",
+    "pdudek-3PAO",
+    "pete-gov",
+    "ricmarreycoal",
+    "rrising-xai",
+    "sboyce-sheidt",
+    "v-mhahnfirstinfotech",
+    "zeesharfcspab"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18709184",
+      "author": "nathan-gov",
+      "created_at": "2026-10-02T04:22:46Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18739655",
+      "author": "nathan-gov",
+      "created_at": "2026-10-04T05:34:33Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18934565",
+      "author": "pete-gov",
+      "created_at": "2026-10-14T21:37:36Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-17437758",
+      "author": "pete-gov",
+      "created_at": "2026-06-25T18:53:44Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-17438832",
+      "author": "pete-gov",
+      "created_at": "2026-06-25T21:23:42Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-17439148",
+      "author": "pete-gov",
+      "created_at": "2026-06-25T22:14:37Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-17450997",
+      "author": "pete-gov",
+      "created_at": "2026-06-27T02:05:43Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-17488324",
+      "author": "dan-fedramp",
+      "created_at": "2026-06-30T18:42:54Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18471236",
+      "author": "pete-gov",
+      "created_at": "2026-09-16T20:25:32Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-17587600",
+      "author": "emu-gov",
+      "created_at": "2026-07-09T17:01:42Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-17596382",
+      "author": "emu-gov",
+      "created_at": "2026-07-10T12:08:32Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-17661653",
+      "author": "emu-gov",
+      "created_at": "2026-07-16T12:43:38Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-17845287",
+      "author": "emu-gov",
+      "created_at": "2026-07-30T20:50:16Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-17852670",
+      "author": "pete-gov",
+      "created_at": "2026-07-31T10:37:56Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-17855511",
+      "author": "pete-gov",
+      "created_at": "2026-07-31T15:39:33Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18425215",
+      "author": "pete-gov",
+      "created_at": "2026-09-13T20:14:18Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-17920337",
+      "author": "paulagosta",
+      "created_at": "2026-08-06T11:53:01Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-17920098",
+      "author": "paulagosta",
+      "created_at": "2026-08-06T11:34:18Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18021674",
+      "author": "dan-fedramp",
+      "created_at": "2026-08-14T20:01:10Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18081891",
+      "author": "paulagosta",
+      "created_at": "2026-08-19T15:48:39Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18165255",
+      "author": "paulagosta",
+      "created_at": "2026-08-26T16:44:04Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18179917",
+      "author": "paulagosta",
+      "created_at": "2026-08-27T19:37:00Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18181057",
+      "author": "pete-gov",
+      "created_at": "2026-08-27T22:13:58Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18093065",
+      "author": "emu-gov",
+      "created_at": "2026-08-20T12:18:46Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18138185",
+      "author": "paulagosta",
+      "created_at": "2026-08-24T16:48:13Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18139695",
+      "author": "paulagosta",
+      "created_at": "2026-08-24T19:38:52Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18150707",
+      "author": "paulagosta",
+      "created_at": "2026-08-25T15:53:37Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18138144",
+      "author": "paulagosta",
+      "created_at": "2026-08-24T16:43:35Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18162066",
+      "author": "paulagosta",
+      "created_at": "2026-08-26T12:01:53Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18165899",
+      "author": "paulagosta",
+      "created_at": "2026-08-26T17:50:18Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18165762",
+      "author": "paulagosta",
+      "created_at": "2026-08-26T17:34:52Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18235313",
+      "author": "dan-fedramp",
+      "created_at": "2026-09-01T14:41:34Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18356896",
+      "author": "pete-gov",
+      "created_at": "2026-09-08T21:10:26Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18391276",
+      "author": "pete-gov",
+      "created_at": "2026-09-10T19:41:37Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18402431",
+      "author": "pete-gov",
+      "created_at": "2026-09-11T14:35:45Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18401490",
+      "author": "paulagosta",
+      "created_at": "2026-09-11T13:23:07Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18402346",
+      "author": "pete-gov",
+      "created_at": "2026-09-11T14:28:28Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18403756",
+      "author": "pete-gov",
+      "created_at": "2026-09-11T16:50:43Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18405212",
+      "author": "pete-gov",
+      "created_at": "2026-09-11T19:14:24Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18426460",
+      "author": "pete-gov",
+      "created_at": "2026-09-13T23:01:11Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18558526",
+      "author": "paulagosta",
+      "created_at": "2026-09-22T20:45:24Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18558623",
+      "author": "paulagosta",
+      "created_at": "2026-09-22T20:57:38Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18558681",
+      "author": "paulagosta",
+      "created_at": "2026-09-22T21:03:30Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18558926",
+      "author": "pete-gov",
+      "created_at": "2026-09-22T21:39:11Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18573469",
+      "author": "pete-gov",
+      "created_at": "2026-09-23T23:25:20Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18644936",
+      "author": "pete-gov",
+      "created_at": "2026-09-28T18:04:21Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18716792",
+      "author": "pete-gov",
+      "created_at": "2026-10-02T14:24:19Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18714482",
+      "author": "paulagosta",
+      "created_at": "2026-10-02T11:31:01Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18718445",
+      "author": "nathan-gov",
+      "created_at": "2026-10-02T16:19:10Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18719569",
+      "author": "paulagosta",
+      "created_at": "2026-10-02T17:38:26Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18714893",
+      "author": "pete-gov",
+      "created_at": "2026-10-02T12:10:02Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18758517",
+      "author": "pete-gov",
+      "created_at": "2026-10-05T11:39:59Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18759086",
+      "author": "nicole-gov",
+      "created_at": "2026-10-05T12:31:47Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18797658",
+      "author": "pete-gov",
+      "created_at": "2026-10-07T16:16:03Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18799636",
+      "author": "pete-gov",
+      "created_at": "2026-10-07T18:28:18Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18817958",
+      "author": "pete-gov",
+      "created_at": "2026-10-08T14:37:08Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18817999",
+      "author": "pete-gov",
+      "created_at": "2026-10-08T14:40:01Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18903643",
+      "author": "pete-gov",
+      "created_at": "2026-10-13T15:01:36Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18904451",
+      "author": "pete-gov",
+      "created_at": "2026-10-13T15:47:46Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18903706",
+      "author": "pete-gov",
+      "created_at": "2026-10-13T15:04:33Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18904503",
+      "author": "pete-gov",
+      "created_at": "2026-10-13T15:50:56Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18904299",
+      "author": "pete-gov",
+      "created_at": "2026-10-13T15:40:06Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18909538",
+      "author": "pete-gov",
+      "created_at": "2026-10-13T21:17:21Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18909789",
+      "author": "nathan-gov",
+      "created_at": "2026-10-13T21:36:15Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18923577",
+      "author": "pete-gov",
+      "created_at": "2026-10-14T12:12:34Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [
+      "FRD-FPV",
+      "FRD-PAI",
+      "KSI-CNA"
+    ],
+    "rfc_ids": [],
+    "nist_controls": [
+      "CA-1",
+      "CA-5",
+      "CA-7",
+      "RA-05"
+    ],
+    "discussion_refs": [
+      2,
+      3,
+      4,
+      5,
+      146
+    ],
+    "urls": [
+      "https://fedramp.gov/legacy",
+      "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18391218",
+      "https://github.com/FedRAMP/community/discussions/2+https://github.com/FedRAMP/community/discussions/3",
+      "https://github.com/FedRAMP/community/discussions/4+https://github.com/FedRAMP/community/discussions/5",
+      "https://github.com/user-attachments/assets/1d5ff955-1a3d-4d69-909a-f017f72f3c47",
+      "https://github.com/user-attachments/assets/f3248534-df1c-4f2b-9bf6-044c03ccdd91",
+      "https://github.com/user-attachments/assets/fa7b279f-07aa-43a6-944c-43310b0bc405",
+      "https://www.fedramp.gov/2026/",
+      "https://www.fedramp.gov/2026/agencies/use/ongoing/poams/#:~:text=Cloud%20service%20providers%20should%20not%20be%20expected%20to%20convert%20their%20vulnerability%20lists%2C%20product%20security",
+      "https://www.fedramp.gov/2026/providers/updating/deadlines/#important-deadlines",
+      "https://www.fedramp.gov/2026/providers/updating/deadlines/20x/",
+      "https://www.fedramp.gov/2026/providers/updating/deadlines/?h=%22grace+period%22#understanding-ruleset-effective-dates",
+      "https://www.fedramp.gov/2026/providers/updating/deadlines/rev5/",
+      "https://www.fedramp.gov/2026/providers/updating/deadlines/rev5/#rev5-deadlines",
+      "https://www.fedramp.gov/2026/reference/rev5-control-guidance/",
+      "https://www.fedramp.gov/2026/reference/rev5/d/significant-change-notification/",
+      "https://www.fedramp.gov/2026/reference/vulnerability-detection-and-response/",
+      "https://www.fedramp.gov/2026/reference/vulnerability-detection-and-response/#non-machine-verification-and-validation",
+      "https://www.fedramp.gov/2026/reference/vulnerability-detection-and-response/#persistent-sample-detection",
+      "https://www.fedramp.gov/2026/reference/vulnerability-detection-and-response/#sampling",
+      "https://www.fedramp.gov/2026/reference/vulnerability-detection-and-response/#vulnerability-detection",
+      "https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/",
+      "https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#group-vulnerabilities",
+      "https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#reporting",
+      "https://www.fedramp.gov/2026/rules/#force-of-the-rule",
+      "https://www.fedramp.gov/2026/timeline/",
+      "https://www.fedramp.gov/changelog/rss.xml",
+      "https://www.fedramp.gov/event/20x-cwg-2026-08-12/",
+      "https://www.fedramp.gov/event/FR-day-fall-26/",
+      "https://www.fedramp.gov/legacy/assets/LEGACY_FedRAMP-Initial-Certification-Package-Checklist.xlsx",
+      "https://www.fedramp.gov/notices/0016/",
+      "https://www.google.com/url?q=https://github.com/FedRAMP/community/discussions/146&source=chat&ust=1791028483675000&usg=AOvVaw2A_lKdilbcCGeAxGfzhOJ_"
+    ],
+    "topics": [
+      "20x",
+      "3pao",
+      "agency_authorization",
+      "class_b",
+      "class_c",
+      "class_d",
+      "conmon",
+      "ksi",
+      "machine_readable",
+      "marketplace",
+      "poam",
+      "rev5",
+      "significant_change",
+      "trust_center",
+      "vulnerability_mgmt"
+    ]
+  },
+  "content_hash": "e89f6333d7e69fd6bc63543ba98c75c5299cd148e0e48e64a546df1250f75192",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

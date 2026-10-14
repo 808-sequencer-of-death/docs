@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-125",
+  "node_id": "D_kwDOOxfoic4AkPUQ",
+  "number": 125,
+  "title": "Introducing FedRAMP Public Notices - including notification of security inbox testing and the outcomes from RFC-0019, RFC-0020, and RFC-0021!",
+  "url": "https://github.com/FedRAMP/community/discussions/125",
+  "category": "Announcements",
+  "category_slug": "announcements",
+  "labels": [
+    "FedRAMP Official"
+  ],
+  "is_official_thread": true,
+  "is_rfc": false,
+  "author": "pete-gov",
+  "author_is_official": true,
+  "created_at": "2026-02-18T19:30:35Z",
+  "updated_at": "2026-03-21T15:25:44Z",
+  "last_edited_at": null,
+  "closed": true,
+  "closed_at": "2026-03-21T15:25:44Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 2,
+  "body": "We've just published [FedRAMP Public Notices on fedramp.gov](https://www.fedramp.gov/notices/) - a new section of our web site designed to highlight specific announcements and updates that are important enough they should stick around for a bit but aren't great for things like blog posts.\r\n\r\nNotices are designed to be simple and accessible, like our RFCs. There is an RSS feed (that hopefully works!) for integration into the system of your choice, and it's always more clear to link directly to a notice on fedramp.gov instead of a post like this on GitHub.\r\n\r\nThe following public notices are available at the time of this post (we won't update this post later) **and community participants are welcome to discuss any of these notices in this thread!**\r\n\r\n| ID                                           | Title                                                                                               | Description                                                                                                                                                                                         | Date       |\r\n| -------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |\r\n| [0003](https://www.fedramp.gov/notices/0003) | [Notification of Planned FY26 Q2 FedRAMP Security Inbox Test](https://www.fedramp.gov/notices/0003) | FedRAMP will be performing a planned quarterly Emergency Test of the FedRAMP Security Inbox for all cloud service providers between March 2 and March 13, 2026.                                     | 2026-02-18 |\r\n| [0002](https://www.fedramp.gov/notices/0002) | [Outcome from RFC-0019 Reporting Assessment Costs](https://www.fedramp.gov/notices/0002)            | RFC-0019 Reporting Assessment Costs was closed on February 12, 2026. After reviewing public comments, FedRAMP will not finalize or implement the proposed cost reporting requirements at this time. | 2026-02-18 |\r\n| [0001](https://www.fedramp.gov/notices/0001) | [Introducing FedRAMP Public Notices](https://www.fedramp.gov/notices/0001)                          | Introducing FedRAMP Public Notices, a simple service to keep stakeholders in the loop on updates and announcements from FedRAMP.                                                                    | 2026-02-18 |\r\n\r\n_note: I built this over the holiday weekend as a bit of a quick spike because we wanted to move on this concept quickly, if you find a serious bug or problem feel free to mention it here or ping me directly at pete@fedramp.gov_",
+  "comment_count": 2,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4A8eGP",
+      "url": "https://github.com/FedRAMP/community/discussions/125#discussioncomment-15851919",
+      "author": "adamlang-1kosmos",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-02-18T20:03:54Z",
+      "updated_at": "2026-02-18T20:03:54Z",
+      "upvotes": 2,
+      "minimized": false,
+      "body": "first\r\n\r\nRSS Feed does work. Thanks. ",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A8eIZ",
+          "url": "https://github.com/FedRAMP/community/discussions/125#discussioncomment-15852057",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-02-18T20:23:15Z",
+          "updated_at": "2026-02-18T20:23:15Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> RSS Feed does work. Thanks.\r\n\r\nSweet, testing that was surprisingly hard because of how limited our access is to apps and extensions and stuff on our GSA equipment but I could at least confirm it was passing basic validations as an RSS feed. Hopefully it keeps working with new updates (it's all automated on the backend in theory). Cheers! "
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A8wJR",
+      "url": "https://github.com/FedRAMP/community/discussions/125#discussioncomment-15925841",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2026-02-25T17:43:34Z",
+      "updated_at": "2026-02-25T17:43:34Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Two new [FedRAMP Notices](https://www.fedramp.gov/notices/) were released today:\r\n\r\n- [0004](https://www.fedramp.gov/notices/0004)\t[Initial Outcome from RFC-0020 FedRAMP Authorization Designations](https://www.fedramp.gov/notices/0004)\r\n- [0005](https://www.fedramp.gov/notices/0005)\t[Initial Outcome from RFC-0021 Expanding the FedRAMP Marketplace](https://www.fedramp.gov/notices/0005)",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "adamlang-1kosmos",
+    "pete-gov"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/125#discussioncomment-15925841",
+      "author": "pete-gov",
+      "created_at": "2026-02-25T17:43:34Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/125#discussioncomment-15852057",
+      "author": "pete-gov",
+      "created_at": "2026-02-18T20:23:15Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [
+      "RFC-0019",
+      "RFC-0020",
+      "RFC-0021"
+    ],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://www.fedramp.gov/notices/",
+      "https://www.fedramp.gov/notices/0001",
+      "https://www.fedramp.gov/notices/0002",
+      "https://www.fedramp.gov/notices/0003",
+      "https://www.fedramp.gov/notices/0004",
+      "https://www.fedramp.gov/notices/0005"
+    ],
+    "topics": [
+      "marketplace"
+    ]
+  },
+  "content_hash": "4142d187f35eec22ef1f3949864a264406644b21757f695547ee0e648537d1ad",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-63",
+  "node_id": "D_kwDOOxfoic4AhAK2",
+  "number": 63,
+  "title": "What is the opportunity that 20x Pilot offers?",
+  "url": "https://github.com/FedRAMP/community/discussions/63",
+  "category": "20x Discussion",
+  "category_slug": "20x-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "gautamsprinto",
+  "author_is_official": false,
+  "created_at": "2025-07-29T14:17:22Z",
+  "updated_at": "2025-08-25T14:22:35Z",
+  "last_edited_at": null,
+  "closed": true,
+  "closed_at": "2025-08-25T14:22:35Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 4,
+  "body": "Sorry if this sounds like a basic question.\r\n\r\nGiven that we still need authorization to work with many Federal Agencies, what would FedRAMP 20x Unlock in terms of Total Addressable market?",
+  "comment_count": 1,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4A1YBM",
+      "url": "https://github.com/FedRAMP/community/discussions/63#discussioncomment-13992012",
+      "author": "iteuscher",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2025-08-04T17:52:48Z",
+      "updated_at": "2025-08-04T17:52:49Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "FedRAMP 20x offers a FedRAMP Authorization path without an agency sponsor requirement. The TAM would depend on the specific market.",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "gautamsprinto",
+    "iteuscher"
+  ],
+  "official_responses": [],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [],
+    "topics": [
+      "20x",
+      "agency_authorization"
+    ]
+  },
+  "content_hash": "8cbe1233597883d9e669802ff1c997cab57bd599a30040759dfe8de9c9b9e111",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

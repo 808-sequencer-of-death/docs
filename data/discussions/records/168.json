@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-168",
+  "node_id": "D_kwDOOxfoic4Ao_Wy",
+  "number": 168,
+  "title": "Is a Trust Center part of the CSO?",
+  "url": "https://github.com/FedRAMP/community/discussions/168",
+  "category": "20x Discussion",
+  "category_slug": "20x-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "gmengelberg",
+  "author_is_official": false,
+  "created_at": "2026-09-03T22:14:39Z",
+  "updated_at": "2026-09-09T17:33:26Z",
+  "last_edited_at": null,
+  "closed": true,
+  "closed_at": "2026-09-09T17:33:26Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "Since a Trust Center does not process [Federal Customer Data](https://www.fedramp.gov/2026/definitions/#federal-customer-data), I assume/suspect that it should not be considered part of the CSO (i.e., not inside the boundary). If so, this would exempt the Trust Center from adhering to SCN requirements.\r\n\r\nAre both of these correct assumptions?",
+  "comment_count": 1,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4BFuZv",
+      "url": "https://github.com/FedRAMP/community/discussions/168#discussioncomment-18277999",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2026-09-03T23:57:33Z",
+      "updated_at": "2026-09-03T23:57:33Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "The answer is \"it depends\" - specifically, on what you put in your trust center. Apply the [Minimum Assessment Scope](https://www.fedramp.gov/2026/reference/minimum-assessment-scope/):\r\n\r\n[MAS-CSO-IIR (Identify Information Resources) ](https://www.fedramp.gov/2026/reference/minimum-assessment-scope/#identify-information-resources): Providers MUST identify a set of information resources to assess for FedRAMP Certification that includes all information resources that are likely to handle federal customer data **or likely to impact the confidentiality, integrity, or availability of federal customer data handled by the cloud service offering**; this set of information resources is the cloud service offering.\r\n\r\nYour statement addresses the first part of this requirement (it does not process federal customer data), but you also need to consider the second part: is it likely to impact the CIA of federal customer data in the cloud service offering?\r\n\r\nIf you are following FedRAMP rules on being responsible and careful with the information you share in your FedRAMP Certification Package then it may be reasonable to determine that the information in the Trust Center isn't likely to impact CIA of federal customer data in the service offering. This is, IMO, the ideal state - most FedRAMP Trust Center information could be published publicly without risking CIA of data in the cloud service offering if it's well designed.\r\n\r\nOn the other hand, we know that some folks still habitually put fairly sensitive information into these materials. Maybe you provide sufficient information in the FedRAMP Certification Package that if someone were able to obtain that information then they're _likely_ to exploit it in a way that exposes data in the cloud service offering. Maybe you have a bad habit of being like \"our recovery codes are stored in a treasure chest buried at these GPS coordinates\" or something in your SDR. In that case, the Trust Center is an information resource that is processing information that is likely to impact CIA of the federal customer data in the cloud service offering because if someone pops it they get a nice \"X marks the spot\" map!\r\n\r\n\r\nI guarantee there are some cloud services where the Trust Center is in scope, and there are some where it's not. Either way you better make sure it's secure, since you're telling folks to go there and trust the information in it.",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BFyoR",
+          "url": "https://github.com/FedRAMP/community/discussions/168#discussioncomment-18295313",
+          "author": "gmengelberg",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-09-04T19:46:30Z",
+          "updated_at": "2026-09-04T19:46:30Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thank you Pete."
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "gmengelberg",
+    "pete-gov"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/168#discussioncomment-18277999",
+      "author": "pete-gov",
+      "created_at": "2026-09-03T23:57:33Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://www.fedramp.gov/2026/definitions/#federal-customer-data",
+      "https://www.fedramp.gov/2026/reference/minimum-assessment-scope/",
+      "https://www.fedramp.gov/2026/reference/minimum-assessment-scope/#identify-information-resources"
+    ],
+    "topics": [
+      "trust_center"
+    ]
+  },
+  "content_hash": "d72af2a3acd1936b9d4bdeed09ef3773b8c3b891276ebf96636a5dabf8792c0e",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

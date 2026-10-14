@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-152",
+  "node_id": "D_kwDOOxfoic4An2pX",
+  "number": 152,
+  "title": "Applicability of Rev5 Consolidated Rules (2026) to \"(Legacy) FedRAMP Ready\" status CSOs",
+  "url": "https://github.com/FedRAMP/community/discussions/152",
+  "category": "Rev5 Discussion",
+  "category_slug": "rev5-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "philipdank",
+  "author_is_official": false,
+  "created_at": "2026-07-17T13:16:25Z",
+  "updated_at": "2026-09-09T17:30:18Z",
+  "last_edited_at": null,
+  "closed": true,
+  "closed_at": "2026-09-09T17:30:18Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "As a CSP with a Marketplace listing status of \"(Legacy) FedRAMP Ready\" (pre-Certification, Rev5), we're trying to determine which Rev5 rulesets from the [Important Deadlines table](https://www.fedramp.gov/2026/providers/updating/deadlines/rev5/) apply to us now versus only after obtaining a full FedRAMP Certification.\r\n\r\nDoes \"(Legacy) FedRAMP Ready\" map to the \"Initial Implementation Phase\" category under the Marketplace Listing rule (MKT-IIP-*)? If so, where can we find our Initial Implementation Phase start date, since MKT-IIP-DLA's 2-year assessment-scheduling clock depends on it?\r\n\r\nSecure Configuration Guide (SCG) states it applies to \"providers with FedRAMP Certifications of any type\" can you confirm this means SCG doesn't yet apply to Ready-status CSPs? For the remaining rulesets (AFC, VDR, VER, CMU, FRC, IEC, IVV, MAS, SCN, CCM, CPO, CDS, SDR) is there a general rule for which apply pre-Certification versus only post-Certification, or does it vary by rule",
+  "comment_count": 1,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4BDa1T",
+      "url": "https://github.com/FedRAMP/community/discussions/152#discussioncomment-17673555",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2026-07-17T13:52:04Z",
+      "updated_at": "2026-07-17T13:52:04Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Hey @philipdank - FedRAMP Ready only has 1 applicable rule right now: [FRC-CSF-RDY (FedRAMP Ready Conversion)](https://www.fedramp.gov/2026/providers/rev5/rules/fedramp-certification/?h=fedramp+ready#fedramp-ready-conversion):\r\n\r\n> Providers with FedRAMP Rev5 Ready status MUST convert to a FedRAMP Certification by whichever of the follow dates is later: the expiration of their annual assessment or November 17, 2026 (the legacy FedRAMP Ready status will be entirely removed on December 31, 2027).\r\n\r\nThere's no mapping, there's no replacement, it just goes away. FedRAMP Ready effectively no longer exists. You need to switch to a FedRAMP Certification.\r\n\r\nThe [Choose a Path](https://www.fedramp.gov/2026/providers/start/path/#temporary-rev5-program-certification-availability-for-class-b-and-c) page for cloud service providers has information on a time limited option for providers with current FedRAMP Ready to get a Rev5 based Class B or C Certification.",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BDbpT",
+          "url": "https://github.com/FedRAMP/community/discussions/152#discussioncomment-17676883",
+          "author": "philipdank",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-07-17T21:40:31Z",
+          "updated_at": "2026-07-17T21:43:26Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thank you for your guidance regarding the FedRAMP Ready Conversion pathway. After reviewing the Lost Sponsor/Ready Conversion guidance for CSPs that qualify under the FedRAMP Ready criteria, I have one question for clarification.\r\n\r\nThe guidance states that, in limited circumstances, the Program Certification Path is available for FedRAMP Rev. 5 providers. Does this mean that a CSP qualifying under the Ready Conversion pathway may pursue a Rev. 5 Class B or Class C Program Certification without obtaining an agency sponsor, or is an agency sponsor still required?"
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "pete-gov",
+    "philipdank"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/152#discussioncomment-17673555",
+      "author": "pete-gov",
+      "created_at": "2026-07-17T13:52:04Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [
+      "FRC-CSF-RDY"
+    ],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://www.fedramp.gov/2026/providers/rev5/rules/fedramp-certification/?h=fedramp+ready#fedramp-ready-conversion",
+      "https://www.fedramp.gov/2026/providers/start/path/#temporary-rev5-program-certification-availability-for-class-b-and-c",
+      "https://www.fedramp.gov/2026/providers/updating/deadlines/rev5/"
+    ],
+    "topics": [
+      "agency_authorization",
+      "class_b",
+      "class_c",
+      "marketplace",
+      "rev5",
+      "vulnerability_mgmt"
+    ]
+  },
+  "content_hash": "9b3ec4df65f4d737639c199203c83cff3dfb9ed86827761c74e5f0c3dfe74179",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

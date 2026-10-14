@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-56",
+  "node_id": "D_kwDOOxfoic4Agg8P",
+  "number": 56,
+  "title": "Mark43 | FedRAMP 20x Phase One Pilot Submission",
+  "url": "https://github.com/FedRAMP/community/discussions/56",
+  "category": "20x Discussion",
+  "category_slug": "20x-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "kelseymcmichael",
+  "author_is_official": false,
+  "created_at": "2025-07-02T17:26:55Z",
+  "updated_at": "2025-11-18T16:25:07Z",
+  "last_edited_at": null,
+  "closed": true,
+  "closed_at": "2025-11-18T16:25:07Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "This discussion provides an overview of Mark43's participation in the FedRAMP 20x Phase One pilot. We are submitting two separate environments for this pilot to demonstrate our cloud service’s readiness for FedRAMP authorization using an automated, machine-readable approach. This submission aligns with the FedRAMP 20x initiative, which aims to streamline validation through Key Security Indicators (KSIs), reusable evidence, and automation.\r\n\r\n**Key Information:**\r\n_FedRAMP High Environment:_ A fully FedRAMP High authorized environment deployed in AWS GovCloud. Compliance documentation and evidence are stored in an S3 bucket for easy access.\r\n[View Repo](https://github.com/mark43/Mark43-High-FedRAMP20x-Phase1)\r\n\r\n_SLG-Focused Environment:_ A non-FedRAMP authorized environment aligned with FedRAMP Low/SOC 2 controls, undergoing validation under the 20x initiative.\r\n[View Repo](https://github.com/mark43/Mark43-FedRAMP20x-Phase1)\r\n\r\n**Important Note:**\r\nThe data provided in these repositories is placeholder content intended to illustrate the structure of our final submission. This reflects how Mark43 plans to submit the complete package, which will be iteratively refined through an agile process in collaboration with our 3PAO and the FedRAMP PMO. Feedback from these parties will be used to validate and enhance the submission.\r\n\r\nAs part of the agile methodology under FedRAMP 20x, we will progressively integrate KSI validation assertions, evidence collection, and other supporting documentation as we receive feedback and make the necessary updates.\r\n\r\n**Contact Information:**\r\nFor any questions or additional information regarding this submission, please contact:\r\n\r\nKelsey McMichael\r\nDirector of Federal Security Enablement\r\nMark43\r\nEmail: kelsey.mcmichael@mark43.com\r\nPhone: 646-891-8174",
+  "comment_count": 0,
+  "comments": [],
+  "answer_url": null,
+  "participants": [
+    "kelseymcmichael"
+  ],
+  "official_responses": [],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://github.com/mark43/Mark43-FedRAMP20x-Phase1",
+      "https://github.com/mark43/Mark43-High-FedRAMP20x-Phase1"
+    ],
+    "topics": [
+      "20x",
+      "3pao",
+      "ksi",
+      "machine_readable"
+    ]
+  },
+  "content_hash": "d664e288eed8a1208b11ca8d3dface999a94c72ec3fdd068ed2d6b0f152206f5",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-68",
+  "node_id": "D_kwDOOxfoic4AhCcx",
+  "number": 68,
+  "title": "Participation in the Phase 2 Pilot",
+  "url": "https://github.com/FedRAMP/community/discussions/68",
+  "category": "20x Discussion",
+  "category_slug": "20x-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "KimberlyDE",
+  "author_is_official": false,
+  "created_at": "2025-07-31T15:04:59Z",
+  "updated_at": "2025-08-25T14:22:42Z",
+  "last_edited_at": "2025-07-31T15:37:17Z",
+  "closed": true,
+  "closed_at": "2025-08-25T14:22:42Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "In the FAQ's I noticed under the Q&A it says \"FedRAMP 20x is initially **focused** on **cloud-native** **software-as-a-service**, deployed on an **existing FedRAMP Authorized** cloud service offering using **entirely or primarily cloud-native services,** with **minimal or** **no third party cloud interconnections**.\"\r\n\r\nFor the Phase 2 pilot, based on the information above, do you have to already be FedRAMP Authorized to participate in the phase 2 pilot? Our company is listed as \"FedRAMP Ready\" on the FedRAMP Marketplace, but we not entirely cloud-native or fully authorized. Which also means we do not have a sponsor yet.",
+  "comment_count": 1,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4A1NuT",
+      "url": "https://github.com/FedRAMP/community/discussions/68#discussioncomment-13949843",
+      "author": "kyhu65867",
+      "author_association": "CONTRIBUTOR",
+      "is_official": false,
+      "created_at": "2025-07-31T16:28:29Z",
+      "updated_at": "2025-07-31T16:28:29Z",
+      "upvotes": 2,
+      "minimized": false,
+      "body": "So one clarification is that your company itself doesn't need to be FedRAMP Authorized, only the underlying architecture. So, if your offering was deployed using a FedRAMP authorized hosting platform, you still qualify for the pilot. \r\n\r\nIn terms of sponsorship, the 20x path is one that does not require an agency sponsor. \r\n\r\nIn terms of not entirely cloud native services, the details around the phase 2 pilot haven't quite been ironed out, but you should expect clarification and guidance on eligibility once we've finished phase one and pinned down the details :) ",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "KimberlyDE",
+    "kyhu65867"
+  ],
+  "official_responses": [],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [],
+    "topics": [
+      "20x",
+      "agency_authorization",
+      "marketplace"
+    ]
+  },
+  "content_hash": "641941a7cfd9056074a588cf06a2b63a0aaee04fa5b1ae54d8e7e96ce3c3493a",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

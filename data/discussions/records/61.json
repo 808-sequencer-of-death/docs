@@ -1,0 +1,154 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-61",
+  "node_id": "D_kwDOOxfoic4Agxrn",
+  "number": 61,
+  "title": "July 23 20x CWG - Come see some demos of the 20x approach in action!",
+  "url": "https://github.com/FedRAMP/community/discussions/61",
+  "category": "20x Discussion",
+  "category_slug": "20x-discussion",
+  "labels": [
+    "FedRAMP Official"
+  ],
+  "is_official_thread": true,
+  "is_rfc": false,
+  "author": "pete-gov",
+  "author_is_official": true,
+  "created_at": "2025-07-16T18:42:42Z",
+  "updated_at": "2025-07-25T12:09:24Z",
+  "last_edited_at": "2025-07-25T12:08:59Z",
+  "closed": true,
+  "closed_at": "2025-07-25T12:09:24Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 2,
+  "body": "## You can find this session on [YouTube here](https://www.youtube.com/watch?v=vfslU4EwfSU)!\r\n\r\nLast month we brought you a [panel discussion with a bunch of 20x Phase One pilot participants](https://github.com/FedRAMP/community/discussions/47); this month we've asked two cloud service providers to give everyone a deeper look into their actual workflow to make this stuff work. \r\n\r\n### Please [join us Wednesday, July 23 from 1pm to 2pm](https://gsa.zoomgov.com/meeting/register/FpW3sJuBRxag_1Mz49J0Cw) for another special extended 20x Community Working Group meeting to see demos of the 20x approach in action!\r\n\r\n> If you're already registered, make a note of that bonus +30min that won't show up on your calendar! And if you can't make it, no worries, we'll [post it on youtube](https://www.youtube.com/c/fedramp) with all of our other Community Working Group meetings.\r\n\r\n## Special Guests & Demos\r\n\r\n### [Knox Systems](https://www.knoxsystems.com/)\r\n\r\n- **Presenter:** **Chris Johnson**, CTO, Knox Systems (fedramp20x@knoxsystems.com)\r\n\r\n  CJ has spent two decades in cloud. The first decade was at Avanade, a Microsoft-Accenture JV, where he pioneered enterprise migrations of MS Office to the cloud. For the past 10 years, he’s built and operated Knox’s federal environment, including Adobe’s FedRAMP and DISA IL4-authorized Federal Cloud.\r\n\r\n- **Knox FedRAMP20x Submission:** https://github.com/Knox-Gov/fedramp_20x_pilot\r\n- **KnoxAI Demo:** https://www.loom.com/share/81967387bf12411686e72e9b094ac928?sid=faac753d-d234-4524-b0a9-5bba28d48d87 \r\n\r\n**Coalfire (presenting with Knox Systems)**\r\n- **Presenter:** **John Putalavage**, Managing Principal of Cloud Technology Services\r\n\r\n### [Meridian Knowledge Solutions](https://meridianks.com/)\r\n\r\n- **Presenter:** **Adam Burroughs**, Director of Federal Cybersecurity Operations\r\n\r\n  Director of Federal Cybersecurity Operations at Meridian, with over 12 years of experience in IT and a focused track record in FedRAMP security operations. Previously led the Rev. 4 Moderate authorization for Ivanti’s ITSM platform and served as the FedRAMP Technical Program Manager for both Rev. 4 and Rev. 5 authorizations at NetDocuments. At Meridian, leads public sector cybersecurity strategy and execution, including participation in the FedRAMP 20x pilot.\r\n\r\n- **Meridian FedRAMP 20x submission:** https://meridian-knowledge-solutions.github.io/fedramp_20x_public_submission-live/\r\n\r\n**Fortreum (presenting with Meridian)**\r\n- **Presenter: Ethan Troy**, Senior Consultant \r\n\r\n\r\n## Agenda\r\n\r\n| Time    | Topic                                                                                                                                                                                  |\r\n| ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\r\n| 1:00 PM | Welcome and Opening Remarks (3 min)                                                                                                                                                    |\r\n| 1:03 PM | Introductions / Q&A with the FedRAMP Team (7 min)<br>Hear a bit about the cloud service providers showing demos today with a few initial questions from the FedRAMP team.          |\r\n| 1:10 PM | Phase One Pilot Package Demo - Knox Systems with Coalfire (20 min including Q&A)<br>An interactive discussion with 20x1 pilot participants walking through their pilot submission. |\r\n| 1:30PM  | Phase One Pilot Package Demo - Meridian with Fortreum (20 min including Q&A)<br>An interactive discussion with 20x1 pilot participants walking through their pilot submission.     |\r\n| 1:50 PM | Open Q&A about anything! (10 min)                                                                                                                                                      |\r\n| 2:00 PM | End Session                                                                                                                                                                            |\r\n\r\n#### Disclaimer of Endorsement\r\n\r\n_Any content related to a specific commercial product, process, or service, or the use of any trade, firm or corporation name is for the information and convenience of the public, and does not constitute endorsement, recommendation, or favoring by the General Services Administration._",
+  "comment_count": 4,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4A0lR2",
+      "url": "https://github.com/FedRAMP/community/discussions/61#discussioncomment-13784182",
+      "author": "iteuscher",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2025-07-17T00:08:40Z",
+      "updated_at": "2025-07-17T00:08:40Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "I like the dark mode toggle Meridian LMS! It doesn't go unnoticed :) ",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A05YR",
+      "url": "https://github.com/FedRAMP/community/discussions/61#discussioncomment-13866513",
+      "author": "Rebdave15",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2025-07-23T17:24:29Z",
+      "updated_at": "2025-07-23T17:24:31Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "If Knox and the like will be running within the CSPs environment/management side (unless I am wrong on this point) why would it need to be FedRAMPed? Where would the use case of an agency leverage Knox?  ",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A05wK",
+      "url": "https://github.com/FedRAMP/community/discussions/61#discussioncomment-13868042",
+      "author": "aburroughs",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2025-07-23T20:30:20Z",
+      "updated_at": "2025-07-23T23:45:34Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "If anyone tries to access the link above it will give you a 404. Here is the new link to our Trust Center. \r\n\r\nhttps://meridian-knowledge-solutions.github.io/fedramp_20x_public_submission-live/",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A08YK",
+          "url": "https://github.com/FedRAMP/community/discussions/61#discussioncomment-13878794",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2025-07-24T14:19:11Z",
+          "updated_at": "2025-07-24T14:19:12Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Oops, thanks for the heads up - fixed in the main post too. :D"
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A0-zY",
+      "url": "https://github.com/FedRAMP/community/discussions/61#discussioncomment-13888728",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2025-07-25T12:09:24Z",
+      "updated_at": "2025-07-25T12:09:25Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "We've uploaded this session to [YouTube here](https://www.youtube.com/watch?v=vfslU4EwfSU) for folks that want to find it later! On to the next. 🚀 ",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "Rebdave15",
+    "aburroughs",
+    "iteuscher",
+    "pete-gov"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/61#discussioncomment-13888728",
+      "author": "pete-gov",
+      "created_at": "2025-07-25T12:09:24Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/61#discussioncomment-13878794",
+      "author": "pete-gov",
+      "created_at": "2025-07-24T14:19:11Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [
+      47
+    ],
+    "urls": [
+      "https://github.com/FedRAMP/community/discussions/47",
+      "https://github.com/Knox-Gov/fedramp_20x_pilot",
+      "https://gsa.zoomgov.com/meeting/register/FpW3sJuBRxag_1Mz49J0Cw",
+      "https://meridian-knowledge-solutions.github.io/fedramp_20x_public_submission-live/",
+      "https://meridianks.com/",
+      "https://www.knoxsystems.com/",
+      "https://www.loom.com/share/81967387bf12411686e72e9b094ac928?sid=faac753d-d234-4524-b0a9-5bba28d48d87",
+      "https://www.youtube.com/c/fedramp",
+      "https://www.youtube.com/watch?v=vfslU4EwfSU"
+    ],
+    "topics": [
+      "20x",
+      "rev5",
+      "trust_center"
+    ]
+  },
+  "content_hash": "65f2a28824647a1e5fa20d91e7e91d82e368626496450b8af89623279e7f4293",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

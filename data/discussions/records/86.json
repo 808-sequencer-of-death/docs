@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-86",
+  "node_id": "D_kwDOOxfoic4Ah9s1",
+  "number": 86,
+  "title": "Missing FedRAMP Policy for Cryptographic Module Selection and Use",
+  "url": "https://github.com/FedRAMP/community/discussions/86",
+  "category": "Rev5 Discussion",
+  "category_slug": "rev5-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "xnox",
+  "author_is_official": false,
+  "created_at": "2025-09-15T18:01:47Z",
+  "updated_at": "2025-11-18T16:23:08Z",
+  "last_edited_at": null,
+  "closed": true,
+  "closed_at": "2025-11-18T16:23:08Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "Previously it was at:\r\n- https://www.fedramp.gov/rev5/fips/ \r\n\r\nBut that now redirects to:\r\n- https://www.fedramp.gov/rev5/documents-templates\r\n\r\nAnd that used to have a tile for it which would link to:\r\n- https://www.fedramp.gov/resources/documents/FedRAMP_Policy_for_Cryptographic_Module_Selection_v1.1.0.pdf\r\n\r\nWhich still is published, but I don't know if it is a latest version or not.\r\n\r\nShould https://www.fedramp.gov/rev5/documents-templates have a tile / link to \"FedRAMP Policy for Cryptographic Module Selection and Use\" ?",
+  "comment_count": 1,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4A29Np",
+      "url": "https://github.com/FedRAMP/community/discussions/86#discussioncomment-14406505",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2025-09-15T18:09:45Z",
+      "updated_at": "2025-09-15T18:09:46Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Good catch, looks like there's a flaw in the migration that combined the CSP Authorization Playbook with the Crypto Module Selection and Use policy. I will flag for the team!",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A3TVo",
+          "url": "https://github.com/FedRAMP/community/discussions/86#discussioncomment-14497128",
+          "author": "xnox",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-09-24T10:17:09Z",
+          "updated_at": "2025-09-24T10:17:10Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Any timelines when this will be fixed? I just did a search again, and cannot find the PDF.\r\n\r\nIs https://www.fedramp.gov/resources/documents/FedRAMP_Policy_for_Cryptographic_Module_Selection_v1.1.0.pdf authoritative in the mean time?"
+        },
+        {
+          "id": "DC_kwDOOxfoic4A3UB0",
+          "url": "https://github.com/FedRAMP/community/discussions/86#discussioncomment-14499956",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2025-09-24T14:45:16Z",
+          "updated_at": "2025-09-24T14:45:18Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "This fix should go live later today at 3:30pm :)"
+        }
+      ],
+      "replies_total": 2,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "pete-gov",
+    "xnox"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/86#discussioncomment-14406505",
+      "author": "pete-gov",
+      "created_at": "2025-09-15T18:09:45Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/86#discussioncomment-14499956",
+      "author": "pete-gov",
+      "created_at": "2025-09-24T14:45:16Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://www.fedramp.gov/resources/documents/FedRAMP_Policy_for_Cryptographic_Module_Selection_v1.1.0.pdf",
+      "https://www.fedramp.gov/rev5/documents-templates",
+      "https://www.fedramp.gov/rev5/fips/"
+    ],
+    "topics": [
+      "crypto_fips",
+      "rev5"
+    ]
+  },
+  "content_hash": "97080ed730267304f21d469950db1a564e6cd6473e4c071d8db0e074290d0ff0",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

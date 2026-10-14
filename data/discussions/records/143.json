@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-143",
+  "node_id": "D_kwDOOxfoic4AnF3E",
+  "number": 143,
+  "title": "BOD 26-04 - Existing Rev. 5 Authorizations",
+  "url": "https://github.com/FedRAMP/community/discussions/143",
+  "category": "Rev5 Discussion",
+  "category_slug": "rev5-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "drew-kahle-rbrk",
+  "author_is_official": false,
+  "created_at": "2026-06-12T15:20:22Z",
+  "updated_at": "2026-06-24T21:34:34Z",
+  "last_edited_at": null,
+  "closed": true,
+  "closed_at": "2026-06-24T21:34:34Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 3,
+  "body": "Hi FedRAMP Team - Given CISA's release of BOD 26-04 this week, should the community be expecting any communications / public notices forthcoming from FedRAMP on the topic? The FAQ in the Implementation Guidance does directly touch upon FedRAMP applicability, but am curious if we should be on the lookout for anything further from the PMO here, specifically for those of us currently executing Rev. 5 certified systems. Thanks in advance!",
+  "comment_count": 2,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4BB7gc",
+      "url": "https://github.com/FedRAMP/community/discussions/143#discussioncomment-17283100",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2026-06-12T18:33:35Z",
+      "updated_at": "2026-06-12T18:33:35Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "We'll likely put out a notice on this next week, but it's tied up with some other comms we're working on and some other internal discussions.\r\n\r\nIn short, cloud service providers that follow the [Vulnerability Detection and Response](https://preview.fedramp.gov/2026/reference/vulnerability-detection-and-response/) (and [Vulnerability Evaluation and Reporting](https://preview.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/)) rules are good with BOD 26-04 by default. \r\n\r\nWe may need to accelerate mandatory adoption of the VDR to align with BOD 26-04, but haven't determined the most effective way to align these requirements for folks who aren't ready to move to the VDR yet.",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BB7gs",
+          "url": "https://github.com/FedRAMP/community/discussions/143#discussioncomment-17283116",
+          "author": "drew-kahle-rbrk",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-06-12T18:35:49Z",
+          "updated_at": "2026-06-12T18:35:49Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Roger that - thanks for the quick reply, @pete-gov. Much appreciated."
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BCNYP",
+      "url": "https://github.com/FedRAMP/community/discussions/143#discussioncomment-17356303",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2026-06-18T19:41:24Z",
+      "updated_at": "2026-06-18T19:41:24Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "I forgot about this thread but wanted to close the loop if you haven't seen it with NTC-0014:  https://www.fedramp.gov/notices/0014/",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "drew-kahle-rbrk",
+    "pete-gov"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/143#discussioncomment-17283100",
+      "author": "pete-gov",
+      "created_at": "2026-06-12T18:33:35Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/143#discussioncomment-17356303",
+      "author": "pete-gov",
+      "created_at": "2026-06-18T19:41:24Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://preview.fedramp.gov/2026/reference/vulnerability-detection-and-response/",
+      "https://preview.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/",
+      "https://www.fedramp.gov/notices/0014/"
+    ],
+    "topics": [
+      "rev5",
+      "vulnerability_mgmt"
+    ]
+  },
+  "content_hash": "d382bd5120ea7f86a521fec83227b6b13b22c5d52020d47c466ea96aae081c91",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

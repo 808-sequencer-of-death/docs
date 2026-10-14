@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-70",
+  "node_id": "D_kwDOOxfoic4AhJRy",
+  "number": 70,
+  "title": "Aligning FedRAMP POA&Ms with M-24-15: A PO&AM for POA&Ms",
+  "url": "https://github.com/FedRAMP/community/discussions/70",
+  "category": "20x Discussion",
+  "category_slug": "20x-discussion",
+  "labels": [
+    "FedRAMP Official"
+  ],
+  "is_official_thread": true,
+  "is_rfc": false,
+  "author": "pete-gov",
+  "author_is_official": true,
+  "created_at": "2025-08-05T14:04:17Z",
+  "updated_at": "2025-08-25T16:44:37Z",
+  "last_edited_at": "2025-08-05T16:38:09Z",
+  "closed": true,
+  "closed_at": "2025-08-25T16:44:37Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 3,
+  "body": "**Bottom Line Up Front:** Policy requirements for plans of action and milestones (POA&Ms) related to information resources apply to federal agencies and their implementation and use of secure systems. These requirements are based on 25 year old procedures for capital planning and long term oversight of agency decision making and should not be directly applied to cloud service providers. \r\n\r\nFedRAMP intends to align POA&M expectations for cloud service providers with the requirements set out in M-24-15 and encourage the development of a modern approach to product security roadmaps that align with commercial best practices and enable agencies to integrate with government POA&Ms as needed.\r\n\r\n<img width=\"2496\" height=\"543\" alt=\"poamforpoams\" src=\"https://github.com/user-attachments/assets/86199546-79b1-4f5b-929c-b66f72608a98\" />\r\n\r\n# **A Brief History of the POA&M**\r\n\r\nThe Government Information Security Reform Act (GISRA) was passed in the year 2000 as [Subtitle G in Public Law 106-398](https://www.govinfo.gov/content/pkg/PLAW-106publ398/html/PLAW-106publ398.htm), adding requirements to Federal agency responsibilities under 44 USC § 3534 subsections (c) and (d) for agencies to examine their information resources and report any significant deficiencies as a material weakness. This law also required agencies to include information on the time periods and resources required to resolve these weaknesses.\r\n\r\nIn response to GISRA, [OMB Memorandum M-01-24](https://bidenwhitehouse.archives.gov/wp-content/uploads/legacy_drupal_files/omb/memoranda/2001/m01-24.pdf) instructed agencies to “develop a plan of action with milestones to correct any security weaknesses identified by the annual program reviews and independent evaluations” that “1) describes how the agency plans to address any issues/weaknesses; and 2) identifies obstacles to address known weaknesses.” [OMB Memorandum M-02-01](https://georgewbush-whitehouse.archives.gov/omb/memoranda/m02-01.html) followed in late 2001 establishing the initial plans of action and milestones (POA&M) requirements and templates. \r\n\r\nMany aspects of the law, policies, and regulations related to information security have changed since then, but the POA&M has broadly carried forward in government information security as a required planning item for agencies with little consideration for its original purpose: ensuring federal agencies properly planned for the time and resources required to remediate weaknesses when building their capital asset plans.\r\n\r\nOver time, NIST reintroduced plans of action and milestones as a risk management tool rather than a capital asset planning tool. The modern POA&M used by federal agencies is an awkward mash-up of both use cases built over many years of multi-organizational attempts to align on a single magical spreadsheet-based tool for both information security and business planning needs. Under the original 2011 FedRAMP memo’s requirements to predominantly lift and shift the government’s approach directly to commercial cloud service providers, POA&Ms were awkwardly applied to commercial businesses as well.\r\n\r\nFedRAMP’s current [Plan of Actions and Milestones (POA&M) requirements](https://www.fedramp.gov/assets/resources/documents/CSP_POAM_Template_Completion_Guide.pdf) are complex and do not effectively give agency authorizing officials meaningful information that allows simple ongoing risk assessments or effectively map to ongoing risk assessment and prioritization for cloud service providers. They have become a maintenance burden that distracts from security outcomes for both agencies and industry by carrying forward this strange historical mashup approach of government systems and applying them to industry. \r\n\r\n# **Realigning the FedRAMP POA&M**\r\n\r\n<img width=\"2497\" height=\"430\" alt=\"realign\" src=\"https://github.com/user-attachments/assets/62e03b84-d746-4728-98f4-25a5b21982b6\" />\r\n\r\nM-24-15 identified a new vision for FedRAMP, where it is “a bridge between industry and the Federal Government, and is expected to thoughtfully navigate situations where unthinking adherence to standard agency practices in a commercial cloud environment could lead to unexpected or undesirable security outcomes.” This memorandum further charged FedRAMP with ensuring the continuous monitoring framework for cloud services is redesigned “to one that primarily monitors the CSP’s change process itself, rather than individual changes.”\r\n\r\nAs FedRAMP seeks to realign its POA&M process under the new vision, FedRAMP is considering the following factors:\r\n\r\n1. FedRAMP should not apply statutory or OMB requirements for POA&Ms related to agency capital planning to service providers, including any definition of fields, required information, method of updating, locked fields, etc. provided by OMB for federal agencies. These government capital planning requirements apply *only* to the agency implementation of third-party services.   \r\n2. Cloud service providers should be encouraged to develop their own process for creating, managing, and implementing plans of action and milestones as part of their standard product lifecycle (see [SP 800-37 Task A-6](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-37r2.pdf#%5B%7B%22num%22%3A321%2C%22gen%22%3A0%7D%2C%7B%22name%22%3A%22XYZ%22%7D%2C88%2C219%2C0%5D)), while ensuring their process is clear to authorizing officials during the authorization process.    \r\n3. FedRAMP should strongly encourage mitigation of risk such that properly mitigated POA&Ms can be removed from risk registers or similar ongoing tracking.  \r\n4. Following M-24-15’s direction to “generally empower CSPs to deploy changes and fixes at their own pace, without requiring advance approval from FedRAMP or an authorizing official” organizations should manage POA&Ms transparently without negotiating permission from government customers.\r\n\r\nIn summary, POA&Ms should reflect a cloud service provider's organizational approach to risk management, integrate with their own business processes for decision making and planning, and allow them to demonstrate organizational intent for and progress towards mitigating and remediating (or not) large scale weaknesses in their service that may affect federal customers. The information shared with federal customers should be limited to truly impactful information that the federal customer must be aware of to either inform ongoing authorization decisions or take action to address resulting weaknesses in their own information security posture.\r\n\r\nFinally, in keeping with recent changes to avoid persistent confusion from the reuse of formal federal terms, any future FedRAMP POA&M policy should use separate terminology with clear differentiation from the current terminology (e.g. “Product Security Roadmap” or similar instead of “Plans of Action and Milestones”).\r\n\r\n# **Charging the Federal Secure Cloud Advisory Committee**\r\n\r\n<img width=\"2496\" height=\"426\" alt=\"fscaclol\" src=\"https://github.com/user-attachments/assets/f704d639-8d7f-4065-8f1b-dcae0d128fcf\" />\r\n\r\nThe POA&M is deeply embedded in both federal information security culture and the existing FedRAMP ecosystem; changes to POA&Ms must take into account the impact on all FedRAMP stakeholders, including agencies, cloud service providers, third-party assessment organizations, third-party vendor relationships, integrated tools and compliance documentation services, and FedRAMP itself. The [Federal Secure Cloud Advisory Committee (FSCAC)](https://www.gsa.gov/technology/government-it-initiatives/federal-secure-cloud-advisory-committee) was established in the FedRAMP Authorization Act to determine ways the authorization process can continuously be improved and serve as a forum for communication and collaboration among these stakeholders.\r\n\r\nThe FedRAMP Director, on behalf of the GSA Administrator, has charged the FSCAC with providing advice and recommendations on the specific topic of POA&Ms in its [upcoming public meeting on Thursday, August 14, 2025 from 1:30pm to 4:00pm](https://www.federalregister.gov/documents/2025/07/25/2025-14078/federal-secure-cloud-advisory-committee-notification-of-upcoming-meeting). The purpose of this meeting is included in the linked Federal Register notice and duplicated below for convenience:\r\n\r\nThe August 14, 2025, public meeting will be dedicated to advice and recommendations for reducing the burden and cost of managing Plans of Action and Milestones (POA&Ms) for cloud services and agencies and to develop recommendations for an updated standard. FSCAC is to propose key elements of this standard by addressing at least the following questions:\r\n\r\n1. What are the major pain points with the current POA&M implementation for CSPs and agencies?\r\n\r\n2. What are the security gaps and increased risks (including missed opportunities) that result from the current model?\r\n\r\n3. What are the benefits of the current model?\r\n\r\n4. What would a new set of FedRAMP POA&M requirements that addresses the major pain points and gaps while maintaining or increasing the benefits of such a process for all parties look like?\r\n\r\n# **Next Steps**\r\n\r\n<img width=\"2496\" height=\"451\" alt=\"letsfixthings\" src=\"https://github.com/user-attachments/assets/8d5309d6-6f03-47dd-a420-13ac2be2d71d\" />\r\n\r\nThis community working group thread will be included in the scope of public comment for the upcoming FSCAC meeting. The public may comment on any or all of this topic related to POA&Ms on this thread, [via the public comment form provided on the FSCAC home page](https://www.gsa.gov/technology/government-it-initiatives/federal-secure-cloud-advisory-committee), or in the meeting itself during the appropriate time slot. \r\n\r\n### Planned Milestones\r\n\r\n* **August 14, 2025:** FSCAC meeting to provide advice and recommendations for POA&Ms.  \r\n* **Late August, 2025:** FedRAMP plans to release a draft updated POA&M standard for comment.  \r\n* **October, 2025:** FedRAMP plans to formalize an updated POA&M standard for FedRAMP 20x authorizations and begin beta testing for Rev5.  \r\n* **February, 2026:** FedRAMP plans to announce a Rev5 transition plan for an updated POA&M standard for Rev5 based on testing and evaluation in the beta periods.\r\n\r\nProgress for this standard can be monitored in the [POA&M Standard FedRAMP Roadmap item](https://github.com/orgs/FedRAMP/projects/25/views/1?pane=issue&itemId=113842723&issue=FedRAMP%7Croadmap%7C40).\r\n",
+  "comment_count": 2,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4A1nCf",
+      "url": "https://github.com/FedRAMP/community/discussions/70#discussioncomment-14053535",
+      "author": "austinsonger",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2025-08-08T23:13:07Z",
+      "updated_at": "2025-08-08T23:26:13Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "I feel doing it on here is way more productive with more input, but it is what it is.\r\n\r\n\r\n### What are the major pain points with the current POA&M implementation for CSPs and agencies?\r\n\r\n- Manual entry, tracking, and updating in large spreadsheets can be time-consuming and error-prone.\r\n- Duplication of effort when multiple agencies leveraging the same CSP require independent POA&M reviews ￼.\r\n- Variability in how weaknesses, milestones, and remediation details are documented leads to rework during reviews.\r\n- Missing or unclear risk ratings, false positive justifications, and deviation rationales delay closure.\r\n- Monthly POA&M submissions can overwhelm CSP and agency resources, especially for large cloud environments with hundreds of findings ￼.\r\n- Most CSPs do not have direct integration between vulnerability scanning tools and the POA&M format, creating manual data transformation work.\r\n- Agencies may apply different urgency or acceptance criteria for similar findings, creating conflicting remediation demands for CSPs.\r\n- Significant changes trigger POA&M updates even when risks are already documented elsewhere\r\n\r\n\r\n### What are the security gaps and increased risks (including missed opportunities) that result from the current model?\r\n\r\n- Manual review and update cycles can lead to slow closure of high-risk vulnerabilities \r\n- Lack of centralized POA&M management across leveraging agencies can result in missed follow-up or inconsistent monitoring\r\n- Dependencies on third-party products may linger without adequate tracking or escalation, leaving exploitable vulnerabilities open \r\n- Without automated historical tracking, systemic or repeat weaknesses may be underreported.\r\n- Inconsistent application of deviation requests, operational requirements, and false positive claims can mask true risk posture.\r\n\r\n\r\n### What are the benefits of the current model?\r\n\r\n- The FedRAMP POA&M format ensures consistent reporting fields (weakness description, remediation plan, milestones, vendor dependencies, risk adjustments) across CSP\r\n- Every weakness has a unique POA&M ID, facilitating auditability and lifecycle tracking from detection to closure.\r\n- Agencies can see exactly what weaknesses exist, planned remediation steps, and responsible parties.\r\n- POA&Ms are central to monthly ConMon reviews and annual assessments, allowing agencies to verify progress\r\n- CSPs can document operational requirements and vendor dependencies, ensuring risk-based rather than purely compliance-based remediation.\r\n\r\n\r\n\r\n### What would a new set of FedRAMP POA&M requirements that addresses the major pain points and gaps while maintaining or increasing the benefits of such a process for all parties look like?\r\n\r\n- Allow CSPs to submit POA&M updates via secure APIs linked to scanning, ticketing, and CMDB tools.\r\n- Integrate NIST CVSSv3 scoring directly into the POA&M to ensure consistent severity assessments.\r\n- Single authoritative POA&M for each FedRAMP-authorized system, accessible to all leveraging agencies, to eliminate duplicate reviews\r\n- Build on the existing Collaborative ConMon approach to centralize monthly POA&M reviews and approvals.\r\n- Require monthly updates only for high-risk/open operational requirements; lower risks can be updated quarterly.\r\n- Reduce redundant fields and clarify milestone formatting to cut down on manual work.\r\n- Uniform acceptance guidelines to avoid agency-by-agency interpretation differences.\r\n- Require documented timelines and escalation paths for vendor fixes.\r\n- **Automatic POA&M Entry on Significant Changes**: For high-impact changes, auto-generate POA&M entries from the significant change request process to ensure visibility \r\n- **Risk Reduction KPIs**: Track closure rates, recurrence rates, and mean time-to-remediate to measure security improvement, not just compliance activity.\r\n- Clear Escalation Path: Mandate a defined escalation procedure when remediation milestones are repeatedly missed.\r\n\r\nMY FAVORITE IDEA\r\n**FedRAMP Contextual Exploitability Grading:**  \r\n- Instead of just reporting the CVSS base score, calculate an **Adjusted Exploitability Score** that accounts for:  \r\n  - **Exposure** (*FRD-CVM-07*)  \r\n    - Internet-reachable vs. not internet-reachable.  \r\n    - Accessible by authenticated users only vs. anonymous access.  \r\n  - **Asset Criticality**  \r\n    - Whether the asset handles sensitive federal data (e.g., PII, CUI).  \r\n  - **Mitigating Controls** (*FRD-CVM-04, FRD-CVM-05*)  \r\n    - Runtime container security (AppArmor, seccomp, SELinux).  \r\n    - Network segmentation, WAF, IDS/IPS.  \r\n  - **Exploit Maturity** (*FRD-CVM-02, FRD-CVM-08*)  \r\n    - Is there a known working exploit in the wild?  \r\n    - Is it listed on the CISA Known Exploited Vulnerabilities (KEV) list?  \r\n  - **Patch Availability**  \r\n    - Vendor patch available vs. pending vendor release (VD scenario).  \r\n\r\n**Formula Could Be Something Like:**  \r\n`Exploitability Grade = (CVSS Base Score × Exposure Factor × Criticality Factor × Exploit Maturity Factor) - Mitigation Credit`  \r\n\r\n**5-Level FedRAMP Exploitability Grade**  \r\n\r\n| Grade        | Meaning                                                                                                                                                   | Remediation Urgency (Aligned to FRR-CVM-TM)            |\r\n|--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------|\r\n| **E5 – Critical**   | Credibly exploitable, internet-reachable, high or very high potential adverse impact, no full mitigation, may be in CISA KEV or have active exploitation. | Fully mitigate or remediate within 3 calendar days     |\r\n| **E4 – High**       | Credibly exploitable with moderate skill, high-value target, partial mitigation in place, or moderate potential adverse impact if internet-reachable. | Fully mitigate or remediate within 7 days (non-internet) or 3 days (internet-reachable) |\r\n| **E3 – Moderate**   | Limited exposure or mitigations in place, low data impact, no active exploitation but exploitable in theory.                                        | Fully mitigate or remediate within 21 days if Low impact, 7 days if Moderate+ |\r\n| **E2 – Low**        | Minimal exposure, strong compensating controls, low or very low potential adverse impact.                                                          | Fully mitigate or remediate within 6 months            |\r\n| **E1 – Negligible** | Theoretical exploit only, very low potential adverse impact, or validated false positive.                                                           | Address when feasible; may be informational only       |\r\n\r\n**EXAMPLE in POA&M:**  \r\n   - **CVE**: CVE-2025-12345 (OpenSSL vuln in base image)  \r\n   - **CVSS Base Score**: 9.8  \r\n   - **Environment**: Internal microservice container, only reachable from a VPC.  \r\n   - **Mitigations**: Mutual TLS between services, read-only FS, non-root container user.  \r\n   - **Exploit Maturity**: Public PoC exists, not actively exploited in the wild.  \r\n   - **Exploitability Calculation**: 9.8 × 0.5 (internal only) × 0.8 (low criticality) × 1.0 (PoC only) - 2.0 (mitigations) = 3.9 → **Grade E2 – Low**  \r\n   - **POA&M Action**: Track as low risk, remediation within 180 days unless KEV listing changes.  ",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A2N5u",
+      "url": "https://github.com/FedRAMP/community/discussions/70#discussioncomment-14212718",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2025-08-25T16:44:37Z",
+      "updated_at": "2025-08-25T16:44:38Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Next steps:\r\n\r\nWe're aligning some of these suggested improvements from here, elsewhere, and the FSCAC with the Continuous Vulnerability Management Standard and expect to be release a combined update for FedRAMP 20x that will be BIR'd to Rev5 soon.",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "austinsonger",
+    "pete-gov"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/70#discussioncomment-14212718",
+      "author": "pete-gov",
+      "created_at": "2025-08-25T16:44:37Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [
+      "FRD-CVM-02",
+      "FRD-CVM-04",
+      "FRD-CVM-05",
+      "FRD-CVM-07",
+      "FRD-CVM-08",
+      "FRR-CVM-TM"
+    ],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://bidenwhitehouse.archives.gov/wp-content/uploads/legacy_drupal_files/omb/memoranda/2001/m01-24.pdf",
+      "https://georgewbush-whitehouse.archives.gov/omb/memoranda/m02-01.html",
+      "https://github.com/orgs/FedRAMP/projects/25/views/1?pane=issue&itemId=113842723&issue=FedRAMP%7Croadmap%7C40",
+      "https://github.com/user-attachments/assets/62e03b84-d746-4728-98f4-25a5b21982b6",
+      "https://github.com/user-attachments/assets/86199546-79b1-4f5b-929c-b66f72608a98",
+      "https://github.com/user-attachments/assets/8d5309d6-6f03-47dd-a420-13ac2be2d71d",
+      "https://github.com/user-attachments/assets/f704d639-8d7f-4065-8f1b-dcae0d128fcf",
+      "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-37r2.pdf#%5B%7B%22num%22%3A321%2C%22gen%22%3A0%7D%2C%7B%22name%22%3A%22XYZ%22%7D%2C88%2C219%2C0%5D",
+      "https://www.federalregister.gov/documents/2025/07/25/2025-14078/federal-secure-cloud-advisory-committee-notification-of-upcoming-meeting",
+      "https://www.fedramp.gov/assets/resources/documents/CSP_POAM_Template_Completion_Guide.pdf",
+      "https://www.govinfo.gov/content/pkg/PLAW-106publ398/html/PLAW-106publ398.htm",
+      "https://www.gsa.gov/technology/government-it-initiatives/federal-secure-cloud-advisory-committee"
+    ],
+    "topics": [
+      "20x",
+      "conmon",
+      "poam",
+      "rev5",
+      "significant_change",
+      "vulnerability_mgmt"
+    ]
+  },
+  "content_hash": "ed57064653dce6c1027126f789c3410181447b794d35ec2dd44381a62c38a32b",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

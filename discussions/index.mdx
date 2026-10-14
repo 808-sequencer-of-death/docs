@@ -1,0 +1,63 @@
+---
+title: "Discussion digests"
+description: "Plain-English digests of FedRAMP community discussions, with FedRAMP staff positions called out separately from community comments."
+sidebarTitle: "Overview"
+---
+
+<Info>
+  **Source:** [FedRAMP community discussions](https://github.com/FedRAMP/community/discussions) on GitHub, synced automatically into this site's data. **Last reviewed:** 2026-10-14. The digests are checked against upstream release `2026.10.14.01` of the FedRAMP Consolidated Rules.
+</Info>
+
+## What these digests are
+
+FedRAMP staff answer many practical questions about the Consolidated Rules for 2026 (CR26) in the public FedRAMP community discussions on GitHub. Those answers are spread across long threads. These pages pull out what staff said, group it by topic and ruleset, and link each position to the exact comment.
+
+Each digest gives you:
+
+- A short **bottom line** for executives.
+- **FedRAMP staff positions**, each paraphrased in a callout with the staff member's GitHub login, the date and a link to the comment.
+- **Open questions** that were still unanswered in the thread.
+- **What it means for you**, tied to rule IDs, and only what the sources support.
+
+## How staff and community posts are told apart
+
+Only posts marked official in the synced discussion data are treated as FedRAMP positions. The sync script (`scripts/fedramp_discussions_sync.py`) marks a post official when:
+
+- The author's GitHub association with the `FedRAMP/community` repository is **owner**, **member** or **collaborator**.
+- Or the author's login is on a configured allowlist, or ends in `-gov`.
+
+Threads that carry the **FedRAMP Official** label are flagged as official threads. Everything else is community comment. We use community comments only to explain what was asked, never as guidance.
+
+<Note>
+  The `-gov` login rule can flag accounts that aren't on FedRAMP's published list of responders. For example, `nathan-gov` is marked official in the data but isn't on the staff list in the Rev5 thread, and only asked questions. The digests point out cases like this.
+</Note>
+
+## Staff statements don't override the rules
+
+The published rules are the source of truth. A staff post explains how FedRAMP reads a rule, or what it plans to do. It doesn't change the rule.
+
+- If a staff post conflicts with the current rule text, the [official rules](https://www.fedramp.gov/2026/) govern, and the digest says so.
+- If a later upstream release adopted what staff said, or replaced it, the digest notes the release and links the current rule.
+- An RFC is a proposal. It isn't a requirement, even while it's open.
+
+## Digests
+
+<CardGroup cols={2}>
+  <Card title="Rev5 CR26 questions (#146)" icon="server" href="/discussions/rev5-cr26-questions">
+    Staff answers for Rev5 providers: deadlines and enforcement, VDR and VER adoption, the SDR, IVV, trust centers and JSON schemas.
+  </Card>
+  <Card title="20x CR26 questions (#147)" icon="cloud" href="/discussions/20x-cr26-questions">
+    Staff answers for 20x: certification paths and classes, Class A, secure configuration, scope, Marketplace listings and the SDR.
+  </Card>
+  <Card title="Notable staff answers" icon="star" href="/discussions/notable-staff-answers">
+    Other threads with staff replies since 2026-06, such as JSON Content-Type, post-quantum crypto, SDR ownership and agency use cases.
+  </Card>
+  <Card title="RFC history" icon="clock-rotate-left" href="/discussions/rfc-history">
+    Every Request for Comment thread, with status, date, link and the related current ruleset where that's clear.
+  </Card>
+</CardGroup>
+
+## Related
+
+- [Rules overview](/rules)
+- [What changed](/changelog)

@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-58",
+  "node_id": "D_kwDOOxfoic4Agvwi",
+  "number": 58,
+  "title": "Paramify - FedRAMP 20x Phase One Pilot Final Submission",
+  "url": "https://github.com/FedRAMP/community/discussions/58",
+  "category": "20x Discussion",
+  "category_slug": "20x-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "iteuscher",
+  "author_is_official": false,
+  "created_at": "2025-07-14T23:38:41Z",
+  "updated_at": "2025-11-18T16:25:10Z",
+  "last_edited_at": null,
+  "closed": true,
+  "closed_at": "2025-11-18T16:25:10Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "Paramify has published a 20x Phase One Pilot Final Submission available at:\r\nhttps://github.com/paramify/fedramp-20x-pilot\r\n\r\nParamify's approach to FedRAMP 20x includes automated evidence collection and assessment by Coalfire as 3PAO. \r\nThe complete machine-readable file from this assessment is available [publicly](https://github.com/paramify/fedramp-20x-pilot/blob/main/machine-readable-package/paramify_coalfire_20x_machine_readable.yaml) on GitHub. \r\n\r\nWe look forward to continuing to contribute to the FedRAMP 20x community! 😄 ",
+  "comment_count": 0,
+  "comments": [],
+  "answer_url": null,
+  "participants": [
+    "iteuscher"
+  ],
+  "official_responses": [],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://github.com/paramify/fedramp-20x-pilot",
+      "https://github.com/paramify/fedramp-20x-pilot/blob/main/machine-readable-package/paramify_coalfire_20x_machine_readable.yaml"
+    ],
+    "topics": [
+      "20x",
+      "3pao",
+      "machine_readable"
+    ]
+  },
+  "content_hash": "fc1e729db8ed8f53b0c56ec6517ded2124bc04fd5670904c1031ff4be6fdcd85",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

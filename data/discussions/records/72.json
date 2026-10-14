@@ -1,0 +1,495 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-72",
+  "node_id": "D_kwDOOxfoic4AhQOH",
+  "number": 72,
+  "title": "Q&A and open casual discussion on RFC-0013 (SC-7)",
+  "url": "https://github.com/FedRAMP/community/discussions/72",
+  "category": "General RFC Discussion",
+  "category_slug": "general-rfc-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": true,
+  "author": "pete-gov",
+  "author_is_official": true,
+  "created_at": "2025-08-11T18:17:28Z",
+  "updated_at": "2025-11-18T16:25:40Z",
+  "last_edited_at": "2025-08-11T18:18:36Z",
+  "closed": true,
+  "closed_at": "2025-11-18T16:25:40Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "This general thread is intended for casual open discussion and Q&A on [RFC-0013 SC-7 Boundary Protection Balance Improvement Release](https://github.com/FedRAMP/community/discussions/71). The discussion in this thread will not be considered as part of the formal public comment process by FedRAMP so participants can have a chill place to discuss the RFC.",
+  "comment_count": 6,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4A1sfC",
+      "url": "https://github.com/FedRAMP/community/discussions/72#discussioncomment-14075842",
+      "author": "ajay-stratus",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2025-08-11T20:46:40Z",
+      "updated_at": "2025-08-11T20:46:41Z",
+      "upvotes": 2,
+      "minimized": false,
+      "body": "The required used of Bastions Hosts by 3PAOs have pointed to the rescinded Subnets Whitepaper. The new RFC should explicitly call out not having to use Bastion Hosts if that is the intent. ",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A1shr",
+          "url": "https://github.com/FedRAMP/community/discussions/72#discussioncomment-14076011",
+          "author": "ghost",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-08-11T20:59:59Z",
+          "updated_at": "2025-08-11T21:00:00Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "I'm unclear if the 'publicly accessible components' in the updated guidance is meant to be full compute instances (bastion hosts, web proxies, etc), or if that can now be something else like a next-gen firewall doing break/inspect, an identity aware proxy service, a load balancer, etc.   The whitepaper called some of these out as not being allowed. \r\n\r\n"
+        },
+        {
+          "id": "DC_kwDOOxfoic4A1siz",
+          "url": "https://github.com/FedRAMP/community/discussions/72#discussioncomment-14076083",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2025-08-11T21:06:50Z",
+          "updated_at": "2025-08-11T21:06:51Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "To avoid repeats of confusion like the one being referenced, FedRAMP doesn't plan to explicitly call out specific technical capabilities that meet or don't meet requirements; historically this leads to hyper-fixation on those documented capabilities and causes people to avoid adopting better modern alternatives, which is how we got to a place where everyone has just decided that you can't meet SC-7 without bastion hosts. 🤷 \r\n\r\nThe updated guidance is intended to ensure the spirit of the NIST RMF is put into play and novel approaches that meet the requirements can be argued for and adopted. FedRAMP is definitely down for improving the wording to ensure it's clear that any technical capability that meets those conditions works though!\r\n\r\n"
+        },
+        {
+          "id": "DC_kwDOOxfoic4A1sjs",
+          "url": "https://github.com/FedRAMP/community/discussions/72#discussioncomment-14076140",
+          "author": "ajay-stratus",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-08-11T21:14:01Z",
+          "updated_at": "2025-08-11T21:14:03Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "That sounds great!"
+        },
+        {
+          "id": "DC_kwDOOxfoic4A1skS",
+          "url": "https://github.com/FedRAMP/community/discussions/72#discussioncomment-14076178",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2025-08-11T21:22:44Z",
+          "updated_at": "2025-08-11T21:22:45Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> I'm unclear if the 'publicly accessible components' in the updated guidance is meant to be full compute instances (bastion hosts, web proxies, etc), or if that can now be something else like a next-gen firewall doing break/inspect, an identity aware proxy service, a load balancer, etc. The whitepaper called some of these out as not being allowed.\r\n\r\nIt's squishy depending on the environment. The whitepaper was rescinded because the things it called out as not being allowed are now allowed and over-fixated on compute instances in a way that does not account for individual technology architectures.\r\n\r\nOne environment might have a firewall that allows everything over port 80 to go through to a load balancer that does TCP passthrough to a web server which means it's effectively publicly accessible. \r\n\r\nAnother environment as described might break/inspect, filter, proxy, and restrict traffic to that webserver in a way that means it is not publicly accessible and either the next-gen firewall or proxy service is the publicly accessible component."
+        },
+        {
+          "id": "DC_kwDOOxfoic4A1sv6",
+          "url": "https://github.com/FedRAMP/community/discussions/72#discussioncomment-14076922",
+          "author": "Raikiri1310",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-08-12T00:13:40Z",
+          "updated_at": "2025-08-12T00:14:40Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "From an architecture standpoint, I don't find this squishy at all, which is perplexing. \r\n\r\nBoth examples that you've given thus far, have an outside and an inside interface, both are beholden to the rules of publicly routable IP space, and both end up using subnetting which is necessary piece if utilizing internet protocol. They're both part of a logical piece of the cloud network, complete with a routing table and a gateway that does network address translation. \r\n\r\nI understand cleaning up language to make it more flexible to the spirit and intent of the control, but by negating the core concept of subnetting primarily, FedRAMP has given the green light to interpret \"logical separation\" in whatever way is convenient. \r\n\r\nTechnically speaking, a virtual private cloud is used to logically separate away a private part of cloud away from the public at large. Using this logic, just having a VPC means that I'm good right? \r\n\r\nEven though, under the hood.. if I want to communicate using IP, publically routable IP space needs to be translated into private, and the data plane is going to be split by subnet. So we're back to where we started. \r\n\r\nThis feels like a document that needs more input from cloud architects. \r\n"
+        },
+        {
+          "id": "DC_kwDOOxfoic4A12Xx",
+          "url": "https://github.com/FedRAMP/community/discussions/72#discussioncomment-14116337",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2025-08-15T12:40:27Z",
+          "updated_at": "2025-08-15T12:42:12Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> Both examples that you've given thus far, have an outside and an inside interface, both are beholden to the rules of publicly routable IP space, and both end up using subnetting which is necessary piece if utilizing internet protocol. \r\n\r\nAll the devices in both examples could be on the same subnet without changing the risk of unauthorized traversal (versus them being split across multiple subnets). \r\n\r\n> I understand cleaning up language to make it more flexible to the spirit and intent of the control, but by negating the core concept of subnetting primarily, FedRAMP has given the green light to interpret \"logical separation\" in whatever way is convenient.\r\n\r\nThis is the intent.\r\n\r\n> Technically speaking, a virtual private cloud is used to logically separate away a private part of cloud away from the public at large. Using this logic, just having a VPC means that I'm good right?\r\n\r\nIt would depend on the configuration of traffic within the VPC, the updated guidance requires inspection and authorization of traffic to traverse networks. If a VPC is configured with a bunch of open routing between networks then it's not meeting the requirement, but if security groups and NACLs are implemented then it might.\r\n\r\n> Even though, under the hood.. if I want to communicate using IP, publically routable IP space needs to be translated into private, and the data plane is going to be split by subnet. So we're back to where we started.\r\n\r\nThere are plenty of ways to logically separate traffic within the same subnet. That is the point of this update - splitting a data plane by subnet should be done to organize traffic and is not an effective way to limit unwanted traversal by itself. Logical separation between devices is necessary and sufficient.\r\n \r\n> This feels like a document that needs more input from cloud architects.\r\n\r\nYes, please. That is the purpose of an RFC."
+        }
+      ],
+      "replies_total": 6,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A1u1M",
+      "url": "https://github.com/FedRAMP/community/discussions/72#discussioncomment-14085452",
+      "author": "BPFanelli",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2025-08-12T18:37:39Z",
+      "updated_at": "2025-08-12T18:37:39Z",
+      "upvotes": 2,
+      "minimized": false,
+      "body": "A bastion host has never been the only option. There are many FedRAMP authorized CSOs that satisfy SC-7b as described in the white paper using AWS System Manager, Azure Bastion, Zscaler, Teleport server in boundary, AWS or Google Workspaces, and many others. ",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A2N63",
+          "url": "https://github.com/FedRAMP/community/discussions/72#discussioncomment-14212791",
+          "author": "wisecryptic",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-08-25T16:52:03Z",
+          "updated_at": "2025-08-25T16:52:04Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "This is true fundamentally, but every 3PAO/advisory group I have known always requests/advises a Bastion to fulfill the requirements, and I have always been challenged when forgoing a traditional bastion, even when the novel architecture is more efficient and secure (noting also in fairness that the 3PAOs have always eventually accepted the novel architecture upon explanation of control implementation). My hope is that this provides a welcome reset to a 3PAOs standard expectation."
+        },
+        {
+          "id": "DC_kwDOOxfoic4A2OEG",
+          "url": "https://github.com/FedRAMP/community/discussions/72#discussioncomment-14213382",
+          "author": "ajay-stratus",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-08-25T18:10:42Z",
+          "updated_at": "2025-08-25T18:10:43Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "@wisecryptic Same situation here. Sounds like this will be a welcome reset for all parties."
+        }
+      ],
+      "replies_total": 2,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A1u3g",
+      "url": "https://github.com/FedRAMP/community/discussions/72#discussioncomment-14085600",
+      "author": "BPFanelli",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2025-08-12T18:57:08Z",
+      "updated_at": "2025-08-12T19:16:53Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "A bastion was the easy button. For any other configuration, the access point needed to:\r\n- Be inside an authorized boundary - not necessarily the instant CSO's boundary (see below)\r\n- Audit all access traffic\r\n- Meet the appropriate AAL requirements to authenticate users\r\n\r\nWhen accessing a CSO boundary from another CSO, the access should be network adjacent, for example:\r\n- Access from AWS Workspace into an AWS VPC is acceptable\r\n- Access from Google Workspace into an AWS VPC is questionable\r\n\r\nQuestionable means it did not happen very often, and there was no defined rule established. In general, the question was - If the connection is going to be made over the Internet (rather than remaining within a single CSO's authorized environment):\r\n- Can it be considered as having met the SC-7b requirement, or\r\n- Does it need to meet SC-7b within the boundary\r\nIf the former, at a minimum, there needs to be very tight controls on the connection over the Internet to prevent spoofing\r\n\r\nI suggest any new guidance take these points into account. After I take input here, I will move my final comments to the comment page. ",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A1u4D",
+          "url": "https://github.com/FedRAMP/community/discussions/72#discussioncomment-14085635",
+          "author": "Raikiri1310",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-08-12T19:01:21Z",
+          "updated_at": "2025-08-12T19:01:21Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "What gave CSPs the impression that a bastion was required? "
+        },
+        {
+          "id": "DC_kwDOOxfoic4A1u4y",
+          "url": "https://github.com/FedRAMP/community/discussions/72#discussioncomment-14085682",
+          "author": "BPFanelli",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-08-12T19:06:41Z",
+          "updated_at": "2025-08-12T19:06:42Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "No idea. We tried very hard to get the same message out that Pete is touting above - novel approaches that meet the requirements are welcome. "
+        },
+        {
+          "id": "DC_kwDOOxfoic4A1u5g",
+          "url": "https://github.com/FedRAMP/community/discussions/72#discussioncomment-14085728",
+          "author": "BPFanelli",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-08-12T19:13:01Z",
+          "updated_at": "2025-08-12T19:13:01Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "I will make this guess:\r\n- The white paper was primarily focused on getting across the point about **_publicly accessible system components_**\r\n- Publicly accessible is different than only devices with public IP addresses\r\n- For ease of explanation, it uses a bastion as an **_example_**\r\n- Examples are often mistaken for **_The Way_** "
+        },
+        {
+          "id": "DC_kwDOOxfoic4A1u6d",
+          "url": "https://github.com/FedRAMP/community/discussions/72#discussioncomment-14085789",
+          "author": "mjprager",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-08-12T19:21:38Z",
+          "updated_at": "2025-08-12T19:21:38Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Hah, that's probably why Pete is so reluctant to give examples :) even though we press for them (since they help humans contextualize and understand things)"
+        },
+        {
+          "id": "DC_kwDOOxfoic4A1u6o",
+          "url": "https://github.com/FedRAMP/community/discussions/72#discussioncomment-14085800",
+          "author": "ajay-stratus",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-08-12T19:22:59Z",
+          "updated_at": "2025-08-12T19:23:00Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "It wasn't CSPs interpreting it this way, it was 3PAOs that would give out High findings for it and CSPs would just have to comply. "
+        },
+        {
+          "id": "DC_kwDOOxfoic4A1u7f",
+          "url": "https://github.com/FedRAMP/community/discussions/72#discussioncomment-14085855",
+          "author": "BPFanelli",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-08-12T19:32:57Z",
+          "updated_at": "2025-08-12T19:32:57Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Can't blame that on the white paper or the PMO."
+        },
+        {
+          "id": "DC_kwDOOxfoic4A1u8Z",
+          "url": "https://github.com/FedRAMP/community/discussions/72#discussioncomment-14085913",
+          "author": "Raikiri1310",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-08-12T19:38:59Z",
+          "updated_at": "2025-08-12T19:39:00Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "I was part of the technical review team for my 3PAO. I reviewed many many RARs, and none of them had an obligatory bastion host. Some of them had innovative solutions for meeting the subnetting guidance for \"publicly reachable\", using access brokers, cloud-native features like AWS systems manager tunneling, or zscaler. \r\n\r\nAt the end of the day, we had to evaluate whether or not they were easily reachable via the context of network routing, if they were sufficiently segmented logically from a network perspective, and if they met the rest of the SC requirements. \r\n\r\nI don't understand how this is controversial, but SC-7(4), which should be a responsibility for on-premise data centers or the cloud provider.. isn't. "
+        },
+        {
+          "id": "DC_kwDOOxfoic4A1u8r",
+          "url": "https://github.com/FedRAMP/community/discussions/72#discussioncomment-14085931",
+          "author": "BPFanelli",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-08-12T19:41:17Z",
+          "updated_at": "2025-08-12T19:59:39Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> Hah, that's probably why Pete is so reluctant to give examples :) even though we press for them (since they help humans contextualize and understand things)\r\n\r\nAs Pete has mentioned, examples are an enormous amount of work. But in the long run, the real reason is that they are almost always taken as templates and used verbatim. Witness the ABD example that was promulgated under the title of \"VA Job Aid\". It was intended only to make a few points about how to build up an ABD. To do that, it broke the ABD into several layers so the example could focus on just a few data flows at a time. \r\n\r\nThe result was 80% of the diagrams submitted in SSPs after that had ABDs with separate layers. It was (and still is) awful! That was never the intent. The PMO generally wanted just a single ABD. The layers were just to make it easier to explain. Instead, it became the template for ABDs. "
+        },
+        {
+          "id": "DC_kwDOOxfoic4A1u9f",
+          "url": "https://github.com/FedRAMP/community/discussions/72#discussioncomment-14085983",
+          "author": "BPFanelli",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-08-12T19:51:20Z",
+          "updated_at": "2025-08-12T19:52:26Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> I don't understand how this is controversial, but SC-7(4), which should be a responsibility for on-premise data centers or the cloud provider.. isn't.\r\n\r\nI get your concern there, but SC-7(4) only addresses interfaces at the point of connection of a telecom provider. SC-7b addresses any \"publicly accessible system components\" and these can be buried behind a firewall, NAT server, and a load balancer."
+        },
+        {
+          "id": "DC_kwDOOxfoic4A1u-l",
+          "url": "https://github.com/FedRAMP/community/discussions/72#discussioncomment-14086053",
+          "author": "Raikiri1310",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-08-12T20:00:34Z",
+          "updated_at": "2025-08-12T20:00:34Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "we're speaking the same language, but I think you misunderstood my example use here. I find sc-7.b not controversial, I find SC-7(4) highly controversial. \r\n\r\nOne of these has a rescinded white paper and an RFC, the other gets no attention. \r\n\r\nI asked the Noblis folks when FR PMO was still FR PMO, and even they gave me a wishy washy answer.  "
+        },
+        {
+          "id": "DC_kwDOOxfoic4A1vAn",
+          "url": "https://github.com/FedRAMP/community/discussions/72#discussioncomment-14086183",
+          "author": "BPFanelli",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-08-12T20:16:21Z",
+          "updated_at": "2025-08-12T20:16:22Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> we're speaking the same language, but I think you misunderstood my example use here. I find sc-7.b not controversial, I find SC-7(4) highly controversial.\r\n\r\nYou are correct. I missed your meaning. What do you find controversial about SC-7(4)?\r\n\r\n"
+        },
+        {
+          "id": "DC_kwDOOxfoic4A1vDz",
+          "url": "https://github.com/FedRAMP/community/discussions/72#discussioncomment-14086387",
+          "author": "lesley-hess",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-08-12T20:53:53Z",
+          "updated_at": "2025-08-12T20:53:54Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> Can't blame that on the white paper or the PMO.\r\n\r\nI can see how 3PAOs in general could be an easy scapegoat here, however, we operate based on published guidance, direct feedback from the former PMO package reviewers, Agency reviewers, etc. Absolutely there is variance on interpretations of requirements. When there is room for interpretation, all the 3PAOs I know seek guidance from government representatives, and the reality is - they are not always aligned.  I don't think it's reasonable or conductive to what we're trying to accomplish here to place blame solely on one entity.  "
+        },
+        {
+          "id": "DC_kwDOOxfoic4A1vKN",
+          "url": "https://github.com/FedRAMP/community/discussions/72#discussioncomment-14086797",
+          "author": "BPFanelli",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-08-12T21:27:23Z",
+          "updated_at": "2025-08-12T21:27:25Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> I don't think it's reasonable or conductive to what we're trying to accomplish here to place blame solely on one entity.\r\n\r\nGood point, Lesley. It is really the responsibility of the PMO to get the word out consistently to all stakeholders. There were lots of discussions about how to get more of the internal guidance published, but it never happened. "
+        },
+        {
+          "id": "DC_kwDOOxfoic4A1vO8",
+          "url": "https://github.com/FedRAMP/community/discussions/72#discussioncomment-14087100",
+          "author": "Raikiri1310",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-08-12T22:39:22Z",
+          "updated_at": "2025-08-12T22:39:23Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> > we're speaking the same language, but I think you misunderstood my example use here. I find sc-7.b not controversial, I find SC-7(4) highly controversial.\r\n> \r\n> You are correct. I missed your meaning. What do you find controversial about SC-7(4)?\r\n\r\nHow, or in what form, does a CSP need or procure an external telecommunications service? This control has no guidance in rev5. In rev4, it spoke to providing data and voice communication services. That sounds most directly like ordering a leased line or additional ISP connection. Which, would be more often than not applicable in an on-premise implementation. Not that many CSPs are going to be architecting MPLS or SDWAN into their design. \r\n\r\nThis is why I find this control more controversial than sc-7.b"
+        },
+        {
+          "id": "DC_kwDOOxfoic4A1xJv",
+          "url": "https://github.com/FedRAMP/community/discussions/72#discussioncomment-14094959",
+          "author": "BPFanelli",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-08-13T16:08:56Z",
+          "updated_at": "2025-08-13T16:08:56Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> How, or in what form, does a CSP need or procure an external telecommunications service? \r\n> \r\n> This is why I find this control more controversial than sc-7.b\r\n\r\nI think you are correct. A CSO built on an authorized PaaS will almost always just inherit this control enhancement. \r\n\r\nIf a CSP has their own data center - or is using a co-location facility - they will need to take responsibility for SC-7(4).   "
+        },
+        {
+          "id": "DC_kwDOOxfoic4A10xB",
+          "url": "https://github.com/FedRAMP/community/discussions/72#discussioncomment-14109761",
+          "author": "ajay-stratus",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-08-14T22:55:38Z",
+          "updated_at": "2025-08-14T22:55:39Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> > I don't think it's reasonable or conductive to what we're trying to accomplish here to place blame solely on one entity.\n> \n> Good point, Lesley. It is really the responsibility of the PMO to get the word out consistently to all stakeholders. There were lots of discussions about how to get more of the internal guidance published, but it never happened. \n\nAbsolutely! This is what is critical to ensure that all stakeholders are well aligned in the process. We're all in this together."
+        },
+        {
+          "id": "DC_kwDOOxfoic4A13A0",
+          "url": "https://github.com/FedRAMP/community/discussions/72#discussioncomment-14118964",
+          "author": "jsantore-cgc",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-08-15T16:46:21Z",
+          "updated_at": "2025-08-15T16:46:21Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "@ajay-stratus well said.  \r\n\r\nI want to also mirror something I've said repeatedly in FedRAMP related discussions.\r\nAll parties need to presume good faith and work collaboratively, and not treat things as adversarial.  We all want the same end goals.\r\nA good faith disagreement should never be cause for corrective action, but instead a launching place to find an answer together.  Once you add in adversarial, you get people 'playing defense,' and that sucks all around.  \r\n\r\n\r\n"
+        }
+      ],
+      "replies_total": 17,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A1u7I",
+      "url": "https://github.com/FedRAMP/community/discussions/72#discussioncomment-14085832",
+      "author": "BPFanelli",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2025-08-12T19:29:26Z",
+      "updated_at": "2025-08-20T12:59:16Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Here is the guidance that was distributed for Agency packages when it came up. It is derived from the guidance in **BOD 23-02 Implementation Guidance** _Figure 4 - Acceptable use case – networked management interfaces only accessible from management network micro-segments through zero trust policy enforcement point (ZT PEP)_.\r\nhttps://www.cisa.gov/news-events/directives/binding-operational-directive-23-02-implementation-guidance#:~:text=Figure%204%20%2D%20Acceptable%20use%20case%20%E2%80%93%20networked%20management%20interfaces%20only%20accessible%20from%20management%20network%20micro%2Dsegments%20through%20ZT%20PEP.\r\n\r\nSummary of CISA zero trust (ZT) policy enforcement point (PEP) guidance:\r\n- Implements authentication and authorization separate from any interface being accessed\r\n- Must be inside an authorized boundary\r\n- Configuration console and gateway must both be in an authorized boundary\r\n- Traffic from administrators to the ZT PEP is mutually authenticated\r\n- Traffic from the ZT PEP to any internal interface is mutually authenticated and authorized, where possible",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A2C1d",
+      "url": "https://github.com/FedRAMP/community/discussions/72#discussioncomment-14167389",
+      "author": "BPFanelli",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2025-08-20T15:38:33Z",
+      "updated_at": "2025-08-20T15:49:37Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Given the dearth of recent comments, I have posted my formal comments here:\r\nhttps://github.com/FedRAMP/community/discussions/71#discussioncomment-14167323",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A2N7o",
+          "url": "https://github.com/FedRAMP/community/discussions/72#discussioncomment-14212840",
+          "author": "wisecryptic",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-08-25T16:59:33Z",
+          "updated_at": "2025-08-25T16:59:34Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thanks @BPFanelli these have been very helpful to my understanding.\r\n\r\nFrom my perspective, it appears that the new guidance is meant to clear up some obtuseness with a past implementation, while opening the door to more appropriate, cutting-edge methods of meeting the intent of the control."
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A2To0",
+      "url": "https://github.com/FedRAMP/community/discussions/72#discussioncomment-14236212",
+      "author": "BPFanelli",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2025-08-27T18:11:33Z",
+      "updated_at": "2025-08-27T18:13:39Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Here is another topic for conversation. \r\n\r\nI would like to open with the seemingly controversial position that SC-7b actually does provide security benefits. In SC-7b's defense, my recent correspondence with the SP 800-53 authors reminds me that all controls, particularly SC-7b, must be evaluated in the context of the surrounding control parts and enhancements. Given this context, I would like to turn to the technical side of why subnets are such a hot topic - and what to do about that.\r\n\r\nAgain, to the extent that SC-7b provides security benefits, it presumes that the subnets follow normal TCP/IP rules. That last part is important because the software defined networks (SDNs) in many hyperscales deviate at layer 2 and layer 3 in both behavior and configuration. In addition, no two hyperscales tweak the TCP/IP rules in the same way.\r\n\r\nFor example:\r\n- One CSO assigns every VM a /32 mask (aka 255.255.255.255) as if it were the only host in a subnet\r\n- Another allows subnets to span VPCs, where another does not\r\n\r\nThe most likely alternative implementation falls to security groups (SGs). Similarly SGs are/may be implemented differently in each hyperscale environment. For example:\r\n- One CSO clearly applies SG access rules at the interface level regardless of where the rule set is assigned\r\n      - That is, SG rules assigned to a VPC will flow down and actually be implemented and enforced on each interface in the VPC\r\n- Other CSOs may do the same, but it is not as clear in their documentation\r\n\r\n**Takeaways from the above:**\r\n- SC-7b presumes that subnets are following TCP/IP rules as defined by IETF\r\n- SDN environments deviate from standard layer 2 and layer 3 in both behavior and configuration\r\n- No two CSPs appear to implement their TCP/IP tweaks in the same way\r\n- Similarly CSPs may implement SGs in different ways\r\n\r\n**Conclusions I draw from these takeaways:**\r\n- SDNs and SGs as implemented by hyperscales offer great alternatives to subnetting\r\n- Given that each CSP has their own flavor, it is difficult to impossible to specify a general rule for an exception\r\n- It then falls to each IaaS/PaaS that implements SDN tweaks to:\r\n      - Define the inheritable capability in their environment as an alternative implementation\r\n      - Engage with their 3PAO to get this assessed\r\n      - Document this in their CRM\r\n\r\nThoughts?",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "BPFanelli",
+    "Raikiri1310",
+    "ajay-stratus",
+    "ghost",
+    "jsantore-cgc",
+    "lesley-hess",
+    "mjprager",
+    "pete-gov",
+    "wisecryptic"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/72#discussioncomment-14076083",
+      "author": "pete-gov",
+      "created_at": "2025-08-11T21:06:50Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/72#discussioncomment-14076178",
+      "author": "pete-gov",
+      "created_at": "2025-08-11T21:22:44Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/72#discussioncomment-14116337",
+      "author": "pete-gov",
+      "created_at": "2025-08-15T12:40:27Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [
+      "RFC-0013"
+    ],
+    "nist_controls": [
+      "SC-7",
+      "SC-7(4)"
+    ],
+    "discussion_refs": [
+      71
+    ],
+    "urls": [
+      "https://github.com/FedRAMP/community/discussions/71",
+      "https://github.com/FedRAMP/community/discussions/71#discussioncomment-14167323",
+      "https://www.cisa.gov/news-events/directives/binding-operational-directive-23-02-implementation-guidance#:~:text=Figure%204%20%2D%20Acceptable%20use%20case%20%E2%80%93%20networked%20management%20interfaces%20only%20accessible%20from%20management%20network%20micro%2Dsegments%20through%20ZT%20PEP."
+    ],
+    "topics": [
+      "3pao",
+      "rev5"
+    ]
+  },
+  "content_hash": "f58cc5546b39c84a1bad78c1c35f41df3d13a82f355d59d3a40f364a3eea5cc6",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

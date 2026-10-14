@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-156",
+  "node_id": "D_kwDOOxfoic4AoOrH",
+  "number": 156,
+  "title": "Clarification Requested: June 2027 Rev. 5 Deadline",
+  "url": "https://github.com/FedRAMP/community/discussions/156",
+  "category": "Rev5 Discussion",
+  "category_slug": "rev5-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "joshuak44",
+  "author_is_official": false,
+  "created_at": "2026-08-03T15:56:51Z",
+  "updated_at": "2026-09-09T17:30:36Z",
+  "last_edited_at": null,
+  "closed": true,
+  "closed_at": "2026-09-09T17:30:36Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "Could you clarify exactly what milestone must be reached by June 2027 for a new authorization effort to proceed under Rev. 5?\r\n\r\nSpecifically:\r\n•\tDoes the June 2027 cutoff apply to submitting a new In Process Request?\r\n•\tWould an effort qualify if its In Process Request has been accepted by FedRAMP before the cutoff?\r\n•\tMust the complete Rev. 5 authorization package and associated assessment materials be submitted by that date?\r\n•\tMust the complete Rev. 5 authorization package and associated assessment materials (including ATO) be submitted by that date?\r\n•\tIf a different milestone applies, what specifically constitutes an accepted application for purposes of the deadline?\r\n",
+  "comment_count": 1,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4BEOUR",
+      "url": "https://github.com/FedRAMP/community/discussions/156#discussioncomment-17884433",
+      "author": "paulagosta",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2026-08-03T18:56:23Z",
+      "updated_at": "2026-08-03T18:56:23Z",
+      "upvotes": 2,
+      "minimized": false,
+      "body": "Josh,\r\n\r\nWe will discuss this a little more in depth Weds during the working group, but you must be in active review by the FedRAMP PMO by 11 June 2027.  You must have a complete FedRAMP Package submitted to the FedRAMP PMO.  This includes an active Agency ATO unless you are part of the limited sponsorless path.  This also includes you meeting CR26 requirements at the time of submission.  Those requirements and their timeframes can be found at the link below.  \r\nhttps://www.fedramp.gov/2026/providers/updating/deadlines/rev5/\r\n \r\nRev5 submissions to FedRAMP after 11 June 2027 will not be accepted.  If you are currently in Agency review or planning to enter soon, it is imperative that you make sure your schedule and your agency review timelines aligns with the 11 June timeframe.  \r\n\r\nPaul",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "joshuak44",
+    "paulagosta"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/156#discussioncomment-17884433",
+      "author": "paulagosta",
+      "created_at": "2026-08-03T18:56:23Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://www.fedramp.gov/2026/providers/updating/deadlines/rev5/"
+    ],
+    "topics": [
+      "rev5"
+    ]
+  },
+  "content_hash": "057c15812daffdc3d98c7b26f0d01be443dbb478feeeba152e2686a027e8d3c5",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-48",
+  "node_id": "D_kwDOOxfoic4AgXuA",
+  "number": 48,
+  "title": "FR Moderate and Pilot inquiry",
+  "url": "https://github.com/FedRAMP/community/discussions/48",
+  "category": "20x Discussion",
+  "category_slug": "20x-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "cdev45",
+  "author_is_official": false,
+  "created_at": "2025-06-23T19:34:26Z",
+  "updated_at": "2025-06-24T12:39:35Z",
+  "last_edited_at": null,
+  "closed": true,
+  "closed_at": "2025-06-24T12:39:34Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "Dear Agency Team,\r\n\r\nCongratulations on all of the hard work, and wonderful progress! Two quick questions:\r\n\r\n1. FedRAMP 20x Phase One Pilot\r\nIs the team still accepting new submissions? If yes, do you know when the window will close? We may be interested in submitting.\r\n\r\n2. FedRAMP Moderate\r\nWe are most interested in achieving FR Moderate. What is the current recommendation, considering that 20x Phase Two will involve Moderate, and is only a few weeks / months away? If we can wait, should we simply wait to submit for the 20x Phase Two Pilot?\r\n\r\nThank you kindly for your time and consideration. I look forward to hearing from you!",
+  "comment_count": 1,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4AztT-",
+      "url": "https://github.com/FedRAMP/community/discussions/48#discussioncomment-13554942",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2025-06-23T20:21:23Z",
+      "updated_at": "2025-06-23T20:21:24Z",
+      "upvotes": 2,
+      "minimized": false,
+      "body": "> Is the team still accepting new submissions? If yes, do you know when the window will close? We may be interested in submitting.\r\n\r\nYes. You can see our current plans for timelines on our [public roadmap here](https://github.com/orgs/FedRAMP/projects/25/views/1). That is all subject to change, but currently we are targeting submissions from May 30 to Aug 15, with a formal path opening for 20x Low in early September.\r\n \r\n>  We are most interested in achieving FR Moderate. What is the current recommendation, considering that 20x Phase Two will involve Moderate, and is only a few weeks / months away? If we can wait, should we simply wait to submit for the 20x Phase Two Pilot?\r\n\r\nGSA can't provide business advice to cloud service providers, however if you look at the roadmap link above you'll see that there is still quite a lot of work happening during Phase One and that participants who wait for Phase Two will have a much better idea of what the 20x process will look like for them. ",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4AzvB7",
+          "url": "https://github.com/FedRAMP/community/discussions/48#discussioncomment-13561979",
+          "author": "cdev45",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-06-24T12:38:55Z",
+          "updated_at": "2025-06-24T12:38:56Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thank you @pete-gov!"
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "cdev45",
+    "pete-gov"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/48#discussioncomment-13554942",
+      "author": "pete-gov",
+      "created_at": "2025-06-23T20:21:23Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://github.com/orgs/FedRAMP/projects/25/views/1"
+    ],
+    "topics": [
+      "20x"
+    ]
+  },
+  "content_hash": "451cf1b61034bf87376d2ba98c04794fc45102393ea3ae75daedd2bbce4445a8",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

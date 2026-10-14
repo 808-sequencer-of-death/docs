@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-98",
+  "node_id": "D_kwDOOxfoic4Aiycm",
+  "number": 98,
+  "title": "Anyone want to join/help host a creative KSI's event?",
+  "url": "https://github.com/FedRAMP/community/discussions/98",
+  "category": "20x Discussion",
+  "category_slug": "20x-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "comradelemoncake",
+  "author_is_official": false,
+  "created_at": "2025-11-08T12:18:12Z",
+  "updated_at": "2026-02-11T22:07:26Z",
+  "last_edited_at": null,
+  "closed": true,
+  "closed_at": "2026-02-11T22:07:26Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "My brain has a lot of ideas and I want to get a fun group together to talk up creative KSI mapping without too much structure. I'm still finishing a few things, but if anyone is interested, I can make a page and I'd love to have people join! (And help host if you can!)",
+  "comment_count": 2,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4A7_BY",
+      "url": "https://github.com/FedRAMP/community/discussions/98#discussioncomment-15724632",
+      "author": "ethanolivertroy",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-02-07T06:45:16Z",
+      "updated_at": "2026-02-07T06:45:16Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "@jdbohrman - what do you got?",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A7_Cd",
+          "url": "https://github.com/FedRAMP/community/discussions/98#discussioncomment-15724701",
+          "author": "comradelemoncake",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-02-07T07:11:31Z",
+          "updated_at": "2026-02-07T07:11:31Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "3 months ago is wild bro"
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A8LPy",
+      "url": "https://github.com/FedRAMP/community/discussions/98#discussioncomment-15774706",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2026-02-11T22:07:26Z",
+      "updated_at": "2026-02-11T22:07:26Z",
+      "upvotes": 2,
+      "minimized": false,
+      "body": "It seems like the momentum on this might be lost so I'm going to close until/unless this is necro'd again. ;)",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "comradelemoncake",
+    "ethanolivertroy",
+    "pete-gov"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/98#discussioncomment-15774706",
+      "author": "pete-gov",
+      "created_at": "2026-02-11T22:07:26Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [],
+    "topics": [
+      "ksi"
+    ]
+  },
+  "content_hash": "21d6dbcd019e4ed509decfab7a18b1d931c2444a1ffac62d99b1fcaa18c6e2af",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

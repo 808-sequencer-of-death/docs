@@ -1,0 +1,725 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-38",
+  "node_id": "D_kwDOOxfoic4AgJCt",
+  "number": 38,
+  "title": "Balancing FedRAMP Rev5 against improvements to FedRAMP 20x",
+  "url": "https://github.com/FedRAMP/community/discussions/38",
+  "category": "Rev5 Announcements",
+  "category_slug": "rev5-announcements",
+  "labels": [
+    "FedRAMP Official"
+  ],
+  "is_official_thread": true,
+  "is_rfc": false,
+  "author": "pete-gov",
+  "author_is_official": true,
+  "created_at": "2025-06-06T17:01:41Z",
+  "updated_at": "2026-06-25T16:49:25Z",
+  "last_edited_at": "2025-07-17T16:58:08Z",
+  "closed": true,
+  "closed_at": "2026-06-24T21:39:17Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 5,
+  "body": "This post provides a bit more detail on our planned approach to Rev5 improvements to begin the public conversation that will continue throughout upcoming Rev5 balance improvement tests and releases. **All of this is subject to change as the environment, priorities, and decisions shift; [FedRAMP's standard disclaimers apply](https://www.fedramp.gov/disclaimers/).** \r\n\r\n_Note: This thread is open for discussion but is not a formal Request For Comment._\r\n-----\r\n\r\n## Balancing FedRAMP Rev5 against improvements to FedRAMP 20x\r\n\r\nFedRAMP’s primary focus this year is the development of FedRAMP 20x: a modern cloud-native approach to the security assessment and authorization of cloud services used by federal agencies. This approach will open the federal market for new businesses and enable rapid adoption of emerging best-in-class commercial services by the government, but there are close to 500 cloud service providers used by the government today that are heavily invested in the traditional Rev5 approach. \r\n\r\nThe Rev5 approach will become imbalanced, unfair, and ineffective compared to 20x if Rev5 continues unchanged. A new approach prioritizing innovative solutions for incremental delivery, testing, evaluation, and improvement can take risks during development that are unacceptable for an established approach like Rev5; changes to Rev5 must be made carefully, deliberately, with intent to minimize disruption and unpredictable impacts.\r\n\r\nOur approach to Rev5 balance improvement assumes that improvements designed for 20x should be made available for Rev5 when feasible and appropriate so Rev5 will continue to be a viable path for FedRAMP authorization while 20x is developed and expanded. As improvements are drafted for 20x, FedRAMP will consider their application for Rev5 as optional balance improvements:\r\n\r\n- **Rev5 Balance Improvement Test:** Limited release of optional improvements to test and evaluate the impact, effectiveness, and benefit of the improvement for Rev5. These will often be called “beta tests” for simplicity.\r\n\r\n- **Rev5 Balance Improvement Release:** Formal wide release of an improvement made available for all Rev5 authorized parties; such releases will typically be optional but may be required when absolutely necessary.\r\n\r\n## Minimizing impact to existing investment\r\n\r\nIn general, FedRAMP intends to minimize any **required** changes to Rev5 authorization (initial or ongoing) for cloud service providers. We anticipate the following approach for Rev5 Balance Improvement Tests and Releases:\r\n\r\n- They will be optional whenever they can reasonably be made optional\r\n- They will be rolled out carefully and intentionally, with backup options when feasible\r\n- We will provide as much guidance as we can about adoption for all necessary parties prior to wide release \r\n\r\nIn general, we expect balance improvements to be positive changes that cloud service providers choose to adopt but understand there are often business reasons to maintain the status quo. \r\n\r\n## Managing impact to agencies\r\n\r\nThings are a bit different within the government - laws, policies, and administration priorities rule the day. Federal agencies will be impacted by changes to FedRAMP and government policy just as they always have been. FedRAMP is working closely with OMB OFCIO, the FedRAMP Board, the FedRAMP Technical Advisory Group, and the FedRAMP Agency Liaisons group to manage the impact to agencies. OMB OFCIO and the FedRAMP Board are also working with the CIO and CISO councils to support. \r\n\r\nFedRAMP has been working to improve collaborative continuous monitoring to make it easier for all agencies to meet their statutory obligations to monitor the security of cloud services that are used in federal information systems, but many agencies and cloud service providers still rely on a single lead agency to do most of the work for continuous monitoring. If a cloud service provider is still relying on a single lead agency for continuous monitoring, FedRAMP will expect the cloud service provider to coordinate with their lead agency on their participation in Rev5 Balance Improvement Tests and Releases until they transition to full collaborative continuous monitoring. \r\n\r\nFor agencies, we anticipate the following approach for Rev5 Balance Improvement Tests and Releases:\r\n\r\n- CSPs will be required to obtain permission and support from their lead agency and/or FedRAMP to participate in Balance Improvement Tests\r\n- FedRAMP will provide additional support to agencies and CSPs during Balance Improvement Tests\r\n- FedRAMP will provide as much guidance as we can about adoption for all necessary parties prior to wide release\r\n\r\n## Phased rollouts\r\n\r\nRev5 Balance Improvement Tests and Releases will generally be made available in a carefully phased rollout. The duration of these phases will vary by projected risk and impact, and some releases may skip some of these phases or add new phases if necessary. In general, Rev5 Balance Improvement Releases will follow these phases:\r\n\r\n1. **Development:** An initial standard, requirement, or change is developed (including public comment) and prepared for Rev5 testing if relevant.\r\n\r\n2. **Closed Beta:** A Balance Improvement Test will be available to limited invite-only participants based on agency needs and the risk tolerances of the CSP and lead agency to begin testing the release.\r\n\r\n3. **Open Beta:** A Balance Improvement Test will be available to limited volunteer participants in a carefully structured environment while the release is tuned and finalized.\r\n\r\n4. **Wide Release:** The Balance Improvement Release is made available for any cloud service provider to adopt along with a supporting framework to simplify the process based on learning and improvements made during testing.\r\n\r\n## Managing optional feature sets\r\n\r\nThe current Rev5 ecosystem for FedRAMP authorizations doesn’t have a lot of variance - everyone has pretty much met the same requirements and implemented the same things in the same way from an assessment standpoint, which makes it simple for agencies. Optional Balance Improvement Releases will make things a bit more complicated as CSPs start to pick and choose which releases they adopt and when.\r\n\r\nFedRAMP will need to develop an approach to help stakeholders manage and leverage these different feature sets. Working with stakeholders on innovative solutions to monitor, understand, and apply different Rev5 feature sets based on Balance Improvement Releases will be a key aspect of early testing. This may start with something as simple as specific identifiers for which optional Balance Improvement Releases are adopted by the CSP in the FedRAMP Marketplace and authorization package materials.\r\n\r\n## What’s next\r\n\r\nWe’re planning out our roadmap based on current staffing and the projected impact of these improvements. The following released Standards and RFCs will form the likely basis for the next Rev5 Balance Improvement Tests & Releases:\r\n\r\n- [Minimum Assessment Standard](https://github.com/FedRAMP/docs/blob/main/markdown/FRMR.MAS.minimum-assessment-standard.md) (closed beta starting in July)\r\n- [Significant Change Notification Standard](https://github.com/FedRAMP/docs/blob/main/markdown/FRMR.SCN.significant-change-notifications.md) (closed beta starting in July)\r\n- [Continuous Reporting Standard](https://www.fedramp.gov/rfcs/0008/) (pending analysis)\r\n- [Storing and Sharing Authorization Data Standard](https://www.fedramp.gov/updates/rfcs/0011) (pending analysis)\r\n\r\nThis is just the beginning, but it will also give us plenty of opportunity to work with our stakeholders to refine and improve this approach.\r\n\r\n-----\r\n\r\n## Interested in participating in a closed beta?\r\n\r\nCloud service providers who are interested in participating in a closed beta may email rev5@fedramp.gov to discuss participation with the FedRAMP team directly.",
+  "comment_count": 16,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4AzJ_o",
+      "url": "https://github.com/FedRAMP/community/discussions/38#discussioncomment-13410280",
+      "author": "nickson56",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2025-06-09T13:36:44Z",
+      "updated_at": "2025-06-09T13:36:45Z",
+      "upvotes": 3,
+      "minimized": false,
+      "body": "It looks directionality on-point.  Look forward to the details.",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4AzNGw",
+          "url": "https://github.com/FedRAMP/community/discussions/38#discussioncomment-13423024",
+          "author": "C-Cruse-MSI",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-06-10T15:45:46Z",
+          "updated_at": "2025-06-10T15:45:47Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "I agree completely. Really excited to see the details coming out of the closed beta items starting next month. Ideally, these will be very valuable as on-ramps into the 20X authorization process once the Rev. 5 auths are transitioned in the future. "
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4AzfxP",
+      "url": "https://github.com/FedRAMP/community/discussions/38#discussioncomment-13499471",
+      "author": "KimberlyDE",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2025-06-17T17:03:35Z",
+      "updated_at": "2025-06-17T17:03:35Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "I'm just getting up to speed with the latest blog posts and appreciate all the great work being done. As I'm catching up, I wanted to clarify a couple of points regarding the Cloud Service Providers (CSPs) that are eligible to participate in the upcoming Beta phase for Rev 5 improvements.\r\n\r\nAre CSPs required to be fully FedRAMP Authorized at this stage, or is a “FedRAMP Ready” designation sufficient for them to take part? Additionally, I want to confirm whether only CSPs that have an agency sponsor are eligible to participate in this Beta round, or if there’s any flexibility there.",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4AzgAj",
+          "url": "https://github.com/FedRAMP/community/discussions/38#discussioncomment-13500451",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2025-06-17T19:02:39Z",
+          "updated_at": "2025-06-17T19:02:40Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "The question around FedRAMP Ready is excellent and one I will admit we have not explicitly considered in advance. I'm inclined to say that it makes a lot of sense for FedRAMP Ready folks to participate in the Beta phases if they are interested, but I need to talk this over a bit more with my team. Same for active authorized CSPs without lead sponsors.\r\n\r\nWhen we post formal requirements/etc. for each Beta phase, I will make sure it's clear either way. Thank you for flagging!"
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4Azisg",
+      "url": "https://github.com/FedRAMP/community/discussions/38#discussioncomment-13511456",
+      "author": "bhildebrandt-adobe",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2025-06-18T16:33:30Z",
+      "updated_at": "2025-06-18T16:33:31Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "As an organization maintaining several Rev5 agency authorizations, we support this path. We expect that leveraging these new streamlined processes would reduce overhead both for us as a CSP as well as all the agencies we engage with as a part of multi-agency continuous monitoring. To this end, we suggest considering giving CSPs the opportunity to self-enroll in these Rev5 Balance Releases ahead of the proposed phased rollout, provided the CSPs have agency approval documented in their continuous monitoring charters. Alternatively, we would welcome quicker adoption of the Balance Releases and would be interested in joining a closed beta phase once more information is available.",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4AzjUH",
+          "url": "https://github.com/FedRAMP/community/discussions/38#discussioncomment-13513991",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2025-06-18T21:45:53Z",
+          "updated_at": "2025-06-18T21:45:53Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "It is fantastic feedback that we should start taking Open Beta applications well in advance of finishing Closed Beta. Rolling beta applications are certainly a common play in industry. And we should certainly encourage folks to let us know if they are interested in Closed Betas in advance of their being officially open. Thanks for suggesting this! (informally, doesn't hurt to just drop us a note at rev5@fedramp.gov either way, though we're not fully set up to process that inbox yet, someone will see it)\r\n\r\nOverall, this idea is new (to FedRAMP at least) so we're going to start carefully and gauge impact/effort/risk/etc. and adjust. Six months from now there will hopefully be a bunch of 20x improvements that need to be balanced over to Rev5, so running these deliberate balance improvement tests will be a continuous effort.\r\n\r\n\r\n\r\n"
+        },
+        {
+          "id": "DC_kwDOOxfoic4AzoWO",
+          "url": "https://github.com/FedRAMP/community/discussions/38#discussioncomment-13534606",
+          "author": "bhildebrandt-adobe",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-06-20T22:22:27Z",
+          "updated_at": "2025-06-20T22:22:27Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thank you, Pete! We appreciate your work to ensure that Rev5 Balance Improvements are rolled out in a timely manner that reduces disruptions. We will certainly reach out to show interest in closed betas as future ones come up based on product fit and feasibility. "
+        }
+      ],
+      "replies_total": 2,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4AzlNV",
+      "url": "https://github.com/FedRAMP/community/discussions/38#discussioncomment-13521749",
+      "author": "Leah-GovRAMP",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2025-06-19T15:37:32Z",
+      "updated_at": "2025-06-19T15:37:32Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "First, kudos on the proposed updates to the significant change notification process and scope interpretation technical assistance! \r\n\r\nThinking about continuous reporting requirements (including significant change process) and recognizing providers may have multiple monthly meetings with various customers, GovRAMP is available for our member providers and federal agencies to leverage to streamline reporting in a centralized portal. This would enable providers to schedule their meetings to coincide with an established reporting frequency (i.e. no more than X days after reporting) with the added validation of the GovRAMP PMO’s review.  FedRAMP team members could also be included as desired. This is entirely free for the public sector to leverage. \r\n\r\nFor providers in both the FedRAMP Marketplace and GovRAMP program, a pilot could be beneficial to explore. As always, happy to discuss further. \r\n",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4Aznd5",
+          "url": "https://github.com/FedRAMP/community/discussions/38#discussioncomment-13531001",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2025-06-20T13:44:28Z",
+          "updated_at": "2025-06-20T13:44:28Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> For providers in both the FedRAMP Marketplace and GovRAMP program, a pilot could be beneficial to explore.\r\n\r\nGSA can't endorse or provide support that would give any non-governmental entity an unfair advantage but in general we **strongly** support and encourage industry stakeholders to partner up and work on shared pilots and solutions via whatever mechanisms make the most sense to them! It is much more effective than individual providers trying to figure things out on their own. 🚀 "
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4AznkQ",
+      "url": "https://github.com/FedRAMP/community/discussions/38#discussioncomment-13531408",
+      "author": "Balsinawi",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2025-06-20T14:26:49Z",
+      "updated_at": "2025-06-20T14:26:50Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Excellent work, team! I really appreciate the KSI approach—it clearly enhances the PMO’s ability to assess compliance and manage risk across CSPs’ SaaS and other cloud offerings.\r\n\r\nQuick clarification: As both a CSP and a 3PAO, are we correct in assuming that we must continue to manage risk and compliance in alignment with NIST 800-53 and 800-53A, and still develop the full FedRAMP package—including the SSP, SAR, test case workbooks, plans, policies, and procedures? (This also includes generating OSCAL outputs for the SSP, POA&M, and SAR.)\r\n\r\nFrom my understanding, the KSI framework serves as an overlay after completing the standard FedRAMP requirements, helping to streamline and summarize the package for a more efficient assessment and authorization process. Is that accurate?\r\n\r\nFollow-up question: As a GRC platform provider, should we plan to develop a KSI-compatible output that maps findings into the KSI structure to take advantage of automation and reporting efficiencies?\r\n\r\nAdditionally, one of the challenges in the past has been the strict requirement to adhere to FedRAMP’s standardized templates—such as the SSP, appendices, and POA&M. Would the KSI framework provide more flexibility in how we generate and present these outputs, particularly from a GRC tooling perspective?\r\n\r\nThanks in advance for the clarification—I'm trying to work backwards from the desired end state to determine how our FedRAMP-accredited GRC platform should evolve its workflows and reporting to align with the advancements introduced in FedRAMP 20x. Many thanks again for all the hard work going into this!",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4AzpLH",
+          "url": "https://github.com/FedRAMP/community/discussions/38#discussioncomment-13537991",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2025-06-21T14:17:06Z",
+          "updated_at": "2025-06-21T14:17:07Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "20x vs Rev5 are separate paths to authorization. The 20x process is still being developed as part of the Phase One Pilot and will ultimately build an overall package that is very different from a Rev5 package. Both paths will be open for some time, meaning a cloud service provider will be able to choose which type of path and package they wish to pursue. KSIs will **not** be ported back to the Rev5 based process, unlike other 20x improvements.\r\n\r\nAll of FedRAMP's pilots and beta tests are designed to support innovative solutions that allow a lot more freedom than normal to develop special structures, patterns, etc., but the intent is to drive towards a more standardized solution before wide release based on what we learn. I don't think we'll ever drive back towards \"fill out this spreadsheet exactly like this\" but there will certainly be standard expectations.\r\n\r\nYou can get a good feel for where we're going right now by digging into the **other** standards that we're updating as those will trickle down to Rev5. Significant Change Notifications, Continuous Reporting Standards, Storing and Sharing Authorization Data Standards, etc. are all going to benefit from new capabilities added to GRC tools."
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A0oex",
+      "url": "https://github.com/FedRAMP/community/discussions/38#discussioncomment-13797297",
+      "author": "C-Cruse-MSI",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2025-07-17T20:16:36Z",
+      "updated_at": "2025-07-17T20:16:37Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Do you anticipate the latest RFC https://www.fedramp.gov/rfcs/0012/ (FedRAMP Continuous Vulnerability Management Standard) being added to the Rev5 Balance Improvement Tests & Releases list (above) at some point in the future? If so, can you forecast when that might come?",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A0pC7",
+          "url": "https://github.com/FedRAMP/community/discussions/38#discussioncomment-13799611",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2025-07-18T00:54:30Z",
+          "updated_at": "2025-07-18T00:54:31Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Yes. I need to rebalance our roadmap around that release at the end of this week, but it would probably be a closed beta starting in late September or early October (RFC closes on August 21, then I'm sure we'll need a couple weeks to finalize, then organize the closed beta)."
+        },
+        {
+          "id": "DC_kwDOOxfoic4A0sC8",
+          "url": "https://github.com/FedRAMP/community/discussions/38#discussioncomment-13811900",
+          "author": "C-Cruse-MSI",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-07-18T20:45:23Z",
+          "updated_at": "2025-07-18T20:45:23Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thanks Pete! Appreciate the transparency as always."
+        }
+      ],
+      "replies_total": 2,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A2D14",
+      "url": "https://github.com/FedRAMP/community/discussions/38#discussioncomment-14171512",
+      "author": "yflop",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2025-08-21T00:39:37Z",
+      "updated_at": "2025-08-21T00:39:39Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "I unfortunately built this before RFC-0012 so will need to make some updates.\r\nhttps://github.com/GoComply/fedramp/pull/29",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A8Rhc",
+      "url": "https://github.com/FedRAMP/community/discussions/38#discussioncomment-15800412",
+      "author": "meagankwhite",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-02-13T20:55:32Z",
+      "updated_at": "2026-02-13T20:55:32Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "I know I'm tardy to the party, but I have a question about the \"Optional\" BIRs with the phrase \"Providers MUST plan to address all requirements and recommendations in this process by the end of the Open Beta on May 22, 2026.\"  \r\n\r\nI worry I am being too pedantic, but does this mean that ADS, VDR, and CCM will be Mandatory for all Rev 5 Authorized Providers after the Open Beta closes, that CSPs will need to have plans in place, or that they remain truly optional after 22 May?  \r\n\r\nI also asked this question on the help desk, but thought others might benefit from this clarification as well.  At least anyone as pedantic as myself.",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A8Rkx",
+          "url": "https://github.com/FedRAMP/community/discussions/38#discussioncomment-15800625",
+          "author": "meagankwhite",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-02-13T21:29:25Z",
+          "updated_at": "2026-02-13T21:29:25Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "I found the answer to my own question at 52:41 in https://www.youtube.com/watch?v=903F2Tis-14\r\nSummary: No, the \"Provider\" in the sentence refers to \"Providers participating in the Beta\" NOT to \"Rev 5 Authorized Providers\".  Is there any chance you could update the BIR language to show this, please?"
+        },
+        {
+          "id": "DC_kwDOOxfoic4A8UbN",
+          "url": "https://github.com/FedRAMP/community/discussions/38#discussioncomment-15812301",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-02-15T14:52:48Z",
+          "updated_at": "2026-02-15T14:52:48Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "All of these docs are structured with an Overall Applicability section that explains if it's optional or mandatory - if it's tagged as optional then by definition any use of providers inside that only applies to people who opt-in. It would be terribly duplicative to constantly state \"Providers participating in the beta\" through the entire BIR.\r\n\r\nThat all said, I'll do some rewording of the Effective Date(s) & Overall Applicability for Rev5 section to hopefully clarify this a bit since a lot of folks have expressed concern about the phrasing/context.\r\n\r\n"
+        },
+        {
+          "id": "DC_kwDOOxfoic4A8aUS",
+          "url": "https://github.com/FedRAMP/community/discussions/38#discussioncomment-15836434",
+          "author": "meagankwhite",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-02-17T14:21:01Z",
+          "updated_at": "2026-02-17T14:21:01Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thank you.  I know from watching the videos and reading the updates that the PMO is moving the FedRAMP process away from one based on legal-ese and towards one of reasonable understanding and risk-based decision making, but a big part of me is still trying to interpret everything in the old legal-ese."
+        },
+        {
+          "id": "DC_kwDOOxfoic4A8qU8",
+          "url": "https://github.com/FedRAMP/community/discussions/38#discussioncomment-15902012",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-02-23T21:29:39Z",
+          "updated_at": "2026-02-23T21:29:39Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "I reworked the wording in the Optional Implementation [warning on this page](https://www.fedramp.gov/docs/rev5/balance/#optional-balance-for-rev5) to say:\r\n\r\nAll requirements in optional Balance Improvement Releases only apply to providers that are adopting the Balance Improvement Release.\r\n\r\n(I didn't want to do it everywhere but hopefully having it just there will be sufficient to help folks feel like FR isn't trying to sneak anything past anyone ;)"
+        }
+      ],
+      "replies_total": 4,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A8qHe",
+      "url": "https://github.com/FedRAMP/community/discussions/38#discussioncomment-15901150",
+      "author": "ElaineFR",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-02-23T19:40:41Z",
+      "updated_at": "2026-02-23T19:40:41Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Hi @pete-gov ! Question: I hear that FR20x High will not be available for pilot entries till 2027. If that is the case, I imagine that Rev 5 is the _only_ path to High at the moment. Can you please confirm? And is there any more information on the timing for FR High pilot opening?",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A8qIO",
+          "url": "https://github.com/FedRAMP/community/discussions/38#discussioncomment-15901198",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-02-23T19:47:50Z",
+          "updated_at": "2026-02-23T19:47:50Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Current plans for phased delivery of 20x are on the website here: https://www.fedramp.gov/20x/#phased-delivery-of-fedramp-20x \r\n\r\nYe olde disclaimer applies x1000 to future phases. At the moment I would say we're far more focused on consolidation and adoption at Moderate than developing 20x High, so don't expect much talking about it until we're halfway through Phase 3 at least."
+        },
+        {
+          "id": "DC_kwDOOxfoic4A8qJN",
+          "url": "https://github.com/FedRAMP/community/discussions/38#discussioncomment-15901261",
+          "author": "ElaineFR",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-02-23T19:55:51Z",
+          "updated_at": "2026-02-23T19:55:51Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Okay got it, thank you! 🫡"
+        }
+      ],
+      "replies_total": 2,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A9Fzx",
+      "url": "https://github.com/FedRAMP/community/discussions/38#discussioncomment-16014577",
+      "author": "meagankwhite",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-03-05T19:57:07Z",
+      "updated_at": "2026-03-05T19:57:07Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Hello @pete-gov I have a couple more questions for you!\r\n1. My CISO wants to know if the VDR timelines are in \"calendar\" days or \"business\" days.\r\n2. Can you please clarify if the VDR Timelines are for Low-Mod-High CVSS V3 Scores or for Low-Mod-High FedRAMP Rating?  I'm pretty sure it's the latter given how the document is formatted, and the broad definition of vulnerability provided, but I want to be sure!",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A9F2j",
+          "url": "https://github.com/FedRAMP/community/discussions/38#discussioncomment-16014755",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-03-05T20:22:38Z",
+          "updated_at": "2026-03-05T20:22:48Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": ">  1. My CISO wants to know if the VDR timelines are in \"calendar\" days or \"business\" days.\r\n\r\nCalendar days. We just say days for days. If a timeline is in business days it says business days. :)\r\n \r\n>  2. Can you please clarify if the VDR Timelines are for Low-Mod-High CVSS V3 Scores or for Low-Mod-High FedRAMP Rating?  I'm pretty sure it's the latter given how the document is formatted, and the broad definition of vulnerability provided, but I want to be sure!\r\n\r\nAh, yes, the Low, Moderate, and High tabs are based on the FedRAMP authorization. The severity of the vulnerability is addressed everywhere else.\r\n"
+        },
+        {
+          "id": "DC_kwDOOxfoic4A9Irt",
+          "url": "https://github.com/FedRAMP/community/discussions/38#discussioncomment-16026349",
+          "author": "meagankwhite",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-03-06T17:54:52Z",
+          "updated_at": "2026-03-06T17:54:52Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thank you!"
+        }
+      ],
+      "replies_total": 2,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A9u-k",
+      "url": "https://github.com/FedRAMP/community/discussions/38#discussioncomment-16183204",
+      "author": "vlmccarty",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-03-17T20:05:18Z",
+      "updated_at": "2026-03-17T20:05:18Z",
+      "upvotes": 3,
+      "minimized": false,
+      "body": "I am currently completing the Significant Change Notification Participation Form and had a question regarding the \"Agencies POC\" field. Could you please clarify the level of detail required for this section? Specifically, are you looking for:\r\n\r\n- Full names only?\r\n- Names accompanied by official government email addresses?\r\n\r\nAdditionally, a brief overview of how this contact information will be used would be greatly appreciated to ensure we adhere to our internal privacy and data-sharing policies.  Thanks!",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A9vDU",
+          "url": "https://github.com/FedRAMP/community/discussions/38#discussioncomment-16183508",
+          "author": "paulagosta",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-03-17T20:22:18Z",
+          "updated_at": "2026-03-17T20:22:18Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Name of your government POC for each agency will suffice.\r\n\r\nWe will not contact the agency POC unless there is some issue that has been identified.  \r\n\r\nWe are using the overall information to track who has transitioned to SCN.  We may, in the future, add a field to marketplace to identify who has implemented which optional BIRs, but for now it is solely used for internal metrics.      \r\n\r\nHope this helps."
+        },
+        {
+          "id": "DC_kwDOOxfoic4A9vDX",
+          "url": "https://github.com/FedRAMP/community/discussions/38#discussioncomment-16183511",
+          "author": "vlmccarty",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-03-17T20:23:01Z",
+          "updated_at": "2026-03-17T20:23:01Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thanks, Paul!"
+        }
+      ],
+      "replies_total": 2,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BA8Jc",
+      "url": "https://github.com/FedRAMP/community/discussions/38#discussioncomment-17023580",
+      "author": "kcarr91",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-05-22T17:48:36Z",
+      "updated_at": "2026-05-22T17:48:36Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Posting our VDR BiR feedback to the FedRAMP PMO here in a public form per the suggestion of the FedRAMP PMO.  \r\n\r\n\r\nOverall, the VDR standard is a significant leap forward for vulnerability management within FedRAMP and we are very supportive of this direction. We already operate a mature vulnerability automation that aligns well with the principles behind VDR but fitting that output to the standard as written was harder than expected. For smaller CSPs without comparable tooling or engineering resources, this could be a significant lift, particularly for providers running most or all their production workloads in containers, where vulnerability volume scales quickly.\r\n\r\n**Feedback**\r\n**Focus**: VDR-RPT-VDT (Vulnerability Details) and VDR-RPT-AVI (Accepted Vulnerability Info)\r\n \r\n**BLUF** - The reporting requirements under VDR-RPT-VDT and VDR-RPT-AVI prescribe an excessive level of structured detail per vulnerability, most of which requires narrative human input and review. This conflicts with the BIR's stated intent of streamlining vulnerability response and enabling automated, machine-readable reporting. Two simplifications would significantly reduce provider burden, improve consistency of the resulting data, and make agency review more efficient.\r\n\r\n**1. Consolidate VDR-RPT-VDT elements 6–11 into a single \"justification\" field and maybe add category designation field**\r\n\r\nElements 1-5 (tracking ID, detection time/source, evaluation time, internet-reachability, exploitability) are objective, machine-derivable attributes that fit cleanly into structured fields. Elements 6–11, by contrast, require narrative human judgment and overlap with one another. Breaking these out into discrete fields drives redundant content and incentivizes box-checking over substantive risk explanation. Also it isn't something that scales well, well at least not in a way where you are going to get good quality data at large scale (aka container CVEs)\r\n\r\nA single \"justification\" field would efficiently capture most of the same information:\r\n\r\n- Element 6 historically and currently estimated potential adverse impact - documented in the justification narrative.\r\n- Element 7 time and level of each completed and evaluated reduction in adverse impact - documented in the justification, including any mitigating controls applied and their effective dates.\r\n- Element 8 estimated time and target level of next reduction - documented in the justification, including planned remediation milestones and any suppression expiration date.\r\n- Element 9 overdue or likely to become overdue, with explanation - addressed in the justification when the vulnerability is at risk of exceeding SLAs.\r\n- Element 10 supplementary information for agencies - any additional context relevant to agency risk decisions is included in the justification.\r\n- Element 11 final disposition – documented in the justification narrative.\r\n\r\n**1b** [this next part starts to spill over into my 2nd bit of feedback]. Then maybe add a disposition/category designation field with the following options (open to more options as needed).  \r\n\r\n- False Positive \r\n- Vendor Dependency \r\n- Planned Fix \r\n- Accepted Risk \r\n\r\nThis collapses six discrete fields into one structured narrative tied to a categorical disposition. It is easier for providers to maintain accurately, easier for agency reviewers to consume in a single pass.\r\n\r\n**2. Eliminate the difference in reporting between \"accepted\" and other reported vulnerabilities**\r\n\r\nVDR-RPT-VDT and VDR-RPT-AVI define two near-identical reporting schemas that diverge only modestly, VDR-RPT-AVI drops elements 7, 8, 9, and 11 from VDR-RPT-VDT and adds an acceptance explanation. Maintaining two parallel structures introduces large process complexity for limited analytic benefit.  Acceptance explanation can be the same as justification.  \r\n\r\nMore fundamentally: a vulnerability that has been \"accepted\" is still a risk to agency data. The acceptance label does not change the underlying risk posture; it only signals how the provider intends to track it going forward.  The current bifurcation arguably understates risk by indicating to agencies (per the VDR-AGM-RVR note) that accepted vulnerabilities warrant less ongoing review.\r\n\r\n**Recommendation**: Collapse VDR-RPT-VDT and VDR-RPT-AVI into a single reporting schema covering all vulnerabilities, with the disposition field carrying the categorical signal (e.g. False Positive, Vendor Dependency, Planned Fix, and/or Accepted Risk). Agencies retain the full ability to filter and prioritize on disposition.\r\n",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BA8SM",
+          "url": "https://github.com/FedRAMP/community/discussions/38#discussioncomment-17024140",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-05-22T18:36:28Z",
+          "updated_at": "2026-05-22T18:36:28Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Overall, I think maybe you're considering this as if you're going to manually create a bunch of artisanal vulnerability reports for FR - but the purpose of these rules are to ensure that providers are using a proper vulnerability management workflow. As part of that workflow, there will be automated and/or human decisions that are made. Those decisions should be tracked. Then all you need to do in the report is output that information from your tracking system. The reporting data itself should be a trivial data export, not the location where decisions are made and tracked.\r\n\r\nPlease don't track vulnerability detection and response in a spreadsheet. 🙈 \r\n\r\n> BLUF - The reporting requirements under VDR-RPT-VDT and VDR-RPT-AVI prescribe an excessive level of structured detail per vulnerability, most of which requires narrative human input and review. \r\n\r\nEverything necessary for this report should exist in a vulnerability tracking system and be outputted based on the information a cloud service provider has already determined. There shouldn't be anything new created for this report if the VDR rules are being followed.\r\n\r\nThe narratives for VDR-RPT-VDT would include an explanation if the vulnerability is likely to become overdue, which should only ever be true after human review and consideration and the explanation should already exist in any vulnerability tracking system. And, of course, any supplemental information the provider wants to provide. These only would be included **if applicable.**\r\n\r\nFor VDR-RPT-AVI, there should be no world in which a vulnerability is accepted without reasons and documentation created by a human in a vulnerability tracking system.\r\n\r\nIn general the entire point of these requirements are to remove narratives and simply provide information that has already been tracked in a cloud service provider's vulnerability tracking system.\r\n\r\n> A single \"justification\" field would efficiently capture most of the same information\r\n\r\nWe expect agencies, CISA, and FedRAMP itself to care mightily about being able to effectively parse this information. Having these fields buried in a narrative justification would make doing so inefficient.\r\n\r\n> Recommendation: Collapse VDR-RPT-VDT and VDR-RPT-AVI into a single reporting schema covering all vulnerabilities...\r\n\r\nThis is already the case in effect. You can use a single schema to cover all vulnerabilities by leaving some fields blank for vulnerabilities that are being responded to vs vulnerabilities that have been accepted.\r\n\r\n"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BBF9a",
+          "url": "https://github.com/FedRAMP/community/discussions/38#discussioncomment-17063770",
+          "author": "kcarr91",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-05-26T14:52:14Z",
+          "updated_at": "2026-05-26T14:52:14Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "@pete-gov Appreciate the response, I think my original feedback wasn't as clear as it should have been. I wasn't focused on the export from the vulnerability tracking system; I was focused on the level of detail that has to be captured in the tracking system in the first place to satisfy these reporting requirements.\r\n\r\n> There shouldn't be anything new created for this report if the VDR rules are being followed.\r\n\r\nSo my feedback is about the VDR rules themselves \r\n\r\nThat's still too much per-vuln detail, particularly at container scale, which was the focus of my feedback. A medium to larger CSP can easily run 1000+ distinct containers. Even with minimal base images and aggressive stripping, you still take dependencies for things to function, and a robust container scanning process covering both OS-level and dependency vulns produces volume that grows quickly.\r\n\r\nIt also gets more complex when the same CVE shows up in different contexts. Just because one team has evaluated a CVE in one container doesn't mean the evaluation transfers to a different team's product in a different container. For base image vulns you can often get a \"global answer,\" but that's not the case for most vulns, each context needs its own review.\r\n\r\nSo the suggestion isn't about reducing what gets exported; it's about simplifying the human-in-the-loop step so the resulting information is higher fidelity. Does the government really need each of these tracked as discrete structured fields, or would a single \"justification\" of why a vuln isn't yet remediated suffice for the narrative-judgment elements? In my experience, agencies primarily want to understand the \"why\", the justification for why remediation hasn't happened yet and what compensating factors are in place. The objective fields (tracking ID, detection time, reachability, etc.) absolutely should stay structured, that part of your response I fully agree with.\r\n\r\nThat said, this is just one CSP's perspective. I'd be genuinely curious to hear how other medium-to-large CSPs running most of their production workloads in containers have experienced the VDR BIR."
+        },
+        {
+          "id": "DC_kwDOOxfoic4BBQC8",
+          "url": "https://github.com/FedRAMP/community/discussions/38#discussioncomment-17105084",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-05-29T12:31:59Z",
+          "updated_at": "2026-05-29T12:31:59Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> That's still too much per-vuln detail, particularly at container scale, which was the focus of my feedback. A medium to larger CSP can easily run 1000+ distinct containers. Even with minimal base images and aggressive stripping, you still take dependencies for things to function, and a robust container scanning process covering both OS-level and dependency vulns produces volume that grows quickly.\r\n\r\nYou're definitely tracking all of that on your side, so you'll have all that information available - but I totally agree that reporting all of this in detail is messy and undesirable. [VDR-EVA-GRV (Group Vulnerabilities)](https://preview.fedramp.gov/2026/providers/rev5/rules/vulnerability-detection-and-response/#group-vulnerabilities) is intended to provide that middle layer to reduce cruft in reporting and is designed expressly to allow flexibility by the CSP.\r\n\r\nFor containers in that situation, you would never need to scan all 1000 either - you presumably know every aspect of what is going into them on deployment based on a build setup and can establish guardrails to ensure they are not likely to drift during use. You can then entirely avoid the need to ever scan the containers by redeploying them within the monthly timeframe, or by using sampling to scan a limited number of containers. If you have 1000 unique containers then that's a design issue. ;)\r\n\r\nEnd result is that in most situations, regular vulnerability detection and response reporting for a 1000 container environment is likely going to be whittled down to 1-5 rows of reporting data based on grouping, and those reports will generally be very simple.\r\n\r\n> It also gets more complex when the same CVE shows up in different contexts. Just because one team has evaluated a CVE in one container doesn't mean the evaluation transfers to a different team's product in a different container. For base image vulns you can often get a \"global answer,\" but that's not the case for most vulns, each context needs its own review.\r\n\r\nYes, that's certainly something we expect, within grouping/sampling. You can't just ignore evaluating something because you have a lot of different somethings. ;) There are lots of ways to establish technical guardrails to reduce the effort and impact here though, and the VDR encourages that.\r\n\r\nSome re-architecture will be necessary to optimize the flexibility the VDR gives you, but we think that's going to be in your best interest in the long run. You can short-circuit a lot of evaluation via technical controls in advance, and would want to get to a place where \"containers that have label X can never have an internet-reachable vulnerability\" etc.\r\n\r\n> So the suggestion isn't about reducing what gets exported; it's about simplifying the human-in-the-loop step so the resulting information is higher fidelity. Does the government really need each of these tracked as discrete structured fields, or would a single \"justification\" of why a vuln isn't yet remediated suffice for the narrative-judgment elements? \r\n\r\nWe definitely want the information to be high-fidelity for humans, and hope that extensive grouping and sampling will address a lot of that. Reviewing a vulnerability report with 10-15 rows of detailed information will be a huge improvement for customers over the current situation of thousands and thousands of individual scan issues to parse through.\r\n\r\n> In my experience, agencies primarily want to understand the \"why\", the justification for why remediation hasn't happened yet and what compensating factors are in place. \r\n\r\nAgreed! The reporting requirements serve two major purposes - the first is to provide this information to agencies as that's the most important critical stuff, which is why we want it condensed by group and sorted into simple fields.\r\n\r\nThe second reason we require detailed reporting, and all of the additional fields, is for the CSP to demonstrate that they are following a complete internal process to perform Vulnerability Detection and Response and showcase the effectiveness of that process. Most customers will not be concerned with this on a day-to-day basis, but it will play a significant role in both initial authorization and annual re-authorizations.\r\n\r\nIt also creates a competitive security marketplace that allows past performance metrics to be included in comparisons between vendors for the government. For example, given two similar offerings, an agency might be willing to pay more to adopt an offering that consistently demonstrates a clean, quick, and effective VDR process in their historical metrics over one that sneaks in consistently under the maximum timeframes.\r\n\r\nIn short, this is one of the areas we've adapted Rev5 to align more with the tenets of 20x - the government wants to see actual performance metrics of your security program, tracked over time, for effective decision making and awareness. Rev5 does not provide this in any meaningful way, and would quickly become unusable when compared to 20x if we did not require providers to adopt some additional metrics into their reporting."
+        },
+        {
+          "id": "DC_kwDOOxfoic4BBfK6",
+          "url": "https://github.com/FedRAMP/community/discussions/38#discussioncomment-17167034",
+          "author": "kcarr91",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-06-03T14:23:19Z",
+          "updated_at": "2026-06-03T14:23:19Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "**Focusing on the grouping of vulnerabilities**\r\nThanks, the grouping framing helps, but I want to push on the mechanics a bit because I don't think I fully understand how it reconciles with [VDR-RPT-VDT](https://preview.fedramp.gov/2026/providers/rev5/rules/vulnerability-detection-and-response/#vulnerability-details) and [VDR-RPT-AVI](https://preview.fedramp.gov/2026/providers/rev5/rules/vulnerability-detection-and-response/#accepted-vulnerability-info). Hopefully my lack of clarity also highlights areas where the standard could be improved. As I read VDR-RPT-VDT and and VDR-RPT-AVI, each CVE essentially needs its own row, or close to it. Scanners do sometimes pick up 3-4 related CVEs at the same time, but that still doesn't get anywhere near the final report row count suggested above. \r\n\r\nOn grouping itself: [VDR-EVA-GRV ](https://preview.fedramp.gov/2026/providers/rev5/rules/vulnerability-detection-and-response/#group-vulnerabilities)makes sense in principle, but VDR-RPT-VDT and VDR-RPT-AVI then requires per-vuln \"time and source of the detection\" (# 2) and \"time of completed evaluation\" (# 3) as reporting elements, in addition to other requirements. If I group ~300 distinct container CVEs into a handful of logical groupings, those ~300 CVEs will have hit at different timestamps across different scan cycles, and evaluations will have completed at different points as different teams worked through their respective contexts. \r\n\r\nHow is grouping supposed to reconcile with those time fields? Some explicit guidance, or an example of what a \"grouped\" row actually looks like at the schema level, would help. I know the PMO is generally reluctant to publish examples, but it isn't clear to me what you're looking for here and examples would be extremely helpful. \r\n\r\n**To the direct question:** do you genuinely expect ~300 distinct container CVEs to compress to fewer than 10 reporting rows under the VDR? That seems aggressive given that base-image vulns are only one of several CVE source categories; language-specific dependencies, OS packages, and application-layer issues generally don't share evaluation context across products. I want to make sure I'm not under-grouping out of habit, but I also don't want to over-group in a way that obscures real per-context risk."
+        }
+      ],
+      "replies_total": 4,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BBG3D",
+      "url": "https://github.com/FedRAMP/community/discussions/38#discussioncomment-17067459",
+      "author": "am-tux",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-05-26T20:59:05Z",
+      "updated_at": "2026-05-26T20:59:05Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Posting our VDR beta feedback here per the PMOs suggestion:\r\n \r\n### Summary\r\nParticipation in the FedRAMP Vulnerability Disclosure Report (VDR) beta provided valuable insight into the program's direction and surfaced both meaningful improvements over legacy processes and areas that would benefit from additional clarification before broad adoption. \r\nOverall, the shift toward a numerically-tiered vulnerability framework is a positive step, and the tight response timelines appropriately push organizations toward automation. At the same time, guidance on artifact expectations, partial remediation definitions, and the practical implications of SHOULD versus MUST requirements will be important to resolve.\r\n \r\n### Successes and Improvements\r\nImproved triage through the N# severity scale. The N# vulnerability severity scale represents a meaningful improvement over the previous Deviation Request heavy Plan of Action and Milestones (POA&M) process. This was accomplished by shifting the evaluation to earlier in the process. This allows teams to concentrate attention and remediation resources on the most urgent, high-severity findings rather than spending equal effort managing a large volume of lower-priority items that had previously required individual deviation requests. \r\n\r\nFocus on automation. The tight response windows prescribed by the VDR framework make manual, ad hoc vulnerability management untenable at scale. This creates a clear incentive to invest in automated scanning and alerting workflows. Organizations that embrace this push toward automation will be better positioned for success.\r\n\r\n### Areas for Clarification and Guidance\r\nArtifact requirements are vague The beta guidance did not clearly specify which artifacts should be submitted, or  in what format. This creates risk, organizations may need to produce different artifact sets tailored to individual auditor preferences or those of their Authorizing Official (AO). Where an auditor's expectations and an AO's expectations diverge, there is currently no clear mechanism to resolve that conflict, potentially resulting in duplicative or inconsistent documentation.\r\n\r\nSuggestions include having an example of a Vulnerability Index for tracking the vulnerabilities in both a machine and human readable version. While we understand that VDR offers freedom for CSPs to deliver what AOs want to see for VDR; having an example of what meets FedRAMPs expectations would help guide organizations. \r\n\r\nAdditional guidance on partial remediation would reduce ambiguity. The current framework does not clearly define what constitutes a valid partial remediation. For example, whether applying a compensating control, isolating an affected component, or reducing the attack surface qualifies as progress toward closure. Explicit criteria or worked examples for partial remediation scenarios would significantly reduce this ambiguity.\r\n \r\nFurther clarify SHOULD versus MUST requirements. The distinction between SHOULD and MUST requirements in the VDR framework deserves greater emphasis. In practice, stakeholders often focus on the most visible data point, such as the 4-hour response window for N5 (critical) vulnerabilities. Without fully understanding that many requirements are aspirational rather than mandatory. Clear visual or structural differentiation between MUST and SHOULD language would reduce misinterpretation and help organizations prioritize their compliance efforts accurately.\r\n",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BBQHQ",
+          "url": "https://github.com/FedRAMP/community/discussions/38#discussioncomment-17105360",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-05-29T12:59:34Z",
+          "updated_at": "2026-05-29T13:03:44Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> Where an auditor's expectations and an AO's expectations diverge, there is currently no clear mechanism to resolve that conflict, potentially resulting in duplicative or inconsistent documentation.\r\n\r\nFedRAMP's direction is to create rules that encourage innovative private-sector driven solutions.\r\n\r\nFedRAMP is deliberately moving away from standardizing artifacts in a way that limits innovation and discourages cloud service providers from competing on customer experience. In the short term this may cause some issues because many agencies do not have access to automated GRC platforms or other capabilities that can easily translate machine-readable information into their preferred format, but all agencies are required by policy to implement such tooling. And this type of capability is simpler than ever in 2026.\r\n\r\nOn the human-readable side, we strongly encourage folks to think outside the template box. You can engage design experts to work with customers and build something that provides value to everyone, factoring for your unique environment and complexity. This flexibility allows you to compete on the quality of your vulnerability detection and response presentation, instead of flattening everything and everyone into a single janky spreadsheet.\r\n\r\nIndependent assessors should only be verifying and validating that you're meeting the requirements, not demanding a specific format. And while an AO's expectations may diverge, that is a simple fact of business and it gives you an opportunity to work with them to craft something better for both of you (hint: don't confuse contractors working for an AO with an AO - you should be working directly with an AO on something like this).\r\n\r\n> Additional guidance on partial remediation would reduce ambiguity. The current framework does not clearly define what constitutes a valid partial remediation. \r\n\r\nI think this might be a term issue that I can do a pass through for clarity. We don't use remediation and mitigation interchangeably, and don't allow for partial remediation. We consider a Fully Mitigated Vulnerability to be different from a Remediated Vulnerability. Hence statements like \"Providers SHOULD partially mitigate, fully mitigate, or remediate vulnerabilities...\" don't include \"partial remediation\" because that's actually partial mitigation. Semantics, but is intended to avoid confusion through precise language.\r\n\r\n- **Mitigation:** Take steps to make something bad less severe. [Partially Mitigated Vulnerability](https://preview.fedramp.gov/2026/definitions/#partially-mitigated-vulnerability), [Fully Mitigated Vulnerability](https://preview.fedramp.gov/2026/definitions/#fully-mitigated-vulnerability)\r\n- **Remediation:** Remove the bad thing. [Remediated Vulnerability](https://preview.fedramp.gov/2026/definitions/#remediated-vulnerability)\r\n\r\nOur guidance should be consistent in mitigation being a step-by-step process that can have an outcome of full mitigation or remediation. Either way, partial mitigation is defined as linked above, so please let me know if that definition needs more clarity!\r\n\r\n_edit: oh, I noticed that \"partially mitigate\" and \"fully mitigate\" aren't configured as alternate variants of the Partially Mitigated Vulnerability and Fully Mitigated Vulnerability definitions so they don't hit the **terms** array so it's not obvious these are defined while looking at the rules - will fix!_\r\n\r\n> Further clarify SHOULD versus MUST requirements. The distinction between SHOULD and MUST requirements in the VDR framework deserves greater emphasis.\r\n\r\nWe've added a slightly more detailed [Force of the Rule](https://preview.fedramp.gov/2026/rules/#force-of-the-rule) section in the Consolidated Rules, but have generally avoided adding too much complexity here. The intent here is to allow normal reasonable people the flexibility to make decisions that make sense in the context of their service.\r\n\r\nVulnerability Detection and Response is a bit of an art. The limitation on MUST requirements and focus on SHOULD recommendations in the VDR is designed to ensure that cloud service providers do the **right thing, the responsible and secure thing** when making decisions, instead of doing the **compliant thing.**\r\n\r\nThe timelines are a great example of that - partially mitigating something just under the wire of a timeframe might be the **compliant** thing, but it shows a focus on compliance over security. \r\n\r\nThe **right thing** usually is to partially mitigate something as quickly as possible and not care what the maximum timeframe is in most cases... but there are (rare) valid situations where the **right thing** is to let something slide past the timeframe (active investigation, partial mitigation carries higher risk, etc.). In those cases we want to ignore the timeframes and do the right thing.\r\n\r\nLess compliance, more responsible decision making for everyone. :)"
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BBfpE",
+      "url": "https://github.com/FedRAMP/community/discussions/38#discussioncomment-17168964",
+      "author": "mblanco474",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-06-03T16:37:07Z",
+      "updated_at": "2026-06-03T16:37:07Z",
+      "upvotes": 0,
+      "minimized": false,
+      "body": "Posting our ADS beta feedback here per the PMOs suggestion:\r\n\r\n### **Summary**\r\n\r\nParticipation in the ADS beta has highlighted the potential for structured data sharing to modernize the FedRAMP program. However, a critical gap remains in the absence of a standardized assessment rubric for auditors. Furthermore, current guidance relies heavily on future marketplace features that do not yet exist. This creates a potential dependency risk for Cloud Service Providers (CSPs). To ensure a fair and consistent baseline, FedRAMP should emphasize common formatting standards and re-evaluate overly prescriptive \"MUST\" requirements, such as UEI mandates, that may not apply to all organizational structures.\r\n \r\n### **Successes and Improvements**\r\n\r\n**Modernization & Efficiency in Data Exchange:** Shifting toward a modular, structured approach allows for \"write once, share many\" efficiencies. This reduces the burden on CSPs who previously had to manually copy-paste control responses across multiple static documents (SSP, SAP, SAR), leading to version control errors.\r\n\r\n**Enhanced Data Granularity:** The ADS framework allows for specific data elements (like vulnerability metadata) to be shared without exposing the entire authorization package. This improves the security posture of the program by adhering to the principle of least privilege during the data review process.\r\n\r\n**Foundation for Continuous Monitoring:** By moving away from monolithic documents, the ADS beta sets the technical stage for real-time risk posture updates. This is a significant improvement over the legacy \"snapshot in time\" assessment model, which often becomes obsolete shortly after a signature.\r\n\r\n### **Areas for Clarification and Guidance**\r\n\r\n**Marketplace Dependency & Non-Existent Solutions:** The current beta documentation frequently references marketplace-driven solutions to solve data-sharing challenges. Relying on these non-existent products as a cornerstone for the ADS framework creates significant uncertainty. FedRAMP should provide guidance that is independent of future marketplace features so that CSPs can build reliable internal roadmaps based on current, available tooling.\r\n\r\n**Establishment of an Auditor Expectation Rubric:** There is a pressing need for a formal rubric detailing typical auditor expectations within the ADS framework. While a rigid template may not be required, internal consistency across the FedRAMP program is essential. Without a clear \"baseline\" for what constitutes a sufficient machine-readable submission, CSPs, specifically new entrants, are at a disadvantage compared to legacy products with established auditor relationships.\r\n\r\n**Refining Mandatory (MUST) Requirements:** **The UEI Example** Certain data points currently classified as \"MUST\" should be reconsidered to better reflect organizational realities. For example, requiring a **Unique Entity Identifier (UEI) number** as a mandatory field for all public-facing information may be overly prescriptive. Moving such items to a \"SHOULD\" category allows for the flexibility needed across diverse service and deployment models without compromising the integrity of the authorization data.\r\n\r\n**Format-Agnostic Baselines (The \"Common Format\" Rubric):** While FedRAMP should not mandate a specific format (like OSCAL), it would be highly beneficial to share which formatting styles are most commonly accepted by auditors to ensure both machine and human readability. Instead of an endorsement, FedRAMP should provide a rubric of **functional requirements** for data formats. This would create a baseline that allows for innovation while ensuring that whatever format a CSP chooses, it will meet the auditor’s need for automated ingestion and manual review.\r\n",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BBtjC",
+      "url": "https://github.com/FedRAMP/community/discussions/38#discussioncomment-17225922",
+      "author": "cpelote",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-06-08T17:44:14Z",
+      "updated_at": "2026-06-08T18:04:05Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Posting our VDR beta feedback here at the request of the PMO:\r\n\r\n- **Developing a new reporting methodology was significant.** I basically have had to build this from scratch. I started with a manual approach to understand the data model and build evaluation logic during the beta period. This was a necessary first step, not a target state. Automation via cloud-native tooling APIs is planned for subsequent cycles, using the schema and decision logic developed during the beta as the specification.\r\n- **The terminology is hard to get used to.** There is something intuitive about Critical, High, Medium... vs N5, N4, N3... (aka N-rating) I'm sure that will become muscle memory with time.\r\n- Despite more awkward terminology, **the LEV/NLEV + N-rating approach is far better than CVSS** - especially in light of NIST's recent announcement about CVEs in NVD. Also, with the LEV/NEV approach we can now actually use all the good exploitability data from our scans that the current process basically ignores. \r\n- **Vendor dependencies have no explicit treatment in the framework.** A finding where a fix exists in an upstream library but has not been incorporated by the image maintainer is somewhere in the middle ground between Remediating and Accepted. \r\n  - I like the current requirement to check in every 30 days. A hard decision may be needed at some point. For example, if the vendor is unlikely to do certain patching or is simply not maintaining the project at all, the current process is a good way to monitor this. We may ultimately select a more secure vendor. I created \"Disposition categories\" in my reports - and noted these as \"Monitoring - fix deferred\". \r\n- **The IRV definition is conceptually correct but practically difficult to apply in containerized environments.** IIn GKE, EKS, and AKS deployments — now the dominant architecture for FedRAMP Moderate systems — all containers sit behind an ingress layer. Automated network exposure tooling does not resolve this ambiguity — container-level exposure flags typically show no direct internet exposure for all containers including the ingress controller itself. Recommend FedRAMP publish IRV evaluation guidance specific to containerized architectures, including how to treat the ingress layer as an IRV boundary. (written by Claude)\r\n- **The machine-readable reporting requirement remains ambiguous**.  My reports are based on an assumed schema with output to JSON and CSV. Will this be acceptable? FedRAMP should publish a reference schema so CSPs building automated pipelines have a consistent target.\r\n- **The RFC defines \"Accepted\" and \"False Positive\" but does not consider other response states.** Without defined categories for findings that are actively remediating, monitoring for a vendor fix, or blocked on a third-party image maintainer, machine-readable reporting will be inconsistent across CSPs. In my beta reports, I created disposition categories.\r\n- **Our agency is aware of this change**, but doesn't fully understand it yet. They are receptive to it, but will need to overcome the learning curve (noting also terminology). Plus, I've introduced some of my own disposition categories to add more terminology.\r\n  - however, if the agency has multiple CSP, how does a standard emerge if I'm introducing my own disposition categories for example.",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BCefz",
+      "url": "https://github.com/FedRAMP/community/discussions/38#discussioncomment-17426419",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2026-06-24T21:39:11Z",
+      "updated_at": "2026-06-24T21:39:11Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "I'd like to close this thread with the release of the Consolidated Rules for 2026, but I also acknowledge there are some very thoughtful posts that I still need to respond to that I simply haven't been able to dedicate appropriate time to over the past few weeks (@cpelote @mblanco474 @kcarr91). We're going to fold some of this feedback into FAQs on https://help.fedramp.gov so that this content is captured properly, and I'm going to try to carve out some time to address your VDR comments specifically this Friday prior to closing the thread. Thank you so much for the ongoing discussion!",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BChBr",
+          "url": "https://github.com/FedRAMP/community/discussions/38#discussioncomment-17436779",
+          "author": "kcarr91",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-06-25T16:49:25Z",
+          "updated_at": "2026-06-25T16:49:25Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Totally understand how busy you are, thanks for continuing to track and following up!  Love the idea of putting more stuff on https://help.fedramp.gov/"
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "Balsinawi",
+    "C-Cruse-MSI",
+    "ElaineFR",
+    "KimberlyDE",
+    "Leah-GovRAMP",
+    "am-tux",
+    "bhildebrandt-adobe",
+    "cpelote",
+    "kcarr91",
+    "mblanco474",
+    "meagankwhite",
+    "nickson56",
+    "paulagosta",
+    "pete-gov",
+    "vlmccarty",
+    "yflop"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/38#discussioncomment-17426419",
+      "author": "pete-gov",
+      "created_at": "2026-06-24T21:39:11Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/38#discussioncomment-13500451",
+      "author": "pete-gov",
+      "created_at": "2025-06-17T19:02:39Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/38#discussioncomment-13513991",
+      "author": "pete-gov",
+      "created_at": "2025-06-18T21:45:53Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/38#discussioncomment-13531001",
+      "author": "pete-gov",
+      "created_at": "2025-06-20T13:44:28Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/38#discussioncomment-13537991",
+      "author": "pete-gov",
+      "created_at": "2025-06-21T14:17:06Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/38#discussioncomment-13799611",
+      "author": "pete-gov",
+      "created_at": "2025-07-18T00:54:30Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/38#discussioncomment-15812301",
+      "author": "pete-gov",
+      "created_at": "2026-02-15T14:52:48Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/38#discussioncomment-15902012",
+      "author": "pete-gov",
+      "created_at": "2026-02-23T21:29:39Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/38#discussioncomment-15901198",
+      "author": "pete-gov",
+      "created_at": "2026-02-23T19:47:50Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/38#discussioncomment-16014755",
+      "author": "pete-gov",
+      "created_at": "2026-03-05T20:22:38Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/38#discussioncomment-16183508",
+      "author": "paulagosta",
+      "created_at": "2026-03-17T20:22:18Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/38#discussioncomment-17024140",
+      "author": "pete-gov",
+      "created_at": "2026-05-22T18:36:28Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/38#discussioncomment-17105084",
+      "author": "pete-gov",
+      "created_at": "2026-05-29T12:31:59Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/38#discussioncomment-17105360",
+      "author": "pete-gov",
+      "created_at": "2026-05-29T12:59:34Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [
+      "RFC-0012"
+    ],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://github.com/FedRAMP/docs/blob/main/markdown/FRMR.MAS.minimum-assessment-standard.md",
+      "https://github.com/FedRAMP/docs/blob/main/markdown/FRMR.SCN.significant-change-notifications.md",
+      "https://github.com/GoComply/fedramp/pull/29",
+      "https://help.fedramp.gov",
+      "https://help.fedramp.gov/",
+      "https://preview.fedramp.gov/2026/definitions/#fully-mitigated-vulnerability",
+      "https://preview.fedramp.gov/2026/definitions/#partially-mitigated-vulnerability",
+      "https://preview.fedramp.gov/2026/definitions/#remediated-vulnerability",
+      "https://preview.fedramp.gov/2026/providers/rev5/rules/vulnerability-detection-and-response/#accepted-vulnerability-info",
+      "https://preview.fedramp.gov/2026/providers/rev5/rules/vulnerability-detection-and-response/#group-vulnerabilities",
+      "https://preview.fedramp.gov/2026/providers/rev5/rules/vulnerability-detection-and-response/#vulnerability-details",
+      "https://preview.fedramp.gov/2026/rules/#force-of-the-rule",
+      "https://www.fedramp.gov/20x/#phased-delivery-of-fedramp-20x",
+      "https://www.fedramp.gov/disclaimers/",
+      "https://www.fedramp.gov/docs/rev5/balance/#optional-balance-for-rev5",
+      "https://www.fedramp.gov/rfcs/0008/",
+      "https://www.fedramp.gov/rfcs/0012/",
+      "https://www.fedramp.gov/updates/rfcs/0011",
+      "https://www.youtube.com/watch?v=903F2Tis-14"
+    ],
+    "topics": [
+      "20x",
+      "3pao",
+      "agency_authorization",
+      "conmon",
+      "ksi",
+      "machine_readable",
+      "marketplace",
+      "oscal",
+      "poam",
+      "rev5",
+      "significant_change",
+      "vulnerability_mgmt"
+    ]
+  },
+  "content_hash": "e1593c7d0a066e4f345c3379b3973e1cfa7d9bfe516cc73bdc6e6977ed44cae0",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

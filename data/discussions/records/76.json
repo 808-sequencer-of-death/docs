@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-76",
+  "node_id": "D_kwDOOxfoic4AhbFq",
+  "number": 76,
+  "title": "FedRAMP 20xP1 Pilot Final Submission for Armory20x",
+  "url": "https://github.com/FedRAMP/community/discussions/76",
+  "category": "20x Discussion",
+  "category_slug": "20x-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "Rene2mt",
+  "author_is_official": false,
+  "created_at": "2025-08-19T13:23:41Z",
+  "updated_at": "2025-11-18T16:25:18Z",
+  "last_edited_at": null,
+  "closed": true,
+  "closed_at": "2025-11-18T16:25:18Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 2,
+  "body": "[stackArmor](https://stackarmor.com/) is proud to share that we’ve submitted our final Phase One pilot package for **Armory 20x** as part of the FedRAMP 20x initiative. This milestone underscores our commitment to advancing automated, risk-informed approaches to validating secure cloud solutions.\r\n\r\n📂 View the full submission here: https://github.com/stackArmor/armory-20x-public\r\n\r\n",
+  "comment_count": 0,
+  "comments": [],
+  "answer_url": null,
+  "participants": [
+    "Rene2mt"
+  ],
+  "official_responses": [],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://github.com/stackArmor/armory-20x-public",
+      "https://stackarmor.com/"
+    ],
+    "topics": [
+      "20x"
+    ]
+  },
+  "content_hash": "e12b18d85adb09bd43fdea2be4bbdd092b79ac0333835c8032801d7afa27a74a",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

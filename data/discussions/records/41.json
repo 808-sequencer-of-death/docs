@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-41",
+  "node_id": "D_kwDOOxfoic4AgRR6",
+  "number": 41,
+  "title": "Flock Safety -- FedRAMP 20x Pilot Final Submission",
+  "url": "https://github.com/FedRAMP/community/discussions/41",
+  "category": "20x Discussion",
+  "category_slug": "20x-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "flock-auditor",
+  "author_is_official": false,
+  "created_at": "2025-06-16T17:29:15Z",
+  "updated_at": "2025-11-18T16:24:57Z",
+  "last_edited_at": "2025-06-16T17:56:56Z",
+  "closed": true,
+  "closed_at": "2025-11-18T16:24:57Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 3,
+  "body": "Flock Safety is excited to share our submission to the FedRAMP 20x Phase One Pilot. Our submission follows the initial authorization guidelines posted in the FedRAMP 20x guidance: https://www.fedramp.gov/20x/phase-one/\r\n\r\nPlease find our publicly accessible Github repo here: https://github.com/flocksafety/flock-core-fedramp20x\r\n\r\nOur submission is scoped to the Flock Safety Platform that provides a solution for public  safety that assists cities, businesses, schools, and law enforcement agencies to collaboratively preserve and maintain community safety.\r\n\r\n\r\n\r\n\r\n\r\n",
+  "comment_count": 0,
+  "comments": [],
+  "answer_url": null,
+  "participants": [
+    "flock-auditor"
+  ],
+  "official_responses": [],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://github.com/flocksafety/flock-core-fedramp20x",
+      "https://www.fedramp.gov/20x/phase-one/"
+    ],
+    "topics": [
+      "20x"
+    ]
+  },
+  "content_hash": "f85874264f706abe299cab9f3e4778085ba4ce083daebd47ebd5d41d542f72ec",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

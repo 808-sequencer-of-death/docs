@@ -1,0 +1,153 @@
+---
+title: "20x questions on the Consolidated Rules for 2026"
+description: "Digest of FedRAMP staff answers in the community thread for 20x questions on the Consolidated Rules for 2026 (discussion #147), grouped by topic and ruleset."
+sidebarTitle: "20x CR26 Q&A (#147)"
+---
+
+<Info>
+  **Thread:** [#147 20x questions and discussion on the Consolidated Rules for 2026](https://github.com/FedRAMP/community/discussions/147), opened by `pete-gov` on 2026-06-24 and still open. It has 32 staff posts through 2026-10-13. **Last reviewed:** 2026-10-14 against upstream release `2026.10.14.01`. Staff answers are paraphrased. Follow each link for the exact wording. Staff statements don't change the published rules. Where they conflict, the [official rules](https://www.fedramp.gov/2026/) govern.
+</Info>
+
+## Bottom line
+
+20x is currently for cloud-native services built on a FedRAMP-certified IaaS or PaaS. Self-hosted and on-premises services can get a 20x Class A certification, then move to Rev5 Class B or higher until 20x rules for self-hosted services exist. You can get a Class A certification without an independent assessment. You can't hold both a 20x certification and a Rev5 program certification. FedRAMP doesn't prescribe secure configuration benchmarks such as STIG or CIS. You choose a defensible approach and document it.
+
+## Certification paths and classes
+
+<Note>
+  **pete-gov, 2026-07-08** ([comment](https://github.com/FedRAMP/community/discussions/147#discussioncomment-17566240)): 20x is for cloud-native services built on a FedRAMP-certified IaaS or PaaS. Phase 4 will explore on-premises and hosted services, including Class D. A 20x on-premises option should be widely available before new Rev5 certifications stop.
+</Note>
+
+<Note>
+  **emu-gov, 2026-07-09** ([comment](https://github.com/FedRAMP/community/discussions/147#discussioncomment-17587637)) and **pete-gov, 2026-10-13** ([comment](https://github.com/FedRAMP/community/discussions/147#discussioncomment-18903498)): Class A is open to services with hybrid, on-premises or self-run infrastructure. Those services can't move to 20x Class B or higher until rules for self-hosted services exist, but they can move to Rev5 Class B or higher. This matches the tip on the upstream [Choosing a Certification Path](https://www.fedramp.gov/2026/providers/start/path/) page.
+</Note>
+
+<Note>
+  **pete-gov, 2026-07-17** ([comment](https://github.com/FedRAMP/community/discussions/147#discussioncomment-17674707)): Staff don't expect a "conversion" from Rev5 to 20x. You apply for a 20x certification, get it, then stop maintaining your Rev5 package. For the temporary Rev5 program certification path, you must agree to follow all updated rules by February 19, 2027 ([path page](https://www.fedramp.gov/2026/providers/start/path/#temporary-rev5-program-certification-availability-for-class-b-and-c)).
+</Note>
+
+<Note>
+  **pete-gov, 2026-07-24** ([comment](https://github.com/FedRAMP/community/discussions/147#discussioncomment-17768441), [form](https://github.com/FedRAMP/community/discussions/147#discussioncomment-17769179), [sponsor](https://github.com/FedRAMP/community/discussions/147#discussioncomment-17771823)):
+  - Converting from FedRAMP Ready to a Rev5 Class B or higher program certification still needs a full assessment and package, plus a commitment to all CR26 Rev5 rules by February 2027.
+  - You can't convert until you meet **all** requirements.
+  - You can't hold both a 20x certification and a Rev5 program certification. See [`FRC-CSO-POP`](https://www.fedramp.gov/2026/reference/fedramp-certification/#pick-one-program-certification-type).
+  - Rev5 always needs a sponsor, except through the temporary Class B and C program path.
+</Note>
+
+<Note>
+  **nicole-gov, 2026-08-06** ([comment](https://github.com/FedRAMP/community/discussions/147#discussioncomment-17922115)) and **2026-08-07** ([comment](https://github.com/FedRAMP/community/discussions/147#discussioncomment-17936636), [comment](https://github.com/FedRAMP/community/discussions/147#discussioncomment-17936879)):
+  - Class A is a real FedRAMP certification. FedRAMP Ready isn't.
+  - CR26 already defines every path from Class A through Class C.
+  - After Class A, you can apply for any Class B or C path you qualify for, or skip Class A entirely.
+  - The windows staff gave: Class A from 2026-08-03, Rev5 program Class B and C from 2026-08-10 (lost sponsor or ready conversion only), and 20x Class B and C from 2026-08-31.
+</Note>
+
+<Note>
+  **pete-gov, 2026-06-25** ([comment](https://github.com/FedRAMP/community/discussions/147#discussioncomment-17438908)): Legacy 20x pilot materials aren't on the legacy site because they no longer apply.
+</Note>
+
+## Class A specifics
+
+<Note>
+  **emu-gov, 2026-09-09** ([comment](https://github.com/FedRAMP/community/discussions/147#discussioncomment-18369371)) and **pete-gov, 2026-09-09** ([comment](https://github.com/FedRAMP/community/discussions/147#discussioncomment-18371743)): You can get a Class A certification and a Marketplace listing without an independent assessment, and two certified providers did. Staff say MAY really means MAY. Having an assessor check your work first is allowed and might go more smoothly, but it's "100% not expected." For reference, the published Class A variant of [`IVV-CSX-AIA`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#annual-independent-assessments-for-20x) says providers MUST meet the expectations of their underlying alternative security framework.
+</Note>
+
+<Note>
+  **emu-gov, 2026-09-02** ([comment](https://github.com/FedRAMP/community/discussions/147#discussioncomment-18249814), [follow-up](https://github.com/FedRAMP/community/discussions/147#discussioncomment-18249940)): If you hold Class A and apply for Class C, the Class C review is still your "initial certification." The note about six months of KSI metrics carries over: you need mechanisms in place and an agreement to meet the requirement. Class A certification reports include feedback for moving up to Class B or C.
+</Note>
+
+<Warning>
+  **Rule ID changed.** emu-gov answered about `FRC-CSX-MOT`. Release `2026.10.08.01` removed that rule as a duplicate of [`SDR-CSX-KMT`](https://www.fedramp.gov/2026/reference/security-decision-record/#key-security-indicator-metrics). `SDR-CSX-KMT` carries the same initial-certification note. It is MUST for Class C, and changed from MUST to SHOULD for Class B. The answer still holds under `SDR-CSX-KMT`. See [Security decision record](/rules/security-decision-record).
+</Warning>
+
+## Secure configuration
+
+Rules page: [Secure configuration guide](/rules/secure-configuration-guide).
+
+<Note>
+  **pete-gov, 2026-07-17** ([comment](https://github.com/FedRAMP/community/discussions/147#discussioncomment-17674707)) and **2026-09-02** ([comment](https://github.com/FedRAMP/community/discussions/147#discussioncomment-18255608), [follow-up](https://github.com/FedRAMP/community/discussions/147#discussioncomment-18256476)): FedRAMP doesn't prescribe CIS benchmarks or DISA STIGs. The CR26 Rev5 control guidance has no SA-04 guidance requiring them. For certification, there's no FedRAMP minimum tier. You pick a risk-based configuration, apply it, and document why it meets the control. Agencies may still write such requirements into contracts. Closed RFCs don't apply. Read the linked outcome, such as [NTC-0013](https://www.fedramp.gov/notices/0013/), instead.
+</Note>
+
+<Note>
+  **nicole-gov, 2026-09-02** ([comment](https://github.com/FedRAMP/community/discussions/147#discussioncomment-18258430)) and **dan-fedramp, 2026-09-03** ([comment](https://github.com/FedRAMP/community/discussions/147#discussioncomment-18269575)): The guide required by [`SCG-CSO-RSC`](https://www.fedramp.gov/2026/reference/secure-configuration-guide/#recommended-secure-configuration) tells agency customers how to configure **your service** securely, with settings specific to your offering. Leave out OS configuration unless agencies configure the OS themselves.
+</Note>
+
+## Adopting rulesets and showing compliance
+
+<Note>
+  **paulagosta, 2026-07-23** ([comment](https://github.com/FedRAMP/community/discussions/147#discussioncomment-17755820)): Paul was answering a Rev5 provider whose grace date falls before its annual assessment.
+  - Moving to a ruleset needs no third-party validation first. You just follow the rules.
+  - Some rulesets require notice. For example, [`CDS-CSF-TCM`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#trust-center-migration) requires notice to FedRAMP at info@fedramp.gov.
+  - FedRAMP asks for status through FSI and at your annual assessment.
+  - Your monthly ConMon should show the change. For example, your POA&M becomes a monthly activity report.
+</Note>
+
+<Note>
+  **nicole-gov, 2026-07-24** ([comment](https://github.com/FedRAMP/community/discussions/147#discussioncomment-17766043)): Adopting new FedRAMP rules that change your processes will almost certainly be a significant change. Follow the [significant change notification](/rules/significant-change-notification) rules and notify customers.
+</Note>
+
+## Security decision record
+
+Rules page: [Security decision record](/rules/security-decision-record).
+
+<Note>
+  **dan-fedramp, 2026-08-17** ([comment](https://github.com/FedRAMP/community/discussions/147#discussioncomment-18056301)): In [`SDR-CSO-MTD`](https://www.fedramp.gov/2026/reference/security-decision-record/#security-decision-record-metadata), "Source of update" tells the reviewer whether an update is routine or prompted by an unusual event, such as continuous monitoring, an SCN or incident response. There are no prescribed values.
+</Note>
+
+<Note>
+  **paulagosta, 2026-08-18** ([comment](https://github.com/FedRAMP/community/discussions/147#discussioncomment-18064901)) and **emu-gov, 2026-08-24** ([comment](https://github.com/FedRAMP/community/discussions/147#discussioncomment-18136501)): The SDR JSON can reference artifacts, but only to support real machine-readable answers. Every field pointing to an SRTM link isn't acceptable. When artifacts such as screenshots aren't in the SDR, use direct links and explain why each one matters. If reviewers have to hunt for files, FedRAMP will push back on your submission.
+</Note>
+
+## Scope and Marketplace listings
+
+Rules pages: [Minimum assessment scope](/rules/minimum-assessment-scope), [Marketplace listing](/rules/marketplace-listing), [Certification data sharing](/rules/certification-data-sharing).
+
+<Note>
+  **emu-gov, 2026-08-17** ([comment](https://github.com/FedRAMP/community/discussions/147#discussioncomment-18053044)): Whether a service is in FedRAMP scope depends on how the agency uses it. The examples on the [Scope of FedRAMP](https://www.fedramp.gov/2026/scope/#scope-of-fedramp) page aren't an exclusion list. A key test is general education and training offered to the public. FedRAMP doesn't issue blanket out-of-scope determinations.
+</Note>
+
+<Note>
+  **emu-gov, 2026-09-09** ([comment](https://github.com/FedRAMP/community/discussions/147#discussioncomment-18368851)) and **pete-gov, 2026-09-09** ([comment](https://github.com/FedRAMP/community/discussions/147#discussioncomment-18369926)): A feature that can't be bought on its own can't have its own listing. List it as a service under the parent offering, and include its components in the [`MAS-CSO-IIR`](https://www.fedramp.gov/2026/reference/minimum-assessment-scope/#identify-information-resources) scope. A standalone product with its own team, package and ConMon is a separate offering with its own listing.
+</Note>
+
+<Note>
+  **pete-gov, 2026-10-05** ([comment](https://github.com/FedRAMP/community/discussions/147#discussioncomment-18766044)) and **2026-10-06** ([comment](https://github.com/FedRAMP/community/discussions/147#discussioncomment-18781924)): For software installed locally in an agency, the cloud service's control over it is in scope. That includes command and control, telemetry and updates. The software itself, running in the agency environment, isn't. You can include information about it under [`MAS-CSO-SUP`](https://www.fedramp.gov/2026/reference/minimum-assessment-scope/#supplemental-information).
+</Note>
+
+<Note>
+  **pete-gov, 2026-09-02** ([comment](https://github.com/FedRAMP/community/discussions/147#discussioncomment-18255553)): No rule requires a full trust center for an Initial Implementation listing. The explicit rules govern, not the narrative. The rules that apply are:
+  - [`MKT-CSO-MLR`](https://www.fedramp.gov/2026/reference/marketplace-listing/#marketplace-listing-requirements), which points to [`CDS-CSO-PUB`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#public-information): public information in human-readable and JSON formats.
+  - [`MKT-CSO-PML`](https://www.fedramp.gov/2026/reference/marketplace-listing/#provider-marketplace-listing-requests): the listing request form.
+  - [`MKT-IIP-AGU`](https://www.fedramp.gov/2026/reference/marketplace-listing/#agency-use-cases), [`MKT-IIP-DCP`](https://www.fedramp.gov/2026/reference/marketplace-listing/#demonstrating-continuous-progress) and [`MKT-IIP-DLA`](https://www.fedramp.gov/2026/reference/marketplace-listing/#deadline-for-assessment).
+
+  A public FedRAMP landing page with that information counts as a "basic FedRAMP-compatible Trust Center."
+</Note>
+
+## Vulnerability evaluation and reporting
+
+Rules page: [Vulnerability evaluation and reporting](/rules/vulnerability-evaluation-and-reporting).
+
+<Note>
+  **pete-gov, 2026-10-13** ([comment](https://github.com/FedRAMP/community/discussions/147#discussioncomment-18903585)): PAIN N0 and accepted vulnerabilities aren't linked. You may accept the risk of a vulnerability at any PAIN. Track a vulnerability until it's **remediated**. A fully mitigated vulnerability is still present, so keep tracking it. See [`VER-TFR-MAV`](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#mark-accepted-vulnerabilities): you MUST categorize any vulnerability not fully mitigated or remediated within 192 days of evaluation as accepted.
+</Note>
+
+## Open questions
+
+These were still unanswered in the thread as of 2026-10-14:
+
+- Whether a provider with an outdated cryptographic module can track it as an open vulnerability past the grace date, and whether that triggers a corrective action plan or revocation ([question](https://github.com/FedRAMP/community/discussions/147#discussioncomment-17937426)). For current crypto rules and the open [RFC-0035](https://github.com/FedRAMP/community/discussions/179), see [Cryptographic module use](/rules/cryptographic-module-use).
+- Whether [`IVV-CSO-RAA`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#receiving-assessor-advice) lets a firm with a firewall between its advisory and assessment teams assess a provider it advised ([question](https://github.com/FedRAMP/community/discussions/147#discussioncomment-18165225)).
+
+## What it means for you
+
+- If your service isn't cloud-native on a certified IaaS or PaaS, Class A is your 20x entry point today. Moving higher means Rev5 Class B or above until rules for self-hosted services exist.
+- For Class A, an independent assessment is optional. Check the Class A rules listed in [`FRC-CLA-MFR`](https://www.fedramp.gov/2026/reference/fedramp-certification/#mandatory-fedramp-rules-for-class-a).
+- Write your secure configuration guide for agency customers configuring your service, not as an OS hardening benchmark.
+- Treat rule adoption as a significant change and notify customers.
+- In your SDR, use machine-readable answers with direct artifact links, not pointers to legacy documents.
+
+## Related
+
+- [Rev5 questions on the Consolidated Rules for 2026](/discussions/rev5-cr26-questions)
+- [Notable staff answers](/discussions/notable-staff-answers)
+- [FedRAMP certification](/rules/fedramp-certification) and [Key security indicators](/rules/key-security-indicators)

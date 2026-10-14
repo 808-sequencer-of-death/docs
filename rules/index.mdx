@@ -1,0 +1,398 @@
+---
+title: "Rule summaries"
+description: "How the FedRAMP Consolidated Rules for 2026 are organized, how to read them, and a provider's step-by-step path through every ruleset."
+sidebarTitle: "Start here"
+---
+
+<Info>
+  **Official source:** [FedRAMP Consolidated Rules for 2026](https://www.fedramp.gov/2026/reference/), release `2026.10.14.01` ([changelog](https://www.fedramp.gov/2026/changelog/)). This page is a plain-English guide. The official rule text governs, and FedRAMP's machine-readable [FedRAMP Rules repository](https://github.com/FedRAMP/rules) is the source of truth.
+</Info>
+
+## In short
+
+The Consolidated Rules for 2026 (often called CR26) replace FedRAMP's long narrative documents with short, numbered rules. There are **17 rulesets with 245 rules**, plus **46 Key Security Indicators** in 10 themes for FedRAMP 20x.
+
+- **Most rules are yours.** By subset audience, 179 of the 245 rules apply to providers. The rest apply to agencies (24), assessors (23), FedRAMP (16) and advisors (3).
+- **Rev5 and 20x share most rules.** They differ in what you implement (NIST SP 800-53 controls for Rev5, Key Security Indicators for 20x), how often you refresh your package, and which certification path you can take.
+- **Class is the main dial.** 28 rules set a different force or timeframe for each class. In every one of them, a higher class is at least as strict as a lower one.
+- **Paperwork rules are strict, engineering rules are flexible.** Reporting, data sharing and communication rules are almost all MUST. Most rules in Vulnerability Detection and Response and Secure Configuration Guide are SHOULD.
+- **Three themes run through everything:** machine-readable JSON that validates against FedRAMP schemas ([`FRC-CSO-JSN`](https://www.fedramp.gov/2026/reference/fedramp-certification/#fedramp-json-schemas)), a FedRAMP-compatible trust center for sharing ([`CDS-CSO-UTC`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#use-trust-centers)), and "[all necessary parties](https://www.fedramp.gov/2026/definitions/#all-necessary-parties)" as the default audience.
+
+## How the rules are organized
+
+FedRAMP groups the rules in three levels ([Using the FedRAMP Consolidated Rules](https://www.fedramp.gov/2026/rules/)):
+
+1. **Rulesets** group rules by process or subject, such as Vulnerability Detection and Response (`VDR`).
+2. **Subsets** group rules inside a ruleset by responsibility or task, such as General Provider Responsibilities (`CSO`) or Timeframes (`TFR`).
+3. **Rules** are the individual statements.
+
+Each rule has a stable ID in the format `SET-SUBSET-KEY`. For example, `MAS-CSO-TPR` is the Third-Party Information Resources rule (`TPR`) in the General Provider Responsibilities subset (`CSO`) of the Minimum Assessment Scope ruleset (`MAS`). FedRAMP publishes a full list of these three-letter codes on its [FedRAMP Trigrams](https://www.fedramp.gov/2026/trigrams/) page.
+
+Rules often use [defined terms](https://www.fedramp.gov/2026/definitions/), such as "persistently", "all necessary parties" or "likely exploitable vulnerability". FedRAMP says a rule that uses a defined term can't be applied properly without that definition, so read the definition, not just the plain-English meaning.
+
+## How to read the force of a rule
+
+FedRAMP bases its key words on IETF RFC 2119 and defines each one on the [Rules page](https://www.fedramp.gov/2026/rules/#force-of-the-rule):
+
+| Force | What FedRAMP says it means | What you document |
+| --- | --- | --- |
+| **MUST** | An absolute requirement. Failing it is a vulnerability likely requiring corrective action or denial of initial or ongoing certification. | You MUST meet it and address it in your security documentation. |
+| **MUST NOT** | An absolute prohibition, with the same consequences. | You MUST meet it and address it in your security documentation. |
+| **SHOULD** | There may be valid reasons to ignore it in particular circumstances, but you must understand and carefully weigh the full implications. | You MUST explain your decision in your security documentation. |
+| **SHOULD NOT** | The action may be acceptable or even useful in particular circumstances, but you must understand and carefully weigh the full implications. | You MUST explain your decision in your security documentation. |
+| **MAY** | Truly optional. | You SHOULD explain your decision in your security documentation. |
+
+In practice, SHOULD is not "optional". You can depart from a SHOULD, but your Security Decision Record has to say why ([`SDR-CSO-FRR`](https://www.fedramp.gov/2026/reference/security-decision-record/#fedramp-rules)).
+
+**How this site writes force.** We always write the force in capitals. When the force varies by class, we list each class, for example "A: MAY, B: SHOULD, C: MUST, D: MUST". We never collapse a class-specific force into a single value.
+
+<Tip>
+  FedRAMP's own advice on these rules: they are flexible on purpose. A required "report" can be as simple as a spreadsheet, and maximum timeframes are the worst case, not the target ([It's Not a Trap!](https://www.fedramp.gov/2026/rules/#its-not-a-trap)).
+</Tip>
+
+## Types, paths and classes
+
+Your **certification profile** is your type, path and class together ([`FRC-CSO-FCP`](https://www.fedramp.gov/2026/reference/fedramp-certification/#fedramp-certification-profile)). Each rule's applicability is set by these three values, plus the audience (providers, agencies, assessors, advisors or FedRAMP).
+
+### Types: 20x and Rev5
+
+- **20x** is FedRAMP's new outcome-focused approach. You show security through [Key Security Indicators](/rules/key-security-indicators) and automated verification and validation.
+- **Rev5** keeps NIST SP 800-53 Rev. 5 controls, with a class baseline in your Security Decision Record ([`FRC-CSF-BSL`](https://www.fedramp.gov/2026/reference/fedramp-certification/#fedramp-rev5-baselines)): 155 controls for Class B, 322 for Class C and 409 for Class D.
+- You MUST NOT seek both a Rev5 Program Certification and a 20x Program Certification for the same offering ([`FRC-CSO-POP`](https://www.fedramp.gov/2026/reference/fedramp-certification/#pick-one-program-certification-type)). The rule's note says a Rev5 Agency Certification plus a 20x Program Certification is allowed but strongly discouraged.
+- FedRAMP will stop accepting applications for new Rev5 Certifications on 2027-06-11 ([Important Dates](https://www.fedramp.gov/2026/timeline/)).
+
+### Paths: Program and Agency
+
+From [Choosing a Certification Path](https://www.fedramp.gov/2026/providers/start/path/):
+
+| Type | Class A | Class B | Class C | Class D |
+| --- | --- | --- | --- | --- |
+| 20x | Program path | Program path | Program path | Program path, coming in 2027 |
+| Rev5 | Unavailable | Agency path (Program path limited) | Agency path (Program path limited) | Agency path only |
+
+- **Program Certification** comes directly from FedRAMP, without an agency sponsor. It's the only path for 20x.
+- **Agency Certification** needs an agency to authorize the service first, then sponsor it. It's only available for Rev5, and the agency must send FedRAMP a signed ATO letter ([`FRC-APS-ATO`](https://www.fedramp.gov/2026/reference/fedramp-certification/#agency-authorization-to-operate)).
+- **Limited Rev5 Program pipelines** (Lost Sponsor and Ready Conversion) opened 2026-08-10 for Class B or C, for providers that meet specific eligibility criteria. They close on 2027-06-11.
+
+### Classes A to D
+
+FedRAMP says classes "loosely align" with the NIST SP 800-53B Low, Moderate and High baselines, but there's no direct correlation ([Choosing a Certification Class](https://www.fedramp.gov/2026/providers/start/class/)). FedRAMP's guidance to agencies also says classes aren't one-for-one replacements for impact levels ([FedRAMP Certification Classes](https://www.fedramp.gov/2026/agencies/use/classes/)).
+
+| Class | FedRAMP's description for agency use |
+| --- | --- |
+| A | Adequate information for most non-sensitive use cases and some Low, Moderate or High security objectives. |
+| B | Adequate information for most Low security objectives and some Moderate or High security objectives. |
+| C | Adequate information for most Low and Moderate security objectives, and some High security objectives. |
+| D | Adequate information for most use cases regardless of security objective. This doesn't include systems that process classified information. |
+
+Class A is 20x only. It builds on an approved alternative framework (SOC 2 Type II, FedRAMP Rev5 including FedRAMP Ready, or GovRAMP) completed within the past 12 months ([`FRC-CLA-ASF`](https://www.fedramp.gov/2026/reference/fedramp-certification/#approved-alternative-security-frameworks)).
+
+<Note>
+  A subset's class tags don't always list every class a rule mentions. For example, the Certification Package Overview general subset is tagged Classes B, C and D, but [`CPO-CSO-OSA`](https://www.fedramp.gov/2026/reference/certification-package-overview/#overall-summary-of-assessment-in-certification-package) includes a Class A variant (MAY). Class A providers reach many of these variants through [`FRC-CLA-RFR`](https://www.fedramp.gov/2026/reference/fedramp-certification/#recommended-fedramp-rules-for-class-a) and [`FRC-CLA-OFR`](https://www.fedramp.gov/2026/reference/fedramp-certification/#address-optional-fedramp-rules-for-class-a). Always read the rule itself.
+</Note>
+
+## All rulesets
+
+Rule counts come from FedRAMP's [Complete Ruleset Reference](https://www.fedramp.gov/2026/reference/complete-rulesets/). All rulesets have the status Stable except Agency Use (`AGU`), which FedRAMP lists as Placeholder.
+
+### Certification and packages
+
+| Ruleset | Rules | What it covers |
+| --- | --- | --- |
+| [FedRAMP Certification](/rules/fedramp-certification) (`FRC`) | 28 | How you apply for, obtain and keep a certification, including Class A rules, Rev5 baselines and 20x automation. |
+| [Certification Package Overview](/rules/certification-package-overview) (`CPO`) | 5 | The overview of your offering inside the package. Replaces the base System Security Plan for Rev5. |
+| [Security Decision Record](/rules/security-decision-record) (`SDR`) | 5 | The verified and validated record of how you meet each rule, Key Security Indicator or control. |
+| [Minimum Assessment Scope](/rules/minimum-assessment-scope) (`MAS`) | 5 | What's inside your assessment boundary, including third-party resources. |
+| [Certification Data Sharing](/rules/certification-data-sharing) (`CDS`) | 21 | What you publish, and how you share certification data through a trust center. |
+| [Marketplace Listing](/rules/marketplace-listing) (`MKT`) | 12 | Who can be listed on the FedRAMP Marketplace and what listed providers, assessors and advisors must supply. |
+
+### Ongoing operations
+
+| Ruleset | Rules | What it covers |
+| --- | --- | --- |
+| [Vulnerability Detection and Response](/rules/vulnerability-detection-and-response) (`VDR`) | 18 | Finding and fixing vulnerabilities, with scan and fix timeframes by class. |
+| [Vulnerability Evaluation and Reporting](/rules/vulnerability-evaluation-and-reporting) (`VER`) | 23 | Rating vulnerabilities (exploitability, internet reachability, PAIN) and reporting them. |
+| [Significant Change Notification](/rules/significant-change-notification) (`SCN`) | 17 | Classifying changes and notifying customers before and after significant changes. |
+| [Incident Evaluation and Communication](/rules/incident-evaluation-and-communication) (`IEC`) | 8 | Deciding whether an incident is reportable, and the initial, ongoing and final incident reports. |
+| [Collaborative Continuous Monitoring](/rules/collaborative-continuous-monitoring) (`CCM`) | 19 | Ongoing Certification Reports every 3 months and Quarterly Reviews. |
+| [Addressing FedRAMP Communication](/rules/addressing-fedramp-communication) (`AFC`) | 16 | Your FedRAMP Security Inbox and how fast you act on Emergency messages. |
+
+### Security practices
+
+| Ruleset | Rules | What it covers |
+| --- | --- | --- |
+| [Key Security Indicators](/rules/key-security-indicators) (`KSI`) | 46 indicators | The security capabilities a 20x offering must show, in 10 themes. |
+| [Secure Configuration Guide](/rules/secure-configuration-guide) (`SCG`) | 9 | The guide that tells customers how to configure your service securely. |
+| [Cryptographic Module Use](/rules/cryptographic-module-use) (`CMU`) | 3 | Documenting cryptographic modules and when they must be validated. |
+
+### Assessors and agencies
+
+| Ruleset | Rules | What it covers |
+| --- | --- | --- |
+| [Independent Verification and Validation](/rules/independent-verification-and-validation) (`IVV`) | 20 | Annual independent assessments, what you supply to assessors and what assessors must do. |
+| [FedRAMP Recognition](/rules/fedramp-recognition) (`REC`) | 16 | How assessors become and stay FedRAMP Recognized. |
+| [Agency Use](/rules/agency-use) (`AGU`) | 20 | What agencies must do when they use certified services. Status: Placeholder. |
+
+Two cross-cutting pages pull the rulesets together:
+
+- [Provider deliverables](/rules/provider-deliverables): every rule that makes you produce a document, report, dataset or notification.
+- [FRR and KSI](/rules/frr-and-ksi): how the process rules and the Key Security Indicators fit together.
+
+## Key dates
+
+FedRAMP defines four dates for each ruleset ([Rev5 Deadlines](https://www.fedramp.gov/2026/providers/updating/deadlines/rev5/), [20x Deadlines](https://www.fedramp.gov/2026/providers/updating/deadlines/20x/)):
+
+- **Optional adoption allowed:** you may adopt the whole ruleset from this date, for initial and ongoing certification.
+- **Obtaining initial certification:** if you apply for initial certification after this date, you MUST have adopted the ruleset or certification will be denied.
+- **Maintaining ongoing certification:** if you're already certified, you SHOULD adopt the ruleset by this date. If you don't, you'll need a corrective action plan to adopt it by the end of the grace period.
+- **Grace period ends:** if you're already certified, you MUST have adopted the ruleset by this date or your certification will be revoked.
+
+### Rev5
+
+| Ruleset | Optional adoption | Obtaining initial | Maintaining ongoing | Grace period ends |
+| --- | --- | --- | --- | --- |
+| AFC | None listed | 2026-01-05 | 2026-01-05 | 2026-07-01 |
+| SCG | None listed | 2026-03-01 | 2026-03-01 | 2026-07-01 |
+| MKT | 2026-07-04 | 2026-07-04 | 2026-07-04 | 2026-07-04 |
+| VDR, VER (mandated by CISA BOD 26-04) | 2026-07-04 | 2026-12-07 | 2026-12-07 | 2027-03-07 |
+| CMU, IEC, SCN | 2026-07-04 | 2027-01-01 | 2027-01-01 | 2027-06-01 |
+| FRC, IVV, MAS | 2026-07-04 | 2027-01-01 | 2027-01-01 | First independent assessment started after 2027-01-01 |
+| CCM | 2026-07-04 | 2027-01-01 | 2027-04-02 | 2027-10-01 |
+| CPO | 2026-07-04 | 2027-01-01 | 2027-07-01 | First independent assessment started after 2027-07-01 |
+| SDR | 2026-07-04 | 2027-01-01 | 2027-08-01 | First independent assessment started after 2027-08-01 |
+| CDS | 2026-07-04 | 2027-01-01 | 2027-08-01 | 2028-02-01 |
+
+### 20x
+
+| Ruleset | Optional adoption | Obtaining initial | Maintaining ongoing | Grace period ends |
+| --- | --- | --- | --- | --- |
+| AFC | None listed | 2026-01-05 | 2026-01-05 | 2026-07-01 |
+| SCG | None listed | 2026-03-01 | 2026-03-01 | 2026-07-01 |
+| MKT | 2026-07-04 | 2026-07-04 | 2026-07-04 | 2026-07-04 |
+| VDR, VER (mandated by CISA BOD 26-04) | 2026-07-04 | 2026-12-07 | 2026-12-07 | 2027-03-07 |
+| CCM, CDS, CMU, CPO, FRC, IEC, IVV, MAS, SCN, SDR | 2026-07-04 | 2026-07-04 | 2027-01-01 | First independent assessment started after 2027-01-01 |
+
+The non-provider rulesets, Agency Use (`AGU`) and FedRAMP Recognition (`REC`), list 2026-07-04 for all four dates.
+
+Other dates to know:
+
+- **2026-11-17:** FedRAMP Ready offerings MUST convert to a FedRAMP Certification by this date or the expiry of their annual assessment, whichever is later. FedRAMP Ready status is removed entirely on 2027-12-31 ([`FRC-CSF-RDY`](https://www.fedramp.gov/2026/reference/fedramp-certification/#fedramp-ready-conversion)).
+- **2027-01-01:** the Consolidated Rules take mandatory effect for all stakeholders, subject to each ruleset's dates ([Important Dates](https://www.fedramp.gov/2026/timeline/)).
+- **2027-06-11:** FedRAMP stops accepting applications for new Rev5 Certifications ([Important Dates](https://www.fedramp.gov/2026/timeline/)).
+
+## A provider's path through the rules
+
+This is the order most providers work through the rules. Each step links to the full summary, and every bullet names the rule ID. Unless a bullet says otherwise, the rule applies to both Rev5 and 20x.
+
+### Step 1: Build your certification package
+
+Rulesets: [FRC](/rules/fedramp-certification), [CPO](/rules/certification-package-overview), [SDR](/rules/security-decision-record), [MAS](/rules/minimum-assessment-scope).
+
+Your FedRAMP Certification Package has three parts: a Certification Package Overview, the implementation, validation and assessment information from your Security Decision Record, and a real or example Ongoing Certification Report ([`FRC-CSO-PKG`](https://www.fedramp.gov/2026/reference/fedramp-certification/#fedramp-certification-package)). For Rev5, the overview replaces the base System Security Plan ([`CPO-CSO-OVR`](https://www.fedramp.gov/2026/reference/certification-package-overview/#overview-of-the-cloud-service-offering)). FedRAMP doesn't require a separate Security Assessment Plan or Security Assessment Report. Your assessor's summaries go into your package instead ([`IVV-IAS-SUM`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#assessment-summary), [`IVV-IAS-OSA`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#overall-summary-of-assessment)).
+
+1. **Pick your profile.** Identify your target certification profile and apply all relevant FedRAMP practices ([`FRC-CSO-FCP`](https://www.fedramp.gov/2026/reference/fedramp-certification/#fedramp-certification-profile)).
+2. **Draw your boundary.**
+   - Include every information resource likely to handle federal customer data or affect its confidentiality, integrity or availability. That set is your cloud service offering ([`MAS-CSO-IIR`](https://www.fedramp.gov/2026/reference/minimum-assessment-scope/#identify-information-resources)).
+   - Document information flows and security categories for all of it ([`MAS-CSO-FLO`](https://www.fedramp.gov/2026/reference/minimum-assessment-scope/#information-flows-and-security-categories)).
+   - For each third-party information resource, document its usage and configuration, why you use it, mitigations and compensating controls ([`MAS-CSO-TPR`](https://www.fedramp.gov/2026/reference/minimum-assessment-scope/#third-party-information-resources)).
+   - Include metadata, including metadata about federal customer data ([`MAS-CSO-MDI`](https://www.fedramp.gov/2026/reference/minimum-assessment-scope/#metadata-inclusion)).
+   - You MAY add a clearly separated supplement about resources outside the offering. Those resources won't be certified ([`MAS-CSO-SUP`](https://www.fedramp.gov/2026/reference/minimum-assessment-scope/#supplemental-information)).
+3. **Write the Certification Package Overview** in human-readable and JSON formats ([`CPO-CSO-OVR`](https://www.fedramp.gov/2026/reference/certification-package-overview/#overview-of-the-cloud-service-offering)). It pulls in the information from [`CPO-CSO-MTD`](https://www.fedramp.gov/2026/reference/certification-package-overview/#certification-package-overview-metadata), [`CDS-CSO-PUB`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#public-information), [`CDS-CSO-SVC`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#public-service-list), [`CDS-CSO-IRP`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#include-relevant-policies), [`MAS-CSO-IIR`](https://www.fedramp.gov/2026/reference/minimum-assessment-scope/#identify-information-resources), [`MAS-CSO-FLO`](https://www.fedramp.gov/2026/reference/minimum-assessment-scope/#information-flows-and-security-categories), [`MAS-CSO-TPR`](https://www.fedramp.gov/2026/reference/minimum-assessment-scope/#third-party-information-resources), [`CMU-CSO-CMD`](https://www.fedramp.gov/2026/reference/cryptographic-module-use/#cryptographic-module-documentation) and [`IVV-CSO-ICP`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#inclusion-in-certification-package). Classes B to D MUST include the assessor's overall summary; Class A MAY ([`CPO-CSO-OSA`](https://www.fedramp.gov/2026/reference/certification-package-overview/#overall-summary-of-assessment-in-certification-package)).
+4. **Write the Security Decision Record** in human-readable and JSON formats. For each applicable rule, explain how you follow it (or why not, and the risk to customers), your verification and validation, the independent verification and validation, your responses to assessor comments, and any artifacts ([`SDR-CSO-FRR`](https://www.fedramp.gov/2026/reference/security-decision-record/#fedramp-rules)). Add metadata ([`SDR-CSO-MTD`](https://www.fedramp.gov/2026/reference/security-decision-record/#security-decision-record-metadata)).
+   - **Rev5:** add a summary for each applicable control, including parameter values, implementation status and any inheritance ([`SDR-CSF-CTF`](https://www.fedramp.gov/2026/reference/security-decision-record/#rev5-controls)).
+   - **20x:** add a summary for each applicable Key Security Indicator ([`SDR-CSX-KSI`](https://www.fedramp.gov/2026/reference/security-decision-record/#key-security-indicators)). Historical metrics are A: MAY, B: SHOULD, C: MUST, D: MUST ([`SDR-CSX-KMT`](https://www.fedramp.gov/2026/reference/security-decision-record/#key-security-indicator-metrics)).
+5. **Rev5 controls.** Include at least your class baseline ([`FRC-CSF-BSL`](https://www.fedramp.gov/2026/reference/fedramp-certification/#fedramp-rev5-baselines)), assign every organization-defined parameter ([`FRC-CSF-ACP`](https://www.fedramp.gov/2026/reference/fedramp-certification/#assign-control-parameters)), and follow the [Rev5 Control Guidance](https://www.fedramp.gov/2026/reference/rev5-control-guidance/) ([`FRC-CSF-FFG`](https://www.fedramp.gov/2026/reference/fedramp-certification/#follow-fedramp-rev5-controls-guidance)).
+6. **20x automation.** Automated verification and validation of each Key Security Indicator is A: MAY, B: SHOULD (at least 1 method), C: MUST (at least 2), D: MUST (at least 4) ([`FRC-CSX-VVK`](https://www.fedramp.gov/2026/reference/fedramp-certification/#automated-verification-and-validation-of-key-security-indicators)). Automating it for FedRAMP rules is A: MAY, B to D: SHOULD ([`FRC-CSX-VVR`](https://www.fedramp.gov/2026/reference/fedramp-certification/#automated-verification-and-validation-of-fedramp-rules)). You SHOULD apply all indicators to everything in your Minimum Assessment Scope ([`FRC-CSX-MAS`](https://www.fedramp.gov/2026/reference/fedramp-certification/#application-within-mas)).
+7. **Make your JSON valid and web-friendly.** JSON MUST validate against the FedRAMP schema when a rule names one. Public JSON MUST work with modern web frameworks, which the rule describes as permissive CORS and headers such as `Content-Type: application/json` ([`FRC-CSO-JSN`](https://www.fedramp.gov/2026/reference/fedramp-certification/#fedramp-json-schemas)). You stay accountable for accuracy even when a third party prepares material ([`FRC-CSO-MRA`](https://www.fedramp.gov/2026/reference/fedramp-certification/#maintain-responsibility-and-accountability)).
+8. **Keep the package current.**
+   - Rev5: at least yearly for Classes B and C, every six months for Class D (MUST) ([`CPO-CSF-CPM`](https://www.fedramp.gov/2026/reference/certification-package-overview/#certification-package-maintenance-for-rev5)).
+   - 20x: A: SHOULD every 3 months; B: MUST monthly; C: MUST every 2 weeks; D: MUST weekly ([`CPO-CSX-CPM`](https://www.fedramp.gov/2026/reference/certification-package-overview/#certification-package-maintenance-for-20x)).
+9. **Apply.**
+   - Get listed on the FedRAMP Marketplace first ([`FRC-APP-MLF`](https://www.fedramp.gov/2026/reference/fedramp-certification/#marketplace-listing-first)).
+   - Apply yourself. You MUST NOT use a third party, including your assessor, to apply for you ([`FRC-APP-NTP`](https://www.fedramp.gov/2026/reference/fedramp-certification/#no-third-party-applicants)).
+   - Complete the certification application form in full ([`FRC-APP-AFC`](https://www.fedramp.gov/2026/reference/fedramp-certification/#applying-for-fedramp-certification_1)).
+   - Supply a package you verified and validated within the previous 7 days ([`FRC-APP-FCP`](https://www.fedramp.gov/2026/reference/fedramp-certification/#fresh-fedramp-certification-package)).
+   - Supply an independent assessment completed within the previous 3 months: A: MAY, B to D: MUST ([`FRC-APP-FIA`](https://www.fedramp.gov/2026/reference/fedramp-certification/#fresh-independent-assessment)). You MAY freshen a stale assessment with an assessor's review of what changed, unless it's more than 9 months old ([`FRC-APP-USA`](https://www.fedramp.gov/2026/reference/fedramp-certification/#updating-stale-assessments)).
+   - Rev5 Agency path: your agency sponsor must have completed the ATO and sent FedRAMP a signed ATO letter ([`FRC-APS-ATO`](https://www.fedramp.gov/2026/reference/fedramp-certification/#agency-authorization-to-operate)).
+10. **Class A only.** Address every rule in the Class A subset plus the mandatory list of 16 FedRAMP rules and 7 Key Security Indicators ([`FRC-CLA-MFR`](https://www.fedramp.gov/2026/reference/fedramp-certification/#mandatory-fedramp-rules-for-class-a)). Supply your alternative-framework materials ([`FRC-CLA-EAM`](https://www.fedramp.gov/2026/reference/fedramp-certification/#external-assessment-materials)). Some rules are recommended ([`FRC-CLA-RFR`](https://www.fedramp.gov/2026/reference/fedramp-certification/#recommended-fedramp-rules-for-class-a)) and some optional ([`FRC-CLA-OFR`](https://www.fedramp.gov/2026/reference/fedramp-certification/#address-optional-fedramp-rules-for-class-a), [`FRC-CLA-IVV`](https://www.fedramp.gov/2026/reference/fedramp-certification/#optional-independent-verification-and-validation)).
+11. **Changing class (Rev5 Agency path).** Upgrading or downgrading MUST go through a new certification application ([`FRC-CCL-UCC`](https://www.fedramp.gov/2026/reference/fedramp-certification/#upgrading-certification-class), [`FRC-CCL-DCC`](https://www.fedramp.gov/2026/reference/fedramp-certification/#downgrading-certification-class)). You SHOULD give all necessary parties 120 days' notice before a downgrade or cancellation ([`FRC-CCL-DNP`](https://www.fedramp.gov/2026/reference/fedramp-certification/#downgrade-notification-period)).
+
+### Step 2: Manage vulnerabilities
+
+Rulesets: [VDR](/rules/vulnerability-detection-and-response), [VER](/rules/vulnerability-evaluation-and-reporting). Both are mandated by CISA BOD 26-04, with obtaining and maintaining dates of 2026-12-07 and a grace period ending 2027-03-07.
+
+**Detect and respond**
+
+- You MUST persistently detect vulnerabilities by any appropriate means, not just scanning, and that includes checking resources work as documented ([`VDR-CSO-DET`](https://www.fedramp.gov/2026/reference/vulnerability-detection-and-response/#vulnerability-detection)). You MUST manage every detected vulnerability ([`VDR-CSO-RES`](https://www.fedramp.gov/2026/reference/vulnerability-detection-and-response/#vulnerability-response)). Failures in this process are vulnerabilities too ([`VDR-CSO-FAV`](https://www.fedramp.gov/2026/reference/vulnerability-detection-and-response/#failures-are-vulnerabilities)).
+- You SHOULD design for resilience ([`VDR-CSO-DFR`](https://www.fedramp.gov/2026/reference/vulnerability-detection-and-response/#design-for-resilience)), automate detection ([`VDR-CSO-ADT`](https://www.fedramp.gov/2026/reference/vulnerability-detection-and-response/#automate-detection)) and detect after changes ([`VDR-CSO-DAC`](https://www.fedramp.gov/2026/reference/vulnerability-detection-and-response/#detect-after-changes)).
+- You SHOULD NOT weaken security to make scanning easier ([`VDR-CSO-MSP`](https://www.fedramp.gov/2026/reference/vulnerability-detection-and-response/#maintain-security)) or deploy new machine-based resources with Known Exploited Vulnerabilities ([`VDR-CSO-AKE`](https://www.fedramp.gov/2026/reference/vulnerability-detection-and-response/#avoid-kevs)). You MAY sample effectively identical resources ([`VDR-CSO-SIR`](https://www.fedramp.gov/2026/reference/vulnerability-detection-and-response/#sampling)).
+- Detection frequency (all SHOULD):
+
+  | Scope | A | B | C | D |
+  | --- | --- | --- | --- | --- |
+  | Resources likely to drift ([`VDR-TFR-PDD`](https://www.fedramp.gov/2026/reference/vulnerability-detection-and-response/#persistent-drift-detection)) | 3 months | 1 month | 14 days | 7 days |
+  | Resources not likely to drift ([`VDR-TFR-PCD`](https://www.fedramp.gov/2026/reference/vulnerability-detection-and-response/#persistently-complete-detection)) | 6 months | 6 months | 1 month | 1 month |
+  | Representative samples ([`VDR-TFR-PSD`](https://www.fedramp.gov/2026/reference/vulnerability-detection-and-response/#persistent-sample-detection)) | 14 days | 7 days | 3 days | 1 day |
+
+- You MUST verify and validate non-machine resources at least every 3 months ([`VDR-TFR-NMV`](https://www.fedramp.gov/2026/reference/vulnerability-detection-and-response/#non-machine-verification-and-validation)).
+- Machine-based resources: Rev5 is B: SHOULD monthly, C and D: MUST monthly ([`VDR-TFR-MVF`](https://www.fedramp.gov/2026/reference/vulnerability-detection-and-response/#persistent-machine-verification-and-validation-for-rev5)). 20x is A: SHOULD monthly, B: MUST every 7 days, C: MUST every 3 days ([`VDR-TFR-MVX`](https://www.fedramp.gov/2026/reference/vulnerability-detection-and-response/#persistent-machine-verification-and-validation-for-20x)).
+
+**Evaluate**
+
+- For each vulnerability you MUST decide whether it's likely exploitable ([`VER-EVA-ELX`](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#evaluate-exploitability)) and internet-reachable ([`VER-EVA-EIR`](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#evaluate-internet-reachability)), and assign a Potential Agency Impact N-rating (PAIN) from N0 to N5 ([`VER-EVA-EPA`](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#estimate-potential-agency-impact)). You MUST assume exploitation can be automated unless you have evidence otherwise ([`VER-EVA-AIA`](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#assume-its-automatable)).
+- You SHOULD group related vulnerabilities ([`VER-EVA-GRV`](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#group-vulnerabilities)), check for false positives ([`VER-EVA-EFP`](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#evaluate-false-positives)) and weigh eight evaluation factors ([`VER-EVA-EFA`](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#evaluation-factors)).
+- You SHOULD evaluate within 14, 7, 5 or 2 days of detection for Classes A, B, C and D ([`VER-TFR-EVU`](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#evaluate-vulnerabilities-quickly)).
+
+**Fix**
+
+You SHOULD mitigate or remediate to a lower PAIN within these timeframes from evaluation ([`VDR-TFR-PVR`](https://www.fedramp.gov/2026/reference/vulnerability-detection-and-response/#mitigation-and-remediation-expectations)). Each cell reads: likely exploitable and internet-reachable / likely exploitable and not internet-reachable / not likely exploitable.
+
+| PAIN | A and B | C | D |
+| --- | --- | --- | --- |
+| N5 | 4 / 8 / 32 days | 2 / 4 / 16 days | 12 hours / 1 day / 8 days |
+| N4 | 8 / 32 / 64 days | 4 / 8 / 64 days | 2 / 8 / 32 days |
+| N3 | 32 / 64 / 192 days | 16 / 32 / 128 days | 8 / 16 / 64 days |
+| N2 | 96 / 160 / 192 days | 48 / 128 / 192 days | 24 / 96 / 192 days |
+
+- The table sets no timeframe for N1 or N0. You SHOULD handle remaining vulnerabilities during routine operations ([`VDR-TFR-RMN`](https://www.fedramp.gov/2026/reference/vulnerability-detection-and-response/#remaining-vulnerabilities)).
+- You SHOULD remediate Known Exploited Vulnerabilities by the CISA catalog due date, even if fully mitigated ([`VDR-TFR-KEV`](https://www.fedramp.gov/2026/reference/vulnerability-detection-and-response/#remediate-kevs)).
+- You MUST mark anything not fully mitigated or remediated within 192 days of evaluation as an accepted vulnerability ([`VER-TFR-MAV`](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#mark-accepted-vulnerabilities)).
+
+**Report**
+
+- You MUST report all activity since the last report persistently ([`VER-RPT-PER`](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#persistent-reporting)) and send a human-readable report at least monthly ([`VER-TFR-MHR`](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#monthly-activity-report)).
+- Each report MUST include the required details for each vulnerability ([`VER-RPT-VDT`](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#vulnerability-details)) or accepted vulnerability ([`VER-RPT-AVI`](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#accepted-vulnerability-info)).
+- You MUST NOT disclose details likely to lead to exploitation, but MUST share enough for risk decisions ([`VER-RPT-NID`](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#responsible-disclosure)). You SHOULD include high-level overviews of all detection activity, such as bug bounties and penetration tests ([`VER-RPT-HLO`](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#high-level-overviews)). You MAY disclose publicly if it won't likely lead to exploitation ([`VER-RPT-RPD`](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#responsible-public-disclosure)).
+- A JSON history for automated retrieval is A: MAY monthly, B: SHOULD monthly, C: SHOULD every 14 days, D: SHOULD every 7 days ([`VER-TFR-MRH`](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#historical-activity)).
+- Treating a likely exploitable, internet-reachable vulnerability rated above N3 as a reportable incident is A and B: MAY, C and D: SHOULD ([`VER-TFR-IRI`](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#internet-reachable-incidents)). For one that isn't internet-reachable and is rated N5, it's A to C: MAY, D: SHOULD ([`VER-TFR-NRI`](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#non-internet-reachable-incidents)).
+
+### Step 3: Handle changes and incidents
+
+Rulesets: [SCN](/rules/significant-change-notification), [IEC](/rules/incident-evaluation-and-communication).
+
+**Significant changes.** You MUST evaluate every potential significant change and follow the rules for its type ([`SCN-CSO-EVA`](https://www.fedramp.gov/2026/reference/significant-change-notification/#evaluate-changes)):
+
+| Type | What you do |
+| --- | --- |
+| Class change | Needs a new assessment. It can't be handled through Significant Change Notification. |
+| Routine recurring | You SHOULD NOT send a formal notification ([`SCN-RTR-NNR`](https://www.fedramp.gov/2026/reference/significant-change-notification/#no-notification-requirements)). |
+| Transformative | Follow the timeline below. |
+| Adaptive (everything else) | Notify within 10 business days after finishing ([`SCN-ADP-NTF`](https://www.fedramp.gov/2026/reference/significant-change-notification/#notification-requirements)). |
+
+Transformative changes (all MUST unless noted):
+
+- Initial plans at least 30 business days before you start ([`SCN-TRF-NIP`](https://www.fedramp.gov/2026/reference/significant-change-notification/#notification-of-initial-plans)).
+- Final plans at least 10 business days before you start ([`SCN-TRF-NFP`](https://www.fedramp.gov/2026/reference/significant-change-notification/#notification-of-final-plans)).
+- Notice within 5 business days after finishing ([`SCN-TRF-NAF`](https://www.fedramp.gov/2026/reference/significant-change-notification/#notification-after-finishing)).
+- Notice within 5 business days after verification, assessment or validation, with the security assessment report if applicable ([`SCN-TRF-NAV`](https://www.fedramp.gov/2026/reference/significant-change-notification/#notification-after-verification)).
+- Updated service documentation within 30 business days after finishing ([`SCN-TRF-UPD`](https://www.fedramp.gov/2026/reference/significant-change-notification/#update-documentation)).
+- You SHOULD have a third-party assessor review the scope first if human validation is needed ([`SCN-TRF-TPR`](https://www.fedramp.gov/2026/reference/significant-change-notification/#third-party-review)).
+
+Every notification MUST include the 10 required items ([`SCN-CSO-INF`](https://www.fedramp.gov/2026/reference/significant-change-notification/#required-information)) and be available in human-readable and JSON formats ([`SCN-CSO-HRM`](https://www.fedramp.gov/2026/reference/significant-change-notification/#human-and-machine-readable-notifications)). Keep 12 months of history ([`SCN-CSO-HIS`](https://www.fedramp.gov/2026/reference/significant-change-notification/#historical-notifications)) and auditable records of your evaluations ([`SCN-CSO-MAR`](https://www.fedramp.gov/2026/reference/significant-change-notification/#maintain-audit-records)). You MAY add information ([`SCN-CSO-ARI`](https://www.fedramp.gov/2026/reference/significant-change-notification/#additional-relevant-information)) and use any notification mechanism documented in your package ([`SCN-CSO-NOM`](https://www.fedramp.gov/2026/reference/significant-change-notification/#notification-mechanisms)). In an emergency you MAY change first, but you MUST then notify, supply the notification materials and complete assessment afterward ([`SCN-CSO-EMG`](https://www.fedramp.gov/2026/reference/significant-change-notification/#emergency-changes)).
+
+**Incidents.**
+
+- You MUST promptly evaluate whether an incident affects, or is likely to affect, the confidentiality or integrity of federal customer data. If so, it's a FedRAMP Reportable Incident ([`IEC-CSO-EFR`](https://www.fedramp.gov/2026/reference/incident-evaluation-and-communication/#evaluate-fedramp-reportability)). Availability is covered separately by availability reporting ([`CDS-CSO-AVR`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#availability-reporting)).
+- You SHOULD promptly assign a PAIN rating ([`IEC-CSO-EFI`](https://www.fedramp.gov/2026/reference/incident-evaluation-and-communication/#estimate-federal-impact)). If you don't, you MUST treat the incident as N5 ([`IEC-CSO-DPR`](https://www.fedramp.gov/2026/reference/incident-evaluation-and-communication/#default-pain-rating)).
+- Initial and ongoing incident reports are A: SHOULD, B to D: MUST ([`IEC-CSO-IIR`](https://www.fedramp.gov/2026/reference/incident-evaluation-and-communication/#initial-incident-report), [`IEC-CSO-OIR`](https://www.fedramp.gov/2026/reference/incident-evaluation-and-communication/#ongoing-incident-reports)). Final reports are MUST for every class ([`IEC-CSO-FIR`](https://www.fedramp.gov/2026/reference/incident-evaluation-and-communication/#final-incident-report)). Each report has PAIN-based timeframes. For example, an initial report for an N5 incident is due within 6 hours for Classes A and B, 1 hour for Class C and 0.25 hours for Class D.
+- Reports go to `fedramp_security@fedramp.gov`, to agencies through their own incident procedures, and to all necessary parties through your trust center.
+- You SHOULD automate incident reporting ([`IEC-CSO-AIR`](https://www.fedramp.gov/2026/reference/incident-evaluation-and-communication/#automated-incident-reporting)).
+
+### Step 4: Communicate, share and monitor
+
+Rulesets: [AFC](/rules/addressing-fedramp-communication), [CDS](/rules/certification-data-sharing), [CCM](/rules/collaborative-continuous-monitoring).
+
+**FedRAMP Security Inbox** (already in force; grace period ended 2026-07-01)
+
+- You MUST maintain an inbox for FedRAMP messages ([`AFC-CSO-INB`](https://www.fedramp.gov/2026/reference/addressing-fedramp-communication/#maintain-a-fedramp-security-inbox)) and immediately tell FedRAMP when its address changes ([`AFC-CSO-NOC`](https://www.fedramp.gov/2026/reference/addressing-fedramp-communication/#notification-of-changes)).
+- You MUST treat mail from `@fedramp.gov` or `@gsa.gov` as FedRAMP by default ([`AFC-CSO-TFG`](https://www.fedramp.gov/2026/reference/addressing-fedramp-communication/#trust-fedrampgov-and-gsagov)) and receive it without CAPTCHAs, portals or other hurdles ([`AFC-CSO-RCV`](https://www.fedramp.gov/2026/reference/addressing-fedramp-communication/#receive-email-without-disruption)).
+- You MUST complete required actions in Emergency and Emergency Test messages within the stated timeframe ([`AFC-CSO-CRA`](https://www.fedramp.gov/2026/reference/addressing-fedramp-communication/#complete-required-actions)) and route Emergency messages to a senior security official ([`AFC-CSO-EMR`](https://www.fedramp.gov/2026/reference/addressing-fedramp-communication/#emergency-message-routing)).
+- FedRAMP's default time for you to give an estimated resolution on Emergency messages is 12 hours for Class D, 3:00 p.m. Eastern on the 2nd business day for Class C, the 3rd business day for Class B and the 5th business day for Class A ([`AFC-FRP-ERT`](https://www.fedramp.gov/2026/reference/addressing-fedramp-communication/#elevated-reaction-timeframes)).
+- You SHOULD act on Important messages within their timeframe ([`AFC-CSO-IMA`](https://www.fedramp.gov/2026/reference/addressing-fedramp-communication/#important-message-actions)) and automatically acknowledge receipt ([`AFC-CSO-ACK`](https://www.fedramp.gov/2026/reference/addressing-fedramp-communication/#acknowledge-receipt)).
+
+**Certification data sharing**
+
+- Publish public information in human-readable and JSON formats, including 16 listed items ([`CDS-CSO-PUB`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#public-information)), and a service list detailed enough for a buyer to tell what's in scope ([`CDS-CSO-SVC`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#public-service-list)).
+- Use a FedRAMP-compatible trust center ([`CDS-CSO-UTC`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#use-trust-centers)). It MUST share without interruption ([`CDS-TRC-USH`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#uninterrupted-sharing)), offer documented programmatic access ([`CDS-TRC-PAC`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#programmatic-access)), keep an inventory of agency access ([`CDS-TRC-AAI`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#agency-access-inventory)) and log access, keeping summaries for at least 6 months ([`CDS-TRC-ACL`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#access-logging)). It SHOULD offer human- and machine-readable downloads ([`CDS-TRC-HMR`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#human-and-machine-readable-certification-data)) and self-service access management ([`CDS-TRC-SSM`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#self-service-access-management)).
+- Always include your FedRAMP ID ([`CDS-CSO-FID`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#always-include-fedramp-id)). Post FedRAMP Certification Reports within 2 weeks ([`CDS-CSO-FRC`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#fedramp-certification-reports)). Supply your policies with a 7-item index ([`CDS-CSO-IRP`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#include-relevant-policies)). Use automation to keep formats consistent ([`CDS-CSO-CBF`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#consistency-between-formats)). Keep a snapshot for each Ongoing Certification Report ([`CDS-CSO-HAD`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#historical-fedramp-certification-data)). Share enough for decisions without enabling attacks ([`CDS-CSO-RIS`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#responsible-information-sharing)).
+- An availability status page with at least 30 days of history is A: SHOULD, B to D: MUST ([`CDS-CSO-AVR`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#availability-reporting)). Per-service materials are A to C: MAY, D: MUST ([`CDS-CSO-PSM`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#per-service-certification-materials)).
+- Tell FedRAMP within 5 business days if you deny an agency access ([`CDS-UTC-AAD`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#agency-access-denial)). You SHOULD give agencies access to your package on request ([`CDS-UTC-AGA`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#agency-access)).
+- **Rev5:** notify all necessary parties when you move to a trust center and leave instructions in your USDA Connect folders ([`CDS-CSF-TCM`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#trust-center-migration)).
+
+**Continuous monitoring**
+
+- Supply an Ongoing Certification Report every 3 months ([`CCM-OCR-AVL`](https://www.fedramp.gov/2026/reference/collaborative-continuous-monitoring/#report-availability)), publish the next report date ([`CCM-OCR-NRD`](https://www.fedramp.gov/2026/reference/collaborative-continuous-monitoring/#next-report-date)), offer an asynchronous feedback channel ([`CCM-OCR-FBM`](https://www.fedramp.gov/2026/reference/collaborative-continuous-monitoring/#feedback-mechanism)) and publish an anonymized feedback summary ([`CCM-OCR-AFS`](https://www.fedramp.gov/2026/reference/collaborative-continuous-monitoring/#anonymized-feedback-summary)). You SHOULD spread your cycle away from quarter boundaries ([`CCM-OCR-SOR`](https://www.fedramp.gov/2026/reference/collaborative-continuous-monitoring/#spread-out-reports)).
+- Quarterly Reviews are A: MAY, B: SHOULD, C and D: MUST ([`CCM-QTR-MTG`](https://www.fedramp.gov/2026/reference/collaborative-continuous-monitoring/#quarterly-review-meeting)). You MUST supply a registration link or calendar file ([`CCM-QTR-REG`](https://www.fedramp.gov/2026/reference/collaborative-continuous-monitoring/#meeting-registration-info)) and publish the next date ([`CCM-QTR-NRD`](https://www.fedramp.gov/2026/reference/collaborative-continuous-monitoring/#next-review-date)). You SHOULD hold them 3 to 10 business days after the report ([`CCM-QTR-SAR`](https://www.fedramp.gov/2026/reference/collaborative-continuous-monitoring/#schedule-around-reports)) and record or transcribe them ([`CCM-QTR-RTR`](https://www.fedramp.gov/2026/reference/collaborative-continuous-monitoring/#recordtranscribe-reviews)). You SHOULD NOT invite unrelated third parties ([`CCM-QTR-RTP`](https://www.fedramp.gov/2026/reference/collaborative-continuous-monitoring/#restrict-third-parties)).
+- You MUST NOT irresponsibly disclose sensitive information in a report or review ([`CCM-OCR-LSI`](https://www.fedramp.gov/2026/reference/collaborative-continuous-monitoring/#limit-sensitive-information), [`CCM-QTR-NID`](https://www.fedramp.gov/2026/reference/collaborative-continuous-monitoring/#no-irresponsible-disclosure)).
+
+### Step 5: Get assessed
+
+Rulesets: [IVV](/rules/independent-verification-and-validation), [REC](/rules/fedramp-recognition), [MKT](/rules/marketplace-listing).
+
+- An annual independent assessment with a FedRAMP Recognized assessor (or, rarely, FedRAMP) is A: MAY, B to D: MUST ([`IVV-CSO-FIA`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#fedramp-independent-assessments)).
+- **Rev5 scope:** a fixed list of 35, 80 or 101 controls every year for Classes B, C and D ([`IVV-CSF-AIA`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#annual-independent-assessments-for-rev5)); every applicable control at least every 3 years ([`IVV-CSF-MCA`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#mandatory-control-assessment)); controls with findings in the next assessment ([`IVV-CSF-ACF`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#assessment-of-rev5-controls-with-findings)). You SHOULD include all applicable controls every time ([`IVV-CSF-PCA`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#preferred-control-assessment)).
+- **20x scope:** Class A MUST meet its alternative framework's expectations; Classes B to D MUST include all Key Security Indicators every year ([`IVV-CSX-AIA`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#annual-independent-assessments-for-20x)).
+- You MUST supply evidence of implementation ([`IVV-CSO-SEI`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#supply-evidence-of-implementation)) and effectiveness ([`IVV-CSO-SEE`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#supply-evidence-of-effectiveness)), include results unmodified ([`IVV-CSO-ICP`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#inclusion-in-certification-package)) and document any sampling ([`IVV-CSO-DUS`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#document-use-of-representative-samples)). You SHOULD supply technical explanations ([`IVV-CSO-STE`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#supply-technical-explanations)). You MAY sample ([`IVV-CSO-USR`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#use-representative-samples)) and take advice from your assessor if it doesn't compromise objectivity ([`IVV-CSO-RAA`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#receiving-assessor-advice)).
+- Assessors MUST verify and validate at a technical level ([`IVV-IAS-VIM`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#verify-implementation), [`IVV-IAS-VEF`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#validate-effectiveness)). They MUST NOT assess an offering within 2 years of advising it ([`REC-IAS-SEP`](https://www.fedramp.gov/2026/reference/fedramp-recognition/#advisory-separation)). FedRAMP MUST NOT accept attestations from assessors who aren't Recognized ([`REC-FRP-RAO`](https://www.fedramp.gov/2026/reference/fedramp-recognition/#recognized-assessors-only)).
+- **Marketplace.** Request your listing through the form, not email ([`MKT-CSO-PML`](https://www.fedramp.gov/2026/reference/marketplace-listing/#provider-marketplace-listing-requests)), and meet [`CDS-CSO-PUB`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#public-information) ([`MKT-CSO-MLR`](https://www.fedramp.gov/2026/reference/marketplace-listing/#marketplace-listing-requirements)). Initial Implementation Phase listings MUST show a direct or indirect agency use case ([`MKT-IIP-AGU`](https://www.fedramp.gov/2026/reference/marketplace-listing/#agency-use-cases)), show progress at least quarterly ([`MKT-IIP-DCP`](https://www.fedramp.gov/2026/reference/marketplace-listing/#demonstrating-continuous-progress)) and have a Class B, C or D assessment scheduled within 2 years ([`MKT-IIP-DLA`](https://www.fedramp.gov/2026/reference/marketplace-listing/#deadline-for-assessment)).
+
+### Step 6: Know what your agency customers must do
+
+Ruleset: [AGU](/rules/agency-use). FedRAMP lists this ruleset as Placeholder.
+
+- Agencies MUST complete an ATO for systems that use a certified offering ([`AGU-USE-ABU`](https://www.fedramp.gov/2026/reference/agency-use/#authorization-before-use)) and notify FedRAMP with a copy of the ATO letter ([`AGU-AGC-NAA`](https://www.fedramp.gov/2026/reference/agency-use/#notify-fedramp-after-authorization)).
+- Agencies MUST NOT demand extra materials ([`AGU-AGC-NAR`](https://www.fedramp.gov/2026/reference/agency-use/#no-additional-security-requirements)) or a particular type or path ([`AGU-AGC-TPP`](https://www.fedramp.gov/2026/reference/agency-use/#no-certification-type-or-path-preferences)) unless the agency head or a delegate finds a demonstrable need and notifies FedRAMP. They MUST allow you to follow FedRAMP rules ([`AGU-USE-AFR`](https://www.fedramp.gov/2026/reference/agency-use/#accept-fedramp-rules)).
+- Agencies MUST review each Ongoing Certification Report ([`CCM-AGM-ROR`](https://www.fedramp.gov/2026/reference/collaborative-continuous-monitoring/#review-ongoing-reports)) and your Secure Configuration Guide ([`AGU-USE-RSG`](https://www.fedramp.gov/2026/reference/agency-use/#review-secure-configuration-guides)).
+- Agencies SHOULD NOT use a Class A offering for more than 12 months unless it's seeking Class B, C or D ([`AGU-USE-CLA`](https://www.fedramp.gov/2026/reference/agency-use/#using-fedramp-class-a-certifications)).
+
+### Step 7: Cryptography and secure configuration
+
+Rulesets: [CMU](/rules/cryptographic-module-use), [SCG](/rules/secure-configuration-guide).
+
+- You MUST document the cryptographic modules protecting federal customer data, including CMVP validation status ([`CMU-CSO-CMD`](https://www.fedramp.gov/2026/reference/cryptographic-module-use/#cryptographic-module-documentation)). Using validated modules (or update streams of them) is A and B: MAY, C: SHOULD, D: MUST ([`CMU-CSO-UVM`](https://www.fedramp.gov/2026/reference/cryptographic-module-use/#using-validated-cryptographic-modules)). You SHOULD configure agency tenants to use them by default ([`CMU-CSO-CAT`](https://www.fedramp.gov/2026/reference/cryptographic-module-use/#configuration-of-agency-tenants)).
+- You MUST publish a Secure Configuration Guide covering top-level administrative accounts ([`SCG-CSO-RSC`](https://www.fedramp.gov/2026/reference/secure-configuration-guide/#recommended-secure-configuration)) and explain in your package how to get it ([`SCG-CSO-AUP`](https://www.fedramp.gov/2026/reference/secure-configuration-guide/#use-instructions)). The Secure Configuration Guide rules have applied since 2026-03-01, and their grace period ended 2026-07-01.
+- You SHOULD make it public ([`SCG-CSO-PUB`](https://www.fedramp.gov/2026/reference/secure-configuration-guide/#public-secure-configuration-guidance)), ship secure defaults ([`SCG-CSO-SDF`](https://www.fedramp.gov/2026/reference/secure-configuration-guide/#secure-defaults)), and offer comparison ([`SCG-ENH-CMP`](https://www.fedramp.gov/2026/reference/secure-configuration-guide/#comparison-capability)), export ([`SCG-ENH-EXP`](https://www.fedramp.gov/2026/reference/secure-configuration-guide/#export-capability)), an API ([`SCG-ENH-API`](https://www.fedramp.gov/2026/reference/secure-configuration-guide/#api-capability)), a machine-readable guide ([`SCG-ENH-MRG`](https://www.fedramp.gov/2026/reference/secure-configuration-guide/#machine-readable-guidance)) and versioned defaults ([`SCG-ENH-VRH`](https://www.fedramp.gov/2026/reference/secure-configuration-guide/#versioning-and-release-history)).
+
+## Timers at a glance
+
+| Timer | Value | Rule |
+| --- | --- | --- |
+| Package freshness at application | 7 days | [`FRC-APP-FCP`](https://www.fedramp.gov/2026/reference/fedramp-certification/#fresh-fedramp-certification-package) |
+| Assessment freshness at application | 3 months; refresh by review if 9 months old or less | [`FRC-APP-FIA`](https://www.fedramp.gov/2026/reference/fedramp-certification/#fresh-independent-assessment), [`FRC-APP-USA`](https://www.fedramp.gov/2026/reference/fedramp-certification/#updating-stale-assessments) |
+| Independent assessment | Every year (B to D MUST) | [`IVV-CSO-FIA`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#fedramp-independent-assessments) |
+| All Rev5 controls assessed | Every 3 years | [`IVV-CSF-MCA`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#mandatory-control-assessment) |
+| Rev5 package maintenance | B and C yearly; D every 6 months | [`CPO-CSF-CPM`](https://www.fedramp.gov/2026/reference/certification-package-overview/#certification-package-maintenance-for-rev5) |
+| 20x package maintenance | A 3 months (SHOULD); B monthly; C 2 weeks; D weekly | [`CPO-CSX-CPM`](https://www.fedramp.gov/2026/reference/certification-package-overview/#certification-package-maintenance-for-20x) |
+| Vulnerability report | At least monthly | [`VER-TFR-MHR`](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#monthly-activity-report) |
+| Accepted vulnerability cutoff | 192 days from evaluation | [`VER-TFR-MAV`](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#mark-accepted-vulnerabilities) |
+| Ongoing Certification Report | Every 3 months | [`CCM-OCR-AVL`](https://www.fedramp.gov/2026/reference/collaborative-continuous-monitoring/#report-availability) |
+| Quarterly Review | Every 3 months (C and D MUST) | [`CCM-QTR-MTG`](https://www.fedramp.gov/2026/reference/collaborative-continuous-monitoring/#quarterly-review-meeting) |
+| Adaptive change notice | 10 business days after finishing | [`SCN-ADP-NTF`](https://www.fedramp.gov/2026/reference/significant-change-notification/#notification-requirements) |
+| Transformative change | 30 and 10 business days before; 5 and 5 after; documentation within 30 | [`SCN-TRF-NIP`](https://www.fedramp.gov/2026/reference/significant-change-notification/#notification-of-initial-plans) and related rules |
+| Change notification history | 12 months | [`SCN-CSO-HIS`](https://www.fedramp.gov/2026/reference/significant-change-notification/#historical-notifications) |
+| Certification Report posted | 2 weeks | [`CDS-CSO-FRC`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#fedramp-certification-reports) |
+| Agency access denial notice | 5 business days | [`CDS-UTC-AAD`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#agency-access-denial) |
+| Trust center access log summaries | At least 6 months | [`CDS-TRC-ACL`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#access-logging) |
+| Emergency message estimated resolution | D 12 hours; C 2nd, B 3rd, A 5th business day by 3:00 p.m. Eastern | [`AFC-FRP-ERT`](https://www.fedramp.gov/2026/reference/addressing-fedramp-communication/#elevated-reaction-timeframes) |
+| Downgrade or cancellation notice | 120 days (SHOULD) | [`FRC-CCL-DNP`](https://www.fedramp.gov/2026/reference/fedramp-certification/#downgrade-notification-period) |
+| Assessment scheduled after initial listing | 2 years | [`MKT-IIP-DLA`](https://www.fedramp.gov/2026/reference/marketplace-listing/#deadline-for-assessment) |
+
+## What FedRAMP staff have said
+
+Staff answers in the community discussions add context on timing. They don't change the published rules.
+
+<Note>
+  **Rev5 submission deadline.** FedRAMP staff member `paulagosta` said on 2026-08-03 that Rev5 providers must be in active review by the FedRAMP PMO by 2027-06-11, with a complete package (including an agency ATO unless on the limited sponsorless path) that meets the Consolidated Rules at the time of submission ([discussion #156](https://github.com/FedRAMP/community/discussions/156#discussioncomment-17884433)).
+</Note>
+
+<Note>
+  **FedRAMP Ready.** FedRAMP staff member `pete-gov` said on 2026-07-17 that FedRAMP Ready offerings have only one applicable rule, [`FRC-CSF-RDY`](https://www.fedramp.gov/2026/reference/fedramp-certification/#fedramp-ready-conversion), and that there's no mapping or replacement for Ready status ([discussion #152](https://github.com/FedRAMP/community/discussions/152#discussioncomment-17673555)).
+</Note>
+
+For more, see the [discussion digests](/discussions), especially [Rev5 questions on CR26](/discussions/rev5-cr26-questions) and [20x questions on CR26](/discussions/20x-cr26-questions).
+
+## Related
+
+- [Provider deliverables](/rules/provider-deliverables)
+- [FRR and KSI](/rules/frr-and-ksi)
+- [What changed](/changelog)

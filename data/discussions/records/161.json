@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-161",
+  "node_id": "D_kwDOOxfoic4AodwU",
+  "number": 161,
+  "title": "20x Hot Tip of the day, no NDAs for Trust Center access",
+  "url": "https://github.com/FedRAMP/community/discussions/161",
+  "category": "20x Discussion",
+  "category_slug": "20x-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "emu-gov",
+  "author_is_official": true,
+  "created_at": "2026-08-13T15:50:41Z",
+  "updated_at": "2026-09-09T17:30:46Z",
+  "last_edited_at": "2026-08-13T20:14:10Z",
+  "closed": true,
+  "closed_at": "2026-09-09T17:30:46Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 3,
+  "body": "Happy Thursday y'all!\r\n\r\nWe are working our way through a number of Class A submissions and something we keep running into is the agreement/acknowledgement/signing of NDAs to obtain Trust Center access.\r\n\r\nUPDATED: All Federal employees and FedRAMP staff are restricted by existing government law and policy from taking any inappropriate action with provided Certification information and do not need to be covered by a company-specific NDA. No company should expect Federal employees and FedRAMP staff to agree to terms and conditions or an NDA to perform review; if a company is unwilling or unable to share information without an NDA in place then Federal employees and FedRAMP staff will be unable to review the information required for certification.\r\n\r\nWe will get this language into an existing Rule under the CDS Ruleset next week.",
+  "comment_count": 0,
+  "comments": [],
+  "answer_url": null,
+  "participants": [
+    "emu-gov"
+  ],
+  "official_responses": [],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [],
+    "topics": [
+      "20x",
+      "class_a",
+      "trust_center"
+    ]
+  },
+  "content_hash": "a2fc1034f1a7275051c002699c5e5d306212a72584f5440ae22709897c1527ec",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

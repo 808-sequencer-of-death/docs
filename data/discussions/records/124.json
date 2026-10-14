@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-124",
+  "node_id": "D_kwDOOxfoic4AkNiT",
+  "number": 124,
+  "title": "Automation Tools for FedRAMP 20x",
+  "url": "https://github.com/FedRAMP/community/discussions/124",
+  "category": "20x Discussion",
+  "category_slug": "20x-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "sgn-ivalua",
+  "author_is_official": false,
+  "created_at": "2026-02-17T14:05:34Z",
+  "updated_at": "2026-03-21T15:25:30Z",
+  "last_edited_at": null,
+  "closed": true,
+  "closed_at": "2026-03-21T15:25:30Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 3,
+  "body": "Good morning:\r\n\r\nMy organization is looking into the beginning stages of transitioning from FedRAMP Moderate Rev5 to 20x and we are trying to figure out the best way to automate collecting the KSIs needed for 20x.  We already have Microsoft Purview as we are an Azure shop and wanted to see if any other organizations are using this to fulfill the 20x requirements?  \r\n\r\nAlso, do you know what are some of the best widely used tools in the pilot program that can help us accomplish the needs of 20x?  We've looked into Paramify, Anecdotes, Vanta and RegScale but were looking to see if FedRAMP had any recommendations?\r\n\r\nThank you,\r\nSteve",
+  "comment_count": 2,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4A8anN",
+      "url": "https://github.com/FedRAMP/community/discussions/124#discussioncomment-15837645",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2026-02-17T16:14:38Z",
+      "updated_at": "2026-02-17T16:14:38Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Just a quick flag that FedRAMP won't recommend any platforms/etc. but we are happy to host the discussion and see if folks chime in!",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A8a7K",
+      "url": "https://github.com/FedRAMP/community/discussions/124#discussioncomment-15838922",
+      "author": "TBailey223",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-02-17T18:30:26Z",
+      "updated_at": "2026-02-17T18:30:58Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "@sgn-ivalua \r\n\r\nHello!\r\n \r\nMy name's Tanner Bailey and I'm our Project Manager at InfusionPoints for our current 20x efforts in FedRAMP 20x Phase 2. We'd be more than willing to discuss your organization's needs and where our XBU40 platform can support automated validation checks in transitioning to FedRAMP 20x from FedRAMP Rev5.\r\n\r\nHit me up on LinkedIn and we can chat further!\r\nhttps://www.linkedin.com/in/tanner-b-37a50a132/",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "TBailey223",
+    "pete-gov",
+    "sgn-ivalua"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/124#discussioncomment-15837645",
+      "author": "pete-gov",
+      "created_at": "2026-02-17T16:14:38Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://www.linkedin.com/in/tanner-b-37a50a132/"
+    ],
+    "topics": [
+      "20x",
+      "ksi",
+      "rev5"
+    ]
+  },
+  "content_hash": "285e189c638c85858c486bc3329aa93559db2948f0ab69c2a54cae2871358578",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

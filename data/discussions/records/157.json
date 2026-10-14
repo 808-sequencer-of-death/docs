@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-157",
+  "node_id": "D_kwDOOxfoic4AoTYU",
+  "number": 157,
+  "title": "General Discussion & Q&A on RFC-0032",
+  "url": "https://github.com/FedRAMP/community/discussions/157",
+  "category": "General RFC Discussion",
+  "category_slug": "general-rfc-discussion",
+  "labels": [
+    "FedRAMP Official",
+    "question(s)"
+  ],
+  "is_official_thread": true,
+  "is_rfc": true,
+  "author": "rhoesing",
+  "author_is_official": false,
+  "created_at": "2026-08-06T17:48:38Z",
+  "updated_at": "2026-09-09T15:11:07Z",
+  "last_edited_at": null,
+  "closed": true,
+  "closed_at": "2026-09-09T15:11:07Z",
+  "locked": true,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "This thread is for any general questions or discussion that isn't related to formal public comment on RFC-0032, Offerings By Government.\r\n\r\nThis thread allows for FedRAMP staff to participate in this thread and answer questions/etc. in a way that isn't possible in the formal public comment threads.",
+  "comment_count": 2,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4BEb4N",
+      "url": "https://github.com/FedRAMP/community/discussions/157#discussioncomment-17939981",
+      "author": "davidmontgomery802-ai",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-08-08T02:13:59Z",
+      "updated_at": "2026-08-08T02:13:59Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "I'm trying to figure out who can I get in touch with about government offerings I've been tracking my portfolio for the last 3 years without any luck of accessing my assets through my job benefits in or investments such as retail realty in crypto there's some kind of malware that's on my phone that's enabling me downloading a Wi-Fi call app which is what I used to have and being that my assets are frozen or here I have a payee I don't need any of that I'm in perfect health and mentally and physically I'm not a minor and I've never been married and these are some of the things I've been hearing or trying to fix so I can have access to my accounts every time I try to sign up with something I know I can sign into it comes back as 404 can't find I've been asking for help with this matter for quite some time only to not get anywhere",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BEb4g",
+      "url": "https://github.com/FedRAMP/community/discussions/157#discussioncomment-17940000",
+      "author": "davidmontgomery802-ai",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-08-08T02:16:35Z",
+      "updated_at": "2026-08-08T02:16:35Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Are you been trying to finish setting up my Shopify online store I signed up with square stripe PayPal business Google workspace just about everything to run my online business yet I don't have access I kind of believe that it's my kids mother and someone else because for any of this started happening I promise to take her to court for a parenting plan which she got confused and was thinking I was trying to take my kids or our kids out of the country to Asia and that's when I started experiencing all of this identity hack and unable to assess accounts that rightfully belong to me and I never been married I'm not Dead I'm not a woman and I'm not mentally disabled I can see I can hear cause I've been here I'm deaf and blind I reside in Washington state so once they put mental on your records it's hard for anyone to listen to you I used to work for a mentally disabled company as a house manager and a life coach so I know what's going on I just can't get anyone to help me in the state I live in to fist my matter",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "davidmontgomery802-ai",
+    "rhoesing"
+  ],
+  "official_responses": [],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [
+      "RFC-0032"
+    ],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [],
+    "topics": []
+  },
+  "content_hash": "19af6fda1c663eec0018ebfac0bca3a0b729f849fbc214409203b26deab1ba30",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

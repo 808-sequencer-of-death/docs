@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-100",
+  "node_id": "D_kwDOOxfoic4Ai8qa",
+  "number": 100,
+  "title": "Cohort 1 application and submission",
+  "url": "https://github.com/FedRAMP/community/discussions/100",
+  "category": "20x Discussion",
+  "category_slug": "20x-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "wahlay5497",
+  "author_is_official": false,
+  "created_at": "2025-11-20T15:58:10Z",
+  "updated_at": "2026-06-19T20:22:45Z",
+  "last_edited_at": null,
+  "closed": true,
+  "closed_at": "2025-11-20T18:35:53Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "@pete-gov Is the assumption correct? If 5 CSPs submit their application in for Cohort 1, only 3 will be selected and the remaining 2 are completely out. Meaning the ones not selected cannot go into Cohort 2.  In this scenario, the two that are voted off the island will have to wait for the public submission which is now targeted to be late Q3? Thanks.",
+  "comment_count": 3,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4A5VKM",
+      "url": "https://github.com/FedRAMP/community/discussions/100#discussioncomment-15028876",
+      "author": "Jorden-Foster",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2025-11-20T16:19:13Z",
+      "updated_at": "2025-11-20T16:19:13Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "@wahlay5497 My interpretation of \"Providers who do not qualify for the pilot after their proposal will not be able to submit during the Phase 2 pilot\" isn't that it would disqualify you from being a part of the second cohort. \r\n\r\nI see this rule as being designed to prevent low quality proposals and CSPs that don't meet key criteria from jumping the gun before they're prepared to participate in the Phase 2 Pilot. If a proposal meets criteria, I cannot see why FedRAMP would prevent that CSP from slotting into the second cohort.",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A5VO_",
+          "url": "https://github.com/FedRAMP/community/discussions/100#discussioncomment-15029183",
+          "author": "wahlay5497",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-11-20T16:41:29Z",
+          "updated_at": "2025-11-20T16:41:30Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "In your scenario then it would mean that the two that bumped even if they meet the criteria would be in Cohort 2 which means the the 7 FedRAMP is going to allow now only has 5 slots left? "
+        },
+        {
+          "id": "DC_kwDOOxfoic4A5VP6",
+          "url": "https://github.com/FedRAMP/community/discussions/100#discussioncomment-15029242",
+          "author": "Jorden-Foster",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-11-20T16:46:47Z",
+          "updated_at": "2025-11-20T16:46:48Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "You are capturing my thoughts accurately. I do not see a reason that FedRAMP wouldn't accept fully qualified proposals on a first come, first serve basis. If a CSP is willing to participate in Cohort 1, then they would be adequately prepared for Cohort 2 if all seats are filled in 1."
+        },
+        {
+          "id": "DC_kwDOOxfoic4A5VQW",
+          "url": "https://github.com/FedRAMP/community/discussions/100#discussioncomment-15029270",
+          "author": "wahlay5497",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-11-20T16:48:27Z",
+          "updated_at": "2025-11-20T16:48:28Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thank you. I would like FedRAMP to confirm that assumption so we can properly prepare to submit. Does anyone else have different opinion here?"
+        }
+      ],
+      "replies_total": 3,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A5VYJ",
+      "url": "https://github.com/FedRAMP/community/discussions/100#discussioncomment-15029769",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2025-11-20T17:20:53Z",
+      "updated_at": "2025-11-20T17:20:55Z",
+      "upvotes": 2,
+      "minimized": false,
+      "body": "> @pete-gov Is the assumption correct? If 5 CSPs submit their application in for Cohort 1, only 3 will be selected and the remaining 2 are completely out. Meaning the ones not selected cannot go into Cohort 2. In this scenario, the two that are voted off the island will have to wait for the public submission which is now targeted to be late Q3? Thanks.\r\n\r\nAfter a pilot proposal, providers will either be accepted into the pilot or disqualified from the pilot. 3 will be accepted into Cohort 1, while 7 will be accepted into Cohort 2. Any providers who qualify during Cohort 1 but aren't chosen for that cohort will be entered into Cohort 2.\r\n\r\nWe are, in generally, strongly discouraging folks from over-indexing on trying to be first, trying to rush into Cohort 1, etc. It will be a brutal slog. Folks should NOT be trying to rush their way into this pilot. ",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A5Vme",
+      "url": "https://github.com/FedRAMP/community/discussions/100#discussioncomment-15030686",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2025-11-20T18:35:53Z",
+      "updated_at": "2025-11-20T18:35:54Z",
+      "upvotes": 2,
+      "minimized": false,
+      "body": "Also I moved this question into a new [Consolidated 20x Phase 2 pilot Q&A / discussion](https://github.com/FedRAMP/community/discussions/101#discussioncomment-15030671) thread and will go ahead and close this out. I want folks to be able to find the answer later but intended to keep general Q&A in one thread to avoid clutter. Thanks so much!",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "Jorden-Foster",
+    "pete-gov",
+    "wahlay5497"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/100#discussioncomment-15029769",
+      "author": "pete-gov",
+      "created_at": "2025-11-20T17:20:53Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/100#discussioncomment-15030686",
+      "author": "pete-gov",
+      "created_at": "2025-11-20T18:35:53Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [
+      101
+    ],
+    "urls": [
+      "https://github.com/FedRAMP/community/discussions/101#discussioncomment-15030671"
+    ],
+    "topics": [
+      "20x"
+    ]
+  },
+  "content_hash": "2a288618ee29f7ada35291539da151550fa4afe71b0790d04f314731bccafd89",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

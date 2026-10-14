@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-99",
+  "node_id": "D_kwDOOxfoic4Ai8BV",
+  "number": 99,
+  "title": "Adaptive Changes surprisingly require 3PAO involvement",
+  "url": "https://github.com/FedRAMP/community/discussions/99",
+  "category": "Rev5 Discussion",
+  "category_slug": "rev5-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "kcarr91",
+  "author_is_official": false,
+  "created_at": "2025-11-19T23:43:59Z",
+  "updated_at": "2025-11-22T19:54:36Z",
+  "last_edited_at": null,
+  "closed": true,
+  "closed_at": "2025-11-22T19:54:36Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 4,
+  "body": "Open question to the FedRAMP PMO\r\n\r\nIn reading the new [ConMon Playbook v1.0](https://www.fedramp.gov/resources/documents/Continuous_Monitoring_Playbook.pdf), I was very surprised to see that Adaptive Changes require 3PAO involvement.  This policy seems to suggest the standard process will involve a 3PAO doing a full SAP and SAR for an Adaptive change. While the playbook does note _“In some cases, the AO may be willing to accept an assessor attestation letter in place of the SAP and SAR,”_ this seems to be the exception and not the norm.  Additionally, getting an assessor attestation letter still requires contracting and coordinating timing with 3PAO, which just further delays Adaptive changes being rolled out. \r\n\r\nLooking back at the [Significant Change Notification Standard RFC from April 2025](https://github.com/FedRAMP/community/discussions/4), it only involved 3PAOs in Transformative changes and not Adaptive changes.  Adaptive Changes in the RFC just required notifying FedRAMP and Agency customers after making the changes (# 9 & # 10). \r\n\r\nFedRAMP talked about how everything would be out in the public and there would be transparency.  Looking at the [public feedback](https://github.com/FedRAMP/community/discussions/4) there doesn’t seem to a documented benefit, or a certain proponent pushing for 3PAO involvement with Adaptive changes.  **Where did this change come from? Was there additional discussion with the FedRAMP board that influenced this?**\r\n\r\nOverall, the RFC Significant Change Notification Standard from April 2025 was widely praised for allowing these Adaptive changes to happen quicker and enabled innovation.  However, the official ConMon Playbook seems to walk back part of the RFC that seemed to be universally supported.\r\n\r\nKevin",
+  "comment_count": 2,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4A5Uwz",
+      "url": "https://github.com/FedRAMP/community/discussions/99#discussioncomment-15027251",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2025-11-20T14:28:11Z",
+      "updated_at": "2025-11-20T14:28:13Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "I think there's a couple points of underlying confusion here:\r\n\r\n(1) **Please do not reference RFCs after comment has been closed** - requirements change significantly during that stage and RFCs are absolutely not intended to be applied as-is. The active Significant Change Notification requirements and recommendations are available here: https://www.fedramp.gov/docs/significant-change-notifications/\r\n\r\n(2) **Significant Change Notifications are not a standard part of the Rev5 process yet.** As indicated in Effective Date(s) & Overall Applicability of the active requirements linked above, this process is in beta for Rev5. Cloud service providers who are not participating in the closed beta are required to continue to request permission in advance with a SAP/SAR for significant changes just as they always have been, though this guidance has been updated to clarify that Rev5 providers should begin thinking in terms of routine recurring vs adaptive vs transformative. Otherwise nothing has changed.\r\n\r\nCurrent Rev5 providers who wish to switch to Significant Change Notifications must meet *all* of the requirements in that standard (you don't get to just pick and choose the parts you like) and participate in an active Beta process with direct support from FedRAMP. We plan on moving the Significant Change Notification process into open Beta by the end of January and will have more detail on the status of all of these Rev5 Balance Improvement Releases available in December.",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A5Ved",
+          "url": "https://github.com/FedRAMP/community/discussions/99#discussioncomment-15030173",
+          "author": "kcarr91",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-11-20T17:51:07Z",
+          "updated_at": "2025-11-20T17:51:07Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thank you for the clarification, this helps solidify my understanding. Let me confirm if the following key points are correct:\r\n\r\n- The ConMon Playbook v1.0 is live and effective today for Rev5 baseline  \r\n- The ConMon Playbook took **aspects** (breakdown of e.g. Adaptive & Transformative changes) for the [Significant Change Notification (SCN) requirements](https://www.fedramp.gov/docs/significant-change-notifications/) and incorporated them into the Rev 5 process but kept the old SCR structure of 3PAO review for all changes. \r\n- The ConMon Playbook has **not** yet incorporated I the new Significant Change Notifications process yet (as noted by your comment above)\r\n- The FedRAMP PMO is still planning to update the Rev 5 SCR process to incorporate updated SCN Requirements at some point in the future\r\n\r\nWhen I saw the ConMon Playbook updated with the **aspects** of Significant Change Notification standard, combined with the fact that I have been tracking Nov 3 was the expected date of Rev 5 wide release, I assumed this was the official launch of SCN for Rev 5.   See the [Rev5 Working Group-7_2 slides](https://github.com/FedRAMP/community/blob/main/slidedecks/Rev5/_Rev5%20Working%20Group-7_2%20.pdf) of where I was tracking the Nov 3 date from. \r\n\r\nTotally understand FedRAMP PMO always gave the disclaimer that these dates were subject to change and then also the government shutdown.  I **assumed** you already had enough data from the betas to launch this standard with the release of ConMon Playbook. \r\nAs they say \"You know what happens when you assume...\"\r\n\r\nThanks,\r\nKevin\r\n"
+        },
+        {
+          "id": "DC_kwDOOxfoic4A5VgF",
+          "url": "https://github.com/FedRAMP/community/discussions/99#discussioncomment-15030277",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2025-11-20T17:57:53Z",
+          "updated_at": "2025-11-20T17:57:54Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "That summary is exactly right! This update to Rev5 stuff didn't change Rev5 requirements, just simplified documentation and introduced some updated concepts.\r\n\r\nAnd unfortunately all of our previously expected timelines went *poof* as a result of the government being shutdown for six weeks - we'll follow up soon with updated expectations for Rev5 Balance Improvement Releases, but in general you can add at least +2mo to any previously planned date. 😞 "
+        }
+      ],
+      "replies_total": 2,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A5V9R",
+      "url": "https://github.com/FedRAMP/community/discussions/99#discussioncomment-15032145",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2025-11-20T21:27:07Z",
+      "updated_at": "2025-11-20T21:27:08Z",
+      "upvotes": 3,
+      "minimized": false,
+      "body": "Also following up to say that confluence between having a couple hours today and this thread led me to finally checking off the to-do list of updating the outcome information for historical RFCs, update the banner to clarify they shouldn't be used (and hopefully tell LLMs the same thing), and provide links to the resulting documentation where relevant.\r\n\r\nhttps://www.fedramp.gov/rfcs/\r\n\r\nThanks for the impetus on this! ",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "kcarr91",
+    "pete-gov"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/99#discussioncomment-15027251",
+      "author": "pete-gov",
+      "created_at": "2025-11-20T14:28:11Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/99#discussioncomment-15032145",
+      "author": "pete-gov",
+      "created_at": "2025-11-20T21:27:07Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/99#discussioncomment-15030277",
+      "author": "pete-gov",
+      "created_at": "2025-11-20T17:57:53Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [
+      4
+    ],
+    "urls": [
+      "https://github.com/FedRAMP/community/blob/main/slidedecks/Rev5/_Rev5%20Working%20Group-7_2%20.pdf",
+      "https://github.com/FedRAMP/community/discussions/4",
+      "https://www.fedramp.gov/docs/significant-change-notifications/",
+      "https://www.fedramp.gov/resources/documents/Continuous_Monitoring_Playbook.pdf",
+      "https://www.fedramp.gov/rfcs/"
+    ],
+    "topics": [
+      "3pao",
+      "conmon",
+      "rev5",
+      "significant_change"
+    ]
+  },
+  "content_hash": "bc9d18da7f1f034bb417774e1fee4b178baf6d91bb92dd0803afe059b2448bbb",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}
