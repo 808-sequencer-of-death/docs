@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-96",
+  "node_id": "D_kwDOOxfoic4Aio4G",
+  "number": 96,
+  "title": "Deviation Requests",
+  "url": "https://github.com/FedRAMP/community/discussions/96",
+  "category": "Rev5 Discussion",
+  "category_slug": "rev5-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "ChanceofClouds",
+  "author_is_official": false,
+  "created_at": "2025-10-28T14:27:44Z",
+  "updated_at": "2025-11-18T16:22:05Z",
+  "last_edited_at": null,
+  "closed": true,
+  "closed_at": "2025-11-18T16:22:05Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "Is there a time limit on vendor dependencies or operational requirements from FedRAMP or the individual agency itself such as it can be approved for a year and renewed annually up till three or five years?",
+  "comment_count": 2,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4A4fYb",
+      "url": "https://github.com/FedRAMP/community/discussions/96#discussioncomment-14808603",
+      "author": "8552gsh2y7-oss",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2025-10-28T22:21:33Z",
+      "updated_at": "2025-10-28T22:21:34Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "So I have until 2027 to complete as all the developments subject over the points of creation of all elements denominations of the enquirer of all equals equivalent of equations of denominators of all forms to be used under my definition of myself that is properly understood by me and will not be invisible for my eyes anymore and therefore I will be able to use this information to help me understand what is in my property. How it is managing every monetary transaction of access of each property accounts. ",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A4r6H",
+      "url": "https://github.com/FedRAMP/community/discussions/96#discussioncomment-14859911",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2025-11-03T15:27:49Z",
+      "updated_at": "2025-11-03T15:27:49Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "> Is there a time limit on vendor dependencies or operational requirements from FedRAMP or the individual agency itself such as it can be approved for a year and renewed annually up till three or five years?\r\n\r\nFedRAMP doesn't have a formal requirement regarding this that I'm aware of.\r\n\r\nNote that under the Vulnerability Detection and Response Standard, the concept of \"deviation requests\" and POA&Ms are entirely eliminated for both 20x and Rev5, though adoption in Rev5 is still pending a beta. ",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "8552gsh2y7-oss",
+    "ChanceofClouds",
+    "pete-gov"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/96#discussioncomment-14859911",
+      "author": "pete-gov",
+      "created_at": "2025-11-03T15:27:49Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [],
+    "topics": [
+      "20x",
+      "poam",
+      "rev5",
+      "vulnerability_mgmt"
+    ]
+  },
+  "content_hash": "13b035a1336da4f29bb90ffb453cac113517ca7abb314659e5da767baf0e06d7",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-121",
+  "node_id": "D_kwDOOxfoic4Aj4YG",
+  "number": 121,
+  "title": "Question RE Notice Location for FRR-FSI-04 (Public Notice of Emergency Tests)",
+  "url": "https://github.com/FedRAMP/community/discussions/121",
+  "category": "Rev5 Discussion",
+  "category_slug": "rev5-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "abuginarug",
+  "author_is_official": false,
+  "created_at": "2026-01-29T20:00:13Z",
+  "updated_at": "2026-01-29T20:42:13Z",
+  "last_edited_at": "2026-01-29T20:01:04Z",
+  "closed": true,
+  "closed_at": "2026-01-29T20:26:09Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "Hello,\r\n\r\nOur team is kindly looking for clarification on [FRR-FSI-04](https://www.fedramp.gov/docs/rev5/balance/fedramp-security-inbox/#frr-fsi-04-public-notice-of-emergency-tests) (Public Notice of Emergency Tests), which states that FedRAMP must post a public notice at least 10 business days in advance of sending an Emergency Test message.\r\n\r\nTo ensure our monitoring is properly aligned, could you please clarify where exactly these public notices will be published? Knowing the authoritative source will help us ensure full compliance during any upcoming tests.\r\n\r\nThanks so much for the guidance!",
+  "comment_count": 1,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4A7rW5",
+      "url": "https://github.com/FedRAMP/community/discussions/121#discussioncomment-15644089",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2026-01-29T20:26:09Z",
+      "updated_at": "2026-01-29T20:26:09Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "You can expect us to spam pretty much every channel we have to warn people about this, it will be hard to miss. :)\r\n\r\nTo ensure you're in the loop on public notifications from FedRAMP, you should:\r\n\r\n1. Monitor the fedramp.gov/changelog and fedramp blog\r\n2. Subscribe to email notifications from FedRAMP via our [GovDelivery](https://public.govdelivery.com/accounts/USGSA/subscriber/new)\r\n3. Follow FedRAMP on social media (links at the bottom of fedramp.gov)\r\n4. Continue to monitor the FedRAMP Community in this GitHub discussion forum\r\n\r\n",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A7rYp",
+          "url": "https://github.com/FedRAMP/community/discussions/121#discussioncomment-15644201",
+          "author": "abuginarug",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-01-29T20:42:13Z",
+          "updated_at": "2026-01-29T20:42:13Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Perfect! Thank you so much, Pete. "
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "abuginarug",
+    "pete-gov"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/121#discussioncomment-15644089",
+      "author": "pete-gov",
+      "created_at": "2026-01-29T20:26:09Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [
+      "FRR-FSI-04"
+    ],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://public.govdelivery.com/accounts/USGSA/subscriber/new",
+      "https://www.fedramp.gov/docs/rev5/balance/fedramp-security-inbox/#frr-fsi-04-public-notice-of-emergency-tests"
+    ],
+    "topics": [
+      "rev5"
+    ]
+  },
+  "content_hash": "1cb38376b6b4f8d8dfc9432396f061303b4adfa1a1c074eeece32fb7ce8e9ff7",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

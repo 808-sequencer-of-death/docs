@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-122",
+  "node_id": "D_kwDOOxfoic4Aj_YX",
+  "number": 122,
+  "title": "Compliance Finding Reporting and Treatment",
+  "url": "https://github.com/FedRAMP/community/discussions/122",
+  "category": "Rev5 Discussion",
+  "category_slug": "rev5-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "ibadaru",
+  "author_is_official": false,
+  "created_at": "2026-02-05T21:32:31Z",
+  "updated_at": "2026-02-11T22:11:54Z",
+  "last_edited_at": null,
+  "closed": true,
+  "closed_at": "2026-02-11T22:11:54Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "Configuration Findings sheet in the POAM is expected to list all compliance deficiencies and one CM-6 entry be created in the Open POA&M Findings sheet, questions:\r\n\r\n1. Nessus report 'High' risk rating with \"Result: Failed\" but 'Moderate' risk rating as \"Result: Warning\" are these warning results to be included in the POAM submission?\r\n2. If a \"Result: Failed\" finding is to be classified as VD/OR/FP/RA should those be reported in the Deviation Worksheet referencing the the only one CM-6 entry in the Open POAM sheet or how?\r\n4.\tWhen a previously reported compliance finding is remediated how should that be reported in the POAM?",
+  "comment_count": 1,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4A8LQH",
+      "url": "https://github.com/FedRAMP/community/discussions/122#discussioncomment-15774727",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2026-02-11T22:11:54Z",
+      "updated_at": "2026-02-11T22:11:54Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "I'm confused about these questions as they appear to be very specific to a certain piece of software and FedRAMP isn't going to be able to provide answers in that context. [The Continuous Monitoring Playbook](https://www.fedramp.gov/docs/rev5/playbook/csp/continuous-monitoring/intro/) should give you the general context needed to determine the correct answers to these questions, and you can also coordinate with your agency team to see if they have any particular expectations here.",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "ibadaru",
+    "pete-gov"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/122#discussioncomment-15774727",
+      "author": "pete-gov",
+      "created_at": "2026-02-11T22:11:54Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [
+      "CM-6"
+    ],
+    "discussion_refs": [],
+    "urls": [
+      "https://www.fedramp.gov/docs/rev5/playbook/csp/continuous-monitoring/intro/"
+    ],
+    "topics": [
+      "conmon",
+      "poam",
+      "rev5"
+    ]
+  },
+  "content_hash": "d17bb361826c2da43b50e28c01a46d5d5f052824d5909c315fe165299a9920f7",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

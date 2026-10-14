@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-1",
+  "node_id": "D_kwDOOxfoic4Af9-i",
+  "number": 1,
+  "title": "Announcing a consolidated FedRAMP Community!",
+  "url": "https://github.com/FedRAMP/community/discussions/1",
+  "category": "Announcements",
+  "category_slug": "announcements",
+  "labels": [
+    "FedRAMP Official"
+  ],
+  "is_official_thread": true,
+  "is_rfc": false,
+  "author": "pete-gov",
+  "author_is_official": true,
+  "created_at": "2025-05-27T16:56:44Z",
+  "updated_at": "2025-08-25T14:26:40Z",
+  "last_edited_at": "2025-05-29T18:42:03Z",
+  "closed": true,
+  "closed_at": "2025-08-25T14:26:40Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "GitHub has been a successful home for our Community Working Groups over the past two months (and even longer for our RFCs), so we're carving out a bit of a comfier space for FedRAMP that will be more inviting and simple to approach. We've also found our four original Community Working Groups have been duplicating a lot of efforts and sometimes causing some confusion, so we're combining them into two main groups moving forward.\r\n\r\nFor more, check out today's blog post on two months of FedRAMP 20x: https://www.fedramp.gov/2025-04-24-fedramp-20x-two-months-in-and-taking-off/\r\n\r\nAnd if you'd rather see a quick summary, information about the FedRAMP Community is now easy to find at https://www.fedramp.gov/community/\r\n\r\n",
+  "comment_count": 2,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4AyvTi",
+      "url": "https://github.com/FedRAMP/community/discussions/1#discussioncomment-13300962",
+      "author": "tnnrjmsn-eit",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2025-05-28T19:13:35Z",
+      "updated_at": "2025-05-28T19:13:36Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "To whom it may concern,\n\nI know RFC-006 is already closed and this may be too late as the KSIs are likely in front of the FedRAMP Board for final approval, but in case they're not...\n\nPlease consider disambiguating 3IR from Incident Response (IR). \n\nFor your consideration, I'd like to suggest KSI-3IT.01, etc. Or perhaps, KSI-3P.01, etc.\n\nThank you for your time. Keep up the great work!",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4AyvrY",
+          "url": "https://github.com/FedRAMP/community/discussions/1#discussioncomment-13302488",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2025-05-28T21:34:48Z",
+          "updated_at": "2025-05-28T21:34:49Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "You might enjoy [this thread](https://github.com/FedRAMP/automating-assessment-cwg/discussions/45). ;)"
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4AyyQ7",
+      "url": "https://github.com/FedRAMP/community/discussions/1#discussioncomment-13313083",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2025-05-29T18:42:22Z",
+      "updated_at": "2025-05-29T18:42:23Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Updated with links and a formal launch of this community!",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4Ayyoc",
+          "url": "https://github.com/FedRAMP/community/discussions/1#discussioncomment-13314588",
+          "author": "tnnrjmsn-eit",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-05-29T21:48:27Z",
+          "updated_at": "2025-05-29T21:48:28Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Does it matter that the blog post URL has the same date in it as the old April _One Month In_ blog post (2025-04-24)? 😬 \r\n#NothingToSeeHere #MoveAlong"
+        },
+        {
+          "id": "DC_kwDOOxfoic4AyyrE",
+          "url": "https://github.com/FedRAMP/community/discussions/1#discussioncomment-13314756",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2025-05-29T22:00:17Z",
+          "updated_at": "2025-05-29T22:05:59Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> Does it matter that the blog post URL has the same date in it as the old April _One Month In_ blog post (2025-04-24)? 😬 #NothingToSeeHere #MoveAlong\r\n\r\nLast month I first posted it as a 2024 blog post, but this month it wasn't me that messed this up!!! Thanks for the flag.\r\n\r\nedit: fixed w/ redirect: https://www.fedramp.gov/2025-04-24-fedramp-20x-two-months-in-and-taking-off/ > https://www.fedramp.gov/2025-05-29-fedramp-20x-two-months-in-and-taking-off/ "
+        },
+        {
+          "id": "DC_kwDOOxfoic4Ayyw_",
+          "url": "https://github.com/FedRAMP/community/discussions/1#discussioncomment-13315135",
+          "author": "aj-stein-gsa",
+          "author_association": "CONTRIBUTOR",
+          "is_official": false,
+          "created_at": "2025-05-29T22:37:58Z",
+          "updated_at": "2025-05-29T22:38:07Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "That was my slip-up and @pete-gov fixed it before I saw this notification. Thanks for the quick catch. 😄 "
+        }
+      ],
+      "replies_total": 3,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "aj-stein-gsa",
+    "pete-gov",
+    "tnnrjmsn-eit"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/1#discussioncomment-13313083",
+      "author": "pete-gov",
+      "created_at": "2025-05-29T18:42:22Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/1#discussioncomment-13302488",
+      "author": "pete-gov",
+      "created_at": "2025-05-28T21:34:48Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/1#discussioncomment-13314756",
+      "author": "pete-gov",
+      "created_at": "2025-05-29T22:00:17Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [
+      "RFC-006"
+    ],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://github.com/FedRAMP/automating-assessment-cwg/discussions/45",
+      "https://www.fedramp.gov/2025-04-24-fedramp-20x-two-months-in-and-taking-off/",
+      "https://www.fedramp.gov/2025-05-29-fedramp-20x-two-months-in-and-taking-off/",
+      "https://www.fedramp.gov/community/"
+    ],
+    "topics": [
+      "20x",
+      "ksi"
+    ]
+  },
+  "content_hash": "6de0bd986c2b0d9f381782bd8cd9f0f880fad8eaeeea4fdf67f98785e92c2714",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

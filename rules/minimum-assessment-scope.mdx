@@ -1,0 +1,77 @@
+---
+title: "Minimum assessment scope"
+description: "Define your cloud service offering as every information resource likely to handle, or likely to affect the security of, federal customer data, and document its flows and third-party dependencies."
+sidebarTitle: "MAS: Assessment scope"
+---
+
+<Info>
+  **Official source:** [Minimum Assessment Scope](https://www.fedramp.gov/2026/reference/minimum-assessment-scope/) (`MAS`), FedRAMP Consolidated Rules release `2026.10.14.01`. This page is a plain-English summary. The official rule text governs.
+</Info>
+
+## In short
+
+The Minimum Assessment Scope (MAS) rules set your FedRAMP boundary. Your cloud service offering is the set of information resources likely to handle federal customer data, or likely to affect its confidentiality, integrity or availability. Everything else stays out of scope, so you avoid assessing components that don't affect the offering's security. You must document information flows and security categories for everything in scope and explain how you manage third-party information resources. You may add out-of-scope material as a clearly marked supplement.
+
+## Who it applies to
+
+| Subset | Type | Path | Class | Audience |
+| --- | --- | --- | --- | --- |
+| [General Provider Responsibilities](https://www.fedramp.gov/2026/reference/minimum-assessment-scope/#general-provider-responsibilities) | 20x, Rev5 | Program, Agency | B, C, D | Providers |
+
+## Key dates
+
+| | 20x | Rev5 |
+| --- | --- | --- |
+| Status | Required (Consolidated Rules for 2026) | Required (Consolidated Rules for 2026) |
+| Optional adoption allowed | 2026-07-04 | 2026-07-04 |
+| Obtaining initial certification | 2026-07-04 | 2027-01-01 |
+| Maintaining ongoing certification | 2027-01-01 | 2027-01-01 |
+| Grace period ends | First FedRAMP independent assessment started after 2027-01-01 | First FedRAMP independent assessment started after 2027-01-01 |
+
+## What you need to do
+
+### General provider responsibilities (20x and Rev5)
+
+| Rule | Force | What it means for you |
+| --- | --- | --- |
+| [`MAS-CSO-IIR`](https://www.fedramp.gov/2026/reference/minimum-assessment-scope/#identify-information-resources) | MUST | Identify the information resources to assess: all that are likely to handle federal customer data or likely to impact its confidentiality, integrity or availability. That set is your cloud service offering. |
+| [`MAS-CSO-FLO`](https://www.fedramp.gov/2026/reference/minimum-assessment-scope/#information-flows-and-security-categories) | MUST | Clearly identify, document and explain information flows and security categories for all information resources (or sets of them) in the offering. |
+| [`MAS-CSO-TPR`](https://www.fedramp.gov/2026/reference/minimum-assessment-scope/#third-party-information-resources) | MUST | Only if `MAS-CSO-IIR` applies: for each applicable third-party information resource, document its general usage and configuration, why you use it, and the mitigation measures and compensating controls that reduce potential impact to federal customer data. |
+| [`MAS-CSO-MDI`](https://www.fedramp.gov/2026/reference/minimum-assessment-scope/#metadata-inclusion) | MUST | Only if `MAS-CSO-IIR` applies: include metadata, including metadata about federal customer data, in the Minimum Assessment Scope. |
+| [`MAS-CSO-SUP`](https://www.fedramp.gov/2026/reference/minimum-assessment-scope/#supplemental-information) | MAY, with a MUST | You MAY add materials about resources outside the offering in a Certification Package supplement. That material won't be FedRAMP Certified and MUST be clearly marked and separated from the offering. |
+
+`MAS-CSO-IIR`, `MAS-CSO-FLO` and `MAS-CSO-TPR` are among the rules whose information must appear in your [Certification Package Overview](/rules/certification-package-overview) under `CPO-CSO-OVR`.
+
+### Notes on scope from the rules
+
+- **Out of scope by OMB direction.** Certain categories of cloud products and services are entirely outside the scope of FedRAMP as specified by the Director of OMB, so they aren't part of the offering. See [fedramp.gov/scope](https://fedramp.gov/scope).
+- **Separately delivered software.** Software you deliver separately for installation on agency systems, and don't operate in a shared responsibility model (typically agents, application clients and mobile apps not fully managed by you), isn't a cloud computing product or service. It is entirely outside the scope of FedRAMP under the FedRAMP Certification Act.
+- **You decide and document the offering.** You determine and maintain all aspects of the offering under the related rules and document them in your Certification Package.
+- **Security categories may vary.** Information resources, including third-party ones, MAY vary by security category based on the information they handle or affect.
+- **Supplements.** `MAS-CSO-SUP` is meant for things like security materials for apps and supplemental marketing collateral that may be useful to agencies.
+
+## What FedRAMP staff have said
+
+<Note>
+  **Is a trust center in scope?** On 2026-09-03, **pete-gov** said "it depends" on what you put in it. Apply both halves of `MAS-CSO-IIR`. A trust center may not handle federal customer data, but if its contents are sensitive enough that a compromise is likely to expose data in the offering, it is in scope. If you share information responsibly, it may be reasonable to conclude it isn't. Either way, **pete-gov** said to make sure it is secure. [Discussion #168 comment](https://github.com/FedRAMP/community/discussions/168#discussioncomment-18277999)
+</Note>
+
+<Note>
+  **Locally installed software.** On 2026-10-05, **pete-gov** said MAS scoping occurs within the data boundary of the cloud service. If you have command and control, accept telemetry, or otherwise control deployed software (such as updates), that part of the cloud service is in scope. The software itself, and deploying and operating it inside an agency enclave or device, is outside FedRAMP scope. `MAS-CSO-SUP` lets you include information about it in the package, but FedRAMP won't assess it. [Discussion #147 comment](https://github.com/FedRAMP/community/discussions/147#discussioncomment-18766044)
+</Note>
+
+<Note>
+  **Features of a larger product.** On 2026-09-09, **emu-gov** said a feature that can't be bought on its own can't have its own Marketplace listing. When you certify the parent product, you can list the feature as a service, as long as the components it relies on are in the minimum assessment scope. **emu-gov** also cautioned that listing a parent product as a resource under `MAS-CSO-IIR` for a dependent standalone product stretches the spirit of the rules. **pete-gov** added that a standalone product with its own team, package and continuous monitoring is a separate offering. [Discussion #147 comment (emu-gov)](https://github.com/FedRAMP/community/discussions/147#discussioncomment-18368851), [Discussion #147 comment (pete-gov)](https://github.com/FedRAMP/community/discussions/147#discussioncomment-18369926)
+</Note>
+
+<Note>
+  **Using other cloud services.** On 2026-09-11, answering a VER question, **pete-gov** said cloud service offerings that use other cloud services should address the risks in their MAS. [Discussion #146 comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18402431)
+</Note>
+
+## Related
+
+- [Certification package overview](/rules/certification-package-overview)
+- [Certification data sharing](/rules/certification-data-sharing): `CDS-CSO-SVC` requires a public service list detailed enough to show what is in the Minimum Assessment Scope.
+- [Significant change notification](/rules/significant-change-notification)
+- [Marketplace listing](/rules/marketplace-listing)
+- [20x questions on the Consolidated Rules for 2026](/discussions/20x-cr26-questions)

@@ -1,0 +1,179 @@
+---
+title: "Key Security Indicators"
+description: "The 46 security capabilities a FedRAMP 20x cloud service offering demonstrates, grouped into 10 themes, and how they vary by class."
+sidebarTitle: "KSI: Key Security Indicators"
+---
+
+<Info>
+  **Official source:** [Key Security Indicators](https://www.fedramp.gov/2026/reference/key-security-indicators/) (`KSI`), FedRAMP Consolidated Rules release `2026.10.14.01`. This page is a plain-English summary. The official rule text governs.
+</Info>
+
+## In short
+
+Key Security Indicators (KSIs) are the security capabilities a FedRAMP 20x cloud service offering demonstrates. There are 46 indicators in 10 themes, from identity and access management to recovery planning. Each one describes an outcome, such as "Logs are persistently reviewed and audited," rather than a specific control to implement.
+
+KSIs are written as capability statements, not as MUST or SHOULD rules. What you must do with them comes from other rulesets: you document how you meet each KSI in your Security Decision Record, automate their verification and validation, and include them in your annual independent assessment. Class A uses 7 KSIs. Class B and C use all 46, and 5 of them are marked optional for Class B.
+
+## Who it applies to
+
+KSIs apply to **FedRAMP 20x** certifications only. Rev5 certifications use Rev5 controls instead.
+
+| Class | Which KSIs | Source |
+| --- | --- | --- |
+| Class A | 7 KSIs: `KSI-CED-RAT`, `KSI-CMT-LMC`, `KSI-CNA-RNT`, `KSI-IAM-AAM`, `KSI-IAM-APM`, `KSI-INR-RIR`, `KSI-SVC-SIN` | [`FRC-CLA-MFR`](https://www.fedramp.gov/2026/reference/fedramp-certification/#mandatory-fedramp-rules-for-class-a) and the 20x Class A ruleset |
+| Class B | All 46. Five are marked **Optional** for Class B (see [Differences by class](#differences-by-class)). | 20x Class B ruleset |
+| Class C | All 46 | 20x Class C ruleset |
+| Class D | The KSI reference doesn't publish Class D variants. | |
+
+`FRC-CLA-MFR` says providers MUST address the listed KSIs to receive a Class A certification, even if they intend to pursue a Rev5 Program Certification path in the future.
+
+## Key dates
+
+The Key Security Indicators reference page doesn't publish its own effective dates. KSIs take effect through the rulesets that require them. Check the dates on those pages:
+
+- [Security decision record](/rules/security-decision-record) (`SDR-CSX-KSI`, `SDR-CSX-KMT`)
+- [FedRAMP certification](/rules/fedramp-certification) (`FRC-CLA-MFR`, `FRC-CSX-VVK`)
+- [Independent verification and validation](/rules/independent-verification-and-validation) (`IVV-CSX-AIA`)
+
+## How the other rules use KSIs
+
+| Rule | Force | What it means for you |
+| --- | --- | --- |
+| [`SDR-CSX-KSI`](https://www.fedramp.gov/2026/reference/security-decision-record/#key-security-indicators) | MUST | For each applicable KSI, include short high-level summaries in your Security Decision Record: the measures that demonstrate it (or why you have none and the resulting risk), the cycle for persistent measures, verification, verification of your automation, and validation. |
+| [`SDR-CSX-KMT`](https://www.fedramp.gov/2026/reference/security-decision-record/#key-security-indicator-metrics) | Class A MAY, Class B SHOULD, Class C MUST, Class D MUST | Include historical KSI metrics in your Security Decision Record. Class B: 30-day and up-to-a-year summaries. Class C adds all daily metric data for up to a year. Class D must significantly exceed lower classes, with specifics to be set during the 20x Phase 4 Pilot. |
+| [`FRC-CSX-VVK`](https://www.fedramp.gov/2026/reference/fedramp-certification/#automated-verification-and-validation-of-key-security-indicators) | Class A MAY, Class B SHOULD, Class C MUST, Class D MUST | Implement automated methods to persistently verify and validate your KSIs. Class B: at least 1 automated method per KSI. Class C: at least 2. Class D: at least 4. |
+| [`IVV-CSX-AIA`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#annual-independent-assessments-for-20x) | MUST | Class B, C and D: include all KSIs in a FedRAMP independent assessment at least once a year. Class A: meet the expectations of your underlying alternative security framework. |
+
+## What you need to do
+
+Each table lists every indicator in the theme. KSIs carry no MUST or SHOULD force, so the tables show what each indicator asks you to demonstrate. "Class A" marks the 7 indicators that apply to Class A. "Optional for Class B" marks indicators published with an **Optional** label for Class B.
+
+Key terms: [persistently](https://www.fedramp.gov/2026/definitions/#persistently), [information resource](https://www.fedramp.gov/2026/definitions/#information-resource), [machine-based information resources](https://www.fedramp.gov/2026/definitions/#machine-based-information-resources) and [federal customer data](https://www.fedramp.gov/2026/definitions/#federal-customer-data).
+
+### Cybersecurity education (CED)
+
+| Indicator | What it means for you |
+| --- | --- |
+| [`KSI-CED-RAT`](https://www.fedramp.gov/2026/reference/key-security-indicators/#reviewing-all-training) Reviewing All Training | Persistently review how effective your security training is. That covers at least general training for all employees, role-specific training for high-risk roles, secure software delivery training for engineers, and training for incident response and disaster recovery staff. Class A. |
+
+### Change management (CMT)
+
+| Indicator | What it means for you |
+| --- | --- |
+| [`KSI-CMT-LMC`](https://www.fedramp.gov/2026/reference/key-security-indicators/#logging-changes) Logging Changes | Log and monitor changes to your cloud service offering. Class A. |
+| [`KSI-CMT-RMV`](https://www.fedramp.gov/2026/reference/key-security-indicators/#redeploying-vs-modifying) Redeploying vs Modifying | Change machine-based resources by redeploying version-controlled resources instead of modifying them directly, wherever reasonable. |
+| [`KSI-CMT-RVP`](https://www.fedramp.gov/2026/reference/key-security-indicators/#reviewing-change-procedures) Reviewing Change Procedures | Persistently review how effective your documented change management procedures are. |
+| [`KSI-CMT-VTD`](https://www.fedramp.gov/2026/reference/key-security-indicators/#validating-throughout-deployment) Validating Throughout Deployment | Automate persistent testing and validation of changes throughout deployment. |
+
+### Cloud native architecture (CNA)
+
+| Indicator | What it means for you |
+| --- | --- |
+| [`KSI-CNA-DFP`](https://www.fedramp.gov/2026/reference/key-security-indicators/#defining-functionality-and-privileges) Defining Functionality and Privileges | Strictly define the functionality and privileges of your infrastructure and services. |
+| [`KSI-CNA-EIS`](https://www.fedramp.gov/2026/reference/key-security-indicators/#enforcing-intended-state) Enforcing Intended State | Use automated services to persistently assess the security of all machine-based resources and automatically enforce their intended state. Optional for Class B. |
+| [`KSI-CNA-IBP`](https://www.fedramp.gov/2026/reference/key-security-indicators/#implementing-best-practices) Implementing Best Practices | Persistently compare how you use and configure third-party machine-based resources against the original provider's best practices and guidance. |
+| [`KSI-CNA-MAT`](https://www.fedramp.gov/2026/reference/key-security-indicators/#minimizing-attack-surface) Minimizing Attack Surface | Persistently review machine-based resources for minimal attack surface and minimal lateral movement if compromised. |
+| [`KSI-CNA-OFA`](https://www.fedramp.gov/2026/reference/key-security-indicators/#optimizing-for-availability) Optimizing for Availability | Persistently review machine-based resources for high availability and rapid recovery. |
+| [`KSI-CNA-RNT`](https://www.fedramp.gov/2026/reference/key-security-indicators/#restricting-network-traffic) Restricting Network Traffic | Persistently review machine-based resources to make sure they limit inbound and outbound network traffic. Class A. |
+| [`KSI-CNA-RVP`](https://www.fedramp.gov/2026/reference/key-security-indicators/#reviewing-protections) Reviewing Protections | Persistently review how effective your protections are against denial of service attacks and other unwanted activity. |
+| [`KSI-CNA-ULN`](https://www.fedramp.gov/2026/reference/key-security-indicators/#using-logical-networking) Using Logical Networking | Use logical networking to enforce traffic flow controls, and persistently review it. |
+
+### Identity and access management (IAM)
+
+| Indicator | What it means for you |
+| --- | --- |
+| [`KSI-IAM-AAM`](https://www.fedramp.gov/2026/reference/key-security-indicators/#automating-account-management) Automating Account Management | Use automation to securely manage the lifecycle and privileges of all accounts, roles and groups. Class A. |
+| [`KSI-IAM-APM`](https://www.fedramp.gov/2026/reference/key-security-indicators/#adopting-passwordless-methods) Adopting Passwordless Methods | Use secure passwordless authentication when feasible. Otherwise, use strong passwords with phishing-resistant MFA. Class A. |
+| [`KSI-IAM-ELP`](https://www.fedramp.gov/2026/reference/key-security-indicators/#ensuring-least-privilege) Ensuring Least Privilege | Use and persistently review access measures so each user or device can reach only the resources it needs. |
+| [`KSI-IAM-JIT`](https://www.fedramp.gov/2026/reference/key-security-indicators/#authorizing-just-in-time) Authorizing Just-in-Time | Use and persistently review a least-privileged, role- and attribute-based, just-in-time authorization model for all user and non-user accounts and services. |
+| [`KSI-IAM-SNU`](https://www.fedramp.gov/2026/reference/key-security-indicators/#securing-non-user-authentication) Securing Non-User Authentication | Use and persistently review secure authentication for non-user accounts and services. |
+| [`KSI-IAM-SUS`](https://www.fedramp.gov/2026/reference/key-security-indicators/#responding-to-suspicious-activity) Responding to Suspicious Activity | Disable or otherwise secure privileged accounts in response to suspicious activity. |
+
+### Incident response (INR)
+
+| Indicator | What it means for you |
+| --- | --- |
+| [`KSI-INR-AAR`](https://www.fedramp.gov/2026/reference/key-security-indicators/#generating-after-action-reports) Generating After Action Reports | Produce incident after action reports and persistently incorporate lessons learned. |
+| [`KSI-INR-RIR`](https://www.fedramp.gov/2026/reference/key-security-indicators/#reviewing-incident-response-procedures) Reviewing Incident Response Procedures | Persistently review how effective your documented incident response procedures are. Class A. |
+| [`KSI-INR-RPI`](https://www.fedramp.gov/2026/reference/key-security-indicators/#reviewing-past-incidents) Reviewing Past Incidents | Persistently review past incidents for patterns or vulnerabilities not previously identified. |
+
+### Monitoring, logging and auditing (MLA)
+
+| Indicator | What it means for you |
+| --- | --- |
+| [`KSI-MLA-ALA`](https://www.fedramp.gov/2026/reference/key-security-indicators/#authorizing-log-access) Authorizing Log Access | Use and persistently review a least-privileged, role- and attribute-based, just-in-time model for access to log data, based on data sensitivity you define. Optional for Class B. |
+| [`KSI-MLA-EVC`](https://www.fedramp.gov/2026/reference/key-security-indicators/#evaluating-configurations) Evaluating Configurations | Persistently evaluate and test the configuration of machine-based resources, especially infrastructure as code. |
+| [`KSI-MLA-LET`](https://www.fedramp.gov/2026/reference/key-security-indicators/#logging-event-types) Logging Event Types | Keep and persistently review a list of the resources and event types you log, monitor and audit, to make sure that happens. |
+| [`KSI-MLA-OSM`](https://www.fedramp.gov/2026/reference/key-security-indicators/#operating-siem-capability) Operating SIEM Capability | Use and persistently review a SIEM or similar system for centralized, tamper-resistant logging of events, activities and changes. |
+| [`KSI-MLA-RVL`](https://www.fedramp.gov/2026/reference/key-security-indicators/#reviewing-logs) Reviewing Logs | Persistently review and audit logs. |
+
+### Policy and inventory (PIY)
+
+| Indicator | What it means for you |
+| --- | --- |
+| [`KSI-PIY-GIV`](https://www.fedramp.gov/2026/reference/key-security-indicators/#generating-inventories) Generating Inventories | Use authoritative sources to automatically generate real-time inventories of all information resources when needed. |
+| [`KSI-PIY-RES`](https://www.fedramp.gov/2026/reference/key-security-indicators/#reviewing-executive-support) Reviewing Executive Support | Persistently review and demonstrate executive support for your security goals. |
+| [`KSI-PIY-RIS`](https://www.fedramp.gov/2026/reference/key-security-indicators/#reviewing-investments-in-security) Reviewing Investments in Security | Persistently review how effective your security investments are. |
+| [`KSI-PIY-RSD`](https://www.fedramp.gov/2026/reference/key-security-indicators/#reviewing-security-in-the-sdlc) Reviewing Security in the SDLC | Persistently review how well you build security and privacy into your software development lifecycle and align with CISA Secure by Design principles. |
+| [`KSI-PIY-RVD`](https://www.fedramp.gov/2026/reference/key-security-indicators/#reviewing-vulnerability-disclosures) Reviewing Vulnerability Disclosures | Persistently review how effective your vulnerability disclosure program is. |
+
+### Recovery planning (RPL)
+
+| Indicator | What it means for you |
+| --- | --- |
+| [`KSI-RPL-ABO`](https://www.fedramp.gov/2026/reference/key-security-indicators/#aligning-backups-with-objectives) Aligning Backups with Objectives | Persistently review whether your backups of machine-based resources align with your recovery objectives. |
+| [`KSI-RPL-ARP`](https://www.fedramp.gov/2026/reference/key-security-indicators/#aligning-recovery-plan) Aligning Recovery Plan | Persistently review whether your recovery plans align with your recovery objectives. |
+| [`KSI-RPL-RRO`](https://www.fedramp.gov/2026/reference/key-security-indicators/#reviewing-recovery-objectives) Reviewing Recovery Objectives | Define your Recovery Time Objectives (RTO) and Recovery Point Objectives (RPO), and persistently review them against your business needs and capabilities. |
+| [`KSI-RPL-TRC`](https://www.fedramp.gov/2026/reference/key-security-indicators/#testing-recovery-capabilities) Testing Recovery Capabilities | Persistently test your ability to recover from incidents and contingencies in line with your recovery objectives. |
+
+### Supply chain risk (SCR)
+
+| Indicator | What it means for you |
+| --- | --- |
+| [`KSI-SCR-MIT`](https://www.fedramp.gov/2026/reference/key-security-indicators/#mitigating-supply-chain-risk) Mitigating Supply Chain Risk | Persistently identify, review and mitigate potential supply chain risks. |
+| [`KSI-SCR-MON`](https://www.fedramp.gov/2026/reference/key-security-indicators/#monitoring-supply-chain-risk) Monitoring Supply Chain Risk | Automatically monitor third-party software for upstream vulnerabilities, for example through contractual notification requirements or active monitoring services. |
+
+### Service configuration (SVC)
+
+| Indicator | What it means for you |
+| --- | --- |
+| [`KSI-SVC-ACM`](https://www.fedramp.gov/2026/reference/key-security-indicators/#automating-configuration-management) Automating Configuration Management | Manage the configuration of machine-based resources with automation, and persistently review it for drift. |
+| [`KSI-SVC-ASM`](https://www.fedramp.gov/2026/reference/key-security-indicators/#automating-secret-management) Automating Secret Management | Automate, and persistently review, the management, protection and regular rotation of keys, certificates and other secrets. |
+| [`KSI-SVC-EIS`](https://www.fedramp.gov/2026/reference/key-security-indicators/#evaluating-and-improving-security) Evaluating and Improving Security | Persistently look for ways to improve the security of your information resources, and make those improvements. |
+| [`KSI-SVC-PRR`](https://www.fedramp.gov/2026/reference/key-security-indicators/#preventing-residual-risk) Preventing Residual Risk | After changes, persistently review plans, procedures and resource state to remove leftover elements that would likely harm the confidentiality, integrity or availability of federal customer data. Optional for Class B. |
+| [`KSI-SVC-RUD`](https://www.fedramp.gov/2026/reference/key-security-indicators/#removing-unwanted-data) Removing Unwanted Data | Promptly remove unwanted federal customer data when an agency asks, in line with customer agreements, including from backups if appropriate. This typically covers spills or a change in how the customer uses the service. Optional for Class B. |
+| [`KSI-SVC-SIN`](https://www.fedramp.gov/2026/reference/key-security-indicators/#securing-information) Securing Information | Encrypt or otherwise protect information from unwanted access or modification. Class A. |
+| [`KSI-SVC-VCM`](https://www.fedramp.gov/2026/reference/key-security-indicators/#validating-communications) Validating Communications | Use automation to persistently validate the authenticity and integrity of communications between machine-based resources. Optional for Class B. |
+| [`KSI-SVC-VRI`](https://www.fedramp.gov/2026/reference/key-security-indicators/#validating-resource-integrity) Validating Resource Integrity | Use cryptographic methods to validate the integrity of machine-based resources. |
+
+## Differences by class
+
+Five indicators publish separate Class B and Class C statements. The wording is the same, but the Class B statement is labeled **Optional**:
+
+| Indicator | Class B | Class C |
+| --- | --- | --- |
+| `KSI-CNA-EIS` Enforcing Intended State | Optional | Same statement, no Optional label |
+| `KSI-MLA-ALA` Authorizing Log Access | Optional | Same statement, no Optional label |
+| `KSI-SVC-PRR` Preventing Residual Risk | Optional | Same statement, no Optional label |
+| `KSI-SVC-RUD` Removing Unwanted Data | Optional | Same statement, no Optional label |
+| `KSI-SVC-VCM` Validating Communications | Optional | Same statement, no Optional label |
+
+All other indicators have a single statement that applies to every class that uses them. Class A uses only the 7 indicators listed under [Who it applies to](#who-it-applies-to).
+
+## What FedRAMP staff have said
+
+<Note>
+  **You decide what counts as a distinct automated method.** On `2026-09-18`, asked how FedRAMP judges whether two automated validations are distinct methods under `FRC-CSX-VVK`, `pete-gov` said it is up to the provider. Poor choices make customers less likely to find your assurance adequate. He said FedRAMP will include its own report on how assuring and diverse it finds your methods during certification. [Discussion #176 comment](https://github.com/FedRAMP/community/discussions/176#discussioncomment-18501048)
+</Note>
+
+<Note>
+  **No FedRAMP-defined minimum configuration baseline.** On `2026-09-02`, in a thread about meeting secure configuration expectations for 20x (the question referred to "ACM" and to CIS benchmarks and DISA STIGs), `pete-gov` confirmed there is no FedRAMP-defined minimum tier, as long as your chosen configuration is risk-based, applied and evidenced. He noted that this covers only obtaining and keeping a FedRAMP Certification, and some agency customers might write such requirements into their contracts. [Discussion #147 comment](https://github.com/FedRAMP/community/discussions/147#discussioncomment-18256476)
+</Note>
+
+## Related
+
+- [Security decision record](/rules/security-decision-record)
+- [FedRAMP certification](/rules/fedramp-certification)
+- [Independent verification and validation](/rules/independent-verification-and-validation)
+- [FRR and KSI explained](/rules/frr-and-ksi)
+- [20x questions on the 2026 rules](/discussions/20x-cr26-questions)

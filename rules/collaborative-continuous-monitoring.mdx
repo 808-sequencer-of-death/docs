@@ -1,0 +1,117 @@
+---
+title: "Collaborative continuous monitoring"
+description: "Publish an Ongoing Certification Report every 3 months and, depending on your class, host a Quarterly Review so agencies can monitor your service without bespoke requests."
+sidebarTitle: "CCM: Continuous monitoring"
+---
+
+<Info>
+  **Official source:** [Collaborative Continuous Monitoring](https://www.fedramp.gov/2026/reference/collaborative-continuous-monitoring/) (`CCM`), FedRAMP Consolidated Rules release `2026.10.14.01`. This page is a plain-English summary. The official rule text governs.
+</Info>
+
+## In short
+
+Every 3 months, you must give all necessary parties an Ongoing Certification Report (OCR). It summarizes what changed, what's planned, accepted vulnerabilities, transformative changes, agency customers and reportable incidents. You must also offer a way to send feedback on each report and publish a summary of that feedback. Class C and D providers MUST host a live Quarterly Review with agencies every 3 months. Class B providers SHOULD, and Class A providers MAY. The goal is one shared stream of monitoring information that every agency can use, instead of separate requests from each agency.
+
+## Who it applies to
+
+| Subset | Type | Path | Class | Audience |
+| --- | --- | --- | --- | --- |
+| [Agency Guidance](https://www.fedramp.gov/2026/reference/collaborative-continuous-monitoring/#agency-guidance) | 20x, Rev5 | Program, Agency | B, C, D | Agencies |
+| [Ongoing Certification Reports](https://www.fedramp.gov/2026/reference/collaborative-continuous-monitoring/#ongoing-certification-reports) | 20x, Rev5 | Program, Agency | B, C, D | Providers |
+| [Quarterly Reviews](https://www.fedramp.gov/2026/reference/collaborative-continuous-monitoring/#quarterly-reviews) | 20x, Rev5 | Program, Agency | B, C, D | Providers |
+
+Upstream says the provider subsets apply to "providers with any type of FedRAMP Certification."
+
+<Note>
+  The subsets list Classes B, C and D, but `CCM-QTR-MTG` states a Class A variant (MAY). For Class A, [`FRC-CLA-MFR`](https://www.fedramp.gov/2026/reference/fedramp-certification/#mandatory-fedramp-rules-for-class-a) makes `CCM-OCR-AVL` and `CCM-OCR-NRD` mandatory, and [`FRC-CLA-RFR`](https://www.fedramp.gov/2026/reference/fedramp-certification/#recommended-fedramp-rules-for-class-a) recommends `CCM-QTR-MTG`. [`FRC-CSO-PKG`](https://www.fedramp.gov/2026/reference/fedramp-certification/#fedramp-certification-package) also requires a real or example Ongoing Certification Report in your initial Certification Package.
+</Note>
+
+## Key dates
+
+| | 20x | Rev5 |
+| --- | --- | --- |
+| Status | Required (Consolidated Rules for 2026) | Required (Consolidated Rules for 2026) |
+| Optional adoption allowed | 2026-07-04 | 2026-07-04 |
+| Obtaining initial certification | 2026-07-04 | 2027-01-01 |
+| Maintaining ongoing certification | 2027-01-01 | 2027-04-02 |
+| Grace period ends | First FedRAMP independent assessment started after 2027-01-01 | 2027-10-01 |
+
+## What you need to do
+
+### Ongoing Certification Reports
+
+| Rule | Force | What it means for you |
+| --- | --- | --- |
+| [`CCM-OCR-AVL`](https://www.fedramp.gov/2026/reference/collaborative-continuous-monitoring/#report-availability) | MUST | Every 3 months, supply an Ongoing Certification Report to all necessary parties. It must cover the whole period since the previous report, use a consistent human-readable format and include high-level summaries of the items listed below (if applicable). |
+| [`CCM-OCR-NRD`](https://www.fedramp.gov/2026/reference/collaborative-continuous-monitoring/#next-report-date) | MUST | Publish the target date of your next report with your other public FedRAMP Certification Data. |
+| [`CCM-OCR-FBM`](https://www.fedramp.gov/2026/reference/collaborative-continuous-monitoring/#feedback-mechanism) | MUST | Provide an asynchronous way for all necessary parties to give feedback or ask questions about each report. Email works by default, but upstream encourages something more interactive. |
+| [`CCM-OCR-AFS`](https://www.fedramp.gov/2026/reference/collaborative-continuous-monitoring/#anonymized-feedback-summary) | MUST | Publish an anonymized, desensitized summary of the feedback, questions and answers, either as an addendum to the report or in the next report. |
+| [`CCM-OCR-LSI`](https://www.fedramp.gov/2026/reference/collaborative-continuous-monitoring/#limit-sensitive-information) | MUST NOT | Don't irresponsibly disclose sensitive information in a report that would likely have an adverse effect on your offering. |
+| [`CCM-OCR-SOR`](https://www.fedramp.gov/2026/reference/collaborative-continuous-monitoring/#spread-out-reports) | SHOULD | Set a regular 3-month cycle that is "spread out from the beginning, middle, or end of each quarter." The note says the aim is to stop hundreds of providers releasing reports in the first or last week of a quarter and overwhelming agencies. |
+| [`CCM-OCR-RPS`](https://www.fedramp.gov/2026/reference/collaborative-continuous-monitoring/#responsible-public-certification-report-sharing) | MAY | Share some or all of a report publicly or with others if you determine it will NOT likely have an adverse effect on your offering. |
+
+**What the Ongoing Certification Report must summarize (`CCM-OCR-AVL`)**, if applicable:
+
+1. Changes to FedRAMP Certification Data
+2. Planned changes to FedRAMP Certification Data during at least the next 3 months
+3. Accepted vulnerabilities
+4. Transformative changes
+5. Updated recommendations or best practices for security, configuration, usage or similar aspects of the offering
+6. A list of all agencies directly using the product
+7. FedRAMP Reportable Incidents, or an attestation that none occurred
+8. Lessons learned and changes planned or made as a result of FedRAMP Reportable Incidents (if any)
+
+FedRAMP publishes an [Ongoing Certification Report JSON schema](https://fedramp.gov/schemas/fedramp-ongoing-certification-report-schema-2026-06-24.json).
+
+### Quarterly Reviews
+
+| Rule | Force | What it means for you |
+| --- | --- | --- |
+| [`CCM-QTR-MTG`](https://www.fedramp.gov/2026/reference/collaborative-continuous-monitoring/#quarterly-review-meeting) | Varies by class (MAY for A, SHOULD for B, MUST for C and D) | Every 3 months, host a synchronous Quarterly Review, open to all necessary parties, covering the parts of your recent reports you judge most relevant to agencies. See [differences by class](#differences-by-class). |
+| [`CCM-QTR-REG`](https://www.fedramp.gov/2026/reference/collaborative-continuous-monitoring/#meeting-registration-info) | MUST | Give all necessary parties either a registration link or a downloadable calendar file for the Quarterly Review. |
+| [`CCM-QTR-NRD`](https://www.fedramp.gov/2026/reference/collaborative-continuous-monitoring/#next-review-date) | MUST | Publicly supply the target date of your next Quarterly Review with your other public FedRAMP Certification Data. |
+| [`CCM-QTR-NID`](https://www.fedramp.gov/2026/reference/collaborative-continuous-monitoring/#no-irresponsible-disclosure) | MUST NOT | Don't irresponsibly disclose sensitive information in a Quarterly Review that would likely have an adverse effect on your offering. |
+| [`CCM-QTR-SAR`](https://www.fedramp.gov/2026/reference/collaborative-continuous-monitoring/#schedule-around-reports) | SHOULD | Schedule each Quarterly Review at least 3 business days after you release an Ongoing Certification Report, and within 10 business days of that release. |
+| [`CCM-QTR-ACT`](https://www.fedramp.gov/2026/reference/collaborative-continuous-monitoring/#additional-content) | SHOULD | Add any other information you judge to be of interest or use to agencies. |
+| [`CCM-QTR-RTR`](https://www.fedramp.gov/2026/reference/collaborative-continuous-monitoring/#recordtranscribe-reviews) | SHOULD | Record or transcribe Quarterly Reviews and supply them to all necessary parties. |
+| [`CCM-QTR-RTP`](https://www.fedramp.gov/2026/reference/collaborative-continuous-monitoring/#restrict-third-parties) | SHOULD NOT | Don't invite third parties unless they have specific relevance. Your independent assessor counts as relevant by default. |
+| [`CCM-QTR-SRR`](https://www.fedramp.gov/2026/reference/collaborative-continuous-monitoring/#share-recordings-responsibly) | MAY | Share recordings or transcripts publicly or with others ONLY if you remove all agency information (comments, questions, names and so on) AND determine it will NOT likely have an adverse effect. |
+| [`CCM-QTR-SCR`](https://www.fedramp.gov/2026/reference/collaborative-continuous-monitoring/#share-content-responsibly) | MAY | Share content prepared for a Quarterly Review publicly or with others if you determine it will NOT likely have an adverse effect. |
+
+### Agency guidance
+
+These rules apply to agencies, not to you, but they explain who reads your reports and why.
+
+| Rule | Force | What it means for you |
+| --- | --- | --- |
+| [`CCM-AGM-ROR`](https://www.fedramp.gov/2026/reference/collaborative-continuous-monitoring/#review-ongoing-reports) | MUST | Agencies must review each Ongoing Certification Report to understand how changes may affect the risk tolerance in their Authorization to Operate. The note cites 44 USC § 35, OMB A-130, FIPS-200 and M-24-15. |
+| [`CCM-AGM-CSC`](https://www.fedramp.gov/2026/reference/collaborative-continuous-monitoring/#consider-security-category) | SHOULD | Agencies should staff report reviews, Quarterly Reviews and other Certification Data monitoring in line with the Security Category in their Authorization to Operate. |
+
+## Differences by class
+
+Only `CCM-QTR-MTG` varies by class. The cadence is every 3 months for all classes. Only the force changes.
+
+| Rule | Class A | Class B | Class C | Class D |
+| --- | --- | --- | --- | --- |
+| `CCM-QTR-MTG` Host a synchronous Quarterly Review every 3 months | MAY | SHOULD | MUST | MUST |
+
+The Ongoing Certification Report itself (`CCM-OCR-AVL`, every 3 months) is a MUST with no class variants.
+
+## What FedRAMP staff have said
+
+<Note>
+  **Agency meeting tempo becomes quarterly for Rev5.** When a Rev5 provider transitions to the 2026 rules, its tempo for agency meetings changes to a quarterly requirement under `CCM-QTR-MTG`. [paulagosta, 2026-08-24, discussion #146](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18139695)
+</Note>
+
+<Note>
+  **You set the Quarterly Review agenda.** Before the rules were published, a staff member said the Quarterly Review should cover information from your most recent Ongoing Certification Report, such as significant changes, accepted vulnerabilities and incidents. You set the agenda, and dashboards and metrics are fine if they are relevant. Staff encouraged a meeting agencies want to attend, not a verbatim read-through of the report. The comment was labeled "Not official yet" and predates the 2026-06-24 launch. [emu-gov, 2026-06-16, discussion #101](https://github.com/FedRAMP/community/discussions/101#discussioncomment-17328918)
+</Note>
+
+## Related
+
+- [Certification data sharing](/rules/certification-data-sharing): where public and agency-only Certification Data lives
+- [Vulnerability evaluation and reporting](/rules/vulnerability-evaluation-and-reporting): accepted vulnerabilities
+- [Significant change notification](/rules/significant-change-notification): transformative changes
+- [Incident evaluation and communication](/rules/incident-evaluation-and-communication): FedRAMP Reportable Incidents
+- [FedRAMP certification](/rules/fedramp-certification)
+- [Rev5 questions on the 2026 rules](/discussions/rev5-cr26-questions)

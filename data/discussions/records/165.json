@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-165",
+  "node_id": "D_kwDOOxfoic4AoyPp",
+  "number": 165,
+  "title": "Best Path Forward for a Class C to move to Class D",
+  "url": "https://github.com/FedRAMP/community/discussions/165",
+  "category": "Rev5 Discussion",
+  "category_slug": "rev5-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "csearcy46and2",
+  "author_is_official": false,
+  "created_at": "2026-08-26T13:40:45Z",
+  "updated_at": "2026-09-09T17:33:45Z",
+  "last_edited_at": null,
+  "closed": true,
+  "closed_at": "2026-09-09T17:33:44Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "Hello,\r\n\r\nWe have a CSP with a Class C cert wanting to move towards getting a Class D certification and asked if our agency would sponsor them ( I do NOT know why they want to do this as I'm not directly involved in those conversations). I would like to find out 1. Is this even possible to do right now 2. What would be the best path for them to take moving forward (Rev5 Class D or 20X Class D) 3. Has FedRAMP started accepting pilot cases for their Class D certification and could the be a potential candidate for the pilot program? TIA",
+  "comment_count": 1,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4BFSZD",
+      "url": "https://github.com/FedRAMP/community/discussions/165#discussioncomment-18163267",
+      "author": "paulagosta",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2026-08-26T13:53:42Z",
+      "updated_at": "2026-08-26T13:53:42Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Hello\r\n\r\nBefore we jump into answers, a need for an uplift shouldn't be triggered by a CSP desire.  It should be triggered by planned Agency needs.  An agency performing ATO functions for a level it doesnt need seems to be a waste of resources.  Apologies if I am reading into this wrong.  \r\n\r\n1.  Class C to D uplift under Rev 5 is still possible, but the timeline for submission is **very** narrow.  We will not accept an uplift or new Rev 5 package past 11 June 2027, which must come with all required materials (to include uplift ATO). \r\n \r\n2. Is the CSP postured for a Class D assessment?  Have they had a Class D assessment completed by a 3PAO?  What is the normal timeline for ATO at the agency (some agencies are 2 months, a few are greater than a year)?  Answers to those three questions will really drive feasibility since the timeline for submission closes 11 Jun 2027.   \r\n\r\n3.  Not yet, but stay tuned...\r\nPaul",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BFSj9",
+          "url": "https://github.com/FedRAMP/community/discussions/165#discussioncomment-18163965",
+          "author": "csearcy46and2",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-08-26T14:48:01Z",
+          "updated_at": "2026-08-26T14:50:04Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thanks Paul and regarding your first comment about the reasoning for the uplift - I agree. I'm working on my end to get the answer as to the \"why\" they want this and what's driving them down this path. For #2 - I will get those answers along with the reasoning driving the uplift and get back to you.\r\n\r\nHypothetically, lets say they are postured for Class D assessment and they get assessed by a 3PAO and they submit everything and get certified by FedRAMP with flying colors - how long will that Class D cert last before being forced to move over to the 20x format?  Also, will a Class D cert require Agency Sponsor? I believe the answer is yes but wanted to confirm (I'm aware that Class B and Class C do not require Agency sponsorship for 20x Certs). thanks again"
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "csearcy46and2",
+    "paulagosta"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/165#discussioncomment-18163267",
+      "author": "paulagosta",
+      "created_at": "2026-08-26T13:53:42Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [],
+    "topics": [
+      "20x",
+      "3pao",
+      "agency_authorization",
+      "class_b",
+      "class_c",
+      "class_d",
+      "rev5"
+    ]
+  },
+  "content_hash": "ba8dc2f77cabee740d47daeb0459792fbd783dc5f4de3a077816c9e4a24532c4",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

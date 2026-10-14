@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-102",
+  "node_id": "D_kwDOOxfoic4AjB6v",
+  "number": 102,
+  "title": "Security Inbox Questions",
+  "url": "https://github.com/FedRAMP/community/discussions/102",
+  "category": "20x Discussion",
+  "category_slug": "20x-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "iteuscher",
+  "author_is_official": false,
+  "created_at": "2025-11-26T22:38:09Z",
+  "updated_at": "2026-02-11T22:10:03Z",
+  "last_edited_at": null,
+  "closed": true,
+  "closed_at": "2026-02-11T22:10:03Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "A couple questions/comments on the Security Inbox standard. \r\n\r\n1) To clarify FRR-FSI-13, is the \"automatic acknowledgement\" a reply sent back to the email from FedRAMP or is this encouraging CSPs to have automated notification/workflows internally to respond to emails from FedRAMP? We will set up automation internally to note messages that come in and are wondering if FedRAMP is looking for an auto-reply email for FRR-FSI-13. If so, is there any preferred format or content that should be in the automatic reply?\r\n\r\n> FRR-FSI-13\r\n> Providers SHOULD promptly and automatically acknowledge the receipt of messages received from FedRAMP in their FedRAMP Security Inbox.\r\n\r\n2) 2 minor typos in [FRR-FSI-13 Acknowedgement of Receipt](https://www.fedramp.gov/docs/fedramp-security-inbox/#frr-fsi-13-acknowedgement-of-receipt). _Acknowedgement_ should be Acknow**l**ed**gm**ent (missing \"l\" and extra \"e\", unless we prefer the British spelling Acknowledg**e**ment...)\r\n\r\n\r\n3) If anyone is using Gmail for their FedRAMP security inbox and wants automation to send Slack alerts when emails are received from FedRAMP (with deadlines calculated based on FRR-FSI-06) I put together a Google App script and some documentation around it available [here](https://github.com/paramify/fedramp-20x-pilot/blob/main/security-inbox/FedRAMP%20Security%20Inbox%20Setup.md): \r\n\r\nLastly, happy Thanksgiving! 🦃 We're grateful for the FedRAMP team and the work you all put in. \r\n-- Isaac (Paramify)",
+  "comment_count": 1,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4A5oD-",
+      "url": "https://github.com/FedRAMP/community/discussions/102#discussioncomment-15106302",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2025-11-28T14:32:21Z",
+      "updated_at": "2025-11-28T14:32:30Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "> 1. To clarify FRR-FSI-13, is the \"automatic acknowledgement\" a reply sent back to the email from FedRAMP or is this encouraging CSPs to have automated notification/workflows internally to respond to emails from FedRAMP? We will set up automation internally to note messages that come in and are wondering if FedRAMP is looking for an auto-reply email for FRR-FSI-13. If so, is there any preferred format or content that should be in the automatic reply?\r\n\r\nAh, the intent is for automatic acknowledgement to be sent back to the sender (an email auto-reply is likely the default). This will help us understand other potential issues, such as if the email is received to an inbox but no actions are taken then we can be confident it's a problem with how the cloud serviced provider is triaging messages rather than it being a bad email inbox or similar.\r\n\r\nNo preferred format/content at this time, though it'd be cool to see rules for auto-reply set up based on the rest of the requirements (that is, respond differently to \"Important\" vs \"Emergency\" etc.). We're not expecting people to do that unless they want to though!\r\n\r\n>  2. 2 minor typos in [FRR-FSI-13 Acknowedgement of Receipt](https://www.fedramp.gov/docs/fedramp-security-inbox/#frr-fsi-13-acknowedgement-of-receipt). _Acknowedgement_ should be Acknow**l**ed**gm**ent (missing \"l\" and extra \"e\", unless we prefer the British spelling Acknowledg**e**ment...)\r\n\r\nThank you, I fixed this in the FRMR and we'll deploy to the website next week. I guess I'll need to add a spell checker to vscode. ;)\r\n \r\n> Lastly, happy Thanksgiving! 🦃 We're grateful for the FedRAMP team and the work you all put in. -- Isaac (Paramify)\r\n\r\nSamesies!",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "iteuscher",
+    "pete-gov"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/102#discussioncomment-15106302",
+      "author": "pete-gov",
+      "created_at": "2025-11-28T14:32:21Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [
+      "FRR-FSI-06",
+      "FRR-FSI-13"
+    ],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://github.com/paramify/fedramp-20x-pilot/blob/main/security-inbox/FedRAMP%20Security%20Inbox%20Setup.md",
+      "https://www.fedramp.gov/docs/fedramp-security-inbox/#frr-fsi-13-acknowedgement-of-receipt"
+    ],
+    "topics": [
+      "20x"
+    ]
+  },
+  "content_hash": "be9ca3a9704e1549390695ab3ab8c285332ebf73602d6f74d41101a7f5045d36",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

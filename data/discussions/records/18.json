@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-18",
+  "node_id": "D_kwDOOxfoic4AgAIK",
+  "number": 18,
+  "title": "FedRAMP 20x Phase One Pilot Draft Submission - KMI LMS",
+  "url": "https://github.com/FedRAMP/community/discussions/18",
+  "category": "20x Discussion",
+  "category_slug": "20x-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "lowtopp",
+  "author_is_official": false,
+  "created_at": "2025-05-22T19:24:23Z",
+  "updated_at": "2025-08-25T14:27:02Z",
+  "last_edited_at": "2025-05-22T20:23:38Z",
+  "closed": true,
+  "closed_at": "2025-08-25T14:27:02Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "In the spirit of FedRAMP 20x I’m going to keep this post as brief and direct as possible.\r\n\r\n**Cloud Service Provider**: KMI Learning (https://www.kmilearning.com)\r\n**Cloud Service Offering**: KMI LMS – A web-based Learning Management System\r\n**Hosting Platform**: AWS Commercial Region (greenfield deployment specific for 20x pilot) \r\n**3PAO**: TBD to align with 20x aggressive timeline (Coalfire for previous assessments)\r\n**Compliance Status**: FedRAMP authorized, technology partner for Package ID FR2113157410\r\n\r\n**Link to Pilot Submission**: https://github.com/KMI-Learning/FedRAMP-20x-Pilot\r\n\r\nWe are approaching this project with a ‘blank-page’ mindset, where we create entirely new ways to automate our audit, evidence, and validation processes. Our goal is to meet the FedRAMP 20x vision of a 100% machine-verifiable, continuously auditable authorization, without the use of legacy audit techniques like screenshots or static documentation review. \r\n",
+  "comment_count": 1,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4Aymdj",
+      "url": "https://github.com/FedRAMP/community/discussions/18#discussioncomment-13264739",
+      "author": "DavidTurk",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2025-05-25T16:38:51Z",
+      "updated_at": "2025-05-25T16:38:53Z",
+      "upvotes": 2,
+      "minimized": false,
+      "body": "Have to say on initial thinking, this is closest to my quick-and-dirty imagined solution without a premade tool for everything. Would love to see FedRAMP's feedback here.",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "DavidTurk",
+    "lowtopp"
+  ],
+  "official_responses": [],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://github.com/KMI-Learning/FedRAMP-20x-Pilot",
+      "https://www.kmilearning.com"
+    ],
+    "topics": [
+      "20x",
+      "3pao"
+    ]
+  },
+  "content_hash": "1f810b5bee02a51dc3642532b53c7742d6b41eb072115fa94e6eb8bad7c6d4c5",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

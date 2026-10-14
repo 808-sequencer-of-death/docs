@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-173",
+  "node_id": "D_kwDOOxfoic4ApTsM",
+  "number": 173,
+  "title": "Oops! New Assessor Meeting Link for TODAY",
+  "url": "https://github.com/FedRAMP/community/discussions/173",
+  "category": "20x Discussion",
+  "category_slug": "20x-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "emu-gov",
+  "author_is_official": true,
+  "created_at": "2026-09-16T16:48:59Z",
+  "updated_at": "2026-09-16T18:37:00Z",
+  "last_edited_at": null,
+  "closed": true,
+  "closed_at": "2026-09-16T18:37:00Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "Oops! We had some crossed wires with today's Assessors and Advisors Community Update and the meeting URL in the event is unfortunately inaccessible. This meeting is taking place in only a few minutes, but we will follow up with a recording of the event for everyone that missed it due to the mixup. If you're planning on attending and free right now, please head over to this URL at 1PM Eastern today, Wednesday Sep 16: https://meet.google.com/fer-zcgz-idr ",
+  "comment_count": 1,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4BGdPT",
+      "url": "https://github.com/FedRAMP/community/discussions/173#discussioncomment-18469843",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2026-09-16T18:37:00Z",
+      "updated_at": "2026-09-16T18:37:00Z",
+      "upvotes": 2,
+      "minimized": false,
+      "body": "We did it and almost 200 people still showed up! Yay!",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "emu-gov",
+    "pete-gov"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/173#discussioncomment-18469843",
+      "author": "pete-gov",
+      "created_at": "2026-09-16T18:37:00Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://meet.google.com/fer-zcgz-idr"
+    ],
+    "topics": [
+      "3pao"
+    ]
+  },
+  "content_hash": "fbfd3046b2628e0dd11bba404f01c7d6acad57cae63142c83e3d0d6d3f829106",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-164",
+  "node_id": "D_kwDOOxfoic4Aot7E",
+  "number": 164,
+  "title": "Should these five rules carry timeframe_type/timeframe_num?",
+  "url": "https://github.com/FedRAMP/community/discussions/164",
+  "category": "20x Discussion",
+  "category_slug": "20x-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "ktalons",
+  "author_is_official": false,
+  "created_at": "2026-08-24T02:24:13Z",
+  "updated_at": "2026-09-13T20:54:32Z",
+  "last_edited_at": null,
+  "closed": true,
+  "closed_at": "2026-09-13T20:54:31Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "Sharing a consistency check I ran in a personal capacity while building against the consolidated rules dataset.\r\n\r\nI'm planning to maintain an open-source tool that computes VDR and VER response deadlines by reading `fedramp-consolidated-rules.json` rather than embedding the numbers, so that a change to a cadence upstream reaches the tool without a code change. That means every timeframe has to be derivable from the data. I walked all 246 FRR rules at `v2026.07.14.01` to find the ones where it is not.\r\n\r\n**What holds, and it holds cleanly.** The dataset encodes timeframes in two shapes and is consistent about both, and `AGENTS.md` documents both placements: it lists simple timeframes among the fields a class-specific variant may carry, and again among the \"other useful top-level fields\" a requirement may carry. Rules that vary by class put `timeframe_type` and `timeframe_num` inside each `varies_by_class` entry. Flat rules carry the same pair at the top level, and 17 of them do: `AFC-FRP-PNT` (bizdays 10), `CDS-CSO-FRC` (weeks 2), `CDS-UTC-AAD` (bizdays 5), six `REC-IAS-*` rules, five `SCN-*` rules, and `VER-TFR-MHR` (months 1) and `VER-TFR-MAV` (days 192). No rule mixes the two shapes. As a consumer that is genuinely nice to work against.\r\n\r\n**The exceptions.** Five flat rules state a numeric timeframe in the statement and encode nothing:\r\n\r\n| Rule | Force | Prose timeframe |\r\n| --- | --- | --- |\r\n| `VDR-TFR-NMV` | MUST | at least once every 3 months |\r\n| `CCM-OCR-AVL` | MUST | every 3 months |\r\n| `IVV-CSF-MCA` | MUST | every 3 years |\r\n| `MKT-IIP-DLA` | MUST | within 2 years |\r\n| `MKT-CAS-RFR` | MUST | within 5 business days |\r\n\r\nA sixth, `CCM-QTR-SAR`, states a two-sided window (\"at least 3 business days after ... AND within 10 business days of such release\") that a single `timeframe_type` / `timeframe_num` pair cannot express, so I have left it out rather than counting it as a gap.\r\n\r\nTo be clear about what this is not: nothing here is a schema violation. `dependentRequired` in `frr_requirement` and `frr_requirement_level` only pairs the two fields when one is present, so the file validates today either way. This is about what a consumer can derive.\r\n\r\n**Consumer consequence.** Any tool that builds a compliance calendar from `timeframe_type` / `timeframe_num` silently drops these five cadences, and all five are MUST rules. `VDR-TFR-NMV` is the one that bites me directly: every other timeframe in my VDR and VER calculations comes out of the data, and this one has to be hardcoded, which is exactly the failure the structured fields prevent. `VDR-TFR-PDD` sits one rule below it and its Class A value is `months` / `3`, the same cadence NMV states in prose.\r\n\r\n**The question.** Is the omission deliberate on some or all of these? I can see an argument that a verification cadence is a different kind of thing from a response clock and was left unencoded on purpose. If so, I would rather record that as a documented decision than carry a hardcoded exception. If it is simply a gap, each is a two-line addition, and I am happy to open a PR if that is useful.\r\n\r\nAlso worth linking: @badgerinspace raised `VDR-TFR-NMV` from the interpretation side in [this comment on #146](https://github.com/FedRAMP/community/discussions/146#discussioncomment-17908116) on 2026-08-05, still unanswered. Different question, same rule.\r\n\r\nKyle Versluis (personal capacity)",
+  "comment_count": 2,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4BGFkx",
+      "url": "https://github.com/FedRAMP/community/discussions/164#discussioncomment-18372913",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2026-09-09T17:32:15Z",
+      "updated_at": "2026-09-09T17:32:15Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Catching up - I did the timeframes mostly by hand and probably missed these. I will add it to my list for an update to fix!",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BGSZ4",
+      "url": "https://github.com/FedRAMP/community/discussions/164#discussioncomment-18425464",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2026-09-13T20:54:31Z",
+      "updated_at": "2026-09-13T20:54:31Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "This will be fixed in version `2026.09.13.01` - I've also adjusted the schema to include an optional `timeframe_num_min` and `timeframe_num_max` for the one rule that has that because it makes sense to have it. Thank you for the report!",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "ktalons",
+    "pete-gov"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/164#discussioncomment-18372913",
+      "author": "pete-gov",
+      "created_at": "2026-09-09T17:32:15Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/164#discussioncomment-18425464",
+      "author": "pete-gov",
+      "created_at": "2026-09-13T20:54:31Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [
+      "FRP-PNT"
+    ],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [
+      146
+    ],
+    "urls": [
+      "https://github.com/FedRAMP/community/discussions/146#discussioncomment-17908116"
+    ],
+    "topics": [
+      "class_a",
+      "machine_readable",
+      "vulnerability_mgmt"
+    ]
+  },
+  "content_hash": "b3d8bb7f1eca65212940226271ed15edb32a060d572fe84748777ecef59c9c5c",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

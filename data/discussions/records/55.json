@@ -1,0 +1,250 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-55",
+  "node_id": "D_kwDOOxfoic4Agg7m",
+  "number": 55,
+  "title": "General Questions about FedRAMP 20X",
+  "url": "https://github.com/FedRAMP/community/discussions/55",
+  "category": "20x Discussion",
+  "category_slug": "20x-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "g-gerchow",
+  "author_is_official": false,
+  "created_at": "2025-07-02T17:14:26Z",
+  "updated_at": "2025-08-25T14:23:27Z",
+  "last_edited_at": null,
+  "closed": true,
+  "closed_at": "2025-08-25T14:23:27Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 2,
+  "body": "Hello all, looking for some guidance here. Do folks see much pushback on \"Low Impact\"? And how does one get into the Pilot Program? Also, has anyone worked with Knox? Thank you; I was unsure where to go so if there is a better place please let me know. ",
+  "comment_count": 5,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4A0DRg",
+      "url": "https://github.com/FedRAMP/community/discussions/55#discussioncomment-13644896",
+      "author": "emu-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2025-07-02T19:39:17Z",
+      "updated_at": "2025-07-02T19:39:19Z",
+      "upvotes": 2,
+      "minimized": false,
+      "body": "Pilot Program wise, check out https://www.fedramp.gov/20x/phase-one/ for submission details. The 20x-P1 Pilot for low is still active and accepting submissions.",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A0DRx",
+          "url": "https://github.com/FedRAMP/community/discussions/55#discussioncomment-13644913",
+          "author": "g-gerchow",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-07-02T19:41:49Z",
+          "updated_at": "2025-07-02T19:41:50Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thank you @emu-gov very useful"
+        },
+        {
+          "id": "DC_kwDOOxfoic4A0OmJ",
+          "url": "https://github.com/FedRAMP/community/discussions/55#discussioncomment-13691273",
+          "author": "Regul-000",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-07-08T05:47:32Z",
+          "updated_at": "2025-07-08T05:47:33Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Hi @emu-gov, \r\nis the best submission zone still  https://www.fedramp.gov/20x/phase-one/ for the 20x P1 pilot?"
+        }
+      ],
+      "replies_total": 2,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A0DSW",
+      "url": "https://github.com/FedRAMP/community/discussions/55#discussioncomment-13644950",
+      "author": "iteuscher",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2025-07-02T19:47:43Z",
+      "updated_at": "2025-07-02T19:47:44Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "> Do folks see much pushback on \"Low Impact\"? \r\n\r\nRight now 20x is doing the pilot for Low Impact (phase one) which will pave the way for 20x Moderate Impact (phase two) currently scheduled to start pilot in Sept 2025. You can see the roadmap here: https://github.com/orgs/FedRAMP/projects/25/views/1\r\n\r\nIn terms of what impact level you should do it really depends on the type of data you are processing and storing. ",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A0DVP",
+          "url": "https://github.com/FedRAMP/community/discussions/55#discussioncomment-13645135",
+          "author": "g-gerchow",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-07-02T20:20:16Z",
+          "updated_at": "2025-07-02T20:20:17Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thank you. I have been through Moderate twice, once at Sumo and then again at MongoDB. However, I never started with Low Impact. In those other two companies, we achieved FedRAMP Ready status before obtaining agency ATO. What you about paving the way for Moderate makes a ton of sense. "
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A0Qdz",
+      "url": "https://github.com/FedRAMP/community/discussions/55#discussioncomment-13698931",
+      "author": "DataDude100",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2025-07-08T17:08:19Z",
+      "updated_at": "2025-07-08T17:08:19Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Hi - Will any interim official statuses (e.g., **Ready**, **In-Process**) from Rev5 be persisted into 20x? FedRAMP Ready doesn't make too much sense but FedRAMP In-Process may still be useful to indicate a CSP has submitted an electronic package for adjudication. Thanks.",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A0aYQ",
+          "url": "https://github.com/FedRAMP/community/discussions/55#discussioncomment-13739536",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2025-07-12T15:19:16Z",
+          "updated_at": "2025-07-12T15:19:17Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Yes - we'll likely revisit the overall status flow during this process, but currently 20x includes the In Process status. In fact, there are currently four CSPs in that status right now. ;)\r\n\r\n<img width=\"1233\" height=\"543\" alt=\"Screenshot 2025-07-12 at 11 18 49 AM\" src=\"https://github.com/user-attachments/assets/848fc7e9-6cd7-4ba6-bdc0-54ec1e5cc889\" />\r\n\r\n"
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A0ZBp",
+      "url": "https://github.com/FedRAMP/community/discussions/55#discussioncomment-13733993",
+      "author": "aj327",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2025-07-11T16:58:19Z",
+      "updated_at": "2025-07-11T16:58:21Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Hi -- is there a roadmap for when the next set of RFCs will begin? Apologies if ive missed an obvious link somewhere in github",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A0aYL",
+          "url": "https://github.com/FedRAMP/community/discussions/55#discussioncomment-13739531",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2025-07-12T15:17:41Z",
+          "updated_at": "2025-07-12T15:17:41Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Our working roadmap is here: https://github.com/FedRAMP/roadmap/\r\n\r\nIt's a working roadmap so things are constantly shifting around, but I expect at least one RFC this coming week. ;)"
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A0jTl",
+      "url": "https://github.com/FedRAMP/community/discussions/55#discussioncomment-13776101",
+      "author": "MatthewSciberras1981",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2025-07-16T11:18:16Z",
+      "updated_at": "2025-07-16T11:18:17Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Given that the last day for 20x low submission is the 15th of August - for those that will not manage to provide it in time, some clarity required:\r\n\r\n1. Will the Phase 2 moderate be available for public or only for the ones that submitted for phase 1? \r\n2. Phase 1 low will be officially released for the rest around October. Should we wait for the Phase 1 official release or be able to jump on the 20x moderate wagon once the phase 2 pilot is out? \r\n\r\nI'd like to properly educate myself and see what is best for my company (Invicti Security), since our interest is moderate. \r\n\r\n//Matt ",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A0jb-",
+          "url": "https://github.com/FedRAMP/community/discussions/55#discussioncomment-13776638",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2025-07-16T12:18:03Z",
+          "updated_at": "2025-07-16T12:18:04Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "All of these timelines and answers are subject to change - this isn't business advice, please don't make business decisions based on our transparency with goals, etc. etc. etc.\r\n\r\n1. The plan is for Phase Two to be open to the public, but folks who actively participated in Phase One will be _prioritized._ That may or may not matter depending on demand, but our team's capacity is still small and the pilots include some pretty bespoke artisanal hand crafting that take time and effort to unravel. If everyone that participated in the Phase One pilot submits during Phase Two then there's a good chance that will fill up our capacity in Phase Two.\r\n\r\n2. Pilots are not ideal for companies who aren't willing to take risks and commit to work that will likely need to be redone later. Generally, if a company is trying to optimize their investment and involvement, they are likely much better off waiting for a formal path that has a few more guardrails and for _automation tooling to be more widely available_ so folks don't have to roll their own.\r\n\r\nOur intent is that anyone doing work against the 20x Phase One requirements will be well positioned to obtain a formal 20x Low authorization when that path is released (and repeat, for Phase Two). "
+        },
+        {
+          "id": "DC_kwDOOxfoic4A0jmP",
+          "url": "https://github.com/FedRAMP/community/discussions/55#discussioncomment-13777295",
+          "author": "MatthewSciberras1981",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-07-16T13:18:47Z",
+          "updated_at": "2025-07-16T13:18:48Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thanks Pete for the clarity."
+        }
+      ],
+      "replies_total": 2,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "DataDude100",
+    "MatthewSciberras1981",
+    "Regul-000",
+    "aj327",
+    "emu-gov",
+    "g-gerchow",
+    "iteuscher",
+    "pete-gov"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/55#discussioncomment-13644896",
+      "author": "emu-gov",
+      "created_at": "2025-07-02T19:39:17Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/55#discussioncomment-13739536",
+      "author": "pete-gov",
+      "created_at": "2025-07-12T15:19:16Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/55#discussioncomment-13739531",
+      "author": "pete-gov",
+      "created_at": "2025-07-12T15:17:41Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/55#discussioncomment-13776638",
+      "author": "pete-gov",
+      "created_at": "2025-07-16T12:18:03Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://github.com/FedRAMP/roadmap/",
+      "https://github.com/orgs/FedRAMP/projects/25/views/1",
+      "https://github.com/user-attachments/assets/848fc7e9-6cd7-4ba6-bdc0-54ec1e5cc889",
+      "https://www.fedramp.gov/20x/phase-one/"
+    ],
+    "topics": [
+      "20x",
+      "rev5"
+    ]
+  },
+  "content_hash": "0850e4c4f717b67aaeb41019ae00cc33a9d0a7759a21dae23de6f3671133b6f1",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

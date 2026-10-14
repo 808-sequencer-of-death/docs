@@ -1,0 +1,55 @@
+---
+title: "What changed"
+description: "Upstream FedRAMP rule releases and updates to this knowledge base, newest first."
+sidebarTitle: "What changed"
+---
+
+This page tracks two things: changes FedRAMP makes to the Consolidated Rules for 2026, and changes to this site. Each upstream entry summarizes FedRAMP's own [changelog](https://www.fedramp.gov/2026/changelog/) and links the official rules and our summaries. The official changelog governs if anything here differs.
+
+<Update label="Launch" description="Knowledge base launched on 2026-10-14">
+  - **Site:** launched this knowledge base, checked against upstream release `2026.10.14.01`.
+  - **Rules:** published [Rule summaries](/rules), including a provider's step-by-step path through every ruleset, [Provider deliverables](/rules/provider-deliverables), [FRR and KSI](/rules/frr-and-ksi) and a summary page for each ruleset.
+  - **Discussions:** published the [discussion digests](/discussions), which separate FedRAMP staff positions from community comments.
+</Update>
+
+<Update label="2026-10-14" description="Upstream 2026.10.14.01">
+  - **Rules:** no rule text changed. FedRAMP improved search on its site: machine-generated rulesets are now excluded from search except the [Ruleset Reference](https://www.fedramp.gov/2026/reference/), and per-rule changelogs are hidden from search results.
+  - **Control mappings:** the per-rule changelogs in this release record control-mapping updates dated 2026-10-13 on 35 FRR rules and 40 Key Security Indicators. FedRAMP's release notes don't mention them. See [FRR and KSI](/rules/frr-and-ksi#2-both-now-map-to-nist-sp-800-53) and the official [Key Security Indicators](https://www.fedramp.gov/2026/reference/key-security-indicators/) page.
+</Update>
+
+<Update label="2026-10-08" description="Upstream 2026.10.08.01">
+  - **Rules:** FedRAMP described this release as typos and convenience only, but it includes two rule changes for 20x providers:
+    - Removed `FRC-CSX-MOT` (Metrics Over Time for Key Security Indicators) as duplicative of [`SDR-CSX-KMT`](https://www.fedramp.gov/2026/reference/security-decision-record/#key-security-indicator-metrics). See [FedRAMP certification](/rules/fedramp-certification).
+    - Changed [`SDR-CSX-KMT`](https://www.fedramp.gov/2026/reference/security-decision-record/#key-security-indicator-metrics) (Key Security Indicator Metrics) from MUST to SHOULD for Class B, and clarified that Class C daily metric data includes the status of persistent validation. The forces are now A: MAY, B: SHOULD, C: MUST, D: MUST. See [Security decision record](/rules/security-decision-record).
+  - **Content:** added the [FedRAMP Trigrams](https://www.fedramp.gov/2026/trigrams/) page, which explains the three-letter codes used in rule IDs.
+  - **Content:** fixed "understand" to "understood" in the SHOULD NOT explanation on the [Rules page](https://www.fedramp.gov/2026/rules/#force-of-the-rule) and in the definition, after a community report in [FedRAMP/2026 discussion #124](https://github.com/FedRAMP/2026/discussions/124#discussioncomment-18818629).
+</Update>
+
+<Update label="2026-10-05" description="Upstream 2026.10.05.01">
+  - **Rules:** clarifications to seven rules. FedRAMP now tracks rule improvements as [issues in the FedRAMP Rules repository](https://github.com/FedRAMP/rules/issues).
+    - [`VER-EVA-EPA`](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#estimate-potential-agency-impact) (Estimate Potential Agency Impact): added PAIN N0 for vulnerabilities whose exploitation is extremely unlikely to have any adverse effect on agencies. See [Vulnerability evaluation and reporting](/rules/vulnerability-evaluation-and-reporting).
+    - [`FRC-CSO-JSN`](https://www.fedramp.gov/2026/reference/fedramp-certification/#fedramp-json-schemas) (FedRAMP JSON Schemas): public JSON MUST work with modern web frameworks, including CORS access from other domains and headers such as `Content-Type: application/json`. See [FedRAMP certification](/rules/fedramp-certification).
+    - [`CDS-CSO-PUB`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#public-information) (Public Information): the logo link must be a valid, properly named image that displays in a browser without processing. See [Certification data sharing](/rules/certification-data-sharing).
+    - [`CMU-CSO-UVM`](https://www.fedramp.gov/2026/reference/cryptographic-module-use/#using-validated-cryptographic-modules) (Using Validated Cryptographic Modules): added a note that new algorithms added in a module's update stream aren't covered as validated. See [Cryptographic module use](/rules/cryptographic-module-use).
+    - [`MKT-CAS-LRQ`](https://www.fedramp.gov/2026/reference/marketplace-listing/#listing-requests-for-advisors) and [`MKT-IAS-LRQ`](https://www.fedramp.gov/2026/reference/marketplace-listing/#listing-requests-for-assessors): updated the listing form names and URLs. See [Marketplace listing](/rules/marketplace-listing).
+    - [`FRC-CSF-RDY`](https://www.fedramp.gov/2026/reference/fedramp-certification/#fedramp-ready-conversion) (FedRAMP Ready Conversion): grammar fix only.
+  - **Discussions:** the `FRC-CSO-JSN` change follows FedRAMP staff comments by `pete-gov` on 2026-09-17 in [discussion #175](https://github.com/FedRAMP/community/discussions/175#discussioncomment-18480627), which said FedRAMP planned to make clear that JSON must be directly consumable by web applications.
+  - **Content:** adopted new social cards on the official site.
+</Update>
+
+<Update label="2026-09-22" description="Upstream 2026.09.22.01">
+  - **Rules:** no rule text changed.
+  - **Content:** the [Rev5 Deadlines](https://www.fedramp.gov/2026/providers/updating/deadlines/rev5/) and [20x Deadlines](https://www.fedramp.gov/2026/providers/updating/deadlines/20x/) pages now explain how to apply each date. The labels on every ruleset changed: "Obtain" is now "Obtaining Initial Certification", "Maintain" is now "Maintaining Ongoing Certification", and "Grace Ends" is now "Grace Period Ends". See [Key dates](/rules#key-dates).
+</Update>
+
+<Update label="2026-09-13" description="Upstream 2026.09.13.02">
+  - **Rules:** readability and metadata updates, several contributed by the community (including [discussion #164](https://github.com/FedRAMP/community/discussions/164)):
+    - [`CCM-OCR-AVL`](https://www.fedramp.gov/2026/reference/collaborative-continuous-monitoring/#report-availability): report contents are required "if applicable", depending on type or class. See [Collaborative continuous monitoring](/rules/collaborative-continuous-monitoring).
+    - [`CPO-CSO-OVR`](https://www.fedramp.gov/2026/reference/certification-package-overview/#overview-of-the-cloud-service-offering), [`CPO-CSO-MTD`](https://www.fedramp.gov/2026/reference/certification-package-overview/#certification-package-overview-metadata), [`CPO-CSO-OSA`](https://www.fedramp.gov/2026/reference/certification-package-overview/#overall-summary-of-assessment-in-certification-package) and [`CPO-CSF-CPM`](https://www.fedramp.gov/2026/reference/certification-package-overview/#certification-package-maintenance-for-rev5): the Rev5 grace period moved from January 1 to July 1, 2027 (still tied to the next independent assessment). `CPO-CSF-CPM` now applies to Rev5 Classes B to D only. See [Certification package overview](/rules/certification-package-overview).
+    - [`FRC-CCL-UCC`](https://www.fedramp.gov/2026/reference/fedramp-certification/#upgrading-certification-class), [`FRC-CCL-DCC`](https://www.fedramp.gov/2026/reference/fedramp-certification/#downgrading-certification-class) and [`FRC-CCL-DNP`](https://www.fedramp.gov/2026/reference/fedramp-certification/#downgrade-notification-period): the class-change subset now applies to Classes B to D. See [FedRAMP certification](/rules/fedramp-certification).
+    - [`IEC-CSO-OIR`](https://www.fedramp.gov/2026/reference/incident-evaluation-and-communication/#ongoing-incident-reports): removed a duplicated word. See [Incident evaluation and communication](/rules/incident-evaluation-and-communication).
+    - [`AGU-AGC-LIA`](https://www.fedramp.gov/2026/reference/agency-use/#agency-liaison-program) and [`AGU-USE-ABU`](https://www.fedramp.gov/2026/reference/agency-use/#authorization-before-use): updated reference URLs. See [Agency use](/rules/agency-use).
+    - Structured timeframe metadata added to existing timeframes in [`CCM-QTR-SAR`](https://www.fedramp.gov/2026/reference/collaborative-continuous-monitoring/#schedule-around-reports), [`IVV-CSF-MCA`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#mandatory-control-assessment), [`MKT-CAS-RFR`](https://www.fedramp.gov/2026/reference/marketplace-listing/#advisor-responses-to-fedramp), [`MKT-IIP-DLA`](https://www.fedramp.gov/2026/reference/marketplace-listing/#deadline-for-assessment) and [`VDR-TFR-NMV`](https://www.fedramp.gov/2026/reference/vulnerability-detection-and-response/#non-machine-verification-and-validation). The requirements themselves didn't change.
+  - **Definitions:** added [FedRAMP Definitions](https://www.fedramp.gov/2026/definitions/) for each force keyword: `FRD-MST` (MUST), `FRD-MNT` (MUST NOT), `FRD-SHD` (SHOULD), `FRD-SNT` (SHOULD NOT) and `FRD-MAY` (MAY). See [How to read the force of a rule](/rules#how-to-read-the-force-of-a-rule).
+  - **Content:** the force keyword in each rule statement now links to its definition, and the [Force of the Rule](https://www.fedramp.gov/2026/rules/#force-of-the-rule) section moved from a table to separate callouts.
+</Update>

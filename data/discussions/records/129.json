@@ -1,0 +1,439 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-129",
+  "node_id": "D_kwDOOxfoic4Ak-mx",
+  "number": 129,
+  "title": "General discussion and Q&A for RFCs related to Rev5 Updates (RFCs 0026, 0027, 0028, 0029, & 0030)",
+  "url": "https://github.com/FedRAMP/community/discussions/129",
+  "category": "General RFC Discussion",
+  "category_slug": "general-rfc-discussion",
+  "labels": [
+    "FedRAMP Official",
+    "question(s)"
+  ],
+  "is_official_thread": true,
+  "is_rfc": true,
+  "author": "rhoesing",
+  "author_is_official": false,
+  "created_at": "2026-03-19T16:40:04Z",
+  "updated_at": "2026-04-23T12:00:54Z",
+  "last_edited_at": null,
+  "closed": true,
+  "closed_at": "2026-04-23T12:00:54Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "This thread should be used to ask general questions about RFCs 0026-0030.  All of these RFCs are related to Rev5 so we bundled them together in one large release however broke them out into smaller RFCs to help gather comments incrementally to avoid one large RFC. ",
+  "comment_count": 6,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4A-O0J",
+      "url": "https://github.com/FedRAMP/community/discussions/129#discussioncomment-16313609",
+      "author": "wisecryptic",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-03-25T18:07:47Z",
+      "updated_at": "2026-03-25T18:07:47Z",
+      "upvotes": 2,
+      "minimized": false,
+      "body": "RFC-0027, I believe that there is a mistake in the final CM-12(1) control change? the title refers to CM-12(1) but the body refers to CP-2(8)",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A-O09",
+          "url": "https://github.com/FedRAMP/community/discussions/129#discussioncomment-16313661",
+          "author": "wisecryptic",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-03-25T18:09:54Z",
+          "updated_at": "2026-03-25T18:09:54Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "jtb-p made the same comment in the RFC thread\r\nhttps://github.com/FedRAMP/community/discussions/131#discussioncomment-16235494"
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A-PXc",
+      "url": "https://github.com/FedRAMP/community/discussions/129#discussioncomment-16315868",
+      "author": "adamlang-1kosmos",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-03-25T19:32:02Z",
+      "updated_at": "2026-03-25T19:32:02Z",
+      "upvotes": 3,
+      "minimized": false,
+      "body": "Can new RFCs be added to the Public Notice page? https://www.fedramp.gov/notices/  It would be nice to be able to rely on that RSS feed for the initial RFCs and not just the outcomes to them.",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A-Pcq",
+          "url": "https://github.com/FedRAMP/community/discussions/129#discussioncomment-16316202",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-03-25T19:49:43Z",
+          "updated_at": "2026-03-25T19:50:18Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "You can use the website changelog RSS feed for updates that include when new RFCs are posted: https://www.fedramp.gov/changelog/rss.xml\r\n\r\n(we cobbled these together pretty fast and it would make sense to have a sorta central approach, alas)\r\n\r\n"
+        },
+        {
+          "id": "DC_kwDOOxfoic4A-Pgz",
+          "url": "https://github.com/FedRAMP/community/discussions/129#discussioncomment-16316467",
+          "author": "adamlang-1kosmos",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-03-25T20:01:37Z",
+          "updated_at": "2026-03-25T20:02:05Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thanks.\r\n\r\nDo I assume correctly that would then also grab changes to the Public Notices page and I can unsubscribe from that RSS feed then?"
+        },
+        {
+          "id": "DC_kwDOOxfoic4A-Pw-",
+          "url": "https://github.com/FedRAMP/community/discussions/129#discussioncomment-16317502",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-03-25T21:05:38Z",
+          "updated_at": "2026-03-25T21:05:38Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> Do I assume correctly that would then also grab changes to the Public Notices page and I can unsubscribe from that RSS feed then?\r\n\r\nYes, but the updates on the changelog RSS are just like \"hey there's a new public notice\" whereas the public notices RSS feed will actually have the entire public notice content. :)"
+        }
+      ],
+      "replies_total": 3,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A-TlN",
+      "url": "https://github.com/FedRAMP/community/discussions/129#discussioncomment-16333133",
+      "author": "wisecryptic",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-03-26T21:20:35Z",
+      "updated_at": "2026-03-26T21:20:35Z",
+      "upvotes": 3,
+      "minimized": false,
+      "body": "RFC-0026 states: Providers implementing the Vulnerability Detection and Response Balance Improvement Release do not maintain Plans of Action & Milestones.\r\nWhere do these providers track non vulnerability findings? Is this in the RET/non-prescribed document for both 20x and rev 5?",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A-jpE",
+          "url": "https://github.com/FedRAMP/community/discussions/129#discussioncomment-16398916",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-03-31T18:26:18Z",
+          "updated_at": "2026-03-31T18:26:18Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Sorry I missed this Q in my stack - there is no such thing as a \"non-vulnerability finding\" - a vulnerability by definition includes assessment findings:\r\n\r\n> [FedRAMP Definition of **Vulnerability**](https://www.fedramp.gov/docs/rev5/balance/fedramp-definitions/#vulnerability): Has the meaning given to \"security vulnerability\" in [6 USC § 650 (25)](https://www.govinfo.gov/app/details/USCODE-2024-title6/USCODE-2024-title6-chap1-subchapXVIII-sec650), which is \"any attribute of hardware, software, process, or procedure that could enable or facilitate the defeat of [...] management, operational, and technical controls used to protect against an unauthorized effort to adversely affect the confidentiality, integrity, and availability of an information system or its information.\" This includes gaps in Rev5 controls and 20x Key Security Indicators, software vulnerabilities, misconfigurations, exposures, weak credentials, insecure services, and all other such potential weaknesses in protection (intentional or unintentional).\r\n\r\nThe VDR has specific instructions for reporting on [Vulnerability Details](https://www.fedramp.gov/docs/rev5/balance/vulnerability-detection-and-response/#vulnerability-details). These are similar in scope to what used to be a POA&M, however it also allows the cloud service provider to just straight up accept a vulnerability (definition: [accepted vulnerability](https://www.fedramp.gov/docs/rev5/balance/fedramp-definitions/#accepted-vulnerability)) and provides instructions on how to [Mark Accepted Vulnerabilities](https://www.fedramp.gov/docs/rev5/balance/vulnerability-detection-and-response/#mark-accepted-vulnerabilities).\r\n\r\nSo if there is a traditional finding where the result is that the cloud service just doesn't intend to address it for whatever reason, they would document it as an Accepted Vulnerability and it would live in their vulnerability reports forever or until they have a reason to revisit and fix it.\r\n"
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A-8Fp",
+      "url": "https://github.com/FedRAMP/community/discussions/129#discussioncomment-16499049",
+      "author": "cb-axon",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-04-09T06:35:07Z",
+      "updated_at": "2026-04-09T06:35:07Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Am I reading RFC-026 right that if a rev5 CSP does NOT adopt VDR yet, they will be required to make available to all agency customers raw scan results of every type?",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A_Ian",
+          "url": "https://github.com/FedRAMP/community/discussions/129#discussioncomment-16549543",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-04-13T22:47:10Z",
+          "updated_at": "2026-04-13T22:50:01Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Can you point to a specific section here, RFC-0026 doesn't have anything specific about scan results. If it's a general question about making continuous monitoring materials available to all agency customers then yes, this is already required, Rev5 certified providers have to upload raw scan data to their shared folder.\r\n\r\nedit - [adding direct link to source requirement](https://www.fedramp.gov/docs/rev5/playbook/csp/continuous-monitoring/overview/#independent-assessment-organizations:~:text=Each%20month%2C%20the%20CSP%20uploads%20an%20up%2Dto%2Ddate%20POA%26M%20and%20inventory%2C%20along%20with%20raw%20vulnerability%20scan%20files%20(when%20required%20by%20agreements%20with%20agency%20customers)%20and%20reports%20to%20the%20secure%20repository.), and noting that it does have a caveat for \"when required by agreements with agency customers.\""
+        },
+        {
+          "id": "DC_kwDOOxfoic4A_If9",
+          "url": "https://github.com/FedRAMP/community/discussions/129#discussioncomment-16549885",
+          "author": "cb-axon",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-04-13T23:56:28Z",
+          "updated_at": "2026-04-13T23:56:28Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "\"Providers MUST share vulnerability information with all agency customers and FedRAMP using one of the following two processes:\n\nImplementing the Vulnerability Detection and Response Balance Improvement Release for Rev5 (either in Beta or Wide Release); or\n\nSharing Operating System, Database, Web Application, Container, and Service Configuration Scans, at least monthly; AND sharing updated Plans of Action and Milestones (POA&Ms), at least monthly; AND sharing all scans performed by an Independent Assessor, at least annually.\"\n\n\nI read the non-VDR path as explicitly requiring raw scan results. To be clear, right now we don't typically have to share raw scan results with all agencies. Just lead agencies. Most agencies lack the capabilities to parse all of our raw scan results anyways, to the point where even the lead agency doesn't do it. Personally, I think parsing by 3PAOs during assessments is validation enough, given that agencies are not equipped to handle such information. Can you clarify if the intent with these lines is to require raw scans be shared in rev5 with all agencies, and NOT in VDR? If so, it sounds like VDR is actually a step backwards for transparency, though an improvement in disclosure safety. I'd rather see the requirement for providing monthly or continuous raw vuln scans removed entirely, and they be artifacts of 3PAO review only, and disclaimers made that csps may redact necessary information from scan results to protect the system as well (even with 3PAOs), so long as level of risk is understood well enough for assessment."
+        },
+        {
+          "id": "DC_kwDOOxfoic4A_N1L",
+          "url": "https://github.com/FedRAMP/community/discussions/129#discussioncomment-16571723",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-04-15T14:40:12Z",
+          "updated_at": "2026-04-15T14:40:12Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thanks, I must be context switching too much in the small amount of time I have to pop into GitHub and pulled up the wrong RFC. Thanks for your patience and providing that. \r\n\r\nYes, this update to CA-7 would require sharing of scan data with all customers and FedRAMP; this is already expected, and folks upload this info to their shared folder. We've even audited it to monitor usage, but former JAB authorized services used to send that data just to FR for distribution and High impact services control access to their data in a way that FR doesn't audit it as effectively. The update isn't really intended to change requirements as much to clarify that things should work for former-JAB services the same way they work for everyone else, which is that agencies that want to see this should be able to. Even if they are never reviewed, they **can** be reviewed as needed. I'm aware of at least one instance where an OIG dinged an agency for not verifying integrity and accuracy of the raw scan logs on a monthly basis. Subject to change based on feedback of course.\r\n\r\nSeparately, the VDR is a more modern approach that resets the expectations for the exact reasons you've outlined and others - raw scan logs are not generally useful or used by agencies for the purpose of \"double checking\" or \"verifying\" the integrity and accuracy of decisions made by cloud service providers and they aren't necessarily of value to do that anyway. The additional transparency required by other areas of the VDR offsets the security blanket vibes of having access to raw scan data."
+        },
+        {
+          "id": "DC_kwDOOxfoic4A_WR9",
+          "url": "https://github.com/FedRAMP/community/discussions/129#discussioncomment-16606333",
+          "author": "cbaerschellman",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-04-17T18:39:31Z",
+          "updated_at": "2026-04-17T18:39:31Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Hi Pete - I had a follow-on question about scans from the 3PAO perspective. Once the VDR standard becomes mandatory for Rev. 5 providers on 1/1/27, will CSPs be expected to provide raw scan results to 3PAOs to be analyzed as part of initial / annual assessments? If so, would 3PAOs still be expected to incorporate those results into the SAR package?"
+        },
+        {
+          "id": "DC_kwDOOxfoic4A_Wgv",
+          "url": "https://github.com/FedRAMP/community/discussions/129#discussioncomment-16607279",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-04-17T20:20:32Z",
+          "updated_at": "2026-04-17T20:20:32Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Independent assessors will have to do more than just reviewing scan results (if applicable) to validate that cloud services are meeting the requirements for vulnerability detection and response following the VDR process, but that would certainly be part of it. Cloud services are expected to provide whatever information an independent assessor needs to validate the service and contracts should be structured appropriately or independent assessors should note what areas they were unable to validate due to lack of evidence/access. Nothing changes with the VDR on this other than the nuance of what the independent assessor is validating.\r\n\r\nNote that you can meet VDR requirements in some situations without using traditional scanners, so I'd be careful of a situation where \"reviewing raw scan results\" is a requirement because some folks might not have those."
+        },
+        {
+          "id": "DC_kwDOOxfoic4A_dnE",
+          "url": "https://github.com/FedRAMP/community/discussions/129#discussioncomment-16636356",
+          "author": "cbaerschellman",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-04-20T13:45:36Z",
+          "updated_at": "2026-04-20T13:45:36Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thanks, Pete. Appreciate you weighing in. We look forward to reviewing the Consolidated Rules in the coming months."
+        }
+      ],
+      "replies_total": 6,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A-8LU",
+      "url": "https://github.com/FedRAMP/community/discussions/129#discussioncomment-16499412",
+      "author": "cb-axon",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-04-09T07:07:24Z",
+      "updated_at": "2026-04-09T07:07:24Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Also, on RFC-030 for RA-5 updates, are we not including that container scans are also required? Those are required in other fedramp documented requirements for rev5, and was a huge deal back in ~2021 when initially announced as required. In fact, any csp I've seen that does them has 90% of their reported vulns from those due to the nature of the scanning. Want to make sure I'm reading right if fedramp is okay for rev5 to stop reporting vulns from that scanner type.",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A_BWe",
+          "url": "https://github.com/FedRAMP/community/discussions/129#discussioncomment-16520606",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-04-10T16:50:16Z",
+          "updated_at": "2026-04-10T16:50:16Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Containers are a machine-based information resource! They are much easier to checksum and only do samples on tho."
+        },
+        {
+          "id": "DC_kwDOOxfoic4A_IIs",
+          "url": "https://github.com/FedRAMP/community/discussions/129#discussioncomment-16548396",
+          "author": "cb-axon",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-04-13T19:51:41Z",
+          "updated_at": "2026-04-13T19:51:41Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Right, I agree with that, but RFC-030 specifically says \"operating system/infrastructure; web applications (including APIs) and databases\" for the types of scans/assets to scan. \r\nThis does NOT mention containers. Are we no longer required to do container scans for RA-5?"
+        },
+        {
+          "id": "DC_kwDOOxfoic4A_IaK",
+          "url": "https://github.com/FedRAMP/community/discussions/129#discussioncomment-16549514",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-04-13T22:41:58Z",
+          "updated_at": "2026-04-13T22:41:58Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Ah, my bad, I checked it briefly and focused on the copy/pastes from the VDR. The original doesn't say anything about containers either, so nothing about container requirements is changing here. That said, this proposed update doesn't fold in [the container scanning requirements](https://www.fedramp.gov/docs/rev5/playbook/csp/continuous-monitoring/vulnerability-scanning/#general-scanning-requirements) that exist elsewhere like it should. I think that's where the confusion is created?\r\n\r\nAlso just to be super clear, RFCs don't change anything, so it's the final wording that matters... but as proposed this doesn't formally add or remove any requirements related to containers (the control text still applies).\r\n\r\nI personally am not a fan of blanket container scanning as it's an inefficient way to go about things that often decreases the overall security posture of a system (hence the changes in the VDR), but if you think they should explicitly be included/excluded/etc. in the FR defined assignments then please let us know on the RFC.\r\n\r\nThis set of proposed changes might be overcome by events due to the changes planned in [NTC-0009](https://www.fedramp.gov/notices/0009/) either way, it's basically just bridging current requirements until July 2027."
+        },
+        {
+          "id": "DC_kwDOOxfoic4A_IgO",
+          "url": "https://github.com/FedRAMP/community/discussions/129#discussioncomment-16549902",
+          "author": "cb-axon",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-04-14T00:02:04Z",
+          "updated_at": "2026-04-14T00:02:38Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Yeah that's where my confusion stems from. This calls out specific scanning types but not others in other guidance. Historically we've all accepted that container scans didn't get listed in RA-5 guidance just due to order of operations. If it's left out of this coming update, many csps will be hard pressed to continue being forced to do container scans without explicit inclusion in other types of scanning. The language in this RFC still allows sampling as I think container scanning should where appropriate. But like all scanning and vuln management activities, evaluation of contextualized risk is even more critical when dealing with the amounts from container scanners. But that doesn't mean it should be left out in my opinion, because it's the only tool that really finds vulnerabilities on containerized workloads. Os/infra scanning hasn't really been finding those, even when we've confirmed they're real. "
+        }
+      ],
+      "replies_total": 4,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A_eSl",
+      "url": "https://github.com/FedRAMP/community/discussions/129#discussioncomment-16639141",
+      "author": "pat-eustis",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-04-20T17:23:08Z",
+      "updated_at": "2026-04-20T17:23:57Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "I'm a little late to the party but finally had a chance to look at RFC-0028 FedRAMP Rev5 Security Controls Baseline Update for CP, IA, IR, MA, and MP Control Families. My initial area of interest is with the CP-02: Contingency Plan control. I've been reviewing the current document and, so far, have about 24 comments through the end of Section 2. Some of these findings are format-related and others are contextual suggestions. From the few responses I've seen so far, this does not appear to be in line with the intent of this RFC. Please advise if that is the case and I will halt my efforts.",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A_eT_",
+          "url": "https://github.com/FedRAMP/community/discussions/129#discussioncomment-16639231",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-04-20T17:29:53Z",
+          "updated_at": "2026-04-20T17:29:53Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Hey pat-eustis - formatting comments are generally irrelevant and we don't derive any value from them (the RFC content won't align with actual content and often has formatting artifacts due to copy/pasting through multiple platforms with different formatting expectations).\r\n\r\nContextual suggestions may be relevant and helpful though, and are certainly welcome regardless. \r\n\r\nI will say that in general providing a lot of very targeted specific comments can overwhelm our ability to monitor and parse stuff, especially when it's related to words/etc. In general with these particular RFCs we are simply looking to update some of the existing very small amounts of text for FR-specific guidance on controls and are not at all looking to expand them into more detailed things."
+        },
+        {
+          "id": "DC_kwDOOxfoic4A_eUh",
+          "url": "https://github.com/FedRAMP/community/discussions/129#discussioncomment-16639265",
+          "author": "pat-eustis",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-04-20T17:32:45Z",
+          "updated_at": "2026-04-20T17:32:45Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Much thanks, pete! So simply dropping any relevant comments directly into the RFC thread is adequate. Appreciate the response."
+        }
+      ],
+      "replies_total": 2,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "adamlang-1kosmos",
+    "cb-axon",
+    "cbaerschellman",
+    "pat-eustis",
+    "pete-gov",
+    "rhoesing",
+    "wisecryptic"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/129#discussioncomment-16316202",
+      "author": "pete-gov",
+      "created_at": "2026-03-25T19:49:43Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/129#discussioncomment-16317502",
+      "author": "pete-gov",
+      "created_at": "2026-03-25T21:05:38Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/129#discussioncomment-16398916",
+      "author": "pete-gov",
+      "created_at": "2026-03-31T18:26:18Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/129#discussioncomment-16549543",
+      "author": "pete-gov",
+      "created_at": "2026-04-13T22:47:10Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/129#discussioncomment-16571723",
+      "author": "pete-gov",
+      "created_at": "2026-04-15T14:40:12Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/129#discussioncomment-16607279",
+      "author": "pete-gov",
+      "created_at": "2026-04-17T20:20:32Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/129#discussioncomment-16520606",
+      "author": "pete-gov",
+      "created_at": "2026-04-10T16:50:16Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/129#discussioncomment-16549514",
+      "author": "pete-gov",
+      "created_at": "2026-04-13T22:41:58Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/129#discussioncomment-16639231",
+      "author": "pete-gov",
+      "created_at": "2026-04-20T17:29:53Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [
+      "RFC-0026",
+      "RFC-0027",
+      "RFC-0028",
+      "RFC-026",
+      "RFC-030"
+    ],
+    "nist_controls": [
+      "CA-7",
+      "CM-12(1)",
+      "CP-02",
+      "CP-2(8)",
+      "RA-5"
+    ],
+    "discussion_refs": [
+      131
+    ],
+    "urls": [
+      "https://github.com/FedRAMP/community/discussions/131#discussioncomment-16235494",
+      "https://www.fedramp.gov/changelog/rss.xml",
+      "https://www.fedramp.gov/docs/rev5/balance/fedramp-definitions/#accepted-vulnerability",
+      "https://www.fedramp.gov/docs/rev5/balance/fedramp-definitions/#vulnerability",
+      "https://www.fedramp.gov/docs/rev5/balance/vulnerability-detection-and-response/#mark-accepted-vulnerabilities",
+      "https://www.fedramp.gov/docs/rev5/balance/vulnerability-detection-and-response/#vulnerability-details",
+      "https://www.fedramp.gov/docs/rev5/playbook/csp/continuous-monitoring/overview/#independent-assessment-organizations:~:text=Each%20month%2C%20the%20CSP%20uploads%20an%20up%2Dto%2Ddate%20POA%26M%20and%20inventory%2C%20along%20with%20raw%20vulnerability%20scan%20files%20(when%20required%20by%20agreements%20with%20agency%20customers",
+      "https://www.fedramp.gov/docs/rev5/playbook/csp/continuous-monitoring/vulnerability-scanning/#general-scanning-requirements",
+      "https://www.fedramp.gov/notices/",
+      "https://www.fedramp.gov/notices/0009/",
+      "https://www.govinfo.gov/app/details/USCODE-2024-title6/USCODE-2024-title6-chap1-subchapXVIII-sec650"
+    ],
+    "topics": [
+      "20x",
+      "3pao",
+      "conmon",
+      "poam",
+      "rev5",
+      "vulnerability_mgmt"
+    ]
+  },
+  "content_hash": "457a8f59c73a1149e0c5b3860e641fe3232ac56f7e5ab67cb6ce3f2911161e42",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

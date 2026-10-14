@@ -1,72 +1,100 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mintlify Starter Kit",
+  "name": "FedRAMP 2026 Knowledge Base",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#1D4ED8",
+    "light": "#60A5FA",
+    "dark": "#1E40AF"
   },
   "favicon": "/favicon.svg",
   "navigation": {
-    "pages": [
+    "groups": [
       {
-        "group": "Getting Started",
+        "group": "Start here",
+        "pages": ["index", "changelog"]
+      },
+      {
+        "group": "Rule summaries",
         "pages": [
-          "index",
-          "quickstart"
+          "rules/index",
+          "rules/provider-deliverables",
+          "rules/frr-and-ksi",
+          {
+            "group": "Certification and packages",
+            "pages": [
+              "rules/fedramp-certification",
+              "rules/certification-package-overview",
+              "rules/security-decision-record",
+              "rules/minimum-assessment-scope",
+              "rules/certification-data-sharing",
+              "rules/marketplace-listing"
+            ]
+          },
+          {
+            "group": "Ongoing operations",
+            "pages": [
+              "rules/vulnerability-detection-and-response",
+              "rules/vulnerability-evaluation-and-reporting",
+              "rules/significant-change-notification",
+              "rules/incident-evaluation-and-communication",
+              "rules/collaborative-continuous-monitoring",
+              "rules/addressing-fedramp-communication"
+            ]
+          },
+          {
+            "group": "Security practices",
+            "pages": [
+              "rules/key-security-indicators",
+              "rules/secure-configuration-guide",
+              "rules/cryptographic-module-use"
+            ]
+          },
+          {
+            "group": "Assessors and agencies",
+            "pages": [
+              "rules/independent-verification-and-validation",
+              "rules/fedramp-recognition",
+              "rules/agency-use"
+            ]
+          }
+        ]
+      },
+      {
+        "group": "Discussion digests",
+        "pages": [
+          "discussions/index",
+          "discussions/rev5-cr26-questions",
+          "discussions/20x-cr26-questions",
+          "discussions/notable-staff-answers",
+          "discussions/rfc-history"
         ]
       }
     ],
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
+          "anchor": "Official FedRAMP rules",
+          "href": "https://www.fedramp.gov/2026/",
+          "icon": "landmark"
         },
         {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "FedRAMP community discussions",
+          "href": "https://github.com/FedRAMP/community/discussions",
+          "icon": "comments"
         }
       ]
     }
   },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:support@mintlify.com"
+        "label": "FedRAMP Help",
+        "href": "https://help.fedramp.gov"
       }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Dashboard",
-      "href": "https://app.mintlify.com"
-    }
-  },
-  "contextual": {
-    "options": [
-      "copy",
-      "view",
-      "chatgpt",
-      "claude",
-      "perplexity",
-      "mcp",
-      "cursor",
-      "vscode"
     ]
   },
-  "footer": {
-    "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
-    }
+  "contextual": {
+    "options": ["copy", "view", "chatgpt", "claude"]
   }
 }

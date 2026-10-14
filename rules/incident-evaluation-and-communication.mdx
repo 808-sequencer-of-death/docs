@@ -1,0 +1,174 @@
+---
+title: "Incident evaluation and communication"
+description: "Promptly decide whether an incident is FedRAMP reportable, then send initial, ongoing and final incident reports to FedRAMP and affected agencies within class-based timeframes."
+sidebarTitle: "IEC: Incident communication"
+---
+
+<Info>
+  **Official source:** [Incident Evaluation and Communication](https://www.fedramp.gov/2026/reference/incident-evaluation-and-communication/) (`IEC`), FedRAMP Consolidated Rules release `2026.10.14.01`. This page is a plain-English summary. The official rule text governs.
+</Info>
+
+## In short
+
+When an incident affects, or is likely to affect, the confidentiality or integrity of federal customer data, it is a FedRAMP Reportable Incident. You must report it to FedRAMP and affected agencies. The reporting clock depends on your class and the incident's Potential Agency Impact N-rating (PAIN). If you don't promptly estimate the PAIN, you must treat the incident as PAIN-5, which means the fastest timeframes. For a Class D provider, the initial report for a PAIN-3 to PAIN-5 incident is due within 0.25 hours (15 minutes). FedRAMP expects this reporting to be automated, not hand-crafted email.
+
+## Who it applies to
+
+| Subset | Type | Path | Class | Audience |
+| --- | --- | --- | --- | --- |
+| [FedRAMP Responsibilities](https://www.fedramp.gov/2026/reference/incident-evaluation-and-communication/#fedramp-responsibilities) | 20x, Rev5 | Program, Agency | B, C, D | FedRAMP |
+| [General Provider Responsibilities](https://www.fedramp.gov/2026/reference/incident-evaluation-and-communication/#general-provider-responsibilities) | 20x, Rev5 | Program, Agency | B, C, D | Providers |
+
+Upstream describes the General Provider Responsibilities subset as applying to "providers with FedRAMP Certifications of any type."
+
+<Note>
+  The subsets list Classes B, C and D, but `IEC-CSO-IIR`, `IEC-CSO-OIR` and `IEC-CSO-FIR` each state a Class A variant. For Class A, [`FRC-CLA-MFR`](https://www.fedramp.gov/2026/reference/fedramp-certification/#mandatory-fedramp-rules-for-class-a) makes `IEC-CSO-EFR` and `IEC-CSO-FIR` mandatory, and [`FRC-CLA-RFR`](https://www.fedramp.gov/2026/reference/fedramp-certification/#recommended-fedramp-rules-for-class-a) recommends `IEC-CSO-IIR` and `IEC-CSO-OIR`.
+</Note>
+
+## Key dates
+
+| | 20x | Rev5 |
+| --- | --- | --- |
+| Status | Required (Consolidated Rules for 2026) | Required (Consolidated Rules for 2026) |
+| Optional adoption allowed | 2026-07-04 | 2026-07-04 |
+| Obtaining initial certification | 2026-07-04 | 2027-01-01 |
+| Maintaining ongoing certification | 2027-01-01 | 2027-01-01 |
+| Grace period ends | First FedRAMP independent assessment started after 2027-01-01 | 2027-06-01 |
+
+## How the workflow runs
+
+The upstream activity workflow:
+
+<Steps>
+  <Step title="Evaluate reportability (IEC-CSO-EFR)">
+    When you identify an incident, promptly decide whether it is a FedRAMP Reportable Incident. If not, you're done.
+  </Step>
+  <Step title="Rate the incident (IEC-CSO-EFI or IEC-CSO-DPR)">
+    Either promptly estimate the PAIN rating, or use the default of PAIN-5. The reporting clock starts here, using the estimated or default PAIN timeframes.
+  </Step>
+  <Step title="Send the Initial Incident Report (IEC-CSO-IIR)">
+    Report within the timeframe for your class and PAIN rating.
+  </Step>
+  <Step title="Send Ongoing Incident Reports (IEC-CSO-OIR)">
+    Keep reporting persistently until the incident is resolved.
+  </Step>
+  <Step title="Send the Final Incident Report (IEC-CSO-FIR)">
+    Once the incident is resolved and recovery is complete.
+  </Step>
+</Steps>
+
+## What you need to do
+
+### General provider responsibilities
+
+| Rule | Force | What it means for you |
+| --- | --- | --- |
+| [`IEC-CSO-EFR`](https://www.fedramp.gov/2026/reference/incident-evaluation-and-communication/#evaluate-fedramp-reportability) | MUST | Promptly evaluate incidents to decide whether they affect, or are likely to affect, the confidentiality or integrity of federal customer data. If so, they are FedRAMP Reportable Incidents and must be reported under these rules. |
+| [`IEC-CSO-DPR`](https://www.fedramp.gov/2026/reference/incident-evaluation-and-communication/#default-pain-rating) | MUST | Treat every FedRAMP Reportable Incident as PAIN-5 unless you promptly estimate its PAIN under `IEC-CSO-EFI`. |
+| [`IEC-CSO-IIR`](https://www.fedramp.gov/2026/reference/incident-evaluation-and-communication/#initial-incident-report) | Varies by class (SHOULD for A, MUST for B, C, D) | Responsibly notify all affected parties with an Initial Incident Report containing as much of the information listed below as is available. |
+| [`IEC-CSO-OIR`](https://www.fedramp.gov/2026/reference/incident-evaluation-and-communication/#ongoing-incident-reports) | Varies by class (SHOULD for A, MUST for B, C, D) | Responsibly notify all affected parties of ongoing activity as new information becomes available, including updates (or lack of updates) to everything previously reported. |
+| [`IEC-CSO-FIR`](https://www.fedramp.gov/2026/reference/incident-evaluation-and-communication/#final-incident-report) | MUST (all classes) | Responsibly notify all affected parties with a Final Incident Report once the incident is resolved and recovery is complete, with final updates to everything previously reported. |
+| [`IEC-CSO-EFI`](https://www.fedramp.gov/2026/reference/incident-evaluation-and-communication/#estimate-federal-impact) | SHOULD | Promptly estimate the likely adverse impact on agency customers and assign a PAIN rating ("Incident Rating"). See the ratings below. |
+| [`IEC-CSO-AIR`](https://www.fedramp.gov/2026/reference/incident-evaluation-and-communication/#automated-incident-reporting) | SHOULD | Use automation to minimize human intervention in reporting FedRAMP Reportable Incidents. |
+
+<Warning>
+  Upstream on `IEC-CSO-AIR`: "Modern cloud services should not be reporting incidents by hand-crafting emails!"
+</Warning>
+
+**Where to send reports.** For `IEC-CSO-IIR`, `IEC-CSO-OIR` and `IEC-CSO-FIR`, upstream lists three notification routes:
+
+- FedRAMP, by email to `fedramp_security@fedramp.gov`
+- Agency customers, following each agency's own incident reporting procedures
+- All necessary parties, through an update in your trust center or USDA Connect
+
+FedRAMP publishes an [Incident Report JSON schema](https://fedramp.gov/schemas/fedramp-incident-report-schema-2026-06-24.json) covering all three reports.
+
+**Initial Incident Report contents (`IEC-CSO-IIR`).** Include as much as is available at the time, or the current status of each item:
+
+1. Contact information for the federal incident response coordinator
+2. Your internal tracking identifier
+3. Description of the incident
+4. Timeline, including start time, time and source of detection, time of completed reportability evaluation and other major milestones
+5. Historical and current estimated PAIN, with an explanation of the `IEC-CSO-EFI` evaluation (if applicable)
+6. Functional impact to agency customers, including impact to confidentiality and/or integrity and the federal customer data types affected
+7. Estimated recovery plan, milestones and timelines
+8. List of likely affected customer agencies
+
+**Ongoing Incident Report additions (`IEC-CSO-OIR`).** Include as much as is available:
+
+1. Observed incident activity
+2. Indicators of compromise
+3. Related CVE identifier (if applicable)
+4. Root cause
+5. Response and recovery activities
+
+**Incident PAIN ratings (`IEC-CSO-EFI`):**
+
+| Rating | Meaning |
+| --- | --- |
+| N1 | A likely minimal customer effect on 1 or more agencies |
+| N2 | A likely narrow customer effect on 1 or more agencies |
+| N3 | A likely disruptive customer effect on 1 agency |
+| N4 | A likely debilitating customer effect on 1 agency, or a likely disruptive customer effect on more than 1 agency |
+| N5 | A likely debilitating customer effect on more than 1 agency |
+
+If you don't complete this step, the incident is PAIN-5 by default (`IEC-CSO-DPR`).
+
+### FedRAMP responsibilities
+
+| Rule | Force | What it means for you |
+| --- | --- | --- |
+| [`IEC-FRP-ORV`](https://www.fedramp.gov/2026/reference/incident-evaluation-and-communication/#ongoing-review) | MUST | FedRAMP periodically reviews how you implement these rules, based on lack of reporting or other information. If you are unaware of the rules or haven't implemented proper procedures, FedRAMP will request a Corrective Action Plan. It will grant a 3-month grace period to implement proper procedures, pending remediation and possible revocation of FedRAMP Certification. |
+
+## Differences by class
+
+The reporting timeframe depends on your class and the incident's PAIN rating. Timeframes are exactly as stated upstream.
+
+### Initial Incident Report (`IEC-CSO-IIR`)
+
+| PAIN | Class A (SHOULD) | Class B (MUST) | Class C (MUST) | Class D (MUST) |
+| --- | --- | --- | --- | --- |
+| PAIN-5 | 6 hours | 6 hours | 1 hour | 0.25 hours |
+| PAIN-4 | 6 hours | 6 hours | 1 hour | 0.25 hours |
+| PAIN-3 | 6 hours | 6 hours | 1 hour | 0.25 hours |
+| PAIN-2 | 1 business day | 1 business day | 24 hours | 1 hour |
+| PAIN-1 | 1 business day | 1 business day | 1 business day | 1 hour |
+
+### Ongoing Incident Reports (`IEC-CSO-OIR`)
+
+| PAIN | Class A (SHOULD) | Class B (MUST) | Class C (MUST) | Class D (MUST) |
+| --- | --- | --- | --- | --- |
+| PAIN-5 | 1 business day | 1 business day | 6 hours | 3 hours |
+| PAIN-4 | 1 business day | 1 business day | 6 hours | 3 hours |
+| PAIN-3 | 1 business day | 1 business day | 6 hours | 3 hours |
+| PAIN-2 | 1 business day | 1 business day | 24 hours | 6 hours |
+| PAIN-1 | 1 business day | 1 business day | 1 business day | 24 hours |
+
+### Final Incident Report (`IEC-CSO-FIR`)
+
+| PAIN | Class A (MUST) | Class B (MUST) | Class C (MUST) | Class D (MUST) |
+| --- | --- | --- | --- | --- |
+| PAIN-5 | 3 business days | 3 business days | 6 hours | 3 hours |
+| PAIN-4 | 3 business days | 3 business days | 6 hours | 3 hours |
+| PAIN-3 | 3 business days | 3 business days | 6 hours | 3 hours |
+| PAIN-2 | 3 business days | 3 business days | 1 business day | 6 hours |
+| PAIN-1 | 3 business days | 3 business days | 1 business day | 24 hours |
+
+<Note>
+  Upstream labels these as timeframes for each report but doesn't state the exact event each clock runs from. The workflow says the reporting clock starts once the incident is determined reportable and rated (estimated or default PAIN-5). The Final Incident Report is due after the incident "has been resolved and recovery is complete." The rules don't address this further.
+</Note>
+
+## Vulnerabilities treated as incidents
+
+[Vulnerability evaluation and reporting](/rules/vulnerability-evaluation-and-reporting) tells you when to treat certain vulnerabilities as FedRAMP Reportable Incidents:
+
+- [`VER-TFR-IRI`](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#internet-reachable-incidents): internet-reachable, likely exploitable vulnerabilities with PAIN greater than 3, until partially mitigated to N3 or below. MAY for Classes A and B, SHOULD for C and D.
+- [`VER-TFR-NRI`](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#non-internet-reachable-incidents): likely exploitable vulnerabilities that are NOT internet-reachable with PAIN of 5, until partially mitigated to N4 or below. MAY for Classes A, B and C, SHOULD for D.
+
+## Related
+
+- [Vulnerability evaluation and reporting](/rules/vulnerability-evaluation-and-reporting): PAIN ratings for vulnerabilities
+- [Collaborative continuous monitoring](/rules/collaborative-continuous-monitoring): reportable incidents in the Ongoing Certification Report
+- [Addressing FedRAMP communication](/rules/addressing-fedramp-communication)
+- [Certification data sharing](/rules/certification-data-sharing): trust centers
+- [Significant change notification](/rules/significant-change-notification): emergency changes during an incident

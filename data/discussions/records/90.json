@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-90",
+  "node_id": "D_kwDOOxfoic4AiHN3",
+  "number": 90,
+  "title": "Machine-readable intake of CISA BODs?",
+  "url": "https://github.com/FedRAMP/community/discussions/90",
+  "category": "20x Discussion",
+  "category_slug": "20x-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "iteuscher",
+  "author_is_official": false,
+  "created_at": "2025-09-24T19:16:57Z",
+  "updated_at": "2025-11-18T16:21:46Z",
+  "last_edited_at": null,
+  "closed": true,
+  "closed_at": "2025-11-18T16:21:46Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 2,
+  "body": "In the new [FedRAMP Vulnerability Detection and Response Standard](https://github.com/FedRAMP/docs/blob/main/markdown/FRMR.VDR.vulnerability-detection-and-response.md#frr-vdr-tf-02) it calls out remediating Known Exploited Vulnerabilities as required by CISA Binding Operational Directive (BOD) 22-01. I know CISA publishes KEV data in a machine-readable, easy to ingest format (JSON here: https://github.com/cisagov/kev-data and API available)\r\n\r\nIs anyone aware of a similar place or process to ingest CISA BODs other than web scraping the HTML pages here: https://www.cisa.gov/news-events/directives ?\r\n\r\nCurious if anyone has a way to automate bringing in BODs or if CISA is planning to publish their BODs in a similar machine-readable format to the KEVs and [CSAF advisories](https://github.com/cisagov/CSAF/tree/develop) they put out. \r\n\r\nWhile we are bringing in machine-readable evidence, vulnerability data, and FedRAMP 20x requirements it would be nice to bring in the CISA BODs as well. As far as I'm aware there isn't an explicit FedRAMP requirement for CSPs to meet all CISA BODs but they are mandatory for agencies... and a good idea for everyone else \r\n\r\n-- Isaac Teuscher (Paramify)",
+  "comment_count": 2,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4A3Wrz",
+      "url": "https://github.com/FedRAMP/community/discussions/90#discussioncomment-14510835",
+      "author": "emu-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2025-09-25T12:41:50Z",
+      "updated_at": "2025-09-25T12:41:51Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "What about leveraging their advisory RSS feed?\r\n\r\nhttps://www.cisa.gov/cybersecurity-advisories/all.xml",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A34cO",
+          "url": "https://github.com/FedRAMP/community/discussions/90#discussioncomment-14649102",
+          "author": "iteuscher",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-10-10T15:56:37Z",
+          "updated_at": "2025-10-10T15:56:37Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "That is a great resource! It looks like the RSS advisory feed doesn't include BODs specifically but there are usually associated advisories for BODs so it may work. I reached out to CISA to see if they have any other resources but this should work for now. Thanks for sharing"
+        },
+        {
+          "id": "DC_kwDOOxfoic4A45Ft",
+          "url": "https://github.com/FedRAMP/community/discussions/90#discussioncomment-14913901",
+          "author": "comradelemoncake",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-11-09T05:36:26Z",
+          "updated_at": "2025-11-09T05:36:27Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "I really don't know how reliable CISA is gonna be in the long-term. This is a pretty wild decision. It's exactly what you needed. \r\n\r\nhttps://socket.dev/blog/cisa-kills-off-rss-feeds-for-kevs-and-cyber-alerts"
+        }
+      ],
+      "replies_total": 2,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A3kbd",
+      "url": "https://github.com/FedRAMP/community/discussions/90#discussioncomment-14567133",
+      "author": "pjavan",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2025-10-01T20:37:52Z",
+      "updated_at": "2025-10-01T20:37:52Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "I'm not necessarily addressing intake of CISA BODs, but we did see an [example](https://github.com/SunStone-Secure-LLC/OSCAL-Plugfest-2025/blob/main/AP/Valid/Entra_ID_assessment-plan.json) of how a BOD could be published in machine readable format at the last OSCAL Plugfest.  The example demonstrates how BOD 25-01 ([required configurations](https://www.cisa.gov/resources-tools/services/bod-25-01-implementing-secure-practices-cloud-services-required-configurations)) can be represented in an OSCAL [Security Assessment Plan Model](https://pages.nist.gov/OSCAL/learn/concepts/layer/assessment/assessment-plan/)",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A34cc",
+          "url": "https://github.com/FedRAMP/community/discussions/90#discussioncomment-14649116",
+          "author": "iteuscher",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-10-10T15:58:00Z",
+          "updated_at": "2025-10-10T15:58:01Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Nice! That's great to see the example and progress happening with OSCAL. Hopefully CISA will adopt something similar in the future. "
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "comradelemoncake",
+    "emu-gov",
+    "iteuscher",
+    "pjavan"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/90#discussioncomment-14510835",
+      "author": "emu-gov",
+      "created_at": "2025-09-25T12:41:50Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://github.com/FedRAMP/docs/blob/main/markdown/FRMR.VDR.vulnerability-detection-and-response.md#frr-vdr-tf-02",
+      "https://github.com/SunStone-Secure-LLC/OSCAL-Plugfest-2025/blob/main/AP/Valid/Entra_ID_assessment-plan.json",
+      "https://github.com/cisagov/CSAF/tree/develop",
+      "https://github.com/cisagov/kev-data",
+      "https://pages.nist.gov/OSCAL/learn/concepts/layer/assessment/assessment-plan/",
+      "https://socket.dev/blog/cisa-kills-off-rss-feeds-for-kevs-and-cyber-alerts",
+      "https://www.cisa.gov/cybersecurity-advisories/all.xml",
+      "https://www.cisa.gov/news-events/directives",
+      "https://www.cisa.gov/resources-tools/services/bod-25-01-implementing-secure-practices-cloud-services-required-configurations"
+    ],
+    "topics": [
+      "20x",
+      "machine_readable",
+      "oscal",
+      "vulnerability_mgmt"
+    ]
+  },
+  "content_hash": "f6ccac8ec416af52b38ac6bf5b48f1357b98fd1927841a8c639b1518e9408fb8",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

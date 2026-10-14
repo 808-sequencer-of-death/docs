@@ -1,0 +1,1182 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-147",
+  "node_id": "D_kwDOOxfoic4AnWbS",
+  "number": 147,
+  "title": "20x questions and discussion on the Consolidated Rules for 2026",
+  "url": "https://github.com/FedRAMP/community/discussions/147",
+  "category": "20x Discussion",
+  "category_slug": "20x-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "pete-gov",
+  "author_is_official": true,
+  "created_at": "2026-06-24T21:52:47Z",
+  "updated_at": "2026-10-13T14:58:07Z",
+  "last_edited_at": null,
+  "closed": false,
+  "closed_at": null,
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "## This thread is for any and all Q&A or general discussion related to FedRAMP 20x in general that does not need to have its own thread.\r\n\r\nFedRAMP released the [Consolidated Rules for 2026](https://www.fedramp.gov/2026/) on June 24, 2026 with all requirements for FedRAMP 20x Class A, B, and C.\r\n\r\nThis includes:\r\n\r\n- When each certification is available for application\r\n- All the rules and expectations for a FedRAMP 20x Certification\r\n- Basic JSON schemas for providing some high level machine-readable data\r\n- So much more\r\n\r\nWe're excited for folks to continue digging in after the Public Preview and begin preparing. We're happy to answer any general questions that don't need their own thread here!\r\n\r\n---\r\n\r\nYou may see some of the following folks from FedRAMP responding in this thread:\r\n\r\n- `pete-gov` - Pete, FedRAMP Director\r\n- `nicole-gov` - Nicole, Security Director\r\n- `dan-fedramp` - Dan, Lead Cloud Security Engineer\r\n- `paulagosta` - Paul, Lead Cloud Security Engineer (Bastion)\r\n- `emu-gov` - Emu, Lead Cloud Security Engineer (Vanguard)\r\n- `rhoesing` - Ryan, Chief of Staff & Policy Branch Chief",
+  "comment_count": 17,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4BChim",
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-17438886",
+      "author": "v-mhahnfirstinfotech",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-06-25T21:33:59Z",
+      "updated_at": "2026-06-25T21:33:59Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "I'm not seeing the 20x Pilot documentation on the /legacy page, as indicated by this link: \r\n<img width=\"375\" height=\"48\" alt=\"image\" src=\"https://github.com/user-attachments/assets/21387f29-b69f-48e3-92d9-528041a25b7b\" />\r\n\r\nIs that still in the works to be included there? (Or am I just not seeing it?)\r\n\r\nExcited to have the CR26 finally officially published!! Great work and congrats on getting it out! :)",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BChi8",
+          "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-17438908",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-06-25T21:36:44Z",
+          "updated_at": "2026-06-25T21:36:44Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Oops, that was a miscommunication and should not say that; we haven't made legacy 20x pilot material available to avoid indexing and training issues because it's no longer applicable. Every single pilot participant has completed phase 1 and phase 2. \r\n\r\nIf you want to dumpster dive for that content it's in the commit history at https://github.com/FedRAMP/docs-legacy :)"
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BDAiR",
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-17565841",
+      "author": "KHFedR",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-07-08T00:01:19Z",
+      "updated_at": "2026-07-08T00:01:19Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "What is the preferred path for a provider who has some items on prem and some in AWS?  Rev 5 had the PE, MP, MA families to address those risks, but 20x is very much designed for cloud native products.  With the planned retirement of Rev 5, there doesn't seem to be a path for these services in FedRAMP or am I missing something? ",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BDAog",
+          "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-17566240",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-07-08T01:01:38Z",
+          "updated_at": "2026-07-08T01:01:38Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "At the moment 20x is for cloud native services built on a FR Certified IaaS/PaaS - Phase 4 will explore expanding this to include on prem and host services including Class D.\n\nThere will be a 20x option for on prem that is widely available before new Rev5 Certifications are stopped, and it will be developed in public over the next 6-9mo so folks will have plenty of time to follow along and prepare "
+        },
+        {
+          "id": "DC_kwDOOxfoic4BDClF",
+          "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-17574213",
+          "author": "KHFedR",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-07-08T14:48:59Z",
+          "updated_at": "2026-07-09T16:39:01Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Does Level A allow for those services to enter the marketplace or will on prem/host services need to wait until Phase 4? "
+        },
+        {
+          "id": "DC_kwDOOxfoic4BDF21",
+          "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-17587637",
+          "author": "emu-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-07-09T17:06:00Z",
+          "updated_at": "2026-07-09T17:06:00Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Great question!\r\n\r\nWe discussed this internally and a Class A would be open to folks with hybrid or on-premise infrastructure.\r\n\r\nHowever, you would have to go from a Class A to a Rev5 Class B/C/D until we have a pathway available for the higher 20x classes."
+        }
+      ],
+      "replies_total": 3,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BDbGf",
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-17674655",
+      "author": "ElaineFR",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-07-17T16:10:14Z",
+      "updated_at": "2026-07-17T16:10:14Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "I know that @pete-gov is out getting some nature and motorcycle therapy right now, but would love some help with the following questions! :) \r\n\r\n1. It seems that ACM has nothing prescriptive that would include CIS benchmarks or DISA STIGs. I imagine that flexibility is allowed so that configuration standards can be set by the CSP, but I just wanted to run a sanity check on this. How are you seeing CSPs satisfy secure config for 20x? Moving forward will we see these items omitted from FR PMO but likely retained by agencies as an expectation? \r\n2. For the Class B/C submissions Aug 10 for companies that have achieved RAR/SAR and/or lost a sponsor, do you have a link that outlines the entire process and what the certification process will look like? \r\n3. For Rev. 5 conversions to 20x, do you have any documentation that you can share about the expected process steps for CSPs to align with 20x by Jan 2027? ",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BDbHT",
+          "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-17674707",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-07-17T16:19:14Z",
+          "updated_at": "2026-07-17T16:19:53Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> I know that @pete-gov is out getting some nature and motorcycle therapy right now, but would love some help with the following questions! :)\r\n\r\nSurprise! I'm back! ;o\r\n\r\n>  1. It seems that ACM has nothing prescriptive that would include CIS benchmarks or DISA STIGs. I imagine that flexibility is allowed so that configuration standards can be set by the CSP, but I just wanted to run a sanity check on this. How are you seeing CSPs satisfy secure config for 20x? Moving forward will we see these items omitted from FR PMO but likely retained by agencies as an expectation?\r\n\r\nThere are a thousand different ways to ensure secure configuration of OS images and neither CIS benchmarks or DISA STIGs are particularly applicable globally. Roll your own following best practices and/or using tools of your choice.\r\n\r\n>  2. For the Class B/C submissions Aug 10 for companies that have achieved RAR/SAR and/or lost a sponsor, do you have a link that outlines the entire process and what the certification process will look like?\r\n\r\nInformation about this is on the [Choose a Path](https://www.fedramp.gov/2026/providers/start/path/#temporary-rev5-program-certification-availability-for-class-b-and-c) page here. The important part is that the provider must agree with follow all updated rules by February 19, 2027. \r\n\r\n>  3. For Rev. 5 conversions to 20x, do you have any documentation that you can share about the expected process steps for CSPs to align with 20x by Jan 2027?\r\n\r\nI do not expect there will be any such thing as a \"conversion\" from Rev5 to 20x. Cloud service providers will just apply for a 20x Certification, obtain it, and then stop maintaining their Rev5 package."
+        },
+        {
+          "id": "DC_kwDOOxfoic4BDbJP",
+          "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-17674831",
+          "author": "ElaineFR",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-07-17T16:39:05Z",
+          "updated_at": "2026-07-17T16:39:05Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thank you millions, and welcome back!! "
+        },
+        {
+          "id": "DC_kwDOOxfoic4BFoPR",
+          "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18252753",
+          "author": "pallakatos",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-09-02T16:01:37Z",
+          "updated_at": "2026-09-02T16:01:37Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "@pete-gov  + @ElaineFR  - Apologies for chiming in here - Thanks a lot for this ask / response - it might not be entirely related to the 20x - but rather to the Rev 5 Class D Consolidated rules - one additional clarifying question I would like to have to this topic. In the following RFC (https://www.fedramp.gov/rfcs/0030/ ) there was a mention about particular STIG / CIS levels related to \"SA-04(5): Acquisition Process | System, Component, and Service Configurations\" - and basically in case of lack of STIG the CIS L1 + L2 rules would be sufficient. When I look at the current wording in the consolidated rules - I can't really find a reference to STIG or CIS Level 1 / 2 rules - so I am trying to understand from an Operating Systems perspective what would be a sufficient set of secure configurations for Rev 5 Class D? I understand there are different ways to ensure secure configuration - but it could be described in 20 - 50 or 300 rules.\r\n\r\nWe are aiming for a CIS benchmark anyways - the questions is whether that would be sufficient with L1 only rules or in that case L1 + L2 would make the mark... \r\n\r\nAppreciate your response in advance!\r\n\r\n"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BFo74",
+          "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18255608",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-09-02T19:15:20Z",
+          "updated_at": "2026-09-02T19:15:20Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "@pallakatos - first note is, RFCs are proposals that are irrelevant the moment they close. Never refer to them afterwards except to review any linked outcome. In this case, you'd want to start with [NTC-0013](https://www.fedramp.gov/notices/0013/) (linked at the very top of the old RFC page) and catch up from there.\r\n\r\nThe finalized control guidance for CR26 is built into the CR26 JSON data and has a human-readable version here: https://www.fedramp.gov/2026/providers/rev5/controls/\r\n\r\nYou'll note there is no SA-04 guidance. We have removed FedRAMP-specific guidance requiring STIG / CIS benchmarks. Document the choices you make and why they meet the control.\r\n\r\n\r\n"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BFpCd",
+          "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18256029",
+          "author": "pallakatos",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-09-02T19:41:32Z",
+          "updated_at": "2026-09-02T19:41:32Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thank you for the quick answer, @pete-gov - that's very helpful and clears up the RFC-vs-outcome distinction. Much appreciated.\r\n\r\nSo I read the finalized position as: FedRAMP no longer prescribes any particular secure-configuration standard or level (STIG, CIS L1, or CIS L2) for Rev5/CR26. The responsibility shifts to the CSP to select a defensible baseline, apply it, and document the choices and rationale for how they meet the control.\r\n\r\nOne small confirmation, if you don't mind: is it fair to say there's no FedRAMP-defined minimum tier we must hit (i.e., L1+L2 is not implicitly required), so as long as our selected configuration is risk-based, applied, and evidenced? Just want to be sure we're interpreting \"roll your own following best practices\" correctly before we lock in our approach.\r\n\r\nThe closest I found from requirements perspective relevant to this is here: https://preview.fedramp.gov/2026/reference/secure-configuration-guide/ << so long as we keep these in mind and evidence them along with the actual security configuration guide (which most likely will be a CIS benchmark) - it should be fine I assume.\r\n\r\nThanks again for taking the time.\r\n\r\nKr,\r\nPal"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BFpJc",
+          "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18256476",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-09-02T20:06:20Z",
+          "updated_at": "2026-09-02T20:06:20Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> One small confirmation, if you don't mind: is it fair to say there's no FedRAMP-defined minimum tier we must hit (i.e., L1+L2 is not implicitly required), so as long as our selected configuration is risk-based, applied, and evidenced?\r\n\r\nThat is exactly right - though please remember that is simply to obtain/maintain a FedRAMP Certification. There absolutely might be some agency customers in various situations who might write requirements for that into their contract or expectations depending on their agency use case."
+        },
+        {
+          "id": "DC_kwDOOxfoic4BFpLV",
+          "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18256597",
+          "author": "pallakatos",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-09-02T20:13:44Z",
+          "updated_at": "2026-09-02T20:13:44Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Awesome thanks a lot for the help and the quick response @pete-gov 🙏🏻"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BFpn-",
+          "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18258430",
+          "author": "nicole-gov",
+          "author_association": "NONE",
+          "is_official": true,
+          "created_at": "2026-09-02T22:47:00Z",
+          "updated_at": "2026-09-02T22:47:00Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "I also want to chime in to make the point that your Secure Configuration Baseline should very intentionally be security-relevant settings **specific to your cloud service offering**. This means that we hope that CSPs will go beyond generic advice and give agencies specific recommended settings to configure their application of your cloud service securely. I'd be remiss if I didn't mention that our friends at CISA are working on the [SCuBA (Secure Cloud Business Applications) project](https://www.cisa.gov/resources-tools/services/secure-cloud-business-applications-scuba-project), which is developing frameworks for vendors to provide secure baselines. "
+        },
+        {
+          "id": "DC_kwDOOxfoic4BFrHp",
+          "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18264553",
+          "author": "pallakatos",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-09-03T08:26:03Z",
+          "updated_at": "2026-09-03T08:26:03Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thanks a lot @nicole-gov  for the additional information. My question was rather related to the operating system itself - and yes our intent is to definitely go beyond generic advice. In addition thanks for mentioning SCuBA - looks an interesting initiative - I will share it internally.\r\n\r\nKr,\r\nPal"
+        }
+      ],
+      "replies_total": 9,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BDutu",
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-17754990",
+      "author": "TM-Microsoft",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-07-23T18:02:08Z",
+      "updated_at": "2026-07-23T18:02:08Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Welcome back, Pete! Could you help us with a question?\r\n\r\nIf a ruleset's grace-end date falls before a CSP's Annual Assessment (AA) date, how does FedRAMP expect the CSP to demonstrate compliance?\r\n\r\nFor example, the VDR and VER rulesets have grace-end dates in March, but a CSP may have its AA scheduled for August. In that scenario, how is the CSP expected to show compliance with those rulesets in the gap between March and August?",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BDu6s",
+          "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-17755820",
+          "author": "paulagosta",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-07-23T19:40:04Z",
+          "updated_at": "2026-07-23T23:20:00Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "TM...  Sorry Pete is out at an event rubbing elbows with Agencies, 3PAOs, and CSPs....  So you get the third string kicker..\r\n\r\nBased on your scenario, you are a Rev5 CSP transitioning to the ruleset...  Something important to call out as 20x processes and Rev5 are different in regards to timelines and reviews.\r\n\r\nTransition to Rulesets do not require initial 3rd party validation it just requires you to follow the rules.  Yes, transition to some of the rulesets will change control statements that should be validated during your annual review.  Your VDR/VER example is great as it will affect your CA-5 controls, but you can transition to rulesets anytime before the required dates.\r\n\r\nSome Rulesets require notification when transitioning.  For example, the CDS Ruleset, under CDS-CSF-TCM, requires you to \"Notify FedRAMP via email: [info@fedramp.gov](mailto:info@fedramp.gov),\" when you transition.  \r\n\r\nOthers, we will request your implementation status at various points through the FSI process.  The evidence of your transition for most of these will be prevalent in you trust center or repo.  The VDR/VER example you provide is an excellent example.  Your March ConMon in your scenario should contain VDR/VER requirements (POA&M should change to Monthly activity report with PAIN thresholds, new timelines, etc).  \r\n\r\nWhen you do your annual assessment we will also ask about status of rulesets and implementation dates.  Your agencies should also be tracking your ruleset adoptions and should identify issues and deficiencies as well.\r\n\r\nHope that helps.\r\n\r\nPaul"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BDvLI",
+          "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-17756872",
+          "author": "TM-Microsoft",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-07-23T21:52:15Z",
+          "updated_at": "2026-07-23T21:52:15Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thanks for the clarification, Paul. That was a first-string response!"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BDxab",
+          "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-17766043",
+          "author": "nicole-gov",
+          "author_association": "NONE",
+          "is_official": true,
+          "created_at": "2026-07-24T13:09:28Z",
+          "updated_at": "2026-07-24T13:09:28Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "I'm also going to point out that adopting new FedRAMP rules that change your existing processes will almost certainly count as a Significant Change, so you should treat it as such, follow the Significant Change rules, and notify your customers accordingly. "
+        }
+      ],
+      "replies_total": 3,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BDx29",
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-17767869",
+      "author": "ElaineFR",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-07-24T15:23:13Z",
+      "updated_at": "2026-07-24T15:23:13Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Hello! To prepare for our RAR conversion submission, I have a couple questions:\n\n1. What kind of qualification evidence is expected for the eligibility form? For RAR conversion, would the FedRAMP Ready listing and a secure share of the RAR suffice? https://help.fedramp.gov/hc/en-us/requests/new?ticket_form_id=52069750514459\n\n2. I imagine that for RAR conversion, our RAR evidence will be enough to get listed, but I am wondering what the timing expectation is for these other Getting Listed requirements, which will take some time to build out. \nhttps://www.fedramp.gov/2026/providers/implement/marketplace/",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BDx_5",
+          "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-17768441",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-07-24T16:06:18Z",
+          "updated_at": "2026-07-24T16:06:18Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Hey Elaine, a couple points:\r\n\r\n(1) A conversion from FedRAMP Ready to a Rev5 Class B+ Program Certification requires completing all of the tasks to receive a Rev5 Class B+ Certification, including a full assessment with a SAP/SAR, full control implementation, etc. You can apply for this but will still have to do all of the work to prepare a full package for review, including a commitment to be aligned to all of the new CR26 rules for Rev5 by February 2027. The application for conversation is just that, an application to discuss next steps and make sure folks understand that you have to invest considerable effort.\r\n\r\n(2) You can't convert to a Rev5 Program Certification until you meet _all_ of the requirements. \r\n\r\nAlso, don't forget (3) You can't have a 20x Certification and a Rev5 Program Certification. You have to pick one."
+        },
+        {
+          "id": "DC_kwDOOxfoic4BDyHN",
+          "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-17768909",
+          "author": "ElaineFR",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-07-24T16:39:03Z",
+          "updated_at": "2026-07-24T16:39:03Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Got it @pete-gov! Thanks for the added clarity! "
+        },
+        {
+          "id": "DC_kwDOOxfoic4BDyIt",
+          "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-17769005",
+          "author": "ElaineFR",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-07-24T16:47:22Z",
+          "updated_at": "2026-07-24T16:47:22Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Pete - one more question. There is a space on the submission form for uploading files. Is the expectation that the SAR will be uploaded there? Is this a secure share mechanism? "
+        },
+        {
+          "id": "DC_kwDOOxfoic4BDyLb",
+          "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-17769179",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-07-24T17:03:08Z",
+          "updated_at": "2026-07-24T17:03:08Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "No, we have your RAR if you're already FedRAMP Ready. It's for anything else relevant that you might want to attach and is kinda a generic part of the form - that form is just a form to start an application, it's not like The Thing that's a one-and-done ship then we make a determination and you find out. Don't overthink it! ;)"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BDyMY",
+          "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-17769240",
+          "author": "ElaineFR",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-07-24T17:08:39Z",
+          "updated_at": "2026-07-24T17:08:39Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Old FedRAMP trained me to overthink though! 😂 It's going to take some time to develop FR20x neurocircuitry. "
+        },
+        {
+          "id": "DC_kwDOOxfoic4BDyqM",
+          "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-17771148",
+          "author": "ElaineFR",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-07-24T19:50:26Z",
+          "updated_at": "2026-07-24T19:50:26Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "@pete-gov, with the RAR/SAR/SAP path, we have our package completely built. We obtained fedramp equivalency, as well. I think it would be faster for us to initially adopt the Rev 5 approach and then move to 20x later. \n\nThat said, does Rev 5 still require a sponsor to get listed? If so, we may need to rethink. \n\nThanks for any insights! 🙏🏻 "
+        },
+        {
+          "id": "DC_kwDOOxfoic4BDy0v",
+          "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-17771823",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-07-24T20:50:19Z",
+          "updated_at": "2026-07-24T20:50:19Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Rev5 always requires a sponsor except for temporary Program Certification options for Rev5 Class B and C that are available based on limited criteria [outlined in detail here](https://www.fedramp.gov/2026/providers/start/path/#temporary-rev5-program-certification-availability-for-class-b-and-c). In this case if you have very specific questions about a very specific set of circumstances it's fine to follow up with us directly, but it should be quite straightforward to know if you meet the criteria or not.\r\n\r\nAnd again, as that page outlines, for FedRAMP to do a Program Certification without a sponsor for Rev5 the company will have to not only meet that criteria but also agree to be following all CR26 Rev rules by February 19, 2027 even if they submit a package before January 1, 2027. \r\n "
+        },
+        {
+          "id": "DC_kwDOOxfoic4BEXdu",
+          "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-17921902",
+          "author": "ElaineFR",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-08-06T14:15:34Z",
+          "updated_at": "2026-08-06T14:15:34Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "@pete-gov, it looks like we are one month off, so we won't qualify for the readiness conversion. \n\nWe have our SOC 2, so we are considering applying for the Class A initial listing. Do you have information on what that opens for us? How quickly can that move to a Class C? \n\nRight now we are Ready at Moderate/Class C in the marketplace, so it feels like a big step backwards to go to Class A. \n\nAs always, thanks for any clarification! 🙏🏻 "
+        },
+        {
+          "id": "DC_kwDOOxfoic4BEXhD",
+          "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-17922115",
+          "author": "nicole-gov",
+          "author_association": "NONE",
+          "is_official": true,
+          "created_at": "2026-08-06T14:31:48Z",
+          "updated_at": "2026-08-06T14:31:48Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "The Class A submission window opened on 8/3. FedRAMP Class A is a real FedRAMP Certification, whereas FedRAMP Ready (at any level) is not. You can always note in your service description and/or your FedRAMP package additional efforts you have done. The rules for each class level are a minimum set of requirements - not a maximum. \r\n\r\nThe 20x Class C submission window opens on 8/31, which is the only available program path if you don't qualify for ready conversion / lost sponsor. "
+        },
+        {
+          "id": "DC_kwDOOxfoic4BEX8o",
+          "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-17923880",
+          "author": "ElaineFR",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-08-06T17:15:52Z",
+          "updated_at": "2026-08-06T17:15:52Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "@nicole-gov, thank you! With class A, what are the next steps? Can you build up to Class C quickly? Or is it better just to submit for Class C out of the gate? \n\nI'm thinking it is probably better to get in line sooner with Class A, but your opinion would be so great. "
+        },
+        {
+          "id": "DC_kwDOOxfoic4BEbAx",
+          "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-17936433",
+          "author": "ElaineFR",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-08-07T17:22:59Z",
+          "updated_at": "2026-08-07T17:22:59Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Hey @nicole-gov, I know you guys have more messages than ever now - just bumping this up. ☺️"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BEbD8",
+          "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-17936636",
+          "author": "nicole-gov",
+          "author_association": "NONE",
+          "is_official": true,
+          "created_at": "2026-08-07T17:50:21Z",
+          "updated_at": "2026-08-07T17:50:21Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "We can't offer business advice, so it's really up to you. \r\n\r\nYou can apply for Class B or C as soon as you want after a Class A certification once the relevant B/C pipelines are open or you can skip Class A and head directly for 20x Class B/C (or Rev5 Class B/C if you qualify for lost sponsor or ready conversion). "
+        },
+        {
+          "id": "DC_kwDOOxfoic4BEbGa",
+          "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-17936794",
+          "author": "ElaineFR",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-08-07T18:09:28Z",
+          "updated_at": "2026-08-07T18:09:28Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Totally understand that, just wondering specifically if there is a clear path to C if we start with A, and what that looks like. Is that defined yet or more a WIP? "
+        },
+        {
+          "id": "DC_kwDOOxfoic4BEbHv",
+          "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-17936879",
+          "author": "nicole-gov",
+          "author_association": "NONE",
+          "is_official": true,
+          "created_at": "2026-08-07T18:19:18Z",
+          "updated_at": "2026-08-07T18:19:18Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Yes, all certification paths from Class A through Class C are already defined in CR26. If you start with a Class A, you can submit for any available Class B or C path that you qualify for whenever you're ready. \r\n\r\n20x Class B and C opens on 8/31/26. \r\nRev5 Class B and C are currently open, but require a sponsor. \r\nProgram Rev5 Class B and C opens on 8/10/26, but requires qualifying through lost sponsor or ready conversion criteria. "
+        },
+        {
+          "id": "DC_kwDOOxfoic4BEbNT",
+          "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-17937235",
+          "author": "ElaineFR",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-08-07T18:59:01Z",
+          "updated_at": "2026-08-07T18:59:01Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thank you Nicole! I'm excited to see where we end up landing. It's amazing how many choices there are - it feels like the open frontier. 😊 "
+        },
+        {
+          "id": "DC_kwDOOxfoic4BFsWH",
+          "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18269575",
+          "author": "dan-fedramp",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-09-03T13:44:37Z",
+          "updated_at": "2026-09-03T13:44:37Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "One more clarification.  The Secure Configuration Guide required under SCG-CSO-RSC is intended to instruct an agency customer how to configure your service. So unless you expect to have agency customers configuring the OS on your system components, the OS configuration does not need to be included in the Secure Configuration Guide."
+        }
+      ],
+      "replies_total": 16,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BEbQS",
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-17937426",
+      "author": "TM-Microsoft",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-08-07T19:27:42Z",
+      "updated_at": "2026-08-07T19:27:42Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "We would appreciate some clarification regarding a FedRAMP response to a Q&A question that was raised earlier this week.\r\n \r\nIs it correct that if a \"Must\" statement in the rule set is not met by the Maintain Date, FedRAMP will issue a Corrective Action Plan (CAP)? Additionally, if the same non-compliance remains unresolved after the Grace Date, will FedRAMP revoke the CSP's authorization/certification? \r\n\r\nFor example, suppose a CSP is using a cryptographic module that is no longer compliant with FedRAMP requirements (it has a historic CMVP certification, and has no plans to submit for a new one). The CSP has identified the issue, documented it, and has a plan to move to a different technology entirely; however, due to implementation complexity, the remediation cannot be completed until AFTER the Grace Date. Can we track as an open vulnerability with agreement from our Collaborative ConMon? Will we get an automatic CAP? Will we get revoked?",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BFS-X",
+          "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18165655",
+          "author": "TM-Microsoft",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-08-26T17:23:46Z",
+          "updated_at": "2026-08-26T17:23:46Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Hello, just checking in to see if there are any updates on the above. Thank you!"
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BEo6o",
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-17993384",
+      "author": "jnguyen1294",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-08-12T19:53:37Z",
+      "updated_at": "2026-08-12T19:53:37Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Hi FedRAMP team, I'm looking for some clarification regarding [Security Decision Record Metadata](https://www.fedramp.gov/2026/reference/security-decision-record/?h=security+decis#security-decision-record-metadata).\r\n> Providers MUST also include the following basic metadata in their Security Decision Record:\r\n>\r\n> Version\r\n> Date and time of last update\r\n> Source of update\r\n\r\n\"Version\" and \"Date and time of last update\" is straight forward, but what is the expectation of \"Source of update\"? Is this referring to if the update was automated v.s. manual? An individual or entity? It would be helpful to have these 3 properties also in the FedRAMP provided SDR JSON Schema with examples or an enum (if appropriate) of what is expected. \r\n\r\ncc: @fahaddd404 @Mingyu5497",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BE4Rt",
+          "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18056301",
+          "author": "dan-fedramp",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-08-17T21:02:00Z",
+          "updated_at": "2026-08-17T21:03:01Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "@jnguyen1294 The Source of Update is intended to alert the reviewer if this is a regular, recurring update or something prompted by an unusual event. There are no prescribed values, but in general we envision this being a process such as Continuous monitoring, SCN or Incident Response.\r\n\r\nI opened an issue to remind myself to add these to the schema. Thanks for flagging!"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BFL-l",
+          "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18136997",
+          "author": "jnguyen1294",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-08-24T15:10:10Z",
+          "updated_at": "2026-08-24T15:10:10Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thanks for the answer! We'll use our own values for now on this and look forward to seeing the schema update!"
+        }
+      ],
+      "replies_total": 2,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BEvRj",
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18019427",
+      "author": "TM-Microsoft",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-08-14T15:53:44Z",
+      "updated_at": "2026-08-14T15:53:44Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Hi FedRAMP Team - Can an artifact that supports FedRAMP Rules or Rev. 5 controls be referenced within machine-readable JSON files that contain implementation statement responses for those rules and controls, rather than requiring the artifact itself to be generated in a machine-readable format?\r\n \r\nOur interpretation is that referencing the supporting artifact is sufficient to satisfy the SDR requirements for SDR-CSO-FRR and SDR-CSF-CTF. Based on this interpretation, the requirement does not necessitate converting the underlying artifact into a machine-readable format.",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BE6YF",
+          "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18064901",
+          "author": "paulagosta",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-08-18T11:09:50Z",
+          "updated_at": "2026-08-18T11:12:40Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Taimur,\r\n\r\nJSON does allow for control specific artifacts, but those should be done in support of the machine readable answers.  Maybe your question has a unique situation, but the concern based on the generic question is we see something like this for SDR-CSF-CTF...\r\n\r\nSchema  \r\n\r\n1. Any organization-defined parameter values.\r\n2.  Implementation status, one of Implemented, Partially Implemented, Planned, Alternative Implementation, or Not Applicable.2.\r\n3. The mechanisms or activities that address the control, including inheritance from another cloud service offering if applicable.\r\n4. The verification that is in place to ensure the implementation is appropriate for the control.\r\n5. The validation that is in place to ensure the implementation is working as intended.\r\n6. Independent verification.\r\n7. Independent validation.\r\n8. Any responses or clarifications to the comments in the independent verification or validation.\r\n9. Control-specific artifacts (if applicable). \r\n\r\nA blanket yes could lead to this in implementation.\r\n\r\n1. SRTM Link\r\n2. SRTM Link\r\n3. SRTM Link\r\n4. SRTM Link\r\n5. SRTM Link\r\n6. SRTM Link\r\n7. SRTM Link\r\n8. SRTM Link\r\n9. SRTM Link\r\n\r\nIf I am misreading your question, provide some steerage or context.  To be fair, I am only half a Monster in this AM.  "
+        },
+        {
+          "id": "DC_kwDOOxfoic4BFL0x",
+          "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18136369",
+          "author": "TM-Microsoft",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-08-24T14:25:23Z",
+          "updated_at": "2026-08-24T14:25:23Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Noted! Only message Paul in the afternoon. \r\n\r\nOur question boils down to this: If our supporting artifacts are screenshots for the time being, and therefore not machine readable, what is the best way to present them alongside the SDR?"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BFL21",
+          "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18136501",
+          "author": "emu-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-08-24T14:34:31Z",
+          "updated_at": "2026-08-24T15:15:15Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "If not within the SDR itself, direct links are best as there is no confusion on where to find the referenced artifact. \"See Trust Center\" is not always awesome, even if the folder/file structure is fairly organized because it takes time to dig around and it is really easy for drift to occur with files names. \r\n\r\nIf we have to assemble a search party to find your files, we will push back on your submission, which will further extend the review timeframe. Context is also very important and how the artifact is relevant should be well articulated. "
+        }
+      ],
+      "replies_total": 3,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BEv1N",
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18021709",
+      "author": "aaronhbridges",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-08-14T20:05:26Z",
+      "updated_at": "2026-08-14T20:05:26Z",
+      "upvotes": 2,
+      "minimized": false,
+      "body": "Hi FedRAMP team — a question on the Scope of FedRAMP guidance (https://www.fedramp.gov/2026/scope/#information-providers, originally from RFC-0010). The out-of-scope \"Online Learning Platforms\" example lists Udemy, Coursera, Skillsoft, and similar platforms. OpenSesame is an online learning and training platform squarely in that same category.\r\n\r\nThree questions:\r\n\r\n- Is there a process for a provider to be reflected in that illustrative example list, or to otherwise have our service recognized as falling within the \"training and online learning platforms\" category?\r\n\r\n- When an agency (or a reseller supporting an agency) wants documentation of a provider's out-of-scope status, is the published category sufficient on its own, or is anything expected from the provider or the PMO?\r\n\r\n- Would a letter from our independent auditor — who is also a FedRAMP-recognized 3PAO — affirming that our service falls within the out-of-scope online learning platform category be a recognized or useful artifact for this purpose, or does scope determination rest solely with the agency?\r\n\r\nWe want to give agencies and partners what they need without implying an authorization requirement that doesn't apply. Thanks for the work on CR26.\r\n\r\n— Aaron Bridges, CTO, OpenSesame",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BE3e0",
+          "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18053044",
+          "author": "emu-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-08-17T13:59:00Z",
+          "updated_at": "2026-08-17T14:01:06Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thanks for posting this here in the community as this is a great topic to dive into! \r\n\r\nScope of FedRAMP really depends on how the service is being used. Any example services are to aid understanding and not to be used as any kind of exclusion list. Even those mentioned in the examples could in certain use cases be within scope. So while \"it depends\" might feel like a non-answer, this stuff is really circumstantial based on how the agency will be using your service. Different uses exist across different agencies and even within the same one!\r\n\r\nA key test here is _general education and training_ . If the same content is being offered to the general public as it is the agency, then you are likely out of scope. If the agency is creating and publishing internal content to your platform for specific agency users and requires the collecting of federal information, you are probably in scope.\r\n\r\nBest thing to do is to talk it out with the agency you are working with and you can absolutely reference our [Scope of FedRAMP](https://www.fedramp.gov/2026/scope/#scope-of-fedramp) page to help frame the discussion. We don't offer any kind of blanket out of scope hall pass or anything, but are always happy to help support agencies when they have questions."
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BE6de",
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18065246",
+      "author": "AshPublicSector",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-08-18T11:37:20Z",
+      "updated_at": "2026-08-18T11:37:20Z",
+      "upvotes": 3,
+      "minimized": false,
+      "body": "Hi FedRAMP team-\r\nCan a feature of a larger product be listed on the Marketplace on its own, or must the parent product be the CSO?\r\n\r\nContext: If a capability is sold as a licensed feature inside a larger cloud service — enabled by a feature flag, running entirely on the parent product's infrastructure, not purchasable or operable on its own — can that capability be listed on the FedRAMP Marketplace and pursue a 20x Class A Certification as its own cloud service offering? Or is the expectation that the parent product is the listed offering, with the feature inside the Minimum Assessment Scope?\r\n\r\nFollow-ups:\r\n\r\n1. If the feature can't be listed on its own, does certifying the parent product cover the feature, assuming it falls within the identified resource set under MAS-CSO-IIR?\r\n2. Would the answer change for a standalone product variant of the same capability?\r\n3. \r\nOur reading of MAS-CSO-IIR (the identified resource set constitutes the offering) and CDS-CSO-PSM (providers determine what constitutes separate services) suggests there's flexibility - but since the feature depends entirely on the parent's infrastructure, its boundary would pull in the parent's components anyway, making the parent the natural listing. Is that right?",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BFMAP",
+          "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18137103",
+          "author": "emu-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-08-24T15:18:45Z",
+          "updated_at": "2026-08-24T15:18:45Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Sorry we have not responded yet, this is a good question that requires a thoughtful and nuanced response. We will discuss internally and get back to ya!"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BGElT",
+          "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18368851",
+          "author": "emu-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-09-09T13:06:35Z",
+          "updated_at": "2026-09-09T13:06:35Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> not purchasable or operable on its own\r\n\r\nBeing unable to purchase the service as an individual product without the parent would make it ineligible for it's own listing. It also feels a bit on the sneaky side.\r\n\r\nWhen you certify the parent product, you have the flexibility to add services under that listing, which are services from a marketing feature perspective, not a technical perspective. So as long as any relevant components that feature relies upon are included in the minimum assessment scope, you are OK.\r\n\r\nIn the other possible scenario that it becomes a product purchasable on its own, but is still heavily dependent on the parent product, you could list and reference the parent as a resource under `MAS-CSO-IIR`  BUT this really stretches the spirit of the rules pretty thin because that parent product would likely have a very high impact to the CIA of federal information processed by the service without being FR certified. This could be severely limiting and have unintended consequences when agencies try to decipher your package, see some trickery and nope out."
+        },
+        {
+          "id": "DC_kwDOOxfoic4BGE2G",
+          "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18369926",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-09-09T14:21:13Z",
+          "updated_at": "2026-09-09T14:21:13Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "To emphasize this response with some specific scenarios:\r\n\r\nIf a company develops a standalone product that has its own team, assurance support, FedRAMP Certification Package, etc. then it's a separate cloud service offering with its own Marketplace listing - even if it is hosted or run on a PaaS/IaaS provided by that company.\r\n\r\nAll FR requirements must be met to maintain a Marketplace listing, and something like a feature or capability where there isn't a standalone package, continuous monitoring, sales pipeline, etc. is obviously part of the parent cloud service offering and listed as a service within that parent Marketplace listing."
+        }
+      ],
+      "replies_total": 3,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BFS3p",
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18165225",
+      "author": "daclevenger",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-08-26T16:41:07Z",
+      "updated_at": "2026-08-26T16:41:07Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Hello FedRAMP team,\r\n\r\nWith regards to IVV-CSO-RAA, could I have some more direction on what is allowed for a 3PAO.  For instance, if a 3PAO were to do the advisory for a CSP and have a firewall setup to ensure the advisory team can't influence the assessment team.  Would the 3PAO then be permitted to perform the assessment for the same CSP as long as their is no data being shared between the advisory and assessment activities?\r\n\r\nThanks for the guidance here, I just want to make sure I understand correctly so that we can work within the expectations of FedRAMP.  ",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BFlOw",
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18240432",
+      "author": "ghempton",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-09-01T21:29:50Z",
+      "updated_at": "2026-09-01T21:29:50Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Hi FedRAMP Team - Following up on the Class A → Class C path (@nicole-gov previously mentioned to apply at any time for class C). How does **FRC-CSX-MOT** apply in that case?\r\n\r\nIts note says that for *initial* certification, providers \"will need to have mechanisms in place and agree to meet this requirement\" when the service has not been operating with related metrics available for the required 6 months. If a CSO is certified at Class A first and then applies for 20x Class C a few months later, does that note still apply? E.g., can we apply with ≥2 automated validation methods per KSI running and status recorded nightly, plus the agreement to meet the 6 months or does the Class A certification make the full 6 months of KSI metrics a hard prerequisite for Class C?\r\n\r\nWe'd rather not skip Class A if the note carries over. Thanks!",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BFnhW",
+          "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18249814",
+          "author": "emu-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-09-02T12:48:11Z",
+          "updated_at": "2026-09-02T12:48:11Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Initial Certification means when we originally review your Certification package materials. If you have a Class A and submit for a Class C, our Class C review is still the *\"initial certification\"*.\r\n\r\nAlso, as we are doing our Class A Certification reviews, we put a section on your Certification report specifically for any feedback we have for ascending to a Class B or C. Feedback on things that could enhance future review timelines and avoid rework like clarity of implementation descriptions, quality of artifacts, package review experience, etc."
+        },
+        {
+          "id": "DC_kwDOOxfoic4BFnjU",
+          "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18249940",
+          "author": "emu-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-09-02T12:54:13Z",
+          "updated_at": "2026-09-02T12:55:02Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "So to fully answer your question, that note does indeed carry over even if you already have a Class A or B. Just be mindful of your implementation status, as in you don't have that fully implemented if you don't have the 6 mo of metrics.\r\n\r\nWe can't give business advice, but if you already have an approved alternative security framework (SOC 2 Type II, FR Rev5 or GovRAMP) and are working on a Class B or C, Class A is a awesome way to iterate your package build, get actionable feedback from FedRAMP early on and get listed on the Marketplace with a read deal Certification."
+        }
+      ],
+      "replies_total": 2,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BFo4R",
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18255377",
+      "author": "cclements05",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-09-02T19:00:17Z",
+      "updated_at": "2026-09-02T19:00:17Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Is a CSP required to have a Trust Center to get listed on the Marketplace in the Initial Implementation Phase?\r\n\r\nCDS-CSO-PUB and MKT-IIP-DCP make reference to Trust Centers, however, do not seem to specifically require a Trust Center (as machine-readable information via public webpage is an option). However, the CSP Getting Listing narrative (https://www.fedramp.gov/2026/providers/implement/marketplace/) states: \"You will need a basic FedRAMP-compatible Trust Center\" and 20x CWG meetings have discussed CSPs not needing \"a full Trust Center\", insinuating some level of a Trust Center is required for the Initial Implementation Phase.",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BFo7B",
+          "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18255553",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-09-02T19:11:29Z",
+          "updated_at": "2026-09-02T19:11:29Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "You've hit on a small narrative issue but the key thing is that the explicit rules are followed, not the narrative. The rules require you to make information available publicly and a \"basic FedRAMP-compatible Trust Center\" is explained as a way to do that in the narrative, but there is no rule that applies FedRAMP-compatible Trust Center requirements here.\r\n\r\nPer the rules:\r\n\r\n1. MKT-CSO-MLR (Marketplace Listing Requirements) applies, linking to CDS-CSO-PUB (Public Information) which says that the public information that is available must be publicly shared in a human-readable and JSON format and lists the expected information. For Initial Implementation, much of that information will not be \"available\" or \"applicable.\"\r\n\r\n2. MKT-CSO-PML (Provider Marketplace Listing Requests) applies, requiring the form to be used.\r\n\r\n3. MKT-IIP-AGU (Agency Use Cases), MKT-IIP-DCP (Demonstrating Continuous Progress), and MKT-IIP-DLA (Deadline for Assessment) apply for Initial Implementation phase, and must be available in some fashion.\r\n \r\nSo basically if you have a FedRAMP landing page that publishes all of that information publicly we would consider that to be \"a basic FedRAMP-compatible Trust Center.\"\r\n"
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BGErq",
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18369258",
+      "author": "BigAO1",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-09-09T13:34:18Z",
+      "updated_at": "2026-09-09T13:34:18Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Hey team - as the 20x pathways have become generally available I have seen a lot of interest in class A but also a lot of confusion on how to get there. One of the main questions being the independent assessment for Class A certification. In the rules for Class A, the wording seems deliberate in having MAY instead of MUST. Can a cloud service provider get listed on the FR marketplace at Class A without an independent assessment? ",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BGEtb",
+          "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18369371",
+          "author": "emu-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-09-09T13:42:47Z",
+          "updated_at": "2026-09-09T13:42:47Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Yes, you can get listed on the FedRAMP Marketplace for a Class A Certification without an Independent Assessment Service performing and Independent Verification and Validation.\r\n\r\nWe have 2 CSPs who both recently became Class A Certified speaking about their experience TODAY on our 20x Community Update. Both of them did not have an IV&V performed.\r\n\r\nhttps://www.fedramp.gov/event/20x-cwg-2026-09-09/"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BGFSf",
+          "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18371743",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-09-09T16:14:24Z",
+          "updated_at": "2026-09-09T16:14:24Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "lol jumping on this to +1 emu-gov and also be extra clear that it's really not a trap when a FedRAMP rule says you MAY do something 🤣  All of the rules wording is deliberate. Force of the rule is explained here: https://www.fedramp.gov/2026/rules/#force-of-the-rule\r\n\r\nWe do want to make it clear that if someone wants to initiate a relationship with an independent assessor and get them to double check things before submitting for Class A that they can document that they did so and might have a smoother time, but it is absolutely 100% not expected."
+        }
+      ],
+      "replies_total": 2,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BHlSl",
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18764965",
+      "author": "jbrenton-fits",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-10-05T19:32:05Z",
+      "updated_at": "2026-10-05T19:32:05Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "I'm looking for clarification on how to apply the scope criteria for FedRAMP 20x in cases where locally installed software handles Federal data and is essential for the CSO to function, but operational control resides entirely with the agency.\r\n\r\nBased on MAS-CSO-IIR, it appears that such software may be in scope if it handles Federal data or could impact its CIA. Additionally, the Scope of FedRAMP website includes an example where a locally installed agent that handles Federal data is considered within the FedRAMP assessment scope:\r\nhttps://www.fedramp.gov/2026/scope/#detailed-examples1\r\n\r\nHowever, both the Scope of FedRAMP site and notes within MAS-CSO-IIR also state that FedRAMP is focused on cloud products, and that locally installed software is generally out of scope unless it is operated as part of a shared responsibility model.\r\n\r\nIn this case, which factor takes precedence for scoping purposes: \r\nthat the locally installed software handles and could impact Federal data, or the fact that the software is fully managed by the agency?",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BHljc",
+          "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18766044",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-10-05T21:03:07Z",
+          "updated_at": "2026-10-05T21:03:07Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> I'm looking for clarification on how to apply the scope criteria for FedRAMP 20x in cases where locally installed software handles Federal data and is essential for the CSO to function, but operational control resides entirely with the agency.\r\n\r\nThe answer - as you've seen - is that the nuance depends on the implementation. For FedRAMP and the Minimum Assessment Scope, the scoping occurs within the data boundary of the cloud service. If you have command and control from the cloud service, or accept telemetry from devices, or have some other form of control over the deployed software (such as updated) then all of that aspect of the cloud service is in scope for FedRAMP.\r\n\r\nThe actual software itself, the process of deploying and operating it within an agency enclave or device, the risk and analysis of it, etc. is outside scope for FedRAMP. \r\n\r\n[MAS-CSO-SUP (Supplemental Information)](https://www.fedramp.gov/2026/reference/minimum-assessment-scope/#supplemental-information) allows you to include information like this in your FedRAMP Certification Package for easy distribution, but FedRAMP will not assess the security of something that isn't a cloud computing product or service within the scope of FedRAMP and FedRAMP's rules do not extend to locally deployed software that is placed inside an agency boundary.\r\n\r\nDoes that help or just have more questions? If there's a specific architecture scenario we can help walk through it."
+        },
+        {
+          "id": "DC_kwDOOxfoic4BHpYz",
+          "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18781747",
+          "author": "jbrenton-fits",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-10-06T17:20:05Z",
+          "updated_at": "2026-10-06T17:20:05Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thank you very much. I think I'm following.\r\n\t\t\r\nFor locally installed software, different aspects may be considered in or outside the FedRAMP scope depending on the level of control the CSO exercises over the software. \r\n\t\t\r\nSo, in cases where the local software can be controlled to some extent from the CSO, the control the CSO exercises over the local software is within the FedRAMP scope. This would mean that KSIs and rules applicable to the actions the CSO can take on the local software must be addressed, but other aspects of the software fully managed by the agency would remain outside the FedRAMP scope."
+        },
+        {
+          "id": "DC_kwDOOxfoic4BHpbk",
+          "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18781924",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-10-06T17:33:05Z",
+          "updated_at": "2026-10-06T17:33:05Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Yes, exactly right!"
+        }
+      ],
+      "replies_total": 3,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BH4Ba",
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18841690",
+      "author": "ekraft-coalfire",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-10-09T19:30:14Z",
+      "updated_at": "2026-10-09T19:30:14Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Can a provider that runs its own infrastructure obtain a 20x Class A Certification today?",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BIHHK",
+          "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18903498",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-10-13T14:54:20Z",
+          "updated_at": "2026-10-13T14:54:20Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> Can a provider that runs its own infrastructure obtain a 20x Class A Certification today?\r\n\r\nYes, they can obtain a Class A Certification. They will not be able to advance to a 20x Class B+ until self-hosted rules are in place, but could transition to a Class B+ Rev5."
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BIB8Z",
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18882329",
+      "author": "dfulleradsk",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-10-12T14:24:48Z",
+      "updated_at": "2026-10-12T14:27:46Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Following the recent introduction of N0 to the PAIN ratings, I have a question about how N0 interacts with Accepted Vulnerability classification.  If a vulnerability remains detectable but has been fully mitigated such that its likely agency impact is N0, does VER-TFR-MAV still require it to be categorized as an Accepted Vulnerability after 192 days, or does full mitigation satisfy the requirement regardless of continued detection?",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BIHIh",
+          "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18903585",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-10-13T14:58:06Z",
+          "updated_at": "2026-10-13T14:58:06Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "There does not have to be any interaction between N0 and Accepted Vulnerabilities. A cloud service provider may choose to accept the risk of a PAIN5 vulnerability. \r\n\r\n> If a vulnerability remains detectable but has been fully mitigated such that its likely agency impact is N0, does VER-TFR-MAV still require it to be categorized as an Accepted Vulnerability after 192 days, or does full mitigation satisfy the requirement regardless of continued detection?\r\n\r\nVulnerabilities should live on as a tracked vulnerability until they are remediated. Even a fully mitigated vulnerability that has been accepted needs to be tracked in case there's a future circumstance where it comes into play.\r\n\r\nRemember that fully mitigated means it's still there, you can still see it. Remediated means it's gone. Remediation is the only true end state for tracking a vulnerability.\r\n"
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "AshPublicSector",
+    "BigAO1",
+    "ElaineFR",
+    "KHFedR",
+    "TM-Microsoft",
+    "aaronhbridges",
+    "cclements05",
+    "daclevenger",
+    "dan-fedramp",
+    "dfulleradsk",
+    "ekraft-coalfire",
+    "emu-gov",
+    "ghempton",
+    "jbrenton-fits",
+    "jnguyen1294",
+    "nicole-gov",
+    "pallakatos",
+    "paulagosta",
+    "pete-gov",
+    "v-mhahnfirstinfotech"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-17438908",
+      "author": "pete-gov",
+      "created_at": "2026-06-25T21:36:44Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-17566240",
+      "author": "pete-gov",
+      "created_at": "2026-07-08T01:01:38Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-17587637",
+      "author": "emu-gov",
+      "created_at": "2026-07-09T17:06:00Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-17674707",
+      "author": "pete-gov",
+      "created_at": "2026-07-17T16:19:14Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18255608",
+      "author": "pete-gov",
+      "created_at": "2026-09-02T19:15:20Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18256476",
+      "author": "pete-gov",
+      "created_at": "2026-09-02T20:06:20Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18258430",
+      "author": "nicole-gov",
+      "created_at": "2026-09-02T22:47:00Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-17755820",
+      "author": "paulagosta",
+      "created_at": "2026-07-23T19:40:04Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-17766043",
+      "author": "nicole-gov",
+      "created_at": "2026-07-24T13:09:28Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-17768441",
+      "author": "pete-gov",
+      "created_at": "2026-07-24T16:06:18Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-17769179",
+      "author": "pete-gov",
+      "created_at": "2026-07-24T17:03:08Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-17771823",
+      "author": "pete-gov",
+      "created_at": "2026-07-24T20:50:19Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-17922115",
+      "author": "nicole-gov",
+      "created_at": "2026-08-06T14:31:48Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-17936636",
+      "author": "nicole-gov",
+      "created_at": "2026-08-07T17:50:21Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-17936879",
+      "author": "nicole-gov",
+      "created_at": "2026-08-07T18:19:18Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18269575",
+      "author": "dan-fedramp",
+      "created_at": "2026-09-03T13:44:37Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18056301",
+      "author": "dan-fedramp",
+      "created_at": "2026-08-17T21:02:00Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18064901",
+      "author": "paulagosta",
+      "created_at": "2026-08-18T11:09:50Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18136501",
+      "author": "emu-gov",
+      "created_at": "2026-08-24T14:34:31Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18053044",
+      "author": "emu-gov",
+      "created_at": "2026-08-17T13:59:00Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18137103",
+      "author": "emu-gov",
+      "created_at": "2026-08-24T15:18:45Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18368851",
+      "author": "emu-gov",
+      "created_at": "2026-09-09T13:06:35Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18369926",
+      "author": "pete-gov",
+      "created_at": "2026-09-09T14:21:13Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18249814",
+      "author": "emu-gov",
+      "created_at": "2026-09-02T12:48:11Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18249940",
+      "author": "emu-gov",
+      "created_at": "2026-09-02T12:54:13Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18255553",
+      "author": "pete-gov",
+      "created_at": "2026-09-02T19:11:29Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18369371",
+      "author": "emu-gov",
+      "created_at": "2026-09-09T13:42:47Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18371743",
+      "author": "pete-gov",
+      "created_at": "2026-09-09T16:14:24Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18766044",
+      "author": "pete-gov",
+      "created_at": "2026-10-05T21:03:07Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18781924",
+      "author": "pete-gov",
+      "created_at": "2026-10-06T17:33:05Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18903498",
+      "author": "pete-gov",
+      "created_at": "2026-10-13T14:54:20Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18903585",
+      "author": "pete-gov",
+      "created_at": "2026-10-13T14:58:06Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [
+      "FRC-CSX-MOT"
+    ],
+    "rfc_ids": [
+      "RFC-0010"
+    ],
+    "nist_controls": [
+      "CA-5",
+      "SA-04",
+      "SA-04(5)"
+    ],
+    "discussion_refs": [],
+    "urls": [
+      "https://github.com/FedRAMP/docs-legacy",
+      "https://github.com/user-attachments/assets/21387f29-b69f-48e3-92d9-528041a25b7b",
+      "https://help.fedramp.gov/hc/en-us/requests/new?ticket_form_id=52069750514459",
+      "https://preview.fedramp.gov/2026/reference/secure-configuration-guide/",
+      "https://www.cisa.gov/resources-tools/services/secure-cloud-business-applications-scuba-project",
+      "https://www.fedramp.gov/2026/",
+      "https://www.fedramp.gov/2026/providers/implement/marketplace/",
+      "https://www.fedramp.gov/2026/providers/rev5/controls/",
+      "https://www.fedramp.gov/2026/providers/start/path/#temporary-rev5-program-certification-availability-for-class-b-and-c",
+      "https://www.fedramp.gov/2026/reference/minimum-assessment-scope/#supplemental-information",
+      "https://www.fedramp.gov/2026/reference/security-decision-record/?h=security+decis#security-decision-record-metadata",
+      "https://www.fedramp.gov/2026/rules/#force-of-the-rule",
+      "https://www.fedramp.gov/2026/scope/#detailed-examples1",
+      "https://www.fedramp.gov/2026/scope/#information-providers,",
+      "https://www.fedramp.gov/2026/scope/#scope-of-fedramp",
+      "https://www.fedramp.gov/event/20x-cwg-2026-09-09/",
+      "https://www.fedramp.gov/notices/0013/",
+      "https://www.fedramp.gov/rfcs/0030/"
+    ],
+    "topics": [
+      "20x",
+      "3pao",
+      "agency_authorization",
+      "class_a",
+      "class_b",
+      "class_c",
+      "class_d",
+      "conmon",
+      "crypto_fips",
+      "ksi",
+      "machine_readable",
+      "marketplace",
+      "poam",
+      "rev5",
+      "significant_change",
+      "trust_center",
+      "vulnerability_mgmt"
+    ]
+  },
+  "content_hash": "ba3cba923b514ebc079bad59ea32f0f4f547322386c67f27d3f1bfd0f6f652ed",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

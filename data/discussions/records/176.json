@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-176",
+  "node_id": "D_kwDOOxfoic4ApWwi",
+  "number": 176,
+  "title": "FRC-CSX-VVK - How does FedRAMP interpret \"Automated Methods\" for KSI Validation",
+  "url": "https://github.com/FedRAMP/community/discussions/176",
+  "category": "20x Discussion",
+  "category_slug": "20x-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "jdettweiler",
+  "author_is_official": false,
+  "created_at": "2026-09-18T11:33:28Z",
+  "updated_at": "2026-09-18T13:17:32Z",
+  "last_edited_at": null,
+  "closed": false,
+  "closed_at": null,
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 2,
+  "body": "I was hoping to see if I could get some clarity around FRC-CSX-VVK, which requires automated methods to persistently verify and validate the accuracy and completeness of each Key Security Indicator. Current requirements are noted as: \r\n\r\n```\r\nClass A: MAY implement automated methods; no minimum.\r\nClass B: SHOULD use at least 1 automated method per KSI.\r\nClass C: MUST use at least 2 automated methods per KSI.\r\nClass D: MUST use at least 4 automated methods per KSI.\r\n\r\nSource: FRR.FRC.data.20x.CSX.FRC-CSX-VVK, dataset version 2026.09.13.02\r\n```\r\n\r\nWould it be possible for FedRAMP clarify how it determines whether two automated validations are distinct methods for this purpose? We are currently building out an automated assessment platform, so I want to provide a real world example of how we are validating/assessing KSI-CNA-EIS \"Enforcing Intended State\". The platform executes multiple deterministic checks and produces a single assessor-readable \"assessment\" report. The assessment currently evaluates:\r\n\r\n| Assessment area                                          | Intended role                                                |\r\n| -------------------------------------------------------- | ------------------------------------------------------------ |\r\n| Persistent vulnerability and compliance scan telemetry   | Recurring machine-resource security assessment               |\r\n| Organization Policy source-to-effective-state comparison | Validate that deployed effective policies match version-controlled intended state |\r\n| Provider boundary source-to-live-membership comparison   | Validate that provider boundary enforcement is active for the complete scoped population |\r\n| OS policy source-to-live-assignment comparison           | Validate that deployed OS policy assignments match the intended enforcement chain |\r\n| Endpoint/host policy and agent telemetry                 | Validate bounded host anti-malware enforcement               |\r\n| GCP asset and enabled-service inventory coverage         | Establish complete population coverage for the above validations |\r\n| Finding/disposition tracking                             | Confirm that detected drift and findings are tracked         |\r\n| Process documentation                                    | Establish the documented assessment and lifecycle process    |\r\n\r\nThe automated assessment platform produces machine-readable results/evidence, operates on defined in-scope populations, has distinct logic and failure conditions, and is designed to run repeatedly. \r\n\r\nSince this is all occurring in a single assessment platform, ultimately the question is does this count as a single \"automated method\" or does the table above represent multiple \"automated methods\" since deterministic telemetry is being retrieved and correlated from multiple security mechanisms within the environment (e.g., vulnerability scanner, endpoint manager, document repository that contains policy and procedures, ITSM, etc.)?",
+  "comment_count": 1,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4BGk24",
+      "url": "https://github.com/FedRAMP/community/discussions/176#discussioncomment-18501048",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2026-09-18T13:17:32Z",
+      "updated_at": "2026-09-18T13:17:32Z",
+      "upvotes": 2,
+      "minimized": false,
+      "body": "> Would it be possible for FedRAMP clarify how it determines whether two automated validations are distinct methods for this purpose?\r\n\r\nThis is up to the cloud service provider. You are making a choice that is designed to assure customers of your security posture and coverage of the KSI. If you make poor choices, potential customers are less likely to find your assurance adequate. If you make good choices, potential customers are more likely to find your assurance adequate. \r\n\r\nDon't think of this as \"what do I need to do to get a FedRAMP Certification\" - **think of it as \"what do I need to do to assurance customers that I protect their information?\"**\r\n\r\nDuring FedRAMP Certification we will include our own report on how usefully assuring and diverse we think the methods used are.",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "jdettweiler",
+    "pete-gov"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/176#discussioncomment-18501048",
+      "author": "pete-gov",
+      "created_at": "2026-09-18T13:17:32Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [
+      "FRC-CSX-VVK",
+      "KSI-CNA-EIS"
+    ],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [],
+    "topics": [
+      "20x",
+      "3pao",
+      "class_a",
+      "class_b",
+      "class_c",
+      "class_d",
+      "ksi",
+      "machine_readable",
+      "vulnerability_mgmt"
+    ]
+  },
+  "content_hash": "44e8d71288c32fc159f5e7d66c6599b17ceb5cf372798dbd18ad38ab88b9207e",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-81",
+  "node_id": "D_kwDOOxfoic4Ahsgz",
+  "number": 81,
+  "title": "07/23 RET Asset Identifiers",
+  "url": "https://github.com/FedRAMP/community/discussions/81",
+  "category": "Rev5 Discussion",
+  "category_slug": "rev5-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "fortetroy",
+  "author_is_official": false,
+  "created_at": "2025-09-02T21:40:59Z",
+  "updated_at": "2025-11-18T16:25:43Z",
+  "last_edited_at": null,
+  "closed": true,
+  "closed_at": "2025-11-18T16:25:43Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "> Enter the corresponding unique asset ID specified in the CSP's Integrated Inventory Workbook (IIW). This is a unique string associated with the asset; it could be an IP address or any arbitrary naming scheme. Include the complete identifier name (no short hand). If multiple assets are affected, separate each by a new line (Alt+Enter).\r\n\r\nDoes this mean that assets can be grouped into one RET/POAM ID or does this require a separate RET/POAM ID per CVE per asset?\r\n\r\nWhat is the desired approach to support FedRAMP processing of this document?",
+  "comment_count": 0,
+  "comments": [],
+  "answer_url": null,
+  "participants": [
+    "fortetroy"
+  ],
+  "official_responses": [],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [],
+    "topics": [
+      "poam",
+      "vulnerability_mgmt"
+    ]
+  },
+  "content_hash": "968f7ac2737453eddc645b03ef7a79fc626901b3d90bc21e2c4d1c133f07b5f1",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

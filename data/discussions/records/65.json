@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-65",
+  "node_id": "D_kwDOOxfoic4AhAUI",
+  "number": 65,
+  "title": "Two 3PAOs, one assessment, one pen test",
+  "url": "https://github.com/FedRAMP/community/discussions/65",
+  "category": "Rev5 Discussion",
+  "category_slug": "rev5-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "DrSC-IA",
+  "author_is_official": false,
+  "created_at": "2025-07-29T16:25:59Z",
+  "updated_at": "2025-08-25T14:23:15Z",
+  "last_edited_at": null,
+  "closed": true,
+  "closed_at": "2025-08-25T14:23:15Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "Does the PMO accept annual ConMon assessment and pen test performed by 2 separate 3PAOs?  One 3PAO performing the assessment that has the ability to perform the pen test but the CSP wants another 3PAO to perform the pen test.  If allowed, how does the development of the SAP, SAR, RET, etc. handled?  Are these two different sets of documentation since it is 2 different 3PAOs? ",
+  "comment_count": 1,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4A1Hop",
+      "url": "https://github.com/FedRAMP/community/discussions/65#discussioncomment-13924905",
+      "author": "jsantore-cgc",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2025-07-29T16:58:16Z",
+      "updated_at": "2025-07-29T16:58:17Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Unless something has changed in the past few months, you cannot do this for Rev 5.  The same organization needs to be perform both the control assessmentment AND the Penetration Test, and would combine the results of those (plus vulnerability scans and compliance scans) into the RET, SAR, etc.\r\n\r\nYou do not need the same organization to perform the red team test.  CA-8(3)  In fact, you can do that internally, and the 3PAO will review the Red Team Test Report.\r\n\r\n",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "DrSC-IA",
+    "jsantore-cgc"
+  ],
+  "official_responses": [],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [
+      "CA-8(3)"
+    ],
+    "discussion_refs": [],
+    "urls": [],
+    "topics": [
+      "3pao",
+      "conmon",
+      "rev5",
+      "vulnerability_mgmt"
+    ]
+  },
+  "content_hash": "ac42cf3e896f4ff9c7e4f561761542ab652191a194623bcf4a812d961d27cbb0",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

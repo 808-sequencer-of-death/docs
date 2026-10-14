@@ -1,0 +1,164 @@
+---
+title: "Significant change notification"
+description: "Classify every significant change to your cloud service offering as routine recurring, adaptive or transformative, and notify agency customers on the timeline each type requires."
+sidebarTitle: "SCN: Significant change"
+---
+
+<Info>
+  **Official source:** [Significant Change Notification](https://www.fedramp.gov/2026/reference/significant-change-notification/) (`SCN`), FedRAMP Consolidated Rules release `2026.10.14.01`. This page is a plain-English summary. The official rule text governs.
+</Info>
+
+## In short
+
+You can make significant changes to your own service without asking FedRAMP for approval in advance. In return, you must classify each change and tell agency customers about it on a fixed timeline. Routine recurring changes, such as normal patching, need no notification. Adaptive changes need a notice within 10 business days after you finish. Transformative changes need notices before you start (30 and 10 business days ahead), after you finish and after verification. A change of FedRAMP Certification class can't go through SCN at all: it requires a new assessment.
+
+## Who it applies to
+
+| Subset | Type | Path | Class | Audience |
+| --- | --- | --- | --- | --- |
+| [FedRAMP Responsibilities](https://www.fedramp.gov/2026/reference/significant-change-notification/#fedramp-responsibilities) | 20x, Rev5 | Program, Agency | B, C, D | FedRAMP |
+| [General Provider Responsibilities](https://www.fedramp.gov/2026/reference/significant-change-notification/#general-provider-responsibilities) | 20x, Rev5 | Program, Agency | B, C, D | Providers |
+| [Adaptive Changes](https://www.fedramp.gov/2026/reference/significant-change-notification/#adaptive-changes) | 20x, Rev5 | Program, Agency | B, C, D | Providers |
+| [Routine Recurring Changes](https://www.fedramp.gov/2026/reference/significant-change-notification/#routine-recurring-changes) | 20x, Rev5 | Program, Agency | B, C, D | Providers |
+| [Transformative Changes](https://www.fedramp.gov/2026/reference/significant-change-notification/#transformative-changes) | 20x, Rev5 | Program, Agency | B, C, D | Providers |
+
+<Note>
+  The subsets list Classes B, C and D. No SCN rule has a class-specific variant, and no SCN rule appears on the Class A mandatory or recommended lists in [`FRC-CLA-MFR`](https://www.fedramp.gov/2026/reference/fedramp-certification/#mandatory-fedramp-rules-for-class-a) or [`FRC-CLA-RFR`](https://www.fedramp.gov/2026/reference/fedramp-certification/#recommended-fedramp-rules-for-class-a).
+</Note>
+
+## Key dates
+
+| | 20x | Rev5 |
+| --- | --- | --- |
+| Status | Required (Consolidated Rules for 2026) | Required (Consolidated Rules for 2026) |
+| Optional adoption allowed | 2026-07-04 | 2026-07-04 |
+| Obtaining initial certification | 2026-07-04 | 2027-01-01 |
+| Maintaining ongoing certification | 2027-01-01 | 2027-01-01 |
+| Grace period ends | First FedRAMP independent assessment started after 2027-01-01 | 2027-06-01 |
+
+## How to classify a change
+
+[`SCN-CSO-EVA`](https://www.fedramp.gov/2026/reference/significant-change-notification/#evaluate-changes) requires you to evaluate every potential significant change in this order:
+
+<Steps>
+  <Step title="Is it a significant change?">
+    If yes, keep evaluating and follow the SCN rules.
+  </Step>
+  <Step title="Is it a FedRAMP Certification class change?">
+    If yes, it requires a new assessment and can't be done under the SCN rules.
+  </Step>
+  <Step title="Is it a routine recurring change?">
+    If yes, follow the [Routine Recurring Changes](#routine-recurring-changes) rules (`SCN-RTR`).
+  </Step>
+  <Step title="Is it a transformative change?">
+    If yes, follow the [Transformative Changes](#transformative-changes) rules (`SCN-TRF`).
+  </Step>
+  <Step title="Otherwise, it is an adaptive change">
+    Follow the [Adaptive Changes](#adaptive-changes) rules (`SCN-ADP`).
+  </Step>
+</Steps>
+
+## Notification timeline
+
+These timeframes are the same for every class.
+
+| Change type | Notice | Timing | Rule |
+| --- | --- | --- | --- |
+| Routine recurring | None | Exempt. You SHOULD NOT send formal notifications. | `SCN-RTR-NNR` |
+| Adaptive | After finishing | Within 10 business days after finishing | `SCN-ADP-NTF` |
+| Transformative | Initial plans | At least 30 business days before starting | `SCN-TRF-NIP` |
+| Transformative | Final plans | At least 10 business days before starting | `SCN-TRF-NFP` |
+| Transformative | After finishing | Within 5 business days after finishing | `SCN-TRF-NAF` |
+| Transformative | After verification | Within 5 business days after completing verification, assessment and/or validation | `SCN-TRF-NAV` |
+| Transformative | Updated service documentation | Within 30 business days after finishing | `SCN-TRF-UPD` |
+| Emergency (any type) | Retroactive | After the emergency or incident | `SCN-CSO-EMG` |
+
+Upstream marks each notification as an update to FedRAMP Certification Data for all necessary parties.
+
+## What you need to do
+
+### General provider responsibilities
+
+| Rule | Force | What it means for you |
+| --- | --- | --- |
+| [`SCN-CSO-EVA`](https://www.fedramp.gov/2026/reference/significant-change-notification/#evaluate-changes) | MUST | Evaluate every potential significant change to decide its type, then follow the matching rules (see [How to classify a change](#how-to-classify-a-change)). |
+| [`SCN-CSO-MAR`](https://www.fedramp.gov/2026/reference/significant-change-notification/#maintain-audit-records) | MUST | Keep auditable records of your change evaluations and make them available to FedRAMP on request. They don't need to be in your Certification Package by default or emailed to FedRAMP continuously. |
+| [`SCN-CSO-INF`](https://www.fedramp.gov/2026/reference/significant-change-notification/#required-information) | MUST | Include at least the required information listed below in every notification. |
+| [`SCN-CSO-HIS`](https://www.fedramp.gov/2026/reference/significant-change-notification/#historical-notifications) | MUST | Keep 12 months of past notifications available with your FedRAMP Certification Data. |
+| [`SCN-CSO-HRM`](https://www.fedramp.gov/2026/reference/significant-change-notification/#human-and-machine-readable-notifications) | MUST | Make ALL notifications and related audit records available in human-readable and JSON formats. |
+| [`SCN-CSO-ARI`](https://www.fedramp.gov/2026/reference/significant-change-notification/#additional-relevant-information) | MAY | Add any other information you think is relevant. |
+| [`SCN-CSO-NOM`](https://www.fedramp.gov/2026/reference/significant-change-notification/#notification-mechanisms) | MAY | Notify necessary parties however you like, as long as the mechanism is clearly documented in your Certification Package and easily accessible. |
+| [`SCN-CSO-EMG`](https://www.fedramp.gov/2026/reference/significant-change-notification/#emergency-changes) | MAY / MUST | During an emergency or incident, you MAY make significant changes (including transformative ones) without advance notice. You MUST then follow all relevant procedures, notify all necessary parties, provide all SCN materials retroactively and complete appropriate assessment after the incident. |
+
+**Required information for every notification (`SCN-CSO-INF`):**
+
+1. Service Offering FedRAMP ID
+2. Assessor name (if applicable)
+3. Related vulnerability (if applicable)
+4. Significant change type and explanation of categorization
+5. Short description of the change
+6. Reason for the change
+7. Summary of customer impact, including changes to services and customer configuration responsibilities
+8. Plan and timeline, including for verification, assessment and/or validation of impacted Key Security Indicators or Rev5 controls
+9. Copy of the business or security impact analysis
+10. Name and title of the approver
+
+The note says the structure can vary depending on how you track this internally. FedRAMP publishes a [Significant Change Notifications JSON schema](https://fedramp.gov/schemas/fedramp-significant-change-notifications-schema-2026-06-24.json).
+
+### Routine recurring changes
+
+| Rule | Force | What it means for you |
+| --- | --- | --- |
+| [`SCN-RTR-NNR`](https://www.fedramp.gov/2026/reference/significant-change-notification/#no-notification-requirements) | SHOULD NOT | Don't send formal notifications for routine recurring changes. They are exempt. |
+
+Upstream's key tests for routine recurring changes include routine care by staff during normal duties, no major impact to availability, no executive approval, minor incremental patching and no breaking changes. Its examples include scaling capacity, tuning performance, updating firewall rules, refreshing tokens, updating signatures, routine patching and like-for-like replacement of a known-bad component. If an activity doesn't occur regularly and routinely, it can't be this type. Replacing all physical firewalls to fix a vulnerability is the upstream counterexample.
+
+### Adaptive changes
+
+| Rule | Force | What it means for you |
+| --- | --- | --- |
+| [`SCN-ADP-NTF`](https://www.fedramp.gov/2026/reference/significant-change-notification/#notification-requirements) | MUST | Notify all necessary parties within 10 business days after finishing, including a summary of any new risks or vulnerabilities from the change (if applicable). |
+
+Upstream says most changes that don't happen regularly will be adaptive. Key tests: minimal changes to security plans or procedures, some careful planning (less than a transformative change needs), and verification of existing functionality and secure configuration afterward. Examples include updates with known breaking changes or service disruption, larger multi-week feature work, swapping a cryptographic module for one meeting the same standards, like-for-like component replacements that need some procedure changes, and adding models to existing approved AI services without exposing federal customer data to new services.
+
+### Transformative changes
+
+| Rule | Force | What it means for you |
+| --- | --- | --- |
+| [`SCN-TRF-NIP`](https://www.fedramp.gov/2026/reference/significant-change-notification/#notification-of-initial-plans) | MUST | Notify all necessary parties of initial plans at least 30 business days before starting, with a summary of likely security impacts or changes in risk. |
+| [`SCN-TRF-NFP`](https://www.fedramp.gov/2026/reference/significant-change-notification/#notification-of-final-plans) | MUST | Notify all necessary parties of final plans at least 10 business days before starting, updating everything previously sent. |
+| [`SCN-TRF-NAF`](https://www.fedramp.gov/2026/reference/significant-change-notification/#notification-after-finishing) | MUST | Notify all necessary parties within 5 business days after finishing, updating everything previously sent. |
+| [`SCN-TRF-NAV`](https://www.fedramp.gov/2026/reference/significant-change-notification/#notification-after-verification) | MUST | Within 5 business days after completing verification, assessment and/or validation, notify all necessary parties with updates, a summary of new risks or vulnerabilities (if applicable) and the security assessment report (if applicable). |
+| [`SCN-TRF-UPD`](https://www.fedramp.gov/2026/reference/significant-change-notification/#update-documentation) | MUST | Publish updated service documentation (such as user guides and marketplace information) within 30 business days after finishing. This doesn't require updating the system security plan or Certification Package. |
+| [`SCN-TRF-TPR`](https://www.fedramp.gov/2026/reference/significant-change-notification/#third-party-review) | SHOULD | If human validation is necessary, engage a third-party assessor to review the scope and impact before starting. Limit the review to security decisions that require human validation. |
+
+Upstream says transformative changes are rare. Small offerings may go years without one, while hyperscale providers may have several a year. Key tests: the change alters the service's risk profile or customer responsibilities, needs significant new design and project planning, or requires extensive updates to assessments and documentation. Examples include adding, removing or replacing a critical third-party service (such as an IaaS change), raising the security categorization of a service that handles federal customer data, moving to containers or Kubernetes, a datacenter migration that moves federal customer data across unusual boundaries, and a new AI capability that uses federal customer data in a new way.
+
+### FedRAMP responsibilities
+
+| Rule | Force | What it means for you |
+| --- | --- | --- |
+| [`SCN-FRP-CAP`](https://www.fedramp.gov/2026/reference/significant-change-notification/#corrective-action-plan-conditions) | MAY | Under a formal Corrective Action Plan or other agreement, FedRAMP may require you to delay significant changes beyond the standard SCN period or submit them for approval in advance. |
+
+## What FedRAMP staff have said
+
+<Note>
+  **Adopting new FedRAMP rules is a significant change.** Adopting rules that change your existing processes will "almost certainly" count as a significant change, so follow the SCN rules and notify your customers. [nicole-gov, 2026-07-24, discussion #147](https://github.com/FedRAMP/community/discussions/147#discussioncomment-17766043)
+</Note>
+
+<Note>
+  **The VDR/VER transition is usually adaptive.** Moving to VDR/VER should be treated as a significant change whether you follow SCR or SCN. Staff expect most of these transitions to be adaptive, but it depends on what you need to change. If the transition is transformative, independent validation is only required where human validation is needed. [paulagosta, 2026-08-26, discussion #146](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18162066)
+</Note>
+
+<Note>
+  **Follow the rule, not the schema.** The SCN JSON schema marks fewer fields as required than `SCN-CSO-INF`. Staff said the schemas are deliberately minimal and are "a sort of skeleton." Follow the written rules, not templates or schemas. [pete-gov, 2026-06-27, discussion #146](https://github.com/FedRAMP/community/discussions/146#discussioncomment-17450997). The schema's `certificationPackageOverviewUri` field points to your Certification Package Overview, so you don't repeat offering metadata in every submission. [dan-fedramp, 2026-06-30](https://github.com/FedRAMP/community/discussions/146#discussioncomment-17488324)
+</Note>
+
+## Related
+
+- [Vulnerability detection and response](/rules/vulnerability-detection-and-response)
+- [Certification data sharing](/rules/certification-data-sharing): where notifications live as Certification Data
+- [Certification package overview](/rules/certification-package-overview)
+- [Collaborative continuous monitoring](/rules/collaborative-continuous-monitoring): transformative changes in the Ongoing Certification Report
+- [FedRAMP certification](/rules/fedramp-certification): changing certification class
+- [Rev5 questions on the 2026 rules](/discussions/rev5-cr26-questions)

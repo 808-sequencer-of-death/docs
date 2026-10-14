@@ -1,0 +1,209 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-172",
+  "node_id": "D_kwDOOxfoic4ApIqu",
+  "number": 172,
+  "title": "General Discussion on RFC-0033 (Phase 4) and RFC-0034 (TAG)",
+  "url": "https://github.com/FedRAMP/community/discussions/172",
+  "category": "General RFC Discussion",
+  "category_slug": "general-rfc-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": true,
+  "author": "pete-gov",
+  "author_is_official": true,
+  "created_at": "2026-09-09T17:39:20Z",
+  "updated_at": "2026-10-14T18:16:22Z",
+  "last_edited_at": null,
+  "closed": true,
+  "closed_at": "2026-10-14T18:16:22Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "FedRAMP is not allowed to influence public comment by answering questions or interacting with folks during the public comment process in our Request for Comment process.\r\n\r\nThis thread exists for folks that do not wish to submit public comment but wish to ask questions in general or discuss things related to RFCs in a way that isn't official public comment. FedRAMP will participate in this thread.\r\n\r\n- #170 \r\n- #171",
+  "comment_count": 4,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4BGlDp",
+      "url": "https://github.com/FedRAMP/community/discussions/172#discussioncomment-18501865",
+      "author": "bennett2606",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-09-18T14:05:05Z",
+      "updated_at": "2026-09-18T14:05:05Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "My original comment: More of a question than a comment and unique: if the 20x Class D Pilot runs during the same timeframe as a Rev5 Moderate Assessment and you are accepted into the Pilot, would it make sense to forgo the Rev5 Moderate Assessment? Class D Certification would complete at the same time as the Rev5 Moderate SAR expected delivery so it seems like double work.\r\n\r\nAdditional question: Rereading the RFC - I believe I misunderstood and we must be Class C 20x certified prior to Dec 1 to be eligible for the Class D Pilot, not just claim we have the CR26 in place under Rev5. If we submit a Class C 20x package prior to Nov 13 we should submit a notice of intent for the pilot correct?\r\n\r\nThanks for the redirect Pete!",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BGlHN",
+          "url": "https://github.com/FedRAMP/community/discussions/172#discussioncomment-18502093",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-09-18T14:21:08Z",
+          "updated_at": "2026-09-18T14:21:08Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> if the 20x Class D Pilot runs during the same timeframe as a Rev5 Moderate Assessment and you are accepted into the Pilot, would it make sense to forgo the Rev5 Moderate Assessment? \r\n\r\nFedRAMP can't provide business advice and this sorta goes into that direction, but I can highlight the following factors for new folks:\r\n\r\n1. FedRAMP Rev5 Class C/D will not be an option for any provider after June 11, 2027.\r\n2. FedRAMP Rev5 is a dead-end path that will be entirely retired at some point after December 31, 2028 (see [Phase 5](https://www.fedramp.gov/20x/#phased-implementation) plans, which includes establishing transition requirements).\r\n3. CR26 requirements for FedRAMP Rev5 are very different from legacy FedRAMP Rev5 requirements to begin forcing adoption of higher assurance expectations.\r\n4. An agency sponsored FedRAMP Rev5 Class C or D that isn't already in progress is unlikely to complete before June 11, 2027. Agencies typically take 2-3 years to complete a sponsored FedRAMP Certification.\r\n\r\n> I believe I misunderstood and we must be Class C 20x certified prior to Dec 1 to be eligible for the Class D Pilot, not just claim we have the CR26 in place under Rev5. If we submit a Class C 20x package prior to Nov 13 we should submit a notice of intent for the pilot correct?\r\n\r\nCorrect, the proposal in the RFC is intended to limit 20x Class D pilot participation to parties who have a complete 20x Class C Certification before the pilot begins. This will significantly reduce the load on FedRAMP (we're already familiar with your package, approach, mindset, and assurance materials from the 20x Class C Certification) and on pilot participants who can focus entirely on the new requirements for 20x Class D without simultaneously trying to address other requirements.\r\n\r\nWe can't promise to prioritize review of folks that submit a 20x Class C right under the wire to qualify for the 20x Class D pilot, but I'd like to at least know. And like every other pilot, folks can follow along in public and begin implementing things even if they aren't an active participant with FR so they are ready to meet the final requirements when they are posted. "
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BG1zE",
+      "url": "https://github.com/FedRAMP/community/discussions/172#discussioncomment-18570436",
+      "author": "mikedizon",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-09-23T17:32:49Z",
+      "updated_at": "2026-09-23T17:32:49Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "RFC-0033 requires Class D services to deploy on a \"Class D Certified IaaS/PaaS\" and to use only \"Class B, C, or D Certified\" third-party information resources in MAS. \r\n\r\nDoes \"Certified\" here include Rev5 certifications (for example, a Rev5 Class D IaaS, or a Rev5 Class D security tool that other CSPs include in their MAS)? If yes, does that hold through the pilot and after CR27, or does it end on a set date?",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BG10F",
+          "url": "https://github.com/FedRAMP/community/discussions/172#discussioncomment-18570501",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-09-23T17:40:00Z",
+          "updated_at": "2026-09-23T17:40:00Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> RFC-0033 requires ....\r\n\r\nJust as a note, our RFCs do not establish any requirements. This is a proposed requirement, not an actual one that exists yet. (clarifying because sometimes folks think RFCs are final)\r\n\r\n> Does \"Certified\" here include Rev5 certifications (for example, a Rev5 Class D IaaS, or a Rev5 Class D security tool that other CSPs include in their MAS)? \r\n\r\nYes, FedRAMP would say \"20x Certified\" or \"Rev5 Certified\" when referring to a specific certification type. A 20x Class C Certified service and a Rev5 Class C Certified service are both FedRAMP Class C Certified services.\r\n\r\n> If yes, does that hold through the pilot and after CR27, or does it end on a set date?\r\n\r\nThese are proposed requirements that we'd test in the pilot. We'll modify them for the pilot after the feedback from the RFC, then modify the final requirements in CR27 based on what we learn in the pilot and any other additional RFCs performed later.\r\n\r\nI will note that the end dates for maintaining FedRAMP Rev5 Certification and transition requirements will be finalized during 20x Phase 5 (as explained in the [Phased Implementation section of our 20x page](https://www.fedramp.gov/20x/#phased-implementation)). In the long run, there will not be a FedRAMP Rev5 Certification."
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BG5vs",
+      "url": "https://github.com/FedRAMP/community/discussions/172#discussioncomment-18586604",
+      "author": "HazemEld",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-09-24T20:11:38Z",
+      "updated_at": "2026-09-24T20:11:38Z",
+      "upvotes": 2,
+      "minimized": false,
+      "body": "There are scenarios where Cloud Service Providers will want to leverage their IL4/5 provisionally authorized cloud service offerings to signal readiness for FedRAMP 20x Class D for a mirrored tech stack of the CSO for FedCiv. This is similar to how CSO's with Class D certifications currently signal readiness for IL4/5 PA. Please consider expanding the \"additional expectations\" to be to \"...maintain a 20x Class C Certification_, IL4 or IL5 PA for a similar tech stack_... Class D services must only use Class B, C, D_, or mirrored version of services that are IL4 or IL5 PA'd._\"",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BG5z6",
+          "url": "https://github.com/FedRAMP/community/discussions/172#discussioncomment-18586874",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-09-24T20:34:31Z",
+          "updated_at": "2026-09-24T20:34:31Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "If you want to toss that into the official RFC comment thread we can treat it like an official comment!\r\n\r\nOr if you want to discuss it (since this is the discussion thread): the 20x Class C Certification requirement is intended to ensure there's an existing reviewed and approved 20x approach in place so that the review effort for 20x Class D doesn't require starting from scratch. If someone has a IL4/5 or a Rev5 Class D, that doesn't particularly help solve this at all, it's still mostly like reviewing a brand new application from scratch if we look at their 20x application.\r\n\r\nI'm also not sure how to addressed the \"mirrored version\" idea in concept at all... how would that be verified? I understand the thrust of the point - the theory of the architecture was good enough for a IL4/5 PATO - but how do we know a copy is actually complete? 🤔 "
+        },
+        {
+          "id": "DC_kwDOOxfoic4BG54W",
+          "url": "https://github.com/FedRAMP/community/discussions/172#discussioncomment-18587158",
+          "author": "HazemEld",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-09-24T21:03:26Z",
+          "updated_at": "2026-09-24T21:03:26Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thanks for the clarity. I was unclear of the intent of the Class C. The \"additional expectation\" for Class C is for a 20x Class C to demonstrate that you can do CR26+KSI's at a high level before even taking it higher."
+        },
+        {
+          "id": "DC_kwDOOxfoic4BG58X",
+          "url": "https://github.com/FedRAMP/community/discussions/172#discussioncomment-18587415",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-09-24T21:27:37Z",
+          "updated_at": "2026-09-24T21:27:37Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "I will make sure we explain the details on that reason better in any followups!"
+        }
+      ],
+      "replies_total": 3,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BIN31",
+      "url": "https://github.com/FedRAMP/community/discussions/172#discussioncomment-18931189",
+      "author": "rhoesing",
+      "author_association": "CONTRIBUTOR",
+      "is_official": false,
+      "created_at": "2026-10-14T18:16:22Z",
+      "updated_at": "2026-10-14T18:16:22Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Closing this.",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "HazemEld",
+    "bennett2606",
+    "mikedizon",
+    "pete-gov",
+    "rhoesing"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/172#discussioncomment-18502093",
+      "author": "pete-gov",
+      "created_at": "2026-09-18T14:21:08Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/172#discussioncomment-18570501",
+      "author": "pete-gov",
+      "created_at": "2026-09-23T17:40:00Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/172#discussioncomment-18586874",
+      "author": "pete-gov",
+      "created_at": "2026-09-24T20:34:31Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/172#discussioncomment-18587415",
+      "author": "pete-gov",
+      "created_at": "2026-09-24T21:27:37Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [
+      "RFC-0033",
+      "RFC-0034"
+    ],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://www.fedramp.gov/20x/#phased-implementation"
+    ],
+    "topics": [
+      "20x",
+      "class_b",
+      "class_c",
+      "class_d",
+      "ksi",
+      "rev5"
+    ]
+  },
+  "content_hash": "774b44990dbb941d0ba7d2be31eedb56c070425edd2f919a68a0f84fe10dcb6e",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

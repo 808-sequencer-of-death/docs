@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-40",
+  "node_id": "D_kwDOOxfoic4AgMLE",
+  "number": 40,
+  "title": "InfusionPoints Command Center on XBU40 ~ FedRAMP 20x Phase One Pilot Final Submission",
+  "url": "https://github.com/FedRAMP/community/discussions/40",
+  "category": "20x Discussion",
+  "category_slug": "20x-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "InfusionPoints",
+  "author_is_official": false,
+  "created_at": "2025-06-10T17:47:42Z",
+  "updated_at": "2025-11-18T16:24:54Z",
+  "last_edited_at": null,
+  "closed": true,
+  "closed_at": "2025-11-18T16:24:54Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "In-line with the FedRAMP 20x vision for 100% machine-verifiable compliance, InfusionPoints is very pleased to provide our FedRAMP 20x Phase One Pilot Final Submission.\r\n\r\nCloud Service Provider: InfusionPoints\r\nCloud Service Offering: InfusionPoints – Command Center is a cloud-native NextGen Governance, Risk, and Compliance (GRC) app hosted in AWS GovCloud (US) that streamlines and orchestrates all aspects of FedRAMP and DoD ATOs including:\r\n\r\nContinuous Monitoring\r\nAudit Orchestration\r\nUser Management\r\nTicketing\r\nDocument Management\r\nHosting Platform: AWS GovCloud (US)\r\n3PAO: Fortreum\r\nFedRAMP Audit: FedRAMP Moderate, DoD CC SRG Impact Level 4\r\nCommercial Audit: ISO 27001:2022\r\n\r\n[Link to Phase One Pilot Final Submission (Public Side)](https://github.com/InfusionPoints/fedramp20x-low-pilot-final)",
+  "comment_count": 0,
+  "comments": [],
+  "answer_url": null,
+  "participants": [
+    "InfusionPoints"
+  ],
+  "official_responses": [],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://github.com/InfusionPoints/fedramp20x-low-pilot-final"
+    ],
+    "topics": [
+      "20x",
+      "3pao",
+      "conmon"
+    ]
+  },
+  "content_hash": "45816dffd775a668ccbdc6765463aba210a9a4598547bf791a433c07e31cb718",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

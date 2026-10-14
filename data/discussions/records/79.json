@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-79",
+  "node_id": "D_kwDOOxfoic4AhkV8",
+  "number": 79,
+  "title": "Authorization Data Sharing Standard, FedRAMP Definitions, and other FRMR updates on 8/25",
+  "url": "https://github.com/FedRAMP/community/discussions/79",
+  "category": "20x Discussion",
+  "category_slug": "20x-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "pete-gov",
+  "author_is_official": true,
+  "created_at": "2025-08-25T17:03:27Z",
+  "updated_at": "2025-11-18T16:23:00Z",
+  "last_edited_at": "2025-08-25T17:08:44Z",
+  "closed": true,
+  "closed_at": "2025-11-18T16:23:00Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 4,
+  "body": "On August 25, a number of updated materials were published on the [FedRAMP 20x Machine-Readable (FRMR) Docs repository](https://github.com/FedRAMP/docs/), including:\r\n\r\n## Non-breaking changes to all 20x documentation\r\n\r\n- All human-readable materials now have a Documentation Guidelines section that clarifies the requirements keywords\r\n- Definition sections were removed from individual documents\r\n- Use of defined terms in all materials were italicized\r\n- `referenced_fr` sections for rules that included definitions were updated to include the correct target definition in `FRR-FRD-ALL` for the definitions wherever possible\r\n- Most of these changes were done via simple scripting and manual work so there may be gaps\r\n- Versions and descriptions were updated\r\n\r\n**There should not be any material changes the previous existing documentation. Any such changes, especially to KSIs, is accidentally and should be reported to pete@fedramp.gov or on this thread ASAP.**\r\n\r\n## Consolidated FedRAMP Definitions\r\n\r\nManaging separate FedRAMP definitions in each standard is starting to get a bit confusing and awkward - plus RFC-0012 feedback made it clear many people fail to reference definitions scattered across standards. To simplify this moving forward and be more consistent, FedRAMP will maintain a single FedRAMP Definitions set of FedRAMP Rules called `FRR-FRD-ALL` which will contain any finalized definitions after public comment.\r\n\r\nIt is available in the following formats: [Markdown](https://github.com/FedRAMP/docs/blob/main/markdown/FRMR.FRD.fedramp-definitions.md) // [PDF](https://github.com/FedRAMP/docs/blob/main/pdf/FRMR.FRD.fedramp-definitions.pdf) // [JSON](https://github.com/FedRAMP/docs/blob/main/FRMR.FRD.fedramp-definitions.json)\r\n\r\n- All finalized definitions in all existing standards were moved to this consolidated document\r\n- Definitions in this document should be referenced as needed\r\n\r\n## Authorization Data Sharing Standard\r\n\r\nThe Authorization Data Sharing Standard for FedRAMP 20x (pending for Rev5) was released today. All FedRAMP 20x Phase One pilot participants will be expected to meet the requirements in this standard within one year of receiving a pilot authorization and must demonstrate quarterly progress towards implementation. This standard will likely be **required** for 20x Phase Two pilot participants.\r\n\r\nIt is available in the following formats: [Markdown](https://github.com/FedRAMP/docs/blob/main/markdown/FRMR.ADS.authorization-data-sharing.md) // [PDF](https://github.com/FedRAMP/docs/blob/main/pdf/FRMR.ADS.authorization-data-sharing.pdf) // [JSON](https://github.com/FedRAMP/docs/blob/main/FRMR.ADS.authorization-data-sharing.json)\r\n\r\n- This standard builds on feedback from RFC-0011 \r\n- It has been simplified in many ways to realign with FedRAMP's philosophy of testing and evaluating with early adopters\r\n- This standard will be applied to Rev5 via a Balance Improvement Release, and interested participants should follow the Rev5 working group for next steps. **Rev5 providers MUST NOT adopt this standard without participating in a Beta Test.**\r\n- Participants in the 20x Phase One pilot should follow this standard and prepare to adopt it, but adoption is **not** required to obtain a pilot authorization\r\n\r\n## Note\r\n\r\nI strongly recommend that folks who want to be immediately in the loop about FRMR Docs changes in progress use the GitHub \"watch\" feature to monitor this repository for pull requests (or releases for more formal updates). This can be done by logging into GitHub, clicking the dropdown next to Watch, choose Custom, then select Pull Requests and/or Releases and click Apply.",
+  "comment_count": 1,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4A34TF",
+      "url": "https://github.com/FedRAMP/community/discussions/79#discussioncomment-14648517",
+      "author": "ethanolivertroy",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2025-10-10T14:50:37Z",
+      "updated_at": "2025-10-10T14:50:38Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "I created an MCP server that tracks fedramp/docs repo here - https://github.com/ethanolivertroy/fedramp-docs-mcp \r\n\r\nhttps://github.com/user-attachments/assets/5415f446-a3c7-4885-946e-419cba2101d8\r\n\r\n",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "ethanolivertroy",
+    "pete-gov"
+  ],
+  "official_responses": [],
+  "entities": {
+    "rule_ids": [
+      "FRR-FRD-ALL"
+    ],
+    "rfc_ids": [
+      "RFC-0011",
+      "RFC-0012"
+    ],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://github.com/FedRAMP/docs/",
+      "https://github.com/FedRAMP/docs/blob/main/FRMR.ADS.authorization-data-sharing.json",
+      "https://github.com/FedRAMP/docs/blob/main/FRMR.FRD.fedramp-definitions.json",
+      "https://github.com/FedRAMP/docs/blob/main/markdown/FRMR.ADS.authorization-data-sharing.md",
+      "https://github.com/FedRAMP/docs/blob/main/markdown/FRMR.FRD.fedramp-definitions.md",
+      "https://github.com/FedRAMP/docs/blob/main/pdf/FRMR.ADS.authorization-data-sharing.pdf",
+      "https://github.com/FedRAMP/docs/blob/main/pdf/FRMR.FRD.fedramp-definitions.pdf",
+      "https://github.com/ethanolivertroy/fedramp-docs-mcp",
+      "https://github.com/user-attachments/assets/5415f446-a3c7-4885-946e-419cba2101d8"
+    ],
+    "topics": [
+      "20x",
+      "ksi",
+      "machine_readable",
+      "rev5"
+    ]
+  },
+  "content_hash": "5bdc06489974f1fbaad4e0461fd704cf76a9f56940221bf84eb90abca5207ec9",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

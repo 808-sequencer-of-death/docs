@@ -1,0 +1,510 @@
+---
+tags:
+  - 20x
+  - Rev5
+  - Federal Agencies
+  - Cloud Service Providers
+  - Rules
+---
+
+<span class="picto">:lucide-computer:{ .machine title="This content is machine-generated from FedRAMP Machine-Readable Rules." }</span>
+
+# Collaborative Continuous Monitoring
+
+The Collaborative Continuous Monitoring rules help agencies use shared, current authorization information from providers as part of each agency's own Information Security Continuous Monitoring strategy. These rules reduce unnecessary manual burden by encouraging automated monitoring and review while allowing each agency to make its own risk-based decisions about ongoing authorization.
+
+**Subsets**
+
+- [Agency Guidance](#agency-guidance)
+- [Ongoing Certification Reports](#ongoing-certification-reports)
+- [Quarterly Reviews](#quarterly-reviews)
+
+!!! info "Effective Date(s) & Overall Applicability for 20x"
+    - **Required** (Consolidated Rules for 2026)
+    - **Optional Adoption Allowed:** 2026-07-04
+    - **Obtaining Initial Certification:** 2026-07-04
+    - **Maintaining Ongoing Certification:** 2027-01-01
+    - **Grace Period Ends:** On the first FedRAMP independent assessment started after 2027-01-01
+
+!!! info "Effective Date(s) & Overall Applicability for Rev5"
+    - **Required** (Consolidated Rules for 2026)
+    - **Optional Adoption Allowed:** 2026-07-04
+    - **Obtaining Initial Certification:** 2027-01-01
+    - **Maintaining Ongoing Certification:** 2027-04-02
+    - **Grace Period Ends:** 2027-10-01
+
+
+
+---
+
+
+## Agency Guidance {#agency-guidance}
+
+These rules for agencies apply to all agencies using a FedRAMP Certification.
+
+<div class="subset-applicability" role="group" aria-label="Applicability">
+<span class="subset-applicability__group subset-applicability__group--types"><span class="subset-applicability__label">Type:</span> <span class="subset-applicability__values"><span class="subset-applicability__tag">20x</span><span class="subset-applicability__tag">Rev5</span></span></span><br>
+<span class="subset-applicability__group subset-applicability__group--paths"><span class="subset-applicability__label">Path:</span> <span class="subset-applicability__values"><span class="subset-applicability__tag">Program</span><span class="subset-applicability__tag">Agency</span></span></span><br>
+<span class="subset-applicability__group subset-applicability__group--classes"><span class="subset-applicability__label">Class:</span> <span class="subset-applicability__values"><span class="subset-applicability__tag">Class B</span><span class="subset-applicability__tag">Class C</span><span class="subset-applicability__tag">Class D</span></span></span><br>
+<span class="subset-applicability__group subset-applicability__group--affects"><span class="subset-applicability__label">Audience:</span> <span class="subset-applicability__values"><span class="subset-applicability__tag">Agencies</span></span></span>
+</div>
+
+### Review Ongoing Reports
+
+??? abstract "CCM-AGM-ROR"
+    **Changelog:**
+    { data-search-exclude }
+
+
+    - **2026-06-24:** Official launch of the FedRAMP Consolidated Rules for 2026.
+    { data-search-exclude }
+
+
+
+
+!!! quote ""
+    Agencies [MUST](../definitions/#must){ data-preview } review each Ongoing Certification Report to understand how changes to the cloud service offering may impact the previously agreed-upon risk tolerance documented in the agency's Authorization to Operate of a federal information system that includes the cloud service offering in its boundary.
+
+
+    ---
+
+    _**Note:** This is required by 44 USC § 35, OMB A-130, FIPS-200, and M-24-15._
+
+    ---
+    **Terms:** [Cloud Service Offering](../definitions/#cloud-service-offering){ data-preview }, [FedRAMP Certification Report](../definitions/#fedramp-certification-report){ data-preview }, [Ongoing Certification](../definitions/#ongoing-certification){ data-preview }, [Ongoing Certification Report (OCR)](../definitions/#ongoing-certification-report-ocr){ data-preview }
+### Consider Security Category
+
+??? abstract "CCM-AGM-CSC"
+    **Changelog:**
+    { data-search-exclude }
+
+
+    - **2026-06-24:** Official launch of the FedRAMP Consolidated Rules for 2026.
+    { data-search-exclude }
+
+
+
+
+!!! quote ""
+    Agencies [SHOULD](../definitions/#should){ data-preview } consider the Security Category noted in their Authorization to Operate of the federal information system that includes the cloud service offering in its boundary and assign appropriate information security resources for reviewing Ongoing Certification Reports, attending Quarterly Reviews, and other ongoing FedRAMP Certification Data.
+
+
+    ---
+    **Terms:** [Certification Data](../definitions/#certification-data){ data-preview }, [Cloud Service Offering](../definitions/#cloud-service-offering){ data-preview }, [Ongoing Certification](../definitions/#ongoing-certification){ data-preview }, [Quarterly Review](../definitions/#quarterly-review){ data-preview }, [Security Category](../definitions/#security-category){ data-preview }
+## Ongoing Certification Reports {#ongoing-certification-reports}
+
+These rules for Ongoing Certification Reports apply to providers with any type of FedRAMP Certification.
+
+<div class="subset-applicability" role="group" aria-label="Applicability">
+<span class="subset-applicability__group subset-applicability__group--types"><span class="subset-applicability__label">Type:</span> <span class="subset-applicability__values"><span class="subset-applicability__tag">20x</span><span class="subset-applicability__tag">Rev5</span></span></span><br>
+<span class="subset-applicability__group subset-applicability__group--paths"><span class="subset-applicability__label">Path:</span> <span class="subset-applicability__values"><span class="subset-applicability__tag">Program</span><span class="subset-applicability__tag">Agency</span></span></span><br>
+<span class="subset-applicability__group subset-applicability__group--classes"><span class="subset-applicability__label">Class:</span> <span class="subset-applicability__values"><span class="subset-applicability__tag">Class B</span><span class="subset-applicability__tag">Class C</span><span class="subset-applicability__tag">Class D</span></span></span><br>
+<span class="subset-applicability__group subset-applicability__group--affects"><span class="subset-applicability__label">Audience:</span> <span class="subset-applicability__values"><span class="subset-applicability__tag">Providers</span></span></span>
+</div>
+
+### Report Availability
+
+??? abstract "CCM-OCR-AVL"
+    **Changelog:**
+    { data-search-exclude }
+
+
+    - **2026-10-13:** Updated control mappings: added ca-7.
+    { data-search-exclude }
+
+
+    - **2026-09-13:** Added (if applicable) to clarify that some of these items are not always required depending on the FedRAMP Certification Type or Class.
+    { data-search-exclude }
+
+
+    - **2026-06-24:** Official launch of the FedRAMP Consolidated Rules for 2026.
+    { data-search-exclude }
+
+
+
+!!! schema "Related JSON Schema: [FedRAMP Ongoing Certification Report (CCM-OCR-AVL)](https://fedramp.gov/schemas/fedramp-ongoing-certification-report-schema-2026-06-24.json)"
+
+
+!!! quote ""
+    Providers [MUST](../definitions/#must){ data-preview } supply an Ongoing Certification Report to all necessary parties every 3 months, covering the entire period since the previous summary, in a consistent format that is human readable; this report [MUST](../definitions/#must){ data-preview } include high-level summaries of at least the following information (if applicable):
+
+    **Timeframe:** 3 months
+
+    1. Changes to FedRAMP Certification Data
+    1. Planned changes to FedRAMP Certification Data during at least the next 3 months
+    1. Accepted vulnerabilities
+    1. Transformative changes
+    1. Updated recommendations or best practices for security, configuration, usage, or similar aspects of the cloud service offering
+    1. A list of all agencies that are directly using the product
+    1. FedRAMP Reportable Incidents or an attestation that no such incidents occurred
+    1. Lessons learned and changes planned or made as a result of FedRAMP Reportable Incidents (if such occurred)
+
+
+
+    **Related SP 800-53 Controls:** [CA-07](controls/assessment-authorization-and-monitoring.md#ca-07){ data-preview }
+
+    ---
+    **Terms:** [Accepted Vulnerability](../definitions/#accepted-vulnerability){ data-preview }, [All Necessary Parties](../definitions/#all-necessary-parties){ data-preview }, [Certification Data](../definitions/#certification-data){ data-preview }, [Cloud Service Offering](../definitions/#cloud-service-offering){ data-preview }, [FedRAMP Certification Report](../definitions/#fedramp-certification-report){ data-preview }, [FedRAMP Reportable Incident](../definitions/#fedramp-reportable-incident){ data-preview }, [Incident](../definitions/#incident){ data-preview }, [Ongoing Certification](../definitions/#ongoing-certification){ data-preview }, [Ongoing Certification Report (OCR)](../definitions/#ongoing-certification-report-ocr){ data-preview }, [Transformative Change](../definitions/#transformative-change){ data-preview }, [Vulnerability](../definitions/#vulnerability){ data-preview }
+### Next Report Date
+
+??? abstract "CCM-OCR-NRD"
+    **Changelog:**
+    { data-search-exclude }
+
+
+    - **2026-06-24:** Official launch of the FedRAMP Consolidated Rules for 2026.
+    { data-search-exclude }
+
+
+
+
+!!! quote ""
+    Providers [MUST](../definitions/#must){ data-preview } supply the target date for their next Ongoing Certification Report with other public FedRAMP Certification Data.
+
+
+    ---
+    **Terms:** [Certification Data](../definitions/#certification-data){ data-preview }, [FedRAMP Certification Report](../definitions/#fedramp-certification-report){ data-preview }, [Ongoing Certification](../definitions/#ongoing-certification){ data-preview }, [Ongoing Certification Report (OCR)](../definitions/#ongoing-certification-report-ocr){ data-preview }
+### Feedback Mechanism
+
+??? abstract "CCM-OCR-FBM"
+    **Changelog:**
+    { data-search-exclude }
+
+
+    - **2026-06-24:** Official launch of the FedRAMP Consolidated Rules for 2026.
+    { data-search-exclude }
+
+
+
+
+!!! quote ""
+    Providers [MUST](../definitions/#must){ data-preview } supply an asynchronous mechanism for all necessary parties to provide feedback or ask questions about each Ongoing Certification Report.
+
+
+    ---
+
+    _**Note:** This could be email by default but providers are encouraged to consider something more interactive as appropriate._
+
+    ---
+    **Terms:** [All Necessary Parties](../definitions/#all-necessary-parties){ data-preview }, [FedRAMP Certification Report](../definitions/#fedramp-certification-report){ data-preview }, [Ongoing Certification](../definitions/#ongoing-certification){ data-preview }, [Ongoing Certification Report (OCR)](../definitions/#ongoing-certification-report-ocr){ data-preview }
+### Anonymized Feedback Summary
+
+??? abstract "CCM-OCR-AFS"
+    **Changelog:**
+    { data-search-exclude }
+
+
+    - **2026-06-24:** Official launch of the FedRAMP Consolidated Rules for 2026.
+    { data-search-exclude }
+
+
+
+
+!!! quote ""
+    Providers [MUST](../definitions/#must){ data-preview } supply an anonymized and desensitized summary of the feedback, questions, and answers about each Ongoing Certification Report as an addendum to the Ongoing Certification Report OR in the next Ongoing Certification Report.
+
+
+    ---
+
+    _**Note:** This is intended to encourage sharing of information and decrease the burden on the cloud service provider - providing this summary will reduce duplicate questions from agencies and ensure FedRAMP has access to this information. It is generally in the provider's interest to update this addendum frequently throughout the quarter._
+
+    ---
+    **Terms:** [FedRAMP Certification Report](../definitions/#fedramp-certification-report){ data-preview }, [Ongoing Certification](../definitions/#ongoing-certification){ data-preview }, [Ongoing Certification Report (OCR)](../definitions/#ongoing-certification-report-ocr){ data-preview }
+### Limit Sensitive Information
+
+??? abstract "CCM-OCR-LSI"
+    **Changelog:**
+    { data-search-exclude }
+
+
+    - **2026-06-24:** Official launch of the FedRAMP Consolidated Rules for 2026.
+    { data-search-exclude }
+
+
+
+
+!!! quote ""
+    Providers [MUST NOT](../definitions/#must-not){ data-preview } irresponsibly disclose sensitive information in an Ongoing Certification Report that would likely have an adverse effect on the cloud service offering.
+
+
+    ---
+    **Terms:** [Cloud Service Offering](../definitions/#cloud-service-offering){ data-preview }, [FedRAMP Certification Report](../definitions/#fedramp-certification-report){ data-preview }, [Likely](../definitions/#likely){ data-preview }, [Ongoing Certification](../definitions/#ongoing-certification){ data-preview }, [Ongoing Certification Report (OCR)](../definitions/#ongoing-certification-report-ocr){ data-preview }
+### Spread Out Reports
+
+??? abstract "CCM-OCR-SOR"
+    **Changelog:**
+    { data-search-exclude }
+
+
+    - **2026-06-24:** Official launch of the FedRAMP Consolidated Rules for 2026.
+    { data-search-exclude }
+
+
+
+
+!!! quote ""
+    Providers [SHOULD](../definitions/#should){ data-preview } establish a regular 3 month cycle for Ongoing Certification Reports that is spread out from the beginning, middle, or end of each quarter.
+
+
+    ---
+
+    _**Note:** This recommendation is intended to discourage hundreds of cloud service providers from releasing their Ongoing Certification Reports during the first or last week of each quarter because that is the easiest way for a single provider to track this deliverable; the result would overwhelm agencies with many cloud services. Widely used cloud service providers are encouraged to work with their customers to identify ideal timeframes for this cycle._
+
+    ---
+    **Terms:** [Ongoing Certification](../definitions/#ongoing-certification){ data-preview }, [Regularly](../definitions/#regularly){ data-preview }
+### Responsible Public Certification Report Sharing
+
+??? abstract "CCM-OCR-RPS"
+    **Changelog:**
+    { data-search-exclude }
+
+
+    - **2026-06-24:** Official launch of the FedRAMP Consolidated Rules for 2026.
+    { data-search-exclude }
+
+
+
+
+!!! quote ""
+    Providers [MAY](../definitions/#may){ data-preview } responsibly supply some or all of the information an Ongoing Certification Report to the public or other parties if the provider determines doing so will NOT likely have an adverse effect on the cloud service offering.
+
+
+    ---
+    **Terms:** [Cloud Service Offering](../definitions/#cloud-service-offering){ data-preview }, [FedRAMP Certification Report](../definitions/#fedramp-certification-report){ data-preview }, [Likely](../definitions/#likely){ data-preview }, [Ongoing Certification](../definitions/#ongoing-certification){ data-preview }, [Ongoing Certification Report (OCR)](../definitions/#ongoing-certification-report-ocr){ data-preview }, [Responsibly](../definitions/#responsibly){ data-preview }
+## Quarterly Reviews {#quarterly-reviews}
+
+These rules for Quarterly Reviews apply to providers with any type of FedRAMP Certification.
+
+<div class="subset-applicability" role="group" aria-label="Applicability">
+<span class="subset-applicability__group subset-applicability__group--types"><span class="subset-applicability__label">Type:</span> <span class="subset-applicability__values"><span class="subset-applicability__tag">20x</span><span class="subset-applicability__tag">Rev5</span></span></span><br>
+<span class="subset-applicability__group subset-applicability__group--paths"><span class="subset-applicability__label">Path:</span> <span class="subset-applicability__values"><span class="subset-applicability__tag">Program</span><span class="subset-applicability__tag">Agency</span></span></span><br>
+<span class="subset-applicability__group subset-applicability__group--classes"><span class="subset-applicability__label">Class:</span> <span class="subset-applicability__values"><span class="subset-applicability__tag">Class B</span><span class="subset-applicability__tag">Class C</span><span class="subset-applicability__tag">Class D</span></span></span><br>
+<span class="subset-applicability__group subset-applicability__group--affects"><span class="subset-applicability__label">Audience:</span> <span class="subset-applicability__values"><span class="subset-applicability__tag">Providers</span></span></span>
+</div>
+
+### Quarterly Review Meeting
+
+??? abstract "CCM-QTR-MTG"
+    **Changelog:**
+    { data-search-exclude }
+
+
+    - **2026-10-13:** Updated control mappings: added ca-7.
+    { data-search-exclude }
+
+
+    - **2026-06-24:** Official launch of the FedRAMP Consolidated Rules for 2026.
+    { data-search-exclude }
+
+
+
+
+!!! quote ""
+    === "Class A"
+        Providers with Class A Certifications [MAY](../definitions/#may){ data-preview } host a synchronous Quarterly Review every 3 months, open to all necessary parties, to review aspects of the most recent Ongoing Certification Reports that the provider determines are of the most relevance to agencies.
+
+        **Timeframe:** 3 months
+
+    === "Class B"
+        Providers with Class B Certifications [SHOULD](../definitions/#should){ data-preview } host a synchronous Quarterly Review every 3 months, open to all necessary parties, to review aspects of the most recent Ongoing Certification Reports that the provider determines are of the most relevance to agencies.
+
+        **Timeframe:** 3 months
+
+    === "Class C"
+        Providers with Class C Certifications [MUST](../definitions/#must){ data-preview } host a synchronous Quarterly Review every 3 months, open to all necessary parties, to review aspects of the most recent Ongoing Certification Reports that the provider determines are of the most relevance to agencies.
+
+        **Timeframe:** 3 months
+
+    === "Class D"
+        Providers with Class D Certifications [MUST](../definitions/#must){ data-preview } host a synchronous Quarterly Review every 3 months, open to all necessary parties, to review aspects of the most recent Ongoing Certification Reports that the provider determines are of the most relevance to agencies.
+
+        **Timeframe:** 3 months
+
+
+
+    **Related SP 800-53 Controls:** [CA-07](controls/assessment-authorization-and-monitoring.md#ca-07){ data-preview }
+
+    ---
+    **Terms:** [All Necessary Parties](../definitions/#all-necessary-parties){ data-preview }, [Ongoing Certification](../definitions/#ongoing-certification){ data-preview }, [Quarterly Review](../definitions/#quarterly-review){ data-preview }
+### Meeting Registration Info
+
+??? abstract "CCM-QTR-REG"
+    **Changelog:**
+    { data-search-exclude }
+
+
+    - **2026-06-24:** Official launch of the FedRAMP Consolidated Rules for 2026.
+    { data-search-exclude }
+
+
+
+
+!!! quote ""
+    Providers [MUST](../definitions/#must){ data-preview } supply either a registration link or a downloadable calendar file with meeting information for Quarterly Reviews to all necessary parties.
+
+
+    ---
+    **Terms:** [All Necessary Parties](../definitions/#all-necessary-parties){ data-preview }, [Quarterly Review](../definitions/#quarterly-review){ data-preview }
+### Next Review Date
+
+??? abstract "CCM-QTR-NRD"
+    **Changelog:**
+    { data-search-exclude }
+
+
+    - **2026-06-24:** Official launch of the FedRAMP Consolidated Rules for 2026.
+    { data-search-exclude }
+
+
+
+
+!!! quote ""
+    Providers [MUST](../definitions/#must){ data-preview } publicly supply the target date for their next Quarterly Review with other public FedRAMP Certification Data.
+
+
+    ---
+    **Terms:** [Certification Data](../definitions/#certification-data){ data-preview }, [Quarterly Review](../definitions/#quarterly-review){ data-preview }
+### No Irresponsible Disclosure
+
+??? abstract "CCM-QTR-NID"
+    **Changelog:**
+    { data-search-exclude }
+
+
+    - **2026-06-24:** Official launch of the FedRAMP Consolidated Rules for 2026.
+    { data-search-exclude }
+
+
+
+
+!!! quote ""
+    Providers [MUST NOT](../definitions/#must-not){ data-preview } irresponsibly disclose sensitive information in a Quarterly Review that would likely have an adverse effect on the cloud service offering.
+
+
+    ---
+    **Terms:** [Cloud Service Offering](../definitions/#cloud-service-offering){ data-preview }, [Likely](../definitions/#likely){ data-preview }, [Quarterly Review](../definitions/#quarterly-review){ data-preview }
+### Schedule Around Reports
+
+??? abstract "CCM-QTR-SAR"
+    **Changelog:**
+    { data-search-exclude }
+
+
+    - **2026-06-24:** Official launch of the FedRAMP Consolidated Rules for 2026.
+    { data-search-exclude }
+
+
+
+
+!!! quote ""
+    Providers [SHOULD](../definitions/#should){ data-preview } regularly schedule Quarterly Reviews to occur at least 3 business days after releasing an Ongoing Certification Report AND within 10 business days of such release.
+
+
+    ---
+    **Terms:** [FedRAMP Certification Report](../definitions/#fedramp-certification-report){ data-preview }, [Ongoing Certification](../definitions/#ongoing-certification){ data-preview }, [Ongoing Certification Report (OCR)](../definitions/#ongoing-certification-report-ocr){ data-preview }, [Quarterly Review](../definitions/#quarterly-review){ data-preview }, [Regularly](../definitions/#regularly){ data-preview }
+### Additional Content
+
+??? abstract "CCM-QTR-ACT"
+    **Changelog:**
+    { data-search-exclude }
+
+
+    - **2026-10-13:** Updated control mappings: added ca-7.
+    { data-search-exclude }
+
+
+    - **2026-06-24:** Official launch of the FedRAMP Consolidated Rules for 2026.
+    { data-search-exclude }
+
+
+
+
+!!! quote ""
+    Providers [SHOULD](../definitions/#should){ data-preview } supply additional information in Quarterly Reviews that the provider determines is of interest, use, or otherwise relevant to agencies.
+
+
+
+    **Related SP 800-53 Controls:** [CA-07](controls/assessment-authorization-and-monitoring.md#ca-07){ data-preview }
+
+    ---
+    **Terms:** [Quarterly Review](../definitions/#quarterly-review){ data-preview }
+### Record/Transcribe Reviews
+
+??? abstract "CCM-QTR-RTR"
+    **Changelog:**
+    { data-search-exclude }
+
+
+    - **2026-06-24:** Official launch of the FedRAMP Consolidated Rules for 2026.
+    { data-search-exclude }
+
+
+
+
+!!! quote ""
+    Providers [SHOULD](../definitions/#should){ data-preview } record or transcribe Quarterly Reviews and supply them to all necessary parties.
+
+
+    ---
+    **Terms:** [All Necessary Parties](../definitions/#all-necessary-parties){ data-preview }, [Quarterly Review](../definitions/#quarterly-review){ data-preview }
+### Restrict Third Parties
+
+??? abstract "CCM-QTR-RTP"
+    **Changelog:**
+    { data-search-exclude }
+
+
+    - **2026-06-24:** Official launch of the FedRAMP Consolidated Rules for 2026.
+    { data-search-exclude }
+
+
+
+
+!!! quote ""
+    Providers [SHOULD NOT](../definitions/#should-not){ data-preview } invite third parties to attend Quarterly Reviews intended for agencies unless they have specific relevance.
+
+
+    ---
+
+    _**Note:** This is because agencies are less likely to actively participate in meetings with third parties; the cloud service provider's independent assessor should be considered relevant by default._
+
+    ---
+    **Terms:** [Likely](../definitions/#likely){ data-preview }, [Quarterly Review](../definitions/#quarterly-review){ data-preview }
+### Share Recordings Responsibly
+
+??? abstract "CCM-QTR-SRR"
+    **Changelog:**
+    { data-search-exclude }
+
+
+    - **2026-06-24:** Official launch of the FedRAMP Consolidated Rules for 2026.
+    { data-search-exclude }
+
+
+
+
+!!! quote ""
+    Providers [MAY](../definitions/#may){ data-preview } responsibly supply recordings or transcriptions of Quarterly Reviews to the public or other parties ONLY if the provider removes all agency information (comments, questions, names, etc.) AND determines doing so will NOT likely have an adverse effect on the cloud service offering.
+
+
+    ---
+    **Terms:** [Cloud Service Offering](../definitions/#cloud-service-offering){ data-preview }, [Likely](../definitions/#likely){ data-preview }, [Quarterly Review](../definitions/#quarterly-review){ data-preview }, [Responsibly](../definitions/#responsibly){ data-preview }
+### Share Content Responsibly
+
+??? abstract "CCM-QTR-SCR"
+    **Changelog:**
+    { data-search-exclude }
+
+
+    - **2026-06-24:** Official launch of the FedRAMP Consolidated Rules for 2026.
+    { data-search-exclude }
+
+
+
+
+!!! quote ""
+    Providers [MAY](../definitions/#may){ data-preview } responsibly supply content prepared for a Quarterly Review to the public or other parties if the provider determines doing so will NOT likely have an adverse effect on the cloud service offering.
+
+
+    ---
+    **Terms:** [Cloud Service Offering](../definitions/#cloud-service-offering){ data-preview }, [Likely](../definitions/#likely){ data-preview }, [Quarterly Review](../definitions/#quarterly-review){ data-preview }, [Responsibly](../definitions/#responsibly){ data-preview }

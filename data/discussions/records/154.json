@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-154",
+  "node_id": "D_kwDOOxfoic4An_0V",
+  "number": 154,
+  "title": "Unlocking FedRAMP Collaboration: Simplifying CSP-to-CSP Security Package Access",
+  "url": "https://github.com/FedRAMP/community/discussions/154",
+  "category": "Rev5 Discussion",
+  "category_slug": "rev5-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "karanbir-sekhri",
+  "author_is_official": false,
+  "created_at": "2026-07-23T18:58:03Z",
+  "updated_at": "2026-09-09T17:30:27Z",
+  "last_edited_at": null,
+  "closed": true,
+  "closed_at": "2026-09-09T17:30:27Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "When one CSP becomes a customer of another CSP and asks for their FedRAMP security package, the usual response is:\r\n\r\nPlease take a trip to the FedRAMP PMO first, once they approve you, we’ll open the door to the artifacts. 🙂\r\n\r\nIs there a simpler CSP-to-CSP path, or does every package request need to take the FedRAMP PMO route?\r\n\r\nCurious how others handle this when a CSP needs another CSP’s FedRAMP artifacts for risk assessments, inherited controls, or compliance reviews.",
+  "comment_count": 1,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4BDxOd",
+      "url": "https://github.com/FedRAMP/community/discussions/154#discussioncomment-17765277",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2026-07-24T12:15:35Z",
+      "updated_at": "2026-07-24T12:15:35Z",
+      "upvotes": 2,
+      "minimized": false,
+      "body": "For the legacy model, FedRAMP doesn't manage package access for private companies, only agencies.\r\n\r\nCertification packages are entirely the intellectual property of the company that creates them, and FedRAMP has no ability to control or provide access to them for other companies. FedRAMP only has the ability to set rules for how companies can consistently make this information available to agencies.\r\n\r\nThe Certification Data Sharing rules make it quite clear that FedRAMP does not assert any ownership over packages and will not penalize parties for responsibly sharing these in any way in [CDS-CSO-RPS (Responsible Public Package Sharing)](https://www.fedramp.gov/2026/reference/certification-data-sharing/#responsible-public-package-sharing).\r\n\r\n",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "karanbir-sekhri",
+    "pete-gov"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/154#discussioncomment-17765277",
+      "author": "pete-gov",
+      "created_at": "2026-07-24T12:15:35Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://www.fedramp.gov/2026/reference/certification-data-sharing/#responsible-public-package-sharing"
+    ],
+    "topics": []
+  },
+  "content_hash": "70720b9c8e78aa144c29011110c3f9852c4ef0b31c4420008a96b2c30748ad6a",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

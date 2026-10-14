@@ -1,0 +1,144 @@
+---
+title: "Independent verification and validation"
+description: "How often you must be independently assessed, what evidence you must supply to assessors, and what assessors must give you for your certification package."
+sidebarTitle: "IVV: Independent assessment"
+---
+
+<Info>
+  **Official source:** [Independent Verification and Validation](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/) (`IVV`), FedRAMP Consolidated Rules release `2026.10.14.01`. This page is a plain-English summary. The official rule text governs.
+</Info>
+
+## In short
+
+Class B, C and D providers MUST complete a FedRAMP independent assessment of all applicable FedRAMP rules at least once a year with a FedRAMP Recognized independent assessment service (or, very rarely, FedRAMP itself). Class A providers MAY. You must give assessors evidence that your security measures are implemented (verification) and effective (validation), and you must put the assessment results in your certification package without changing their meaning. Each year, 20x providers must cover all Key Security Indicators, and Rev5 providers must cover a fixed list of controls for their class.
+
+Some rules in this ruleset bind assessors rather than you. They are included because they define what your assessor must do and what you will receive.
+
+## Who it applies to
+
+| Subset | Types | Paths | Classes | Audience |
+| --- | --- | --- | --- | --- |
+| [General Provider Responsibilities](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#general-provider-responsibilities) (`IVV-CSO`) | 20x, Rev5 | Program, Agency | Class B, Class C, Class D | Providers |
+| [General Independent Assessor Responsibilities](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#general-independent-assessor-responsibilities) (`IVV-IAS`) | 20x, Rev5 | Program, Agency | Class B, Class C, Class D | Assessors |
+| [20x-Specific Provider Responsibilities](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#20x-specific-provider-responsibilities) (`IVV-CSX`) | 20x | Program | Class B, Class C, Class D | Providers |
+| [Rev5-Specific Provider Responsibilities](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#rev5-specific-provider-responsibilities) (`IVV-CSF`) | Rev5 | Program, Agency | Class B, Class C, Class D | Providers |
+
+<Note>
+  The subset applicability lists Class B, C and D, but `IVV-CSO-FIA` and `IVV-CSX-AIA` also publish Class A variants. [`FRC-CLA-MFR`](https://www.fedramp.gov/2026/reference/fedramp-certification/#mandatory-fedramp-rules-for-class-a) lists `IVV-CSX-AIA` as a mandatory rule for Class A.
+</Note>
+
+## Key dates
+
+| Milestone | 20x | Rev5 |
+| --- | --- | --- |
+| Status | Required (Consolidated Rules for 2026) | Required (Consolidated Rules for 2026) |
+| Optional adoption allowed | `2026-07-04` | `2026-07-04` |
+| Obtaining initial certification | `2026-07-04` | `2027-01-01` |
+| Maintaining ongoing certification | `2027-01-01` | `2027-01-01` |
+| Grace period ends | On the first FedRAMP independent assessment started after `2027-01-01` | On the first FedRAMP independent assessment started after `2027-01-01` |
+
+## What you need to do
+
+Key terms: [verification](https://www.fedramp.gov/2026/definitions/#verification), [validation](https://www.fedramp.gov/2026/definitions/#validation) and [certification package](https://www.fedramp.gov/2026/definitions/#certification-package).
+
+### General provider responsibilities
+
+| Rule | Force | What it means for you |
+| --- | --- | --- |
+| [`IVV-CSO-FIA`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#fedramp-independent-assessments) | Varies by class (Class A MAY; Class B, C, D MUST) | Complete an independent verification and validation assessment of all applicable FedRAMP rules with a FedRAMP Recognized independent assessment service, or FedRAMP, at least once per year. Timeframe: 1 year. |
+| [`IVV-CSO-SEI`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#supply-evidence-of-implementation) | MUST | Give all necessary assessors evidence that the measures you documented to meet FedRAMP Practices are actually implemented (verification). |
+| [`IVV-CSO-SEE`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#supply-evidence-of-effectiveness) | MUST | Give all necessary assessors evidence that those measures are effective (validation). |
+| [`IVV-CSO-ICP`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#inclusion-in-certification-package) | MUST | Put the results of FedRAMP independent assessments in your certification package without inappropriate modification. |
+| [`IVV-CSO-DUS`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#document-use-of-representative-samples) | MUST | If you use representative samples during verification and validation, document and explain how. |
+| [`IVV-CSO-STE`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#supply-technical-explanations) | SHOULD | Give assessors technical explanations, demonstrations and other supporting information about your technical capabilities, as needed for them to complete verification and validation. |
+| [`IVV-CSO-USR`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#use-representative-samples) | MAY | Use representative samples where appropriate during verification and validation. |
+| [`IVV-CSO-RAA`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#receiving-assessor-advice) | MAY | Ask for and accept your assessor's advice on improving your security posture or your verification, validation and reporting, unless doing so is likely to compromise the assessment's objectivity and integrity. |
+
+Notes from the official text:
+
+- `IVV-CSO-FIA`: the first assessment is typically called an "initial assessment" and later ones "annual assessments." Assessment by FedRAMP directly is limited to services FedRAMP explicitly prioritizes and is described as "extremely" rare. FedRAMP Recognized independent assessment services are listed on the FedRAMP Marketplace.
+- `IVV-CSO-SEI` and `IVV-CSO-SEE` give a firewall example: verify the firewall rules are in place and supply that evidence (preferably by showing how configurations deploy from a source of truth), then validate that traffic is actually blocked (for example, with metrics on blocked versus allowed traffic).
+- `IVV-CSO-ICP`: "inappropriate modification" means changing the underlying intent of the assessor's content. You may change presentation and formatting.
+- `IVV-CSO-USR`: many services with effective automation don't need sampling and can verify and validate most measures automatically.
+
+### General independent assessor responsibilities
+
+These rules bind your assessor. They tell you what to expect and what you will receive.
+
+| Rule | Force | What it means for you |
+| --- | --- | --- |
+| [`IVV-IAS-VIM`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#verify-implementation) | MUST | Your assessor must verify that what you implemented matches what you documented. The note says this means reviewing the measures at a technical level, such as underlying code, not just documents or screenshots. |
+| [`IVV-IAS-VEF`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#validate-effectiveness) | MUST | Your assessor must validate that your measures have the intended outcome, again at a technical level. |
+| [`IVV-IAS-SUM`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#assessment-summary) | MUST | Your assessor must give you a high-level summary of their process and findings for each FedRAMP Practice. You include it in your Security Decision Record. FedRAMP does not require a separate Security Assessment Plan or Security Assessment Report. |
+| [`IVV-IAS-OSA`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#overall-summary-of-assessment) | MUST | Your assessor must give you an overall summary of results, including failures and areas of dispute. You include it in your Certification Package Overview. FedRAMP supplies no template. |
+| [`IVV-IAS-VIP`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#verify-inclusion-in-certification-package) | MUST | Your assessor must verify that you included their information in your certification package without inappropriate modification. |
+| [`IVV-IAS-EPX`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#engage-provider-experts) | SHOULD | Your assessor should talk with your experts to understand your decisions, and should do independent research to test what they hear. |
+| [`IVV-IAS-SHA`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#sharing-advice) | MAY | Your assessor may share improvement advice with you, unless that is likely to compromise the assessment's objectivity and integrity. |
+
+### 20x-specific provider responsibilities
+
+| Rule | Force | What it means for you |
+| --- | --- | --- |
+| [`IVV-CSX-AIA`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#annual-independent-assessments-for-20x) | MUST (wording varies by class) | Class B, C and D: include all Key Security Indicators in a FedRAMP independent assessment at least once per year. Class A: meet the expectations of your underlying alternative security framework as part of your persistent independent verification and validation assessment. |
+
+### Rev5-specific provider responsibilities
+
+| Rule | Force | What it means for you |
+| --- | --- | --- |
+| [`IVV-CSF-AIA`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#annual-independent-assessments-for-rev5) | MUST | Include your class's fixed list of Rev5 controls in a FedRAMP independent assessment at least once per year. The list has 35 controls for Class B, 80 for Class C and 101 for Class D. Timeframe: 1 year. |
+| [`IVV-CSF-MCA`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#mandatory-control-assessment) | MUST | Have all applicable Rev5 controls covered by FedRAMP independent assessments every 3 years. They don't all have to be in the same assessment. The note calls this "a ceiling and not a floor." |
+| [`IVV-CSF-ACF`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#assessment-of-rev5-controls-with-findings) | MUST | Include Rev5 controls with negative findings from the previous assessment in the next one. |
+| [`IVV-CSF-PCA`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#preferred-control-assessment) | SHOULD | Include all applicable Rev5 controls in each FedRAMP independent assessment. This is FedRAMP's recommended approach. |
+
+For the full control list per class, see [`IVV-CSF-AIA`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#annual-independent-assessments-for-rev5) in the official text.
+
+## Why this matters to you as a CSP
+
+The assessor rules (`IVV-IAS`) don't bind you directly, but they shape your assessment and your package:
+
+- Your assessor must check your measures at a technical level, not just documents or screenshots (`IVV-IAS-VIM`, `IVV-IAS-VEF`). The official notes mention reviewing underlying code as appropriate. Your own evidence and explanations under `IVV-CSO-SEI`, `IVV-CSO-SEE` and `IVV-CSO-STE` feed that review.
+- Two assessor deliverables become part of your package: the per-Practice summary goes in your Security Decision Record (`IVV-IAS-SUM`), and the overall summary goes in your Certification Package Overview (`IVV-IAS-OSA`).
+- Your assessor must confirm you included their results without inappropriate modification (`IVV-IAS-VIP`). This mirrors your own obligation under `IVV-CSO-ICP`.
+- Advice from your assessor is allowed on both sides (`IVV-CSO-RAA`, `IVV-IAS-SHA`), but not if it is likely to compromise the assessment's objectivity and integrity.
+
+## Differences by class
+
+| Rule | Class A | Class B | Class C | Class D |
+| --- | --- | --- | --- | --- |
+| `IVV-CSO-FIA` | MAY complete an annual independent assessment | MUST | MUST | MUST |
+| `IVV-CSX-AIA` (20x) | MUST meet the expectations of the underlying alternative security framework | MUST include all KSIs yearly | MUST include all KSIs yearly | MUST include all KSIs yearly |
+| `IVV-CSF-AIA` (Rev5) | Not published | MUST, 35 listed controls | MUST, 80 listed controls | MUST, 101 listed controls |
+
+## What FedRAMP staff have said
+
+<Note>
+  **You own the SDR content; your assessor supplies and checks its part.** On `2026-09-08`, `pete-gov` said the provider is responsible for all content in the Security Decision Record. The assessor supplies information for inclusion (`IVV-IAS-SUM`) and verifies it was included (`IVV-IAS-VIP`), and you must include it without inappropriate modification (`IVV-CSO-ICP`). He added that you are expected to verify and validate things yourself, and the assessor then independently verifies and validates them. [Discussion #169 comment](https://github.com/FedRAMP/community/discussions/169#discussioncomment-18357017)
+</Note>
+
+<Note>
+  **`IVV-IAS-SUM` versus `IVV-IAS-OSA`.** On `2026-10-13`, `pete-gov` said `IVV-IAS-SUM` is a summary of verification and validation for each FedRAMP Practice, and `IVV-IAS-OSA` is an overall summary of the whole assessment. [Discussion #146 comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18903643). In a follow-up the same day, he said `IVV-IAS-SUM` is the instruction to the assessor to supply what you need for items 4 and 5 of `SDR-CSO-FRR` (independent verification and independent validation). [Discussion #146 comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18904451)
+</Note>
+
+<Note>
+  **Class A without an independent assessment.** On `2026-09-09`, `emu-gov` confirmed that you can be listed on the FedRAMP Marketplace with a Class A Certification without an independent assessment service performing independent verification and validation. [Discussion #147 comment](https://github.com/FedRAMP/community/discussions/147#discussioncomment-18369371)
+</Note>
+
+<Note>
+  **The grace period follows your assessment start date.** On `2026-08-06`, `paulagosta` said "first FedRAMP independent assessment" means initial Rev5 and annual assessments, not significant change support. The grace date is tied to when the assessment starts, not when it is due. [Discussion #146 comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-17920098). On `2026-09-22`, `pete-gov` added that someone completing an annual assessment in December 2026 can early adopt everything or defer much of it until their next assessment starts. [Discussion #146 comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18558926)
+</Note>
+
+<Note>
+  **Legacy Rev5 assessments started in 2026.** On `2026-10-13`, `pete-gov` confirmed that a legacy Rev5 annual assessment started in November 2026 and submitted in March 2027 can be accepted to maintain certification, as long as you meet the ruleset maintain dates. FedRAMP discourages putting off adoption for many months. [Discussion #146 comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18904299)
+</Note>
+
+<Note>
+  **Reusing recent assessments.** On `2026-10-08`, `pete-gov` said the 2026 rules allow reuse of assessment results as long as there aren't major changes and a "fresh" assessment confirms this. Assessments for a new certification are meant to focus on deltas from previous assessments. [Discussion #146 comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18817999)
+</Note>
+
+## Related
+
+- [Security decision record](/rules/security-decision-record)
+- [Certification package overview](/rules/certification-package-overview)
+- [Key Security Indicators](/rules/key-security-indicators)
+- [FedRAMP recognition](/rules/fedramp-recognition): how assessors become and stay FedRAMP Recognized.
+- [Rev5 questions on the 2026 rules](/discussions/rev5-cr26-questions) and [20x questions on the 2026 rules](/discussions/20x-cr26-questions)

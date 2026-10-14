@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-118",
+  "node_id": "D_kwDOOxfoic4Ajr2I",
+  "number": 118,
+  "title": "CMMC FedRAMP Requirement for Suppliers",
+  "url": "https://github.com/FedRAMP/community/discussions/118",
+  "category": "20x Discussion",
+  "category_slug": "20x-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "KHFedR",
+  "author_is_official": false,
+  "created_at": "2026-01-16T19:10:48Z",
+  "updated_at": "2026-02-11T22:12:20Z",
+  "last_edited_at": null,
+  "closed": true,
+  "closed_at": "2026-02-11T22:12:20Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "We have quite a few customers who are coming to us requesting information on our FedRAMP journey as we are in their supply chain.  Per the CMMC Level 2 Scoping Guide, External Service Providers (ESPs) that are CSPs and store/process/transmit CUI must meet FedRAMP Moderate requirements.  Will the 20x path meet these expectations or is this something that is yet to be determined? ",
+  "comment_count": 1,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4A7Njo",
+      "url": "https://github.com/FedRAMP/community/discussions/118#discussioncomment-15522024",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2026-01-16T22:21:34Z",
+      "updated_at": "2026-01-16T22:21:34Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "BLUF: No, FedRAMP is something different, but you should actually ask the DOD because it's their rule.\r\n\r\nThree things here:\r\n\r\n**(1) FedRAMP does not set CMMC requirements, so FedRAMP can't answer what will meet CMMC requirements.** \r\n\r\nI'll note that the [Dec 21, 2023 FedRAMP Equivalency Memo from the DOD CIO](https://dodcio.defense.gov/Portals/0/Documents/Library/FEDRAMP-EquivalencyCloudServiceProviders.pdf) includes additional information on what is expected of FedRAMP Moderate Equivalency, including a bunch of materials that **not** part of the 20x process. There appears to be no way for someone following the 20x process to meet FRME as explained in that memo.\r\n\r\n**(2) FedRAMP is no longer implemented in the law or by policy in a way that aligns with the expectations of DFARS clause 252.204-7012.**\r\n\r\nFedRAMP 20x is an initiative to match the modern legal implementation of FedRAMP which is an assessment and authorization process that ensures sufficient materials are available for an authorizing official to make a decision. It is not equivalent to an ATO on its own and is not designed to prove that certain security measures are in place/etc. It likely would not make sense for the DOD to adopt FedRAMP 20x equivalency for CMMC without also adding someone responsible for deciding if the implementation documented by the 20x equivalent process demonstrates sufficient security.\r\n\r\n**(3) FedRAMP is explicitly for cloud services used by federal agencies.** CMMC is entirely out of scope under the law and is a totally different thing, as CMMC is for businesses that are not federal agencies.\r\n",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A7Uax",
+          "url": "https://github.com/FedRAMP/community/discussions/118#discussioncomment-15550129",
+          "author": "KHFedR",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-01-20T14:58:06Z",
+          "updated_at": "2026-01-20T14:58:06Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thanks Pete - that was my assumption but wanted to make sure I wasn't completely off.  \r\n\r\nMy question is from the perspective of a supplier who doesn't need the CMMC authorization, however our customers are getting their CMMC assessments and must use FedRAMP authorized cloud service providers. \r\n\r\nI recognize that this is a DoD decision and not a FedRAMP decision - we have a lot of customers asking questions so I'm trying to piece together responses that don't mislead them.  "
+        },
+        {
+          "id": "DC_kwDOOxfoic4A7cQu",
+          "url": "https://github.com/FedRAMP/community/discussions/118#discussioncomment-15582254",
+          "author": "JustAnother3PAO",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-01-23T15:24:36Z",
+          "updated_at": "2026-01-23T15:24:36Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "@pete-gov What about SR-6? FedRAMP guidance on that control states that vendors must follow NIST SP 800-171, which is also where CMMC is derived from. Many 3PAOs have used the terms interchangeably during audits. "
+        }
+      ],
+      "replies_total": 2,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "JustAnother3PAO",
+    "KHFedR",
+    "pete-gov"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/118#discussioncomment-15522024",
+      "author": "pete-gov",
+      "created_at": "2026-01-16T22:21:34Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [
+      "SR-6"
+    ],
+    "discussion_refs": [],
+    "urls": [
+      "https://dodcio.defense.gov/Portals/0/Documents/Library/FEDRAMP-EquivalencyCloudServiceProviders.pdf"
+    ],
+    "topics": [
+      "20x",
+      "3pao"
+    ]
+  },
+  "content_hash": "09044b6aae71cb625dc1050eb7706f8ebf4961a07a757e9743b47c606fdf4224",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

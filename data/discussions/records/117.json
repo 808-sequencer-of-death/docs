@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-117",
+  "node_id": "D_kwDOOxfoic4AjrfO",
+  "number": 117,
+  "title": "Significant Change Notification Opt-In Process",
+  "url": "https://github.com/FedRAMP/community/discussions/117",
+  "category": "Rev5 Announcements",
+  "category_slug": "rev5-announcements",
+  "labels": [
+    "FedRAMP Official"
+  ],
+  "is_official_thread": true,
+  "is_rfc": false,
+  "author": "paulagosta",
+  "author_is_official": true,
+  "created_at": "2026-01-16T12:57:04Z",
+  "updated_at": "2026-02-11T22:12:46Z",
+  "last_edited_at": null,
+  "closed": true,
+  "closed_at": "2026-02-11T22:12:46Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 3,
+  "body": "FedRAMP is pleased to announce the availability of the official intake form for Rev5 Authorized cloud service providers who wish to transition from the traditional Significant Change Request (SCR) process to the new Significant Change Notification (SCN) process. The SCN process, effective February 27, 2026, enables providers to make most significant changes without advance government approval while maintaining security visibility. Providers must meet all SCN [requirements](https://www.fedramp.gov/docs/rev5/balance/significant-change-notifications/) and coordinate with their agency customers before submitting the [SCN intake form](https://forms.gle/fjJ97DwU3JwGi9xu5).\r\n\r\nWe are in the process of updating the guidance to reflect the change from info@ to this form.  If you have already emailed your intention to info@, there is no need to fill out this form.  When we get to you in the queue we will send an acknowledgment email.  ",
+  "comment_count": 0,
+  "comments": [],
+  "answer_url": null,
+  "participants": [
+    "paulagosta"
+  ],
+  "official_responses": [],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://forms.gle/fjJ97DwU3JwGi9xu5",
+      "https://www.fedramp.gov/docs/rev5/balance/significant-change-notifications/"
+    ],
+    "topics": [
+      "rev5",
+      "significant_change"
+    ]
+  },
+  "content_hash": "0f22e0f1f7e05d42617a0545fde6e16301e89855470b2085297ee88d65e5bc9e",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

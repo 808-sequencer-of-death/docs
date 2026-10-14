@@ -1,0 +1,80 @@
+name: Nightly sync
+
+# Refreshes upstream/ (mirror of FedRAMP/2026-markdown) and data/discussions/
+# (FedRAMP/community GitHub Discussions). No AI runs here. If anything changed,
+# it commits the data to main and starts the "Update docs" workflow.
+
+on:
+  schedule:
+    - cron: "17 7 * * *" # 07:17 UTC every day
+  workflow_dispatch:
+    inputs:
+      full:
+        description: "Full discussions rescan (also detects deleted threads)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write # commit refreshed data to main
+  actions: write  # start the update-docs workflow
+
+concurrency:
+  group: sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install script dependencies
+        run: pip install "requests==2.32.5"
+
+      - name: Mirror FedRAMP/2026-markdown into upstream/
+        run: |
+          git clone --depth 1 https://github.com/FedRAMP/2026-markdown.git "$RUNNER_TEMP/upstream"
+          mkdir -p upstream
+          rsync -a --delete --exclude .git "$RUNNER_TEMP/upstream/" upstream/
+
+      - name: Sync FedRAMP community discussions
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          # Full rescan on Sundays (or on request); incremental otherwise.
+          if [ "${{ inputs.full }}" = "true" ] || [ "$(date -u +%u)" = "7" ]; then FULL=--full; fi
+          python scripts/fedramp_discussions_sync.py --out data/discussions $FULL
+
+      - name: Commit if anything changed
+        id: commit
+        run: |
+          git add -A upstream data
+          # state.sqlite is rewritten on every run, so it doesn't count as a change on its own.
+          if git diff --cached --quiet -- upstream data ':(exclude)data/discussions/state.sqlite'; then
+            echo "No upstream or discussion changes. Stopping."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git diff --cached --stat -- upstream data ':(exclude)data/discussions/state.sqlite' | tail -n 40
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          BEFORE=$(git rev-parse HEAD)
+          git commit -q -m "Sync upstream rules and discussions ($(date -u +%Y-%m-%d))"
+          git push origin HEAD:main
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+          echo "base=$BEFORE" >> "$GITHUB_OUTPUT"
+          echo "head=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+      - name: Start the update-docs workflow
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh workflow run update-docs.yml --ref main \
+            -f base=${{ steps.commit.outputs.base }} \
+            -f head=${{ steps.commit.outputs.head }}

@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-33",
+  "node_id": "D_kwDOOxfoic4AgAjM",
+  "number": 33,
+  "title": "FedRAMP 20x Draft Pilot Submission - JupiterOne",
+  "url": "https://github.com/FedRAMP/community/discussions/33",
+  "category": "20x Discussion",
+  "category_slug": "20x-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "ChrisD-J1",
+  "author_is_official": false,
+  "created_at": "2025-05-30T00:30:43Z",
+  "updated_at": "2025-08-25T14:26:33Z",
+  "last_edited_at": null,
+  "closed": true,
+  "closed_at": "2025-08-25T14:26:33Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "# Project Introduction: FedRAMP 20x Compliance with JupiterOne\r\n\r\nThis project demonstrates a modern, automated approach to FedRAMP 20x compliance leveraging JupiterOne-style JSON representations of Key Security Indicators (KSIs) and their continuous validation.\r\n\r\nFedRAMP 20x aims to transform federal cloud security assessments through five key goals:\r\n\r\n1. **Simplify automated application and validation** of security requirements by enabling over 80% of controls to be validated automatically without narrative explanations.\r\n\r\n2. **Leverage existing industry investments** by using well-established security frameworks and policies, reducing the documentation burden and promoting reusable, community-driven templates.\r\n\r\n3. **Enable continuous, hands-off monitoring** of security posture through standardized, machine-readable validation mechanisms and real-time evidence collection.\r\n\r\n4. **Build trust through direct business engagement** by fostering transparent, auditable workflows between cloud providers, agencies, and third-party assessors while maintaining intellectual property control.\r\n\r\n5. **Support rapid, continuous innovation** by replacing static checkpoints with automated, real-time compliance checks and streamlined change management.\r\n\r\nOur approach uses machine-readable JSON files that encode KSIs with:\r\n\r\n- Precise, executable JupiterOne Query Language (J1QL) validations for automated evidence collection.\r\n- Human-readable `query_nlp` descriptions for clarity and auditability.\r\n- Git-tracked evidence references, including commit SHAs and timestamps, ensuring traceability and version control.\r\n- Integration points for 3PAO assessment workflows to enable collaborative, transparent validation.\r\n\r\nTogether, these elements provide a fully auditable, continuously monitored compliance solution designed to fulfill FedRAMP 20x’s vision of automated, transparent, and scalable security assurance. This project serves as a foundation for organizations seeking to modernize their FedRAMP submissions and embrace trust-centered compliance leveraging existing commercial tools and community standards.\r\n\r\nWe welcome feedback and collaboration to refine this approach as part of the broader FedRAMP 20x ecosystem.\r\n\r\nPublic Repo Draft Pilot (expected to be moved to JupiterOnein June) https://github.com/ChrisD-J1/FedRAMP20X",
+  "comment_count": 1,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4Ay1BG",
+      "url": "https://github.com/FedRAMP/community/discussions/33#discussioncomment-13324358",
+      "author": "Christcpd",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2025-05-30T18:33:03Z",
+      "updated_at": "2025-05-30T18:33:04Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "\"query\": \"Find user where mfa.enabled = true and mfa.type = 'phishing-resistant'\",\r\n\r\nWouldn't you want that to be two statements that stand on their own?  As written, it will find where the union of those two are but not the outliers.\r\n\r\nShould be \"query\": \"Find user where mfa.enabled = false\"\r\nand then \"query\": \"Find user where mfa.type != 'phishing-resistant'\"",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "ChrisD-J1",
+    "Christcpd"
+  ],
+  "official_responses": [],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://github.com/ChrisD-J1/FedRAMP20X"
+    ],
+    "topics": [
+      "20x",
+      "3pao",
+      "ksi",
+      "machine_readable"
+    ]
+  },
+  "content_hash": "aec69fe9de45d9481d93e78c1210978df4d9689378393218152f6647f5e56370",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-78",
+  "node_id": "D_kwDOOxfoic4AhkSt",
+  "number": 78,
+  "title": "20x CWG @ Aug 27 - Hear the latest on the Phase One pilot and see Google Cloud Compliance Manager in action!",
+  "url": "https://github.com/FedRAMP/community/discussions/78",
+  "category": "20x Discussion",
+  "category_slug": "20x-discussion",
+  "labels": [
+    "FedRAMP Official"
+  ],
+  "is_official_thread": true,
+  "is_rfc": false,
+  "author": "pete-gov",
+  "author_is_official": true,
+  "created_at": "2025-08-25T15:49:39Z",
+  "updated_at": "2025-11-18T16:25:36Z",
+  "last_edited_at": null,
+  "closed": true,
+  "closed_at": "2025-11-18T16:25:36Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 4,
+  "body": "<img width=\"2409\" height=\"618\" alt=\"phase-one-pilot\" src=\"https://github.com/user-attachments/assets/6acf2db4-106b-4acc-a326-3e17a6f4c68b\" />\r\n\r\n\r\nLast week the FedRAMP 20x Phase One pilot stopped accepting public submissions and you have questions:\r\n\r\n- What does that mean for the future of 20x? \r\n- When will the Phase One pilot end? \r\n- When will the Phase Two pilot start? \r\n- When will agencies start adopting 20x?\r\n- What is the new [Authorization Data Sharing (ADS) Standard](https://www.fedramp.gov/20x/standards) that was just quietly released for 20x?\r\n- What's happening with the [RFC-0012 Continuous Vulnerability Management Standard](https://github.com/FedRAMP/community/discussions/59)?\r\n\r\n### We'll be sharing updates on these questions and more this Wednesday 8/27 from 1pm to 2pm Eastern in our regular 20x Community Working Group meeting.\r\n\r\nIf for some reason you aren't already signed up, [do it here now](https://gsa.zoomgov.com/meeting/register/FpW3sJuBRxag_1Mz49J0Cw).\r\n\r\n\r\n---\r\n\r\n<img width=\"2489\" height=\"278\" alt=\"googleplusfr\" src=\"https://github.com/user-attachments/assets/9ce1379b-7494-4472-9989-4ff4c0d4b3f4\" />\r\n\r\n\r\n### But wait, there's more!\r\n\r\nFedRAMP's really focused on showing instead of just telling wherever possible, and this week we're all going to see something special together!\r\n\r\n[Google Cloud Compliance Manager](https://cloud.google.com/blog/products/identity-security/streamline-auditing-compliance-manager-is-now-in-preview/?e=48754805) is a new solution that integrates with Security Command Center (SCC) and provides a unified platform for configuring, monitoring, and auditing security and compliance. [As announced in a recent blog](https://cloud.google.com/blog/topics/public-sector/accelerating-fedramp-20x-how-google-cloud-is-automating-compliance?e=48754805), Compliance Manager **will natively support FedRAMP 20x compliance.**\r\n\r\nSome awesome folks from Google will be showcasing the capability of this product built to natively support FedRAMP 20x on Google Cloud Platform:\r\n\r\n- **Ruchi Khurana** - Lead Product Manager, Cloud Security and Compliance\r\n- **Will Shah** - Technical Program Manager, Cloud CISO\r\n- **Ben Fowler** - Technical Program Manager, Cloud CISO\r\n\r\nThis is going to be a particularly special meeting, but as always if you miss it live you'll be able to catch it on [our YouTube channel soon after the event](https://youtube.com/fedramp).",
+  "comment_count": 0,
+  "comments": [],
+  "answer_url": null,
+  "participants": [
+    "pete-gov"
+  ],
+  "official_responses": [],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [
+      "RFC-0012"
+    ],
+    "nist_controls": [],
+    "discussion_refs": [
+      59
+    ],
+    "urls": [
+      "https://cloud.google.com/blog/products/identity-security/streamline-auditing-compliance-manager-is-now-in-preview/?e=48754805",
+      "https://cloud.google.com/blog/topics/public-sector/accelerating-fedramp-20x-how-google-cloud-is-automating-compliance?e=48754805",
+      "https://github.com/FedRAMP/community/discussions/59",
+      "https://github.com/user-attachments/assets/6acf2db4-106b-4acc-a326-3e17a6f4c68b",
+      "https://github.com/user-attachments/assets/9ce1379b-7494-4472-9989-4ff4c0d4b3f4",
+      "https://gsa.zoomgov.com/meeting/register/FpW3sJuBRxag_1Mz49J0Cw",
+      "https://www.fedramp.gov/20x/standards",
+      "https://youtube.com/fedramp"
+    ],
+    "topics": [
+      "20x",
+      "vulnerability_mgmt"
+    ]
+  },
+  "content_hash": "15299bbdf245ec4aaca74450f21eb4420db42b787311e6fe36446d46bbfa2d2f",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

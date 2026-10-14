@@ -1,0 +1,397 @@
+---
+tags:
+  - 20x
+  - Rev5
+  - FedRAMP
+  - Independent Assessors
+  - Rules
+---
+
+<span class="picto">:lucide-computer:{ .machine title="This content is machine-generated from FedRAMP Machine-Readable Rules." }</span>
+
+# FedRAMP Recognition of Independent Assessment Services
+
+The FedRAMP Recognition of independent assessment services rules explain the requirements for assessors to obtain and maintain FedRAMP Recognition in order to support the FedRAMP Certification process.
+
+**Subsets**
+
+- [FedRAMP Responsibilities](#fedramp-responsibilities)
+- [General Independent Assessor Responsibilities](#general-independent-assessor-responsibilities)
+
+!!! info "Effective Date(s) & Overall Applicability for 20x and Rev5"
+    - **Required** (Consolidated Rules for 2026)
+    - **Optional Adoption Allowed:** 2026-07-04
+    - **Obtaining Initial Certification:** 2026-07-04
+    - **Maintaining Ongoing Certification:** 2026-07-04
+    - **Grace Period Ends:** 2026-07-04
+
+
+
+---
+
+
+## FedRAMP Responsibilities {#fedramp-responsibilities}
+
+These rules apply to FedRAMP when evaluating independent assessment services for initial or ongoing FedRAMP Recognition.
+
+<div class="subset-applicability" role="group" aria-label="Applicability">
+<span class="subset-applicability__group subset-applicability__group--affects"><span class="subset-applicability__label">Audience:</span> <span class="subset-applicability__values"><span class="subset-applicability__tag">FedRAMP</span></span></span>
+</div>
+
+### Foreign Ownership Collection
+
+??? abstract "REC-FRP-FOC"
+    **Changelog:**
+    { data-search-exclude }
+
+
+    - **2026-06-24:** Official launch of the FedRAMP Consolidated Rules for 2026.
+    { data-search-exclude }
+
+
+
+
+!!! quote ""
+    FedRAMP [MUST](../definitions/#must){ data-preview } maintain a process to collect foreign ownership, control, or influence declarations from FedRAMP Recognized assessors and updates to those declarations.
+
+
+    ---
+    **Terms:** [FedRAMP Recognized](../definitions/#fedramp-recognized){ data-preview }
+### Recognized Assessors Only
+
+??? abstract "REC-FRP-RAO"
+    **Changelog:**
+    { data-search-exclude }
+
+
+    - **2026-06-24:** Official launch of the FedRAMP Consolidated Rules for 2026.
+    { data-search-exclude }
+
+
+
+
+!!! quote ""
+    FedRAMP [MUST NOT](../definitions/#must-not){ data-preview } accept verification, validation, or other attestations from independent assessors who are not FedRAMP Recognized.
+
+
+    ---
+    **Terms:** [FedRAMP Recognized](../definitions/#fedramp-recognized){ data-preview }, [Validation](../definitions/#validation){ data-preview }, [Verification](../definitions/#verification){ data-preview }
+### Double Revocation Disqualification
+
+??? abstract "REC-FRP-DRD"
+    **Changelog:**
+    { data-search-exclude }
+
+
+    - **2026-06-24:** Official launch of the FedRAMP Consolidated Rules for 2026.
+    { data-search-exclude }
+
+
+
+
+!!! quote ""
+    FedRAMP [MUST NOT](../definitions/#must-not){ data-preview } restore FedRAMP Recognition for an assessor after FedRAMP has revoked that assessor's FedRAMP Recognition 2 times.
+
+
+    ---
+    **Terms:** [FedRAMP Recognized](../definitions/#fedramp-recognized){ data-preview }
+## General Independent Assessor Responsibilities {#general-independent-assessor-responsibilities}
+
+These rules apply to independent assessment services seeking to obtain or maintain FedRAMP Recognition.
+
+<div class="subset-applicability" role="group" aria-label="Applicability">
+<span class="subset-applicability__group subset-applicability__group--affects"><span class="subset-applicability__label">Audience:</span> <span class="subset-applicability__values"><span class="subset-applicability__tag">Assessors</span></span></span>
+</div>
+
+### A2LA Accreditation
+
+??? abstract "REC-IAS-ACC"
+    **Changelog:**
+    { data-search-exclude }
+
+
+    - **2026-06-24:** Official launch of the FedRAMP Consolidated Rules for 2026.
+    { data-search-exclude }
+
+
+
+
+!!! quote ""
+    Assessors [MUST](../definitions/#must){ data-preview } obtain and maintain accreditation through the American Association for Laboratory Accreditation (A2LA) Cybersecurity Inspection Body Program to qualify for FedRAMP Recognition.
+
+
+    ---
+
+    _**Note:** FedRAMP will remove FedRAMP Recognition immediately after the American Association for Laboratory Accreditation notifies FedRAMP that an assessor's accreditation has lapsed._
+
+    ---
+    **Terms:** [FedRAMP Recognized](../definitions/#fedramp-recognized){ data-preview }
+### Actually Do Assessments
+
+??? abstract "REC-IAS-ADA"
+    **Changelog:**
+    { data-search-exclude }
+
+
+    - **2026-06-24:** Official launch of the FedRAMP Consolidated Rules for 2026.
+    { data-search-exclude }
+
+
+
+
+!!! quote ""
+    Assessors [MUST](../definitions/#must){ data-preview } complete at least 2 initial or ongoing assessments for Class B, C, or D FedRAMP Certifications every 2 years to maintain FedRAMP Recognition.
+
+    **Timeframe:** 2 years
+
+    !!! warning "Corrective Actions"
+        - FedRAMP will notify assessors when they are within 6 months of losing FedRAMP Recognition under this rule and request a corrective action plan.
+        - Assessors whose corrective action plan is not accepted will lose FedRAMP Recognition and must supply an alternative corrective action plan to move toward renewed FedRAMP Recognition.
+
+
+    ---
+
+    _**Note:** For a newly FedRAMP Recognized Assessor, this rule applies beginning on the initial date of FedRAMP Recognition if that date is later than 2026-06-01._
+
+    ---
+    **Terms:** [FedRAMP Recognized](../definitions/#fedramp-recognized){ data-preview }
+### Policy and Standards Compliance
+
+??? abstract "REC-IAS-PSC"
+    **Changelog:**
+    { data-search-exclude }
+
+
+    - **2026-06-24:** Official launch of the FedRAMP Consolidated Rules for 2026.
+    { data-search-exclude }
+
+
+
+
+!!! quote ""
+    Assessors [MUST](../definitions/#must){ data-preview } maintain compliance with the latest American Association for Laboratory Accreditation (A2LA) R311 - Specific Requirements - Federal Risk and Authorization Management Program to maintain FedRAMP Recognition.
+
+
+
+    **Reference:** [A2LA Public Documents](https://portal.a2la.org/documents/)
+
+    ---
+    **Terms:** [FedRAMP Recognized](../definitions/#fedramp-recognized){ data-preview }
+### Annual Surveillance Assessment
+
+??? abstract "REC-IAS-ANR"
+    **Changelog:**
+    { data-search-exclude }
+
+
+    - **2026-06-24:** Official launch of the FedRAMP Consolidated Rules for 2026.
+    { data-search-exclude }
+
+
+
+
+!!! quote ""
+    Assessors [MUST](../definitions/#must){ data-preview } achieve a favorable annual surveillance assessment by the American Association for Laboratory Accreditation (A2LA) to maintain FedRAMP Recognition.
+
+    **Timeframe:** 1 year
+
+    !!! warning "Corrective Actions"
+        - Assessors have 75 days to complete corrective actions for nonconformances identified by the American Association for Laboratory Accreditation (A2LA)during a surveillance assessment. If an assessor exceeds the 75 day resolution timeframe, A2LA will supply FedRAMP with a narrative of the assessor's current status, the assessor will be designated as in Remediation in the FedRAMP Marketplace, and the assessor must supply a corrective action plan to FedRAMP.
+
+
+    ---
+    **Terms:** [FedRAMP Recognized](../definitions/#fedramp-recognized){ data-preview }
+### Full A2LA Reassessment
+
+??? abstract "REC-IAS-RAS"
+    **Changelog:**
+    { data-search-exclude }
+
+
+    - **2026-06-24:** Official launch of the FedRAMP Consolidated Rules for 2026.
+    { data-search-exclude }
+
+
+
+
+!!! quote ""
+    Assessors [MUST](../definitions/#must){ data-preview } achieve a favorable full reassessment by the American Association for Laboratory Accreditation (A2LA) at least once every 2 years to maintain FedRAMP Recognition.
+
+    **Timeframe:** 2 years
+
+    !!! warning "Corrective Actions"
+        - Assessors have 75 days to complete corrective actions for nonconformances identified by the American Association for Laboratory Accreditation during a reassessment. If an assessor exceeds the 75 day resolution timeframe, the American Association for Laboratory Accreditation will supply FedRAMP with a narrative of the assessor's current status, the assessor will be designated as In Remediation in the FedRAMP Marketplace, and the assessor must supply a corrective action plan to FedRAMP.
+
+
+    ---
+    **Terms:** [FedRAMP Recognized](../definitions/#fedramp-recognized){ data-preview }
+### Re-entry after Revocation
+
+??? abstract "REC-IAS-RAR"
+    **Changelog:**
+    { data-search-exclude }
+
+
+    - **2026-06-24:** Official launch of the FedRAMP Consolidated Rules for 2026.
+    { data-search-exclude }
+
+
+
+
+!!! quote ""
+    Assessors [MUST](../definitions/#must){ data-preview } satisfy all American Association for Laboratory Accreditation (A2LA) re-entry conditions before regaining FedRAMP Recognition after revocation.
+
+
+    ---
+
+    _**Note:** A revocation may require extended time in revoked status while the assessor demonstrates acceptable performance in the A2LA Cybersecurity Inspection Body Program before seeking FedRAMP Recognition again._
+
+    ---
+    **Terms:** [FedRAMP Recognized](../definitions/#fedramp-recognized){ data-preview }
+### Roles and Qualifications
+
+??? abstract "REC-IAS-RQU"
+    **Changelog:**
+    { data-search-exclude }
+
+
+    - **2026-06-24:** Official launch of the FedRAMP Consolidated Rules for 2026.
+    { data-search-exclude }
+
+
+
+
+!!! quote ""
+    Assessors [MUST](../definitions/#must){ data-preview } staff FedRAMP assessments with all roles required by the American Association for Laboratory Accreditation (A2LA) R311, including personnel who meet the qualifications for each role, unless FedRAMP publishes a specific exception for a limited pilot or other explicitly scoped process.
+
+    !!! warning "Corrective Actions"
+        - FedRAMP may require a consultation meeting, corrective action plan, or revocation for failure to comply.
+
+
+### Annual Foreign Interest Reports
+
+??? abstract "REC-IAS-AFI"
+    **Changelog:**
+    { data-search-exclude }
+
+
+    - **2026-06-24:** Official launch of the FedRAMP Consolidated Rules for 2026.
+    { data-search-exclude }
+
+
+!!! warning "This FRR includes a notification requirement!"
+    - Notify FedRAMP via form: [FedRAMP Foreign Ownership, Control, or Influence Declaration Form](https://help.fedramp.gov/hc/en-us/requests/new?ticket_form_id=52006681154587).
+
+
+!!! quote ""
+    Assessors [MUST](../definitions/#must){ data-preview } report information relating to any foreign interest, foreign influence, or foreign control of the independent assessment service to FedRAMP annually.
+
+    **Timeframe:** 1 year
+
+
+### Changes in Foreign Interest
+
+??? abstract "REC-IAS-CFI"
+    **Changelog:**
+    { data-search-exclude }
+
+
+    - **2026-06-24:** Official launch of the FedRAMP Consolidated Rules for 2026.
+    { data-search-exclude }
+
+
+!!! warning "This FRR includes a notification requirement!"
+    - Notify FedRAMP via form: [FedRAMP Foreign Ownership, Control, or Influence Declaration Form](https://help.fedramp.gov/hc/en-us/requests/new?ticket_form_id=52006681154587).
+
+
+!!! quote ""
+    Assessors [MUST](../definitions/#must){ data-preview } report updated information relating to any foreign interest, foreign influence, or foreign control of the independent assessment service within 48 hours of any change in foreign ownership or control.
+
+    **Timeframe:** 48 hours
+
+
+### Performance Standards
+
+??? abstract "REC-IAS-PST"
+    **Changelog:**
+    { data-search-exclude }
+
+
+    - **2026-06-24:** Official launch of the FedRAMP Consolidated Rules for 2026.
+    { data-search-exclude }
+
+
+
+
+!!! quote ""
+    Assessors [MUST](../definitions/#must){ data-preview } meet FedRAMP performance standards for assessor deliverables to support independent, risk-based reviews by FedRAMP and federal agencies, including at least:
+
+    1. Complete Assessment Packages: Supplies complete and thoroughly prepared documents on the first submission.
+    1. Deliverable Quality: Ensures documentation content is clear, complete, concise, and consistent.
+    1. Deliverable Format: Follows applicable FedRAMP rules.
+    1. Timeliness and Responsiveness: Delivers documents on time according to the schedule agreed to by the federal government, provider, and assessor.
+    1. Testing Accuracy and Completeness: Ensures accurate and complete testing of a cloud service offering in accordance with ISO 17020 and FedRAMP security rules.
+    1. Assessment Integrity: Submits independent assessments of provider security implementations that are not influenced by provider demands.
+    1. Chain of Custody: Preserves the integrity and chain of custody of assessor-authored documents and provider-supplied evidence used in FedRAMP assessments.
+
+
+    ---
+    **Terms:** [Cloud Service Offering](../definitions/#cloud-service-offering){ data-preview }
+### Corrective Action Plan
+
+??? abstract "REC-IAS-CAP"
+    **Changelog:**
+    { data-search-exclude }
+
+
+    - **2026-06-24:** Official launch of the FedRAMP Consolidated Rules for 2026.
+    { data-search-exclude }
+
+
+
+
+!!! quote ""
+    Assessors [MUST](../definitions/#must){ data-preview } supply a corrective action plan when FedRAMP requires one for performance standards deficiencies or organizational risks.
+
+
+### Invalid Deliverables
+
+??? abstract "REC-IAS-INV"
+    **Changelog:**
+    { data-search-exclude }
+
+
+    - **2026-06-24:** Official launch of the FedRAMP Consolidated Rules for 2026.
+    { data-search-exclude }
+
+
+
+
+!!! quote ""
+    Assessors [MUST](../definitions/#must){ data-preview } treat deliverables prepared, performed, or submitted by personnel who do not meet required role qualifications as invalid for FedRAMP purposes.
+
+
+### Advisory Separation
+
+??? abstract "REC-IAS-SEP"
+    **Changelog:**
+    { data-search-exclude }
+
+
+    - **2026-06-24:** Official launch of the FedRAMP Consolidated Rules for 2026.
+    { data-search-exclude }
+
+
+
+
+!!! quote ""
+    Assessors [MUST NOT](../definitions/#must-not){ data-preview } perform a FedRAMP independent assessment of the same cloud service offering within 2 years after supplying advisory or consulting services for that offering, unless FedRAMP publishes a specific exception for a limited pilot or other explicitly scoped process.
+
+    **Timeframe:** 2 years
+
+    !!! warning "Corrective Actions"
+        - FedRAMP may require a consultation meeting, corrective action plan, or revocation for failure to comply.
+
+
+    ---
+    **Terms:** [Cloud Service Offering](../definitions/#cloud-service-offering){ data-preview }, [FedRAMP Independent Assessment](../definitions/#fedramp-independent-assessment){ data-preview }

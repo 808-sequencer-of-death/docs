@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-73",
+  "node_id": "D_kwDOOxfoic4AhQQU",
+  "number": 73,
+  "title": "The RET Template Updated",
+  "url": "https://github.com/FedRAMP/community/discussions/73",
+  "category": "Rev5 Discussion",
+  "category_slug": "rev5-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "ethanolivertroy",
+  "author_is_official": false,
+  "created_at": "2025-08-11T19:18:24Z",
+  "updated_at": "2025-08-15T21:07:18Z",
+  "last_edited_at": null,
+  "closed": true,
+  "closed_at": "2025-08-15T21:07:18Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "<img width=\"994\" height=\"233\" alt=\"image\" src=\"https://github.com/user-attachments/assets/f2ba2d2d-a103-48c1-95c7-0c3cbd3211fa\" />\r\nwas updated 7/23/25 but the website still lists it as 03/29/2024",
+  "comment_count": 1,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4A13qB",
+      "url": "https://github.com/FedRAMP/community/discussions/73#discussioncomment-14121601",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2025-08-15T21:07:18Z",
+      "updated_at": "2025-08-15T21:07:19Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Thank you for flagging this Ethan! We've got an internal issue tracking it and will update this along with a few other similar cleanup notes to make on the documents and templates page hopefully next week. Cheers!",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "ethanolivertroy",
+    "pete-gov"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/73#discussioncomment-14121601",
+      "author": "pete-gov",
+      "created_at": "2025-08-15T21:07:18Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://github.com/user-attachments/assets/f2ba2d2d-a103-48c1-95c7-0c3cbd3211fa"
+    ],
+    "topics": []
+  },
+  "content_hash": "a964ff19558a90783c654faadc5fb9657257a08afb868f8083c5331c657fe78e",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

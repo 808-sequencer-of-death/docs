@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-95",
+  "node_id": "D_kwDOOxfoic4AiVaB",
+  "number": 95,
+  "title": "Does FedRAMP have a reference page on its website for all of the GSA, OMB, and its own publications to easily reference for Cloud Guidance (Also applies for FedRAMP 20x)?",
+  "url": "https://github.com/FedRAMP/community/discussions/95",
+  "category": "Rev5 Discussion",
+  "category_slug": "rev5-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "ChanceofClouds",
+  "author_is_official": false,
+  "created_at": "2025-10-08T15:37:40Z",
+  "updated_at": "2025-11-18T16:22:49Z",
+  "last_edited_at": null,
+  "closed": true,
+  "closed_at": "2025-11-18T16:22:49Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 0,
+  "body": "It will depend on the purpose of the document one is creating the reference section for but in general, does FedRAMP keep a reference page which someone could leverage to point to all of the applicable FedRAMP, OMB, GSA, DoD, and NIST publications related to cloud computing?",
+  "comment_count": 1,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4A3zlg",
+      "url": "https://github.com/FedRAMP/community/discussions/95#discussioncomment-14629216",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2025-10-08T17:51:59Z",
+      "updated_at": "2025-10-08T17:52:26Z",
+      "upvotes": 2,
+      "minimized": false,
+      "body": "> It will depend on the purpose of the document one is creating the reference section for but in general, does FedRAMP keep a reference page which someone could leverage to point to all of the applicable FedRAMP, OMB, GSA, DoD, and NIST publications related to cloud computing?\r\n\r\nFrom a FedRAMP perspective we're only really concerned about FedRAMP specific policies; that is, generally a cloud service does not need to meet any other government requirements except those required by FedRAMP for a FedRAMP authorization, so we don't need to collect and reference such policies. Our section of the law only requires us to maintain materials and publish information about the FedRAMP authorization process; under current executive policy that means we're limited to doing that.\r\n\r\nYou can see this in [44 USC § 3609](https://www.law.cornell.edu/uscode/text/44/3609) (b) (1) where it states: \"The Administrator shall maintain a public website to serve as the authoritative repository for FedRAMP, including the timely publication and updates for all relevant information, guidance, determinations, and other materials required under subsection (a).\" (Subsection (a) outlines all of the things that FedRAMP needs to create)\r\n\r\nThat said, [Executive Order 13694 (amending EO 14144) on Sustaining Select Efforts to Strengthen the Nation's Cybersecurity](https://www.federalregister.gov/documents/2025/06/11/2025-10804/sustaining-select-efforts-to-strengthen-the-nations-cybersecurity-and-amending-executive-order-13694) charges NIST, CISA, and OMB with establishing a pilot program to make all cybersecurity policy and guidance available in a machine-readable format. I'm certainly looking forward to seeing how that plays out, but it will likely also be focused entirely on government-specific requirements.\r\n\r\n",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A3_UI",
+          "url": "https://github.com/FedRAMP/community/discussions/95#discussioncomment-14677256",
+          "author": "ChanceofClouds",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-10-14T14:55:33Z",
+          "updated_at": "2025-10-14T14:55:34Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thank you."
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "ChanceofClouds",
+    "pete-gov"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/95#discussioncomment-14629216",
+      "author": "pete-gov",
+      "created_at": "2025-10-08T17:51:59Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://www.federalregister.gov/documents/2025/06/11/2025-10804/sustaining-select-efforts-to-strengthen-the-nations-cybersecurity-and-amending-executive-order-13694",
+      "https://www.law.cornell.edu/uscode/text/44/3609"
+    ],
+    "topics": [
+      "20x",
+      "machine_readable"
+    ]
+  },
+  "content_hash": "8ea21676d2310b1e2039899cf51d09dc89fc53214499eda884d35ce9de1395f9",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

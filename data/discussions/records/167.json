@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-167",
+  "node_id": "D_kwDOOxfoic4Ao5VX",
+  "number": 167,
+  "title": "20x Class B/C Certification submissions now open!",
+  "url": "https://github.com/FedRAMP/community/discussions/167",
+  "category": "20x Discussion",
+  "category_slug": "20x-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "emu-gov",
+  "author_is_official": true,
+  "created_at": "2026-08-31T13:02:23Z",
+  "updated_at": "2026-09-09T17:33:35Z",
+  "last_edited_at": "2026-08-31T13:02:39Z",
+  "closed": true,
+  "closed_at": "2026-09-09T17:33:35Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 2,
+  "body": "Good morning, as of 0900 ET the [submission form](https://help.fedramp.gov/hc/en-us/requests/new?ticket_form_id=51137131584283) is live and we are accepting 20x Class B and C Certification packages!\r\n\r\nA few top reasons why your submission might get rejected:\r\n\r\n- Your Trust Center requires acknowledgement and/or acceptance of a privacy policy, terms of service or non-disclosure agreement - *I am but a humble civil servant and cannot agree to such things on behalf of our agency*.\r\n\r\n- Incomplete package, if you don't have your SDR ready, come back later when you do. Also be mindful we ask for both human-readable and machine-readable files and any rule that calls out a specific schema should have at least an example provided.\r\n\r\n- Missing rules and/or KSIs. Remember that **ALL** *MUSTs* and *SHOULDs* applicable to your class need to be addressed. If you don't have something implemented, say so and tell us why, don't just omit the KSI or rule altogether.\r\n\r\n- JSON files not following the schema. To be clear, going above and beyond and building out more on top of our schemas is totally awesome, but our minimal structure and required fields should be present. Check out the [schema validator](https://www.fedramp.gov/schemas/validator/)\r\n\r\n- Independent Assessment Service's content not included in CPO and SDR.\r\n\r\nWe went through the submission process and package completeness at the last [20x Community Update](https://youtu.be/9WBfn-UHtpY?si=dq3XzfUv3Kj2gLBM). I wore my best bologna sandwich shirt! 🥪 👕 💪 ",
+  "comment_count": 0,
+  "comments": [],
+  "answer_url": null,
+  "participants": [
+    "emu-gov"
+  ],
+  "official_responses": [],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://help.fedramp.gov/hc/en-us/requests/new?ticket_form_id=51137131584283",
+      "https://www.fedramp.gov/schemas/validator/",
+      "https://youtu.be/9WBfn-UHtpY?si=dq3XzfUv3Kj2gLBM"
+    ],
+    "topics": [
+      "20x",
+      "class_b",
+      "ksi",
+      "machine_readable",
+      "trust_center"
+    ]
+  },
+  "content_hash": "6ff7c63d24a9232dc53de4885de91c4873ab587d81870b52ff702411a16025e4",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

@@ -1,0 +1,279 @@
+---
+title: "Rev5 questions on the Consolidated Rules for 2026"
+description: "Digest of FedRAMP staff answers in the community thread for Rev5 questions on the Consolidated Rules for 2026 (discussion #146), grouped by ruleset."
+sidebarTitle: "Rev5 CR26 Q&A (#146)"
+---
+
+<Info>
+  **Thread:** [#146 Rev5 questions and discussion on the Consolidated Rules for 2026 (or Legacy)](https://github.com/FedRAMP/community/discussions/146), opened by `pete-gov` on 2026-06-24 and still open. This digest covers staff posts through 2026-10-14. **Last reviewed:** 2026-10-14 against upstream release `2026.10.14.01`. Staff answers are paraphrased. Follow each link for the exact wording. Staff statements don't change the published rules. Where they conflict, the [official rules](https://www.fedramp.gov/2026/) govern.
+</Info>
+
+## Bottom line
+
+FedRAMP staff treat the Consolidated Rules for 2026 (CR26) as mandatory for every Rev5 provider on the dates in the [Rev5 deadlines table](https://www.fedramp.gov/2026/providers/updating/deadlines/rev5/). If you miss a "maintaining" date, expect a corrective action plan and an **In Remediation** status. If you miss the grace date, expect revocation. Vulnerability detection and response (`VDR`) and vulnerability evaluation and reporting (`VER`) come first, on 2026-12-07. When you adopt them, POA&Ms give way to VER reports, and staff expect you to handle the switch as a significant change. FedRAMP stops accepting new Rev5 certifications, including uplifts, on 2027-06-11.
+
+<Note>
+  **How staff are identified.** The thread lists `pete-gov` (FedRAMP Director), `nicole-gov`, `dan-fedramp`, `paulagosta`, `emu-gov` and `rhoesing` as FedRAMP responders. The dataset also marks four posts by `nathan-gov` as official, only because the login ends in `-gov`. That account isn't on the thread's staff list, and all four posts are questions. This page shows them as questions, not FedRAMP positions.
+</Note>
+
+## Deadlines, grace periods and enforcement
+
+<Note>
+  **pete-gov, 2026-06-25** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-17437758)): Each ruleset has its own timeline at the top of the ruleset. The VDR and VER rulesets carry the NTC-0014 dates: 2026-12-07 to obtain or maintain certification, and a grace period ending 2027-03-07. This matches current upstream ([VDR](/rules/vulnerability-detection-and-response), [VER](/rules/vulnerability-evaluation-and-reporting)).
+</Note>
+
+<Note>
+  **emu-gov, 2026-07-09** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-17587600)): The "obtaining" dates apply to new submissions and class changes, such as an uplift. Anything submitted on or after 2027-01-01 must conform to the new rules or risk denial.
+</Note>
+
+<Note>
+  **emu-gov, 2026-07-10** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-17596382)): [Addressing FedRAMP communication](/rules/addressing-fedramp-communication) (`AFC`) and the [secure configuration guide](/rules/secure-configuration-guide) (`SCG`) are already required. Their grace period ended 2026-07-01. Optional early adoption of CR26 started 2026-07-04. Packages submitted before 2027-01-01 may mix legacy Rev5 and CR26. The provider, assessor and agency agree on the mix, keeping the obtaining dates in mind.
+</Note>
+
+<Note>
+  **emu-gov, 2026-07-16** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-17661653)): The rules have fixed dates. FedRAMP will try to be reasonable about real extenuating circumstances, but don't count on leniency if you haven't started on VDR and VER.
+</Note>
+
+<Note>
+  **emu-gov, 2026-07-30** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-17845287)): If a Rev5 Class C provider doesn't implement CR26, the consequence is a corrective action plan, then revocation of FedRAMP Certification, on the dates in the [important deadlines](https://www.fedramp.gov/2026/providers/updating/deadlines/#important-deadlines).
+</Note>
+
+<Note>
+  **paulagosta, 2026-08-06** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-17920098)): The VDR and VER dates follow the 180-day timeline in CISA BOD 26-04. If you miss a maintaining date, expect a corrective action plan with a fix date no later than the grace date, and a "deficient" flag on the Marketplace. After the grace period, expect removal. "First FedRAMP independent assessment" means initial and annual assessments, not significant change assessments. The grace date depends on when the assessment **starts**, not when it's due. For example, if your annual assessments start in November, rules with an "assessment started after 2027-01-01" grace date apply at your November 2027 assessment.
+</Note>
+
+<Note>
+  **paulagosta, 2026-08-19** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18081891)): FedRAMP will check status mostly through the quarterly FedRAMP Security Inbox (FSI) tests. On the Rev5 side, only the `CDS` ruleset requires you to tell FedRAMP when you transition. For the five rulesets whose grace period is tied to the assessment start date, FedRAMP will ask for your planned timeline around the maintaining date.
+</Note>
+
+<Warning>
+  The same comment said the Rev5 `CPO` maintaining date was 2027-01-01. The current [Rev5 deadlines](https://www.fedramp.gov/2026/providers/updating/deadlines/rev5/) list a maintaining date of 2027-07-01 for `CPO`, with the grace period ending "On the first FedRAMP independent assessment started after 2027-07-01." See the next notes.
+</Warning>
+
+<Note>
+  **paulagosta, 2026-08-26** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18165255)) and **2026-08-27** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18179917)): For the five rulesets tied to your annual assessment, your grace period runs to your next assessment. Your plan and timeline should fit within 12 months of your last assessment, and you should be able to show them at the maintaining date, most likely through the next FSI test. For those five rulesets, you won't get a corrective action plan just for timing. You may move your annual assessment cadence earlier, but not later, and you must keep the earlier cadence in later years.
+</Note>
+
+<Note>
+  **pete-gov, 2026-08-27** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18181057)): The 20x and Rev5 `CPO` dates are meant to differ. The Rev5 `CPO` grace period should end at the first FedRAMP independent assessment after 2027-07-01, not 2027-01-01.
+</Note>
+
+<Info>
+  **Since applied upstream.** Release `2026.09.13.02` moved the Rev5 `CPO` grace date to 2027-07-01 ([upstream changelog](https://www.fedramp.gov/2026/changelog/)). The current [Certification package overview](https://www.fedramp.gov/2026/reference/certification-package-overview/) Rev5 block shows maintaining 2027-07-01 and grace "On the first FedRAMP independent assessment started after 2027-07-01."
+</Info>
+
+<Note>
+  **pete-gov, 2026-09-11** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18405212)): The December 7 deadline follows CISA BOD 26-04. What FedRAMP does afterward depends on how CISA responds across government. After 2026-12-07, FedRAMP will request a corrective action plan showing how you'll meet VDR and VER. Providers that don't meet the rules move to **In Remediation**, and FedRAMP tells their agencies. After 2027-03-07, FedRAMP will revoke certification for providers that still don't meet VDR and VER. In a [follow-up](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18426460) on 2026-09-13, he noted that FedRAMP used In Remediation after [NOTICE-0016](https://www.fedramp.gov/notices/0016/).
+</Note>
+
+<Note>
+  **pete-gov, 2026-10-05** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18758517)), answering a question about readiness for 2026-12-07:
+  - All applicable VDR and VER rules must be addressed by that date.
+  - The reports required under the VER [Reporting](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#reporting) subset are enough evidence until you update your SDR.
+  - Updating the SSP, ConMon procedures or SDR by December 7 isn't required, but staff recommend it.
+  - You adopt and operate VDR and VER by December 7. Independent verification and validation comes later, in your normal assessment cycle.
+  - A SHOULD rule counts as met if you address it, explain your decision and identify the risk to agency customers. See [force of the rule](https://www.fedramp.gov/2026/rules/#force-of-the-rule).
+</Note>
+
+<Note>
+  **paulagosta, 2026-09-22** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18558526), [clarification](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18558623)): For **initial** certifications, the [legacy initial package checklist](https://www.fedramp.gov/legacy/assets/LEGACY_FedRAMP-Initial-Certification-Package-Checklist.xlsx) now asks which CR26 rulesets you conform to, with evidence locations. For providers with an active certification, FedRAMP checks CR26 status through the quarterly FSI tests instead.
+</Note>
+
+<Note>
+  **pete-gov, 2026-09-22** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18558926)): For an annual assessment that runs from October to December 2026, the provider and assessor should implement as much as they can within scope, so they don't have to repeat it soon after. Every CR26 rule is open to early adoption, and every Rev5 ruleset has a grace period. For rulesets tied to the start of the next assessment, such as `SDR`, you can adopt now or wait until your next assessment starts.
+</Note>
+
+<Note>
+  **pete-gov, 2026-10-13** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18904299)): If you start a legacy Rev5 annual assessment in November 2026 and submit it in March 2027, FedRAMP will accept it to maintain certification, as long as you also meet each ruleset's maintaining dates. Staff discourage delaying adoption.
+</Note>
+
+## Scope of CR26 for Rev5, packages and certification paths
+
+<Note>
+  **emu-gov, 2026-08-20** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18093065)): A Rev5 certification needs only the rules with Rev5 applicability. All 15 rulesets apply to both Rev5 and 20x. The big difference is controls (Rev5) versus Key Security Indicators (20x). Each subset's applicability (type, path, class, audience) tells you which rules are in scope, and some rules also vary by class.
+</Note>
+
+<Note>
+  **paulagosta, 2026-08-24** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18138185)): For Lost Sponsor and Ready Conversion providers, assessment results now go in the [certification package overview](/rules/certification-package-overview) (`CPO`) and [security decision record](/rules/security-decision-record) (`SDR`). `IVV-IAS-SUM` says no separate SAP or SAR is required.
+</Note>
+
+<Note>
+  **paulagosta, 2026-08-24** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18138144)): FedRAMP won't accept a Rev5 uplift or net-new certification after 2027-06-11, whenever you entered the agency pipeline. `pete-gov` said the same on 2026-07-31 ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-17855511)): you must have applied by 2027-06-11, and anything still In Process after that date can't finish. See also the [timeline](https://www.fedramp.gov/2026/timeline/).
+</Note>
+
+<Note>
+  **paulagosta, 2026-08-06** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-17920337)): This answered a question about a Rev5 Class D service that isn't cloud-native and has no 20x path yet. Rev5 certifications remain as long as you meet your FedRAMP obligations and transition to the CR26 rulesets. Other services can still leverage the offering. Your listing stays active unless you stop meeting your obligations, ask to leave, or FedRAMP retires Rev5. An RFC on 20x Class D was pending at the time. It was later published as [RFC-0033](https://github.com/FedRAMP/community/discussions/170) (see [RFC history](/discussions/rfc-history)).
+</Note>
+
+<Note>
+  **pete-gov, 2026-10-07** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18797658)): FedRAMP has no DISA reciprocity path. DISA or your agency ATO holder can sponsor a Rev5 agency certification, or you can build a 20x package and apply for program certification.
+</Note>
+
+<Note>
+  **pete-gov, 2026-10-08** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18817999)): All Li-SaaS authorizations are grandfathered into Rev5 Class B for now. The plan is for them to move to 20x Class B or full Rev5 Class B, and an RFC is expected. Until then, continue with legacy Li-SaaS. Migration timelines will give at least a year of runway. CR26 lets new certifications reuse recent assessment results and focus on what changed.
+</Note>
+
+## Vulnerability detection and response (VDR)
+
+Rules page: [Vulnerability detection and response](/rules/vulnerability-detection-and-response).
+
+<Note>
+  **pete-gov, 2026-09-13** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18425215)): [`VDR-TFR-NMV`](https://www.fedramp.gov/2026/reference/vulnerability-detection-and-response/#non-machine-verification-and-validation) means you verify and validate documentation, personnel and budgets every 3 months. Verify means collect evidence that they're followed. Validate means check that the evidence shows they're followed correctly. That's separate from the review and update cadence for policies under the Rev5 "-1" controls. Tracking last-verified dates in your [minimum assessment scope](/rules/minimum-assessment-scope) inventory makes sense, and you summarize this work in your VDR activity reports.
+</Note>
+
+<Note>
+  **dan-fedramp, 2026-08-14** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18021674)): [`VDR-CSO-SIR`](https://www.fedramp.gov/2026/reference/vulnerability-detection-and-response/#sampling) lets you monitor a sample of identical resources, such as containers from the same image, instead of every instance. Sampling is always optional. [`VDR-TFR-PSD`](https://www.fedramp.gov/2026/reference/vulnerability-detection-and-response/#persistent-sample-detection) sets the detection cadence, which you can meet by scanning everything or by scanning samples.
+</Note>
+
+<Note>
+  **pete-gov, 2026-09-08** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18356896)): Under [`VDR-TFR-PVR`](https://www.fedramp.gov/2026/reference/vulnerability-detection-and-response/#mitigation-and-remediation-expectations), a successful mitigation leads to a new evaluation, and the clock resets from that evaluation. Example: if you evaluate a vulnerability on 9/2 and lower its PAIN on 9/18, the new deadline is 9/18 plus the timeframe for the new rating. The goal is to mitigate first. The timeframes are worst cases.
+</Note>
+
+<Note>
+  **pete-gov, 2026-10-08** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18817958)): FedRAMP doesn't prescribe how to apply [`VDR-CSO-DET`](https://www.fedramp.gov/2026/reference/vulnerability-detection-and-response/#vulnerability-detection) to software composition analysis, code scans or SBOMs. You choose the approach, then document and share it. Staff strongly recommend grouping at scale to reduce noise.
+</Note>
+
+<Note>
+  **pete-gov, 2026-10-13** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18909538)), on existing vulnerabilities at transition: VDR deadlines run from evaluation, not detection. You must report the gap between detection and evaluation and start evaluating promptly. A longer gap during the transition is fair. Start evaluating your backlog now, prioritize what's serious, then report.
+</Note>
+
+<Note>
+  **pete-gov, 2026-10-14** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18923577)): This answered a question from `nathan-gov` about long-standing POA&M milestones agreed with agencies. Most can move over and be tracked as accepted vulnerabilities. No FedRAMP rule requires agency concurrence to accept vulnerabilities after initial certification, but your contracts might.
+</Note>
+
+## Vulnerability evaluation and reporting (VER)
+
+Rules page: [Vulnerability evaluation and reporting](/rules/vulnerability-evaluation-and-reporting).
+
+<Note>
+  **pete-gov, 2026-09-10** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18391276)) and **2026-09-11** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18402431)): Under [`VER-EVA-EPA`](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#estimate-potential-agency-impact), PAIN is the cumulative effect on the federal government. A disruptive effect on more than one agency is N4. Derive it from your inventory with a rules engine where you can. If you have only one agency customer, N5 can't apply. With no agency customers there's no PAIN, but staff expect serious providers to simulate it. Rating everything as if it affects multiple agencies is acceptable and conservative.
+</Note>
+
+<Note>
+  **pete-gov, 2026-09-28** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18644936)): A vulnerability doesn't simply inherit its component's PAIN. Start from the worst case, then lower the rating for the vulnerability's actual technical impact. Staff "STRONGLY" encourage rating below the component's ceiling when the effect is narrower. Don't lower PAIN for reachability or exploitability. Those are separate evaluations under [`VER-EVA-ELX`](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#evaluate-exploitability) and [`VER-EVA-EIR`](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#evaluate-internet-reachability).
+</Note>
+
+<Note>
+  **pete-gov, 2026-10-02** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18714893)): Once [`VER-EVA-EFP`](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#evaluate-false-positives) finds a false positive, the other evaluations are done: exploitability, reachability and PAIN are all null. You can report them as not applicable. One option is to report false positives as accepted vulnerabilities in a "false positive" group under [`VER-EVA-GRV`](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#group-vulnerabilities). He said he'd clarify `VER-EVA-EPA` to allow PAIN 0 or N/A.
+</Note>
+
+<Info>
+  **Since applied upstream.** On 2026-10-05, `VER-EVA-EPA` added **N0** ("Exploitation is extremely unlikely to have any adverse effects on agencies"). See the [rule](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#estimate-potential-agency-impact).
+</Info>
+
+<Note>
+  **paulagosta, 2026-08-24** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18139695)): Once you transition to VDR and VER, POA&M requirements go away. They're replaced by the vulnerability details report ([`VER-RPT-VDT`](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#vulnerability-details)) and a human-readable monthly report ([`VER-TFR-MHR`](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#monthly-activity-report)). Agency meetings become quarterly under [`CCM-QTR-MTG`](https://www.fedramp.gov/2026/reference/collaborative-continuous-monitoring/#quarterly-review-meeting).
+</Note>
+
+<Note>
+  **paulagosta and pete-gov, 2026-09-11** ([Paul](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18401490), [Pete](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18402346), [Pete follow-up](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18403756)), on agencies that still ask for a legacy POA&M or SSP:
+  - Agencies may add needs beyond FedRAMP through their contracts.
+  - Treat these requests as customer experience. A legacy-format POA&M export is a trivial request that doesn't affect your certification.
+  - The `CPO` and `SDR` carry most of what an SSP held.
+  - Agencies build their own POA&Ms from provider information. They shouldn't copy yours.
+</Note>
+
+<Note>
+  **paulagosta, 2026-10-02** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18714482), [follow-up](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18719569)): This answered `nathan-gov`'s question about providers that haven't moved to a CDS trust center. Keep using your current ConMon sharing method, which for most Class B and C providers is USDA Connect. Posting the [`VER-TFR-MRH`](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#historical-activity) JSON there on the required cadence is acceptable for now. The long-term goal is programmatic access. FedRAMP won't create new Connect folders. Document where the files go in your SCN or SCR for the VDR and VER transition, or in your monthly ConMon brief.
+</Note>
+
+## Significant changes when adopting VDR and VER
+
+Rules page: [Significant change notification](/rules/significant-change-notification).
+
+<Note>
+  **paulagosta, 2026-08-26** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18162066)):
+  - Moving to VDR and VER will likely affect controls such as CA-1, CA-5 and CA-7. Treat it as a significant change, whether you follow the SCR or SCN process.
+  - Most of these changes are expected to be adaptive, but it depends on your changes. See the "Tips on adaptive changes" in [`SCN-ADP-NTF`](https://www.fedramp.gov/2026/reference/significant-change-notification/#notification-requirements).
+  - Evidence of compliance will show in your repository and ConMon outputs.
+  - Paul would recommend going straight to delisting, with no corrective action plan, for anyone who knowingly misrepresents their status.
+</Note>
+
+<Note>
+  **nicole-gov, 2026-10-05** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18759086)): Implementing VDR and VER is likely a significant change to how you handle and report vulnerabilities. It should trigger the significant change ruleset so customers learn about the changes, impacts and timelines.
+</Note>
+
+## Security decision record and independent verification and validation
+
+Rules pages: [Security decision record](/rules/security-decision-record), [Independent verification and validation](/rules/independent-verification-and-validation).
+
+<Note>
+  **dan-fedramp, 2026-09-01** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18235313)): You may organize SDR responses however communicates best, including combining fields. Don't use [`SDR-CSO-FRR`](https://www.fedramp.gov/2026/reference/security-decision-record/#fedramp-rules) and [`SDR-CSF-CTF`](https://www.fedramp.gov/2026/reference/security-decision-record/#rev5-controls) to re-list every response. Your answers to those rules should describe the process that keeps the SDR compliant. For example, implementation could be your GRC tool generating the SDR, verification a completeness script, and validation that script's output.
+</Note>
+
+<Note>
+  **pete-gov, 2026-10-13** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18903706), [follow-up](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18904503)): Follow the rules, not the schema notes. `SDR-CSO-FRR` and `SDR-CSF-CTF` require both an explanation of how you verify and validate **and** the results of doing it.
+</Note>
+
+<Note>
+  **paulagosta, 2026-08-27** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18179917)) and **2026-08-26** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18165255)): For Rev5 controls assessed under legacy methods in the past 3 years, use item 8 of `SDR-CSF-CTF` (responses or clarifications to independent comments) to separate earlier results and give the assessment date. Pull from earlier SSPs and SRTMs. You may keep existing control parameter values. Changes should go through significant change.
+</Note>
+
+<Note>
+  **paulagosta, 2026-08-26** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18165899)): Under the CR26 `IVV` ruleset, test methods aren't prescribed. Assessors choose them using SP 800-53A as a guide, and may still use the old SRTM test types. Under legacy templates, keep the SRTM methods and document any deviation in SAP section 5.1.
+</Note>
+
+<Note>
+  **pete-gov, 2026-10-13** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18903643), [follow-up](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18904451)): [`IVV-IAS-SUM`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#assessment-summary) is the assessor's summary for each FedRAMP Practice. It tells the assessor to supply items 4 and 5 (independent verification and validation) of `SDR-CSO-FRR`. [`IVV-IAS-OSA`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#overall-summary-of-assessment) is the summary of the whole assessment.
+</Note>
+
+<Note>
+  **pete-gov, 2026-10-14** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18934565)): How the assessor reports on [`IVV-IAS-VIP`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#verify-inclusion-in-certification-package) and gets access to the final package is for the provider and assessor to settle in their contract. The provider is responsible for meeting the rules.
+</Note>
+
+<Note>
+  **pete-gov, 2026-09-23** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18573469)): FedRAMP uses verification and validation in the ISO sense. Verification confirms something is actually there. Validation confirms it's suitable for its intended use and works. Pete said test of design and test of effectiveness don't map one-to-one and mostly fall under validation. He called this an informal reading.
+</Note>
+
+## Certification data sharing and trust centers
+
+Rules page: [Certification data sharing](/rules/certification-data-sharing).
+
+<Note>
+  **pete-gov, 2026-07-31** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-17852670)): The trust center rules, including [`CDS-TRC-USH`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#uninterrupted-sharing), are deliberately minimal. If agencies routinely tell FedRAMP they can't get the access they need, FedRAMP is likely to conclude the rules aren't met. Staff prefer a high-quality customer experience over minimal compliance.
+</Note>
+
+<Note>
+  **pete-gov, 2026-10-07** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18799636)): [`CDS-CSO-PUB`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#public-information) makes providers own their public information. FedRAMP imports it into the Marketplace, and agencies can pull it straight from you.
+</Note>
+
+## JSON schemas
+
+<Note>
+  **pete-gov, 2026-06-27** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-17450997)) and **2026-10-02** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18716792)): CR26 schemas are deliberately minimal. Whether the schema marks a field optional or required says nothing about whether the rules require that information. Follow the written rules, not templates or schemas. For example, the `SCN` schema doesn't list every item in [`SCN-CSO-INF`](https://www.fedramp.gov/2026/reference/significant-change-notification/#required-information), but the rule still applies.
+</Note>
+
+<Note>
+  **dan-fedramp, 2026-06-30** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-17488324)) and **pete-gov, 2026-09-16** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18471236)): Each schema includes the `CPO` URI so you don't repeat offering metadata. If your `CPO` isn't ready when other reporting rules take effect, you have flexibility. Pete suggested pointing the URI at a page showing implementation status.
+</Note>
+
+## Other staff posts
+
+- **pete-gov, 2026-06-25** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-17438832), [fix](https://github.com/FedRAMP/community/discussions/146#discussioncomment-17439148)): A fedramp.gov bug briefly returned 404 errors on CR26 links. Staff fixed it the same day.
+- **paulagosta, 2026-08-25** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18150707)) and **2026-08-26** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18165762)): an event pointer and a hand-off to `dan-fedramp`. Neither is a rule position.
+
+## Open questions
+
+These were still unanswered in the thread as of 2026-10-14:
+
+- Whether the rule text for `VDR-TFR-PSD` should change so it doesn't say "representative samples" when sampling is optional ([community follow-up](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18022026)). The current rule text is unchanged.
+- Whether the Rev5 control guidance should note that `VDR-TFR-NMV` applies to documentation controls ([community follow-up](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18438203)).
+- At the first assessment under the new `IVV` rules, which controls are in scope: the full baseline or the annual subset ([question](https://github.com/FedRAMP/community/discussions/146#discussioncomment-17964509)).
+- Whether all providers will have to adopt 20x by 2028 ([question](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18151513)).
+- Whether an existing DISA assessment can cut the effort for a Rev5 agency certification, and whether Initial Implementation listing is available meanwhile ([question](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18881888)).
+- Whether the initial package checklist should use the assessment **start** date for `MAS`, `CPO` and `SDR`, and whether VER reports alone can close a low POA&M item ([question](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18933968)).
+
+## What it means for you
+
+- Plan to meet every applicable VDR and VER rule by 2026-12-07. Staff say the VER [Reporting](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#reporting) outputs are your evidence until you update your SDR.
+- Handle the VDR and VER transition through your significant change process (`SCN` or legacy SCR). Record where your new reports live.
+- Check your own dates against the [Rev5 deadlines](https://www.fedramp.gov/2026/providers/updating/deadlines/rev5/). For `FRC`, `IVV`, `MAS`, `CPO` and `SDR`, the grace period ends at the first independent assessment **started** after the listed date.
+- If you plan a Rev5 uplift or new Rev5 certification, it must reach FedRAMP before 2027-06-11.
+- For `SDR-CSO-FRR` and `SDR-CSF-CTF`, give both your method and its results, and follow the rule text rather than the schema.
+
+## Related
+
+- [20x questions on the Consolidated Rules for 2026](/discussions/20x-cr26-questions)
+- [Notable staff answers](/discussions/notable-staff-answers)
+- [Vulnerability detection and response](/rules/vulnerability-detection-and-response) and [Vulnerability evaluation and reporting](/rules/vulnerability-evaluation-and-reporting)
+- [Security decision record](/rules/security-decision-record) and [Independent verification and validation](/rules/independent-verification-and-validation)

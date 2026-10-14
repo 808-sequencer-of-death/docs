@@ -1,0 +1,86 @@
+---
+title: "Secure configuration guide"
+description: "You must publish guidance that tells customers how to securely set up and run the top-level administrative accounts and security settings of your service."
+sidebarTitle: "SCG: Secure configuration guide"
+---
+
+<Info>
+  **Official source:** [Secure Configuration Guide](https://www.fedramp.gov/2026/reference/secure-configuration-guide/) (`SCG`), FedRAMP Consolidated Rules release `2026.10.14.01`. This page is a plain-English summary. The official rule text governs.
+</Info>
+
+## In short
+
+You must write, maintain and make available a Secure Configuration Guide for your cloud service offering. It must explain how customers securely handle top-level administrative accounts and the security settings only those accounts can change. Your certification package must tell customers how to get and use the guide. Everything else in this ruleset, including public access, secure defaults and machine-readable or API access to settings, is a SHOULD.
+
+These rules are already in force. Per the FedRAMP staff comment noted below, the grace period ended on `2026-07-01`.
+
+## Who it applies to
+
+| Subset | Types | Paths | Classes | Audience |
+| --- | --- | --- | --- | --- |
+| [General Provider Responsibilities](https://www.fedramp.gov/2026/reference/secure-configuration-guide/#general-provider-responsibilities) (`SCG-CSO`) | 20x, Rev5 | Program, Agency | Class B, Class C, Class D | Providers |
+| [Enhanced Capabilities](https://www.fedramp.gov/2026/reference/secure-configuration-guide/#enhanced-capabilities) (`SCG-ENH`) | 20x, Rev5 | Program, Agency | Class B, Class C, Class D | Providers |
+
+The upstream text describes both subsets as applying to "providers with FedRAMP Certifications of any type."
+
+## Key dates
+
+The same dates apply to 20x and Rev5.
+
+| Milestone | Date |
+| --- | --- |
+| Status | Required (Consolidated Rules for 2026) |
+| Obtaining initial certification | `2026-03-01` |
+| Maintaining ongoing certification | `2026-03-01` |
+| Grace period ends | `2026-07-01` |
+
+## What you need to do
+
+Key terms: [top-level administrative account](https://www.fedramp.gov/2026/definitions/#top-level-administrative-account), [privileged account](https://www.fedramp.gov/2026/definitions/#privileged-account), [machine-readable](https://www.fedramp.gov/2026/definitions/#machine-readable) and [certification package](https://www.fedramp.gov/2026/definitions/#certification-package).
+
+### General provider responsibilities
+
+| Rule | Force | What it means for you |
+| --- | --- | --- |
+| [`SCG-CSO-RSC`](https://www.fedramp.gov/2026/reference/secure-configuration-guide/#recommended-secure-configuration) | MUST | Create, maintain and make available a Secure Configuration Guide. It is required to cover how to securely access, configure, operate and decommission top-level administrative accounts, and to explain the security-related settings only those accounts can change and their security implications. Explaining settings that only privileged accounts can change is listed as recommended. |
+| [`SCG-CSO-AUP`](https://www.fedramp.gov/2026/reference/secure-configuration-guide/#use-instructions) | MUST | Put instructions in your FedRAMP Certification Package that explain how to obtain and use the Secure Configuration Guide. |
+| [`SCG-CSO-PUB`](https://www.fedramp.gov/2026/reference/secure-configuration-guide/#public-secure-configuration-guidance) | SHOULD | Make the Secure Configuration Guide publicly available. |
+| [`SCG-CSO-SDF`](https://www.fedramp.gov/2026/reference/secure-configuration-guide/#secure-defaults) | SHOULD | When top-level administrative accounts and privileged accounts are first provisioned, set all their settings to your recommended secure defaults. |
+
+Notes from the official text for `SCG-CSO-RSC`:
+
+- The guide doesn't have to be a single document called a "Secure Configuration Guide." You can deliver it in whatever form gives customers the best experience.
+- The guide should explain how top-level administrative accounts and privileged accounts are named in your service.
+
+For `SCG-CSO-AUP`, the official note says you decide how best to present the instructions for your customers.
+
+### Enhanced capabilities
+
+| Rule | Force | What it means for you |
+| --- | --- | --- |
+| [`SCG-ENH-CMP`](https://www.fedramp.gov/2026/reference/secure-configuration-guide/#comparison-capability) | SHOULD | Let customers compare all current settings for top-level administrative and privileged accounts against your recommended secure defaults. |
+| [`SCG-ENH-EXP`](https://www.fedramp.gov/2026/reference/secure-configuration-guide/#export-capability) | SHOULD | Let customers export all security settings in a machine-readable format. |
+| [`SCG-ENH-API`](https://www.fedramp.gov/2026/reference/secure-configuration-guide/#api-capability) | SHOULD | Let customers view and adjust security settings through an API or similar capability. |
+| [`SCG-ENH-MRG`](https://www.fedramp.gov/2026/reference/secure-configuration-guide/#machine-readable-guidance) | SHOULD | Also publish the Secure Configuration Guide in a machine-readable format that customers or third-party tools can use to compare against current settings. |
+| [`SCG-ENH-VRH`](https://www.fedramp.gov/2026/reference/secure-configuration-guide/#versioning-and-release-history) | SHOULD | Version your recommended secure defaults for top-level administrative and privileged accounts, and keep a release history as they change. |
+
+## What FedRAMP staff have said
+
+<Note>
+  **The grace period has ended.** On `2026-07-10`, `emu-gov` said Addressing FedRAMP Communication and Secure Configuration Guide rules "are required now" and that the grace period ended on `2026-07-01`, including for new Rev5 submissions. [Discussion #146 comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-17596382)
+</Note>
+
+<Note>
+  **The guide is for customer configuration, not your internal OS hardening.** On `2026-09-03`, `dan-fedramp` said the guide required by `SCG-CSO-RSC` is meant to tell an agency customer how to configure your service. Unless you expect agency customers to configure the operating system on your system components, OS configuration doesn't need to be in the guide. [Discussion #147 comment](https://github.com/FedRAMP/community/discussions/147#discussioncomment-18269575)
+</Note>
+
+<Note>
+  **Linking to the guide during transition assessments.** On `2026-09-22`, answering a question about Rev5 annual assessments that span late 2026, `pete-gov` said providers and assessors can be flexible and "roll your own supplement," adding that for SCG FedRAMP "just asked folks to link us to it." [Discussion #146 comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18558926)
+</Note>
+
+## Related
+
+- [Agency use](/rules/agency-use): `AGU-USE-RSG` requires agencies to review your Secure Configuration Guide and configure relevant security settings.
+- [Certification package overview](/rules/certification-package-overview)
+- [Key Security Indicators](/rules/key-security-indicators)
+- [Rev5 questions on the 2026 rules](/discussions/rev5-cr26-questions) and [20x questions on the 2026 rules](/discussions/20x-cr26-questions)

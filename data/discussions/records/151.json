@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-151",
+  "node_id": "D_kwDOOxfoic4An1tq",
+  "number": 151,
+  "title": "Machine-verifiable evidence for human-approval decisions, an open format offered for the KSI process",
+  "url": "https://github.com/FedRAMP/community/discussions/151",
+  "category": "20x Discussion",
+  "category_slug": "20x-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "FutureEnterprises",
+  "author_is_official": false,
+  "created_at": "2026-07-16T21:31:26Z",
+  "updated_at": "2026-09-09T17:29:49Z",
+  "last_edited_at": null,
+  "closed": true,
+  "closed_at": "2026-09-09T17:29:49Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "I run EMILIA Protocol, a small open project (Apache 2.0) that works on one narrow piece of the evidence problem: proving a named human approved a specific consequential action, in a form a third party can verify by machine.\n\nI have read a lot of compliance modernization plans. 20x is the first one that treats evidence as something to verify rather than something to file, and the Automatic Validation principle is the part I keep coming back to.\n\nIt also exposes a hard case. Any indicator that turns on a human decision (change approval, access grants, break-glass, production deployments) is usually evidenced by a ticket screenshot or a log line the provider maintains. So the validation pipeline ends up trusting the provider's own records for the one control class where those records are the thing in question.\n\nThe format we build closes that gap. The approver signs the exact action (Ed25519 over RFC 8785 canonical JSON), the receipt binds the named approver to that action's digest, and anyone can verify it offline with a CLI against keys the relying party pins. No call back to us, and no vendor in the trust path. Our standard demo walks a two-person approval on a high-value disbursement, then jumps six months ahead to an audit where the issuing service no longer exists, and the auditor still verifies the authorization from a single file while a forged copy is refused with a stated reason. Honestly, the offline audit moment is pretty cool to watch.\n\nThe pieces are public. The specification is posted as individual Internet-Drafts at the IETF (draft-schrock-ep-authorization-receipts, an individual submission, not an adopted standard). The verifier and an 18-suite conformance corpus are in the open repo, and everything is Apache 2.0, so an agency or assessor can adopt it, fork it, or replace it without touching us.\n\nMy question for the working group: as Phase 3 formalizes requirements, does human-approval evidence belong inside KSI validation, or is that class of evidence out of scope for 20x as designed? If it belongs, I would like to contribute the format into the open process, and I am glad to bring the runnable demo to a community call. You all see the whole assessment picture in a way I do not.\n\nIman Schrock, EMILIA Protocol\nemiliaprotocol.ai | github.com/emiliaprotocol/emilia-protocol",
+  "comment_count": 0,
+  "comments": [],
+  "answer_url": null,
+  "participants": [
+    "FutureEnterprises"
+  ],
+  "official_responses": [],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [],
+    "topics": [
+      "20x",
+      "3pao",
+      "ksi",
+      "machine_readable"
+    ]
+  },
+  "content_hash": "0053b5c042a1870ac281cb4ba4a7f1d8427d8c444ab305d9a029d41a7942f67a",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

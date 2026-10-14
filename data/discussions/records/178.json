@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-178",
+  "node_id": "D_kwDOOxfoic4Ap6LH",
+  "number": 178,
+  "title": "MKT-IIP-AGU: what evidence shows a cloud service is \"intended for\" agency use?",
+  "url": "https://github.com/FedRAMP/community/discussions/178",
+  "category": "20x Discussion",
+  "category_slug": "20x-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "fitz-taylor",
+  "author_is_official": false,
+  "created_at": "2026-10-09T19:51:03Z",
+  "updated_at": "2026-10-13T14:52:34Z",
+  "last_edited_at": null,
+  "closed": false,
+  "closed_at": null,
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 2,
+  "body": "We're a small SaaS provider preparing for a 20x Class C assessment on the Program Certification path. Our customers today are federal contractors, and we are pursuing federal agency users in parallel. MKT-IIP-AGU says a provider must demonstrate the offering is intended for direct or indirect agency use, but the rules don't say what evidence FedRAMP looks for. Five questions:\r\n\r\n1. What evidence demonstrates intended direct use: a letter of intent from an agency program office, a no-cost pilot or evaluation agreement, an SBIR end-user memo, or only a contract? Does it need to come from an authorizing official?\r\n2. If one boundary contains several applications, is an agency use case for one application enough for the whole offering?\r\n3. For indirect use, what shows that an offering is included as a third-party information resource in another agency-used offering: a letter from that provider, or its listing documentation?\r\n4. If an offering serves both agencies and private contractors, does contractor use (including for CMMC) matter once one agency use case is real?\r\n5. Timing: must the use case exist at Initial Implementation listing, or can it be shown by the time we apply for certification?",
+  "comment_count": 1,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4BIHGu",
+      "url": "https://github.com/FedRAMP/community/discussions/178#discussioncomment-18903470",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2026-10-13T14:52:34Z",
+      "updated_at": "2026-10-13T14:52:34Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "> MKT-IIP-AGU says a provider must demonstrate the offering is intended for direct or indirect agency use, but the rules don't say what evidence FedRAMP looks for. \r\n\r\nThis isn't about what agencies say they will or won't do, this is about what your product is designed to do. It should be relatively straightforward to demonstrate that you expect agencies to directly or indirectly use your product. \r\n\r\nOn the flip side, sometimes it's pretty straightforward that products are not intended for direct or indirect agency use. For example, if you offering a gambling machine management service then it might require a bit more clarity on how exactly you expect agencies to use that cloud computing product.\r\n\r\n> What evidence demonstrates intended direct use: a letter of intent from an agency program office, a no-cost pilot or evaluation agreement, an SBIR end-user memo, or only a contract? Does it need to come from an authorizing official?\r\n\r\nIt comes from the business, not an agency. It's an attestation where you are saying that you are not making a false claim about what your product is intended to do in order to trick the government (FedRAMP) into spending official resources on reviewing your product if your intent is not to participate in the FedRAMP Marketplace. Don't make false claims!\r\n\r\n> If one boundary contains several applications, is an agency use case for one application enough for the whole offering?\r\n\r\nThat would be very much against the principles of the minimum assessment scope and appear designed to waste government time and resources, which probably wouldn't go over very well. Don't include things in a cloud service offering that aren't necessary for the cloud service offering. That's not an explicit rule as much as it's just a good idea.\r\n\r\n> For indirect use, what shows that an offering is included as a third-party information resource in another agency-used offering: a letter from that provider, or its listing documentation?\r\n\r\nThe simplest way to provably demonstrate this is to to show us which FedRAMP Certified cloud service offerings use the product in their cloud service offering.\r\n\r\n> If an offering serves both agencies and private contractors, does contractor use (including for CMMC) matter once one agency use case is real?\r\n\r\nFedRAMP is for commercial cloud service offerings, the same offering can be available to commercial customers and government customers.\r\n\r\n> Timing: must the use case exist at Initial Implementation listing, or can it be shown by the time we apply for certification?\r\n\r\nYou must provide this demonstration when requesting a marketplace listing, yes.\r\n\r\nThis is one of those things where we get a bit nervous when people start worrying about how they're going to demonstrate that their product is designed to be used by agencies because it shouldn't be that tricky....\r\n\r\n",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "fitz-taylor",
+    "pete-gov"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/178#discussioncomment-18903470",
+      "author": "pete-gov",
+      "created_at": "2026-10-13T14:52:34Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [],
+    "topics": [
+      "20x",
+      "class_c",
+      "marketplace"
+    ]
+  },
+  "content_hash": "6a636fdd73cebd98030dbe696e37e99190a1fcf8248b950a4bc1d33ef4473bf2",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-149",
+  "node_id": "D_kwDOOxfoic4Anmia",
+  "number": 149,
+  "title": "Community Update Slides 7/1",
+  "url": "https://github.com/FedRAMP/community/discussions/149",
+  "category": "Rev5 Discussion",
+  "category_slug": "rev5-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "paulagosta",
+  "author_is_official": true,
+  "created_at": "2026-07-06T18:17:32Z",
+  "updated_at": "2026-07-26T12:53:13Z",
+  "last_edited_at": null,
+  "closed": true,
+  "closed_at": "2026-07-26T12:53:13Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "[Rev5 Community Update-7_1.pdf](https://github.com/user-attachments/files/29714164/Rev5.Community.Update-7_1.pdf)\r\nSee Attached",
+  "comment_count": 0,
+  "comments": [],
+  "answer_url": null,
+  "participants": [
+    "paulagosta"
+  ],
+  "official_responses": [],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://github.com/user-attachments/files/29714164/Rev5.Community.Update-7_1.pdf"
+    ],
+    "topics": [
+      "rev5"
+    ]
+  },
+  "content_hash": "cd5150c6985e69f12cdf7873f3360effe369edbf640a4513df65117cd49f8246",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

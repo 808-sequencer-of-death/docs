@@ -1,0 +1,102 @@
+---
+title: "Agency use"
+description: "The rules agencies must follow when they authorize and use FedRAMP Certified cloud services, and what those rules mean for you as a provider."
+sidebarTitle: "AGU: Agency use"
+---
+
+<Info>
+  **Official source:** [Agency Use of FedRAMP Certified Cloud Services](https://www.fedramp.gov/2026/reference/agency-use/) (`AGU`), FedRAMP Consolidated Rules release `2026.10.14.01`. This page is a plain-English summary. The official rule text governs.
+</Info>
+
+## In short
+
+This ruleset binds federal agencies, not cloud service providers. It turns agency duties under the FedRAMP Authorization Act and OMB Memorandum M-24-15 into FedRAMP-style rules. For you, the most important points are that agencies MUST NOT ask for more than FedRAMP requires, or demand a specific certification type or path, unless the agency head or a delegate finds a demonstrable need and notifies FedRAMP. Agencies MUST allow you to follow FedRAMP rules, and they MUST review your Secure Configuration Guide.
+
+## Who it applies to
+
+| Subset | Types | Paths | Classes | Audience |
+| --- | --- | --- | --- | --- |
+| [General Agency Responsibilities](https://www.fedramp.gov/2026/reference/agency-use/#general-agency-responsibilities) (`AGU-AGC`) | 20x, Rev5 | Program, Agency | Class A, Class B, Class C, Class D | Agencies |
+| [Use of FedRAMP Certifications](https://www.fedramp.gov/2026/reference/agency-use/#use-of-fedramp-certifications) (`AGU-USE`) | 20x, Rev5 | Program, Agency | Class A, Class B, Class C, Class D | Agencies |
+| [Agency Sponsored Certifications](https://www.fedramp.gov/2026/reference/agency-use/#agency-sponsored-certifications) (`AGU-SPN`) | Rev5 | Agency | Class B, Class C, Class D | Agencies |
+
+## Key dates
+
+The same dates apply to 20x and Rev5.
+
+| Milestone | Date |
+| --- | --- |
+| Status | Required (Consolidated Rules for 2026) |
+| Optional adoption allowed | `2026-07-04` |
+| Obtaining initial certification | `2026-07-04` |
+| Maintaining ongoing certification | `2026-07-04` |
+| Grace period ends | `2026-07-04` |
+
+## Why this matters to you as a CSP
+
+You don't have obligations under this ruleset, but it sets what your agency customers can and can't ask of you:
+
+- **Agencies can't pile on extra requirements by default.** Agencies MUST NOT require information or materials beyond what FedRAMP requires unless the agency head or an authorized delegate finds a demonstrable need and notifies FedRAMP (`AGU-AGC-NAR`). This doesn't stop agencies asking for clarification or general questions about your certification data. Agencies MUST notify FedRAMP after requesting extra information or materials (`AGU-AGC-NAI`).
+- **Agencies can't insist on a type or path by default.** Agencies MUST NOT require you to obtain or keep a specific certification type (20x or Rev5) or path, under the same head-of-agency exception (`AGU-AGC-TPP`).
+- **Agencies must let you follow FedRAMP rules** (`AGU-USE-AFR`).
+- **Your Secure Configuration Guide gets used.** Agencies MUST review it and configure relevant security settings (`AGU-USE-RSG`). See [Secure configuration guide](/rules/secure-configuration-guide).
+- **Agencies read your Ongoing Certification Reports.** Agencies SHOULD review each report, SHOULD designate a senior official to review them and attend Quarterly Reviews, and SHOULD formally notify you of significant concerns that would likely lead to rescinding their Authorization to Operate (`AGU-USE-ROR`, `AGU-USE-DSO`, `AGU-USE-NPC`). If those concerns arise, they MUST also notify FedRAMP (`AGU-USE-NFC`).
+- **Agencies look at your third-party resources.** Agencies SHOULD consider the third-party information resources your offering uses (`AGU-USE-RIR`).
+- **Class A has a time limit for agencies.** Agencies SHOULD NOT authorize a Class A offering for more than 12 months unless it is actively seeking a Class B, C or D Certification (`AGU-USE-CLA`).
+- **Agency sponsors use the current rules.** An agency sponsoring a Rev5 certification MUST follow the most recent Consolidated Rules (`AGU-SPN-MRC`).
+
+## What you need to do
+
+None of these rules is addressed to you. The "What it means for you" column explains how each one affects your relationship with agency customers.
+
+### General agency responsibilities
+
+| Rule | Force | What it means for you |
+| --- | --- | --- |
+| [`AGU-AGC-AIP`](https://www.fedramp.gov/2026/reference/agency-use/#agency-internal-policies) | MUST | Agencies keep agency-wide policy aligned with OMB M-24-15. |
+| [`AGU-AGC-NAA`](https://www.fedramp.gov/2026/reference/agency-use/#notify-fedramp-after-authorization) | MUST | When an agency authorizes use of your service, it notifies FedRAMP with a copy of its Authorization to Operate letter, using the **Submit an ATO Letter** form. |
+| [`AGU-AGC-GRC`](https://www.fedramp.gov/2026/reference/agency-use/#governance-risk-and-compliance-tools) | MUST | Agency governance, risk, compliance and inventory tools must produce and ingest machine-readable artifacts in FedRAMP-identified formats, including at least OSCAL and JSON. |
+| [`AGU-AGC-NAI`](https://www.fedramp.gov/2026/reference/agency-use/#notify-additional-information-requests) | MUST | An agency that asks you for anything beyond FedRAMP requirements must notify FedRAMP afterward. |
+| [`AGU-AGC-NAR`](https://www.fedramp.gov/2026/reference/agency-use/#no-additional-security-requirements) | MUST NOT | Agencies can't require more information or materials than FedRAMP requires, unless the agency head or a delegate finds a demonstrable need and notifies FedRAMP. Clarifying questions are allowed. |
+| [`AGU-AGC-TPP`](https://www.fedramp.gov/2026/reference/agency-use/#no-certification-type-or-path-preferences) | MUST NOT | Agencies can't require a specific certification type or path, unless the agency head or a delegate finds a demonstrable need and notifies FedRAMP. |
+| [`AGU-AGC-WKG`](https://www.fedramp.gov/2026/reference/agency-use/#fedramp-working-groups) | SHOULD | Agencies take part in FedRAMP working groups and stakeholder engagements. |
+| [`AGU-AGC-LIA`](https://www.fedramp.gov/2026/reference/agency-use/#agency-liaison-program) | SHOULD | Agencies assign at least 1 federal employee to the FedRAMP Agency Liaison program. |
+| [`AGU-AGC-SIN`](https://www.fedramp.gov/2026/reference/agency-use/#shared-fedramp-inbox) | SHOULD | Agencies keep a shared FedRAMP inbox as their official point of contact with FedRAMP. |
+
+The notes on `AGU-AGC-NAR` and `AGU-AGC-TPP` tie them to the Presumption of Adequacy for a FedRAMP Certification, and say notification is mandated by OMB M-24-15 section IV (a).
+
+### Use of FedRAMP certifications
+
+| Rule | Force | What it means for you |
+| --- | --- | --- |
+| [`AGU-USE-ABU`](https://www.fedramp.gov/2026/reference/agency-use/#authorization-before-use) | MUST | Agencies still complete their own Authorization to Operate process for systems that use your certified offering. |
+| [`AGU-USE-RCF`](https://www.fedramp.gov/2026/reference/agency-use/#resolve-certification-package-conflicts) | MUST | When an agency's security determinations conflict with your certification package, the agency works it out with FedRAMP. |
+| [`AGU-USE-RSG`](https://www.fedramp.gov/2026/reference/agency-use/#review-secure-configuration-guides) | MUST | Agencies review your Secure Configuration Guide and configure relevant security settings. |
+| [`AGU-USE-AFR`](https://www.fedramp.gov/2026/reference/agency-use/#accept-fedramp-rules) | MUST | Agencies allow your certified offering to follow FedRAMP rules. |
+| [`AGU-USE-NFC`](https://www.fedramp.gov/2026/reference/agency-use/#notify-fedramp-of-monitoring-concerns) | MUST | If your Ongoing Certification Report, Quarterly Review or other certification data raises significant concerns likely to lead to rescinding the agency's ATO, the agency notifies FedRAMP. |
+| [`AGU-USE-ROR`](https://www.fedramp.gov/2026/reference/agency-use/#review-ongoing-certification-reports) | SHOULD | Agencies review each of your Ongoing Certification Reports to see how changes affect their risk tolerance. |
+| [`AGU-USE-DSO`](https://www.fedramp.gov/2026/reference/agency-use/#designate-senior-official) | SHOULD | Agencies designate a senior information security official to review your reports and attend your Quarterly Reviews. |
+| [`AGU-USE-NPC`](https://www.fedramp.gov/2026/reference/agency-use/#notify-provider-of-concerns) | SHOULD | Agencies formally notify you, through your security contact, of significant concerns likely to lead to rescinding their ATO. |
+| [`AGU-USE-RIR`](https://www.fedramp.gov/2026/reference/agency-use/#review-all-information-resources) | SHOULD | Agencies consider the third-party information resources your offering uses, at initial and ongoing authorization. |
+| [`AGU-USE-CLA`](https://www.fedramp.gov/2026/reference/agency-use/#using-fedramp-class-a-certifications) | SHOULD NOT | Agencies shouldn't authorize a Class A offering for more than 12 months unless it is actively seeking a Class B, C or D Certification. |
+
+### Agency sponsored certifications
+
+| Rule | Force | What it means for you |
+| --- | --- | --- |
+| [`AGU-SPN-MRC`](https://www.fedramp.gov/2026/reference/agency-use/#most-recent-consolidated-rules) | MUST | An agency sponsoring your Rev5 certification follows the most recent FedRAMP Consolidated Rules. |
+
+## What FedRAMP staff have said
+
+No FedRAMP staff comments in the synced discussions cite `AGU` rule IDs. One related staff comment touches on agencies adding requirements:
+
+<Note>
+  **Agencies may still contract for more.** On `2026-09-02`, answering a question about secure configuration baselines for 20x, `pete-gov` confirmed there is no FedRAMP-defined minimum tier for obtaining or keeping a certification. He added that some agency customers might write such requirements into their contracts or expectations, depending on their use case. [Discussion #147 comment](https://github.com/FedRAMP/community/discussions/147#discussioncomment-18256476)
+</Note>
+
+## Related
+
+- [Secure configuration guide](/rules/secure-configuration-guide)
+- [Collaborative continuous monitoring](/rules/collaborative-continuous-monitoring)
+- [FedRAMP certification](/rules/fedramp-certification)
+- [Marketplace listing](/rules/marketplace-listing)

@@ -1,0 +1,278 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-175",
+  "node_id": "D_kwDOOxfoic4ApUtn",
+  "number": 175,
+  "title": "Clarification requested: Is `Content-Type: application/json` a normative MUST for all FedRAMP-required JSON artifacts?",
+  "url": "https://github.com/FedRAMP/community/discussions/175",
+  "category": "20x Discussion",
+  "category_slug": "20x-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "jdettweiler",
+  "author_is_official": false,
+  "created_at": "2026-09-17T08:51:13Z",
+  "updated_at": "2026-09-17T14:38:25Z",
+  "last_edited_at": null,
+  "closed": false,
+  "closed_at": null,
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "We have been working through a question with the FedRAMP PMO regarding the delivery of JSON artifacts through a FedRAMP-compatible Trust Center, and after reviewing both the Consolidated Rules and prior discussions in this forum, we believe the question has broader implications for the ecosystem.\r\n\r\nTo be clear up front: we fully support the requirement that FedRAMP machine-readable artifacts actually be valid JSON and validate against the applicable FedRAMP JSON schema. That is not the issue we are raising. The question is whether FedRAMP is establishing an additional normative requirement that every FedRAMP-required JSON artifact must also be delivered over HTTP with:\r\n\r\n```\r\nContent-Type: application/json\r\n```\r\n\r\neven when the underlying artifact is valid JSON, successfully validates against the applicable FedRAMP schema, and is programmatically retrievable.\r\n\r\n### Background\r\n\r\nOur Trust Center is currently hosted on Box. We published our Certification Package Overview as a JSON file. The artifact itself is valid JSON and, when downloaded and submitted directly to the FedRAMP validator, validates successfully against the applicable schema. The issue is that Box serves downloaded file content using:\r\n\r\n```\r\nContent-Type: application/octet-stream\r\n```\r\n\r\nrather than `application/json`.\r\n\r\nThe CPO URL validator rejected the resource based on the HTTP response header.\r\n\r\nWe raised this with the PMO because FRC-CSO-JSN currently states:\r\n\r\n> Providers MUST supply machine-readable information in JSON documents that are valid against the corresponding JSON schema when a rule contains a FedRAMP JSON schema, UNLESS otherwise specified in the rule.\r\n\r\nThat is the normative requirement we expected to be assessed against. Our understanding of the PMO's responses to us so far is that `Content-Type: application/json` is expected not only for the public CPO, but for all FedRAMP requirements that require submission of JSON documents. The PMO has also clarified that only the CPO has the additional requirement to be anonymously/publicly accessible.\r\n\r\nWe have already implemented a workaround for the public CPO and are not asking FedRAMP to change the CPO validator. We understand the CPO's role in Marketplace automation and are comfortable accommodating that interface requirement. Our concern is what this interpretation means for the remaining authenticated Trust Center artifacts and for the Trust Center ecosystem more generally.\r\n\r\n### Is this a recommendation or a rule?\r\n\r\nThe new FedRAMP FAQ provided to us introduces the relevant headers as:\r\n\r\n> “The recommended content-headers are…”\r\n\r\nand identifies `Content-Type: application/json`, `X-Content-Type-Options: nosniff`, and `Content-Disposition: attachment`. The same FAQ later discusses “requiring these headers from all CSPs.” That creates an important ambiguity.\r\n\r\nWe agree that `application/json` is the appropriate and preferred media type for JSON and should be used when a hosting platform allows it. What we cannot currently identify is the Consolidated Rule that makes that HTTP header a MUST.\r\n\r\nFRC-CSO-JSN requires the document to be machine-readable JSON and valid against the applicable schema. It does not currently specify HTTP transport behavior, MIME types, response headers, or a particular method by which a Trust Center must serve those bytes. That distinction seems especially important in light of guidance FedRAMP has already provided in this forum.\r\n\r\nIn Discussion #146, when a schema and the written rules did not perfectly align, FedRAMP explained that the schemas were intentionally kept minimal to preserve provider flexibility and specifically cautioned against treating implementation artifacts as a “ghost rule,” saying providers should “follow the actual written rules, not templates or schemas.” \r\n\r\nMore recently, in Discussion #147, a CSP identified a difference between narrative Trust Center guidance and the actual applicable rules. FedRAMP clarified that “the key thing is that the explicit rules are followed, not the narrative.” FedRAMP then evaluated the requirement based on the actual applicable rules rather than treating the narrative statement as an additional obligation. We believe the same question arises here.\r\n\r\nIf `Content-Type: application/json` is an absolute FedRAMP requirement, it seems that requirement should be explicit in FRC-CSO-JSN, CDS-TRC, or another applicable rule rather than arising from validator behavior or narrative FAQ guidance.\r\n\r\n### The header does not establish that the artifact is valid JSON\r\n\r\nThere is also a distinction between transport metadata and artifact validity. A server can return:\r\n\r\n```\r\nContent-Type: application/json\r\n```\r\n\r\nwhile the response body contains malformed JSON, HTML from an upstream error page, XML, or other arbitrary content.\r\n\r\nConversely, a server can return:\r\n\r\n```\r\nContent-Type: application/octet-stream\r\n```\r\n\r\nwhile the response body contains perfectly valid JSON that parses successfully and validates against the applicable FedRAMP schema. So while `application/json` is useful metadata, schema validation provides the substantive assurance that the document actually satisfies FedRAMP's machine-readable JSON requirement.\r\n\r\nThis is especially relevant for authenticated Trust Center artifacts. A consumer retrieving those artifacts programmatically is already deliberately requesting a known resource through an authenticated interface and can validate and parse the returned document.\r\n\r\n### This may have significant Trust Center interoperability consequences\r\n\r\nThis concern was actually raised by the community during the original RFC-0011 discussion. RFC-0011 proposed that Trust Centers provide documented APIs or similar machine access and make authorization data available in machine-readable formats. A community comment specifically raised the implementation concern of whether platforms such as O365, Box, and Google Docs would be capable of supporting the standard and warned that open-ended API requirements could create significant interoperability complexity. The `Content-Type` interpretation appears to make that earlier concern concrete.\r\n\r\nFor example, Box's standard file-content delivery mechanism returns file downloads as `application/octet-stream`. Microsoft's standard Graph file-content mechanism used with OneDrive and SharePoint similarly delivers file content through a download interface that can return `application/octet-stream`. Google Drive/Workspace MIME handling depends on how MIME metadata is established and how the content is retrieved, creating another platform-specific implementation consideration.\r\n\r\nAccordingly, a CSP could potentially use an enterprise repository that provides authentication, authorization, API access, access logging, valid machine-readable JSON, and successful FedRAMP schema validation, yet still fail this interpretation because the CSP does not control the HTTP `Content-Type` emitted by the repository.\r\n\r\nThat could effectively require CSPs using otherwise capable platforms such as Box or SharePoint/OneDrive to introduce an additional static hosting service, reverse proxy, custom API, CDN, or other intermediary simply to change the HTTP response header. Other platforms may require vendor-specific MIME configuration or similar workarounds. That seems materially different from the solution-agnostic Trust Center model originally discussed in RFC-0011, where the focus was on using CSPs' existing commercial processes and Trust Centers rather than prescribing a particular hosting architecture. \r\n\r\n### Security objective\r\n\r\nWe agree with the security objective described in the FAQ. FedRAMP should protect downstream agency systems consuming machine-readable Certification Data. What is less clear is whether requiring `Content-Type: application/json` is necessary to accomplish that objective.\r\n\r\nThe FAQ also recommends:\r\n\r\n```\r\nX-Content-Type-Options: nosniff\r\nContent-Disposition: attachment\r\n```\r\n\r\nThose headers directly address browser MIME-sniffing and inline-content handling concerns. More fundamentally, an agency system automatically ingesting FedRAMP Certification Data should presumably validate and safely parse the JSON rather than rely on the HTTP media type as proof that the response body contains trustworthy JSON.\r\n\r\n### What we are asking FedRAMP to clarify\r\n\r\nWe are trying to determine which of these two interpretations is intended.\r\n\r\n- **Interpretation 1 — Recommended security/interoperability guidance:** `Content-Type: application/json` is the strongly preferred way to deliver FedRAMP JSON, but the normative requirement remains that the artifact be valid machine-readable JSON, conform to the applicable FedRAMP schema, and satisfy the applicable access and sharing requirements.\r\n- **Interpretation 2 — Normative FedRAMP requirement:** Every JSON document required by a FedRAMP rule MUST be served over HTTP using `Content-Type: application/json`.\r\n\r\nIf Interpretation 2 is intended, we respectfully suggest that the requirement should be incorporated explicitly into the Consolidated Rules, with the same force, applicability, effective-date, and change-management treatment as other normative requirements. That would allow CSPs, assessors, Trust Center vendors, and enterprise repository providers to evaluate their platforms against a clear and machine-readable requirement rather than discovering the constraint through validator behavior or implementation guidance.\r\n\r\nWe would also appreciate clarification on whether an authenticated FedRAMP JSON artifact delivered as `application/octet-stream` can satisfy FRC-CSO-JSN when the response body is valid JSON, successfully validates against the applicable FedRAMP schema, is programmatically retrievable, and is protected by the applicable authentication and authorization controls.\r\n\r\nThis feels larger than our individual CPO implementation. It potentially affects the architecture and vendor choices available to every CSP implementing a FedRAMP-compatible Trust Center. Our goal is not to weaken the machine-readable requirement or the underlying security objective. We want to make sure the requirement is explicit, testable, solution-agnostic, and represented in the Consolidated Rules if it is intended to be mandatory.",
+  "comment_count": 3,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4BGf3z",
+      "url": "https://github.com/FedRAMP/community/discussions/175#discussioncomment-18480627",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2026-09-17T11:13:16Z",
+      "updated_at": "2026-09-17T11:13:16Z",
+      "upvotes": 2,
+      "minimized": false,
+      "body": "We plan to update the rules shortly to make it explicitly clear that sharing machine-readable JSON documents also means ensuring those documents can be consumed directly by commonly used web applications such as SaaS GRC tools. A setup that expects a human (or program) to download a file then upload it to another application is somewhat archaic and not at all considerate of modernization.\n\nYou're correct that the original rules were written in a way that someone could expect customers to treat a JSON data file just like a Word doc that they had to download and copy to their SharePoint or whatever. A small number of folks have done this and we have been asking them to consider feedback from us to do it in a way that FR can actually automate using that data with the tools we have. \n\nRegardless, you're correct that we need to close that loophole in the rules because we can't allow an approach that makes data available in a way that FedRAMP itself can't consume.",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BGgEt",
+          "url": "https://github.com/FedRAMP/community/discussions/175#discussioncomment-18481453",
+          "author": "vennemp",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-09-17T12:14:35Z",
+          "updated_at": "2026-09-17T12:20:03Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Maybe I'm misinterpreting your response but the issue isn't a question of downloading the files and uploading to GRC tools - it's around requiring Content-Type application/json response header on all json docs.\r\n\r\nThat header ONLY affects browser behavior - whether the json is rendered in the browser or downloaded but it's still just json, programmatic access does not care about that header.  I can't think of a single library that actually enforces that header - as it's just arbitrary metadata anyway - json parsing libraries actually validate the structure of the json.. So if you are expecting the json data in trust center to be fetched programmatically by agencies and PMO that header does nothing except limit what solutions ppl can use as trust centers.  It's either Vanta, Paramify or Build Your Own (which we cannot be expected to support..).  Simply putting that data in Cloud Object Storage (GCS, S3, Azure Blob etc) isn't a clean option either since we need authentication and may need to manage IdP integrations for EVERY party wants to access the data.  Our idea around using Box/Google Drive/OneDrive etc was those offer easier paths to grant external access (as well as procurement as most CSPs already have this) and the json can still be fetched programmatically even if the content-type header is different.  "
+        },
+        {
+          "id": "DC_kwDOOxfoic4BGgMZ",
+          "url": "https://github.com/FedRAMP/community/discussions/175#discussioncomment-18481945",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-09-17T12:42:37Z",
+          "updated_at": "2026-09-17T12:42:37Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": ">  I can't think of a single library that actually enforces that header - as it's just arbitrary metadata anyway - json parsing libraries actually validate the structure of the json.\r\n\r\nIt's true that libraries generally do not strictly enforce these headers, but web applications often do. Including the web application that FedRAMP uses (this entire situation is based on a real-world scenario). We may be able to find workarounds in the near term, but we don't expect to encourage every single customer to find ways to workaround web standards especially when it might open folks up to other issues. JSON data should be delivered as JSON data.\r\n\r\nYou also might want to be forward looking here: static JSON files shipped as one-time payloads are not the future of assurance data, dynamic API access is. It's not a requirement yet because we're just shifting folks over to this idea in general right now, but smart planning would assume that the Consolidated Rules for 2027 will add in API requirements. If you're finding yourself blocked from providing a simple CORS allow request with content-type set appropriately right now, you definitely won't be well positioned to provide a more advanced API capability.\r\n\r\nThat all said, isn't there a Box API or something that could be used with a relatively simple API gateway implementation or similar to serve this content with the appropriate headers in the appropriate way without needing a full re-architecture of your approach? Or another technical option to solve this in a similar way? (for example, the box docs imply that you can set the content-type explicitly if you upload via the API?)\r\n\r\nIf the answer to all of that is \"no, we can't use Box to serve JSON data in a web interoperable standard compatible way\" then thinking about adding a separate service to bridge the gap might be necessary, yes."
+        },
+        {
+          "id": "DC_kwDOOxfoic4BGgOq",
+          "url": "https://github.com/FedRAMP/community/discussions/175#discussioncomment-18482090",
+          "author": "jdettweiler",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-09-17T12:52:51Z",
+          "updated_at": "2026-09-17T12:52:51Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "I may be missing a Box capability here, and if so this could potentially resolve our immediate issue. Could you point me to the specific Box API endpoint or parameter you are referring to that causes the subsequent file download response to be returned as:\r\n\r\n```\r\nContent-Type: application/json\r\n```\r\n\r\nI can see that Box allows us to set `Content-Type` on API requests, including the MIME type of a file part during a multipart upload. However, Box's current documentation for `GET /2.0/files/{file_id}/content` explicitly documents the file-download response as `200 application/octet-stream`.\r\n\r\nWhat I have not been able to find is a Box file property or upload parameter that persists the supplied MIME type and changes the `Content-Type` of the later download response.\r\n\r\nIf there is a supported Box API mechanism that does that, I would genuinely appreciate the pointer because we would be happy to implement it. I just want to make sure we are distinguishing between setting the `Content-Type` of the upload/API request and controlling the `Content-Type` of the response Box returns when the artifact is subsequently retrieved.\r\n\r\nAlso, you mentioned that FedRAMP already has a web application that will consume this information. I think that may actually help clarify the question we are asking. If CSP Trust Centers are expected to interoperate with a specific FedRAMP application, could FedRAMP publish the external interface or interoperability requirements for that application?\r\n\r\nI am not asking for internal application architecture or implementation details. I mean the contract CSPs need to engineer against: supported authentication methods, credential provisioning, endpoint discovery, redirect behavior, accepted HTTP media types, schema/version expectations, API versus direct-file retrieval, error handling, and any other requirements that determine whether a Trust Center is “FedRAMP-consumable.”\r\n\r\nFor example, with Box we can provide authenticated server-to-server access using OAuth 2.0 Client Credentials Grant. If the FedRAMP application can consume a Box API using that model, we can engineer to it. If the application instead requires an anonymously or directly addressable URL returning a particular set of HTTP headers, that is a materially different architecture.\r\n\r\nRight now, we do not know which of those models the FedRAMP consumer supports. This is why the existence of the FedRAMP web application does not, by itself, resolve the interoperability question for me. It makes definition of the consumer contract more important.\r\n\r\nIf there is already an API specification, integration guide, OpenAPI document, conformance test, or similar technical documentation for that application, could you point us to it? If one does not yet exist, publishing a minimum interoperability profile would give CSPs a stable target against which to build and test their Trust Center integrations."
+        },
+        {
+          "id": "DC_kwDOOxfoic4BGgZK",
+          "url": "https://github.com/FedRAMP/community/discussions/175#discussioncomment-18482762",
+          "author": "vennemp",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-09-17T13:37:34Z",
+          "updated_at": "2026-09-17T13:42:00Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Edit: I posted this before I saw your response below at 9:28.\r\n\r\nEither you are misinterpreting what we are saying or we're not doing a good job of communicating - because there's clearly a gap here, a phone call might have been better hear considering I think we've already spent over 30 minutes each on this thread....  But I promise you we examined every workaround before engaging you (Box/Google/OneDrive do not allow you to set content-type).\r\n\r\nAlso, we are being forward-thinking - and have already discussed building our own trust center solution.  We just have limited resources and have to prioritize what we build right now.  Which is why we are asking for for some leeway on the content-type requirement.\r\n\r\nWe get you guys are an impossible situation with limited resources; we are in same boat.  This shit is tough. But we are seeing a real-world implementation problem with your requirements as defined; we feel very strongly the content-type requirement is not adding the value you think it is while causing significant problems.  We hope reconsider this as we have put considerable dev work into our trust center solution (which FedRAMP and other agencies have been accessing just fine) and this kills us."
+        },
+        {
+          "id": "DC_kwDOOxfoic4BGgcm",
+          "url": "https://github.com/FedRAMP/community/discussions/175#discussioncomment-18482982",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-09-17T13:56:49Z",
+          "updated_at": "2026-09-17T13:56:49Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "I understand the investment and approach - we're just flagging that this isn't likely to provide an effective experience long term because we're already running into problems accessing your data, and that FedRAMP will likely need to add rules to prevent more folks from going down a path that limits interoperability. I am sure that workarounds are possible on our side too but look at the experience here, we don't want 300 cloud service providers that are fighting with all of their agency customers and FedRAMP over programmatic interoperability because they all went down a path that blocked default access to a number of web-based applications.\r\n\r\nMy job isn't to help a single cloud service provider navigate a solution, it's to ensure that 2000 cloud service providers have some effective consistency - and we've done quite a bit to make that as flexible as possible, but there still has to be guardrails."
+        }
+      ],
+      "replies_total": 5,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BGf9b",
+      "url": "https://github.com/FedRAMP/community/discussions/175#discussioncomment-18480987",
+      "author": "jdettweiler",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-09-17T11:38:39Z",
+      "updated_at": "2026-09-17T11:38:39Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Thank you, Pete. I appreciate the response, and I agree with the broader goal of making Certification Data practically consumable by FedRAMP and agencies.\r\n\r\nI think the remaining concern for us is less about this particular HTTP header and more about how a CSP is expected to make an engineering decision today based on the published rules. We are actively expending engineering resources implementing CR26. In our case, that includes significant automation around Box as our Trust Center. We selected that architecture based in part on FedRAMP's published position that a FedRAMP-compatible Trust Center can be any secure repository or service that satisfies the CDS-TRC requirements, with the current guidance even describing a WordPress-hosted Trust Center as a possible implementation.\r\n\r\nIf the actual acceptance criterion is broader than the explicit rules and is instead whether an implementation is ultimately “FedRAMP-consumable,” then I think CSPs need a concrete definition of that interface before building against it. We are not asking FedRAMP to guarantee that Box, or any particular vendor, will be supported indefinitely. We are asking whether an implementation that satisfies the current explicit Consolidated Rules can reasonably be relied upon as compliant today.\r\n\r\nIf FedRAMP requires additional characteristics for automated consumption, specific HTTP headers, authentication flows, API behavior, credential types, URL behavior, or other interface characteristics, those requirements materially influence architecture and vendor selection and should be part of the published interoperability contract.\r\n\r\nOtherwise, a CSP can spend substantial engineering time and money implementing automation that satisfies the published requirements, only to later discover that a technically conforming implementation is not considered usable because of an unstated interface expectation. That is the situation we are trying to avoid.\r\n\r\n### Authentication illustrates the broader problem\r\n\r\nThe Trust Center model also raises a related machine-access question. The rules require documented programmatic access to Certification Data while also contemplating controlled access, agency-user/system inventories, access logging, and mechanisms such as JIT access. For non-public Certification Data, FedRAMP will therefore ultimately need some method of authenticating programmatically to each CSP's Trust Center, whether through service accounts, OAuth client credentials, federation, or another mechanism.\r\n\r\nWe actually raised this issue with the PMO in September 2025. At that time, we specifically asked whether Login.gov could support agency access to CSP Trust Centers, whether FedRAMP could facilitate a common federation pattern, or alternatively what authentication approach CSPs should implement.\r\n\r\nOur question was specifically about federal agency users accessing Trust Center information, not authentication to our commercial service. That distinction was explained in the follow-up exchange.  Our original questions also explicitly asked about a PMO-sponsored federation pattern and recommended authentication mechanisms for Trust Centers. \r\n\r\nThat architectural question remains important. If every CSP independently selects a different Trust Center and authentication mechanism, FedRAMP may eventually need to establish and maintain a different machine identity or credential relationship with each CSP. If the intended future state is centralized federation, a standard service identity, an OAuth/OIDC profile, or some other common mechanism, CSPs need to know that before committing significant engineering resources to another pattern.\r\n\r\n### Changes to the technical contract also have schedule implications\r\n\r\nThere is a second issue that I think is becoming increasingly important as CSPs move from reading CR26 to actually implementing it. CR26 is not simply a documentation exercise. For CSPs attempting to implement the machine-readable and programmatic-access portions as intended, it requires real software engineering: schemas, exporters, APIs, authentication flows, validation pipelines, Trust Center integrations, automated evidence generation, and changes to existing GRC processes.\r\n\r\nOur experience has been that the amount of engineering required is materially greater than may be apparent from a high-level discussion of “automation.” We have evaluated this in the context of actual implementation, and there is not currently a broad set of off-the-shelf GRC products that simply makes all of these requirements work without integration and development effort. That matters when requirements change after implementation work has already begun.\r\n\r\nWe certainly understand that CR26 will continue to evolve. But when an interpretation introduces a new technical requirement that changes architecture, invalidates an existing implementation, or requires CSPs to modify code, we believe it should be handled as a versioned change to the technical contract, rather than simply becoming an immediately applicable interpretation of an existing rule.\r\n\r\nFedRAMP's own public repository maintenance guidance uses essentially this software-engineering concept when describing breaking changes: changes that cause existing parsers, validators, exporters, queries, or integrations to fail, reject previously valid data, or require code changes to continue processing the machine-readable contract. That is a useful model for CR26 generally.\r\n\r\nIf a new requirement meets that threshold, we believe the change-management process should include:\r\n\r\n- a documented change to the applicable Consolidated Rule or schema;\r\n- identification of whether the change is breaking or non-breaking;\r\n- a clear effective date;\r\n- a migration or grace period appropriate to the engineering impact; and\r\n- corresponding adjustment of compliance deadlines where the change materially affects work already underway.\r\n\r\nThe Consolidated Rules data model already distinguishes obtain, maintain, optional-adoption, and grace dates, so there is already a mechanism available to manage this kind of transition. This last point is important. The implementation clock and the requirements baseline cannot reasonably move independently of one another.\r\n\r\nIf CSPs are being held to fixed CR26 implementation dates while the technical interface they are expected to build against remains subject to material changes or new interoperability requirements, CSPs absorb the entire schedule risk created by those changes. That is especially difficult when engineering work completed in good faith against the published rules may need to be redesigned because a later interpretation establishes a technical constraint that was not previously documented. We are not suggesting that FedRAMP freeze CR26. We are suggesting that when FedRAMP changes the engineering contract, the implementation schedule should move with it in a manner proportionate to the impact of that change.\r\n\r\n### What would help us move forward\r\n\r\nI think four concrete clarifications would help considerably:\r\n\r\n1. Can CSPs rely on satisfying the currently published Consolidated Rules as the acceptance criteria for Trust Center implementations?\r\n2. If “FedRAMP-consumable” imposes additional technical requirements beyond those rules, can FedRAMP publish a minimum interoperability profile covering transport, authentication, programmatic retrieval, and related interface expectations?\r\n3. Is FedRAMP considering a standardized authentication/federation mechanism for its own programmatic access to authenticated Trust Center data, rather than requiring unique credential integration with every CSP?\r\n4. When new or changed technical requirements require CSPs to redesign integrations or modify code, will FedRAMP treat those as versioned changes with appropriate effective dates, grace periods, and extensions to affected implementation deadlines?\r\n\r\nI recognize that this area is evolving, and I don't expect FedRAMP to predict every future technical decision. What CSPs do need is a stable and testable baseline for the requirements effective today, together with normal software change-management practices when that baseline changes.\r\n\r\nWe would be very happy to spend 30 minutes with you and the appropriate technical stakeholders to walk through the Box implementation, the authentication issue, and the automation we have already built. I think a short technical discussion could help distinguish between the outcomes FedRAMP is trying to achieve and the implementation assumptions CSPs are currently having to infer.\r\n\r\nThanks again for engaging on this.",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BGf_4",
+          "url": "https://github.com/FedRAMP/community/discussions/175#discussioncomment-18481144",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-09-17T11:52:34Z",
+          "updated_at": "2026-09-17T11:52:34Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Johann - we have been quite clear that there will need to be occasional small tweaks to the rules and that we will do so quickly while trying to mitigate the impact. A lot of these will be responsive to problems we discover in the real world during implementation.\r\n\r\nWe're not looking to make this a big complicated over spec'd thing. The ask at the moment is simple: we, and many other customers, need to be able to access machine-readable JSON data via a web-based application that we expect to directly read and operate on that data using interoperable web standards. FedRAMP and government agencies shouldn't need to build a bespoke custom pipeline just for one company in order to access their certification data. Addressing this is not an engineering challenge, and this type of cross origin resource sharing has been a standard practice for nearly 20 years. We aren't asking you to invent something new, we just expect to be able to access the JSON data via our web-based SaaS applications."
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BGgMS",
+      "url": "https://github.com/FedRAMP/community/discussions/175#discussioncomment-18481938",
+      "author": "jdettweiler",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-09-17T12:42:01Z",
+      "updated_at": "2026-09-17T12:42:01Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Thanks, Pete. I appreciate the response. I think the discussion may have drifted a little from the specific issue that caused us to raise this in the first place, so I want to reconnect the architectural questions to the original implementation problem. This started because we attempted to update our FedRAMP Marketplace listing by providing the PMO with our public CPO JSON hosted in our Box Trust Center. The underlying artifact is valid JSON and validates successfully against the applicable FedRAMP schema. However, the submission was rejected because Box serves the file using:\r\n\r\n```\r\nContent-Type: application/octet-stream\r\n```\r\n\r\nrather than:\r\n\r\n```\r\nContent-Type: application/json\r\n```\r\n\r\nWe were subsequently told that the CPO could only be provided if the HTTP response used `application/json`, and that this expectation applied more broadly to FedRAMP-required JSON artifacts. That is what prompted the question in this thread.\r\n\r\nWe have already implemented a workaround for the public CPO, so I am not asking FedRAMP to change the Marketplace validator. What concerns me is what that experience tells us about the broader CR26 implementation model: we implemented against the written requirement that the document be valid, machine-readable, schema-conformant JSON, but discovered an additional transport-level acceptance criterion only when we attempted to submit it.\r\n\r\nThat distinction matters because we are actively spending engineering resources implementing the rest of CR26. I completely agree that agencies obtaining controlled security documentation from CSPs is not new. CSPs and agencies have exchanged authorization packages through portals, secure repositories, file shares, and similar mechanisms for many years.\r\n\r\nWhat seems materially different now is the expectation for machine-readable Certification Data to be programmatically consumed across independently operated Trust Centers. CDS-TRC-PAC requires programmatic access to Certification Data, while the broader Trust Center model also contemplates controlled information, agency users or systems with access, access inventories, access logging, and mechanisms such as JIT provisioning. For non-public Certification Data, a machine therefore needs some way to authenticate.\r\n\r\n### We can solve this with Box today\r\n\r\nTo make this concrete, we can provide FedRAMP programmatic access to our Box Trust Center using Box's native server-to-server capabilities. We can establish an OAuth 2.0 Client Credentials Grant application, authorize it to the appropriate Trust Center resources, and provide FedRAMP with a dedicated machine identity. FedRAMP could then obtain short-lived access tokens and retrieve Certification Data through the Box API without human interaction. From our perspective, that appears to meet the intent of programmatic access.\r\n\r\nWe are not asking FedRAMP to bless Box as a product or guarantee that Box will always be acceptable. The question is more fundamental: If we implement programmatic access using the native capabilities of our selected Trust Center and satisfy the explicit CDS-TRC requirements, can we rely on that implementation as compliant today?\r\n\r\nIf yes, we can continue engineering against that contract. If no because FedRAMP ultimately expects some different transport, authentication, API, credential, URL, or retrieval behavior, then those expectations materially affect architecture and need to be known before CSPs invest in implementations.\r\n\r\nThe `Content-Type` issue is a good example of why that matters. The Box-hosted CPO contained the correct data and passed schema validation, but the architecture was nevertheless rejected because of an additional HTTP behavior that was not apparent to us from the rule we were implementing.\r\n\r\n### The scaling question is what I still do not understand\r\n\r\nA Box Client Credentials Grant would establish a machine-to-machine trust relationship between our Trust Center and FedRAMP. If an agency also requires programmatic access to protected Certification Data, we would need to establish an appropriate identity or integration for that agency as well, particularly if access must be attributable for inventory and logging purposes. Now multiply that across the ecosystem.\r\n\r\nOne CSP may use Box. Another may use SharePoint/Graph. Another may use Vanta or Paramify. Another may expose a custom OAuth API. Without some common interoperability model, the resulting architecture appears to be something like:\r\n\r\n```\r\nFedRAMP  -> CSP A / Box credentials + API\r\n         -> CSP B / Microsoft Graph credentials + API\r\n         -> CSP C / commercial Trust Center API\r\n         -> CSP D / custom OAuth API\r\n         -> ...\r\n\r\nAgency X -> CSP A integration\r\n         -> CSP B integration\r\n         -> CSP C integration\r\n         -> ...\r\n\r\nAgency Y -> CSP A integration\r\n         -> CSP B integration\r\n         -> ...\r\n```\r\n\r\nI may be missing an intended mechanism, but I do not understand how authenticated programmatic access scales across hundreds of CSPs and federal agencies without at least one of the following:\r\n\r\n1. a common federation or service-identity model;\r\n2. a standardized authentication and retrieval profile implemented by Trust Centers; or\r\n3. some centralized brokerage/aggregation capability that normalizes these integrations.\r\n\r\nThe Trust Centers themselves do not need to be centralized. But it seems that some portion of the trust and interoperability layer has to be standardized if the objective is automated consumption across the FedRAMP ecosystem. This is what we were trying to get at when we previously asked the PMO about Login.gov. Login.gov itself was only one possible implementation. The broader question was whether FedRAMP intended to provide or define a common identity/federation mechanism for federal users and systems accessing independently operated CSP Trust Centers.\r\n\r\n### This is why the “20 years” point does not completely resolve the concern for me\r\n\r\nHuman users obtaining authorization documentation from controlled CSP repositories has been done for many years. But having machines automatically authenticate to, retrieve, validate, and continuously consume structured Certification Data from independently operated repositories is a different engineering model.\r\n\r\nThat model may absolutely be the right direction, and we support the move toward automation. But CSPs are already investing engineering resources to implement it, which means the interface contract needs to be stable enough to build against.\r\n\r\n### The questions I am ultimately trying to answer are:\r\n\r\n1. Would the Box Client Credentials Grant model described above be considered a valid implementation of programmatic Trust Center access under CDS-TRC-PAC?\r\n2. Can CSPs rely on satisfying the currently published Consolidated Rules using the native capabilities of their selected Trust Center platform as the acceptance criteria today?\r\n3. Does FedRAMP expect to establish and maintain CSP-specific machine credentials/integrations with each Trust Center, and are agencies expected to do the same independently?\r\n4. Or is FedRAMP planning a common service identity, federation profile, authentication standard, retrieval profile, or aggregation mechanism for machine consumption?\r\n5. If additional technical requirements are introduced that require CSPs to redesign integrations or modify code, will those be treated as versioned changes with appropriate effective dates, grace periods, and adjustments to affected CR26 implementation deadlines?",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BGgWb",
+          "url": "https://github.com/FedRAMP/community/discussions/175#discussioncomment-18482587",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-09-17T13:27:47Z",
+          "updated_at": "2026-09-17T13:27:47Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Out of curiosity are you using AI to generate these very long structured responses? I'm struggling to parse them and the language is very demanding, which doesn't really match my experience interacting with either you or @vennemp and makes this thread a bit confusing. It feels like I'm talking with a chatbot not a person. I can do that on my own time any time, but it would be helpful either way if this discussion was way more concise.\r\n\r\nI think in the near term we can split the difference in the near term - a strict mandate for web interoperability on JSON data that is required to be public (such as [CDS-CSO-PUB](https://www.fedramp.gov/2026/reference/certification-data-sharing/#public-information) and [CDS-CSO-SVC](https://www.fedramp.gov/2026/reference/certification-data-sharing/#public-service-list)) in the immediate future, following by additional public discussions and an RFC on web interoperability for JSON data that is inside a Trust Center authentication wall. \r\n\r\n> This started because we attempted to update our FedRAMP Marketplace listing by providing the PMO with our public CPO JSON hosted in our Box Trust Center. \r\n\r\nThis will apply to the data required for a marketplace listing **because if your Marketplace data isn't compatible with basic web interoperability standards then we can't use it.** Again, this isn't a complicated thing, it's just CORS allow and an appropriate content-type. You can set up this public information in less time than it has taken to have this conversation this morning.\r\n\r\nEither way, as always, FedRAMP will continue to encourage folks to consider the experience of their customers (including FedRAMP) as a driving factor in decision making.\r\n\r\n"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BGgZk",
+          "url": "https://github.com/FedRAMP/community/discussions/175#discussioncomment-18482788",
+          "author": "vennemp",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-09-17T13:40:21Z",
+          "updated_at": "2026-09-17T13:40:21Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "I was actually writing mine lol which is probably why they were incoherent.  "
+        },
+        {
+          "id": "DC_kwDOOxfoic4BGgbz",
+          "url": "https://github.com/FedRAMP/community/discussions/175#discussioncomment-18482931",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-09-17T13:51:34Z",
+          "updated_at": "2026-09-17T13:51:34Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Your comments feel entirely genuine Matt, no worries :) It's the weird long stuff from Johann that feels super wonky."
+        },
+        {
+          "id": "DC_kwDOOxfoic4BGgeK",
+          "url": "https://github.com/FedRAMP/community/discussions/175#discussioncomment-18483082",
+          "author": "jdettweiler",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-09-17T14:04:28Z",
+          "updated_at": "2026-09-17T14:04:28Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Pete - Yes, I'm absolutely using AI to manage these conversations, at the encouragement of FedRAMP. Including .agent files in the new rule libraries was a great idea and I'm taking full advantage of it. \r\n\r\nI recognize that can make some of my comments a little dense, but the detail is intentional. These discussions increasingly become part of the technical context that our automation reasons over, so precision matters. As FedRAMP moves further toward machine-readable requirements and automated validation, the more explicit and unambiguous we can make the underlying requirements and implementation expectations, the better and more reliable the resulting automation will be.\r\n\r\nUltimately, we appear to be on the same page for now as we've made adjustments to how the CPO is served. My disappointment was that in our first interaction with FedRAMP on a new CR26 deliverable, there seemed to be a \"hidden\" requirement that prevented success and required re-engineering. I'll keep the conversations going as we encounter these issues and hope that you will remain open to hearing about the impacts sometimes seemingly minor decisions can have on automation designs. "
+        },
+        {
+          "id": "DC_kwDOOxfoic4BGglk",
+          "url": "https://github.com/FedRAMP/community/discussions/175#discussioncomment-18483556",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-09-17T14:38:25Z",
+          "updated_at": "2026-09-17T14:38:25Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> Pete - Yes, I'm absolutely using AI to manage these conversations, at the encouragement of FedRAMP. Including .agent files in the new rule libraries was a great idea and I'm taking full advantage of it.\r\n\r\nI would strongly encourage you to use AI to manage knowledge related to FedRAMP, yes, absolutely. And I would encourage using it to prep and think as a partner.\r\n\r\nIt is not helpful to use it to navigate a conversation on your behalf though - there is still a certain obsequious arrogance to most agent output that creates an uncanny valley effect which makes understanding and processing the actual human intent very difficult. \r\n\r\nOne thing I will promise you is that my team and I do not and will not use AI to manage these interactions directly. We dedicate considerable and real human time to this in place of other critical tasks because of how we prioritize it. Please do us the courtesy of engaging directly as a human with us so that we can continue to do this.\r\n\r\n> My disappointment was that in our first interaction with FedRAMP on a new CR26 deliverable, there seemed to be a \"hidden\" requirement that prevented success and required re-engineering.\r\n\r\nThis is 100% fair, and that's why I immediately identified a need to update the rules when it was brought to me. We thought the rules had been written clearly enough that this wouldn't be considered a hidden requirement but real world testing with you demonstrated this assumption was wrong. That's how we learn and improve.\r\n\r\nNone of us want FedRAMP to return to a world where we spend 5 years arguing about explicit and unambiguous requirements that can meet every possible situation before giving up and starting over because it's an impossible task in a fast-moving technology-based arena. That means sometimes some folks are going to go hard in one direction that FedRAMP might decide is not the right direction, and participants need to be prepared for that reality. \r\n"
+        }
+      ],
+      "replies_total": 5,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "jdettweiler",
+    "pete-gov",
+    "vennemp"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/175#discussioncomment-18480627",
+      "author": "pete-gov",
+      "created_at": "2026-09-17T11:13:16Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/175#discussioncomment-18481945",
+      "author": "pete-gov",
+      "created_at": "2026-09-17T12:42:37Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/175#discussioncomment-18482982",
+      "author": "pete-gov",
+      "created_at": "2026-09-17T13:56:49Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/175#discussioncomment-18481144",
+      "author": "pete-gov",
+      "created_at": "2026-09-17T11:52:34Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/175#discussioncomment-18482587",
+      "author": "pete-gov",
+      "created_at": "2026-09-17T13:27:47Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/175#discussioncomment-18482931",
+      "author": "pete-gov",
+      "created_at": "2026-09-17T13:51:34Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/175#discussioncomment-18483556",
+      "author": "pete-gov",
+      "created_at": "2026-09-17T14:38:25Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [
+      "FRC-CSO-JSN"
+    ],
+    "rfc_ids": [
+      "RFC-0011"
+    ],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://www.fedramp.gov/2026/reference/certification-data-sharing/#public-information",
+      "https://www.fedramp.gov/2026/reference/certification-data-sharing/#public-service-list"
+    ],
+    "topics": [
+      "3pao",
+      "machine_readable",
+      "marketplace",
+      "trust_center"
+    ]
+  },
+  "content_hash": "58fd9472f96cdc0a37b5ab6c610d4261951df31e1e602ae5cbcd2f24bdd9d482",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

@@ -1,0 +1,161 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-119",
+  "node_id": "D_kwDOOxfoic4Aj1FJ",
+  "number": 119,
+  "title": "POAM Template - R3.0 changes",
+  "url": "https://github.com/FedRAMP/community/discussions/119",
+  "category": "Rev5 Discussion",
+  "category_slug": "rev5-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "bdournaee-nucleus",
+  "author_is_official": false,
+  "created_at": "2026-01-26T23:05:05Z",
+  "updated_at": "2026-03-12T16:16:36Z",
+  "last_edited_at": "2026-01-26T23:12:51Z",
+  "closed": true,
+  "closed_at": "2026-02-11T22:09:16Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 2,
+  "body": "Hi - I had a question about the R3.0 POAM template (Excel). I don't know if this is the correct place for this question, if not, please let me know.\r\n\r\nWe've noticed that **Service Name** was removed from the R3.0 version of the template, but it appeared in the R2.1 version. \r\n\r\nWe support customers who still may be using R2.1 and basically had three questions:\r\n\r\n1. Is the official R2.1 version of the template documented anywhere for historical purposes?\r\n2. Why was Service Name removed? We're curious about the rationale for this.\r\n3. We just happened to notice this column had been removed. Is there a detailed change log between the R3.0 and R2.1 variations of the template other than the summary text that appears in the sheet for 11/25: _\r\n_Added Instructions Tab, consolidated reporting fields, and simplified input requirements.__\r\n\r\nThank you for any insight. We provide software to customers who may be relying on the older version of the template. \r\n\r\nBlake",
+  "comment_count": 4,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4A7mLz",
+      "url": "https://github.com/FedRAMP/community/discussions/119#discussioncomment-15622899",
+      "author": "mgcas-roxanne",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-01-28T00:27:17Z",
+      "updated_at": "2026-01-28T00:27:17Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "We have recently reviewed the POA&M Template from 2025-12-05 and also request clarification on why \"**Service Name**\" was removed when its purpose is to specify which exact service(s) are affected for each POA&M ID row? \r\n\r\nAdditionally, We have noted the following changes:\r\n\r\nAdded\r\n\r\n- Guidance column added in column A of the \"Open POA&M Items\" tab.\r\n- Li-SaaS is an option now in the impact level cell (D3) of the \"Open POA&M Items\" tab\r\n- New \"PL-2 Findings\" tab\r\n\r\n\r\nChanged\r\n\r\n- **DISCREPANCY**: \"Overall Remediation Plan\" updated to \"Remediation Plan\" in the \"Open POA&M Items\" tab; however, it remained \"Overall Remediation Plan\" in the \"Closed POA&M Items\" and \"Configuration Findings\" tabs.\r\n\t\r\n\r\nRemoved from \"Open POA&M Items\", \"Closed POA&M Items\" and \"Configuration Findings\" tab:\r\n\r\n- The CSP info in rows 1-3 \r\n- Planned Milestones\r\n- Milestone Changes\r\n- Auto-Approve\r\n- Service Name\r\n",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A7qt0",
+      "url": "https://github.com/FedRAMP/community/discussions/119#discussioncomment-15641460",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2026-01-29T15:25:54Z",
+      "updated_at": "2026-01-29T15:25:54Z",
+      "upvotes": 2,
+      "minimized": false,
+      "body": "I'm trying to track down more info on this; the changes resulted from multiple years of feedback gathering and some of the background appears to have been lost with some of our staff. Lots of folks apparently found that column very confusing and it created more issues than it helped.\r\n\r\nIn the interim I'll say that the template contains the minimum expected information; if a cloud service provider has a good reason to include additional information then they should do so. No one should feel like removing this from the template means they aren't allowed to track and report on it if they found it useful.",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A8LP9",
+      "url": "https://github.com/FedRAMP/community/discussions/119#discussioncomment-15774717",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2026-02-11T22:09:15Z",
+      "updated_at": "2026-02-11T22:09:15Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": " Coming back on this to close this question out - this column was inadvertently added originally, did not have lots of guidance and support, and was thus removed. FR does not have any issue with folks adding it back in if a particular CSP wants to or an agency customer wants it from them.\r\n\r\nWe'll revisit the POAM fields again as part of our upcoming audit and transition to machine-readability for Rev5 materials and look to provide more instructions about optional fields.",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A9T-q",
+          "url": "https://github.com/FedRAMP/community/discussions/119#discussioncomment-16072618",
+          "author": "bdournaee-nucleus",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-03-10T18:05:34Z",
+          "updated_at": "2026-03-10T21:07:31Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Hello Again - Upon reviewing the latest published template (R3.0, 11/17/2025) we've also noticed that the **Planned Milestones** (was column M) and **Milestone Changes** (was column N) no longer appear in the template. These appear to be significant changes as they remove the \"Milestone\" concept from the \"POA&M\" template - maybe I am missing something. \r\n\r\nI'm wondering if there is any color or rationale for these changes. Thank you very much for any insight.\r\n\r\nBlake\r\n\r\nthe link to the R3.0 template is here: `https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fwww.fedramp.gov%2Fresources%2Ftemplates%2FFedRAMP-POAM-Template.xlsx&wdOrigin=BROWSELINK`\r\n\r\n"
+        },
+        {
+          "id": "DC_kwDOOxfoic4A9Wbi",
+          "url": "https://github.com/FedRAMP/community/discussions/119#discussioncomment-16082658",
+          "author": "paulagosta",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-03-11T11:58:22Z",
+          "updated_at": "2026-03-11T11:58:22Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Blake,\r\n\r\nThe concept was not removed, just the explicit field.  It was removed as we found a lot of redundancy of information between that and the remediation plan fields across the POA&Ms we examined.  \r\n\r\nIf you look at the template itself, each column includes three rows: one with general guidance, one with examples, and one indicating whether the field is mandatory or situational. \r\n\r\nIn the general guidance it states \"Describe the plan to resolve the weakness, especially if it cannot be fully remediated within the required timeframe. Provide enough detail to help agency customers understand the actions required, why more time is needed, and when the weakness will be fully remediated.\"\r\n\r\nIn the example it explicitly states milestones. \r\n\r\n\"Will be resolved during <date> patching cycle.\r\n\r\nOR\r\n\r\nMigrate to new technical solution. Planned milestones are:\r\n1) Milestone 1\r\n2) Milestone 2\r\n3) …...\"\r\n\r\nHope this helps. \r\n\r\nPablo"
+        }
+      ],
+      "replies_total": 2,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A9av2",
+      "url": "https://github.com/FedRAMP/community/discussions/119#discussioncomment-16100342",
+      "author": "bdournaee-nucleus",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-03-12T16:16:36Z",
+      "updated_at": "2026-03-12T16:16:36Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Paul - Ah thank you for this additional context and clarity. \r\n\r\nAs a follow-up question, given that R3.0 is the latest version of the template does the FedRAMP PMO archive the format of the R2.1 template anywhere for reference? I have looked and cannot seem to find it. These details are important for a software vendor (like ourselves) looking to ensure we support multiple formats as it looks like both will be use for some time. Thank you very much.\r\n\r\nBlake",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "bdournaee-nucleus",
+    "mgcas-roxanne",
+    "paulagosta",
+    "pete-gov"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/119#discussioncomment-15641460",
+      "author": "pete-gov",
+      "created_at": "2026-01-29T15:25:54Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/119#discussioncomment-15774717",
+      "author": "pete-gov",
+      "created_at": "2026-02-11T22:09:15Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/119#discussioncomment-16082658",
+      "author": "paulagosta",
+      "created_at": "2026-03-11T11:58:22Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [
+      "PL-2"
+    ],
+    "discussion_refs": [],
+    "urls": [
+      "https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fwww.fedramp.gov%2Fresources%2Ftemplates%2FFedRAMP-POAM-Template.xlsx&wdOrigin=BROWSELINK`"
+    ],
+    "topics": [
+      "poam",
+      "rev5",
+      "significant_change"
+    ]
+  },
+  "content_hash": "83001236dec351812563800f438a356823f71c99c21967dac0917327e3fa341c",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-49",
+  "node_id": "D_kwDOOxfoic4AgbMM",
+  "number": 49,
+  "title": "FedRAMP 20xP1 Pilot Final Submission -Meridian Knowledge Solutions",
+  "url": "https://github.com/FedRAMP/community/discussions/49",
+  "category": "20x Discussion",
+  "category_slug": "20x-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "aburroughs",
+  "author_is_official": false,
+  "created_at": "2025-06-26T20:44:12Z",
+  "updated_at": "2025-11-18T16:25:00Z",
+  "last_edited_at": "2025-06-27T10:11:39Z",
+  "closed": true,
+  "closed_at": "2025-11-18T16:25:00Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "We are announcing the final submission of our FedRAMP 20x pilot package for the Meridian Knowledge Solutions Learning Management System. Our 3PAO (Fortreum) has completed their assessment, and we are ready for agency review.\r\n\r\n### Key Innovation Highlights\r\n\r\nReal-Time Compliance Transparency\r\n\r\n**Live Trust Center:** [Public Dashboard](https://meridian-knowledge-solutions.github.io/fedramp_20x_public_submission_live/)\r\n**Automated KSI Validation:** Daily CLI-based evidence collection with machine-readable results\r\n**Complete Audit Trail:** Git-tracked evidence with SHA-based integrity verification\r\n\r\nMachine-Readable Compliance Data\r\n\r\n**Unified JSON:** All 51 KSI validations with CLI commands, outputs, and assertion logic\r\n**GitHub Actions Pipeline:** Fully automated evidence collection and validation\r\n**Continuous Monitoring:** Real-time compliance tracking with immediate visibility into changes\r\n\r\nCommunity-Driven Transparency\r\n\r\n**Open Source Methodology:** Public repository with complete validation logic\r\n**GitHub Integration:** Direct issue reporting for failed KSIs\r\n**Auto-Generated Documentation:** Rule-by-rule explanation of validation criteriaKey Innovation Highlights\r\n\r\n3PAO Submission Artifacts\r\n\r\nhttps://github.com/Meridian-Knowledge-Solutions/fedramp_20x_public_submission_live/tree/main/3PAO-Fortreum\r\n\r\nPublic Repo\r\n\r\nhttps://github.com/Meridian-Knowledge-Solutions/fedramp_20x_public_submission_live\r\n\r\nKey Documents:\r\n\r\n```\r\nunified_ksi_validations.json - Complete validation results with evidence\r\nfailed_ksi_report_readable.md - Detailed remediation guidance\r\nevidence_commit_metadata.json - Audit trail with timestamps and git SHAs\r\n/docs/ksi_rules/ - Auto-generated KSI validation documentation\r\n```\r\n\r\n### Why This Matters for FedRAMP 20x\r\nThis submission demonstrates what we believe to be the practical implementation of GSA's vision for:\r\n\r\n- **Automated Assessment:** Machine-readable evidence that reduces manual review burden\r\n- **Continuous Compliance:** Real-time monitoring instead of point-in-time assessments\r\n- **Transparent Trust Models:** Public visibility into compliance status for agency confidence\r\n- **Community Innovation:** Open-source methodology that other CSPs can adopt and improve\r\n\r\n### Commitment to Excellence\r\n\r\nWe are committed to achieving compliance through:\r\n\r\n- **Rapid Remediation:** Automated identification and tracking of failed KSIs\r\n- **Continuous Improvement:** Daily validation runs with trend monitoring\r\n- **Iterative Enhancement:** Regular updates based on 3PAO feedback and community input\r\n- **Security-First:** Proactive monitoring and immediate incident response\r\n\r\n\r\nReady for agency adoption and community feedback.\r\n\r\nQuestions about our methodology or technical implementation? Feel free to open an issue in our repository or reach out directly. ",
+  "comment_count": 0,
+  "comments": [],
+  "answer_url": null,
+  "participants": [
+    "aburroughs"
+  ],
+  "official_responses": [],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://github.com/Meridian-Knowledge-Solutions/fedramp_20x_public_submission_live",
+      "https://github.com/Meridian-Knowledge-Solutions/fedramp_20x_public_submission_live/tree/main/3PAO-Fortreum",
+      "https://meridian-knowledge-solutions.github.io/fedramp_20x_public_submission_live/"
+    ],
+    "topics": [
+      "20x",
+      "3pao",
+      "conmon",
+      "ksi",
+      "machine_readable",
+      "trust_center"
+    ]
+  },
+  "content_hash": "d54bc815ff7620a713eb53daa9c185409d23d8a2326aa1cbc4e2352eb99ea21b",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

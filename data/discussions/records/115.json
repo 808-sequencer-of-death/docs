@@ -1,0 +1,1551 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-115",
+  "node_id": "D_kwDOOxfoic4AjoMC",
+  "number": 115,
+  "title": "General discussion and Q&A for RFC-0019 through RFC-0024!",
+  "url": "https://github.com/FedRAMP/community/discussions/115",
+  "category": "General RFC Discussion",
+  "category_slug": "general-rfc-discussion",
+  "labels": [
+    "FedRAMP Official"
+  ],
+  "is_official_thread": true,
+  "is_rfc": true,
+  "author": "pete-gov",
+  "author_is_official": true,
+  "created_at": "2026-01-13T17:50:33Z",
+  "updated_at": "2026-03-21T15:29:07Z",
+  "last_edited_at": null,
+  "closed": true,
+  "closed_at": "2026-03-21T15:29:07Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 3,
+  "body": "This thread is for any general questions or discussion that isn't related to formal public comment. Folks from FedRAMP may participate in this thread and answer questions/etc. in a way that isn't possible in the formal public comment threads.\r\n\r\n",
+  "comment_count": 27,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4A7FY7",
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15488571",
+      "author": "RandyMoon",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-01-13T18:30:58Z",
+      "updated_at": "2026-01-13T18:30:58Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "General question about the impact of 20x Moderate program on the Pen Test and Red Team Exercise required for Rev5 approval. Is there any change with 20x, or are the same Pen Test and Red Team Exercise required to secure FedRAMP Moderate through 20x? Thank you.",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A7Fpr",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15489643",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-01-13T21:10:54Z",
+          "updated_at": "2026-01-13T21:10:54Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "20x doesn't explicitly set requirements for penetration testing or red team exercises - in 20x, these are part of [Vulnerability Detection & Response](https://www.fedramp.gov/docs/20x/vulnerability-detection-and-response/) that cloud service providers are expected to incorporate and review the effectiveness of an inherent part of their ongoing security program. How cloud service providers do this, and the value they place on it, is relevant to their entire VDR program and is measured as part of their holistic approach."
+        },
+        {
+          "id": "DC_kwDOOxfoic4A7HVY",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15496536",
+          "author": "rjb4standards",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-01-14T14:19:41Z",
+          "updated_at": "2026-01-14T14:19:41Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Will FedRAMP require Product Vulnerability Disclosure Reports (VDR) in a machine readable format from cloud providers - see OpenSSF proposal for a detailed description why a machine readable product VDR standard format is needed today, "
+        },
+        {
+          "id": "DC_kwDOOxfoic4A7ID2",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15499510",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-01-14T19:42:45Z",
+          "updated_at": "2026-01-14T19:42:45Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> Will FedRAMP require Product Vulnerability Disclosure Reports (VDR) in a machine readable format from cloud providers - see OpenSSF proposal for a detailed description why a machine readable product VDR standard format is needed today,\r\n\r\nFedRAMP _recommends_ reporting in a machine-readable format unless there is a valid reason not to. It is not an explicit mandatory requirement because sometimes there are valid reasons not to.\r\n\r\nFedRAMP's requirements and recommendations for reporting are detailed in the [Vulnerability Detection & Response](https://www.fedramp.gov/docs/20x/vulnerability-detection-and-response/) process."
+        },
+        {
+          "id": "DC_kwDOOxfoic4A7IHB",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15499713",
+          "author": "rjb4standards",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-01-14T20:17:31Z",
+          "updated_at": "2026-01-14T20:17:50Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thanks for the quick response @pete-gov \r\n\r\nIs there a particular format for the vulnerability info, i.e. XML, JSON and which specific data should be produced in this machine readable report? \r\nWe have found many proprietary machine readable product Vulnerability Disclosure Report formats with varying degree of information using different formats, i.e. JSON, CSV, XML, YAML.\r\n\r\nAre all of these allowed fro FedRAMP?"
+        },
+        {
+          "id": "DC_kwDOOxfoic4A7IHs",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15499756",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-01-14T20:24:21Z",
+          "updated_at": "2026-01-14T20:24:21Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "FR doesn't mandate an explicit unified format at this time - it's still very early days for the adoption of machine-readable data like this, and we're generally expecting GRC automation tools to fill in the gap with automatic translation between formats. There is certainly a potential future where everyone rolls their own and this becomes an impossible task but so far we are generally seeing folks trend towards specific products that provide a consistent experience or at least planning for this in the future.\r\n\r\nIn our pilot we have mostly seen JSON, CSV, and YAML so far. :)"
+        },
+        {
+          "id": "DC_kwDOOxfoic4A7IIW",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15499798",
+          "author": "rjb4standards",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-01-14T20:28:53Z",
+          "updated_at": "2026-01-14T20:28:53Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Proprietary formats are the current reality for machine readable Product Vulnerability Disclosure Reports.\r\n\r\nA proposal was submitted to OpenSSF to create a machine readable VDR standard in JSON format. It failed to meet the required % of votes to be approved, unfortunately,  https://github.com/ossf/wg-vulnerability-disclosures/issues/172 "
+        }
+      ],
+      "replies_total": 6,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A7H6l",
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15498917",
+      "author": "kcarr91",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-01-14T18:33:09Z",
+      "updated_at": "2026-01-14T18:33:09Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "RFC-0019: Reporting Assessment Costs question \r\n> LAC-GEN-HAC Historical Assessment Costs\r\n> Providers MUST include historical assessment costs dating back to the initial authorization of the cloud service offering; data submitted for assessments prior to this process taking effect may be estimated and limited to total costs per year.\r\n\r\nQuick clarification question to make sure Im reading this correctly.  Does this part ` historical assessment costs....may be estimated and limited to total costs per year` mean that FedRAMP is only asking to report the just historical 3PAO assessment cost and not all the items in the \"Rev5 Security Assessment Report (SAR) Costs Appendix\"? \r\n",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A7IEU",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15499540",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-01-14T19:47:59Z",
+          "updated_at": "2026-01-14T19:47:59Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Yes, this is intended to be more of a ballpark vibe that someone can put together in 10min searching a few internal spreadsheets, not a big project or something. \r\n\r\nIt's also perhaps a bit unclear that the \"assessment costs\" discussed are intended to be the cost associated with assessment services themselves (i.e. what was paid on an invoice to the 3PAO) and not including support costs for the salary of CSP folks etc. \r\n\r\nIt says \"the cost of assessment **services**\" in the intro but we dropped that later on because it was getting redundant. I forgot that sometimes people don't apply the intros to everything and just look at the words below (100% my bad, it should be clear regardless). :)"
+        },
+        {
+          "id": "DC_kwDOOxfoic4A7IFa",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15499610",
+          "author": "kcarr91",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-01-14T19:59:31Z",
+          "updated_at": "2026-01-14T19:59:31Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Cool thanks for the quick response, ya i understood it as 3PAO costs but wanted to triple check as it wasn't immediately clear to me.  Agree the task of getting just the historical 3PAO assessment costs should be a quick thing.  \r\n\r\nMight be improved by saying  \"include historical `3PAO` assessment costs dating back\" but there might be a reason you left 3PAO out.  If not i would consider adding it. \r\n"
+        }
+      ],
+      "replies_total": 2,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A7IDa",
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15499482",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2026-01-14T19:38:31Z",
+      "updated_at": "2026-01-14T19:38:41Z",
+      "upvotes": 3,
+      "minimized": false,
+      "body": "**Please Note:** This comment is from @jsantore-cgc [originally posted in this thread](https://github.com/FedRAMP/community/discussions/116). I've moved this comment here to ensure it is captured in the general discussion thread on his behalf and closed the original thread. \r\n\r\nOriginal post follows.\r\n\r\n-----\r\n\r\nLet's try this again.  After a wonderfully eloquent, convincing, and dare I say poetic discussion about this, my attempts to post failed, and all of that work went to /dev/null never to be seen again.  So I will try this again.\r\n\r\nWith many of the new RFCs, we see a lot of public notice of corrections.  I'm not sure philosophically I agree with this, but put that aside for a moment.  Any time there is a public punitive mechanism, there needs to be checks and balances, appeals, and other clearly defined processes to ensure fairness.\r\n\r\nThe 3PAO corrective action details are in the Performance Management section (pg 4) of the Obligations and Performance Guide:\r\nhttps://www.fedramp.gov/resources/documents/3PAO_Obligations_and_Performance_Standards.pdf\r\n\r\nThe CSP corrective action details are in the Continuous Monitoring Playbook\r\nhttps://www.fedramp.gov/docs/rev5/playbook/csp/continuous-monitoring/performance-management/#performance-management-for-ongoing-authorization\r\n\r\nIn both cases, there is an implied buffer before things are publicly posted:\r\nFor the 3PAO, it says this under Consultation (which is still, technically part of 'corrective \r\n\r\n>:A Consultation notice is sent from FedRAMP, to the 3PAO and CSP (for RAR\r\nsubmissions) or to the 3PAO, CSP, and initial authorizing agency (for initial\r\nauthorization and annual assessment package submissions), notifying the\r\n3PAO of specific deficiencies in their performance\r\n○ FedRAMP informs the 3PAO that their “Consultation” status will\r\n**not be reflected on their FedRAMP Marketplace page**\r\n○ FedRAMP will require a meeting with 3PAO representatives to\r\ndiscuss the specific deficiencies in the 3PAO’s performance\r\n**_(emphasis mine)_**\r\n\r\nFor the CSP, it starts with a Detailed Finding Review (DFR) prior to escalation to a CAP.\r\n\r\nMy concern is that starting with public notification/punitive measures acts to undermine good faith.  Different stakeholders, operating transparently and in good faith, can have valid disagreements which do need to be discussed and resolved, but we shouldn't immediately jump to a CAP/public shaming.  At least not initially.  That forces people to be adversarial from the start, inhibits transparency, and forces everyone to play defense.  I think we all agree that this is not in the best interest of our shared mission: securing and protecting government systems and data.\r\n\r\nUnfortunately, it didn't always play out that way historically.  There was no presumption of good faith, and disciplinary measures were often meted out unlaterally with no mechanism to appeal.  Thankfully, most of these typically got resolved with no harm and no foul, and did not (and should not) necessarily require public notification.  There are potentially large sums of money and contractual obligations at stake here, and so corrective actions should be tempered with an initial presumption of good faith, and have a process for review and appeal.  \r\n\r\nEven things we think are cut and dried aren't always.  Consider the the RFC for 'Recommended Secure Configuration' (which is required, not recommended, but whatever...)  Of those 10 standards, only two are technically 'MUST' but even there, there's room for interpretation and the guidance isn't always explicit.  Let's say I, as a CSP, work in good faith to meet all 10 standards and upon review, FedRAMP does not agree with my interpretation.  Again, I'm operating in good faith, transparently, and collaboratively.  If FedRAMP does not agree, it seems reasonable to assume the next step is a discussion, and a cure period before there is any formal corrective action.\r\n\r\nI agree, bad faith in our world is bad and should be punished harshly and swiftly.  Even still, though, there needs to be an adjudication of whether something was actually bad faith, and not just honest mistake.  \r\n\r\nAlso, the more I read some of the RFCs, the more 'corrective action will include...' type language which does not completely align with the 3PAO Obligations and Performance Guide and CSP Continuous Monitoring Playbook (e.g. unable to resubmit for X months or whatever).\r\n\r\nSince it looks like we're moving in the way of stricter corrective action and public notification, I think fairness and reasonableness requires both more clear definitions of these (perhaps an RFC itself?), as well as predefined mechanisms for appeal and review.   \r\n\r\n",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A7IKg",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15499936",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-01-14T20:48:50Z",
+          "updated_at": "2026-01-14T20:48:50Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Hi @jsantore-cgc - I'd like to take a brief moment to discuss some of these points (even though it now looks like I'm talking to myself). As always, I am not seeking to influence public comment and would expect anyone making official comment to do so either way.\r\n\r\nIt is the responsibility of all participants to be aware of what is expected of them and to address requirements - including the responsibility to be aware and take action when a requirement will not be met. This is a **critical security signal**. No participant in this process should ever face corrective action unless there is a breach of trust. \r\n\r\nOnce a breach of trust occurs, it is of relevance to _everyone_ who is considering using, actually using, or otherwise involved with that participant. Any actions to potentially mitigate a pending breach of trust should be driven by the participant _before_ that breach of trust. These RFCs are the initial part of a transition to more clearly defined corrective actions that derive directly from the specific requirement or recommendation in a way that removes squishiness and encourages that behavior while establishing very explicit and easy to understand accountability.\r\n\r\nAlso, any of these RFCs are proposing certain things that will _only be possible_ if there are restrictions and penalties that prevent folks from wasting the government's time, which is why some of these come with \"go back to the end of the line\" type corrective actions. The expectation is that folks will be more committed the first time and everything will run more efficiently.\r\n\r\nThat all said - RFCs are intended to surface exactly the type of potential issues you've flagged and you have many thoughts that I strongly agree with for improving and clarifying issues related to corrective action. To be formally included in the RFC review such comments should (please) be made on one of the official RFCs. 🚀 "
+        },
+        {
+          "id": "DC_kwDOOxfoic4A7KG7",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15507899",
+          "author": "jsantore-cgc",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-01-15T14:53:59Z",
+          "updated_at": "2026-01-15T14:55:25Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Fair response.  I think your phrasing of 'breach of trust' aligns nicely with my 'acting in good faith.'  And in some cases, good faith people don't realize they didn't satisfy a requirement specifically due to requirement ambiguity.   I think we just want a clear process precisely to ensure we don't have a breach of trust on or for any of the stakeholders.  There is a huge difference between 'I thought I was complying with a requirement but I missed the point' and 'I didn't even bother.'  Maybe I'm still reliving some of the experiences I had back in the day.\r\n\r\nBecause so many of the RFCs have proposed corrective actions, not all of which are the same, I was trying to hit this in a general post, rather than specific to any given RFC.   But, I think like we ought to have a structured RFC specifically for corrective actions for any/all stakeholders, just for clarity, transparency and mutual trust and understanding.\r\n\r\nI don't actually have an issue with 'go to the back of the line' type stuff when warranted.\r\n\r\n"
+        },
+        {
+          "id": "DC_kwDOOxfoic4A7KeR",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15509393",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-01-15T17:01:12Z",
+          "updated_at": "2026-01-15T17:01:12Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "I had a similar conversation about this with my partner recently, and she echoed the point \"what if someone thinks they are doing something right but isn't?\" We certainly are trying to craft the requirements and recommendations with simple and clear instructions to avoid this but we won't always get it right and **so many** people have trauma with FR that makes them doubt everything... \r\n\r\n > There is a huge difference between 'I thought I was complying with a requirement but I missed the point' and 'I didn't even bother.' \r\n\r\nYes, 100%. \r\n\r\nAs a related issue here, figuring out how to structure corrective action as a way to **help individuals get support from executives at their company** to do something is part of this strategy. We don't want someone to be punished because their company didn't prioritize resources/etc. Part of the theory for putting corrective actions up front in black and white is that \"hey boss we have 6mo to do this\" can get more support with \"and X/Y/Z will happen if we don't.\" \r\n\r\n> I think like we ought to have a structured RFC specifically for corrective actions for any/all stakeholders, just for clarity, transparency and mutual trust and understanding.\r\n\r\nThis is a good idea.\r\n\r\n> ...I was trying to hit this in a general post, rather than specific to any given RFC...\r\n\r\nUnderstood, but for awareness there's pretty much always a possibility that FR will need to justify activities or changes based on formal public comments, which is a sorta separate legal process we run because the law requires it and we benefit from that collection of opinions. This here is an informal discussion which is great for background inspiration but formal public comments have a different weight and paper trail. Gov is weird. 🤷 "
+        },
+        {
+          "id": "DC_kwDOOxfoic4A75Rp",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15701097",
+          "author": "adamlang-1kosmos",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-02-05T02:24:37Z",
+          "updated_at": "2026-02-05T02:25:14Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "What are the scenarios where public notice of correction would be a 0 to 60 situation? I agreement with the sentiment that you don't want to publicly shame a product over a misunderstanding of why they have a \"deficiency of performance\" vs failure to remediate a \"deficiency of performance\". Aren't there already built in time frames for remediations? For the sake of discussion, can an example be supplied where the government would notify a CSP over a \"deficiency of performance\" that the CSP wouldn't have been aware of in advance before the government caught it?"
+        }
+      ],
+      "replies_total": 4,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A7VCl",
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15552677",
+      "author": "wahlay5497",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-01-20T19:37:40Z",
+      "updated_at": "2026-01-20T19:40:40Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "This question is targeted for RFC-0023. We lost our sponsor during the DOGE and our SAR package was never picked up and reviewed by the sponsoring agency. Our SAR just recently expired (1/17/2026). Could we still submit our package for FedRAMP to review once this RFC closes and get an ATO?",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A7VFA",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15552832",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-01-20T19:52:23Z",
+          "updated_at": "2026-01-20T19:52:23Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "The RFC does propose additional actions that would be necessary and you would need an up to date assessment. Depending on what changed you might be able to get away with a partial assessment on the deltas, but this would vary depending on the specific circumstances.\r\n\r\nIn general that is the type of circumstance FedRAMP is looking to support though."
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A7c4g",
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15584800",
+      "author": "Cbat001",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-01-23T20:19:05Z",
+      "updated_at": "2026-01-23T20:19:05Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Reference RFC 0023 and the \"Mandatory\" \"Optional\" Rev5 Balance Improvement Releases. \r\nSpecifically Minimum Assessment Scope (MAS). This current Optional for Rev 5 (https://www.fedramp.gov/docs/rev5/balance/minimum-assessment-scope/) states that:\r\n \"Rev5 Authorized providers or those seeking FedRAMP authorization MAY adopt this process in place of the traditional FedRAMP boundary after January 12, 2026.\" \r\n\r\nOur organization has completed the Full FedRAMP Moderate / NIST 800 53 MBL that the DoD mandated via the \"Memorandum on FedRAMP Moderate Equivalency\" from January 2024. In our execution of the Rev5 process we leveraged all FedRAMP Rev5 templates for the SSP and all appendices. We were assessed by a FedRAMP certified 3PAO and were given a passing assessment and letter of attestation. We produced a complete Body of Evidence as well. \r\nAs core to this BoE, we defined and documented the \"Assessment Boundary\" as specified in the SSP Front Matter / FedRAMP SSP template. This document contains all the infrastructure diagrams and all associated tables, etc. Fully populated each template section. \r\n\r\nMy ask for clarification is why is the MAS now Mandatory for us to go forward with a FedRAMP Certification (L4) if the MAS clearly states that if we have already a Rev5 based capture via the current Rev5 SSP template we do not have to go with the 20x MAS? \r\n\r\nAlso - regarding the Significant Change Notifications, assuming we can continue with our existing Rev 5 SSP Front Matter documentation of the Authorization Boundary - we would also not be required to implement (at the time of application package submission) the SCN?\r\nMany thanks in advance.",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A7iFv",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15606127",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-01-26T13:21:11Z",
+          "updated_at": "2026-01-26T13:21:11Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Please note: FedRAMP does not provide guidance about FedRAMP Moderate Equivalency or CMMC, those are both DOD things. \r\n\r\nFedRAMP will not authorize services that are outside the scope of FedRAMP (see MKG-GEN-SOF Scope of FedRAMP in [RFC-0021](https://www.fedramp.gov/rfcs/0021/) and the [scope of FedRAMP defined in M-24-15](https://www.fedramp.gov/docs/authority/m-24-15/scope/)).\r\n\r\nAlso, a general reminder, RFC's are requests for comment on proposals and not final guidance of any kind or even a guarantee that the proposal will be implemented. \r\n\r\n> My ask for clarification is why is the MAS now Mandatory for us to go forward with a FedRAMP Certification (L4) if the MAS clearly states that if we have already a Rev5 based capture via the current Rev5 SSP template we do not have to go with the 20x MAS?\r\n\r\nRFC-0023 explains the reasoning behind this requirement for program certification in the background: \r\n\r\n_\"FedRAMP 20x has also focused on making significant improvements to the underlying authorization requirements to drastically reduce the cost and resources required for government review so that FedRAMP can perform a final assessment and authorization for a tiny fraction of this cost. Many of these improvements are being made available along the Rev5 path in the form of Balance Improvement Releases - typically optional changes to the process that results in a quicker, cheaper, more efficient initial and ongoing authorization process.\"_\r\n\r\nProper adoption of the Minimum Assessment Scope makes a more efficient authorization process. The MAS is **not** a requirement for agency authorization, it would only be required if FedRAMP itself is going to invest the resources for the full program certification.\r\n\r\n> we would also not be required to implement (at the time of application package submission) the SCN?\r\n\r\nRFC-0023 proposes that program certification will only be available to services that have implemented all Balance Improvement Releases at the time of submission. These would need to be independently verified and validated by an assessor in advance of submission."
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A7i_K",
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15609802",
+      "author": "Cbat001",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-01-26T19:04:42Z",
+      "updated_at": "2026-01-26T19:04:42Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Pete,\r\n First, thank you for the clarification. We (Egnyte) do not expect for you\r\nto leverage our NIST / DoD FedRAMP Moderate Equivalency - I am just stating\r\nthat we have gone through this and have a complete BoE based on all FedRAMP\r\nrev5 SSP templates.\r\nIt is also now clear that \"if\" we want to pursue the FedRAMP Rev 5\r\nCertification / Sponsorless program. as proposed in RFC 0021 / 0023, being\r\naware that these are still RFCs and requirements may change, that we\r\n(Egnyte) will have to accommodate all mandatory requirements for the\r\nprogram.\r\nGot it and thank you.\r\n\r\nBy the way, it is ok, we have been working to get a sponsor for years and\r\ngot caught up in all the wash - now that we have taken the Rev 5 path, been\r\nassessed and validated by FedRAMP 3PAO, and are in a validated monthly\r\nConMon, we are good to keep going the Rev 5 Balance Improvement path.\r\n\r\n   - All the current USG Agencies we are working with now on sponsorship\r\n   are familiar with Rev 5 and know nada about 20x - we have to be the\r\n   educators in this respect.\r\n\r\nOk - as a company then, there are the the following Rev 5 Balance\r\nImprovement Releases that will most likely be mandatory for the Sponsorless\r\nFedRAMP Certification Program,\r\n\r\n   - FedRAMP Security Inbox\r\n   - Recommended Security Configuration\r\n   - Minimum Assessment Scope\r\n   - Significant Change Notification\r\n   - Authorization Data Sharing\r\n   - Vulnerability Detection and Response\r\n   - Collaborative Continuous Monitoring\r\n\r\nAs a company, we will be working the year to make sure we meet these and\r\nall the recommendations (Musts and Shoulds) as defined.\r\nThank you again Sir,\r\n Good stuff!!!\r\n\r\nOn Mon, Jan 26, 2026 at 5:21 AM Pete Waterman ***@***.***>\r\nwrote:\r\n\r\n> Please note: FedRAMP does not provide guidance about FedRAMP Moderate\r\n> Equivalency or CMMC, those are both DOD things.\r\n>\r\n> FedRAMP will not authorize services that are outside the scope of FedRAMP\r\n> (see MKG-GEN-SOF Scope of FedRAMP in RFC-0021\r\n> <https://www.fedramp.gov/rfcs/0021/> and the scope of FedRAMP defined in\r\n> M-24-15 <https://www.fedramp.gov/docs/authority/m-24-15/scope/>).\r\n>\r\n> Also, a general reminder, RFC's are requests for comment on proposals and\r\n> not final guidance of any kind or even a guarantee that the proposal will\r\n> be implemented.\r\n>\r\n> My ask for clarification is why is the MAS now Mandatory for us to go\r\n> forward with a FedRAMP Certification (L4) if the MAS clearly states that if\r\n> we have already a Rev5 based capture via the current Rev5 SSP template we\r\n> do not have to go with the 20x MAS?\r\n>\r\n> RFC-0023 explains the reasoning behind this requirement for program\r\n> certification in the background:\r\n>\r\n> *\"FedRAMP 20x has also focused on making significant improvements to the\r\n> underlying authorization requirements to drastically reduce the cost and\r\n> resources required for government review so that FedRAMP can perform a\r\n> final assessment and authorization for a tiny fraction of this cost. Many\r\n> of these improvements are being made available along the Rev5 path in the\r\n> form of Balance Improvement Releases - typically optional changes to the\r\n> process that results in a quicker, cheaper, more efficient initial and\r\n> ongoing authorization process.\"*\r\n>\r\n> Proper adoption of the Minimum Assessment Scope makes a more efficient\r\n> authorization process. The MAS is *not* a requirement for agency\r\n> authorization, it would only be required if FedRAMP itself is going to\r\n> invest the resources for the full program certification.\r\n>\r\n> we would also not be required to implement (at the time of application\r\n> package submission) the SCN?\r\n>\r\n> RFC-0023 proposes that program certification will only be available to\r\n> services that have implemented all Balance Improvement Releases at the time\r\n> of submission. These would need to be independently verified and validated\r\n> by an assessor in advance of submission.\r\n>\r\n> —\r\n> Reply to this email directly, view it on GitHub\r\n> <https://github.com/FedRAMP/community/discussions/115#discussioncomment-15606127>,\r\n> or unsubscribe\r\n> <https://github.com/notifications/unsubscribe-auth/BSSZSEOIIPM2Q7L6Z2FWQR34IYIF7AVCNFSM6AAAAACRSJ24HOVHI2DSMVQWIX3LMV43URDJONRXK43TNFXW4Q3PNVWWK3TUHMYTKNRQGYYTENY>\r\n> .\r\n> You are receiving this because you commented.Message ID:\r\n> ***@***.***>\r\n>\r\n",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A7rm7",
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15645115",
+      "author": "wisecryptic",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-01-29T23:15:34Z",
+      "updated_at": "2026-01-29T23:15:34Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Question on RFC-0024, what is the general readiness of FedRAMP and of agencies to consume machine readable packages?",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A7tE9",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15651133",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-01-30T13:20:13Z",
+          "updated_at": "2026-01-30T13:20:28Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "One thing I'll point out in this discussion is that a lot of people seem to miss the primary value and expectation for machine-readable packages: providers should be using modern tooling to generate and maintain security packages, especially with per-service separation and integrating changes persistently. This is effectively impossible to do with the current default of manual human editing of documents and spreadsheets, and the result is that security packages are often **entirely** divorced from the reality of what the cloud service is doing. On any given day you can go to any provider's website and see announcements about services and capabilities that are within their FedRAMP boundary that do not appear in their system security plan and this is a huge problem.\r\n\r\nTransmitting security information such that agencies or FedRAMP can consume machine-readable sources and do something with it is NOT the driver for RFC-0024. That is a bonus outcome down the road. The point of the RFC is to ensure adopt of modern processes for maintaining security materials.\r\n\r\n> Question on RFC-0024, what is the general readiness of FedRAMP and of agencies to consume machine readable packages?\r\n\r\nThere is no general readiness to consume something that doesn't exist - it would be a waste of government resources to invest in a capability that would be unused. A couple of agencies have done so during attempts to transition their own capabilities but in general industry needs to be the horse here. We tried for the last 5+ years to put the cart first and it hasn't done so well. ;(\r\n\r\nThe expectation is that until there is a critical mass of packages available in a machine-readable format that providers will still need to supply human-readable outputs. Once there's critical mass and COTS tools available to agencies to import and manage information from providers this way there will be a general switchover.\r\n\r\nIn theory, it plays out like this:\r\n\r\n**Problem:** M-24-15 required all agencies to procure GRC automation tools to consume machine-readable packages by July, 2026, except there are only a very small number of such tools available and such packages are non-existent. Government is unable to do this at scale.\r\n\r\n**Solution:**\r\n\r\n1. 2025/2026: Prioritize authorization of GRC automation tools in the 20x pilots and Rev5 Program Certification paths. This is in process to make this capability more widely available.\r\n\r\n2. 2026/2027: Drive a wide-scale transition of cloud service providers from traditional manual material management and towards modern GRC automation tools that can generate machine-readable materials. This vastly improves the quality and accuracy of information in the authorization package and allows Rev5 to continue to hold some ground against 20x. \r\n\r\n3. 2026/2027: Agencies adopt GRC automation tools and experiment with using them to pull in packages from 20x and find this saves them consider time/resources/etc. while improving insight and oversight. They start looking to do the same for Rev5, materials that they mostly continue to receive in traditional format that are out of date, only maintained yearly, etc. When this happens, those materials need to be available or Rev5 will die.\r\n\r\n\r\n\r\n"
+        },
+        {
+          "id": "DC_kwDOOxfoic4A7tII",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15651336",
+          "author": "rjb4standards",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-01-30T13:38:20Z",
+          "updated_at": "2026-01-30T13:43:04Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "FedRAMP could help a lot of people by requiring a standard format machine readable product Vulnerability Disclosure Report (VDR) with up to date information on product vulnerabilities that consumers can download at anytime to check the status of a product, as of right now; think of a CARFAX report for digital products, including SaaS cloud offerings. https://github.com/ossf/wg-vulnerability-disclosures/issues/172\r\n"
+        },
+        {
+          "id": "DC_kwDOOxfoic4A7tJv",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15651439",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-01-30T13:48:55Z",
+          "updated_at": "2026-01-30T13:48:55Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> FedRAMP could help a lot of people by requiring a standard format machine readable product Vulnerability Disclosure Report (VDR) with up to date information on product vulnerabilities that consumers can download at anytime to check the status of a product, as of right now; think of a CARFAX report for digital products, including SaaS cloud offerings. [ossf/wg-vulnerability-disclosures#172](https://github.com/ossf/wg-vulnerability-disclosures/issues/172)\r\n\r\nI think we've talked about this on other threads - this requirement exists in FedRAMP's updated Vulnerability Detection and Response, Continuous Collaborative Monitoring, and Authorization Data Sharing processes (minus the \"standard format\" - we're letting folks be a bit more flexible still). These are all still in pilot/beta but in a year or two from now I expect this information will be widely included.\r\n\r\nWe can't just flip a switch to require stuff like this but incentivized adoption should work."
+        },
+        {
+          "id": "DC_kwDOOxfoic4A7tK1",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15651509",
+          "author": "rjb4standards",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-01-30T13:54:47Z",
+          "updated_at": "2026-01-30T13:55:22Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thanks for the quick response, Pete. I personally like Cisco's online VDR generator tool (Software Checker), but the \"machine readable output\" the tool generates leaves room for improvement. Palo Alto has a similar online VDR Generator tool. \r\nEach manufacturer creates proprietary machine readable output that requires \"custom processing\". Very painful."
+        }
+      ],
+      "replies_total": 4,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A74XB",
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15697345",
+      "author": "david-waltermire",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-02-04T18:41:03Z",
+      "updated_at": "2026-02-04T18:41:03Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Do you plan to publish the RFCs on GitHub in Markdown? This would be useful to quickly follow changes to the RFCs as they are revised over time.\r\n\r\n@pete-gov mentioned on the 2-4-2026 community call that the RFCs are already in Markdown format in a private repo. Can these be published publicly?",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A74gA",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15697920",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-02-04T19:51:07Z",
+          "updated_at": "2026-02-04T19:51:07Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "hihi Dave 💖 !!\r\n\r\nNote that we don't make changes to the RFCs once we publish them, barring a massive typo or something (which I will admit there have been a few). We used to also have a separate repo with these contained in markdown but we archived that and stopped using it because it was just another place to dump markdown files and nobody was using it. ;o\r\n\r\nI dropped copies of all the markdown from the web version to attach them here; there's some front matter but that's relevant.\r\n\r\n\r\n[rfc-0019.md](https://github.com/user-attachments/files/25080513/rfc-0019.md)\r\n[rfc-0020.md](https://github.com/user-attachments/files/25080514/rfc-0020.md)\r\n[rfc-0021.md](https://github.com/user-attachments/files/25080515/rfc-0021.md)\r\n[rfc-0022.md](https://github.com/user-attachments/files/25080516/rfc-0022.md)\r\n[rfc-0023.md](https://github.com/user-attachments/files/25080517/rfc-0023.md)\r\n[rfc-0024.md](https://github.com/user-attachments/files/25080518/rfc-0024.md)\r\n\r\n\r\n"
+        },
+        {
+          "id": "DC_kwDOOxfoic4A75dN",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15701837",
+          "author": "david-waltermire",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-02-05T05:01:07Z",
+          "updated_at": "2026-02-05T05:01:07Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thanks Pete!"
+        }
+      ],
+      "replies_total": 2,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A76Tf",
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15705311",
+      "author": "bjagasia",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-02-05T11:12:36Z",
+      "updated_at": "2026-02-05T11:12:36Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "# Public Comment on RFC-0021: Expanding the FedRAMP Marketplace\r\n\r\n---\r\n\r\n**First and foremost, we want to apologize upfront for the length of this comment.** We are strong advocates of FedRAMP and genuinely enthusiastic about the modernization efforts underway, including the 20x initiative and the broader push toward transparency and efficiency. We believe the PMO is moving the program in the right direction, and we want to be constructive partners in that effort.\r\n\r\nThat said, certain aspects of RFC-0021 raise significant concerns for our organization and, we believe, for the broader FedRAMP ecosystem. We felt it was important to articulate those concerns thoroughly rather than superficially. We hope this comment is received in the spirit it is intended: as a good-faith effort to improve the proposal, not to obstruct progress.\r\n\r\n---\r\n\r\n## Background: Advisory-Focused 3PAOs\r\n\r\nOur organization is a 3PAO on the FedRAMP Marketplace that focuses primarily on advisory services. We want to be transparent about our position: we have a financial stake in this discussion, and we recognize that some may view our comments through that lens. We ask that our arguments be evaluated on their merits regardless.\r\n\r\nWhen we pursued A2LA accreditation years ago, we did so with FedRAMP's full knowledge that we intended to focus on advisory work. FedRAMP listed us on the marketplace under this model, and we have operated transparently in this capacity ever since. Our clients engage us specifically because we offer the technical rigor of an accredited organization without the conflict of interest that arises when the same firm advises on and then assesses a security program.\r\n\r\nWe raise this history because some may ask why an organization that focuses on advisory services sought accreditation as an assessor. The answer is that for many of our customers, the accreditation demonstrates technical competence, and technical competence matters for advisory work. **We maintain full assessment capabilities and could perform assessments for the right client engagement.** Our business focus on advisory services is a strategic choice, not a limitation of capability. FedRAMP's decision to list 3PAOs on the marketplace reflected an understanding that CSPs benefit from having access to conflict-free advisors with verified qualifications. That understanding appears to have changed, and we believe the change warrants careful examination.\r\n\r\n---\r\n\r\n## The Recategorization Problem\r\n\r\nWe anticipate that FedRAMP may respond to concerns like ours by noting that advisory-focused 3PAOs are not being eliminated, merely recategorized. Under this view, we would simply move from the 3PAO listing to the Advisory Services listing, and business would continue as usual. Some may further argue that our A2LA accreditation remains intact regardless of marketplace listing, and that we can continue to display our credentials on our own website and marketing materials. If our value proposition is real, the argument goes, the market will recognize it without needing a government URL.\r\n\r\nThis framing understates how the FedRAMP ecosystem actually works. For federal contractors, agencies, and CSPs navigating the authorization process, the FedRAMP Marketplace is not merely a directory. **It is the definitive source of truth.** When procurement officers evaluate potential service providers, marketplace presence and categorization carry significant weight. Being listed as a 3PAO signals that an organization has met rigorous, third-party-verified standards for technical competence. Being listed as an advisor under the proposed MKT-ADV-* requirements signals only that an organization has a website, three client attestations, and contact information.\r\n\r\nIf 3PAOs who do not perform assessments (or have not yet) are removed from the 3PAO listing, it does not simply change their category. It signals to the market that they have been decertified or are no longer in good standing. It forces affected organizations to explain a negative (\"We are still accredited, we just aren't on the list anymore\") rather than proving a positive. The government creates the market conditions in the FedRAMP ecosystem; changing the labeling schema has consequences for organizations that built their reputations within the existing framework.\r\n\r\nFor CSPs evaluating potential advisors, believe it or not, the 3PAO designation is often one of the deciding factors, as evident by many of our clientele. It answers the question: *\"How do I know this firm actually knows what they're doing?\"* If advisory-focused 3PAOs are moved into a category with no competency requirements, that signal disappears. CSPs would have no way to distinguish between a firm that invested years and substantial resources in earning accreditation and a firm that set up a website last month.\r\n\r\nSome may argue that the market can sort this out, that sophisticated CSPs can evaluate advisors based on track record and reputation without relying on accreditation. We respectfully disagree. The FedRAMP market includes many first-time participants who lack the institutional knowledge to evaluate advisor qualifications independently. These CSPs rely on marketplace signals precisely because they cannot yet distinguish between qualified and unqualified guidance. Removing the only objective quality signal does not empower the market; it leaves inexperienced buyers vulnerable to poor advice.\r\n\r\n---\r\n\r\n## Due Process and Equal Treatment Concerns\r\n\r\nThe note under **MKT-RIA-ATT** states that *\"FedRAMP recognized independent assessors that do not actually perform independent assessments will be removed from the Marketplace to avoid confusion.\"* We have significant concerns about how this determination would be made and applied.\r\n\r\n### Lack of Defined Criteria\r\n\r\nThe RFC provides no criteria, process, or evidentiary standard for determining which 3PAOs \"do not actually perform independent assessments.\" Who makes this determination? What factors are considered? Is it based on historical assessment volume? A stated business model? Marketing language? The RFC is silent on these questions, leaving the decision entirely to the discretion of the PMO without any defined parameters or accountability.\r\n\r\n### Equal Treatment Concerns\r\n\r\nWe note that there are currently **fifteen 3PAOs listed on the FedRAMP Marketplace with zero completed assessments.** Some of these organizations are traditional audit firms that maintain their accreditation and qualified staff but have not yet completed a FedRAMP assessment for various business reasons. Others may be newer entrants still building their practice. Still others, like our organization, focus their business development efforts on advisory services while maintaining full assessment capabilities.\r\n\r\nUnder the language of this RFC, all fifteen of these organizations could potentially be subject to removal. Yet we suspect the PMO's intent is more targeted. If so, the RFC should clearly articulate the criteria that distinguish a 3PAO that \"does not actually perform assessments\" from one that simply has not yet performed assessments, or one that performs assessments selectively, or one that focuses on advisory work while retaining assessment capabilities. Without such criteria, the PMO would be making subjective, case-by-case determinations about which accredited organizations deserve marketplace recognition and which do not.\r\n\r\nIf two 3PAOs both show zero assessments on the marketplace, both maintain A2LA accreditation, both employ qualified assessors, and both pay their annual certification fees, on what basis would one be removed while the other remains listed? The RFC provides no answer. The result is a policy that could be applied arbitrarily, favoring some organizations over others based on factors that are neither disclosed nor subject to review.\r\n\r\n### Accreditation vs. Activity\r\n\r\nMost fundamentally, we question the authority and appropriateness of removing 3PAO marketplace status from an organization that maintains all accreditation requirements. Our organization holds current A2LA accreditation. We employ qualified personnel. We meet every technical and administrative requirement that FedRAMP and A2LA impose on 3PAOs. We recertify annually like every other accredited assessor. We have the demonstrated capability to perform assessments and would do so for clients whose engagements meet our terms.\r\n\r\nThe fact that we focus our business development on advisory services does not mean we lack assessment capability. It means we have made a business decision about where to concentrate our efforts. That decision could change. A client with the right circumstances could engage us for assessment work, and we would be fully qualified to perform it. **Focusing on advisory work is not the same as being incapable of assessment work, and the RFC conflates these two very different situations.**\r\n\r\nBy removing marketplace recognition from a 3PAO that maintains all requirements, FedRAMP would effectively be making a business judgment about how accredited organizations should allocate their resources. It would be telling qualified firms that their accreditation is insufficient unless they also generate assessment revenue. This goes beyond marketplace organization into active market interference, handicapping a private company's ability to compete for work despite that company meeting every objective qualification standard.\r\n\r\n### Questions for FedRAMP\r\n\r\nWe would ask FedRAMP to consider:\r\n\r\n1. If an organization maintains A2LA accreditation, employs qualified assessors, and meets all ongoing 3PAO requirements, on what basis should FedRAMP override the accreditation body's determination that the organization is qualified to perform assessments?\r\n\r\n2. If the concern is marketplace clarity, why is removal the appropriate remedy rather than a notation, filter, or category distinction that preserves recognition of the organization's accredited status?\r\n\r\n3. If the PMO intends to remove certain 3PAOs but not others despite similar assessment histories, what objective criteria will govern that decision, and what process exists for affected organizations to understand and contest the determination?\r\n\r\n4. What recourse does an organization have if it believes the PMO's removal decision was made in error or applied inconsistently?\r\n\r\nWe are not seeking special treatment. We are seeking clarity, consistency, and due process. If FedRAMP believes that 3PAO marketplace listing should be contingent on assessment activity rather than accreditation status alone, that represents a significant policy change that should be clearly articulated, applied uniformly, and subject to defined procedures. The current RFC language, which simply states that certain organizations \"will be removed\" without specifying how or why, does not meet that standard.\r\n\r\n---\r\n\r\n## Why Advisor Competence Serves FedRAMP's Interests\r\n\r\nWe recognize that some within FedRAMP may view advisor qualifications as outside the program's scope. The argument is straightforward: FedRAMP's statutory mandate is to authorize secure cloud services for the federal government. The program accredits assessors because the government relies on their testing to make risk decisions. Advisors, by contrast, work for CSPs, not the government. Under this view, it is not the government's role to certify, accredit, or tier private-sector consultants.\r\n\r\nWe would offer a different perspective, one grounded in the practical realities of the authorization pipeline.\r\n\r\n### The \"Garbage In\" Problem\r\n\r\nThe PMO has long identified package quality as a significant challenge. Initial submissions frequently contain gaps, inconsistencies, and errors that require multiple rounds of revision before authorization can proceed. This \"garbage in\" problem contributes directly to the backlog that frustrates agencies, CSPs, and FedRAMP alike. Every deficient package consumes reviewer time that could be spent on well-prepared submissions.\r\n\r\n**Poor advisory work is often the root cause.** When a CSP engages an unqualified advisor, the resulting SSP, SAR, and POA&M reflect that lack of expertise. Controls are implemented incorrectly. Documentation fails to meet requirements. Boundary definitions create confusion. The assessor may identify these issues, but by then the problems are baked into the submission. The PMO inherits packages that require extensive remediation.\r\n\r\nQualified advisors produce better packages. Organizations with demonstrated expertise in NIST 800-53, FedRAMP requirements, and cloud security architecture guide their clients toward compliant implementations from the outset. The resulting submissions are cleaner, more complete, and easier to review. This is not speculation; it is the predictable consequence of engaging qualified guidance early in the process.\r\n\r\nBy removing the distinction between A2LA-accredited advisors and firms with no verified qualifications, FedRAMP is not simply reorganizing a directory. It is eliminating the only quality filter that currently helps CSPs identify advisors likely to produce authorization-ready packages. The result will be more CSPs engaging unvetted advisors, more deficient initial submissions, and more strain on an already overburdened review process.\r\n\r\n**Preserving a quality signal for advisory services is not about helping accredited firms sell services. It is about helping FedRAMP receive better deliverables.**\r\n\r\n### FedRAMP 20x Makes This Even More Critical\r\nEverything we have described above applies to the traditional authorization process. With FedRAMP 20x, the stakes are higher.\r\nThe 20x initiative represents a fundamental shift in how FedRAMP evaluates cloud security. Rather than relying primarily on document-heavy assessment packages reviewed by human assessors, 20x moves toward automated validation through Key Security Indicators (KSIs), machine-readable evidence, and continuous compliance monitoring. This is the right direction for the program, and we support it fully.\r\n\r\nHowever, it also raises the technical bar significantly. Under the traditional model, an advisor's primary deliverables were documentation: SSPs, policies, procedures, and assessment-ready artifacts. Under 20x, advisors must guide CSPs through implementing automated evidence collection, configuring systems to produce machine-readable compliance data, and architecting environments that can demonstrate security posture continuously rather than at a point in time. This requires genuine engineering depth, not just familiarity with NIST 800-53 control language.\r\n\r\nThe margin for error also shrinks. In the traditional process, a human assessor could identify implementation gaps, ask clarifying questions, and work with the CSP to remediate issues before the package reached the PMO. The 20x model reduces that human review layer. Automated validation is binary: the KSI evidence either meets the requirement or it does not. If an unqualified advisor guides a CSP toward an implementation that cannot produce valid KSI evidence, there is no assessor in the loop to catch the mistake before it becomes a rejection.\r\n\r\nPut simply, 20x shifts more of the quality burden upstream, directly onto the advisory phase. The advisory engagement becomes the primary human touchpoint where implementation quality is determined. If that guidance is sound, the CSP enters the automated validation process well-positioned to succeed. If it is not, the CSP fails validation with less opportunity for human intervention to course-correct.\r\n\r\nWe believe this makes the current moment particularly important for preserving quality signals in advisory services. As FedRAMP raises the technical bar through 20x, the need for qualified, technically rigorous advisors grows in proportion. We are concerned that lowering the barrier to advisory listing while simultaneously demanding higher technical sophistication from CSP implementations could work at cross-purposes, potentially slowing the very modernization effort that FedRAMP is working to accelerate. We raise this not as a criticism of 20x, which we genuinely support, but as a reason to be more deliberate, not less, about how the marketplace signals advisor quality during this transition.\r\n\r\n---\r\n\r\n## Why Advisor Competence Matters for CSPs\r\n\r\nThe MKT-ADV-* requirements establish no accreditation, certification, or technical competency standards for advisory services. We understand the appeal of a low barrier to entry: it encourages competition, avoids regulatory overreach, and lets the market determine which advisors succeed. Some may characterize a proposal for quality differentiation as gatekeeping, arguing that the only \"good\" advisors would be those wealthy enough to afford A2LA accreditation fees, while brilliant boutique consultants who know NIST 800-53 inside out would be locked out.\r\n\r\nWe respectfully disagree with this framing. In cybersecurity, \"trust but verify\" is not gatekeeping; it is the baseline expectation. ISO 17020 accreditation is not merely paperwork. It ensures impartiality, technical consistency, and adherence to quality management standards. If a boutique firm is truly expert in FedRAMP requirements, meeting those standards should not be an insurmountable barrier. The accreditation process exists precisely to distinguish verified competence from self-reported expertise.\r\n\r\nThe government relies on standards for virtually everything in the security and compliance space. Federal agencies require ISO 27001 certification for certain contractors. FedRAMP itself is built on NIST frameworks. The entire 3PAO program exists because self-attestation is insufficient for consequential security decisions. If standards matter for assessment, they should matter for advisory work as well, particularly given that advisors shape the security programs that assessors later evaluate.\r\n\r\nLowering the bar to \"anyone with a website and three attestations\" does not democratize the advisory market. It degrades it. CSPs seeking qualified guidance would have no reliable way to distinguish verified expertise from confident marketing.\r\n\r\n### Advisors Shape Outcomes\r\n\r\nAdvisors guide organizations through the entire FedRAMP journey. They help CSPs make foundational decisions about architecture, control implementation, boundary definition, and documentation. These early decisions shape everything that follows. An assessor evaluates a security program after it has been built; an advisor influences how it gets built in the first place.\r\n\r\nWhen an unqualified advisor provides poor guidance, the consequences compound. A CSP may spend months implementing controls incorrectly, developing documentation that does not meet requirements, or designing an architecture that cannot support the security objectives. By the time an assessor identifies these problems, the CSP has invested significant time and money in a flawed approach. In some cases, the CSP must start over.\r\n\r\n**If FedRAMP requires rigorous accreditation for the entity that checks the work, it seems incongruous to require nothing for the entities that typically guide CSPs on how the work gets done.**\r\n\r\n---\r\n\r\n## Conflict of Interest Implications\r\n\r\nFedRAMP has long recognized the importance of separating advisory and assessment functions. Existing rules prohibit a 3PAO from assessing a system on which they provided advisory services. We acknowledge these safeguards and do not suggest they are being removed.\r\n\r\nOur concern is more subtle. If advisory-focused 3PAOs are recategorized into a listing with no quality differentiation, and if CSPs seeking qualified guidance cannot distinguish accredited advisors from unaccredited ones, the path of least resistance becomes engaging a 3PAO that offers both services. Those firms retain their accreditation signal. They can demonstrate verified competence. For a CSP trying to make a sound procurement decision, the 3PAO with both capabilities looks like the safer choice.\r\n\r\nThe existing COI rules would still apply: the same firm could not advise and assess the same system. But the market pressure this RFC creates would push more CSPs toward firms that offer both services, increasing the likelihood of creative interpretations, staff rotations, or other arrangements that technically comply with COI rules while undermining their intent. We have seen these dynamics play out in other compliance markets, and we are concerned about replicating them here.\r\n\r\n**Advisory-focused 3PAOs exist to give CSPs a third option: verified competence without the COI risk.** Eliminating the quality signal that distinguishes this option does not eliminate demand for qualified, conflict-free advisory services. It simply makes that demand harder to satisfy.\r\n\r\n---\r\n\r\n## Concerns Regarding Advisory Service Requirements\r\n\r\nRFC-0021 proposes that advisory firms listed on the marketplace *\"MUST have an appropriate web site that publicly shows...Types of consulting services offered, including a clear pricing structure.\"* We wish to raise several concerns about this requirement.\r\n\r\n### Statutory Authority\r\n\r\nWe note that the FedRAMP Authorization Act (44 USC 3607-3616) does not mention advisory services. The statute's scope is limited to cloud computing products and services, independent assessment services (defined as third-party organizations performing conformity assessments), and the authorization process itself. While FedRAMP may argue that marketplace listing is voluntary and therefore these requirements do not constitute regulation, we would ask for clarification on the authority under which FedRAMP proposes to mandate pricing disclosure for private-sector consultants who are not performing conformity assessments.\r\n\r\n### Pricing Transparency and Complex Engagements\r\n\r\nMore substantively, we question whether a \"clear pricing structure\" requirement serves CSPs well when applied to advisory services. We recognize and support the goal of price transparency. CSPs benefit from understanding the cost landscape before engaging service providers. However, the implementation assumes that advisory work can be meaningfully reduced to a published price list, and this assumption does not reflect how complex advisory engagements actually work.\r\n\r\n**Not all advisory engagements are equal.** A gap assessment for a mature organization with existing compliance infrastructure looks very different from a gap assessment for a startup building from scratch. A readiness engagement for a straightforward SaaS application differs fundamentally from one involving complex hybrid architectures, multiple interconnected systems, or significant engineering work to achieve compliance. Advisory firms that provide deep technical and engineering services cannot accurately represent their pricing in the same format as firms offering commoditized, checklist-driven consulting.\r\n\r\nThe requirement for a \"clear pricing structure\" implicitly favors standardized, lower-touch advisory models. Firms that offer templated approaches can publish fixed prices because their scope is predictable. Firms that tailor their work to each client's architecture, maturity level, and specific challenges cannot meaningfully do the same without either understating their value or posting ranges so broad as to be uninformative.\r\n\r\n### Practical Market Effects\r\n\r\nWe are also concerned about the practical effects of published pricing on how CSPs evaluate potential advisors. In our experience, publishing price ranges can cause prospective clients to self-select out before understanding the value proposition. We have had multiple engagements where a CSP initially contacted us solely to satisfy their organization's \"three vendor\" procurement requirement, with no intention of pursuing our services because our published range appeared to exceed their budget. Yet once they had an opportunity to speak with us and understand our approach, they recognized the value and signed with us regardless of the initial range concern.\r\n\r\nThis dynamic would be disrupted by a marketplace that emphasizes pricing as a primary comparison metric. CSPs browsing the advisory listings may filter or sort by price, dismissing higher-value providers before ever engaging in a conversation. The result is not better-informed procurement decisions but rather a race toward the lowest published price point, which often correlates with less thorough, less technical, and ultimately less effective advisory work.\r\n\r\n### A Suggested Alternative\r\n\r\nWe are not opposed to price transparency in principle. We simply observe that a requirement designed for commoditized services may not translate well to complex, engineering-intensive advisory work. A CSP comparing advisory firms based on a published price grid is likely comparing fundamentally different scopes, approaches, and levels of expertise, none of which the pricing field can convey.\r\n\r\nIf FedRAMP's goal is to help CSPs make informed decisions about advisory services, we would suggest that qualitative information, such as areas of specialization, technical certifications, client references, and demonstrated expertise, may be more valuable than a pricing structure that cannot capture the variability inherent in serious advisory work. At minimum, we would ask that FedRAMP consider allowing advisory firms to indicate that pricing is engagement-dependent and available upon consultation, rather than requiring a public price list that may mislead more than it informs.\r\n\r\n---\r\n\r\n## Statutory Considerations\r\n\r\nThe FedRAMP Authorization Act defines FedRAMP's scope around cloud computing products, services, and \"independent assessment services.\" Advisory services are not mentioned in the statutory framework.\r\n\r\nWe recognize that marketplace listing is voluntary. FedRAMP is not requiring advisory firms to do anything; it is simply setting criteria for who appears in a directory. Under this view, concerns about regulatory authority are misplaced.\r\n\r\nWe would offer a practical counterpoint. The FedRAMP Marketplace has become the de facto mechanism through which agencies discover and evaluate cloud services and the firms that support them. For service providers, marketplace presence is not optional in any meaningful sense. Being unlisted, or being listed in a category that conveys no quality signal, has real market consequences that function similarly to regulatory exclusion even if they are not legally equivalent.\r\n\r\nWe do not claim that FedRAMP lacks authority to organize its marketplace as it sees fit. We simply observe that the practical impact of these organizational decisions extends beyond mere categorization, and we ask that FedRAMP consider those impacts carefully.\r\n\r\n---\r\n\r\n## A Constructive Path Forward\r\n\r\nWe recognize that our recommendation may appear self-serving. We are proposing a framework that would preserve a category in which we currently hold a competitive advantage. We ask that the proposal be evaluated on whether it serves CSPs, agencies, and FedRAMP's operational efficiency, not on whether it benefits us.\r\n\r\nWe also understand the PMO's desire to ensure the \"Assessor\" list contains only organizations that actively perform assessments. When an agency or CSP clicks on the 3PAO listing, they reasonably expect to find firms that conduct assessments. Having some entries represent organizations that focus primarily on advisory work could create confusion and degrade the user experience. We take this concern seriously.\r\n\r\nHowever, we believe this is a categorization challenge that can be solved through user interface improvements rather than by removing qualified firms from the marketplace entirely. **De-listing is a disproportionate response to what is fundamentally a labeling and filtering problem.**\r\n\r\n### Proposed Tiered Framework\r\n\r\nOur suggestion is a tiered approach to advisory listings, implemented through marketplace filters or distinct tabs:\r\n\r\n**Tier 1 (Accredited Advisory)** would include 3PAOs that maintain A2LA accreditation and focus primarily on advisory services while retaining assessment capabilities. These firms have demonstrated competence through the same process required of assessment-active firms and remain subject to ongoing oversight. Any organization willing to invest in accreditation could qualify for this tier; it is not limited to current participants. This tier could appear under an \"Accredited Advisory\" filter or tab, clearly distinguished from the \"Assessment Services\" listing while retaining recognition of verified A2LA status.\r\n\r\n**Tier 2 (Non-Accredited Advisory)** would include firms meeting the proposed MKT-ADV-* requirements without accreditation. This tier would remain open to any organization that meets the website, attestation, and contact information requirements.\r\n\r\n### Benefits of This Approach\r\n\r\nThis approach:\r\n\r\n- Addresses the user experience concern without eliminating qualified advisors\r\n- Preserves a quality signal for CSPs seeking verified competence\r\n- Maintains an accessible entry point for new advisory firms\r\n- Avoids creating a government certification program for consultants while leveraging the accreditation infrastructure that already exists\r\n- Directly supports FedRAMP's efficiency goals: accredited advisors are more likely to produce high-quality initial packages, reducing the burden on reviewers and helping move the authorization pipeline forward\r\n\r\nSome may argue that a tiered system adds complexity to a marketplace that should be simple. We would respond that meaningful distinctions are worth preserving, particularly when they help buyers make better decisions and improve the quality of submissions entering the review process. A marketplace that lists all advisors identically regardless of qualifications is simple, but it is not informative. The goal should be clarity, not just brevity.\r\n\r\n---\r\n\r\n## Conclusion\r\n\r\nWe support FedRAMP's efforts to improve marketplace transparency. We share the goal of helping CSPs find qualified assistance and navigate the authorization process more efficiently.\r\n\r\nOur concern is that the current proposal achieves the opposite of its intent. By recategorizing accredited 3PAOs that focus on advisory services into a listing with no quality threshold, and by creating no meaningful standards for advisory competence, this RFC would eliminate the primary signal CSPs use to identify qualified, conflict-free advisors. The likely result is not a more transparent marketplace but a less informative one, where CSPs either cannot distinguish qualified advisors from unqualified ones or default to engaging 3PAOs that offer both advisory and assessment services.\r\n\r\nThe downstream consequences extend beyond market confusion. Unqualified advisors produce deficient packages. Deficient packages burden the authorization process. The authorization backlog grows. Everyone suffers.\r\n\r\nWe also have serious concerns about the lack of defined criteria and due process for removal decisions. Fifteen 3PAOs currently show zero assessments on the marketplace. If FedRAMP intends to remove some but not others, the basis for that distinction should be transparent, consistently applied, and subject to review. Organizations that maintain all accreditation requirements should not have their marketplace status revoked based on undisclosed criteria or subjective PMO determinations.\r\n\r\n**We believe FedRAMP can achieve its transparency and usability goals while preserving quality signals that serve CSPs, agencies, and the efficiency of the program itself.** A simple UI solution, distinguishing \"Accredited Advisory\" from \"Assessment Services\" through filters or tabs, would address the user experience concern without the collateral damage of removing qualified firms from meaningful marketplace recognition.\r\n\r\nWe would welcome the opportunity to discuss these concerns and explore alternative approaches.\r\n\r\n---\r\n\r\n*Thank you for considering this comment. We remain committed to supporting FedRAMP's mission and look forward to continued dialogue on these important issues.*",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A77XS",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15709650",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-02-05T18:13:50Z",
+          "updated_at": "2026-02-05T18:13:50Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Hi @bjagasia - I'm not trying to create extra effort for you but we have some strict limits around interaction with public comments. You've already posted this as an official comment and appear to have simply copy/pasted the entire thing here. Therefore if FR interacts with this post as a general discussion item then we are de facto responding to the public comment which is not appropriate.\r\n\r\nThis thread is for discussion about things **that are not directly part of a public comment**. \r\n\r\n(I'd also add, gently, that while we absolutely read and consider everything in comments, even very long ones, it would be really unreasonable to expect us to engage in discussion about so many different things in a single post by a single person, that's like, a lot)"
+        },
+        {
+          "id": "DC_kwDOOxfoic4A77d2",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15710070",
+          "author": "bjagasia",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-02-05T19:01:29Z",
+          "updated_at": "2026-02-05T19:04:51Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Hi @pete-gov, apologies for the duplication! I received a reply suggesting I repost in the general discussion thread, so I followed that guidance. If the original public comment is sufficient and this creates any complications with how FR interacts with comments, please feel free to remove this post entirely. no hard feelings at all. :) \r\n\r\nAnd totally understood on the length, definitely not trying to pile on or create unreasonable work for the team. We just feel strongly about a few of these topics and wanted to be thorough rather than vague. We appreciate you and the team taking the time to read and consider everything, even the novel-length submissions 😄. Happy to consolidate or prioritize specific points if that's more helpful for the process.\r\n\r\nSmall clarification, while it's posted under my name, my leadership team collaborated on that comment together. So it's less \"one person with a lot of opinions\" and more \"a team that cares a lot about getting this right\". But point taken all the same!"
+        },
+        {
+          "id": "DC_kwDOOxfoic4A799u",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15720302",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-02-06T16:05:11Z",
+          "updated_at": "2026-02-06T16:05:11Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "If you want to separate out and reframe some of these questions in a way that isn't directly tied to your comment so FR can engage, feel free!"
+        }
+      ],
+      "replies_total": 3,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A76kf",
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15706399",
+      "author": "drewmd85",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-02-05T13:19:50Z",
+      "updated_at": "2026-02-05T13:19:50Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Question(s):\r\n\r\nHow would EU and International Framework be considered under RFC-0022?\r\n\r\nAre EU-based security frameworks like ISAE 3000/3402, ISO 27017, ENS (Spain), or ANSSI SecNumCloud (France) considered as potential \"External Frameworks\" under this RFC?\r\n\r\nThe RFC states \"Additional external security frameworks may be added to this list based on demand.\" What criteria will FedRAMP use to evaluate international frameworks? Considerations:\r\n\r\nISO 27001 is already included, which is international. Does this signal openness to other international standards?\r\nMany EU cloud providers serve US agencies through international offerings. Would their EU-based certifications qualify?\r\nAre there legal or policy barriers to accepting non-US framework assessments (e.g., foreign auditor accreditation)?\r\nWould reciprocal recognition agreements be necessary, similar to EU-US adequacy decisions for data privacy?\r\n\r\nGermany's C5 (Cloud Computing Compliance Controls Catalogue) and similar cloud-specific frameworks are widely used by hyperscalers. Are cloud-focused frameworks like C5 more or less likely to be added than general information security frameworks?",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A79-a",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15720346",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-02-06T16:08:51Z",
+          "updated_at": "2026-02-06T16:08:51Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> Are EU-based security frameworks like ISAE 3000/3402, ISO 27017, ENS (Spain), or ANSSI SecNumCloud (France) considered as potential \"External Frameworks\" under this RFC?\r\n\r\nWe started with the frameworks we have been most commonly asked about and that were discussed early last year in our Leveraging External Frameworks Community Working Group.\r\n \r\n> The RFC states \"Additional external security frameworks may be added to this list based on demand.\" What criteria will FedRAMP use to evaluate international frameworks?\r\n\r\nThere's a reason we use the word \"may\" here - the proposal doesn't actively consider trying to add more frameworks yet. The proposed set of frameworks is sufficient to begin with. Over time, if we find ourselves repeatedly in situations where the US Government is missing out on the opportunity to pilot other services because they are only using other frameworks, we might evaluate and add them to the list."
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A76-h",
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15708065",
+      "author": "adamlang-1kosmos",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-02-05T16:09:49Z",
+      "updated_at": "2026-02-05T16:09:49Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "When is the cutoff date for comment on these RFCs? I was looking for it in the RFCs. I apologize if I am missing it.",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A77Nr",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15709035",
+          "author": "nicole-gov",
+          "author_association": "NONE",
+          "is_official": true,
+          "created_at": "2026-02-05T17:25:21Z",
+          "updated_at": "2026-02-05T17:36:15Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "The cutoff dates are staggered. The cutoff dates can be found on each RFC published on [fedramp.gov/rfcs](https://www.fedramp.gov/rfcs/). \r\n\r\nI also just added the closing dates to all of the RFCs in the GitHub discussions. Thanks for calling that out! "
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A795c",
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15720028",
+      "author": "adamlang-1kosmos",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-02-06T15:37:48Z",
+      "updated_at": "2026-02-06T15:37:48Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "I've seen multiple comments in RFCs about aligning FedRAMP and DoD Impact Levels. I understand how that would simplify things for the community, but I would be concerned about it causing problems as well as DoD probably never agreeing to such a policy unless FedRAMP was forced to follow their recommendations.  For example, if DoD wanted to implement a tighter control on one of their levels, I can't see them being restricted because FedRAMP isn't agreeing to it or the FedRAMP community, who isn't being a customer for DoD not wanting the additional controls.\r\n\r\nDoes anyone else feel that is a sustainable approach? It would either piss off non-DoD businesses by having to follow possibly more stringent DoD standards or hamstring DoD.\r\n\r\nUltimately I feel it would mean \"just get rid of FedRAMP and make all the federal government follow IL\".",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A7-AE",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15720452",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-02-06T16:17:38Z",
+          "updated_at": "2026-02-06T16:17:38Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "We don't intend to align directly with DOD Impact Levels to avoid the confusion here - as indicated, they are very different things. A FedRAMP Certified Level 6 offering might not even meet DOD Impact Level 4 requirements. DOD determines everything about DOD Impact Levels, not FR. \r\n\r\nI don't want to influence public comment but at this point I think it's pretty clear that calling these \"levels\" on the FedRAMP side in the proposal was the wrong way to go because too many folks misread that as an intentional alignment against DOD rather than just using a plain language word that made sense. This is especially bad because the whole reason was to avoid confusion with other commonly used technology terms! "
+        },
+        {
+          "id": "DC_kwDOOxfoic4A7-BQ",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15720528",
+          "author": "adamlang-1kosmos",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-02-06T16:25:02Z",
+          "updated_at": "2026-02-06T16:26:02Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "I agree. I understand WHY people would want alignment, but I think it misses why FR and IL are different and separate. \r\n\r\nThe solution to \"alignment\" I think is a separate aspect where either GSA or some independent 3rd party supplies and keeps current \"mappings\" between the controls of the two paths so people would know the diffs.\r\n\r\nHell, that actually sounds like something an AI tool would be very good at since it is basically just text analysis."
+        },
+        {
+          "id": "DC_kwDOOxfoic4A7-Ny",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15721330",
+          "author": "john-allison",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-02-06T17:53:53Z",
+          "updated_at": "2026-02-06T17:53:53Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "What would be like if both FedRAMP and the DoD/DoW used the same terms, same definitions, and the same processes. Is that so impossible? Like I said, I think it will take an EO to do that. It is FedRAMP and the DoD that is introducing the confusion. I've done both FedRAMP and IL 5, and bringing those two very different processes in alignment would be great. I'll leave IL 6 and JWICS out of this discussion, since that is a whole different beast that FedRAMP shouldn't be involved in. I'd love for the IC to get their act together on cloud services, but I think if we fix unclassified, we can give them an example of how to do it."
+        },
+        {
+          "id": "DC_kwDOOxfoic4A7-QZ",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15721497",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-02-06T18:15:25Z",
+          "updated_at": "2026-02-06T18:15:25Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> What would be like if both FedRAMP and the DoD/DoW used the same terms, same definitions, and the same processes. Is that so impossible?\r\n\r\nI think this would basically close off most of the civilian market to most cloud service providers, since DOD is deliberately running their own processes to add additional agency-specific requirements that apply to them based on their mission needs.\r\n\r\nI'm not sure many folks would support forcing DOD to follow the processes designed for typical civilian agency mission needs.\r\n"
+        },
+        {
+          "id": "DC_kwDOOxfoic4A7-Rq",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15721578",
+          "author": "john-allison",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-02-06T18:25:01Z",
+          "updated_at": "2026-02-06T18:25:01Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Pete, my ask is hard, but it is also necessary. Having two very different paths within the same executive branch is difficult and costly for industry. The maximum tam for a CSP is probably FedRAMP High + IL 4, with a Public Cloud ATO so non-government regulated industries can use it. This requires significant separation and I think would be basically impossible under IL 5. If there is no path to unify the two processes, then that is on the executive branch and not on industry. I've had the same discussion with senate staffers, former DISA leadership, and multiple CEOs. I'm sorry, I've been arguing for this for nearly ten years now and I still don't believe that a nation that can send people to the moon thinks this is too hard."
+        },
+        {
+          "id": "DC_kwDOOxfoic4A7-gm",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15722534",
+          "author": "adamlang-1kosmos",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-02-06T20:40:56Z",
+          "updated_at": "2026-02-06T20:40:56Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "I don't think the solutions are hard. There are easy solutions (an extreme \"easy\" solution is get rid of FedRAMP and make everyone follow DoD. Instant alignment.) The issue is that there are legitimate different goals and requirements between civilian and DoD. "
+        },
+        {
+          "id": "DC_kwDOOxfoic4A7-hV",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15722581",
+          "author": "john-allison",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-02-06T20:46:45Z",
+          "updated_at": "2026-02-06T20:46:45Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "What are the legitimate different goals and requirements between Fed Civ and DoD? If both are to ensure the security of the system and the data, is this more of a cultural challenge versus goals? I was responsible for threat analysis within the DoD, including cyberthreat analysis. It has been a while since I was in that SCIF, but I never saw any intelligence that would justify different goals. Our adversaries will exploit the weakest link to achieve their strategic goals."
+        },
+        {
+          "id": "DC_kwDOOxfoic4A7-lZ",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15722841",
+          "author": "JustAnother3PAO",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-02-06T21:41:16Z",
+          "updated_at": "2026-02-06T21:41:16Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> What would be like if both FedRAMP and the DoD/DoW used the same terms, same definitions, and the same processes. Is that so impossible? \r\n\r\nYes. That is impossible. Have you met the DoD? \r\n\r\n"
+        }
+      ],
+      "replies_total": 8,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A7-M8",
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15721276",
+      "author": "adamlang-1kosmos",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-02-06T17:47:38Z",
+      "updated_at": "2026-02-06T17:47:38Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "JustAnother3PAO,\r\nWhere would the security score come from? \r\n\r\nhttps://github.com/FedRAMP/community/discussions/110#discussioncomment-15721087",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A7-OA",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15721344",
+          "author": "JustAnother3PAO",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-02-06T17:56:14Z",
+          "updated_at": "2026-02-06T17:56:14Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "I can think or a few options:\r\n1. StateRAMP has a weighted score by control. Could be a weighted score of how many KSIs are being followed. So something like encryption is going to have a higher weight than the security inbox. \r\n2. Just plain \"This is the percent of KSIs that you follow.\" Don't like this one much, though.  \r\n3. Some sort of CVSS-style number that is validated during assessment activities. \r\n4. Throw the SSP into ChatGPT and ask for a rating. This would be the worst idea. \r\n\r\nIIRC, @pete-gov has mentioned a security score that would be part of the marketplace before on calls. Not sure if that idea was dropped or if it's the subject of a pending RFC. "
+        },
+        {
+          "id": "DC_kwDOOxfoic4A7-QP",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15721487",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-02-06T18:13:38Z",
+          "updated_at": "2026-02-06T18:13:38Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Yes, we're early in the days of developing what might be called an Enhancement Score or similar which awards points to cloud service offerings that implement balance improvement releases and recommendations, as well as those that regularly exceed timeframe requirements. Kinda like a multi-faceted category ranking system.\r\n\r\nFor example, a Rev5 provider that implements the Vulnerability Detection & Response BIR might receive +50 points in a \"Robust Modern Security Program\" metric, with additional points for implementing some of the recommendations and extra points for consistently resolving all detected vulnerabilities in a 1 day timeframe even at Moderate (or future equiv). Not an endorsement or anything, just purely scoring based on the facts.\r\n\r\nNot sure if this will end up being part of our 2026 ruleset because it's a LOT of work to verify those scores but I'm hopeful we can start with something smaller this year to get folks used to it, if it ends up being a good idea."
+        },
+        {
+          "id": "DC_kwDOOxfoic4A7-RH",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15721543",
+          "author": "JustAnother3PAO",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-02-06T18:19:33Z",
+          "updated_at": "2026-02-06T18:19:33Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "That thing. Enhancement Score, still pending. Going to update the formal comment so that it gets logged forever in the halls of the GSA. "
+        },
+        {
+          "id": "DC_kwDOOxfoic4A7-bs",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15722220",
+          "author": "adamlang-1kosmos",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-02-06T19:46:46Z",
+          "updated_at": "2026-02-06T19:46:46Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "My initial thoughts on the idea.\r\n\r\n1. Does scoring the the security posture take resources away from the goal of getting products certified?\r\n2. Does it introduce conflict issues for FedRAMP since the scoring can impact business decisions? For example, if someone gets a score they don't like or agree with, can it lead to legal escalations? Especially if the claim is it lead to loss of a bid? If I recall from a prior FedGovToday podcast, those type of issues GSA already is dealing with when bids are lost, competitors just auto dialing their lawyers to fight over it. \r\n3. Scoring systems can be gamed and may not mean better security. If someone checks off 5 low value items worth ten points each, does that mean they are more secure than someone that checked off a single high value 40 point item? \r\n4. My initial feeling is that the goal is for the levels to be mandatory baselines and if we had fuzziness within those categories it can add more confusion and not less. Which then gets to the other classification idea FedRAMP proposed.  Going from 3 levels to 6 is a better way to handle that.  If you want someone to be able to be FedRAMP High, but with even more controls, then have another classification that has a minimal baseline of controls or update what is required to maintain that level of certification.  We probably want to get away from the idea of voluntariness. Either the government* thinks the control is important or it doesn't.\r\n\r\nI am not saying I or you are right or wrong, just this was my initial thought process after rolling it around in my head for a little bit.\r\n\r\n* And this doesn't even count additional request the agency may even have on top of."
+        },
+        {
+          "id": "DC_kwDOOxfoic4A7-e6",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15722426",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-02-06T20:24:48Z",
+          "updated_at": "2026-02-06T20:25:53Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": ">  1. Does scoring the the security posture take resources away from the goal of getting products certified?\r\n\r\nOur target time for turning around certifications will remain at 30 days through at least FY27 (it's in GSA's Strategic Plan). Part of my job is always to balance against this, but I will aggressively de-prioritize anything that impacts it. There's a reason it's our primary goal. :)\r\n\r\n> 2. Does it introduce conflict issues for FedRAMP since the scoring can impact business decisions? \r\n\r\nAny scoring system FR introduces would be entirely objective and crafted in careful collaboration with the GSA Office of General Counsel (everything we do already is carefully collaborated with our counsel lol).\r\n\r\n> 3. Scoring systems can be gamed and may not mean better security. If someone checks off 5 low value items worth ten points each, does that mean they are more secure than someone that checked off a single high value 40 point item?\r\n\r\nThis would be an enhancement system to show the process/capabilities they have implemented, not to judge the quality of it. The purpose of this would be to summarize the actual authorization package information at a high level across different metrics to save time digging into the package, but everything would require the same level of assurance as the package.\r\n\r\n>  We probably want to get away from the idea of voluntariness. Either the government* thinks the control is important or it doesn't.\r\n\r\nFR is required to ensure agencies have information necessary to make a decision, not to make that decision for them. Certification at a certain level/type/etc. means that the **certification** is at that level, not that the cloud service is at that level. It means the amount of information we have to provide to an agency.\r\n\r\nThere are plenty of cloud services authorized at FedRAMP Low and even Li-SaaS that I am absolutely certain have better security than many High rated services, but the information we have available in the FedRAMP package is limited. It's incorrect to conflate the certification level with the security of the service instead of the depth of the assessment materials."
+        }
+      ],
+      "replies_total": 5,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A8H-n",
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15761319",
+      "author": "v-mhahnfirstinfotech",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-02-10T20:57:13Z",
+      "updated_at": "2026-02-10T20:57:13Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "I posted this in the RFC-0021 formal public comments as well, but thought I'd add it here in case there were any thoughts on the general intention behind it:\r\n\r\n\"MKT-GEN-DOD requires information to be included in the Ongoing Authorization Reports from Collaborative Continuous Monitoring in CCM-OAR-AVL. However, Collaborative Continuous Monitoring is currently optional as a Balance Improvement Release for Rev5 authorizations. Thus the requirement for MKT-GEN-DOD appears to make the optional CCM now required for Rev5 authorizations to be listed on the Marketplace (that is, if RFC-0021 were to be published and effective prior to CCM being required broadly). This should be adjusted or clarified to avoid any ambiguity, i.e., is CCM in fact a requirement (and not optional) in order to demonstrate ongoing demand to be listed on the Marketplace per MKT-GEN-DOD?\"\r\n\r\nAnd a second related question (this may belong in a different Discussion, but I wasn't seeing one) - in the Effective Dates and Applicability notes listed here: https://www.fedramp.gov/docs/rev5/balance/collaborative-continuous-monitoring/ there is a bullet saying:\r\n- \"Providers MUST plan to address all requirements and recommendations in this process by the end of the Open Beta on May 22, 2026.\"\r\n\r\nDoes the word \"Providers\" here mean \"All providers with Rev5 authorizations\" (ie, this is a deadline for all Rev5 auths and not just Beta participants), or \"Providers participating in the Beta\" (ie, this is a deadline for full/complete adoption by the Beta participants)?",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A8IHn",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15761895",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-02-10T22:18:05Z",
+          "updated_at": "2026-02-10T22:18:53Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "I can't address things that are also posted 1:1 in public comments because then I'm influencing public comment so I can't address the first bit (other than to acknowledge that yup noted).\r\n\r\n> Does the word \"Providers\" here mean \"All providers with Rev5 authorizations\" (ie, this is a deadline for all Rev5 auths and not just Beta participants), or \"Providers participating in the Beta\" (ie, this is a deadline for full/complete adoption by the Beta participants)?\r\n\r\nIt means \"Providers participating in the Beta\" - the CCM BIR is **optional** for Rev5, anything in it only applies to cloud service providers that are opting in. You can compare to the framing in mandatory BIRs like the [FedRAMP Security Inbox](https://www.fedramp.gov/docs/rev5/balance/fedramp-security-inbox/) to see how it looks when all Rev5 providers are **required** to adopt a process."
+        },
+        {
+          "id": "DC_kwDOOxfoic4A8IYW",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15762966",
+          "author": "v-mhahnfirstinfotech",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-02-11T01:00:17Z",
+          "updated_at": "2026-02-11T01:00:17Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Right - apologies. Thanks for the response and for answering the second part."
+        }
+      ],
+      "replies_total": 2,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A8LQv",
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15774767",
+      "author": "jeffhoge",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-02-11T22:18:40Z",
+      "updated_at": "2026-02-11T22:18:40Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "I’m writing on behalf of a CSP that recently completed a full FedRAMP Rev5 Moderate assessment with a 3PAO (including 100% control coverage, no open risks, and a DoD Moderate Equivalency recommendation). We also previously completed a RAR and were listed as FedRAMP Ready for the one‑year period (expiring before July 2026).\r\n\r\nOur main issue is that we’re still trying to secure an agency sponsor, but RFC‑0023’s Program Certification path looks like a great alternative if sponsorship doesn’t happen in time. We want to avoid unnecessary rework, especially since we already invested in a full SAR and equivalency assessment.\r\n\r\nA few questions we hope can be clarified:\r\n\r\n1. **Can an existing, recent full SAR be reused for Program Certification?**  \r\n   If a CSP already has a full Rev5 Moderate SAR (done by a FedRAMP-recognized 3PAO) with a positive recommendation, can that assessment count for LPC‑GEN‑ATA as long as updated scans/delta testing are done and the assessor issues an updated attestation? Or will CSPs be required to redo a brand‑new assessment specifically labeled for Program Certification?\r\n\r\n2. **Is a new RAR required?**  \r\n   For CSPs that already passed a RAR and held FedRAMP Ready status, will they need another RAR just to maintain Marketplace presence until Program Certification opens? Or is there a way to go straight into Program Certification without repeating the RAR?\r\n\r\n3. **DoD Moderate Equivalency alignment**  \r\n   For CSPs that already achieved Moderate Equivalency, will Program Certification be considered equal or stronger than the DoD memo requirements? This clarity would help us explain the transition to DoD customers.\r\n\r\nWe appreciate the direction RFC‑0023 is going and just want to avoid redundant work here.",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A8LR1",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15774837",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-02-11T22:30:38Z",
+          "updated_at": "2026-02-11T22:30:38Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Hi Jeff, I think this is a copy/paste from public comment which makes it difficult to answer the questions directly here as it gives the appearance that I'm influencing public comment. That said, this highlights concerns that FedRAMP will be sure to address in any final proposed implementation of RFC-0023.\r\n\r\nIt's important to note that RFC's like RFC-0023 are proposals for public comment. They are not intended to be implemented exactly as written and may not be implemented at all. Comments help us determine whether or not to implement and then shape the implementation if it makes sense.\r\n\r\nIn general, the intent of RFC-0023 is to enable folks that have done a full SAR but lost their agency sponsor to only assess the deltas as part as an updated SAR, but public comment making it clear this should be considered is very helpful.\r\n\r\nNote that regarding DFARS 252.204-7012 (b) (D), this is a DOD policy and not a FedRAMP policy. Only the DOD can answer questions about interpretations of DOD policy."
+        },
+        {
+          "id": "DC_kwDOOxfoic4A8LSJ",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15774857",
+          "author": "jeffhoge",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-02-11T22:34:31Z",
+          "updated_at": "2026-02-11T22:34:31Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> Hi Jeff, I think this is a copy/paste from public comment which makes it difficult to answer the questions directly here as it gives the appearance that I'm influencing public comment. That said, this highlights concerns that FedRAMP will be sure to address in any final proposed implementation of RFC-0023.\r\n> \r\n> It's important to note that RFC's like RFC-0023 are proposals for public comment. They are not intended to be implemented exactly as written and may not be implemented at all. Comments help us determine whether or not to implement and then shape the implementation if it makes sense.\r\n> \r\n> In general, the intent of RFC-0023 is to enable folks that have done a full SAR but lost their agency sponsor to only assess the deltas as part as an updated SAR, but public comment making it clear this should be considered is very helpful.\r\n> \r\n> Note that regarding DFARS 252.204-7012 (b) (D), this is a DOD policy and not a FedRAMP policy. Only the DOD can answer questions about interpretations of DOD policy.\r\n\r\nThanks Pete. I posted there earlier and feared I placed it in the wrong area. I appreciate your response. Hopefully there is an attempt by DoD to try and reconcile Equivalency with this. Cheers!"
+        }
+      ],
+      "replies_total": 2,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A8N63",
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15785655",
+      "author": "BPFanelli",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-02-12T16:46:38Z",
+      "updated_at": "2026-02-12T16:54:01Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Short question on **RFC-0021** Expanding the FedRAMP Marketplace - I hope, specifically on the **FedRAMP-Recognized Independent Assessor Listings** section.\r\n\r\nThere is a deafening silence on the topics of 3PAO and A2LA in this section. This seems to read that this is the end of the PMO supporting the 3PAO program.\r\n\r\nPlease advise on the intent of these RFCs regarding the 3PAO program.",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A8OAX",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15786007",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-02-12T17:24:41Z",
+          "updated_at": "2026-02-12T17:24:41Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "This section is specific to FedRAMP recognition and has nothing to do with A2LA accreditation. These are separate processes.\r\n\r\nAs indicated in the A2LA R311:\r\n\r\n> A2LA accreditation is the first step in gaining FedRAMP recognition. A2LA provides evidence to the FedRAMP PMO, but that does not imply acceptance to the FedRAMP 3PAO program. \r\n\r\n\r\n"
+        },
+        {
+          "id": "DC_kwDOOxfoic4A8OCz",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15786163",
+          "author": "BPFanelli",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-02-12T17:45:54Z",
+          "updated_at": "2026-02-12T17:45:54Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Agreed. The PMO has a separate acceptance step after A2LA before an assessor is listed as a 3PAO.\r\n\r\nWhat is  the PMO's response to the following:\r\n* Is it the intention for a **FedRAMP-Recognized Independent Assessor** and a **3PAO** to be essentially equivalent?\r\n* Is it the intention for the PMO to continue certifying 3PAOs for the foreseeable future?"
+        },
+        {
+          "id": "DC_kwDOOxfoic4A8OLo",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15786728",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-02-12T18:48:25Z",
+          "updated_at": "2026-02-12T18:48:25Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> Is it the intention for a FedRAMP-Recognized Independent Assessor and a 3PAO to be essentially equivalent?\r\n\r\nThis is the same thing, with terminology normalized and updated to avoid confusion.\r\n\r\n1. FedRAMP has stopped using acronyms and initialisms in almost all cases in the context of rules and requirements so that they can stand alone effectively without needing explanations\r\n2. FedRAMP is aligning with the law and M-24-15 on terminology where appropriate (the law refers to \"[independent assessment services](https://www.fedramp.gov/docs/authority/law/assessment/)\" which we refer to as \"independent assessor\" to avoid a potential confusion with \"services\" - the original FedRAMP use of \"3PAO\" comes from [2011 FedRAMP memo that was rescinded](https://www.fedramp.gov/docs/authority/rescinded-2011-fedramp-memo/#4-roles-and-responsibilities)).\r\n3. \"FedRAMP recognized\" is standard terminology that has existed for a while in both A2LA and FedRAMP materials.\r\n\r\n> Is it the intention for the PMO to continue certifying 3PAOs for the foreseeable future?\r\n\r\nFedRAMP has not announced any plans to change the recognition process for independent assessors."
+        }
+      ],
+      "replies_total": 3,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A8Oll",
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15788389",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2026-02-12T22:19:13Z",
+      "updated_at": "2026-02-12T22:25:41Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "A random comment on RFC-0019 - I'm always reminded that we need to be very specific when referencing certain things, and have seen a bit of chatter conflating [M-24-15](https://www.fedramp.gov/docs/authority/m-24-15/) with the [FedRAMP Authorization Act](https://www.fedramp.gov/docs/authority/law/) (FRAA, which created 44 USC 3607-3616). \r\n\r\n### Law vs Policy\r\n\r\n- **Law:** The FRAA is the statutory framework that established FedRAMP and defined the roles and responsibilities of GSA, OMB, agencies, the FedRAMP Board, etc.\r\n  - [44 USC 3614](https://www.fedramp.gov/docs/authority/law/omb/) requires OMB to issue guidance about implementation of the FRAA and assorted extra responsibilities, that guidance is M-24-15\r\n  - [44 USC 3613 (a)](https://www.fedramp.gov/docs/authority/law/agencies/#a-in-general) requires agencies to act consistent with the guidance provided by OMB (M-24-15)\r\n\r\n- **Policy:** M-24-15 is a policy that OMB produced, as required by the FRAA, with guidance about implementation... and some additional responsibilities (which is allowed)\r\n\r\nM-24-15 **does NOT** provide guidance on every aspect of the FRAA but that **does NOT** matter when the law establishes requirements. As a general policy document, M-24-15 is actually a bit weird in that it often emphasizes sections of the law without adding anything else (presumably for context), but **M-24-15 does not paint a complete picture of the requirements placed on FedRAMP.**\r\n\r\n### Some examples of statutory requirements that are completely ignored by M-24-15 include:\r\n\r\n1. 44 USC 3609 (a) (3) requires FedRAMP to develop and publish templates, best practices, technical assistance, and other materials\r\n2. 44 USC 3609 (a) (4) requires FedRAMP to publish guidance about the boundaries of FedRAMP authorization packages (met via the Minimum Assessment Scope)\r\n3. 44 USC 3609 (a) (6) requires the public comment process that we're discussing in this thread\r\n4. 44 USC 3609 (a) (8) requires FedRAMP to provide a secure mechanism for sharing data (USDA Connect & Trust Centers via the Authorization Data Sharing process\r\n5. 44 USC 3609 (a) (9) requires FedRAMP to provide updates to cloud service providers during assessments\r\n6. **44 USC 3609 (a) (10) requires FedRAMP to review the costs associated with independent assessment services**\r\n7. 44 USC 3609 (b) requires FedRAMP to maintain a website, marketplace, etc.\r\n\r\nIf you just look at M-24-15, you'd have no idea FedRAMP is required to do those things! M-24-15 also adds a significant number of responsibilities that are not included in the law, so we need to constantly reference both to keep track of our authority and responsibilities.\r\n\r\nHopefully folks find this additional background interesting! We published the [FedRAMP Authority & Responsibility](https://www.fedramp.gov/docs/authority/) section of the FedRAMP Documentation to help folks quickly reference some of these materials in a better web native experience than digging through weird pdfs as well.\r\n\r\nIt's also worth noting that FedRAMP works very very very closely with GSA Office of General Counsel to ensure all activities align with our legal responsibilities and authorities. ",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A8Oqc",
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15788700",
+      "author": "wisecryptic",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-02-12T23:20:15Z",
+      "updated_at": "2026-02-12T23:20:15Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "RFC -0024 A thought for the community: with the Advent of advanced available AI models, do we think that machine readable formatting ingestion and conversion should become much more trivial (hey magic model, here is my csv, can you convert this to oscal and vice versa?) \r\nCan someone try this with a dummy (not real data) machine readable offering and 3-5 general models? looking at all you documentation Automators particularly. This should be pretty easily verifiable for anyone that has previously worked on a machine readable package.",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A8OtU",
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15788884",
+      "author": "wisecryptic",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-02-12T23:54:57Z",
+      "updated_at": "2026-02-12T23:54:57Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "RFC-0021: mkt-frx-pad: can I get some clarification on what the 'activity data' is? I assume this is the preparation/prioritization status? Can I get an idea of the types of changes this is proposing that is different than what is displayed today?",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A8Q2K",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15797642",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-02-13T15:15:40Z",
+          "updated_at": "2026-02-13T15:15:56Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> RFC-0021: mkt-frx-pad: can I get some clarification on what the 'activity data' is? I assume this is the preparation/prioritization status? Can I get an idea of the types of changes this is proposing that is different than what is displayed today?\r\n\r\nThis is a confusing way (sorry, ack that it needs a rewrite) of saying we'll publish information about our review queue, number of folks in it, what their status is, and timeline metrics for how long it has recently taken folks to move through various bits. That's what \"non-sensitive Marketplace-related activities\" means.\r\n\r\nSince everyone is always worried about how things might appear and we don't want situations where someone is like \"oh look, CSP X has been in review for 28 days while the average is 17 so they must really suck\" kind of nonsense, we'll share unidentified data about this in a way that individual CSPs can see where they stand without it being obvious to everyone else.\r\n\r\nThis might seem convoluted but it creates the simplest technical implementation where we can just go from a spreadsheet to a general public dashboard, since we don't have access to things like a CRM that CSPs could log into to check the status of their submissions etc.\r\n\r\nAside from a good thing, this also helps us address [44 USC 3609 (a) (9)](https://www.fedramp.gov/docs/authority/law/gsa/#a-roles-and-responsibilities) to \"provide regular updates to applicant cloud service providers on the status of any cloud computing product or service during an assessment process.\"\r\n\r\n(as a reminder, the \"assessment process\" in the law is what was traditionally called the \"FedRAMP review process\")"
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A8OwJ",
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15789065",
+      "author": "agogeio",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-02-13T00:32:56Z",
+      "updated_at": "2026-02-13T00:32:56Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Hello, \r\n\r\n  First time poster, and currently going through the FedRAMP process; I also sit as a voting member on the CVSS SIG. As I've been reading through the FedRAMP documentation for ConMon, I see that the docs call out using the base score (CVSS v3, hasn't been updated to CVSS v4).  I hope this is the right format and place for this comment. \r\n\r\nThis is the opposite of how the CVSS SIG is recommending to use the standard. Please see the Consumer Implementation Guide which I was the lead author of. \r\n\r\nhttps://www.first.org/cvss/v4.0/implementation-guide\r\n\r\nI am hoping we can get some alignment from FedRAMP organization to move from Base Scores to Environmental plus Threat (BTE) scores as it's a more accurate reflection without having to go through a deviation. \r\n\r\nWarm regards",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A8Q5Z",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15797849",
+          "author": "tnnrjmsn-eit",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-02-13T15:38:28Z",
+          "updated_at": "2026-02-13T15:38:28Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> Hello, \r\n> \r\n>   First time poster, and currently going through the FedRAMP process; ...\r\n\r\nFirst, welcome to the Comments! I hope you enjoy your time here with us.\r\n\r\n> I see that the docs call out using the base score (CVSS v3, hasn't been updated to CVSS v4). ...\r\n\r\nI'm guessing you're referencing the older Rev5 Baseline (& Guidance).\r\n\r\n> I am hoping we can get some alignment from FedRAMP organization to move from Base Scores to Environmental plus Threat (BTE) scores as it's a more accurate reflection without having to go through a deviation. \r\n\r\nI wanted to draw your attention to the 20x **V**a**D**e**R** [Process](https://fedramp.gov/docs/20x/vulnerability-detection-and-response/), especially the [Evaluation portion](https://www.fedramp.gov/docs/20x/vulnerability-detection-and-response/#evaluation).\r\n\r\nWhile it doesn't call out CVSS explicitly anymore, I'm guessing you'll recognize the intent of this newer guidance from FedRAMP: emphasis on internet-reachability, likely exploitability, etc.\r\n\r\nI hope that helps assuage your concerns.\r\n\r\nCordially,\r\nTanner J. "
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A8w0f",
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15928607",
+      "author": "jbaker-rescale",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-02-26T00:45:17Z",
+      "updated_at": "2026-02-26T00:45:17Z",
+      "upvotes": 2,
+      "minimized": false,
+      "body": "Is it possible to hide the security email from the Marketplace or for us to provide an official notification only email? We get some spam on our security inbox because it's publicly-facing. But now that it may be more actively used for true emergencies and tests, it would be better for notifications and alerts if it is not easily found publicly.",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A8zKH",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15938183",
+          "author": "jeffhoge",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-02-26T19:09:34Z",
+          "updated_at": "2026-02-26T19:09:34Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Agreed. While I do know that the real emergency notifications will only come from FedRAMP and GSA domains, because this email is listed publicly, we fear that by taking a filtering approach like @Cbat001, we may miss communication from customers or prospects. We found that the issue is combining the public-facing nature of the security address with the consequences of not complying with the Security Inbox BIR. If the Inbox notification address could be somehow hidden to force customers/prospects to the publicly listed emails (like the sales one), this would fix this issue.\r\n\r\nFor now, we are professionally lecturing any soliciting FedRAMP-aware vendors that by using the Security Inbox address which intended for critical alerts, they are at risk of being squelched altogether."
+        },
+        {
+          "id": "DC_kwDOOxfoic4A8zME",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15938308",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-02-26T19:22:28Z",
+          "updated_at": "2026-02-26T19:23:07Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> Is it possible to hide the security email from the Marketplace or for us to provide an official notification only email? \r\n\r\nThis is addressed in the [FedRAMP Security Inbox process](https://www.fedramp.gov/docs/rev5/balance/fedramp-security-inbox/#maintain-a-fedramp-security-inbox) requirements and recommendations. You can use whatever email you want, just let us know.\r\n\r\n<img width=\"784\" height=\"1016\" alt=\"Screenshot 2026-02-26 at 2 21 44 PM\" src=\"https://github.com/user-attachments/assets/f45ef234-a3ed-48bd-ac36-292c4349fc20\" />\r\n"
+        },
+        {
+          "id": "DC_kwDOOxfoic4A8zRl",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15938661",
+          "author": "jeffhoge",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-02-26T20:05:04Z",
+          "updated_at": "2026-02-26T20:05:04Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thank you @pete-gov! I missed this also."
+        }
+      ],
+      "replies_total": 3,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A8zG4",
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15937976",
+      "author": "adamlang-1kosmos",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-02-26T18:43:42Z",
+      "updated_at": "2026-02-26T18:43:42Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "@pete-gov can I get a clarification on this?\r\nhttps://www.fedramp.gov/notices/0004/\r\n\r\nBullet points 3 and 4.\r\n\r\nThis is saying the existing FedRAMP Pilot, Low, Moderate, High are going away and being replaced by Class A, B, C, D? I took the RFC as just asking about the proposed renamings and levels specified within it.",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A8zJD",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15938115",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-02-26T19:02:19Z",
+          "updated_at": "2026-02-26T19:02:19Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "I'm not sure I understand the question/confusion or what you're asking for a clarification on, can you maybe rephrase if the stab below doesn't provide an answer? (the RFC **was** just asking about renaming, the outcome is just renaming)\r\n\r\nBoth the RFC and the Initial Outcome discuss ONLY creating formal labels. In the context of this RFC and the outcome, nothing is going away, nothing is getting changed*, things **are only being labeled or relabeled.**\r\n\r\npilot -> class a\r\nlow -> class b\r\nmoderate -> class c\r\nhigh -> class d\r\n\r\n\\* things will be changed but this RFC isn't about changing anything other than the label\r\n\r\n"
+        },
+        {
+          "id": "DC_kwDOOxfoic4A8zSG",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15938694",
+          "author": "adamlang-1kosmos",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-02-26T20:08:25Z",
+          "updated_at": "2026-02-26T20:11:08Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Sure thing, let me rephrase.\r\n\r\nI interpreted RFC-0020 as asking for comment about changing the current labels of Low, Moderate, High to 6 tiers and changing the labels to Certified Level 1 - 6.\r\n\r\nThe notice says that idea has been rejected, but Pilot, Low, Moderate, High are being relabeled to Class A, B, C, D. \r\n\r\nI don't see anything in the RFC about Class A, B, C, D. Was that mentioned somewhere else or was that internally determined as the best route to go after rejecting the numbered levels restructure?\r\n\r\nAlso, is there any sort of effective date it would be appropriate for us to be referring tot he new labels or is this just a heads up it will be made official as part of a larger policy this year? I assume that is the Consolidated Rules for 2026 being referred to?"
+        },
+        {
+          "id": "DC_kwDOOxfoic4A82BD",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15949891",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-02-27T18:24:03Z",
+          "updated_at": "2026-02-27T18:24:03Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Ah, I see. In most cases we don't do eternally iterative comment, unless we believe we are proposing an outcome that varies wildly from the initial proposal. We said \"we're gonna change the names and we're thinking about calling it levels\" and public comment was like \"omg plz call it anything other than levels\" so we pivoted to class categorization. This isn't a big enough guidance change to require an additional round of public comment - multiple rounds of public comment is extremely rare, we only do it when the next step looks nothing like the original step.\r\n\r\n> Also, is there any sort of effective date it would be appropriate for us to be referring to the new labels or is this just a heads up it will be made official as part of a larger policy this year? I assume that is the Consolidated Rules for 2026 being referred to?\r\n\r\nYep, it's a heads up. We have a lot of work to do to formalize and don't want there to be a multi-month period where people are wondering the outcome from public comment. We'll punch out explicit updates, timelines, communication plans, etc. on this over a broader period of time, the RFC just set the stage."
+        },
+        {
+          "id": "DC_kwDOOxfoic4A9E88",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-16011068",
+          "author": "adamlang-1kosmos",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-03-05T13:56:05Z",
+          "updated_at": "2026-03-05T13:57:01Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "I know it isn't part of the RFC, but a bit of feedback about Class A, B, C, D classification.  The order of Class A being the lowest certification to Class D being the most comprehensive certification is counter-intuitive. People are going to have the default assumption that something Class A is better than Class D, as that is the norm.\r\n\r\nI even had that stop and pause moment when I read the RFC-0022 outcome doc when Class A was used as the reference... and I am familiar with the reclassification plan."
+        },
+        {
+          "id": "DC_kwDOOxfoic4A9Fsx",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-16014129",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-03-05T18:54:36Z",
+          "updated_at": "2026-03-05T18:54:36Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "We expect all of this will become simple and intuitive with use over time. Folks can make an infinite number of justifications for different approaches but picking one that works is how we move through. There's an inherent bias issue with believing one Class, Type, or Profile of Certification is \"better\" than another that will happen no matter what but FedRAMP shouldn't be optimizing for that. In this case if it's counter-intuitive for a few folks who then need to look it up and realign their thinking then it's actually working as intended."
+        },
+        {
+          "id": "DC_kwDOOxfoic4A9Fwx",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-16014385",
+          "author": "adamlang-1kosmos",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-03-05T19:23:37Z",
+          "updated_at": "2026-03-05T19:24:03Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "People grew up with report cards where you are graded on a scale of A being best on down. When rankings are done with an alphabet scale, they rank from A on down.\r\n\r\nPeople already have a pre-built notion of what that scale means. Just mentioning it feels you are building a UI that isn't intuitive to already learned behavior.\r\n\r\nIt'd be like using the color red to mean go and green to stop. I agree it can be justified, but most people would think you are inefficiently conveying information.\r\n\r\nEither way, just my personal feedback. I appreciate you have created the medium to be able to supply and discuss."
+        },
+        {
+          "id": "DC_kwDOOxfoic4A9F0J",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-16014601",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-03-05T20:00:28Z",
+          "updated_at": "2026-03-05T20:00:28Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "I get it, and we've talked about your point a lot, but again, the Certification Class is not a grade or a rank. An implicit goal of this labeling is to move away towards people thinking one is better than the other. \r\n\r\nAt some point we'll add Class E, Class F, Class G, etc. Hopefully by then folks will be more comfortable with thinking of these as a Class and not a hierarchical system. (I realized we ordered them as a hierarchical system to begin with during the transition and that this is hypocritical, but it's to ease the initial transition)\r\n\r\nIt's a hard problem to crack, every approach we considered someone had problems with. Personally I really wanted to have them named with nonsense like Class Squirrel and Class Panda. 🐼 "
+        },
+        {
+          "id": "DC_kwDOOxfoic4A9F2v",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-16014767",
+          "author": "jbaker-rescale",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-03-05T20:24:00Z",
+          "updated_at": "2026-03-05T20:24:00Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Lol.... people will create hierarchies on whether Pandas or Squirrels are \"better.\""
+        }
+      ],
+      "replies_total": 8,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A9F_o",
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-16015336",
+      "author": "wisecryptic",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-03-05T21:55:41Z",
+      "updated_at": "2026-03-05T21:55:41Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Clarification, does FedRAMP have a definition of 'service' as in the service that a CSP provides?\r\n\r\n> Providers are expected to make their own determinations about the appropriate separation of per-service (or sets of services) authorization data and are encouraged to do this programmatically such that customers can pull only the assets they need for the services they plan to use. Implementation of this requirement should be done in consultation with the business branches of the cloud service provider.\r\n\r\nFrom this description it sounds like it is up to the providers to define their 'service', which makes sense, and then naturally the agencies determine if the service fits their needs, but I'd like to know if FedRAMP or another agency will whip out a service definition on an unsuspecting CSP when they submit their separation of service.",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A9GAN",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-16015373",
+          "author": "wisecryptic",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-03-05T22:00:31Z",
+          "updated_at": "2026-03-05T22:00:31Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "As an aside, this requirement should lend itself to some creative backend machine rendering. Industry and gov has a working model for access-based attributes, and 3PAOS/GRCs have been developing cross  - compliance attribute frameworks. This could follow a similar pattern of cross-service attributes classified in a backend that can then be assembled by service (attribute) on the front end."
+        },
+        {
+          "id": "DC_kwDOOxfoic4A9GBp",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-16015465",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-03-05T22:11:02Z",
+          "updated_at": "2026-03-05T22:11:02Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> From this description it sounds like it is up to the providers to define their 'service', which makes sense, and then naturally the agencies determine if the service fits their needs, but I'd like to know if FedRAMP or another agency will whip out a service definition on an unsuspecting CSP when they submit their separation of service.\r\n\r\nIt's intended to be up to the provider, yes. They generally determine how their services are bundled and sold. It's one of those things that should be a customer experience / sales driven decision rather than a compliance team decision, which will be complicated for some folks. There shouldn't be an argument about service definitions or whatever with agencies for MOST companies if they're aligning to the things they sell to agencies.\r\n\r\nIt's more complicated the more complicated your service is, especially if you sell stuff a la carte. Actual implementation of the rules will likely require a lot more implicit flexibility.\r\n\r\nTo really emphasize the point, this is a requirement that helps cloud services sell products to customers by lowering the burden of review by potential customers. It's a thing agencies ask for all the time, so much that OMB [put it into M-24-15](https://www.fedramp.gov/docs/authority/m-24-15/automation/#interoperability:~:text=services%2C-,FedRAMP,guidance) as a requirement. That's a strong demand signal for companies to invest in doing it well."
+        }
+      ],
+      "replies_total": 2,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A9UkC",
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-16075010",
+      "author": "gregelin",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-03-10T22:47:13Z",
+      "updated_at": "2026-03-10T22:47:13Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Are comments open on March 11 and close at end of day? Or are comments closed as of March 11 and March 10 is last date to submit?",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A9WYL",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-16082443",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-03-11T11:34:04Z",
+          "updated_at": "2026-03-11T11:34:04Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "We typically close comments at the beginning of the work day on the day after the official closure, so for RFC-0024 folks have until around 7-9am tomorrow (Thu Mar 12)."
+        },
+        {
+          "id": "DC_kwDOOxfoic4A9WeY",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-16082840",
+          "author": "gregelin",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-03-11T12:17:22Z",
+          "updated_at": "2026-03-11T12:17:22Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thanks!"
+        }
+      ],
+      "replies_total": 2,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A91P9",
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-16208893",
+      "author": "pdudek-3PAO",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-03-19T13:20:16Z",
+      "updated_at": "2026-03-19T13:20:16Z",
+      "upvotes": 0,
+      "minimized": false,
+      "body": "Have a question regarding the language for FedRAMP Ready that was published in Notice 0008. Under the Initial Outcome for FedRAMP Ready section, it states: \"Instead of simply retiring FedRAMP Ready as proposed in RFC-0023, FedRAMP will provide an alternative path for cloud service providers to convert their FedRAMP Ready or FedRAMP Ready assessment into a Class A FedRAMP Certification.\"\r\n\r\nDoes this mean that \"FedRAMP Ready assessments\" can continue on past the July deadline but rather then being for a FedRAMP Ready Marketplace status, can be leveraged for the new Class A FedRAMP certification? Just need clarity if the July 28th deadline assumes end of life for the actual readiness assessment reports as well. Thanks!",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A91Sw",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-16209072",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-03-19T13:32:57Z",
+          "updated_at": "2026-03-19T13:32:57Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "There's a note below that which says:\r\n\r\n> Rev5 Class A Certifications will be available at this time and these requirements will not vary considerably from those for FedRAMP Ready so that cloud services working towards FedRAMP Ready can shift easily into the new profile.\r\n\r\nWe haven't worked out all the details of the requirements yet, so the main thing is that until July 28 we will accept a FR Ready against the current requirements. After that there will be new requirements that won't have been covered by a readiness assessment done before those requirements have been released. Those requirements might not be released until the end of June. This is a 2.5 year long game we're building the foundation for right now, so there's going to be a couple months without clarity.\r\n\r\nWe're working to get these requirements out, but as always, FedRAMP's disclaimers apply - making business decisions and planning based on incomplete information that is subject to change at any time carries a risk that many companies should not take. Once the requirements are standardized and public and clear this risk will go away."
+        },
+        {
+          "id": "DC_kwDOOxfoic4A91Tb",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-16209115",
+          "author": "pdudek-3PAO",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-03-19T13:35:23Z",
+          "updated_at": "2026-03-19T13:35:23Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thanks, Pete!"
+        }
+      ],
+      "replies_total": 2,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A95_m",
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-16228326",
+      "author": "pdudek-3PAO",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-03-20T15:40:43Z",
+      "updated_at": "2026-03-20T15:40:43Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "One more question on Notice 0008 under \"Initial Outcome for Implementing Program Certification\":\r\n\r\nFor part d where it lists \"Completed a full FedRAMP assessment with a Security Assessment Plan and Security Assessment Report (SAP/SAR)\", can you help confirm if FedRAMP Equivalency audits performed during the time period between 1/1/2025 and 3/1/2026 would count towards this Stage 2 process for Class B and C certifications? We have some CSPs asking this as it has been a goal to hopefully get on the Marketplace due to not having an agency sponsor, but have successfully passed a full FedRAMP Moderate baseline audit for Equivalency purposes.",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A99YY",
+          "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-16242200",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-03-21T15:23:45Z",
+          "updated_at": "2026-03-21T15:23:45Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> can you help confirm if FedRAMP Equivalency audits performed during the time period between 1/1/2025 and 3/1/2026 would count towards this Stage 2 process for Class B and C certifications?\r\n\r\nFR has nothing to do with \"FedRAMP equivalency\" requirements or process, so we can't tell you if such an audit is the same as a full FedRAMP assessment.\r\n\r\nIt will be up to the FedRAMP recognized independent assessor to assert that an assessment they performed counts as a full FedRAMP assessment and was performed during that time - doesn't matter what they called it if they attest that it's the same process. ;)\r\n\r\n> We have some CSPs asking this as it has been a goal to hopefully get on the Marketplace due to not having an agency sponsor, but have successfully passed a full FedRAMP Moderate baseline audit for Equivalency purposes.\r\n\r\nIt's very important to understand that the scope of FedRAMP still applies. \"FedRAMP equivalency\" is a DOD/CMMC requirement, and most companies looking for a CMMC certification are outside the scope of FedRAMP and would not be eligible for listing in the FedRAMP Marketplace. This path is only available to services that also expect to be used by federal agencies outside the DOD."
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A99ZX",
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-16242263",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2026-03-21T15:29:07Z",
+      "updated_at": "2026-03-21T15:29:55Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "As these RFCs are now closed, I'm opening a general Rev5 Q&A thread and closing this one. If you have further questions about the outcome of these RFCs, including the Public Notices, please pop over to #137 [General discussion / Q&A on Rev5 improvements and changes in 2026](https://github.com/FedRAMP/community/discussions/137).",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "BPFanelli",
+    "Cbat001",
+    "JustAnother3PAO",
+    "RandyMoon",
+    "adamlang-1kosmos",
+    "agogeio",
+    "bjagasia",
+    "david-waltermire",
+    "drewmd85",
+    "gregelin",
+    "jbaker-rescale",
+    "jeffhoge",
+    "john-allison",
+    "jsantore-cgc",
+    "kcarr91",
+    "nicole-gov",
+    "pdudek-3PAO",
+    "pete-gov",
+    "rjb4standards",
+    "tnnrjmsn-eit",
+    "v-mhahnfirstinfotech",
+    "wahlay5497",
+    "wisecryptic"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15499482",
+      "author": "pete-gov",
+      "created_at": "2026-01-14T19:38:31Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15788389",
+      "author": "pete-gov",
+      "created_at": "2026-02-12T22:19:13Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-16242263",
+      "author": "pete-gov",
+      "created_at": "2026-03-21T15:29:07Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15489643",
+      "author": "pete-gov",
+      "created_at": "2026-01-13T21:10:54Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15499510",
+      "author": "pete-gov",
+      "created_at": "2026-01-14T19:42:45Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15499756",
+      "author": "pete-gov",
+      "created_at": "2026-01-14T20:24:21Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15499540",
+      "author": "pete-gov",
+      "created_at": "2026-01-14T19:47:59Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15499936",
+      "author": "pete-gov",
+      "created_at": "2026-01-14T20:48:50Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15509393",
+      "author": "pete-gov",
+      "created_at": "2026-01-15T17:01:12Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15552832",
+      "author": "pete-gov",
+      "created_at": "2026-01-20T19:52:23Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15606127",
+      "author": "pete-gov",
+      "created_at": "2026-01-26T13:21:11Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15651133",
+      "author": "pete-gov",
+      "created_at": "2026-01-30T13:20:13Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15651439",
+      "author": "pete-gov",
+      "created_at": "2026-01-30T13:48:55Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15697920",
+      "author": "pete-gov",
+      "created_at": "2026-02-04T19:51:07Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15709650",
+      "author": "pete-gov",
+      "created_at": "2026-02-05T18:13:50Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15720302",
+      "author": "pete-gov",
+      "created_at": "2026-02-06T16:05:11Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15720346",
+      "author": "pete-gov",
+      "created_at": "2026-02-06T16:08:51Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15709035",
+      "author": "nicole-gov",
+      "created_at": "2026-02-05T17:25:21Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15720452",
+      "author": "pete-gov",
+      "created_at": "2026-02-06T16:17:38Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15721497",
+      "author": "pete-gov",
+      "created_at": "2026-02-06T18:15:25Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15721487",
+      "author": "pete-gov",
+      "created_at": "2026-02-06T18:13:38Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15722426",
+      "author": "pete-gov",
+      "created_at": "2026-02-06T20:24:48Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15761895",
+      "author": "pete-gov",
+      "created_at": "2026-02-10T22:18:05Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15774837",
+      "author": "pete-gov",
+      "created_at": "2026-02-11T22:30:38Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15786007",
+      "author": "pete-gov",
+      "created_at": "2026-02-12T17:24:41Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15786728",
+      "author": "pete-gov",
+      "created_at": "2026-02-12T18:48:25Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15797642",
+      "author": "pete-gov",
+      "created_at": "2026-02-13T15:15:40Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15938308",
+      "author": "pete-gov",
+      "created_at": "2026-02-26T19:22:28Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15938115",
+      "author": "pete-gov",
+      "created_at": "2026-02-26T19:02:19Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15949891",
+      "author": "pete-gov",
+      "created_at": "2026-02-27T18:24:03Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-16014129",
+      "author": "pete-gov",
+      "created_at": "2026-03-05T18:54:36Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-16014601",
+      "author": "pete-gov",
+      "created_at": "2026-03-05T20:00:28Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-16015465",
+      "author": "pete-gov",
+      "created_at": "2026-03-05T22:11:02Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-16082443",
+      "author": "pete-gov",
+      "created_at": "2026-03-11T11:34:04Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-16209072",
+      "author": "pete-gov",
+      "created_at": "2026-03-19T13:32:57Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/115#discussioncomment-16242200",
+      "author": "pete-gov",
+      "created_at": "2026-03-21T15:23:45Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [
+      "RFC-0019",
+      "RFC-0020",
+      "RFC-0021",
+      "RFC-0022",
+      "RFC-0023",
+      "RFC-0024"
+    ],
+    "nist_controls": [],
+    "discussion_refs": [
+      110,
+      115,
+      116,
+      137
+    ],
+    "urls": [
+      "https://fedramp.gov/docs/20x/vulnerability-detection-and-response/",
+      "https://github.com/FedRAMP/community/discussions/110#discussioncomment-15721087",
+      "https://github.com/FedRAMP/community/discussions/115#discussioncomment-15606127",
+      "https://github.com/FedRAMP/community/discussions/116",
+      "https://github.com/FedRAMP/community/discussions/137",
+      "https://github.com/notifications/unsubscribe-auth/BSSZSEOIIPM2Q7L6Z2FWQR34IYIF7AVCNFSM6AAAAACRSJ24HOVHI2DSMVQWIX3LMV43URDJONRXK43TNFXW4Q3PNVWWK3TUHMYTKNRQGYYTENY",
+      "https://github.com/ossf/wg-vulnerability-disclosures/issues/172",
+      "https://github.com/user-attachments/assets/f45ef234-a3ed-48bd-ac36-292c4349fc20",
+      "https://github.com/user-attachments/files/25080513/rfc-0019.md",
+      "https://github.com/user-attachments/files/25080514/rfc-0020.md",
+      "https://github.com/user-attachments/files/25080515/rfc-0021.md",
+      "https://github.com/user-attachments/files/25080516/rfc-0022.md",
+      "https://github.com/user-attachments/files/25080517/rfc-0023.md",
+      "https://github.com/user-attachments/files/25080518/rfc-0024.md",
+      "https://www.fedramp.gov/docs/20x/vulnerability-detection-and-response/",
+      "https://www.fedramp.gov/docs/20x/vulnerability-detection-and-response/#evaluation",
+      "https://www.fedramp.gov/docs/authority/",
+      "https://www.fedramp.gov/docs/authority/law/",
+      "https://www.fedramp.gov/docs/authority/law/agencies/#a-in-general",
+      "https://www.fedramp.gov/docs/authority/law/assessment/",
+      "https://www.fedramp.gov/docs/authority/law/gsa/#a-roles-and-responsibilities",
+      "https://www.fedramp.gov/docs/authority/law/omb/",
+      "https://www.fedramp.gov/docs/authority/m-24-15/",
+      "https://www.fedramp.gov/docs/authority/m-24-15/automation/#interoperability:~:text=services%2C-,FedRAMP,guidance",
+      "https://www.fedramp.gov/docs/authority/m-24-15/scope/",
+      "https://www.fedramp.gov/docs/authority/rescinded-2011-fedramp-memo/#4-roles-and-responsibilities",
+      "https://www.fedramp.gov/docs/rev5/balance/collaborative-continuous-monitoring/",
+      "https://www.fedramp.gov/docs/rev5/balance/fedramp-security-inbox/",
+      "https://www.fedramp.gov/docs/rev5/balance/fedramp-security-inbox/#maintain-a-fedramp-security-inbox",
+      "https://www.fedramp.gov/docs/rev5/balance/minimum-assessment-scope/",
+      "https://www.fedramp.gov/docs/rev5/playbook/csp/continuous-monitoring/performance-management/#performance-management-for-ongoing-authorization",
+      "https://www.fedramp.gov/notices/0004/",
+      "https://www.fedramp.gov/resources/documents/3PAO_Obligations_and_Performance_Standards.pdf",
+      "https://www.fedramp.gov/rfcs/",
+      "https://www.fedramp.gov/rfcs/0021/",
+      "https://www.first.org/cvss/v4.0/implementation-guide"
+    ],
+    "topics": [
+      "20x",
+      "3pao",
+      "agency_authorization",
+      "class_a",
+      "class_b",
+      "class_c",
+      "class_d",
+      "conmon",
+      "ksi",
+      "machine_readable",
+      "marketplace",
+      "oscal",
+      "poam",
+      "rev5",
+      "significant_change",
+      "vulnerability_mgmt"
+    ]
+  },
+  "content_hash": "00a25994ba54547a79f02af3841559f79b96c286f933c7e47c3c14affb4c49f8",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

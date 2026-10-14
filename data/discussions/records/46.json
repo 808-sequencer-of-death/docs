@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-46",
+  "node_id": "D_kwDOOxfoic4AgVhz",
+  "number": 46,
+  "title": "NextLabs FedRAMP 20x Phase One Pilot - Draft Submission",
+  "url": "https://github.com/FedRAMP/community/discussions/46",
+  "category": "20x Discussion",
+  "category_slug": "20x-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "sshukla-nxt",
+  "author_is_official": false,
+  "created_at": "2025-06-20T14:54:18Z",
+  "updated_at": "2025-08-25T16:45:26Z",
+  "last_edited_at": null,
+  "closed": true,
+  "closed_at": "2025-08-25T16:45:26Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "[NextLabs FedRAMP 20x Phase One Pilot - Draft Submission (1).docx](https://github.com/user-attachments/files/20838895/NextLabs.FedRAMP.20x.Phase.One.Pilot.-.Draft.Submission.1.docx)\r\n",
+  "comment_count": 0,
+  "comments": [],
+  "answer_url": null,
+  "participants": [
+    "sshukla-nxt"
+  ],
+  "official_responses": [],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://github.com/user-attachments/files/20838895/NextLabs.FedRAMP.20x.Phase.One.Pilot.-.Draft.Submission.1.docx"
+    ],
+    "topics": [
+      "20x"
+    ]
+  },
+  "content_hash": "9759bfbcc27a3f68e6d699a64452e31d6ee4c85687e0b051dc084e73f4e5ea1b",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

@@ -1,0 +1,115 @@
+---
+title: "Certification package overview"
+description: "Supply a short, consistent overview of your cloud service offering, in human-readable and JSON formats, as part of your FedRAMP Certification Package, and keep the package current."
+sidebarTitle: "CPO: Package overview"
+---
+
+<Info>
+  **Official source:** [Certification Package Overview](https://www.fedramp.gov/2026/reference/certification-package-overview/) (`CPO`), FedRAMP Consolidated Rules release `2026.10.14.01`. This page is a plain-English summary. The official rule text governs.
+</Info>
+
+## In short
+
+The Certification Package Overview (CPO) is a concise summary of your cloud service offering that sits inside your FedRAMP Certification Package. For Rev5, it replaces the historically required System Security Plan, not including its appendices. You must supply it in both human-readable and JSON formats, and it pulls together information required by several other rulesets. You must also keep the whole Certification Package up to date on a cadence that depends on your type and class, from every week (20x Class D) to every year (Rev5 Class B and C).
+
+## Who it applies to
+
+| Subset | Type | Path | Class | Audience |
+| --- | --- | --- | --- | --- |
+| [General Provider Responsibilities](https://www.fedramp.gov/2026/reference/certification-package-overview/#general-provider-responsibilities) | 20x, Rev5 | Program, Agency | B, C, D | Providers |
+| [20x-Specific Provider Responsibilities](https://www.fedramp.gov/2026/reference/certification-package-overview/#20x-specific-provider-responsibilities) | 20x | Program | A, B, C, D | Providers |
+| [Rev5-Specific Provider Responsibilities](https://www.fedramp.gov/2026/reference/certification-package-overview/#rev5-specific-provider-responsibilities) | Rev5 | Program, Agency | B, C, D | Providers |
+
+<Note>
+  The General subset lists Classes B, C and D, but [`CPO-CSO-OSA`](https://www.fedramp.gov/2026/reference/certification-package-overview/#overall-summary-of-assessment-in-certification-package) includes a Class A variant (MAY). The rule notes on `CPO-CSO-OVR` also say that if a referenced rule doesn't apply to your class or type, that information isn't required.
+</Note>
+
+## Key dates
+
+| | 20x | Rev5 |
+| --- | --- | --- |
+| Status | Required (Consolidated Rules for 2026) | Required (Consolidated Rules for 2026) |
+| Optional adoption allowed | 2026-07-04 | 2026-07-04 |
+| Obtaining initial certification | 2026-07-04 | 2027-01-01 |
+| Maintaining ongoing certification | 2027-01-01 | 2027-07-01 |
+| Grace period ends | First FedRAMP independent assessment started after 2027-01-01 | First FedRAMP independent assessment started after 2027-07-01 |
+
+## What you need to do
+
+### General provider responsibilities (20x and Rev5)
+
+| Rule | Force | What it means for you |
+| --- | --- | --- |
+| [`CPO-CSO-OVR`](https://www.fedramp.gov/2026/reference/certification-package-overview/#overview-of-the-cloud-service-offering) | MUST | Include a Certification Package Overview in your Certification Package, in human-readable and JSON formats, with at least the information required by the rules listed below. |
+| [`CPO-CSO-MTD`](https://www.fedramp.gov/2026/reference/certification-package-overview/#certification-package-overview-metadata) | MUST | Include basic metadata: the name, title and contact information of the official responsible and accountable for the package, the version, the date and time of last update, and the source of the update. |
+| [`CPO-CSO-OSA`](https://www.fedramp.gov/2026/reference/certification-package-overview/#overall-summary-of-assessment-in-certification-package) | Varies by class (MAY for A, MUST for B, C, D) | Include the overall summary of your FedRAMP independent assessment that your assessor supplies under [`IVV-IAS-OSA`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#overall-summary-of-assessment). See [differences by class](#differences-by-class). |
+
+`CPO-CSO-OVR` requires the overview to include at least the information required by these rules:
+
+| Ruleset | Rule | Information |
+| --- | --- | --- |
+| Certification Package Overview | [`CPO-CSO-MTD`](https://www.fedramp.gov/2026/reference/certification-package-overview/#certification-package-overview-metadata) | Certification Package Overview Metadata |
+| [Certification Data Sharing](/rules/certification-data-sharing) | [`CDS-CSO-PUB`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#public-information) | Public Information |
+| [Certification Data Sharing](/rules/certification-data-sharing) | [`CDS-CSO-SVC`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#public-service-list) | Public Service List |
+| [Certification Data Sharing](/rules/certification-data-sharing) | [`CDS-CSO-IRP`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#include-relevant-policies) | Include Relevant Policies |
+| [Minimum Assessment Scope](/rules/minimum-assessment-scope) | [`MAS-CSO-IIR`](https://www.fedramp.gov/2026/reference/minimum-assessment-scope/#identify-information-resources) | Identify Information Resources |
+| [Minimum Assessment Scope](/rules/minimum-assessment-scope) | [`MAS-CSO-FLO`](https://www.fedramp.gov/2026/reference/minimum-assessment-scope/#information-flows-and-security-categories) | Information Flows and Security Categories |
+| [Minimum Assessment Scope](/rules/minimum-assessment-scope) | [`MAS-CSO-TPR`](https://www.fedramp.gov/2026/reference/minimum-assessment-scope/#third-party-information-resources) | Third-Party Information Resources |
+| [Using Cryptographic Modules](/rules/cryptographic-module-use) | [`CMU-CSO-CMD`](https://www.fedramp.gov/2026/reference/cryptographic-module-use/#cryptographic-module-documentation) | Cryptographic Module Documentation |
+| [Independent Verification and Validation](/rules/independent-verification-and-validation) | [`IVV-CSO-ICP`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#inclusion-in-certification-package) | Inclusion in Certification Package |
+
+The JSON format follows the [FedRAMP Certification Package Overview schema](https://fedramp.gov/schemas/fedramp-certification-package-overview-schema-2026-06-24.json).
+
+### 20x-specific provider responsibilities
+
+| Rule | Force | What it means for you |
+| --- | --- | --- |
+| [`CPO-CSX-CPM`](https://www.fedramp.gov/2026/reference/certification-package-overview/#certification-package-maintenance-for-20x) | Varies by class (SHOULD for A, MUST for B, C, D) | Persistently maintain your Certification Package so it is up to date and complete, at least every 3 months (A), month (B), 2 weeks (C) or week (D). |
+
+The rule notes say FedRAMP expects 20x providers to maintain the package using automation as changes occur, so it is never out of date. The rule doesn't require or expect persistent human review of all materials at this cadence.
+
+### Rev5-specific provider responsibilities
+
+| Rule | Force | What it means for you |
+| --- | --- | --- |
+| [`CPO-CSF-CPM`](https://www.fedramp.gov/2026/reference/certification-package-overview/#certification-package-maintenance-for-rev5) | MUST (B, C, D) | Persistently maintain your Certification Package so it is up to date and complete, at least every year (B and C) or every six months (D). |
+
+<Warning>
+  The rule notes describe the Rev5 timeframe as the worst-case maximum. They say Rev5 providers should maintain their packages far more often, and at least after every transformative significant change. See [Significant change notification](/rules/significant-change-notification).
+</Warning>
+
+## Differences by class
+
+| Rule | Class A | Class B | Class C | Class D |
+| --- | --- | --- | --- | --- |
+| `CPO-CSO-OSA` overall summary of assessment | MAY include | MUST include | MUST include | MUST include |
+| `CPO-CSX-CPM` 20x package maintenance | SHOULD, every 3 months | MUST, every month | MUST, every 2 weeks | MUST, every week |
+| `CPO-CSF-CPM` Rev5 package maintenance | Not listed (the rule changelog says all Class A certifications are 20x) | MUST, every year | MUST, every year | MUST, every six months |
+
+## What FedRAMP staff have said
+
+<Note>
+  **Rev5 grace period date.** On 2026-08-27, **pete-gov** confirmed that the CPO dates are meant to differ for 20x and Rev5, and that the Rev5 grace period ends on the first FedRAMP independent assessment after 2027-07-01, not 2027-01-01. The current release already shows 2027-07-01. [Discussion #146 comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18181057)
+</Note>
+
+<Note>
+  **CPO replaces most of the SSP.** On 2026-08-24, asked which deliverables to expect now that the SAP, SAR and RET are legacy (for a Rev5 lost sponsor or readiness conversion), **paulagosta** said your Certification Package Overview and Security Decision Record will contain your assessment results. On 2026-09-11, **paulagosta** added that the CPO and SDR need machine-readable and human-readable versions, and that most components of an SSP now reside in the CPO and SDR. [Discussion #146 comment (2026-08-24)](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18138185), [Discussion #146 comment (2026-09-11)](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18401490)
+</Note>
+
+<Note>
+  **The CPO URI in other schemas.** On 2026-06-30, **dan-fedramp** explained that the CPO is a separate schema with metadata about the offering, such as FedRAMP ID, provider name and service name. FedRAMP includes the CPO URI in all of its other schemas so you don't have to duplicate this information in every submission. [Discussion #146 comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-17488324)
+</Note>
+
+<Note>
+  **Public CPO JSON must be web-consumable.** On 2026-09-17, after a Marketplace update with public CPO JSON was rejected because of its content type, **pete-gov** said FedRAMP would strictly require web interoperability (a CORS allow and an appropriate content type) for JSON data that must be public, such as `CDS-CSO-PUB` and `CDS-CSO-SVC`. An RFC would follow for JSON data behind a trust center login. The rules were later updated in [`FRC-CSO-JSN`](https://www.fedramp.gov/2026/reference/fedramp-certification/#fedramp-json-schemas) (2026-10-05). [Discussion #175 comment](https://github.com/FedRAMP/community/discussions/175#discussioncomment-18482587)
+</Note>
+
+## Related
+
+- [FedRAMP certification](/rules/fedramp-certification): `FRC-CSO-PKG` requires the package to include CPO information.
+- [Security decision record](/rules/security-decision-record)
+- [Certification data sharing](/rules/certification-data-sharing)
+- [Minimum assessment scope](/rules/minimum-assessment-scope)
+- [Independent verification and validation](/rules/independent-verification-and-validation)
+- [Rev5 questions on the Consolidated Rules for 2026](/discussions/rev5-cr26-questions)
+- [Provider deliverables](/rules/provider-deliverables)

@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-74",
+  "node_id": "D_kwDOOxfoic4AhVY_",
+  "number": 74,
+  "title": "3PAO Collaboration Thread",
+  "url": "https://github.com/FedRAMP/community/discussions/74",
+  "category": "20x Discussion",
+  "category_slug": "20x-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "fortetroy",
+  "author_is_official": false,
+  "created_at": "2025-08-15T17:39:39Z",
+  "updated_at": "2025-11-18T16:22:56Z",
+  "last_edited_at": null,
+  "closed": true,
+  "closed_at": "2025-11-18T16:22:56Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "Starting a thread to promote collaboration among 3PAOs during the Pilot Phase (and maybe beyond)\r\n\r\nTo start off with I created a package for exporting information out of Vanta\r\nhttps://www.npmjs.com/package/vanta-auditor-tui\r\nIt might prove useful in other auditor workflows as they begin to use Vanta more as a 20x Tool\r\nVanta also has a TS SDK (which is what I used for this tool) you might want to check out https://github.com/VantaInc/vanta-auditor-api-sdk-typescript\r\n\r\nHope it helps and hope to see more collaboration among 3PAOs 🍻",
+  "comment_count": 2,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4A24R6",
+      "url": "https://github.com/FedRAMP/community/discussions/74#discussioncomment-14386298",
+      "author": "ethanolivertroy",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2025-09-12T16:27:58Z",
+      "updated_at": "2025-09-12T16:27:59Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "<img width=\"600\" height=\"373\" alt=\"image\" src=\"https://github.com/user-attachments/assets/2c0fbed3-b71d-41ac-a672-6bd2baa891a9\" />\r\n",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A34qq",
+      "url": "https://github.com/FedRAMP/community/discussions/74#discussioncomment-14650026",
+      "author": "cbaerschellman",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2025-10-10T18:00:29Z",
+      "updated_at": "2025-10-10T18:00:30Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "I appreciate everything you've been sharing via LinkedIn. I hope to get more involved, as well.",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "cbaerschellman",
+    "ethanolivertroy",
+    "fortetroy"
+  ],
+  "official_responses": [],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://github.com/VantaInc/vanta-auditor-api-sdk-typescript",
+      "https://github.com/user-attachments/assets/2c0fbed3-b71d-41ac-a672-6bd2baa891a9",
+      "https://www.npmjs.com/package/vanta-auditor-tui"
+    ],
+    "topics": [
+      "20x",
+      "3pao"
+    ]
+  },
+  "content_hash": "d2e47b784541f22ff8c2e9e3fb6312953e603dc7ad310b9c38e653e0248c355d",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

@@ -1,0 +1,166 @@
+---
+title: "Certification data sharing"
+description: "Publish key offering information publicly and share your FedRAMP Certification Data with agencies and FedRAMP through a FedRAMP-compatible trust center."
+sidebarTitle: "CDS: Data sharing"
+---
+
+<Info>
+  **Official source:** [Certification Data Sharing](https://www.fedramp.gov/2026/reference/certification-data-sharing/) (`CDS`), FedRAMP Consolidated Rules release `2026.10.14.01`. This page is a plain-English summary. The official rule text governs.
+</Info>
+
+## In short
+
+You may store and share your FedRAMP Certification Data on the platform you choose, as long as it follows FedRAMP rules for access, accuracy and transparency. The ruleset recognizes that this information is usually your intellectual property, not federal information. You must publish core information about your offering publicly in human-readable and JSON formats, and use a FedRAMP-compatible trust center to share Certification Data with all necessary parties. Trust centers must give uninterrupted and programmatic access, keep an inventory of agency access and log access. Rev5 providers moving off USDA Connect must notify FedRAMP and their agency customers.
+
+## Who it applies to
+
+| Subset | Type | Path | Class | Audience |
+| --- | --- | --- | --- | --- |
+| [General Provider Responsibilities](https://www.fedramp.gov/2026/reference/certification-data-sharing/#general-provider-responsibilities) | 20x, Rev5 | Program, Agency | B, C, D | Providers |
+| [FedRAMP-Compatible Trust Centers](https://www.fedramp.gov/2026/reference/certification-data-sharing/#fedramp-compatible-trust-centers) | 20x, Rev5 | Program, Agency | B, C, D | Providers |
+| [Using a Trust Center](https://www.fedramp.gov/2026/reference/certification-data-sharing/#using-a-trust-center) | 20x, Rev5 | Program, Agency | B, C, D | Providers |
+| [Rev5-Specific Provider Responsibilities](https://www.fedramp.gov/2026/reference/certification-data-sharing/#rev5-specific-provider-responsibilities) | Rev5 | Program, Agency | B, C, D | Providers |
+
+- The FedRAMP-Compatible Trust Centers rules apply to trust centers that are FedRAMP-compatible.
+- The Using a Trust Center rules apply to providers using a FedRAMP-compatible trust center instead of USDA Connect. They don't apply to providers using USDA Connect.
+
+<Note>
+  The subsets list Classes B, C and D, but [`CDS-CSO-AVR`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#availability-reporting) and [`CDS-CSO-PSM`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#per-service-certification-materials) include Class A variants.
+</Note>
+
+## Key dates
+
+| | 20x | Rev5 |
+| --- | --- | --- |
+| Status | Required (Consolidated Rules for 2026) | Required (Consolidated Rules for 2026) |
+| Optional adoption allowed | 2026-07-04 | 2026-07-04 |
+| Obtaining initial certification | 2026-07-04 | 2027-01-01 |
+| Maintaining ongoing certification | 2027-01-01 | 2027-08-01 |
+| Grace period ends | First FedRAMP independent assessment started after 2027-01-01 | 2028-02-01 |
+
+<Note>
+  The Rev5 grace period for CDS ends on a fixed date (2028-02-01), not on your next independent assessment.
+</Note>
+
+## What you need to do
+
+### General provider responsibilities (20x and Rev5)
+
+| Rule | Force | What it means for you |
+| --- | --- | --- |
+| [`CDS-CSO-PUB`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#public-information) | MUST | Publicly share up-to-date information about the offering in human-readable and JSON formats, including at least the available and applicable items listed below. |
+| [`CDS-CSO-SVC`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#public-service-list) | MUST | Publicly share a detailed list of the services in the offering and their security categories, using names that match your public marketing. It MUST let a potential customer tell what is and isn't in the Minimum Assessment Scope without requesting access to Certification Data. |
+| [`CDS-CSO-FID`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#always-include-fedramp-id) | MUST | Once assigned, include the offering's FedRAMP ID in all Certification Data, including reports, notifications and other communication that results from FedRAMP rules. Use a placeholder until it is assigned. |
+| [`CDS-CSO-FRC`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#fedramp-certification-reports) | MUST | Include FedRAMP Certification Reports in your Certification Data without inappropriate modification, within 2 weeks of receiving them from FedRAMP. |
+| [`CDS-CSO-AVR`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#availability-reporting) | Varies by class (SHOULD for A, MUST for B, C, D) | Maintain a web service showing current and historical availability of core services over at least the past 30 days, including availability incidents, in human-readable and machine-readable formats. It SHOULD (Class A) or MUST (Classes B, C, D) stay available even if the offering is unavailable. It may be separate from the trust center. |
+| [`CDS-CSO-UTC`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#use-trust-centers) | MUST | Use a FedRAMP-compatible trust center to store and share Certification Data with all necessary parties. |
+| [`CDS-CSO-CBF`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#consistency-between-formats) | MUST | Use automation to keep human-readable and machine-readable versions of Certification Data consistent. |
+| [`CDS-CSO-RIS`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#responsible-information-sharing) | MUST and SHOULD NOT | You MUST provide enough information to support agency authorization decisions. You SHOULD NOT include sensitive details likely to let a threat actor gain access, cause harm or disrupt operations. |
+| [`CDS-CSO-IRP`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#include-relevant-policies) | MUST | Supply all relevant policies and procedures, with a human-readable and machine-readable reference listing, for each: name, file or page name, brief summary, word count, current version, date of last update, and related FedRAMP Practices (if applicable). |
+| [`CDS-CSO-HAD`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#historical-fedramp-certification-data) | MUST | Supply snapshots of Certification Data aligned to each Ongoing Certification Report to all necessary parties, and keep them available for the duration of certification. |
+| [`CDS-CSO-PSM`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#per-service-certification-materials) | Varies by class (MAY for A, B, C; MUST for D) | Supply per-service certification materials. You decide what counts as a separate service. |
+| [`CDS-CSO-RPS`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#responsible-public-package-sharing) | MAY | You MAY responsibly share some or all of your Certification Package publicly or with others if you determine it will NOT likely have an adverse effect on the offering. |
+
+`CDS-CSO-PUB` requires at least the following, where available and applicable:
+
+1. FedRAMP ID
+2. Service model
+3. Deployment model
+4. Business category
+5. UEI number
+6. Sales contact information
+7. Security contact information
+8. Product website link
+9. Link to product logo: a valid, properly named image link that displays in a browser without processing (transparent PNG preferred)
+10. Overall service description
+11. Detailed list of specific services and their security categories (see `CDS-CSO-SVC`)
+12. Link to secure configuration guidance
+13. Overview of documentation you supply for the offering
+14. Link to your trust center landing page, with instructions for accessing information in it
+15. Next Ongoing Certification Report date (see [`CCM-OCR-NRD`](https://www.fedramp.gov/2026/reference/collaborative-continuous-monitoring/#next-report-date))
+16. Current FedRAMP Recognized independent assessment service
+
+<Tip>
+  The `CDS-CSO-PUB` notes say this information should generally be on a public web page or shared publicly in a FedRAMP-compatible trust center. FedRAMP and agency GRC tools will consume the JSON with web-based automation, so don't expect them to download it. FedRAMP strongly recommends involving application engineers to make the public JSON work with web-based applications. See also [`FRC-CSO-JSN`](https://www.fedramp.gov/2026/reference/fedramp-certification/#fedramp-json-schemas).
+</Tip>
+
+<Accordion title="Responsible information sharing: tips from the rule">
+  The `CDS-CSO-RIS` note says this isn't a license to leave out accurate risk information. Abstract specifics that would likely lead to compromise, and expect that your Certification Data could be breached. The rule's key tests flag passwords, API keys and access credentials, excessive methodology detail that exposes weaknesses, and personally identifiable information about employees. Its examples contrast naming a specific safe model and location with describing a rated safe in a secure location with limited access.
+</Accordion>
+
+### FedRAMP-compatible trust centers
+
+| Rule | Force | What it means for you |
+| --- | --- | --- |
+| [`CDS-TRC-USH`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#uninterrupted-sharing) | MUST | Share Certification Data with all necessary parties without interruption: no manual approval for each access and no complicated process. The preferred approach is on-demand, just-in-time access provisioning. |
+| [`CDS-TRC-PAC`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#programmatic-access) | MUST | Provide documented programmatic access to all Certification Data, including human-readable materials. |
+| [`CDS-TRC-AAI`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#agency-access-inventory) | MUST | Keep an inventory and history of federal agency users or systems with access, and make it available to FedRAMP on request. |
+| [`CDS-TRC-ACL`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#access-logging) | MUST and SHOULD | You MUST log access and store access summaries for at least six months. You SHOULD make a party's own access information available to that party on request. |
+| [`CDS-TRC-HMR`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#human-and-machine-readable-certification-data) | SHOULD | Make Certification Data available to view and download in human-readable and machine-readable formats. |
+| [`CDS-TRC-SSM`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#self-service-access-management) | SHOULD | Offer features that encourage all necessary parties to provision and manage access for their own users and services. |
+
+### Using a trust center (instead of USDA Connect)
+
+| Rule | Force | What it means for you |
+| --- | --- | --- |
+| [`CDS-UTC-AAD`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#agency-access-denial) | MUST | Notify FedRAMP within 5 business days of denying an agency's request for access to Certification Data, using the [\[CSP\] Agency Access Denial](https://help.fedramp.gov/hc/en-us/requests/new?ticket_form_id=51829826617243) form. |
+| [`CDS-UTC-AGA`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#agency-access) | SHOULD | Give agencies access to your Certification Package on request. |
+
+### Rev5-specific provider responsibilities
+
+| Rule | Force | What it means for you |
+| --- | --- | --- |
+| [`CDS-CSF-TCM`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#trust-center-migration) | MUST | When you migrate to a trust center, notify all necessary parties (FedRAMP at info@fedramp.gov, and agency customers through each agency's security contact). Also post instructions in your existing USDA Connect Community Portal secure folders on how to get Certification Data from the trust center. |
+
+## Differences by class
+
+| Rule | Class A | Class B | Class C | Class D |
+| --- | --- | --- | --- | --- |
+| `CDS-CSO-AVR` availability reporting web service | SHOULD maintain; SHOULD stay available during outages | MUST maintain; MUST stay available during outages | MUST maintain; MUST stay available during outages | MUST maintain; MUST stay available during outages |
+| `CDS-CSO-PSM` per-service materials | MAY | MAY | MAY | MUST |
+
+The `CDS-CSO-PSM` notes encourage one comprehensive set of materials for shared aspects, with separate materials only for what is unique to each service.
+
+## What FedRAMP staff have said
+
+<Note>
+  **A public landing page can count as a basic trust center.** On 2026-09-02, **pete-gov** said that for the Marketplace Initial Implementation phase no rule applies the FedRAMP-compatible trust center requirements. The rules require you to publish `CDS-CSO-PUB` information publicly in human-readable and JSON formats, and much of it won't yet be available or applicable. A FedRAMP landing page that publishes all of that information would be considered "a basic FedRAMP-compatible Trust Center." [Discussion #147 comment](https://github.com/FedRAMP/community/discussions/147#discussioncomment-18255553)
+</Note>
+
+<Note>
+  **Public JSON must work in web apps.** On 2026-09-17, **pete-gov** said FedRAMP needs to read machine-readable JSON directly from web-based applications, which means a CORS allow and an appropriate content type. **pete-gov** said FedRAMP would strictly require this for JSON that must be public, such as `CDS-CSO-PUB` and `CDS-CSO-SVC`, and would hold an RFC before applying it to JSON behind a trust center login. **pete-gov** also suggested planning for API requirements in a future ruleset. Upstream later updated `CDS-CSO-PUB` and `FRC-CSO-JSN` (2026-10-05). [Discussion #175 comment](https://github.com/FedRAMP/community/discussions/175#discussioncomment-18482587), [earlier comment](https://github.com/FedRAMP/community/discussions/175#discussioncomment-18481945)
+</Note>
+
+<Note>
+  **Why publish it yourself.** On 2026-10-07, **pete-gov** said FedRAMP wants providers to own the `CDS-CSO-PUB` information, which FedRAMP then imports into the Marketplace. Agencies can also pull the latest information programmatically from you. [Discussion #146 comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18799636)
+</Note>
+
+<Note>
+  **Uninterrupted access in practice.** On 2026-07-31, asked about `CDS-TRC-USH`, **pete-gov** said the trust center rules are deliberately minimal. If agencies routinely tell FedRAMP they lack the access they need, FedRAMP would likely conclude the rules aren't being met. **pete-gov** also noted that trust centers requiring identity providers an agency can't use create a poor customer experience. [Discussion #146 comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-17852670)
+</Note>
+
+<Note>
+  **Sharing packages with other companies.** On 2026-07-24, **pete-gov** said Certification Packages are the intellectual property of the company that creates them. FedRAMP asserts no ownership and won't penalize responsible sharing under `CDS-CSO-RPS`. [Discussion #154 comment](https://github.com/FedRAMP/community/discussions/154#discussioncomment-17765277)
+</Note>
+
+<Note>
+  **Rev5 transition notice.** On 2026-07-23, **paulagosta** said moving to the CDS ruleset requires notifying FedRAMP at info@fedramp.gov under `CDS-CSF-TCM`. On 2026-08-19, **paulagosta** said CDS is the only Rev5 ruleset that requires you to inform FedRAMP, since it usually needs action on FedRAMP's side for providers in USDA Connect. [Discussion #147 comment](https://github.com/FedRAMP/community/discussions/147#discussioncomment-17755820), [Discussion #146 comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18081891)
+</Note>
+
+<Note>
+  **Before you move to a trust center.** On 2026-10-02, **paulagosta** said Rev5 providers that haven't transitioned to a CDS trust center should keep using their current mechanism for continuous monitoring materials (for most Class B and C, USDA Connect). Interim arrangements should be documented through the significant change process or monthly continuous monitoring meetings. [Discussion #146 comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18714482), [follow-up](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18719569)
+</Note>
+
+<Note>
+  **Is the trust center in scope?** On 2026-09-03, **pete-gov** said it depends on what you put in it, applying [`MAS-CSO-IIR`](/rules/minimum-assessment-scope). If you share information responsibly, it may be reasonable to conclude the trust center is out of scope. Either way, **pete-gov** said to make sure it is secure. [Discussion #168 comment](https://github.com/FedRAMP/community/discussions/168#discussioncomment-18277999)
+</Note>
+
+## Related
+
+- [Certification package overview](/rules/certification-package-overview): `CPO-CSO-OVR` pulls in `CDS-CSO-PUB`, `CDS-CSO-SVC` and `CDS-CSO-IRP`.
+- [Minimum assessment scope](/rules/minimum-assessment-scope)
+- [FedRAMP certification](/rules/fedramp-certification)
+- [Collaborative continuous monitoring](/rules/collaborative-continuous-monitoring)
+- [Marketplace listing](/rules/marketplace-listing)
+- [Rev5 questions on the Consolidated Rules for 2026](/discussions/rev5-cr26-questions)
+- [20x questions on the Consolidated Rules for 2026](/discussions/20x-cr26-questions)

@@ -1,0 +1,250 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-139",
+  "node_id": "D_kwDOOxfoic4Alp3v",
+  "number": 139,
+  "title": "Evidence collection and Inventory creation for AWS",
+  "url": "https://github.com/FedRAMP/community/discussions/139",
+  "category": "Rev5 Discussion",
+  "category_slug": "rev5-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "austinsonger",
+  "author_is_official": false,
+  "created_at": "2026-04-13T01:52:44Z",
+  "updated_at": "2026-06-24T21:35:02Z",
+  "last_edited_at": null,
+  "closed": true,
+  "closed_at": "2026-06-24T21:35:02Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "I don't know where I would post this. Just a tool that I created helping with Evidence collection and Inventory creation for aWS.\r\n\r\n\r\n[The Grabber](https://github.com/austinsonger/the-grabber)\r\n\r\n\r\n> It would be cool if there was another category for posts like this",
+  "comment_count": 2,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4A_H9j",
+      "url": "https://github.com/FedRAMP/community/discussions/139#discussioncomment-16547683",
+      "author": "ethanolivertroy",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-04-13T18:21:04Z",
+      "updated_at": "2026-04-13T18:21:04Z",
+      "upvotes": 3,
+      "minimized": false,
+      "body": "Yeh a tooling category would would be great",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A_-Oe",
+      "url": "https://github.com/FedRAMP/community/discussions/139#discussioncomment-16769950",
+      "author": "rjb4standards",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-04-30T13:28:13Z",
+      "updated_at": "2026-04-30T13:28:50Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "I would also appreciate some guidance on the types of evidence needed to show adherence to FedRAMP expectations and requirements.",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A_-SC",
+          "url": "https://github.com/FedRAMP/community/discussions/139#discussioncomment-16770178",
+          "author": "sam-aydlette",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-04-30T13:50:49Z",
+          "updated_at": "2026-04-30T13:50:49Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "To expand on this point, it's important that FedRAMP define what constitutes a \"unique\" inventory component. For containers, for example: is each distinct SHA digest a separate component, or can a \"golden\" registry image count as one component even when downstream teams tweak it, given that vulnerability remediation is managed centrally upstream? Relatedly, what should the canonical identifier be? Should CSPs standardize on PURL or similar? These need specific answers. Otherwise there's no apples-to-apples basis for comparison, and every CSP's quantitative risk measurements will rest on different foundations."
+        },
+        {
+          "id": "DC_kwDOOxfoic4A_-WS",
+          "url": "https://github.com/FedRAMP/community/discussions/139#discussioncomment-16770450",
+          "author": "dan-fedramp",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-04-30T14:20:15Z",
+          "updated_at": "2026-04-30T14:20:15Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "This is a really good thought and it comes up a lot. In 20x, we have generally been hesitant to provide prescriptive guidance because we want to recognize that the broad range of services available to the government have very different architectures and risks. For example, in this case do the downstream \"tweaks\" impact the security of the component? Only someone deeply familiar with the architecture and operation of the system can really answer that. If FedRAMP decreed that you must include a separate entry for each unique SHA then we would be needlessly creating work for many providers and potentially making the packages much more difficult to review. If we decided that you only need to include each unique image then we might be overlooking security concerns in some systems. \r\n\r\nOur approach has been to require the provider to define the criteria AND to explain the logic behind that choice.  For example, \"We include this image in our inventory as a single component because downstream tweaks are limited to changing environment variable values which are strongly typed and validated at run time for compliance with a regular expression to detect any invalid characters or malicious injection\" makes a lot of sense. And if that reduces the number of inventory components from thousands of instances to one image that makes the system security easier to understand and evaluate. Additionally, understanding the logic of how you decided on the best approach helps a potential customer better understand your overall approach to security. \r\n\r\nThe initial authorization decision by an agency should be made with as rich an understanding of the risks as possible. We need agencies to be able to consume a CSP package and really understand how the service is secured and how the security decisions of the provider will impact the specific use case. A large part of the reasoning for NOT providing more prescriptive guidance is to allow providers to present security information in a way that makes sense for the specific system. We presume that the service provider has already put a lot of thought into how to monitor risk for themselves and we want the agency to have access to that experience rather than trying to force fit data into specific templates or formats. And of course the independent validation and FedRAMP review process ensures that providers are transparent and comprehensive in providing this information. \r\n\r\nQuantitative risk measurements between different systems have always been a challenge. And I don't think that will change with 20x. Where the quantitative data that is generated through the automation required in 20x adds value is not in comparing one vendor to another but in monitoring changes in the security of the service over time. So it is less important that all vendors measure risk the same way than it is for each vendor to measure risk in a clear and consistent way."
+        },
+        {
+          "id": "DC_kwDOOxfoic4A_-bD",
+          "url": "https://github.com/FedRAMP/community/discussions/139#discussioncomment-16770755",
+          "author": "rjb4standards",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-04-30T14:48:13Z",
+          "updated_at": "2026-04-30T14:48:13Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "@dan-fedramp Thanks for clarifying you position. This one-one \"tell me what you're doing\" approach may face some scaling issues and legal challenges if there is not one set of criteria that everyone is being measured against. \r\n\r\nIf everyone is being measured against the same, transparent criteria, with scoring results posted for public review, it would seem to address some of the potential legal concerns.\r\n\r\nI am not a lawyer. I'm a software engineer just trying to understand what needs to be done to pass the test."
+        },
+        {
+          "id": "DC_kwDOOxfoic4A_-eB",
+          "url": "https://github.com/FedRAMP/community/discussions/139#discussioncomment-16770945",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-04-30T15:05:41Z",
+          "updated_at": "2026-04-30T15:05:41Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "That's just not how U.S. government information system policy works through - only individual agencies at the point of specific use can determine their specific security expectations for leveraging a cloud service. FedRAMP can never say \"this is secure enough for folks to use because it passes a specific set of tests.\" Instead \r\n\r\nFedRAMP's purpose is to say \"there is enough information about the security decisions made by this cloud service for an agency to rapidly make a determination for this general security category of use cases as they follow the Risk Management Framework to properly implement and assess their own controls around maintaining a federal information system that uses a third-party cloud service.\"\r\n\r\nRest assured, FR has regular access to awesome government tech law lawyers in GSA's Office of General Counsel and understands the legal and policy framework we operate under. ;)\r\n\r\n"
+        },
+        {
+          "id": "DC_kwDOOxfoic4A_-mK",
+          "url": "https://github.com/FedRAMP/community/discussions/139#discussioncomment-16771466",
+          "author": "rjb4standards",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-04-30T15:44:01Z",
+          "updated_at": "2026-04-30T15:44:30Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "@pete-gov  Thanks for the quick response. So, the bottom line is, each Agency will tell me what they expect, and there could be different requirements. Not ideal, but if that's the way it is, then that's what we'll do."
+        },
+        {
+          "id": "DC_kwDOOxfoic4A_-uS",
+          "url": "https://github.com/FedRAMP/community/discussions/139#discussioncomment-16771986",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-04-30T16:27:06Z",
+          "updated_at": "2026-04-30T16:27:06Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> So, the bottom line is, each Agency will tell me what they expect, and there could be different requirements. \r\n\r\nThe theory is more that agencies will look at the information available to see what cloud services meet their specific use case requirements and either choose one that demonstrates those requirements are met in the FR materials or choose one that is close who can be encouraged to add some additional capabilities as part of a contractual agreement where it's worth it to the cloud service provider.\r\n\r\nWe don't want to encourage companies to invest millions or tens of millions of dollars in adopting an arbitrary baseline out of a misguided hope that therefore it's good enough for every possible use case and no agency will ever ask them for something. That never works out for anyone. \r\n\r\nThe classic example is an inventory management tool - agencies wanting to use a service for managing their inventory of office supplies are not likely to need a considerable amount of security controls in place and care more about price, while agencies wanting to use a service for managing their inventory of nuclear weapons might want quite a bit more security controls in place with some specific additional things and be willing to pay much more. There should be multiple services that are available for each of these use cases, rather than just one or two services that have fully invested in meeting the second use case and therefore also happen to be available for the first.\r\n"
+        },
+        {
+          "id": "DC_kwDOOxfoic4A_-w4",
+          "url": "https://github.com/FedRAMP/community/discussions/139#discussioncomment-16772152",
+          "author": "rjb4standards",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-04-30T16:43:43Z",
+          "updated_at": "2026-04-30T16:43:43Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> The classic example is an inventory management tool - agencies wanting to use a service for managing their inventory of office supplies are not likely to need a considerable amount of security controls in place and care more about price, while agencies wanting to use a service for managing their inventory of nuclear weapons might want quite a bit more security controls in place with some specific additional things and be willing to pay much more.\r\n\r\nIt seems that the \"office supply system\" should have some minimum \"baseline\" set of controls that every \"office supply application\" should expect to meet with some needs going beyond the minimum. At least knowing the \"low water mark\" can help set a baseline of expectations. I hope that each agency isn't starting from a green field with regard to cybersecurity and risk management expectations."
+        },
+        {
+          "id": "DC_kwDOOxfoic4A_-4z",
+          "url": "https://github.com/FedRAMP/community/discussions/139#discussioncomment-16772659",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-04-30T17:47:04Z",
+          "updated_at": "2026-04-30T17:47:04Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> It seems that the \"office supply system\" should have some minimum \"baseline\" set of controls that every \"office supply application\" should expect to meet with some needs going beyond the minimum.\r\n\r\nYes, FedRAMP has a few hundred rules, controls, and indicators that must be addressed, verified, and validated, both by the provider and independently, with the count and complexity increasing as the Certification Class increases."
+        },
+        {
+          "id": "DC_kwDOOxfoic4A__Lu",
+          "url": "https://github.com/FedRAMP/community/discussions/139#discussioncomment-16773870",
+          "author": "sam-aydlette",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-04-30T20:24:53Z",
+          "updated_at": "2026-04-30T20:24:53Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "@pete-gov for me this is less about security decisions for a single CSP and more about aggregation. An agency ISSO asking a question like \"across all our cloud services, what is our risk exposure to CVE-XXXX?\" is not answerable rapidly if every CSP defines \"unique component\" differently, even though the underlying data may exist in each package. A recommended (not mandated) canonical identifier like PURL, which CSPs could opt out of when it makes sense to do so, would preserve the flexibility you described while also making aggregation tractable."
+        },
+        {
+          "id": "DC_kwDOOxfoic4BAAza",
+          "url": "https://github.com/FedRAMP/community/discussions/139#discussioncomment-16780506",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-05-01T13:43:00Z",
+          "updated_at": "2026-05-01T13:43:00Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "The described scenario requires manual deep dives through large amounts of materials today and isn't done at scale on any repeatable basis for agency usage of cloud services in general. A transition to structured data, even if individual providers structure it differently, presents an opportunity for agencies that also transition to modern GRC or data analysis capabilities to be able to have a good chance at building pipelines for that kind of data in a reasonable fashion, regardless of canonical identifiers. \r\n\r\nThis is, however, an area where industry is expected (and likely) to pick up the slack as commonly used tools and capabilities begin driving opinionated formatting that is more flexible and useful than externally imposed structures. It is unlikely that in 2 years there will be 1000 different cloud service providers all custom building a reporting pipeline when a significant majority of those providers already leverage the same or similar services for reporting. And if there is evidence of a trend of folks jumping the shark entirely then the rules can be changed at the point of need."
+        },
+        {
+          "id": "DC_kwDOOxfoic4BAJ3z",
+          "url": "https://github.com/FedRAMP/community/discussions/139#discussioncomment-16817651",
+          "author": "iteuscher",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-05-05T15:03:47Z",
+          "updated_at": "2026-05-05T15:03:47Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "This is a great summary of the 20x mindset:\r\n\r\n> A large part of the reasoning for NOT providing more prescriptive guidance is to allow providers to present security information in a way that makes sense for the specific system. We presume that the service provider has already put a lot of thought into how to monitor risk for themselves and we want the agency to have access to that experience rather than trying to force fit data into specific templates or formats. And of course the independent validation and FedRAMP review process ensures that providers are transparent and comprehensive in providing this information.\r\n\r\nI shared this with someone last week just starting to implement 20x and their response was relief that they won't have to redesign everything for FR. \r\n\r\nTo the question in this thread of \r\n>what constitutes a \"unique\" inventory component\r\n\r\nThey understood that if multiple compute instances have the same image and config they can treat that as a single component. But at the same time they understood that they will need to provide evidence to support their claim of consistent inventory if they are going to show 1 that represents many components. Meaning if you say 1000 EC2s are accurately represented as 1 \"unique\" inventory component you should back that up with some evidence to verify how you know they are the same and there isn't drift between them. \r\n\r\nI think the VDR standard sets a good approach of asking for more frequency [on information resources that are likely to drift ](https://www.fedramp.gov/docs/20x/vulnerability-detection-and-response/#persistent-sample-detection:~:text=information%20resources%20that%20are%20likely%20to%20drift) vs [information resources that are NOT likely to drift ](https://www.fedramp.gov/docs/20x/vulnerability-detection-and-response/#persistent-drift-detection:~:text=information%20resources%20that%20are%20NOT%20likely%20to%20drift) and making it clear that sampling (a bit of a scary word in automation-based audit/assessment) can work on \"[identical information resources](https://www.fedramp.gov/docs/20x/vulnerability-detection-and-response/#avoid-kevs:~:text=Providers%20MAY%20sample%20effectively%20identical%20information%20resources)\". I think the key part is giving some evidence to back up the claim of identical resources so there is assurance that all resources are being accurately assessed. To Dan's point above, that type of evidence and what each CSP counts as 1 unique component will vary based on system architecture. Thankfully it won't always have to be IP addresses anymore 🙌 \r\n\r\n-- Isaac (Paramify)"
+        }
+      ],
+      "replies_total": 11,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "austinsonger",
+    "dan-fedramp",
+    "ethanolivertroy",
+    "iteuscher",
+    "pete-gov",
+    "rjb4standards",
+    "sam-aydlette"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/139#discussioncomment-16770450",
+      "author": "dan-fedramp",
+      "created_at": "2026-04-30T14:20:15Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/139#discussioncomment-16770945",
+      "author": "pete-gov",
+      "created_at": "2026-04-30T15:05:41Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/139#discussioncomment-16771986",
+      "author": "pete-gov",
+      "created_at": "2026-04-30T16:27:06Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/139#discussioncomment-16772659",
+      "author": "pete-gov",
+      "created_at": "2026-04-30T17:47:04Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/139#discussioncomment-16780506",
+      "author": "pete-gov",
+      "created_at": "2026-05-01T13:43:00Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://github.com/austinsonger/the-grabber",
+      "https://www.fedramp.gov/docs/20x/vulnerability-detection-and-response/#avoid-kevs:~:text=Providers%20MAY%20sample%20effectively%20identical%20information%20resources",
+      "https://www.fedramp.gov/docs/20x/vulnerability-detection-and-response/#persistent-drift-detection:~:text=information%20resources%20that%20are%20NOT%20likely%20to%20drift",
+      "https://www.fedramp.gov/docs/20x/vulnerability-detection-and-response/#persistent-sample-detection:~:text=information%20resources%20that%20are%20likely%20to%20drift"
+    ],
+    "topics": [
+      "20x",
+      "vulnerability_mgmt"
+    ]
+  },
+  "content_hash": "438e30de02fe27cc0da7d8ab70398545c71d5d065ff20ae490c53d37d5b926de",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

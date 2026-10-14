@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-77",
+  "node_id": "D_kwDOOxfoic4AhbvI",
+  "number": 77,
+  "title": "Transform9 - FedRAMP 20x Phase One Pilot Final Submission",
+  "url": "https://github.com/FedRAMP/community/discussions/77",
+  "category": "20x Discussion",
+  "category_slug": "20x-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "Aakash-Gujja",
+  "author_is_official": false,
+  "created_at": "2025-08-20T02:45:01Z",
+  "updated_at": "2025-11-18T16:25:21Z",
+  "last_edited_at": "2025-08-20T02:45:17Z",
+  "closed": true,
+  "closed_at": "2025-11-18T16:25:21Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 2,
+  "body": "Transform9 is excited to share that we’ve submitted our final Phase One pilot package for Transform9 20x as part of the FedRAMP 20x initiative.\r\n\r\n View the full submission here:  https://github.com/Aakash-Gujja/Transform9-FedRAMP-20X-Pilot\r\n",
+  "comment_count": 0,
+  "comments": [],
+  "answer_url": null,
+  "participants": [
+    "Aakash-Gujja"
+  ],
+  "official_responses": [],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://github.com/Aakash-Gujja/Transform9-FedRAMP-20X-Pilot"
+    ],
+    "topics": [
+      "20x"
+    ]
+  },
+  "content_hash": "6afd301212ce3f190eb494dc138007e07cc1e783bb09911e9af640be8cc493eb",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

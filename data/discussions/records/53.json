@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-53",
+  "node_id": "D_kwDOOxfoic4Aggvr",
+  "number": 53,
+  "title": "FedRAMP Training",
+  "url": "https://github.com/FedRAMP/community/discussions/53",
+  "category": "Rev5 Discussion",
+  "category_slug": "rev5-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "ChanceofClouds",
+  "author_is_official": false,
+  "created_at": "2025-07-02T14:27:42Z",
+  "updated_at": "2025-08-25T14:23:30Z",
+  "last_edited_at": null,
+  "closed": true,
+  "closed_at": "2025-08-25T14:23:30Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 2,
+  "body": "Here FedRAMP created training for CSPs and 3PAOs: https://www.fedramp.gov/rev5/training/.\r\nTwo questions:\r\n1. Are 3PAO personnel still expected to complete the 3PAO quiz?\r\n2. Are there still plans to create training for Federal agency personnel either for Rev. 5 or FedRAMP 20x (Did not see it on the roadmap)?",
+  "comment_count": 1,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4A0Cn-",
+      "url": "https://github.com/FedRAMP/community/discussions/53#discussioncomment-13642238",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2025-07-02T15:01:13Z",
+      "updated_at": "2025-07-02T15:03:49Z",
+      "upvotes": 3,
+      "minimized": false,
+      "body": "> 1. Are 3PAO personnel still expected to complete the 3PAO quiz?\r\n\r\nFor the moment, FedRAMP hasn't made any official changes to expectations here for Rev5 even though those materials are a bit out of date. That said, 3PAOs are expected to manage their own training of personnel and FedRAMP is not verifying that these trainings are happening.\r\n \r\n> 2. Are there still plans to create training for Federal agency personnel either for Rev. 5 or FedRAMP 20x (Did not see it on the roadmap)?\r\n\r\nThere are no plans for this throughout the rest of FY25 and FY26; it's included in the \"nearly all other previously discussed work\" that has been stopped in the [FedRAMP in 2025 announcement](https://www.fedramp.gov/2025-03-24-FedRAMP-in-2025/). Providing training is not a statutory requirement for FedRAMP and is minimized as an responsibility in M-24-15 that has been deferred as a non-critical priority for the program currently.\r\n\r\n\r\n",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A0C52",
+          "url": "https://github.com/FedRAMP/community/discussions/53#discussioncomment-13643382",
+          "author": "ChanceofClouds",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-07-02T16:38:25Z",
+          "updated_at": "2025-07-02T16:38:25Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "@pete-gov Thank you for the quick and detailed response."
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "ChanceofClouds",
+    "pete-gov"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/53#discussioncomment-13642238",
+      "author": "pete-gov",
+      "created_at": "2025-07-02T15:01:13Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://www.fedramp.gov/2025-03-24-FedRAMP-in-2025/",
+      "https://www.fedramp.gov/rev5/training/."
+    ],
+    "topics": [
+      "20x",
+      "3pao",
+      "rev5"
+    ]
+  },
+  "content_hash": "36f793b22353087a0b48e623c3784b0dc001086810d51f0eb742526c499f2527",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

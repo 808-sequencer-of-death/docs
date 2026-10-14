@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-179",
+  "node_id": "D_kwDOOxfoic4AqCvV",
+  "number": 179,
+  "title": "RFC-0035 Cryptographic Module Use Rules Updates",
+  "url": "https://github.com/FedRAMP/community/discussions/179",
+  "category": "Open RFCs",
+  "category_slug": "open-rfcs",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": true,
+  "author": "pete-gov",
+  "author_is_official": true,
+  "created_at": "2026-10-14T18:19:28Z",
+  "updated_at": "2026-10-14T18:35:09Z",
+  "last_edited_at": "2026-10-14T18:35:09Z",
+  "closed": false,
+  "closed_at": null,
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 2,
+  "body": "# RFC-0035 Cryptographic Module Use Rules Updates\r\n\r\n- Status: Open\r\n- Start Date: October 14, 2026\r\n- Closing Date: November 17, 2026\r\n\r\n> Current Cryptographic Module Use rules for reference: https://www.fedramp.gov/2026/reference/cryptographic-module-use/\r\n\r\n## **Summary**\r\n\r\nThis RFC proposes updates to the Cryptographic Module Use (CMU) rules in the Consolidated Rules for 2026 (CR26) for both 20X and Rev 5. The proposed updates remove a previously firm barrier at Class D but do not require currently operating cloud services to do anything differently.\r\n\r\n1. Define “CMVP-validated module” as a cryptographic module that has an active validation in the NIST Cryptographic Module Validation Program (or an update stream of such). This simplifies much of the language and discussion in the rules without using potentially confusing standalone terms like “validated encryption.”\r\n2. Change CMU-CSO-UVM for Class D from MUST to SHOULD, matching Class C.\r\n3. Add CMU-CSO-TSC, which treats replacing a CMVP-validated module with a non-validated one as a transformative change for Class B, C, and D\r\n4. Move the update-stream note from CMU-CSO-UVM to the new definition, and replace the term “Validation” in the CMU rules with “CMVP-Validated Module”.\r\n\r\nThis RFC also does not change agency obligations under FIPS 140-3, or set post-quantum cryptography requirements. Instead, this RFC acknowledges that many agency customers frequently use cloud services where validated cryptographic modules are not in play and FedRAMP’s role is not to block agency access to this type of service when an agency deems it is appropriate or necessary.\r\n\r\n## **Motivation**\r\n\r\nAgencies decide where they rely on cryptography to protect federal information. Where they do, FIPS 140-3 applies regardless of FedRAMP Certification Class. There exist many valid technical reasons for agencies to bypass the requirements in FIPS 140-3 today, whether because the data is not sensitive enough to be encrypted with NIST Cryptographic Module Validation Program (CMVP) validated modules or because a specific agency use case requires devices or software that do not have validated modules.\r\n\r\nRequiring Class D services to use only CMVP-validated modules can force providers to run separate cryptography for government customers. That cryptography can cost more, lag behind commercial security updates, and perform worse than alternative solutions that still provide sufficient protection for specific use cases.\r\n\r\nThis proposed change to the FedRAMP Certification rules, especially for Class D, will allow cloud services with specific use cases or valid technical reasons to use other types of cryptography to obtain and maintain a FedRAMP Certification. The existing rule of CMU-CSO-CMD (Cryptographic Module Documentation) requires cloud service providers to clearly document their use of cryptographic modules such that a potential agency customer will always know where and how the cloud service offering uses cryptographic modules and the potential risks of placing sensitive agency data into different parts of the cloud service offering. This proposed change will also allow cloud service providers to integrate emerging cryptographic technologies such as Post-Quantum Cryptography in some parts of their offering at the direct request of agency customers without creating vulnerabilities in the FedRAMP Practices.\r\n\r\nFinally, the proposed change forces cloud service providers to treat changes where a CMVP-validated module is removed from an aspect of the cloud service offering as a transformative change to ensure that agency customers have sufficient and timely warning of the change so that they can make updated risk determinations about the continued use of the service if a cloud service offering stops using such modules.\r\n\r\n## **Specific Proposed Changes**\r\n\r\n### FedRAMP Definitions\r\n\r\n**FRD-CVM** CMVP-Validated Module\r\n\r\n> A cryptographic module that has an active validation under the NIST Cryptographic Module Validation Program, or an update stream of such a module.\r\n>\r\n> _Note: Cryptographic modules include specific algorithms by definition; if an update stream of a cryptographic module adds new algorithms that were not previously validated then those algorithms cannot be considered within the scope of update stream usage under these rules as they are new algorithms within the module that have never been validated._\r\n\r\n### Cryptographic Module Use\r\n\r\n**CMU-CSO-CMD** Cryptographic Module Documentation\r\n\r\n> Providers MUST document the cryptographic modules used in each service (or groups of services that use the same modules) where cryptographic services are used to protect federal customer data, including whether they are CMVP-validated modules.\r\n>\r\n> _Note: This change simply incorporates the “CMVP-validated modules” definition; no functional change._\r\n\r\n**CMU-CSO-UVM** Using CMVP-Validated Modules\r\n\r\n> Providers with Class A Certifications MAY use CMVP-validated modules when using cryptographic services to protect federal customer data.\r\n>\r\n> Providers with Class B Certifications MAY use CMVP-validated modules when using cryptographic services to protect federal customer data.\r\n>\r\n> Providers with Class C Certifications SHOULD use CMVP-validated modules when using cryptographic services to protect federal customer data.\r\n>\r\n> Providers with Class D Certifications SHOULD use CMVP-validated modules when using cryptographic services to protect federal customer data.\r\n>\r\n> _Note: This change does not alter agency obligations under FIPS 140-3. Agencies use the documentation required by CMU-CSO-CMD to confirm where CMVP-validated modules protect federal customer data._\r\n\r\n**CMU-CSO-TSC** Transformative Significant Changes of Modules\r\n\r\n> Providers MUST treat changes from CMVP-validated modules to non-CMVP-validated modules as transformative changes when such cryptographic services are used to protect federal customer data.\r\n>\r\n> _Notes:_\r\n>\r\n> - _This is a new proposed rule that would apply to Class B, Class C, and Class D FedRAMP Certifications of both 20x and Rev5._\r\n> - _Updating a CMVP-validated module through its update stream is not such a change. An algorithm that an update stream **adds** is not within the module's validation; using one in place of a validated algorithm is such a change. Adding a non-validated algorithm while a CMVP-validated module still protects federal customer data, such as hybrid implementation, is not such a change._\r\n\r\n**CMU-CSO-CAT** Configuration of Agency Tenants\r\n\r\n> Providers SHOULD configure agency tenants by default to use cryptographic services that use CMVP-validated modules when such modules are available.\r\n>\r\n> _Note: This change simply incorporates the “CMVP-validated modules” definition; no functional change._\r\n",
+  "comment_count": 0,
+  "comments": [],
+  "answer_url": null,
+  "participants": [
+    "pete-gov"
+  ],
+  "official_responses": [],
+  "entities": {
+    "rule_ids": [
+      "FRD-CVM"
+    ],
+    "rfc_ids": [
+      "RFC-0035"
+    ],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://www.fedramp.gov/2026/reference/cryptographic-module-use/"
+    ],
+    "topics": [
+      "20x",
+      "class_a",
+      "class_b",
+      "class_c",
+      "class_d",
+      "crypto_fips",
+      "rev5",
+      "significant_change",
+      "vulnerability_mgmt"
+    ]
+  },
+  "content_hash": "ad3c979cf4fa30440326ff6696ab56b488f97947245efb231cb2e025443d350f",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

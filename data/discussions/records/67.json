@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-67",
+  "node_id": "D_kwDOOxfoic4AhCbe",
+  "number": 67,
+  "title": "Full SaaS Based Solutions Evidence Guidance",
+  "url": "https://github.com/FedRAMP/community/discussions/67",
+  "category": "20x Discussion",
+  "category_slug": "20x-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "jufkes",
+  "author_is_official": false,
+  "created_at": "2025-07-31T14:42:08Z",
+  "updated_at": "2025-08-25T14:22:39Z",
+  "last_edited_at": null,
+  "closed": true,
+  "closed_at": "2025-08-25T14:22:39Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "We are a HealthCare services company that heavily leverages cloud SaaS platforms for providing services. We are pursuing an opportunity that specifically calls out Fedramp status as a requirement. \r\n \r\nWhen reviewing the controls with our 3PAO partner, it appears that a great many of the controls are handled by the SaaS platforms we leverage. The platform does not leverage custom code, VM based applications, or anything of that nature. \r\n \r\nGiven that we do not have custom built software or maintain on prem infrastructure as part of these solutions, how do we provide documentation around the IAC, vulnerability management, or development pipeline controls? ",
+  "comment_count": 2,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4A1N_K",
+      "url": "https://github.com/FedRAMP/community/discussions/67#discussioncomment-13950922",
+      "author": "fortetroy",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2025-07-31T18:44:15Z",
+      "updated_at": "2025-07-31T18:44:16Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "What is the cloud SaaS?",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A1N_y",
+          "url": "https://github.com/FedRAMP/community/discussions/67#discussioncomment-13950962",
+          "author": "jufkes",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-07-31T18:50:55Z",
+          "updated_at": "2025-07-31T18:50:55Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "We use Microsoft Dynamics 365 deployed through the Power Platform as our CRM. \r\n\r\n[Link to the MSFT documentation](https://learn.microsoft.com/en-us/power-platform/admin/microsoft-dynamics-365-government)"
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A1OQi",
+      "url": "https://github.com/FedRAMP/community/discussions/67#discussioncomment-13952034",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2025-07-31T21:12:38Z",
+      "updated_at": "2025-07-31T21:13:30Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "> When reviewing the controls with our 3PAO partner, it appears that a great many of the controls are handled by the SaaS platforms we leverage. \r\n\r\nYour provider in this case is a third-party information resource and you will inherit the controls from them. Please note that for the 20xP1 pilot underlying infrastructure must already be FedRAMP Authorized.\r\n\r\nThe [Minimum Assessment Standard](https://github.com/FedRAMP/docs/blob/main/markdown/FRMR.MAS.minimum-assessment-standard.md) outlines the expected approach. \r\n\r\n_edit to add:_ If you're talking about just third-party providers in general (not the underlying infrastructure) then there's a bit more flexibility but again, the MAS provides the guidance here.\r\n",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "fortetroy",
+    "jufkes",
+    "pete-gov"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/67#discussioncomment-13952034",
+      "author": "pete-gov",
+      "created_at": "2025-07-31T21:12:38Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://github.com/FedRAMP/docs/blob/main/markdown/FRMR.MAS.minimum-assessment-standard.md",
+      "https://learn.microsoft.com/en-us/power-platform/admin/microsoft-dynamics-365-government"
+    ],
+    "topics": [
+      "3pao",
+      "vulnerability_mgmt"
+    ]
+  },
+  "content_hash": "0d79e04e17fe9d63d2f0d17176f3840f9f060efb2dffea7d6e3f177af13562fa",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

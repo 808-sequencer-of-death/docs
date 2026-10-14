@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-93",
+  "node_id": "D_kwDOOxfoic4AiN4h",
+  "number": 93,
+  "title": "Oct 1st Rev 5 CWG Cancelled",
+  "url": "https://github.com/FedRAMP/community/discussions/93",
+  "category": "Rev5 Announcements",
+  "category_slug": "rev5-announcements",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "paulagosta",
+  "author_is_official": true,
+  "created_at": "2025-10-01T12:20:45Z",
+  "updated_at": "2025-11-18T16:23:05Z",
+  "last_edited_at": null,
+  "closed": true,
+  "closed_at": "2025-11-18T16:23:05Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 2,
+  "body": "Team,\r\n\r\nDue to a Government shutdown, today's Rev5 Community Working Group is cancelled.  You should received a notification from Zoom if you signed up.  Please refer to https://www.fedramp.gov/shutdown/ for further identification of activities during a shutdown.  Thank you and apologies for any inconvenience.\r\n\r\nPaul",
+  "comment_count": 0,
+  "comments": [],
+  "answer_url": null,
+  "participants": [
+    "paulagosta"
+  ],
+  "official_responses": [],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://www.fedramp.gov/shutdown/"
+    ],
+    "topics": [
+      "rev5"
+    ]
+  },
+  "content_hash": "11c276e65dcfd292c9d9ca1422729ed4c54fed9dcf2b49d5c39bc93b1e55ac3d",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

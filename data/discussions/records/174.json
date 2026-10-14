@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-174",
+  "node_id": "D_kwDOOxfoic4ApT1T",
+  "number": 174,
+  "title": "Does FedRAMP consider quantum vulnerable cryptography a vulnerability?",
+  "url": "https://github.com/FedRAMP/community/discussions/174",
+  "category": "Rev5 Discussion",
+  "category_slug": "rev5-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "robgil",
+  "author_is_official": false,
+  "created_at": "2026-09-16T19:03:40Z",
+  "updated_at": "2026-09-24T22:58:41Z",
+  "last_edited_at": null,
+  "closed": false,
+  "closed_at": null,
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 3,
+  "body": "Greetings FedRAMP team!\r\n\r\nI always appreciate the discussion and accessibility to the FedRAMP team to answer these questions. \r\n\r\nGiven the acceleration of Post Quantum Computers and the risks associated with harvest and decrypt later, what is FedRAMP's position on post quantum vulnerable cryptography? **Does FedRAMP consider this a vulnerability?** \r\n\r\nFedRAMP has included exceptions to FIPS in regards to patching. My argument is that PQC vulnerable libraries should be considered a vulnerability and patched. There are currently no FIPS approved PQC libraries. **Will FedRAMP allow the use of libraries that are in-process so we can begin the transition?**\r\n\r\nAs an advisor to multiple major security focused cloud service providers, _the industry needs clear direction from the Government to kick off the transition to Quantum secure cryptography_. The cloud services I advise are critical to the adoption of Post Quantum Cryptography. Once they adopt PQC, the rest of the industry will follow. Usually the first to implement a significant new technology become the basis for adoption and standardization. \r\n\r\nThank you for your attention to this matter!\r\nRob",
+  "comment_count": 5,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4BGdkn",
+      "url": "https://github.com/FedRAMP/community/discussions/174#discussioncomment-18471207",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2026-09-16T20:22:50Z",
+      "updated_at": "2026-09-16T20:22:50Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Hey Rob - [Executive Order 14112 Securing the Nation Against Advanced Cryptographic Attacks](https://www.federalregister.gov/documents/2026/06/25/2026-12909/securing-the-nation-against-advanced-cryptographic-attacks) established direction for the government's transition to post-quantum cryptography. Section 6 (Procurement) includes direction for coordinating efforts on the migration of cloud-based technologies to PQC and assigns work for NIST and the FAR Council related to updating the CMVP and updating acquisition regulations to require specific cryptographic implementations.\r\n\r\nFedRAMP, like cloud service providers and the rest of government, is standing by for guidance based on the outcome of these tasks assigned to other parts of the government. More importantly, the Executive Order anticipates updated acquisition regulations that would apply to all covered systems to establish opinionated requirements. FedRAMP likely will not need to play any role in this, nor will we need to change any rules for FedRAMP Certification, because cloud services will have contractual requirements to follow that are outside the scope of FedRAMP.\r\n\r\n> Given the acceleration of Post Quantum Computers and the risks associated with harvest and decrypt later, what is FedRAMP's position on post quantum vulnerable cryptography? Does FedRAMP consider this a vulnerability?\r\n\r\nNot at this time - FedRAMP will follow whatever guidance CISA releases on this topic.\r\n\r\n> My argument is that PQC vulnerable libraries should be considered a vulnerability and patched. \r\n\r\nI am unaware of any quantum-resistant libraries that are patched upstream versions of existing CMVP-validated libraries. My understanding is that a migration to a different algorithm with different implementations are required. In theory, if there's a patched upstream version of a currently CMVP-validated cryptographic module then yup, you can use it under FR's rules.\r\n\r\n> There are currently no FIPS approved PQC libraries. Will FedRAMP allow the use of libraries that are in-process so we can begin the transition?\r\n\r\nFedRAMP Class D Certified cloud service offerings are required to only use NIST CMVP validated cryptographic modules or their upstream versions to protect federal customer data - this allows individual agencies to determine if they wish to use cloud services that conform entirely to FIPS 140-3 or if they wish to log a waiver for the use of cloud services that patch security vulnerabilities. \r\n\r\nNo agency has come to FedRAMP to request waivers for use of non-CMVP-validated PQC libraries in cloud services yet, but FedRAMP would be open to allowing that after consulting with CISA and NIST.\r\n\r\n> As an advisor to multiple major security focused cloud service providers, the industry needs clear direction from the Government to kick off the transition to Quantum secure cryptography. \r\n\r\nThe Executive Order directs a number of agencies and programs to provide this direction with clear timelines for each step... As those responsible parties hit those deadlines and release that guidance you can expect FedRAMP to begin incorporating it. The next big update will probably be to some rules in the Cryptographic Module Use ruleset to align with CISA's upcoming guidance on cryptographic bills of materials. \r\n",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BGd3L",
+      "url": "https://github.com/FedRAMP/community/discussions/174#discussioncomment-18472395",
+      "author": "sunstonesecure-robert",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-09-16T22:39:31Z",
+      "updated_at": "2026-09-16T22:39:31Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "It is both a vulnerability and not a vulnerability until someone opens the box. Sorry couldn't resist.\r\n\r\nAs someone who has done crypto FIPS testing and generally crypto algo development in the past - best to wait for final algo choices and tests to complete as the standards will have changes (for good or bad reasons --- looking at you S-boxes). And - the clouds are going to wait because the hardware implementations are definitely going to wait for those final tests.\r\n\r\nThat said if you are concerned about later decryption - there's nothing preventing you from encrypting with FIPS crypto and then also encrypting wiht your favorite PQC algo implementation.  Best case - you win. Worst case - you lose anyway, but you were compliant and keep your Gov contract.\r\n\r\n",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BGgN6",
+      "url": "https://github.com/FedRAMP/community/discussions/174#discussioncomment-18482042",
+      "author": "robgil",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-09-17T12:50:12Z",
+      "updated_at": "2026-09-17T12:50:12Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Thanks @pete-gov! That's exactly what I needed. From what I'm understanding from your response, this is dependent on NIST and CISA to give the go ahead on exceptions to FIPS certified libraries and FIPS certified libraries are a non-negotiable currently. Identity, Network, and Security products need to be ahead of the curve when it comes to PQC adoption as they are the foundations to everything else. \r\n\r\nIt sounds like we should raise this with agencies and DISA to see if we can get waivers (or IATTs) the the goal of introducing this as an option to customers. The transition is going to take years, and I think CISA and NIST may not be thinking about the protocol work for things like OIDC and SAML. As an example, SAML is basically defunct and without a functioning standards body to integrate PQC in to SAML. The expectation is that customers need to transition away from SAML and move to OIDC which in and of itself a major and lengthy transition.\r\n\r\nWould you suggest we also go through the FSCAC as well as trade groups to raise awareness of the urgency? I talk to multiple cloud service providers who are ready to move forward with PQC now that FIPS 203, 204, 205 have been finalized.  \r\n\r\nhttps://csrc.nist.gov/news/2024/postquantum-cryptography-fips-approved\r\n\r\nIt's been 2 years since these standards were approved.",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BGgbf",
+          "url": "https://github.com/FedRAMP/community/discussions/174#discussioncomment-18482911",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-09-17T13:49:53Z",
+          "updated_at": "2026-09-17T13:49:53Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> Would you suggest we also go through the FSCAC as well as trade groups to raise awareness of the urgency? I\r\n\r\nFR can't advise or suggest on activities that cloud service providers may or may not do to lobby the government for things. :) But pushing towards FedRAMP when NIST, CISA, etc. are the responsible parties would be weird."
+        },
+        {
+          "id": "DC_kwDOOxfoic4BGgeu",
+          "url": "https://github.com/FedRAMP/community/discussions/174#discussioncomment-18483118",
+          "author": "robgil",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-09-17T14:06:28Z",
+          "updated_at": "2026-09-17T14:06:28Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Hah understood. "
+        }
+      ],
+      "replies_total": 2,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BG5_Q",
+      "url": "https://github.com/FedRAMP/community/discussions/174#discussioncomment-18587600",
+      "author": "robgil",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-09-24T21:48:15Z",
+      "updated_at": "2026-09-24T21:48:15Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "@pete-gov one more for ya. We've heard from Bouncy Castle that the 2.2 release is the upstream version of the current 2.0 that is currently certified. Would this constitute an \"update stream\" even though its adding additional algorithms in addition to the existing algorithms? It's in the review process with NIST now. Would you agree this aligns with the FedRAMP Policy for Cryptographic Module Selection as it pertains to \"update stream\"?  \r\n\r\n```\r\nA cryptographic module may change for a number of reasons, including:\r\n- to add new functionality\r\n- to fix a defect in existing functionality\r\n- to address a change required for a software dependency\r\n- to port the software to a new architecture or environment.\r\nIn many of these situations, the cryptographic functionality tested under CMVP is not changed, so updating\r\nthe vulnerable software with FIPS-validated modules is likely to increase overall assurance, even though\r\nthe new software version might not yet be FIPS validated.\r\n\r\nIf FIPS-validated cryptographic functionality tested under CMVP is changed in the new software version,\r\nthe use of that update is generally preferable than continuing to use the validated module with known\r\ndefects. Using modules with CAVP-validated algorithms is strongly preferred over unvalidated algorithms\r\nbecause of the increased assurance that CAVP validation provides.\r\n```\r\n\r\nhttps://www.fedramp.gov/resources/documents/FedRAMP_Policy_for_Cryptographic_Module_Selection_v1.1.0.pdf\r\n\r\n",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BG6GA",
+          "url": "https://github.com/FedRAMP/community/discussions/174#discussioncomment-18588032",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-09-24T22:42:45Z",
+          "updated_at": "2026-09-24T22:42:45Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Note that the crypto policy you linked is legacy - CR26 version is here: https://www.fedramp.gov/2026/reference/cryptographic-module-use/\r\n\r\n> We've heard from Bouncy Castle that the 2.2 release is the upstream version of the current 2.0 that is currently certified. Would this constitute an \"update stream\" even though its adding additional algorithms in addition to the existing algorithms?\r\n\r\nI think I see the contortion you are trying to make here and please, no. :) A cryptographic module is a set of things including cryptographic algorithms. When that module is validated, the algorithms are validated. An upstream release of that module that includes updates of the same algorithms and key generation is an upstream version of the approved cryptographic module - but new algorithms in that upstream release would not be upstream versions of approved cryptographic modules. It's just random new code that's never been validated added in on the side, not a patched version of validated software. You can use the updated 2.2 versions of the parts of the module validated in 2.0, but not the random new stuff that was never validated.\r\n\r\nFor example:\r\n\r\n- CRYSTALS-Kyber (KEM) is not part of the [Bouncy Castle 2.0 CMVP validated cryptographic module](https://csrc.nist.gov/projects/cryptographic-module-validation-program/certificate/4743). This algorithm appears in Bouncy Castle 2.2, but would not be considered an upstream version of a CMVP validated cryptographic module.\r\n\r\n- AES-KWP is part of the Bouncy Castle 2.0 CMVP validated cryptographic module. An upstream version of this algorithm exists in Bouncy Castle 2.2. If you use AES-KWP in Bouncy Castle 2.2, you are using an upstream version of a CMVP validated cryptographic module.\r\n\r\n"
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BG6Jo",
+      "url": "https://github.com/FedRAMP/community/discussions/174#discussioncomment-18588264",
+      "author": "robgil",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-09-24T22:58:41Z",
+      "updated_at": "2026-09-24T22:58:41Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Thanks @pete-gov. Fully aware of the \"contortion\" and needed you to put the debate to rest 😉 . Much appreciated. ",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "pete-gov",
+    "robgil",
+    "sunstonesecure-robert"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/174#discussioncomment-18471207",
+      "author": "pete-gov",
+      "created_at": "2026-09-16T20:22:50Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/174#discussioncomment-18482911",
+      "author": "pete-gov",
+      "created_at": "2026-09-17T13:49:53Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/174#discussioncomment-18588032",
+      "author": "pete-gov",
+      "created_at": "2026-09-24T22:42:45Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://csrc.nist.gov/news/2024/postquantum-cryptography-fips-approved",
+      "https://csrc.nist.gov/projects/cryptographic-module-validation-program/certificate/4743",
+      "https://www.federalregister.gov/documents/2026/06/25/2026-12909/securing-the-nation-against-advanced-cryptographic-attacks",
+      "https://www.fedramp.gov/2026/reference/cryptographic-module-use/",
+      "https://www.fedramp.gov/resources/documents/FedRAMP_Policy_for_Cryptographic_Module_Selection_v1.1.0.pdf"
+    ],
+    "topics": [
+      "class_d",
+      "crypto_fips",
+      "vulnerability_mgmt"
+    ]
+  },
+  "content_hash": "332a8a35f0d99d1bb6ecc07beb67c86d1ddfb061d5fb0226c68e48531f1f1c96",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}

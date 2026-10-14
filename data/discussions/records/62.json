@@ -1,0 +1,219 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-62",
+  "node_id": "D_kwDOOxfoic4Ag3vv",
+  "number": 62,
+  "title": "Announcing two Rev5-focused Continuous Vulnerability Management special events!",
+  "url": "https://github.com/FedRAMP/community/discussions/62",
+  "category": "Rev5 Announcements",
+  "category_slug": "rev5-announcements",
+  "labels": [
+    "FedRAMP Official"
+  ],
+  "is_official_thread": true,
+  "is_rfc": false,
+  "author": "pete-gov",
+  "author_is_official": true,
+  "created_at": "2025-07-21T18:23:16Z",
+  "updated_at": "2025-08-25T14:21:33Z",
+  "last_edited_at": "2025-08-01T19:02:13Z",
+  "closed": true,
+  "closed_at": "2025-08-25T14:21:33Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 3,
+  "body": "Last week we released [RFC-0012, a proposed FedRAMP Continuous Vulnerability Management Standard](https://github.com/FedRAMP/community/discussions/59). Similar to the [Significant Change Notification Standard](https://www.fedramp.gov/20x/standards/) for 20x, this standard is a significant shift fueled by the expectations in [M-24-15](https://www.fedramp.gov/assets/resources/documents/FedRAMP_Policy_Memo.pdf). After public comment, this standard will be carefully and deliberately tested and evaluated with Rev5 cloud service providers in both closed and open betas prior to wide release.\r\n\r\nFedRAMP is hosting two events to spur conversation around the changes in RFC-0012 and encourage formal public comment, with both events focused primarily on Rev5-based FedRAMP authorizations and currently authorized cloud service providers.\r\n\r\n---\r\n\r\n## Rev5 Community Working Group Special Event w/ the FedRAMP TAG\r\n\r\n**When:** Wednesday, August 6, from 1pm to 2pm Eastern\r\n**Sign Up:** Register for the [recurring Rev5 Community Working Group meeting here](https://www.fedramp.gov/community/) (if you're already signed up then you're good to go!).\r\n\r\nThe FedRAMP Technical Advisory Group (TAG) is a core part of FedRAMP's success. At this session, you'll hear from some of the TAG members about vulnerability management in government, why this updated standard is important, and in some cases where they disagree or think it fell short. We'll also host open Q&A with the audience about Rev5-related topics and share an update on the Significant Change Notification Closed Beta progress.\r\n\r\n---\r\n\r\n## FedRAMP Vulnerability Management Special Event\r\n\r\n<img width=\"2811\" height=\"786\" alt=\"image\" src=\"https://github.com/user-attachments/assets/758a5eae-05fe-463a-b050-f5a3a071ebf6\" />\r\n<br><br>\r\n\r\n| Info | Details | \r\n| -- | --|\r\n|**When**| Wed, July 30, from 1pm to 2:30pm Eastern|\r\n|**Who's Speaking**| [Representatives from industry including Palo Alto Networks, Okta, Cisco, Wiz, Salesforce, GitHub, Amazon, StackArmor, UberEther!](https://github.com/FedRAMP/community/discussions/62#discussioncomment-13890983)|\r\n\r\nFedRAMP has assembled a panel of industry experts to answer burning questions about how leading cloud service providers approach vulnerability management in 2025. Inspired by the recently released [RFC-0012 for FedRAMP’s proposed Continuous Vulnerability Management Standard](https://www.fedramp.gov/rfcs/0012/), this event will explore industry best practices, FedRAMP pain points, and how the proposed standard fits into existing security programs - and where it doesn’t!\r\n\r\n**If you missed it, you can watch the recording of this Special Event on YouTube here: https://www.youtube.com/watch?v=Z8-9Ef2cnNQ**\r\n\r\n",
+  "comment_count": 4,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4A0_AD",
+      "url": "https://github.com/FedRAMP/community/discussions/62#discussioncomment-13889539",
+      "author": "aj327",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2025-07-25T13:45:06Z",
+      "updated_at": "2025-07-25T13:45:07Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "@pete-gov -- any open spots on the panel for a Chainguard representative to participate as well? ",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A0_MM",
+          "url": "https://github.com/FedRAMP/community/discussions/62#discussioncomment-13890316",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2025-07-25T15:10:14Z",
+          "updated_at": "2025-07-25T15:10:15Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Stoked that y'all would be interested in participating, but not this time, sorry! The participants for this event were cloud service providers recommended by the three most active industry trade associations that focus on FedRAMP ([ADI](https://alliance4digitalinnovation.org/), [BSA](https://www.bsa.org/), and [CSP-AB](https://www.csp-ab.com/)) to ensure we had a balanced panel. \r\n\r\nIt can actually get a bit complicated for us to \"platform\" anyone as a government program, we generally have to establish a specific approach and stick to it to avoid the appearance of bias/special treatment/etc."
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A0_Wn",
+      "url": "https://github.com/FedRAMP/community/discussions/62#discussioncomment-13890983",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2025-07-25T16:31:33Z",
+      "updated_at": "2025-07-30T12:25:35Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "# Vulnerability Management Special Event Panelists\r\n\r\nA bit more information on the panelists that will be participating in the Vulnerability Management Special Event on July 30 is below - we'll update this as (if!) folks send in additional bio information in advance.\r\n\r\n| Panelist | Representing | Title | Background |\r\n| -- | -- | -- | -- | \r\n| Alex Nieves | Palo Alto Networks | Senior Manager of Global Certifications | “I lead Palo Alto Networks Federal compliance team. Our focus is attaining and maintaining all PANW products federal certifications, most important FedRAMP and DoD IL efforts. ” |\r\n| Tyler Waldo | Salesforce | Director of Vulnerability & Environmental Threat Assessment | \"I've been working in vulnerability management for the last 8.5 years at Salesforce after being initially hired to lead our vulnerability efforts in Salesforce's Government Cloud environment. I'm a huge proponent of rooting all vulnerabilities into business and threat context along with trying to shift perception that all vulnerabilities need to be fixed.\" Social: [LinkedIn](https://www.linkedin.com/in/tylerwaldo/) |\r\n| Dave Kell | Google Cloud | Domain Tech Lead for Vulnerability Management | \"As Technical Lead for Google Cloud's vulnerability management program, Dave is responsible for helping teams across Google enhance vulnerability management capabilities for the delivery of GCP products. He brings over 25 years of experience in delivering vulnerability management programs, having worked in various roles within the technology, financial, telecommunications, and government service sectors.\"  Social: [LinkedIn](https://www.linkedin.com/in/davidkellcissp/) |\r\n| Patrick Woods | Amazon | Senior Manager of Security Risk and Compliance  | \"Patrick leads a global team ensuring services meet the highest security and regulatory standards. With over 20 years of experience in cybersecurity and risk management, he has scaled programs across FedRAMP, GDPR, HIPAA, and other global frameworks. Patrick holds a doctorate in cybersecurity and is passionate about building teams that solve complex security challenges. \"|\r\n| Rob Gil | Okta | Senior Director, Federal Architecture | |\r\n| Hazem Eldakdoky | Cisco | Direct Public Sector Security Assurance Compliance | |\r\n| John Elliot | Wiz | Senior Product Security Manager | |\r\n| Brandon Ganem | GitHub | Staff Manager, Vulnerability Management | |\r\n| Johan Dettweiler | stackArmor | CISO ||\r\n| Matt Topper | UberEther | Chief Technology Officer ||\r\n\r\n\r\n",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A1NU9",
+          "url": "https://github.com/FedRAMP/community/discussions/62#discussioncomment-13948221",
+          "author": "ChanceofClouds",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-07-31T14:14:23Z",
+          "updated_at": "2025-07-31T14:14:23Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "@pete-gov If time allowing, when panels are uploaded in the future to YouTube, is it possible to add Time Stamps for the Q&A questions?"
+        },
+        {
+          "id": "DC_kwDOOxfoic4A1OT8",
+          "url": "https://github.com/FedRAMP/community/discussions/62#discussioncomment-13952252",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2025-07-31T21:50:33Z",
+          "updated_at": "2025-07-31T21:50:33Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> @pete-gov If time allowing, when panels are uploaded in the future to YouTube, is it possible to add Time Stamps for the Q&A questions?\r\n\r\nThis is a good idea but also I'm guessing a bit of a lift, we'll check it out for future updates though!"
+        }
+      ],
+      "replies_total": 2,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A1Kqb",
+      "url": "https://github.com/FedRAMP/community/discussions/62#discussioncomment-13937307",
+      "author": "DrSC-IA",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2025-07-30T18:01:36Z",
+      "updated_at": "2025-07-30T18:01:37Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Great discussion today!  If we can move away from the manual processes of FedRAMP, the templates, and validate the FedRAMP CSOs, such as IaaS providers with inherent tools that provide the same information that the templates do, that would be a great move in the right direction.  To have to take the information from the automated tools to populate it in the template, one, slows down incident response and vul management and is an overhead that is not necessary.  \r\n\r\nGreat discussion!!!!",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4A1NdV",
+      "url": "https://github.com/FedRAMP/community/discussions/62#discussioncomment-13948757",
+      "author": "KoryFox",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2025-07-31T15:00:03Z",
+      "updated_at": "2025-07-31T15:00:04Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Hi, I couldn't make the meeting, but I'd love to watch this if there's a recording available anywhere? Thanks so much!",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4A1Nue",
+          "url": "https://github.com/FedRAMP/community/discussions/62#discussioncomment-13949854",
+          "author": "ChanceofClouds",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-07-31T16:30:07Z",
+          "updated_at": "2025-07-31T16:30:08Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "https://youtu.be/Z8-9Ef2cnNQ?si=ScVq5cmgOLeNJg4e"
+        },
+        {
+          "id": "DC_kwDOOxfoic4A1OMk",
+          "url": "https://github.com/FedRAMP/community/discussions/62#discussioncomment-13951780",
+          "author": "KoryFox",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2025-07-31T20:30:54Z",
+          "updated_at": "2025-07-31T20:30:55Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Got it, thanks so much!"
+        }
+      ],
+      "replies_total": 2,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "ChanceofClouds",
+    "DrSC-IA",
+    "KoryFox",
+    "aj327",
+    "pete-gov"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/62#discussioncomment-13890983",
+      "author": "pete-gov",
+      "created_at": "2025-07-25T16:31:33Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/62#discussioncomment-13890316",
+      "author": "pete-gov",
+      "created_at": "2025-07-25T15:10:14Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/62#discussioncomment-13952252",
+      "author": "pete-gov",
+      "created_at": "2025-07-31T21:50:33Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [
+      "RFC-0012"
+    ],
+    "nist_controls": [],
+    "discussion_refs": [
+      59,
+      62
+    ],
+    "urls": [
+      "https://alliance4digitalinnovation.org/",
+      "https://github.com/FedRAMP/community/discussions/59",
+      "https://github.com/FedRAMP/community/discussions/62#discussioncomment-13890983",
+      "https://github.com/user-attachments/assets/758a5eae-05fe-463a-b050-f5a3a071ebf6",
+      "https://www.bsa.org/",
+      "https://www.csp-ab.com/",
+      "https://www.fedramp.gov/20x/standards/",
+      "https://www.fedramp.gov/assets/resources/documents/FedRAMP_Policy_Memo.pdf",
+      "https://www.fedramp.gov/community/",
+      "https://www.fedramp.gov/rfcs/0012/",
+      "https://www.linkedin.com/in/davidkellcissp/",
+      "https://www.linkedin.com/in/tylerwaldo/",
+      "https://www.youtube.com/watch?v=Z8-9Ef2cnNQ**",
+      "https://youtu.be/Z8-9Ef2cnNQ?si=ScVq5cmgOLeNJg4e"
+    ],
+    "topics": [
+      "20x",
+      "rev5",
+      "significant_change",
+      "vulnerability_mgmt"
+    ]
+  },
+  "content_hash": "397cfec6878512c96d4c09b5a1be2bd181f0146843f1f5d264ff0c3f15c19774",
+  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+}
