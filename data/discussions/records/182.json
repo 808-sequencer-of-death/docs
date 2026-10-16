@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-182",
+  "node_id": "D_kwDOOxfoic4AqFWX",
+  "number": 182,
+  "title": "ConMon Observation period",
+  "url": "https://github.com/FedRAMP/community/discussions/182",
+  "category": "Rev5 Discussion",
+  "category_slug": "rev5-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "brandenc-xai",
+  "author_is_official": false,
+  "created_at": "2026-10-15T21:25:33Z",
+  "updated_at": "2026-10-15T21:25:33Z",
+  "last_edited_at": null,
+  "closed": false,
+  "closed_at": null,
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "We're preparing for a Rev5 Class D FedRAMP certification and have a question about continuous monitoring for an initial authorization. Is an observation period required? Specifically, could our independent assessor verify that our continuous monitoring process is in place and the tools are configured correctly, instead of us showing evidence of it running over a set period? Assessors have told us a 60 to 90 day period is needed, but we haven't been able to find where that requirement is written.",
+  "comment_count": 0,
+  "comments": [],
+  "answer_url": null,
+  "participants": [
+    "brandenc-xai"
+  ],
+  "official_responses": [],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [],
+    "topics": [
+      "3pao",
+      "class_d",
+      "conmon",
+      "rev5"
+    ]
+  },
+  "content_hash": "1a3f5aed5bfee5cbe9ad6c3f1c53746ae8059037ec61db1f32de931492e3d5e1",
+  "synced_at": "2026-10-16T07:53:10.197718+00:00"
+}

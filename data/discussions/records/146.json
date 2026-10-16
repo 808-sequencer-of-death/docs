@@ -15,7 +15,7 @@
   "author": "pete-gov",
   "author_is_official": true,
   "created_at": "2026-06-24T21:49:44Z",
-  "updated_at": "2026-10-14T21:37:37Z",
+  "updated_at": "2026-10-15T21:14:04Z",
   "last_edited_at": null,
   "closed": false,
   "closed_at": null,
@@ -24,7 +24,7 @@
   "answer_chosen_at": null,
   "upvotes": 1,
   "body": "## This thread is for any and all Q&A or general discussion related to FedRAMP Rev5 in general that does not need to have its own thread.\r\n\r\nFedRAMP released the [Consolidated Rules for 2026](https://www.fedramp.gov/2026/) on June 24, 2026 with a considerable set of changes for FedRAMP Rev5 that will apply to all cloud service providers.\r\n\r\nThese changes include:\r\n\r\n- Mandatory adoption of the Vulnerability Detection and Response and Vulnerability Evaluation and Reporting rules by December 6, 2026 in response to CISA BOD 26-04\r\n- Changes to assessments for Rev5 to align more like assessments for 20x - focusing on verification and validation instead of just control implementation.\r\n- Replacement of most FedRAMP templates with a new Certification Package Overview and Security Decision Record\r\n- Removal of many FedRAMP-assigned control parameters and a lot of older FedRAMP control guidance\r\n- Mandatory adoption of many other Balance Improvement Releases through 2027\r\n- A requirement to address all FedRAMP Rules within the Security Decision Record, instead of only addressing controls\r\n\r\nSome of these changes take effect for all cloud service providers on certain dates no matter what, others take effect at the next annual assessment. In general, these are sweeping changes that will require all cloud service providers to begin planning now to continue to meet FedRAMP Rev5 requirements.\r\n\r\nHistorical materials are available at [https://fedramp.gov/legacy](https://fedramp.gov/legacy).\r\n\r\n---\r\n\r\nYou may see some of the following folks from FedRAMP responding in this thread:\r\n\r\n- `pete-gov` - Pete, FedRAMP Director\r\n- `nicole-gov` - Nicole, Security Director\r\n- `dan-fedramp` - Dan, Lead Cloud Security Engineer\r\n- `paulagosta` - Paul, Lead Cloud Security Engineer (Bastion)\r\n- `emu-gov` - Emu, Lead Cloud Security Engineer (Vanguard)\r\n- `rhoesing` - Ryan, Chief of Staff & Policy Branch Chief",
-  "comment_count": 39,
+  "comment_count": 40,
   "comments": [
     {
       "id": "DC_kwDOOxfoic4BChJy",
@@ -1951,30 +1951,98 @@
       "minimized": false,
       "body": "Hi @pete-gov,\r\n\r\nAnother question for you, this time on IVV-IAS-VIP. The rule requires the IA to verify that information supplied during the assessment is included in the Certification Package without inappropriate modification. It doesn't say how the IA reports that verification or how the IA gets access to the final package.\r\n\r\n1. What is FedRAMP's expectations for the IA to communicate the results of the VIP review? \r\n2. Should the IA's access to the provider's trust center be treated as required in order to validate this rule? The definition of \"All Necessary Parties\" says independent assessors may be included depending on the provider's agreements, so access isn't guaranteed.\r\n\r\nThanks!",
       "is_answer": false,
-      "replies": [],
-      "replies_total": 0,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BIUX6",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18957818",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-10-15T20:15:30Z",
+          "updated_at": "2026-10-15T20:15:30Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Hey @mpg-CF - I responded yesterday but was on my phone so it may have gone into limbo. I'm copy/pasting it into a direct reply to avoid confusion.\r\n\r\n> It doesn't say how the IA reports that verification or how the IA gets access to the final package.\r\n\r\nThat's up to two consenting businesses to figure out. This rule isn't about starting a fight, it's simply about making sure you have something to point to in your contract as part of the agreement.\r\n\r\n> 1. What is FedRAMP's expectations for the IA to communicate the results of the VIP review?\r\n\r\nThe cloud service provider has a rule that says they included your stuff. They get in trouble if they make false claims. They confirm the IA did the expected bits by showing us the information included.\r\n \r\n> 2. Should the IA's access to the provider's trust center be treated as required in order to validate this rule? \r\n\r\nThat's a business thing between the IA and the CSP. If you're an IA and the CSP won't give you access to their trust center then it would be pretty hard for you to meet the terms of your agreement with them right?\r\n\r\nFR isn't going to tell businesses that they have to let other businesses do things to them. We expect the CSP to meet all of the rules. They have to pay an IA to help them do a lot of that. If they try to block the IA that they paid from doing stuff that's a CSP/IA business problem, not a FR problem."
+        }
+      ],
+      "replies_total": 1,
       "replies_truncated": false
     },
     {
-      "id": "DC_kwDOOxfoic4BIOsl",
-      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18934565",
-      "author": "pete-gov",
-      "author_association": "MEMBER",
-      "is_official": true,
-      "created_at": "2026-10-14T21:37:36Z",
-      "updated_at": "2026-10-14T21:37:36Z",
+      "id": "DC_kwDOOxfoic4BIUMZ",
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18957081",
+      "author": "instantn00dles",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-10-15T19:42:02Z",
+      "updated_at": "2026-10-15T19:42:02Z",
       "upvotes": 1,
       "minimized": false,
-      "body": "> Hi @pete-gov,\n> \n> It doesn't say how the IA reports that verification or how the IA gets access to the final package.\n\nThat's up to two consenting businesses to figure out. This rule isn't about starting a fight, it's simply about making sure you have something to point to in your contract as part of the agreement.\n\n> 1. What is FedRAMP's expectations for the IA to communicate the results of the VIP review?\n\nThe cloud service provider has a rule that says they included your stuff. They get in trouble if they make false claims. They confirm the IA did the expected bits by showing us the information included.\n \n> 2. Should the IA's access to the provider's trust center be treated as required in order to validate this rule? \n\nThat's a business thing between the IA and the CSP. If you're an IA and the CSP won't give you access to their trust center then it would be pretty hard for you to meet the terms of your agreement with them right?\n\nFR isn't going to tell businesses that they have to let other businesses do things to them. We expect the CSP to meet all of the rules. They have to pay an IA to help them do a lot of that. If they try to block the IA that they paid from doing stuff that's a CSP/IA business problem, not a FR problem.\n\n",
+      "body": "On VER-EVA-AIA, is it fair to say that the user interaction metric from CVSS 3.x/4 could be used to say that a (CVE-type) vulnerability is not automatable? While understanding that the groundwork for many attacks that require user interaction will be automatable, there are a variety of types of vulnerabilities which cannot occur without tricking a user into doing something, which could be controlled for with training, uac prompt/similar, or other types of compensating controls. ",
       "is_answer": false,
-      "replies": [],
-      "replies_total": 0,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BIUaL",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18957963",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-10-15T20:22:49Z",
+          "updated_at": "2026-10-15T20:22:49Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> On VER-EVA-AIA, is it fair to say that the user interaction metric from CVSS 3.x/4 could be used to say that a (CVE-type) vulnerability is not automatable? \r\n\r\nI don't think it's ever fair to just assume that relationship - but this could be used as evidence. If you know that the vulnerability requires a specific user action on a specific terminal but have walled off that terminal for the moment then it's probably not automatable, right? On the other hand, if the user interaction needed is for anyone in the company to open an email attachment and you can repeatedly automate sending that into people's inboxes past anti-spam then even with the user interaction limit it's still effectively automatable because _someone_ is gonna open that email.\r\n\r\nBut yes, in general, high user interactivity requirements are likely to reduce automatability."
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BIUid",
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18958493",
+      "author": "BrianPT-hub",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-10-15T20:52:18Z",
+      "updated_at": "2026-10-15T20:52:18Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Good afternoon FedRAMP PMO,\r\n\r\nDuring the 9/2 Rev5 working group meeting and FedRAMP website it's stated that CSPs seeking a Rev5 Program Certification under the Ready Conversion option are required to follow all updated rules for FedRAMP Rev5 by February 19, 2027.  Do the advertised grace periods for a CSP under \"maintain\" apply after a program certification is granted or must all 26CRs be fully implemented by 2/17/2027?  For example if a CSP is undergoing an updated assessment now and expects to be complete in December 2026, do they have to immediately turn around and complete IVV as part of their SDR by 2/17/2027, or does the \"On the first FedRAMP independent assessment started after 2027-01-01\" grace period apply for these items?  \r\n\r\nThank you",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BIUje",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18958558",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-10-15T20:56:54Z",
+          "updated_at": "2026-10-15T20:56:54Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Hey @BrianPT-hub - the expectation in the Ready Conversion program is that you fully implement all of the CR26 rules that are required for a new FedRAMP Rev5 Certification, but instead of that being required on January 1, 2027 like it is for everyone else we have provided a built-in ~6 week grace period. You are expected to target all of the CR26 requirements just like any other new applicant, aside from that small grace period.\r\n\r\nAll other grace periods apply only to cloud service providers that already have a FedRAMP Certification (FedRAMP Ready is not a FedRAMP Certification)."
+        },
+        {
+          "id": "DC_kwDOOxfoic4BIUou",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18958894",
+          "author": "BrianPT-hub",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-10-15T21:14:03Z",
+          "updated_at": "2026-10-15T21:14:03Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thank you very much for the prompt reply and guidance!"
+        }
+      ],
+      "replies_total": 2,
       "replies_truncated": false
     }
   ],
   "answer_url": null,
   "participants": [
     "Abe205",
+    "BrianPT-hub",
     "ElaineFR",
     "ExtremoPenguin",
     "Fcsech",
@@ -1989,6 +2057,7 @@
     "emu-gov",
     "ericmoss54",
     "gmengelberg",
+    "instantn00dles",
     "jsantore-sf",
     "judgecspab-max",
     "lesley-hess",
@@ -2019,11 +2088,6 @@
       "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18739655",
       "author": "nathan-gov",
       "created_at": "2026-10-04T05:34:33Z"
-    },
-    {
-      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18934565",
-      "author": "pete-gov",
-      "created_at": "2026-10-14T21:37:36Z"
     },
     {
       "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-17437758",
@@ -2334,6 +2398,21 @@
       "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18923577",
       "author": "pete-gov",
       "created_at": "2026-10-14T12:12:34Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18957818",
+      "author": "pete-gov",
+      "created_at": "2026-10-15T20:15:30Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18957963",
+      "author": "pete-gov",
+      "created_at": "2026-10-15T20:22:49Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18958558",
+      "author": "pete-gov",
+      "created_at": "2026-10-15T20:56:54Z"
     }
   ],
   "entities": {
@@ -2408,6 +2487,6 @@
       "vulnerability_mgmt"
     ]
   },
-  "content_hash": "e89f6333d7e69fd6bc63543ba98c75c5299cd148e0e48e64a546df1250f75192",
-  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+  "content_hash": "7c87e49480c6c1dab87e9d26212f83635b4900232720dc357f33757b395c0c60",
+  "synced_at": "2026-10-16T07:53:10.197718+00:00"
 }
