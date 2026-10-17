@@ -15,7 +15,7 @@
   "author": "brandenc-xai",
   "author_is_official": false,
   "created_at": "2026-10-15T21:25:33Z",
-  "updated_at": "2026-10-15T21:25:33Z",
+  "updated_at": "2026-10-16T13:51:54Z",
   "last_edited_at": null,
   "closed": false,
   "closed_at": null,
@@ -24,26 +24,70 @@
   "answer_chosen_at": null,
   "upvotes": 1,
   "body": "We're preparing for a Rev5 Class D FedRAMP certification and have a question about continuous monitoring for an initial authorization. Is an observation period required? Specifically, could our independent assessor verify that our continuous monitoring process is in place and the tools are configured correctly, instead of us showing evidence of it running over a set period? Assessors have told us a 60 to 90 day period is needed, but we haven't been able to find where that requirement is written.",
-  "comment_count": 0,
-  "comments": [],
+  "comment_count": 1,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4BIXqU",
+      "url": "https://github.com/FedRAMP/community/discussions/182#discussioncomment-18971284",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2026-10-16T10:56:04Z",
+      "updated_at": "2026-10-16T10:56:04Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "> Assessors have told us a 60 to 90 day period is needed, but we haven't been able to find where that requirement is written.\r\n\r\nIf an assessor cites a rule or requirement to you but can't show you where that rule is written down officially then that might be a red flag. Historically there were \"ghost rules\" that assessors learned from bad experiences with FedRAMP and piled on, but we have been quite clear over the past two years that it doesn't work like that anymore.\r\n\r\nAsk *them* where this requirement originates from. I'm betting they are referencing old vuln scanning guidance that recommended checking vuln scans in advance of the SAR or something weird like that? Alternatively it may be a requirement from your agency sponsor, or something you agreed to with them, etc.\r\n\r\nThere is no current FedRAMP rule requiring 90 days of conmon data to be reviewed during assessment, though it's a value add if you have it and can do it.\r\n\r\n\r\n\r\n",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BIYjh",
+          "url": "https://github.com/FedRAMP/community/discussions/182#discussioncomment-18974945",
+          "author": "jsantore-sf",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-10-16T13:51:54Z",
+          "updated_at": "2026-10-16T13:51:54Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "I was a 3PAO in a former life, and I thought would be helpful to add some historical context to this.  This wasn't a 'ghost rule' per se, it was a natural consequence of an strict Federal mandate requirement.  \r\n\r\nThere were 6 mandates, all published primarily in the RAR (but they weren't arbitrary or secret, and I concur it's weird that the RAR was the main location for listing these).  Those 6 were, paraphrased:\r\n1) Must have FIPS encryption\r\n2) Must have MFA (technically Digital Identity Level 2 for Mod, 3 for High)\r\n3) Must accept CAC/PIV cards (usually done through SAML)\r\n4) Federal records requirements, originally NARA, eventually sort of superceded by M-21-31 (and then M-26-14)\r\n5) Must have DNSSEC in place (SC-20/SC-21) \r\n6) Does the CSP have the ability to consistently remediate vulnerabilities within 30/90/180 days.  THIS is the one that is relevant to the historical conmon data issue.\r\n\r\nIn order to determine if someone is consistently remediating vulnerabilies, you need enough of a history to show that any high vulns were addressed in a timely fashion.  That's where the 'we need 60-90 days of conmon data' came from.  When I was assessing a system, my requirement was not necessarily a hard and fast 60-90 days, but sufficient history and/or enough vuln scan cycles to be able to determine that this was consistently addressed.  Regardless, one cannot evaluate this requirement as a simple point in time check; it de facto needs history.\r\n\r\nRemember that these were deemed to be Federal mandates (alas I don't remember what the genesis of their authority was, possibly the JAB), but it was consistently applied.  Whether or not these mandates truly had a statutory basis, I don't recall, but these were some of the clearest requirements of FedRAMP.  \r\n\r\n@pete-gov \"we have been quite clear over the past two years that it doesn't work like that anymore.\"  \r\n\r\nAgreed, and this is one of the best things of the new FedRAMP program.  Just a word of caution that while something may not be a firm black letter rule, sometimes a necessary consequence of evaluating or satisfying that rule (i.e. vulnerability history in this case) has some required-but-unwritten aspect of it.  \r\n\r\n"
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    }
+  ],
   "answer_url": null,
   "participants": [
-    "brandenc-xai"
+    "brandenc-xai",
+    "jsantore-sf",
+    "pete-gov"
   ],
-  "official_responses": [],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/182#discussioncomment-18971284",
+      "author": "pete-gov",
+      "created_at": "2026-10-16T10:56:04Z"
+    }
+  ],
   "entities": {
     "rule_ids": [],
     "rfc_ids": [],
-    "nist_controls": [],
+    "nist_controls": [
+      "SC-20",
+      "SC-21"
+    ],
     "discussion_refs": [],
     "urls": [],
     "topics": [
       "3pao",
+      "agency_authorization",
       "class_d",
       "conmon",
-      "rev5"
+      "crypto_fips",
+      "rev5",
+      "vulnerability_mgmt"
     ]
   },
-  "content_hash": "1a3f5aed5bfee5cbe9ad6c3f1c53746ae8059037ec61db1f32de931492e3d5e1",
-  "synced_at": "2026-10-16T07:53:10.197718+00:00"
+  "content_hash": "cdf7b27a3b76db62a4fbb1bfdf036ec54ae609e43b9566d0dd79d2c5493371f3",
+  "synced_at": "2026-10-17T07:46:06.456342+00:00"
 }

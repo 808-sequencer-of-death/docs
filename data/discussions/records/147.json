@@ -15,7 +15,7 @@
   "author": "pete-gov",
   "author_is_official": true,
   "created_at": "2026-06-24T21:52:47Z",
-  "updated_at": "2026-10-13T14:58:07Z",
+  "updated_at": "2026-10-16T17:29:59Z",
   "last_edited_at": null,
   "closed": false,
   "closed_at": null,
@@ -24,7 +24,7 @@
   "answer_chosen_at": null,
   "upvotes": 1,
   "body": "## This thread is for any and all Q&A or general discussion related to FedRAMP 20x in general that does not need to have its own thread.\r\n\r\nFedRAMP released the [Consolidated Rules for 2026](https://www.fedramp.gov/2026/) on June 24, 2026 with all requirements for FedRAMP 20x Class A, B, and C.\r\n\r\nThis includes:\r\n\r\n- When each certification is available for application\r\n- All the rules and expectations for a FedRAMP 20x Certification\r\n- Basic JSON schemas for providing some high level machine-readable data\r\n- So much more\r\n\r\nWe're excited for folks to continue digging in after the Public Preview and begin preparing. We're happy to answer any general questions that don't need their own thread here!\r\n\r\n---\r\n\r\nYou may see some of the following folks from FedRAMP responding in this thread:\r\n\r\n- `pete-gov` - Pete, FedRAMP Director\r\n- `nicole-gov` - Nicole, Security Director\r\n- `dan-fedramp` - Dan, Lead Cloud Security Engineer\r\n- `paulagosta` - Paul, Lead Cloud Security Engineer (Bastion)\r\n- `emu-gov` - Emu, Lead Cloud Security Engineer (Vanguard)\r\n- `rhoesing` - Ryan, Chief of Staff & Policy Branch Chief",
-  "comment_count": 17,
+  "comment_count": 18,
   "comments": [
     {
       "id": "DC_kwDOOxfoic4BChim",
@@ -937,6 +937,35 @@
       ],
       "replies_total": 1,
       "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BIY_M",
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18976716",
+      "author": "shanacronin-grc",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-10-16T15:29:08Z",
+      "updated_at": "2026-10-16T15:29:08Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "We’re preparing a FedRAMP 20x Class C certification for a multi-tenant SaaS platform that lets customers use our tools with data and workloads appropriate to the assessed scope and applicable agency requirements. Class C is our initial step. We plan to pursue Class D or IL4 later, and we’d like the Class C work to be a reusable foundation for that. Since Class D isn’t available in this window, agencies would initially be responsible for securing and authorizing any data storage in their own solutions.\r\n\r\nThree scoping questions:\r\n\r\nWe have a documented SaaS use case but no named agency customer or live federal workload yet. Does that support an initial Marketplace listing under MKT-IIP-AGU, and how should we define the initial assessment scope before an agency customer exists?\r\n\r\nUnder MAS-CSO-IIR, if agency data stays in agency-managed storage and the platform only processes it in transit, how should we treat that data and the resources that handle it when defining the offering?\r\n\r\nIf a storage service is added once a Class D path opens, would it be added to the existing certification or assessed separately?",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BIZf2",
+          "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18978806",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-10-16T17:29:59Z",
+          "updated_at": "2026-10-16T17:29:59Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Hi! I do want to be clear that the specifics might vary from situation to situation and it's usually a good idea to have an advisory service with some experience to help navigate stuff - but overall if you're intentional and stay up with the rules there shouldn't be any surprises.\r\n\r\nRemember... [it's not a trap!](https://www.fedramp.gov/2026/rules/#its-not-a-trap)\r\n\r\n> We have a documented SaaS use case but no named agency customer or live federal workload yet. Does that support an initial Marketplace listing under MKT-IIP-AGU...\r\n\r\nIf you intend for the offering to be used by agencies then you're fine.\r\n\r\n> and how should we define the initial assessment scope before an agency customer exists?\r\n\r\nScope it to whatever parts of the offering you expect to make available to agencies that are likely to handle or affect confidentiality, integrity, or availability of federal customer data when they onboard.\r\n\r\n> Under MAS-CSO-IIR, if agency data stays in agency-managed storage and the platform only processes it in transit, how should we treat that data and the resources that handle it when defining the offering?\r\n\r\nFR can't provide advice and would need to deep dive on your architecture in any case to understand what you're asking here, but the rubric is simple - everything handling it is in play. Everything related that would likely affect CIA of it is in play.\r\n\r\n> If a storage service is added once a Class D path opens, would it be added to the existing certification or assessed separately?\r\n\r\nThis is up to you and would depend on the business case and goals. You can add it to an existing certified assessment scope as a significant change or you could get a separate certified offering if it's a different product. 🤷 \r\n\r\nHope this helps!\r\n\r\n"
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
     }
   ],
   "answer_url": null,
@@ -960,6 +989,7 @@
     "pallakatos",
     "paulagosta",
     "pete-gov",
+    "shanacronin-grc",
     "v-mhahnfirstinfotech"
   ],
   "official_responses": [
@@ -1122,6 +1152,11 @@
       "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18903585",
       "author": "pete-gov",
       "created_at": "2026-10-13T14:58:06Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18978806",
+      "author": "pete-gov",
+      "created_at": "2026-10-16T17:29:59Z"
     }
   ],
   "entities": {
@@ -1150,6 +1185,7 @@
       "https://www.fedramp.gov/2026/reference/minimum-assessment-scope/#supplemental-information",
       "https://www.fedramp.gov/2026/reference/security-decision-record/?h=security+decis#security-decision-record-metadata",
       "https://www.fedramp.gov/2026/rules/#force-of-the-rule",
+      "https://www.fedramp.gov/2026/rules/#its-not-a-trap",
       "https://www.fedramp.gov/2026/scope/#detailed-examples1",
       "https://www.fedramp.gov/2026/scope/#information-providers,",
       "https://www.fedramp.gov/2026/scope/#scope-of-fedramp",
@@ -1177,6 +1213,6 @@
       "vulnerability_mgmt"
     ]
   },
-  "content_hash": "ba3cba923b514ebc079bad59ea32f0f4f547322386c67f27d3f1bfd0f6f652ed",
-  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+  "content_hash": "db9a3586c3021262cf5486b7a5be8a2ee7bd17b418a4d946408e538da4af3f3e",
+  "synced_at": "2026-10-17T07:46:06.456342+00:00"
 }
