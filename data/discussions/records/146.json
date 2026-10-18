@@ -15,7 +15,7 @@
   "author": "pete-gov",
   "author_is_official": true,
   "created_at": "2026-06-24T21:49:44Z",
-  "updated_at": "2026-10-15T21:14:04Z",
+  "updated_at": "2026-10-18T02:33:45Z",
   "last_edited_at": null,
   "closed": false,
   "closed_at": null,
@@ -34,7 +34,7 @@
       "is_official": false,
       "created_at": "2026-06-25T17:51:55Z",
       "updated_at": "2026-06-25T17:51:55Z",
-      "upvotes": 2,
+      "upvotes": 3,
       "minimized": false,
       "body": "\r\nCan you confirm whether the March 7, 2027 grace period defined in NTC-0014 remains accurate and unchanged?\r\n\r\nSpecifically, is this grace period still authoritative, or has it been superseded or modified by the CR26 Consolidated Rules timeline, including the January 1, 2027 mandatory adoption date?\r\n \r\nAs per NTC-0014:\r\n\r\n\"FedRAMP will provide a grace period through March 7, 2027 where cloud service offerings may maintain their FedRAMP Certification under a corrective action plan (which will include notice to all agencies). After this date, FedRAMP Certification will be revoked for all cloud service offerings not following these rules.\"\r\n",
       "is_answer": false,
@@ -322,9 +322,21 @@
           "upvotes": 0,
           "minimized": false,
           "body": "Corrective action, then revocation of FedRAMP Certification. \r\n\r\nhttps://www.fedramp.gov/2026/providers/updating/deadlines/#important-deadlines"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BIhFn",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19009895",
+          "author": "LPT00-ctrl",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-10-18T02:33:45Z",
+          "updated_at": "2026-10-18T02:33:45Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Has FedRAMP ever revoked a Certification or an Authorization? If yes, which clouds were revoked?"
         }
       ],
-      "replies_total": 1,
+      "replies_total": 2,
       "replies_truncated": false
     },
     {
@@ -2046,6 +2058,7 @@
     "ElaineFR",
     "ExtremoPenguin",
     "Fcsech",
+    "LPT00-ctrl",
     "MrbLab",
     "PeterWeiler",
     "TM-Microsoft",
@@ -2487,6 +2500,6 @@
       "vulnerability_mgmt"
     ]
   },
-  "content_hash": "7c87e49480c6c1dab87e9d26212f83635b4900232720dc357f33757b395c0c60",
-  "synced_at": "2026-10-16T07:53:10.197718+00:00"
+  "content_hash": "80998fd3e87ffab745fedb87e4cb8ea54e4fa1a0f743ed805eca339cccaecd9d",
+  "synced_at": "2026-10-18T12:05:33.162216+00:00"
 }

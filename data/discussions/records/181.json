@@ -15,7 +15,7 @@
   "author": "pete-gov",
   "author_is_official": true,
   "created_at": "2026-10-15T17:47:55Z",
-  "updated_at": "2026-10-16T12:07:11Z",
+  "updated_at": "2026-10-17T17:44:38Z",
   "last_edited_at": null,
   "closed": false,
   "closed_at": null,
@@ -24,7 +24,7 @@
   "answer_chosen_at": null,
   "upvotes": 2,
   "body": "Hey all - as a reminder, FedRAMP can't answer questions or generally participate directly in RFC threads to avoid influencing public comment. Sometimes this creates confusion because folks just want to talk about details of something proposed in an RFC to understand it better or learn more about it, so we create these side-threads at times for RFCs.\r\n\r\nThe two open RFCs in question are:\r\n\r\n- #179 \r\n- #180 \r\n\r\nPlease feel free to use this thread to discuss, ask questions, etc. - but don't forget to add public comment with feedback either way!",
-  "comment_count": 1,
+  "comment_count": 2,
   "comments": [
     {
       "id": "DC_kwDOOxfoic4BIVOG",
@@ -66,10 +66,27 @@
       ],
       "replies_total": 2,
       "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BIfLC",
+      "url": "https://github.com/FedRAMP/community/discussions/181#discussioncomment-19002050",
+      "author": "HazemEld",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-10-17T17:44:38Z",
+      "updated_at": "2026-10-17T17:44:38Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "The _Notes_ in the rules are undefeated. My favorite is the one in CMU-CSO-TSC: \"Adding a non-validated algorithm while a CMVP-validated module still protects federal customer data, such as hybrid implementation, is not such a change.\" Allows a CSP to add a PQC-approved algo. as an option to the algo that was validated as part of the module without going through a transformative.",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
     }
   ],
   "answer_url": null,
   "participants": [
+    "HazemEld",
     "StevenCh99",
     "pete-gov"
   ],
@@ -100,6 +117,6 @@
       "crypto_fips"
     ]
   },
-  "content_hash": "8d14c17c5e113c5950e1639959922d787881e5739cbbf33e891d62b204f7d40d",
-  "synced_at": "2026-10-17T07:46:06.456342+00:00"
+  "content_hash": "5546d8794553a17fdbb39fa73605ec21d4a4a8a8e55ea90e785f1f5ca3f0f62d",
+  "synced_at": "2026-10-18T12:05:33.162216+00:00"
 }
