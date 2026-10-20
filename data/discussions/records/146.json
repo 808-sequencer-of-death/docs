@@ -15,7 +15,7 @@
   "author": "pete-gov",
   "author_is_official": true,
   "created_at": "2026-06-24T21:49:44Z",
-  "updated_at": "2026-10-19T12:37:56Z",
+  "updated_at": "2026-10-20T01:07:53Z",
   "last_edited_at": null,
   "closed": false,
   "closed_at": null,
@@ -24,7 +24,7 @@
   "answer_chosen_at": null,
   "upvotes": 1,
   "body": "## This thread is for any and all Q&A or general discussion related to FedRAMP Rev5 in general that does not need to have its own thread.\r\n\r\nFedRAMP released the [Consolidated Rules for 2026](https://www.fedramp.gov/2026/) on June 24, 2026 with a considerable set of changes for FedRAMP Rev5 that will apply to all cloud service providers.\r\n\r\nThese changes include:\r\n\r\n- Mandatory adoption of the Vulnerability Detection and Response and Vulnerability Evaluation and Reporting rules by December 6, 2026 in response to CISA BOD 26-04\r\n- Changes to assessments for Rev5 to align more like assessments for 20x - focusing on verification and validation instead of just control implementation.\r\n- Replacement of most FedRAMP templates with a new Certification Package Overview and Security Decision Record\r\n- Removal of many FedRAMP-assigned control parameters and a lot of older FedRAMP control guidance\r\n- Mandatory adoption of many other Balance Improvement Releases through 2027\r\n- A requirement to address all FedRAMP Rules within the Security Decision Record, instead of only addressing controls\r\n\r\nSome of these changes take effect for all cloud service providers on certain dates no matter what, others take effect at the next annual assessment. In general, these are sweeping changes that will require all cloud service providers to begin planning now to continue to meet FedRAMP Rev5 requirements.\r\n\r\nHistorical materials are available at [https://fedramp.gov/legacy](https://fedramp.gov/legacy).\r\n\r\n---\r\n\r\nYou may see some of the following folks from FedRAMP responding in this thread:\r\n\r\n- `pete-gov` - Pete, FedRAMP Director\r\n- `nicole-gov` - Nicole, Security Director\r\n- `dan-fedramp` - Dan, Lead Cloud Security Engineer\r\n- `paulagosta` - Paul, Lead Cloud Security Engineer (Bastion)\r\n- `emu-gov` - Emu, Lead Cloud Security Engineer (Vanguard)\r\n- `rhoesing` - Ryan, Chief of Staff & Policy Branch Chief",
-  "comment_count": 40,
+  "comment_count": 41,
   "comments": [
     {
       "id": "DC_kwDOOxfoic4BChJy",
@@ -1987,9 +1987,21 @@
           "upvotes": 0,
           "minimized": false,
           "body": "Hey @mpg-CF - I responded yesterday but was on my phone so it may have gone into limbo. I'm copy/pasting it into a direct reply to avoid confusion.\r\n\r\n> It doesn't say how the IA reports that verification or how the IA gets access to the final package.\r\n\r\nThat's up to two consenting businesses to figure out. This rule isn't about starting a fight, it's simply about making sure you have something to point to in your contract as part of the agreement.\r\n\r\n> 1. What is FedRAMP's expectations for the IA to communicate the results of the VIP review?\r\n\r\nThe cloud service provider has a rule that says they included your stuff. They get in trouble if they make false claims. They confirm the IA did the expected bits by showing us the information included.\r\n \r\n> 2. Should the IA's access to the provider's trust center be treated as required in order to validate this rule? \r\n\r\nThat's a business thing between the IA and the CSP. If you're an IA and the CSP won't give you access to their trust center then it would be pretty hard for you to meet the terms of your agreement with them right?\r\n\r\nFR isn't going to tell businesses that they have to let other businesses do things to them. We expect the CSP to meet all of the rules. They have to pay an IA to help them do a lot of that. If they try to block the IA that they paid from doing stuff that's a CSP/IA business problem, not a FR problem."
+        },
+        {
+          "id": "DC_kwDOOxfoic4BIsNZ",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19055449",
+          "author": "mpg-CF",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-10-20T01:07:53Z",
+          "updated_at": "2026-10-20T01:07:53Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thank you @pete-gov"
         }
       ],
-      "replies_total": 1,
+      "replies_total": 2,
       "replies_truncated": false
     },
     {
@@ -2061,6 +2073,22 @@
       ],
       "replies_total": 2,
       "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BIqiN",
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19048589",
+      "author": "cmp-cal-842",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-10-19T19:20:40Z",
+      "updated_at": "2026-10-19T19:20:40Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Hello FedRAMP team, \r\n\r\nWe're a multi-tenant SaaS provider building our VDR/VER program to Class C timeframes. Our aim is to put engineering effort where risk is highest, avoid noise from routinely replaced images, and keep our reporting transparent. Some questions that we have. \r\n\r\n**Detection time with a continuous scanner (VER-RPT-VDT, FRD-VLD, VER-TFR-EVU, VDR-CSO-DET, VDR-TFR-MVF**).\r\n\r\nOur scanner product scans continuously by default, so first-seen dates arrive daily. Its main value is persistently verifying and validating that fixes are in place, since a merged change does not by itself confirm remediation (VDR-CSO-DET, VDR-TFR-MVF). Findings are pulled into our evaluation process on a documented cadence, not daily. VER-RPT-VDT requires the \"time and source of the detection,\" and FRD-VLD describes detection as initial discovery plus determination of affected resources, but neither says which timestamp counts.\r\n\r\n1. Can the reported detection time be when the finding enters our evaluation process (the pull), provided the pull cadence is documented, instead of the scanner's first-seen date?\r\n2. If first-seen is expected, is it acceptable during the transition to report the gap between first-seen and evaluation and justify not meeting the 5-day VER-TFR-EVU SHOULD, while we work toward a shorter cadence?\r\n\r\n**Drift for machine-based resources (FRD-DET, FRD-MBI, VDR-TFR-PDD, VDR-TFR-PCD).**\r\n\r\nOur machine-based resources are defined and deployed through IaC and are routinely replaced rather than modified in place, so each instance matches its code-defined state. Should these resources count as not likely to drift, with changes made through the IaC pipeline treated as updates to the intended state rather than drift?\r\n\r\n**Fixes that require a major platform upgrade (FRD-ACV, VER-RPT-AVI, VDR-TFR-PVR).**\r\n\r\nSome shared platforms that are core to our infrastructure are on vendor-supported versions, but a fix is only available in a new major version. Because many services depend on these platforms, a major upgrade needs extensive compatibility testing to avoid breaking dependent functionality, which typically can make it months of planned work. Is it appropriate to report these as accepted vulnerabilities with a reviewed category explanation (upgrade and compatibility risk, testing plan, planned upgrade date, compensating controls) plus a per-asset note? We would keep KEVs and internet-reachable likely exploitable findings outside this approach.\r\n\r\n**Mitigated KEVs (VDR-TFR-KEV).**\r\n\r\nIf a KEV is fully mitigated and rated NO but not yet remediated by its CISA due date, should it be reported as overdue? Is a documented mitigation an acceptable justification for the SHOULD, or does BOD 26-04 expect remediation regardless?",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
     }
   ],
   "answer_url": null,
@@ -2078,6 +2106,7 @@
     "alexmellott",
     "badgerinspace",
     "cbiggsrun",
+    "cmp-cal-842",
     "dan-fedramp",
     "emu-gov",
     "ericmoss54",
@@ -2447,8 +2476,12 @@
   ],
   "entities": {
     "rule_ids": [
+      "FRD-ACV",
+      "FRD-DET",
       "FRD-FPV",
+      "FRD-MBI",
       "FRD-PAI",
+      "FRD-VLD",
       "KSI-CNA"
     ],
     "rfc_ids": [],
@@ -2517,6 +2550,6 @@
       "vulnerability_mgmt"
     ]
   },
-  "content_hash": "dbd1a77fe13a8f5e29244a476b8935540fa33e83ed96c3266ba8c06a7abf1b90",
-  "synced_at": "2026-10-19T14:44:11.156260+00:00"
+  "content_hash": "9108db5bca2a3e7259d40d7a3d13842ba2afe687b5b2184e56d6e924f79a5ee0",
+  "synced_at": "2026-10-20T12:46:15.451561+00:00"
 }
