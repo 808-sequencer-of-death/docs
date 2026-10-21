@@ -15,7 +15,7 @@
   "author": "pete-gov",
   "author_is_official": true,
   "created_at": "2026-10-15T17:47:55Z",
-  "updated_at": "2026-10-17T17:44:38Z",
+  "updated_at": "2026-10-21T12:16:58Z",
   "last_edited_at": null,
   "closed": false,
   "closed_at": null,
@@ -24,7 +24,7 @@
   "answer_chosen_at": null,
   "upvotes": 2,
   "body": "Hey all - as a reminder, FedRAMP can't answer questions or generally participate directly in RFC threads to avoid influencing public comment. Sometimes this creates confusion because folks just want to talk about details of something proposed in an RFC to understand it better or learn more about it, so we create these side-threads at times for RFCs.\r\n\r\nThe two open RFCs in question are:\r\n\r\n- #179 \r\n- #180 \r\n\r\nPlease feel free to use this thread to discuss, ask questions, etc. - but don't forget to add public comment with feedback either way!",
-  "comment_count": 2,
+  "comment_count": 4,
   "comments": [
     {
       "id": "DC_kwDOOxfoic4BIVOG",
@@ -82,12 +82,72 @@
       "replies": [],
       "replies_total": 0,
       "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BIwjC",
+      "url": "https://github.com/FedRAMP/community/discussions/181#discussioncomment-19073218",
+      "author": "kcarr91",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-10-20T13:31:19Z",
+      "updated_at": "2026-10-20T13:31:19Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Just wanted to make sure im understanding something correctly in [RFC-0036 FedRAMP 20x Class D Cloud-Hosted Pilot Requirements](https://github.com/FedRAMP/community/discussions/180)\r\n\r\nThis rule **_FRC-CLD-PCD Progressive Certification to Class D_** would apply to Class D 20x generally post pilot and not just the pilot correct?   \r\n\r\n",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BIwuz",
+          "url": "https://github.com/FedRAMP/community/discussions/181#discussioncomment-19073971",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-10-20T14:10:22Z",
+          "updated_at": "2026-10-20T14:10:22Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Yes, that's right, intent is to across the board require a 20x Class C assessment before moving up to 20x Class D so that FR is not having to do a full 20x Class D from scratch for anyone. As a reminder, folks with current Rev5 Class D would still retain their Rev5 Class D during that transition."
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BIyaN",
+      "url": "https://github.com/FedRAMP/community/discussions/181#discussioncomment-19080845",
+      "author": "20xcompliance",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-10-20T20:10:15Z",
+      "updated_at": "2026-10-20T20:10:15Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "**Does `FRC-CLD-PCD` apply to new Rev5 Class D Agency Certifications?**\r\n\r\nWe want to confirm our reading of `FRC-CLD-PCD` (RFC-0036). The rule applies to providers \"seeking a FedRAMP 20x Class D Certification.\" We read it as **not** requiring a provider on the **Rev5 / Agency / Class D** Certification Profile (an agency-sponsored Rev5 Class D application filed before the June 11, 2027 cutoff for new Rev5 applications) to first hold a 20x Class C Certification for 6 months.\r\n\r\nWe also read the note that \"transitions from Rev5 Class D will still be expected to move through 20x Class C first\" as applying only to a later move from Rev5 Class D to 20x Class D, not to obtaining the Rev5 Class D certification.\r\n\r\nIs that correct? Thank you.",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BIyjK",
+          "url": "https://github.com/FedRAMP/community/discussions/181#discussioncomment-19081418",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-10-20T20:41:38Z",
+          "updated_at": "2026-10-20T20:41:38Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> Is that correct? Thank you.\r\n\r\nThe entirety of RFC-0036 is for FedRAMP 20x and would not apply to FedRAMP Rev5. \r\n\r\n"
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
     }
   ],
   "answer_url": null,
   "participants": [
+    "20xcompliance",
     "HazemEld",
     "StevenCh99",
+    "kcarr91",
     "pete-gov"
   ],
   "official_responses": [
@@ -95,11 +155,22 @@
       "url": "https://github.com/FedRAMP/community/discussions/181#discussioncomment-18970948",
       "author": "pete-gov",
       "created_at": "2026-10-16T10:44:03Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/181#discussioncomment-19073971",
+      "author": "pete-gov",
+      "created_at": "2026-10-20T14:10:22Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/181#discussioncomment-19081418",
+      "author": "pete-gov",
+      "created_at": "2026-10-20T20:41:38Z"
     }
   ],
   "entities": {
     "rule_ids": [
-      "FRC-CLD-CTP"
+      "FRC-CLD-CTP",
+      "FRC-CLD-PCD"
     ],
     "rfc_ids": [
       "RFC-0032",
@@ -107,16 +178,21 @@
       "RFC-0036"
     ],
     "nist_controls": [],
-    "discussion_refs": [],
-    "urls": [],
+    "discussion_refs": [
+      180
+    ],
+    "urls": [
+      "https://github.com/FedRAMP/community/discussions/180"
+    ],
     "topics": [
       "20x",
       "class_b",
       "class_c",
       "class_d",
-      "crypto_fips"
+      "crypto_fips",
+      "rev5"
     ]
   },
-  "content_hash": "5546d8794553a17fdbb39fa73605ec21d4a4a8a8e55ea90e785f1f5ca3f0f62d",
-  "synced_at": "2026-10-18T12:05:33.162216+00:00"
+  "content_hash": "92832f9ef9b72cc364168c7385945b7c012c4724c89a5090255457d872b085d6",
+  "synced_at": "2026-10-21T12:59:23.440581+00:00"
 }

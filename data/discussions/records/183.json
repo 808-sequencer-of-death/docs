@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-183",
+  "node_id": "D_kwDOOxfoic4AqUyG",
+  "number": 183,
+  "title": "Clarifying Metadata in Legacy Rev. 5 Systems",
+  "url": "https://github.com/FedRAMP/community/discussions/183",
+  "category": "Rev5 Discussion",
+  "category_slug": "rev5-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "controlled-chaos916",
+  "author_is_official": false,
+  "created_at": "2026-10-21T12:45:12Z",
+  "updated_at": "2026-10-21T12:45:12Z",
+  "last_edited_at": null,
+  "closed": false,
+  "closed_at": null,
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "I'm working to reconcile MAS-CSO-MDI & MAS-CSO-IIR for my Rev.5/CR26 environment. Can you clarify a few things for me? \r\n\r\n1. Everything included in the minimum assessment scope is subject to the rest of Rev.5/CR26?\r\n2. Is metadata such as IPs, URLs, server names okay to exist in a corporate (read: outside MAS) system? If yes or no, can you give rationale and/or examples of potential use cases you considered? \r\n\r\nThanks so much!",
+  "comment_count": 0,
+  "comments": [],
+  "answer_url": null,
+  "participants": [
+    "controlled-chaos916"
+  ],
+  "official_responses": [],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [],
+    "topics": [
+      "rev5"
+    ]
+  },
+  "content_hash": "c8d4aef01209abcd825a78e082a64d49eda72e332c812c43b1401c48ba60d85c",
+  "synced_at": "2026-10-21T12:59:23.440581+00:00"
+}

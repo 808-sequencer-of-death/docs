@@ -15,7 +15,7 @@
   "author": "pete-gov",
   "author_is_official": true,
   "created_at": "2026-06-24T21:49:44Z",
-  "updated_at": "2026-10-20T01:07:53Z",
+  "updated_at": "2026-10-20T18:51:34Z",
   "last_edited_at": null,
   "closed": false,
   "closed_at": null,
@@ -24,7 +24,7 @@
   "answer_chosen_at": null,
   "upvotes": 1,
   "body": "## This thread is for any and all Q&A or general discussion related to FedRAMP Rev5 in general that does not need to have its own thread.\r\n\r\nFedRAMP released the [Consolidated Rules for 2026](https://www.fedramp.gov/2026/) on June 24, 2026 with a considerable set of changes for FedRAMP Rev5 that will apply to all cloud service providers.\r\n\r\nThese changes include:\r\n\r\n- Mandatory adoption of the Vulnerability Detection and Response and Vulnerability Evaluation and Reporting rules by December 6, 2026 in response to CISA BOD 26-04\r\n- Changes to assessments for Rev5 to align more like assessments for 20x - focusing on verification and validation instead of just control implementation.\r\n- Replacement of most FedRAMP templates with a new Certification Package Overview and Security Decision Record\r\n- Removal of many FedRAMP-assigned control parameters and a lot of older FedRAMP control guidance\r\n- Mandatory adoption of many other Balance Improvement Releases through 2027\r\n- A requirement to address all FedRAMP Rules within the Security Decision Record, instead of only addressing controls\r\n\r\nSome of these changes take effect for all cloud service providers on certain dates no matter what, others take effect at the next annual assessment. In general, these are sweeping changes that will require all cloud service providers to begin planning now to continue to meet FedRAMP Rev5 requirements.\r\n\r\nHistorical materials are available at [https://fedramp.gov/legacy](https://fedramp.gov/legacy).\r\n\r\n---\r\n\r\nYou may see some of the following folks from FedRAMP responding in this thread:\r\n\r\n- `pete-gov` - Pete, FedRAMP Director\r\n- `nicole-gov` - Nicole, Security Director\r\n- `dan-fedramp` - Dan, Lead Cloud Security Engineer\r\n- `paulagosta` - Paul, Lead Cloud Security Engineer (Bastion)\r\n- `emu-gov` - Emu, Lead Cloud Security Engineer (Vanguard)\r\n- `rhoesing` - Ryan, Chief of Staff & Policy Branch Chief",
-  "comment_count": 41,
+  "comment_count": 42,
   "comments": [
     {
       "id": "DC_kwDOOxfoic4BChJy",
@@ -2086,8 +2086,62 @@
       "minimized": false,
       "body": "Hello FedRAMP team, \r\n\r\nWe're a multi-tenant SaaS provider building our VDR/VER program to Class C timeframes. Our aim is to put engineering effort where risk is highest, avoid noise from routinely replaced images, and keep our reporting transparent. Some questions that we have. \r\n\r\n**Detection time with a continuous scanner (VER-RPT-VDT, FRD-VLD, VER-TFR-EVU, VDR-CSO-DET, VDR-TFR-MVF**).\r\n\r\nOur scanner product scans continuously by default, so first-seen dates arrive daily. Its main value is persistently verifying and validating that fixes are in place, since a merged change does not by itself confirm remediation (VDR-CSO-DET, VDR-TFR-MVF). Findings are pulled into our evaluation process on a documented cadence, not daily. VER-RPT-VDT requires the \"time and source of the detection,\" and FRD-VLD describes detection as initial discovery plus determination of affected resources, but neither says which timestamp counts.\r\n\r\n1. Can the reported detection time be when the finding enters our evaluation process (the pull), provided the pull cadence is documented, instead of the scanner's first-seen date?\r\n2. If first-seen is expected, is it acceptable during the transition to report the gap between first-seen and evaluation and justify not meeting the 5-day VER-TFR-EVU SHOULD, while we work toward a shorter cadence?\r\n\r\n**Drift for machine-based resources (FRD-DET, FRD-MBI, VDR-TFR-PDD, VDR-TFR-PCD).**\r\n\r\nOur machine-based resources are defined and deployed through IaC and are routinely replaced rather than modified in place, so each instance matches its code-defined state. Should these resources count as not likely to drift, with changes made through the IaC pipeline treated as updates to the intended state rather than drift?\r\n\r\n**Fixes that require a major platform upgrade (FRD-ACV, VER-RPT-AVI, VDR-TFR-PVR).**\r\n\r\nSome shared platforms that are core to our infrastructure are on vendor-supported versions, but a fix is only available in a new major version. Because many services depend on these platforms, a major upgrade needs extensive compatibility testing to avoid breaking dependent functionality, which typically can make it months of planned work. Is it appropriate to report these as accepted vulnerabilities with a reviewed category explanation (upgrade and compatibility risk, testing plan, planned upgrade date, compensating controls) plus a per-asset note? We would keep KEVs and internet-reachable likely exploitable findings outside this approach.\r\n\r\n**Mitigated KEVs (VDR-TFR-KEV).**\r\n\r\nIf a KEV is fully mitigated and rated NO but not yet remediated by its CISA due date, should it be reported as overdue? Is a documented mitigation an acceptable justification for the SHOULD, or does BOD 26-04 expect remediation regardless?",
       "is_answer": false,
-      "replies": [],
-      "replies_total": 0,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BIwh4",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19073144",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-10-20T13:27:43Z",
+          "updated_at": "2026-10-20T13:27:43Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> Can the reported detection time be when the finding enters our evaluation process (the pull), provided the pull cadence is documented, instead of the scanner's first-seen date?\r\n\r\nIt does not seem accurate to track detection time as the time that detection data is transferred to or processed by a system later in the pipeline than the detection system. This would not make a lot of sense, and monitoring these timelines without factoring for the delay between detection and initial processing would give you an incomplete picture of your own vulnerability detection and response.\r\n\r\n> If first-seen is expected, is it acceptable during the transition to report the gap between first-seen and evaluation and justify not meeting the 5-day VER-TFR-EVU SHOULD, while we work toward a shorter cadence?\r\n\r\nThe VDR-TFR-PVR (Mitigation and Remediation Expectations) timelines are from evaluation, not detection. You should still try to get timelines between detection and evaluation down to as close to zero as possible.\r\n\r\n> Should these resources count as not likely to drift, with changes made through the IaC pipeline treated as updates to the intended state rather than drift?\r\n\r\nYour engineering team can and should answer this question for you, based on your specific deployment and management process. In many situations like you describe it would be accurate to classify those resources as unlikely to drift, but that's not a guarantee - in other situations there may be lots of bespoke maintenance happening outside the control pipelines. 🤷 \r\n\r\n> Some shared platforms that are core to our infrastructure are on vendor-supported versions, but a fix is only available in a new major version. Because many services depend on these platforms, a major upgrade needs extensive compatibility testing to avoid breaking dependent functionality, which typically can make it months of planned work. Is it appropriate to report these as accepted vulnerabilities with a reviewed category explanation (upgrade and compatibility risk, testing plan, planned upgrade date, compensating controls) plus a per-asset note? We would keep KEVs and internet-reachable likely exploitable findings outside this approach.\r\n\r\nYou should mitigate those vulnerabilities instead of just accepting them. It's highly irresponsible to leave likely exploitable vulnerabilities open to exploitation simply because a new vendor patch isn't available yet. You certainly can accept those vulnerabilities but that would definitely show a lack of intentional security approach to managing risk in the system. \r\n\r\nIn the old vulnerability management process, FedRAMP did not consider mitigation as a viable path - that has changed entirely, and mitigation is now expected by default. If you choose not to mitigate vulnerabilities then at the very least you need to explain the risk and potential impact to the customer.\r\n\r\n> If a KEV is fully mitigated and rated NO but not yet remediated by its CISA due date, should it be reported as overdue? Is a documented mitigation an acceptable justification for the SHOULD, or does BOD 26-04 expect remediation regardless?\r\n\r\nCISA doesn't really play the mitigation game with KEVs. A fully mitigated KEV still needs to be remediated in 14 days.\r\n\r\n\r\n"
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BIxYj",
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19076643",
+      "author": "eatkinson-trackvia",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-10-20T16:12:30Z",
+      "updated_at": "2026-10-20T16:12:30Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Hello! I have searched these questions in the repo and cannot find the answers, and I'm sure I've asked Paul on a call already - so apologies for the repeat:\r\n\r\n- What is the process to confirm that we have implemented CR26 - is it in response to FSI outreach, or should we proactively fill out something in Fedramp-help? \r\n\r\n- Next, I understand that we just include that change in the next annual assessment. We don't need to immediately obtain an additional mini-assessment from an independent assessor to validate our implementation, correct?",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BIx6Y",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19078808",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-10-20T18:11:13Z",
+          "updated_at": "2026-10-20T18:11:13Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": ">     * What is the process to confirm that we have implemented CR26 - is it in response to FSI outreach, or should we proactively fill out something in Fedramp-help?\r\n\r\nWe'll know. 😈 We plan to look at the materials produced by cloud service providers under their collaborative continuous monitoring and other rulesets. It will be obvious fairly quickly if providers are not supplying the necessary materials.\r\n \r\n>     * Next, I understand that we just include that change in the next annual assessment. We don't need to immediately obtain an additional mini-assessment from an independent assessor to validate our implementation, correct?\r\n\r\nAll the significant change rules apply. Many significant changes do not require independent assessment."
+        },
+        {
+          "id": "DC_kwDOOxfoic4BIyFC",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19079490",
+          "author": "eatkinson-trackvia",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-10-20T18:51:34Z",
+          "updated_at": "2026-10-20T18:51:34Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thank you!"
+        }
+      ],
+      "replies_total": 2,
       "replies_truncated": false
     }
   ],
@@ -2108,6 +2162,7 @@
     "cbiggsrun",
     "cmp-cal-842",
     "dan-fedramp",
+    "eatkinson-trackvia",
     "emu-gov",
     "ericmoss54",
     "gmengelberg",
@@ -2472,6 +2527,16 @@
       "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18958558",
       "author": "pete-gov",
       "created_at": "2026-10-15T20:56:54Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19073144",
+      "author": "pete-gov",
+      "created_at": "2026-10-20T13:27:43Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19078808",
+      "author": "pete-gov",
+      "created_at": "2026-10-20T18:11:13Z"
     }
   ],
   "entities": {
@@ -2550,6 +2615,6 @@
       "vulnerability_mgmt"
     ]
   },
-  "content_hash": "9108db5bca2a3e7259d40d7a3d13842ba2afe687b5b2184e56d6e924f79a5ee0",
-  "synced_at": "2026-10-20T12:46:15.451561+00:00"
+  "content_hash": "4fd5a8064274e4ba7c148951ad12dddd7066d0e29ca1bb2de169ebf5b7e1c64c",
+  "synced_at": "2026-10-21T12:59:23.440581+00:00"
 }
