@@ -15,7 +15,7 @@
   "author": "pete-gov",
   "author_is_official": true,
   "created_at": "2026-10-15T17:47:55Z",
-  "updated_at": "2026-10-21T12:16:58Z",
+  "updated_at": "2026-10-21T15:10:38Z",
   "last_edited_at": null,
   "closed": false,
   "closed_at": null,
@@ -79,8 +79,33 @@
       "minimized": false,
       "body": "The _Notes_ in the rules are undefeated. My favorite is the one in CMU-CSO-TSC: \"Adding a non-validated algorithm while a CMVP-validated module still protects federal customer data, such as hybrid implementation, is not such a change.\" Allows a CSP to add a PQC-approved algo. as an option to the algo that was validated as part of the module without going through a transformative.",
       "is_answer": false,
-      "replies": [],
-      "replies_total": 0,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BI3EF",
+          "url": "https://github.com/FedRAMP/community/discussions/181#discussioncomment-19099909",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-10-21T14:41:22Z",
+          "updated_at": "2026-10-21T14:41:22Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Hmmm, just to clarify, that note means you can use a CMVP-validated module to protect information _and then wrap it in a PQC resistant algo that isn't CMVP-validated_ (or vice versa) and that's likely not a transformative change (and it's good security). This hybrid implementation can be a bit expensive but it's the most effective way to dot the i's and cross the t's for any customers that are quite picky about sticking with CMVP-validated modules.\r\n"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BI3Nu",
+          "url": "https://github.com/FedRAMP/community/discussions/181#discussioncomment-19100526",
+          "author": "HazemEld",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-10-21T15:10:38Z",
+          "updated_at": "2026-10-21T15:10:38Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Yup, that's exactly what my interpretation of these notes were. You're clarification is a lot more clear than my reaction but we're on the same page here. Thanks you!"
+        }
+      ],
+      "replies_total": 2,
       "replies_truncated": false
     },
     {
@@ -157,6 +182,11 @@
       "created_at": "2026-10-16T10:44:03Z"
     },
     {
+      "url": "https://github.com/FedRAMP/community/discussions/181#discussioncomment-19099909",
+      "author": "pete-gov",
+      "created_at": "2026-10-21T14:41:22Z"
+    },
+    {
       "url": "https://github.com/FedRAMP/community/discussions/181#discussioncomment-19073971",
       "author": "pete-gov",
       "created_at": "2026-10-20T14:10:22Z"
@@ -193,6 +223,6 @@
       "rev5"
     ]
   },
-  "content_hash": "92832f9ef9b72cc364168c7385945b7c012c4724c89a5090255457d872b085d6",
-  "synced_at": "2026-10-21T12:59:23.440581+00:00"
+  "content_hash": "e9e16f1b20280d9e8a23f151c9365402461912db9c5b2075cb79260536873772",
+  "synced_at": "2026-10-22T13:00:55.912130+00:00"
 }

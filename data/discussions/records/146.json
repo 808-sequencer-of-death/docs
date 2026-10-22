@@ -15,7 +15,7 @@
   "author": "pete-gov",
   "author_is_official": true,
   "created_at": "2026-06-24T21:49:44Z",
-  "updated_at": "2026-10-20T18:51:34Z",
+  "updated_at": "2026-10-21T20:44:29Z",
   "last_edited_at": null,
   "closed": false,
   "closed_at": null,
@@ -24,7 +24,7 @@
   "answer_chosen_at": null,
   "upvotes": 1,
   "body": "## This thread is for any and all Q&A or general discussion related to FedRAMP Rev5 in general that does not need to have its own thread.\r\n\r\nFedRAMP released the [Consolidated Rules for 2026](https://www.fedramp.gov/2026/) on June 24, 2026 with a considerable set of changes for FedRAMP Rev5 that will apply to all cloud service providers.\r\n\r\nThese changes include:\r\n\r\n- Mandatory adoption of the Vulnerability Detection and Response and Vulnerability Evaluation and Reporting rules by December 6, 2026 in response to CISA BOD 26-04\r\n- Changes to assessments for Rev5 to align more like assessments for 20x - focusing on verification and validation instead of just control implementation.\r\n- Replacement of most FedRAMP templates with a new Certification Package Overview and Security Decision Record\r\n- Removal of many FedRAMP-assigned control parameters and a lot of older FedRAMP control guidance\r\n- Mandatory adoption of many other Balance Improvement Releases through 2027\r\n- A requirement to address all FedRAMP Rules within the Security Decision Record, instead of only addressing controls\r\n\r\nSome of these changes take effect for all cloud service providers on certain dates no matter what, others take effect at the next annual assessment. In general, these are sweeping changes that will require all cloud service providers to begin planning now to continue to meet FedRAMP Rev5 requirements.\r\n\r\nHistorical materials are available at [https://fedramp.gov/legacy](https://fedramp.gov/legacy).\r\n\r\n---\r\n\r\nYou may see some of the following folks from FedRAMP responding in this thread:\r\n\r\n- `pete-gov` - Pete, FedRAMP Director\r\n- `nicole-gov` - Nicole, Security Director\r\n- `dan-fedramp` - Dan, Lead Cloud Security Engineer\r\n- `paulagosta` - Paul, Lead Cloud Security Engineer (Bastion)\r\n- `emu-gov` - Emu, Lead Cloud Security Engineer (Vanguard)\r\n- `rhoesing` - Ryan, Chief of Staff & Policy Branch Chief",
-  "comment_count": 42,
+  "comment_count": 44,
   "comments": [
     {
       "id": "DC_kwDOOxfoic4BChJy",
@@ -2143,6 +2143,64 @@
       ],
       "replies_total": 2,
       "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BI2xB",
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19098689",
+      "author": "MrbLab",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-10-21T13:43:40Z",
+      "updated_at": "2026-10-21T13:43:40Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Hi FedRAMP, had some questions regarding the notification and dissemination of Incident Reports (IIC, OIR, FIR). I'd like to confirm that the path forward below matches expectations.\r\n\r\nNotify FedRAMP via email: fedramp_security@fedramp.gov\r\nPath forward: No brainer, email FedRAMP\r\n\r\nNotify Agency Customers via the appropriate recipient-specific method: Follow agency-specific incident reporting procedures (varies by agency).\r\nPath Forward: Reach out to Agencies to understand any agency specific procedures. Make sure specific procedures are incorporated into Incident Reporting process.\r\n\r\nNotify All Necessary Parties via an update: Provider’s Trust Center or USDA Connect (trust center).\r\nPath Forward: For Agencies without specific procedures, all incident reports (IIC, OIR, FIR) will be posted to Trust Center/USDA Connect.\r\n\r\nThank you in advance.",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BI5LU",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19108564",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-10-21T20:36:46Z",
+          "updated_at": "2026-10-21T20:36:46Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": ">  I'd like to confirm that the path forward below matches expectations.\r\n\r\nYep, that looks right!\r\n\r\nFor the agency stuff, I would note that many agencies bake notification expectations into the procurement agreement - but it's almost always to email a specific email address."
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BI4MK",
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19104522",
+      "author": "RenD-CMD",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-10-21T18:36:50Z",
+      "updated_at": "2026-10-21T18:36:50Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "We are an active Rev5 certified CSP looking to confirm our CR26 Trust Center / Certification Data Sharing (CDS) compliance dates based on the published guidelines:   Obtain (2027-01-01): Applies strictly to net-new CSPs seeking initial certification.   Maintain (2027-08-01): Applies to active Rev5 CSPs like us. Our mandatory deadline to comply is August 1, 2027.  Grace Period (2028-02-01): Corrective actions for active CSPs begin February 1, 2028. \r\nQuestion 1: Is this understanding correct for existing active Rev5 CSPs, or does January 1, 2027 impose any immediate CDS obligations on us?\r\nQuestion 2: If our CSO is Class D (High) and we use a third-party Trust Center vendor, does that vendor to also have a FedRAMP certification? If so, must it also be at Class D / High?",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BI5N0",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19108724",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-10-21T20:44:29Z",
+          "updated_at": "2026-10-21T20:44:29Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> Question 1: Is this understanding correct for existing active Rev5 CSPs, or does January 1, 2027 impose any immediate CDS obligations on us?\r\n\r\nThis is correct, August 1, 2027 is the deadline when a cloud service will go into remediation and corrective action will be required... though we would strongly discourage folks from waiting any longer than absolutely necessary to improve their customer experience and ensure agencies have better access to their assurance data. We've also found that using a trust center greatly decreases the operational burden by allowing improved automation.\r\n\r\n> Question 2: If our CSO is Class D (High) and we use a third-party Trust Center vendor, does that vendor to also have a FedRAMP certification? If so, must it also be at Class D / High?\r\n\r\nNope and nope. The [Minimum Assessment Scope](https://www.fedramp.gov/2026/reference/minimum-assessment-scope/) under CR26 does not require the use of FedRAMP Certified third-party information resources. Instead you are expected to address the potential impact to federal customer data of those third-party information resources.\r\n\r\nIn general, if a cloud service provider follows the rules under CR26 to _responsibly_ manage the information that is in the certification package, then there should not be any risk to federal customer data if the information in the certification package is exposed. This would mean that a trust center could be outside the Minimum Assessment Scope entirely.\r\n"
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
     }
   ],
   "answer_url": null,
@@ -2155,6 +2213,7 @@
     "LPT00-ctrl",
     "MrbLab",
     "PeterWeiler",
+    "RenD-CMD",
     "TM-Microsoft",
     "adamstc1",
     "alexmellott",
@@ -2537,6 +2596,16 @@
       "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19078808",
       "author": "pete-gov",
       "created_at": "2026-10-20T18:11:13Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19108564",
+      "author": "pete-gov",
+      "created_at": "2026-10-21T20:36:46Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19108724",
+      "author": "pete-gov",
+      "created_at": "2026-10-21T20:44:29Z"
     }
   ],
   "entities": {
@@ -2578,6 +2647,7 @@
       "https://www.fedramp.gov/2026/providers/updating/deadlines/?h=%22grace+period%22#understanding-ruleset-effective-dates",
       "https://www.fedramp.gov/2026/providers/updating/deadlines/rev5/",
       "https://www.fedramp.gov/2026/providers/updating/deadlines/rev5/#rev5-deadlines",
+      "https://www.fedramp.gov/2026/reference/minimum-assessment-scope/",
       "https://www.fedramp.gov/2026/reference/rev5-control-guidance/",
       "https://www.fedramp.gov/2026/reference/rev5/d/significant-change-notification/",
       "https://www.fedramp.gov/2026/reference/vulnerability-detection-and-response/",
@@ -2615,6 +2685,6 @@
       "vulnerability_mgmt"
     ]
   },
-  "content_hash": "4fd5a8064274e4ba7c148951ad12dddd7066d0e29ca1bb2de169ebf5b7e1c64c",
-  "synced_at": "2026-10-21T12:59:23.440581+00:00"
+  "content_hash": "f956d21e79a5c908528406e9688b0c2e5055f909589430e521458db43784bbb5",
+  "synced_at": "2026-10-22T13:00:55.912130+00:00"
 }

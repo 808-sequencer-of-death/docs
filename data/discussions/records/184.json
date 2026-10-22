@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-184",
+  "node_id": "D_kwDOOxfoic4AqVmf",
+  "number": 184,
+  "title": "Class A: must the SOC 2 Type II boundary match the offering, and can it carve out subservice organizations?",
+  "url": "https://github.com/FedRAMP/community/discussions/184",
+  "category": "20x Discussion",
+  "category_slug": "20x-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "2bkolohe",
+  "author_is_official": false,
+  "created_at": "2026-10-21T20:47:49Z",
+  "updated_at": "2026-10-21T23:48:52Z",
+  "last_edited_at": null,
+  "closed": false,
+  "closed_at": null,
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "We are a small commercial SaaS provider preparing for a 20x Class A application through the Program path. Before we engage an auditor, we would like to confirm three points about FRC-CLA-ASF and FRC-CLA-EAM:\n\n1. If our SOC 2 Type II (Security criteria) covers exactly the commercial service we would list as the cloud service offering, with the same system description and boundary, does that satisfy FRC-CLA-ASF? Or does FedRAMP expect a boundary built specifically for federal customers?\n2. Our service relies on several third parties (telephony, speech, database hosting and an LLM provider) that we would treat as carved-out subservice organizations in the SOC 2. Is documenting them under MAS-CSO-TPR sufficient for Class A, given that none of them holds FedRAMP status?\n3. Is a first SOC 2 Type II with a 3-month observation period acceptable for FRC-CLA-ASF, or does FedRAMP expect a longer period?\n\nThank you.",
+  "comment_count": 1,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4BI5ST",
+      "url": "https://github.com/FedRAMP/community/discussions/184#discussioncomment-19109011",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2026-10-21T21:01:40Z",
+      "updated_at": "2026-10-21T21:01:40Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "> If our SOC 2 Type II (Security criteria) covers exactly the commercial service we would list as the cloud service offering, with the same system description and boundary, does that satisfy FRC-CLA-ASF? Or does FedRAMP expect a boundary built specifically for federal customers?\r\n\r\nIt doesn't have to be exactly the same boundary, but we would expect all of information resources that you list for the MAS-CSO-IIR (Identify Information Resources) to be covered in the SOC 2 Type II. It is likely that the SOC 2 Type II would actually cover resources that you don't include in the MAS for various reasons.\r\n\r\nWe don't expect a federal-specific boundary at all! The intent is for you to \"run what you brung\" with Class A. \r\n\r\n> Our service relies on several third parties (telephony, speech, database hosting and an LLM provider) that we would treat as carved-out subservice organizations in the SOC 2. Is documenting them under MAS-CSO-TPR sufficient for Class A, given that none of them holds FedRAMP status?\r\n\r\nYes, that's right. Ensure to document the information flows and risk, such as what type of federal customer data would flow into those services and how that might affect customers (as well as if they can be disabled/etc.). You also might have compensating controls or mitigating measures in place and should document that.\r\n\r\nThis will help agencies make informed risk decisions - in a situation you described, an agency might want to use the service for communication with the public and would happily accept the risk of third-party telephony because all of the people using the service are coming in through an insecure public phone. Another agency might want to use it for secure phone calls and would not accept the risk of an unknown third-party telephony service. That's all working as intended!\r\n\r\n> Is a first SOC 2 Type II with a 3-month observation period acceptable for FRC-CLA-ASF, or does FedRAMP expect a longer period?\r\n\r\nThis should be acceptable, just note it. ",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BI53H",
+          "url": "https://github.com/FedRAMP/community/discussions/184#discussioncomment-19111367",
+          "author": "2bkolohe",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-10-21T23:48:52Z",
+          "updated_at": "2026-10-21T23:48:52Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Very cool -- thank you, Sir."
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "2bkolohe",
+    "pete-gov"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/184#discussioncomment-19109011",
+      "author": "pete-gov",
+      "created_at": "2026-10-21T21:01:40Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [
+      "FRC-CLA-ASF",
+      "FRC-CLA-EAM"
+    ],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [],
+    "topics": [
+      "20x",
+      "class_a"
+    ]
+  },
+  "content_hash": "69c587c8e1ba43dd1a38ec9cf97ba3ab1484db09b8691c1813b6be8b58459d53",
+  "synced_at": "2026-10-22T13:00:55.912130+00:00"
+}

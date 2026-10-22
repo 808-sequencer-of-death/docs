@@ -15,7 +15,7 @@
   "author": "controlled-chaos916",
   "author_is_official": false,
   "created_at": "2026-10-21T12:45:12Z",
-  "updated_at": "2026-10-21T12:45:12Z",
+  "updated_at": "2026-10-21T14:11:59Z",
   "last_edited_at": null,
   "closed": false,
   "closed_at": null,
@@ -24,23 +24,49 @@
   "answer_chosen_at": null,
   "upvotes": 1,
   "body": "I'm working to reconcile MAS-CSO-MDI & MAS-CSO-IIR for my Rev.5/CR26 environment. Can you clarify a few things for me? \r\n\r\n1. Everything included in the minimum assessment scope is subject to the rest of Rev.5/CR26?\r\n2. Is metadata such as IPs, URLs, server names okay to exist in a corporate (read: outside MAS) system? If yes or no, can you give rationale and/or examples of potential use cases you considered? \r\n\r\nThanks so much!",
-  "comment_count": 0,
-  "comments": [],
+  "comment_count": 1,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4BI26j",
+      "url": "https://github.com/FedRAMP/community/discussions/183#discussioncomment-19099299",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2026-10-21T14:11:59Z",
+      "updated_at": "2026-10-21T14:11:59Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "> Everything included in the minimum assessment scope is subject to the rest of Rev.5/CR26?\r\n\r\nYes, that's right.\r\n\r\n> Is metadata such as IPs, URLs, server names okay to exist in a corporate (read: outside MAS) system? If yes or no, can you give rationale and/or examples of potential use cases you considered?\r\n\r\n[MAS-CSO-MDI (Metadata Inclusion)](https://www.fedramp.gov/2026/reference/minimum-assessment-scope/#metadata-inclusion) gives you the path to make this determination - we can't say definitively in each particular environment because it will vary from architecture to architecture.\r\n\r\nIn _general_ though, things like IP addresses, URLs, and server names are not very likely to potentially impact the confidentiality, integrity, or availability of federal customer data if they are managed responsibly, and would not be inside the MAS. Those things are typically not private and their use transits the public internet, and if you were to get a hold of an IP address or host name it shouldn't generally matter. So what if you know something is called `database-useast1`?\r\n\r\nOn the other hand, if your server names are something like `cia-secret-project-mkultra`and contain actual federal customer data or something (in this fictional example, the name of a secret project that no one would want out there), then they'd definitely be in the MAS. A list of allow-list IPs for a special recovery process might be potentially sensitive if it allows bypassing certain controls. Etc.\r\n\r\nAgain, if things are configured and designed responsibly, then metadata shouldn't put federal customer data at risk though.\r\n\r\n",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    }
+  ],
   "answer_url": null,
   "participants": [
-    "controlled-chaos916"
+    "controlled-chaos916",
+    "pete-gov"
   ],
-  "official_responses": [],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/183#discussioncomment-19099299",
+      "author": "pete-gov",
+      "created_at": "2026-10-21T14:11:59Z"
+    }
+  ],
   "entities": {
     "rule_ids": [],
     "rfc_ids": [],
     "nist_controls": [],
     "discussion_refs": [],
-    "urls": [],
+    "urls": [
+      "https://www.fedramp.gov/2026/reference/minimum-assessment-scope/#metadata-inclusion"
+    ],
     "topics": [
       "rev5"
     ]
   },
-  "content_hash": "c8d4aef01209abcd825a78e082a64d49eda72e332c812c43b1401c48ba60d85c",
-  "synced_at": "2026-10-21T12:59:23.440581+00:00"
+  "content_hash": "dd8736487cc1e295d4f193aafea103c0a65e24bf519f557b1052a0ee103ab9d1",
+  "synced_at": "2026-10-22T13:00:55.912130+00:00"
 }
