@@ -15,7 +15,7 @@
   "author": "pete-gov",
   "author_is_official": true,
   "created_at": "2026-06-24T21:49:44Z",
-  "updated_at": "2026-10-21T20:44:29Z",
+  "updated_at": "2026-10-22T19:55:13Z",
   "last_edited_at": null,
   "closed": false,
   "closed_at": null,
@@ -24,7 +24,7 @@
   "answer_chosen_at": null,
   "upvotes": 1,
   "body": "## This thread is for any and all Q&A or general discussion related to FedRAMP Rev5 in general that does not need to have its own thread.\r\n\r\nFedRAMP released the [Consolidated Rules for 2026](https://www.fedramp.gov/2026/) on June 24, 2026 with a considerable set of changes for FedRAMP Rev5 that will apply to all cloud service providers.\r\n\r\nThese changes include:\r\n\r\n- Mandatory adoption of the Vulnerability Detection and Response and Vulnerability Evaluation and Reporting rules by December 6, 2026 in response to CISA BOD 26-04\r\n- Changes to assessments for Rev5 to align more like assessments for 20x - focusing on verification and validation instead of just control implementation.\r\n- Replacement of most FedRAMP templates with a new Certification Package Overview and Security Decision Record\r\n- Removal of many FedRAMP-assigned control parameters and a lot of older FedRAMP control guidance\r\n- Mandatory adoption of many other Balance Improvement Releases through 2027\r\n- A requirement to address all FedRAMP Rules within the Security Decision Record, instead of only addressing controls\r\n\r\nSome of these changes take effect for all cloud service providers on certain dates no matter what, others take effect at the next annual assessment. In general, these are sweeping changes that will require all cloud service providers to begin planning now to continue to meet FedRAMP Rev5 requirements.\r\n\r\nHistorical materials are available at [https://fedramp.gov/legacy](https://fedramp.gov/legacy).\r\n\r\n---\r\n\r\nYou may see some of the following folks from FedRAMP responding in this thread:\r\n\r\n- `pete-gov` - Pete, FedRAMP Director\r\n- `nicole-gov` - Nicole, Security Director\r\n- `dan-fedramp` - Dan, Lead Cloud Security Engineer\r\n- `paulagosta` - Paul, Lead Cloud Security Engineer (Bastion)\r\n- `emu-gov` - Emu, Lead Cloud Security Engineer (Vanguard)\r\n- `rhoesing` - Ryan, Chief of Staff & Policy Branch Chief",
-  "comment_count": 44,
+  "comment_count": 45,
   "comments": [
     {
       "id": "DC_kwDOOxfoic4BChJy",
@@ -2098,9 +2098,45 @@
           "upvotes": 0,
           "minimized": false,
           "body": "> Can the reported detection time be when the finding enters our evaluation process (the pull), provided the pull cadence is documented, instead of the scanner's first-seen date?\r\n\r\nIt does not seem accurate to track detection time as the time that detection data is transferred to or processed by a system later in the pipeline than the detection system. This would not make a lot of sense, and monitoring these timelines without factoring for the delay between detection and initial processing would give you an incomplete picture of your own vulnerability detection and response.\r\n\r\n> If first-seen is expected, is it acceptable during the transition to report the gap between first-seen and evaluation and justify not meeting the 5-day VER-TFR-EVU SHOULD, while we work toward a shorter cadence?\r\n\r\nThe VDR-TFR-PVR (Mitigation and Remediation Expectations) timelines are from evaluation, not detection. You should still try to get timelines between detection and evaluation down to as close to zero as possible.\r\n\r\n> Should these resources count as not likely to drift, with changes made through the IaC pipeline treated as updates to the intended state rather than drift?\r\n\r\nYour engineering team can and should answer this question for you, based on your specific deployment and management process. In many situations like you describe it would be accurate to classify those resources as unlikely to drift, but that's not a guarantee - in other situations there may be lots of bespoke maintenance happening outside the control pipelines. 🤷 \r\n\r\n> Some shared platforms that are core to our infrastructure are on vendor-supported versions, but a fix is only available in a new major version. Because many services depend on these platforms, a major upgrade needs extensive compatibility testing to avoid breaking dependent functionality, which typically can make it months of planned work. Is it appropriate to report these as accepted vulnerabilities with a reviewed category explanation (upgrade and compatibility risk, testing plan, planned upgrade date, compensating controls) plus a per-asset note? We would keep KEVs and internet-reachable likely exploitable findings outside this approach.\r\n\r\nYou should mitigate those vulnerabilities instead of just accepting them. It's highly irresponsible to leave likely exploitable vulnerabilities open to exploitation simply because a new vendor patch isn't available yet. You certainly can accept those vulnerabilities but that would definitely show a lack of intentional security approach to managing risk in the system. \r\n\r\nIn the old vulnerability management process, FedRAMP did not consider mitigation as a viable path - that has changed entirely, and mitigation is now expected by default. If you choose not to mitigate vulnerabilities then at the very least you need to explain the risk and potential impact to the customer.\r\n\r\n> If a KEV is fully mitigated and rated NO but not yet remediated by its CISA due date, should it be reported as overdue? Is a documented mitigation an acceptable justification for the SHOULD, or does BOD 26-04 expect remediation regardless?\r\n\r\nCISA doesn't really play the mitigation game with KEVs. A fully mitigated KEV still needs to be remediated in 14 days.\r\n\r\n\r\n"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BI-xM",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19131468",
+          "author": "cmp-cal-842",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-10-22T19:42:35Z",
+          "updated_at": "2026-10-22T19:42:35Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thanks @pete-gov! One follow-up, so we can apply it consistently to meet TFR-KEV. So the SHOULD applies to other reasons like no vendor remediation exists yet or if the fix is owned by a leveraged provider for not meeting the CISA catalog date. Is that the right assumption?"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BI-y8",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19131580",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-10-22T19:48:36Z",
+          "updated_at": "2026-10-22T19:49:29Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> So the SHOULD applies to other reasons like no vendor remediation exists yet or if the fix is owned by a leveraged provider for not meeting the CISA catalog date.\r\n\r\nIf those are valid technical reasons that you can't compensate for, then yes! It's always important to remember that this is about assurance, not compliance - just because you have what you think is a valid technical reason doesn't mean an agency customer will agree with it or be happy with your decision. From FedRAMP's standpoint, you should have the freedom to stand on the technical reasons that you think are valid and we won't yank your FedRAMP Certification over it, but that doesn't mean every agency customer will be cool with the decisions you make.\r\n\r\n(edit to add - but realistically if you have vendors that aren't patching KEVs you should really get rid of them, by definition KEVs are always things where remediation exists and it's been out for a while and anyone not patching them sucks)"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BI-1M",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19131724",
+          "author": "cmp-cal-842",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-10-22T19:55:12Z",
+          "updated_at": "2026-10-22T19:55:12Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thanks again!"
         }
       ],
-      "replies_total": 1,
+      "replies_total": 4,
       "replies_truncated": false
     },
     {
@@ -2201,6 +2237,35 @@
       ],
       "replies_total": 1,
       "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BI9RV",
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19125333",
+      "author": "MichaelLAllen",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-10-22T14:27:54Z",
+      "updated_at": "2026-10-22T14:27:54Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "I have a couple questions:\r\n\r\nAs we work to understand the implementation expectations and plan accordingly, could FedRAMP provide additional context on how it intends to verify that CSPs have implemented VDR by the December 7 deadline? For example, would FedRAMP engage directly with each CSP, or would verification follow a process similar to quarterly testing, using submitted evidence and/or agency reporting?\r\n\r\nIt would also be helpful to understand how FedRAMP is thinking about supporting agencies that may still be establishing the processes needed to receive, process, and evaluate VDR data. Will FedRAMP provide interim guidance, a phased approach, or other implementation support as agencies build those capabilities?\r\n\r\nFinally, how will FedRAMP evaluate a CSP's progress toward implementation? If a CSP has a documented action plan and is actively taking steps to implement the applicable CR26 requirements by the deadline, would that be sufficient to avoid a corrective action plan, or is full implementation expected by December 7/March 7th? ",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BI-qU",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19131028",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-10-22T19:09:58Z",
+          "updated_at": "2026-10-22T19:09:58Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> As we work to understand the implementation expectations and plan accordingly, could FedRAMP provide additional context on how it intends to verify that CSPs have implemented VDR by the December 7 deadline?\r\n\r\nWe simply need to ask you and review your required vulnerability detection and response activity reports to confirm.\r\n\r\n> It would also be helpful to understand how FedRAMP is thinking about supporting agencies that may still be establishing the processes needed to receive, process, and evaluate VDR data. \r\n\r\nYou should work with your agency customers to supply information in a way that optimizes their experience. The default requirements in the VER are not very different from historical information that cloud service providers were expected to share. Agencies generally manually review spreadsheets and summaries, and they will be able to continue to do this if they do not have tools, expertise, or interest in reviewing more detailed information. \r\n\r\nRemember that agencies are also simultaneously rebuilding all of their own internal processes and tooling to comply with BOD 26-04 and are figuring all of this out on the fly as well.\r\n\r\n> Finally, how will FedRAMP evaluate a CSP's progress toward implementation? If a CSP has a documented action plan and is actively taking steps to implement the applicable CR26 requirements by the deadline, would that be sufficient to avoid a corrective action plan, or is full implementation expected by December 7/March 7th?\r\n\r\nWe are not planning on evaluating progress. Cloud service providers are capable of managing their own progress and don't need to report to us along the way. \r\n\r\nYes, full implementation is expected by December 7. If full implementation is not completed on that date then the cloud service provider will be expected to supply a corrective action plan to complete the implementation by March 7. This process is explained on the [Rev5 Deadlines](https://www.fedramp.gov/2026/providers/updating/deadlines/rev5/) page.\r\n\r\nPlease remember that CISA BOD 26-04 requires every single agency to transition to this risk-based approach by December 7. On that date, agencies will need to report their status and the status of the cloud services they use. Historically, there may be a bit of flexibility in a CISA BOD deadline but we have seen circumstances where within a few months of such a deadline agencies have been forced to turn off services that do not comply. The grace period that FedRAMP provided is **only** for FedRAMP Certification itself, it is entirely possible that failure to comply with the VDR/VER will result in agencies turning off your service on that date and considering you in breach of contract (depending on how that's written).\r\n\r\nWe wrote VDR and VER in a way that would allow any mildly competent cloud service provider to rapidly switch over to it while gaining all of the benefits of the risk-based approach to vulnerability management, at a potential negative cost of needing to massively accelerate response to extremely rare circumstances (like this week's php2shell) _which any secure cloud service was already doing._"
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
     }
   ],
   "answer_url": null,
@@ -2211,6 +2276,7 @@
     "ExtremoPenguin",
     "Fcsech",
     "LPT00-ctrl",
+    "MichaelLAllen",
     "MrbLab",
     "PeterWeiler",
     "RenD-CMD",
@@ -2593,6 +2659,11 @@
       "created_at": "2026-10-20T13:27:43Z"
     },
     {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19131580",
+      "author": "pete-gov",
+      "created_at": "2026-10-22T19:48:36Z"
+    },
+    {
       "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19078808",
       "author": "pete-gov",
       "created_at": "2026-10-20T18:11:13Z"
@@ -2606,6 +2677,11 @@
       "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19108724",
       "author": "pete-gov",
       "created_at": "2026-10-21T20:44:29Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19131028",
+      "author": "pete-gov",
+      "created_at": "2026-10-22T19:09:58Z"
     }
   ],
   "entities": {
@@ -2685,6 +2761,6 @@
       "vulnerability_mgmt"
     ]
   },
-  "content_hash": "f956d21e79a5c908528406e9688b0c2e5055f909589430e521458db43784bbb5",
-  "synced_at": "2026-10-22T13:00:55.912130+00:00"
+  "content_hash": "bcebb2c5eaa8495cba9c57ad08104375abe43b5614cb4e181ee05f87eed4a6bf",
+  "synced_at": "2026-10-23T12:40:14.590270+00:00"
 }
