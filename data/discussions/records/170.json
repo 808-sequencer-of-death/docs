@@ -1,5 +1,5 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "source": "github_discussions",
   "repo": "FedRAMP/community",
   "id": "fedramp-community-discussion-170",
@@ -321,7 +321,7 @@
       "url": "https://github.com/FedRAMP/community/discussions/170#discussioncomment-18931171",
       "author": "rhoesing",
       "author_association": "CONTRIBUTOR",
-      "is_official": false,
+      "is_official": true,
       "created_at": "2026-10-14T18:15:37Z",
       "updated_at": "2026-10-14T18:15:37Z",
       "upvotes": 1,
@@ -352,6 +352,11 @@
     "wisecryptic"
   ],
   "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/170#discussioncomment-18931171",
+      "author": "rhoesing",
+      "created_at": "2026-10-14T18:15:37Z"
+    },
     {
       "url": "https://github.com/FedRAMP/community/discussions/170#discussioncomment-18501820",
       "author": "pete-gov",
@@ -442,5 +447,5 @@
     ]
   },
   "content_hash": "6327e3de64bfc5e82c525bf400d3ebf5800246716e43a5043131b3d3bc5d0218",
-  "synced_at": "2026-10-24T02:05:45.615762+00:00"
+  "synced_at": "2026-10-24T02:20:11.900157+00:00"
 }

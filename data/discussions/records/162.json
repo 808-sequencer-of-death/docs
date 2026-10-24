@@ -1,5 +1,5 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "source": "github_discussions",
   "repo": "FedRAMP/community",
   "id": "fedramp-community-discussion-162",
@@ -31,7 +31,7 @@
       "url": "https://github.com/FedRAMP/community/discussions/162#discussioncomment-18016701",
       "author": "emu-gov",
       "author_association": "CONTRIBUTOR",
-      "is_official": false,
+      "is_official": true,
       "created_at": "2026-08-14T11:44:32Z",
       "updated_at": "2026-08-14T11:44:32Z",
       "upvotes": 1,
@@ -48,7 +48,13 @@
     "emu-gov",
     "gmengelberg"
   ],
-  "official_responses": [],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/162#discussioncomment-18016701",
+      "author": "emu-gov",
+      "created_at": "2026-08-14T11:44:32Z"
+    }
+  ],
   "entities": {
     "rule_ids": [],
     "rfc_ids": [],
@@ -64,5 +70,5 @@
     ]
   },
   "content_hash": "3e6c6294fa86e43def63c1cafb32b7b7655e52a9a14cbccda1171e134d6dc1cb",
-  "synced_at": "2026-10-24T02:05:45.615762+00:00"
+  "synced_at": "2026-10-24T02:20:11.900157+00:00"
 }

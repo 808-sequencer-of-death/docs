@@ -1,5 +1,5 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "source": "github_discussions",
   "repo": "FedRAMP/community",
   "id": "fedramp-community-discussion-130",
@@ -15,7 +15,7 @@
   "is_official_thread": false,
   "is_rfc": true,
   "author": "rhoesing",
-  "author_is_official": false,
+  "author_is_official": true,
   "created_at": "2026-03-19T16:43:04Z",
   "updated_at": "2026-04-24T18:52:17Z",
   "last_edited_at": "2026-04-23T11:56:15Z",
@@ -176,7 +176,7 @@
       "url": "https://github.com/FedRAMP/community/discussions/130#discussioncomment-16506691",
       "author": "rhoesing",
       "author_association": "CONTRIBUTOR",
-      "is_official": false,
+      "is_official": true,
       "created_at": "2026-04-09T17:26:55Z",
       "updated_at": "2026-04-09T17:26:55Z",
       "upvotes": 1,
@@ -438,6 +438,11 @@
   ],
   "official_responses": [
     {
+      "url": "https://github.com/FedRAMP/community/discussions/130#discussioncomment-16506691",
+      "author": "rhoesing",
+      "created_at": "2026-04-09T17:26:55Z"
+    },
+    {
       "url": "https://github.com/FedRAMP/community/discussions/130#discussioncomment-16684145",
       "author": "nicole-gov",
       "created_at": "2026-04-23T12:19:50Z"
@@ -507,5 +512,5 @@
     ]
   },
   "content_hash": "ae8e52a7d773af5f1ccc7f68c71f106635d24e9c03714a36bd1e186b82808e5b",
-  "synced_at": "2026-10-24T02:05:45.615762+00:00"
+  "synced_at": "2026-10-24T02:20:11.900157+00:00"
 }

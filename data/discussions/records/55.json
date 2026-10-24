@@ -1,5 +1,5 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "source": "github_discussions",
   "repo": "FedRAMP/community",
   "id": "fedramp-community-discussion-55",
@@ -31,7 +31,7 @@
       "url": "https://github.com/FedRAMP/community/discussions/55#discussioncomment-13644896",
       "author": "emu-gov",
       "author_association": "CONTRIBUTOR",
-      "is_official": false,
+      "is_official": true,
       "created_at": "2025-07-02T19:39:17Z",
       "updated_at": "2025-07-02T19:39:19Z",
       "upvotes": 2,
@@ -209,6 +209,11 @@
   ],
   "official_responses": [
     {
+      "url": "https://github.com/FedRAMP/community/discussions/55#discussioncomment-13644896",
+      "author": "emu-gov",
+      "created_at": "2025-07-02T19:39:17Z"
+    },
+    {
       "url": "https://github.com/FedRAMP/community/discussions/55#discussioncomment-13739536",
       "author": "pete-gov",
       "created_at": "2025-07-12T15:19:16Z"
@@ -241,5 +246,5 @@
     ]
   },
   "content_hash": "0850e4c4f717b67aaeb41019ae00cc33a9d0a7759a21dae23de6f3671133b6f1",
-  "synced_at": "2026-10-24T02:05:45.615762+00:00"
+  "synced_at": "2026-10-24T02:20:11.900157+00:00"
 }

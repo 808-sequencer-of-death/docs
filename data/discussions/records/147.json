@@ -1,5 +1,5 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "source": "github_discussions",
   "repo": "FedRAMP/community",
   "id": "fedramp-community-discussion-147",
@@ -97,7 +97,7 @@
           "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-17587637",
           "author": "emu-gov",
           "author_association": "CONTRIBUTOR",
-          "is_official": false,
+          "is_official": true,
           "created_at": "2026-07-09T17:06:00Z",
           "updated_at": "2026-07-09T17:06:00Z",
           "upvotes": 0,
@@ -607,7 +607,7 @@
           "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18136501",
           "author": "emu-gov",
           "author_association": "CONTRIBUTOR",
-          "is_official": false,
+          "is_official": true,
           "created_at": "2026-08-24T14:34:31Z",
           "updated_at": "2026-08-24T15:15:15Z",
           "upvotes": 0,
@@ -636,7 +636,7 @@
           "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18053044",
           "author": "emu-gov",
           "author_association": "CONTRIBUTOR",
-          "is_official": false,
+          "is_official": true,
           "created_at": "2026-08-17T13:59:00Z",
           "updated_at": "2026-08-17T14:01:06Z",
           "upvotes": 0,
@@ -665,7 +665,7 @@
           "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18137103",
           "author": "emu-gov",
           "author_association": "CONTRIBUTOR",
-          "is_official": false,
+          "is_official": true,
           "created_at": "2026-08-24T15:18:45Z",
           "updated_at": "2026-08-24T15:18:45Z",
           "upvotes": 0,
@@ -677,7 +677,7 @@
           "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18368851",
           "author": "emu-gov",
           "author_association": "CONTRIBUTOR",
-          "is_official": false,
+          "is_official": true,
           "created_at": "2026-09-09T13:06:35Z",
           "updated_at": "2026-09-09T13:06:35Z",
           "upvotes": 0,
@@ -734,7 +734,7 @@
           "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18249814",
           "author": "emu-gov",
           "author_association": "CONTRIBUTOR",
-          "is_official": false,
+          "is_official": true,
           "created_at": "2026-09-02T12:48:11Z",
           "updated_at": "2026-09-02T12:48:11Z",
           "upvotes": 0,
@@ -746,7 +746,7 @@
           "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18249940",
           "author": "emu-gov",
           "author_association": "CONTRIBUTOR",
-          "is_official": false,
+          "is_official": true,
           "created_at": "2026-09-02T12:54:13Z",
           "updated_at": "2026-09-02T12:55:02Z",
           "upvotes": 0,
@@ -804,7 +804,7 @@
           "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18369371",
           "author": "emu-gov",
           "author_association": "CONTRIBUTOR",
-          "is_official": false,
+          "is_official": true,
           "created_at": "2026-09-09T13:42:47Z",
           "updated_at": "2026-09-09T13:42:47Z",
           "upvotes": 0,
@@ -1004,6 +1004,11 @@
       "created_at": "2026-07-08T01:01:38Z"
     },
     {
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-17587637",
+      "author": "emu-gov",
+      "created_at": "2026-07-09T17:06:00Z"
+    },
+    {
       "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-17674707",
       "author": "pete-gov",
       "created_at": "2026-07-17T16:19:14Z"
@@ -1079,14 +1084,49 @@
       "created_at": "2026-08-18T11:09:50Z"
     },
     {
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18136501",
+      "author": "emu-gov",
+      "created_at": "2026-08-24T14:34:31Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18053044",
+      "author": "emu-gov",
+      "created_at": "2026-08-17T13:59:00Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18137103",
+      "author": "emu-gov",
+      "created_at": "2026-08-24T15:18:45Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18368851",
+      "author": "emu-gov",
+      "created_at": "2026-09-09T13:06:35Z"
+    },
+    {
       "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18369926",
       "author": "pete-gov",
       "created_at": "2026-09-09T14:21:13Z"
     },
     {
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18249814",
+      "author": "emu-gov",
+      "created_at": "2026-09-02T12:48:11Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18249940",
+      "author": "emu-gov",
+      "created_at": "2026-09-02T12:54:13Z"
+    },
+    {
       "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18255553",
       "author": "pete-gov",
       "created_at": "2026-09-02T19:11:29Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18369371",
+      "author": "emu-gov",
+      "created_at": "2026-09-09T13:42:47Z"
     },
     {
       "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18371743",
@@ -1189,5 +1229,5 @@
     ]
   },
   "content_hash": "db9a3586c3021262cf5486b7a5be8a2ee7bd17b418a4d946408e538da4af3f3e",
-  "synced_at": "2026-10-24T02:05:45.615762+00:00"
+  "synced_at": "2026-10-24T02:20:11.900157+00:00"
 }

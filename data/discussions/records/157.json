@@ -1,5 +1,5 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "source": "github_discussions",
   "repo": "FedRAMP/community",
   "id": "fedramp-community-discussion-157",
@@ -16,7 +16,7 @@
   "is_official_thread": true,
   "is_rfc": true,
   "author": "rhoesing",
-  "author_is_official": false,
+  "author_is_official": true,
   "created_at": "2026-08-06T17:48:38Z",
   "updated_at": "2026-09-09T15:11:07Z",
   "last_edited_at": null,
@@ -79,5 +79,5 @@
     "topics": []
   },
   "content_hash": "19af6fda1c663eec0018ebfac0bca3a0b729f849fbc214409203b26deab1ba30",
-  "synced_at": "2026-10-24T02:05:45.615762+00:00"
+  "synced_at": "2026-10-24T02:20:11.900157+00:00"
 }

@@ -1,5 +1,5 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "source": "github_discussions",
   "repo": "FedRAMP/community",
   "id": "fedramp-community-discussion-89",
@@ -15,7 +15,7 @@
   "is_official_thread": true,
   "is_rfc": false,
   "author": "emu-gov",
-  "author_is_official": false,
+  "author_is_official": true,
   "created_at": "2025-09-23T11:52:41Z",
   "updated_at": "2025-11-20T18:31:25Z",
   "last_edited_at": "2025-11-20T18:31:25Z",
@@ -280,5 +280,5 @@
     ]
   },
   "content_hash": "8a3e5066ea84d3361c6526f3d243d4d2578322d1d13ca04529bb984ea591a7c1",
-  "synced_at": "2026-10-24T02:05:45.615762+00:00"
+  "synced_at": "2026-10-24T02:20:11.900157+00:00"
 }

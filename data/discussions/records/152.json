@@ -1,5 +1,5 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "source": "github_discussions",
   "repo": "FedRAMP/community",
   "id": "fedramp-community-discussion-152",
@@ -92,5 +92,5 @@
     ]
   },
   "content_hash": "9b3ec4df65f4d737639c199203c83cff3dfb9ed86827761c74e5f0c3dfe74179",
-  "synced_at": "2026-10-24T02:05:45.615762+00:00"
+  "synced_at": "2026-10-24T02:20:11.900157+00:00"
 }
