@@ -189,6 +189,10 @@ Rules page: [Vulnerability evaluation and reporting](/rules/vulnerability-evalua
   **pete-gov, 2026-10-02** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18714893)): Once [`VER-EVA-EFP`](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#evaluate-false-positives) finds a false positive, the other evaluations are done: exploitability, reachability and PAIN are all null. You can report them as not applicable. One option is to report false positives as accepted vulnerabilities in a "false positive" group under [`VER-EVA-GRV`](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#group-vulnerabilities). He said he'd clarify `VER-EVA-EPA` to allow PAIN 0 or N/A.
 </Note>
 
+<Note>
+  **pete-gov, 2026-10-15** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18957963)): The CVSS user interaction metric doesn't by itself show that a vulnerability isn't automatable under [`VER-EVA-AIA`](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#assume-its-automatable), but you can use it as evidence. A flaw that needs a specific action on one terminal you've walled off is probably not automatable. A flaw that only needs someone to open an email attachment still is, because "someone is gonna open that email." In general, high user interaction requirements are likely to reduce automatability.
+</Note>
+
 <Info>
   **Since applied upstream.** On 2026-10-05, `VER-EVA-EPA` added **N0** ("Exploitation is extremely unlikely to have any adverse effects on agencies"). See the [rule](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#estimate-potential-agency-impact).
 </Info>
