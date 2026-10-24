@@ -1,0 +1,6 @@
+# FedRAMP staff whose FedRAMP org membership doesn't show on their posts (authorAssociation NONE).
+# Members of the FedRAMP org (pete-gov, emu-gov, paulagosta, dan-fedramp, ...) are detected automatically.
+# Add a login only with evidence that it's staff, and note the evidence. A -gov suffix alone isn't evidence.
+# After editing, bump SCHEMA_VERSION in fedramp_discussions_sync.py so existing records are re-flagged.
+
+nicole-gov  # posts emailed public comments "into the public comment record" and edits RFC posts (e.g. #85, #110, #138)
