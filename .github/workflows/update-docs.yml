@@ -89,7 +89,7 @@ jobs:
             the workflow does that. Never invent guidance; if the sources are unclear, say so in .pr-body.md.
           claude_args: |
             --model claude-sonnet-5-5
-            --max-turns 60
+            --max-turns 150
             --max-budget-usd 5
             --allowedTools "Read,Edit,Write,Glob,Grep,Bash(git diff:*),Bash(git log:*),Bash(git show:*),Bash(ls:*),Bash(jq:*)"
 
