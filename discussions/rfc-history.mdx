@@ -5,7 +5,7 @@ sidebarTitle: "RFC history"
 ---
 
 <Info>
-  **Source:** RFC threads in [FedRAMP community discussions](https://github.com/FedRAMP/community/discussions), meaning threads flagged as RFCs or filed under an RFC category. **Last reviewed:** 2026-10-14 against upstream release `2026.10.14.01`.
+  **Source:** RFC threads in [FedRAMP community discussions](https://github.com/FedRAMP/community/discussions), meaning threads flagged as RFCs or filed under an RFC category. **Last reviewed:** 2026-10-24 against upstream release `2026.10.14.01`.
 </Info>
 
 ## What RFCs are
@@ -18,7 +18,7 @@ FedRAMP must seek public comment before it publishes guidance that affects stake
 
 ## How to read the table
 
-- **Status** is the thread's GitHub category. **Closed RFC** and **Open RFC** are formal comment threads. **Q&A** marks a "General RFC Discussion" thread. All Q&A threads below are closed.
+- **Status** is the thread's GitHub category. **Closed RFC** and **Open RFC** are formal comment threads. **Q&A** marks a "General RFC Discussion" thread. All Q&A threads below are closed except #181.
 - **Related ruleset** names a current ruleset only when the RFC's title or text names it directly, or the current rule carries the same name. Otherwise it shows "—". Many RFCs fed into several rulesets, or into pages that aren't rulesets, such as Rev5 control guidance and Scope of FedRAMP.
 - **Date** is when the thread was opened.
 
@@ -66,9 +66,15 @@ FedRAMP must seek public comment before it publishes guidance that affects stake
 | RFC-0034 | Technical Advisory Group Changes | Closed RFC | 2026-09-09 | [#171](https://github.com/FedRAMP/community/discussions/171) | — |
 | RFC-0033, RFC-0034 | Q&A on RFC-0033 and RFC-0034 | Q&A | 2026-09-09 | [#172](https://github.com/FedRAMP/community/discussions/172) | — |
 | RFC-0035 | Cryptographic Module Use Rules Updates | **Open RFC** (closes 2026-11-17) | 2026-10-14 | [#179](https://github.com/FedRAMP/community/discussions/179) | [Cryptographic module use](/rules/cryptographic-module-use) |
+| RFC-0036 | FedRAMP 20x Class D Cloud-Hosted Pilot Requirements | **Open RFC** (closes 2026-11-19) | 2026-10-15 | [#180](https://github.com/FedRAMP/community/discussions/180) | — |
+| RFC-0035, RFC-0036 | General discussion on RFC-0035 (FIPS) and RFC-0036 (Phase 4 pilot) | Q&A (open) | 2026-10-15 | [#181](https://github.com/FedRAMP/community/discussions/181) | — |
 
 <Note>
   **RFC-0035 is open.** It proposes changes to the current `CMU` rules, including changing `CMU-CSO-UVM` for Class D from MUST to SHOULD. Until FedRAMP publishes a change upstream, the current [`CMU-CSO-UVM`](https://www.fedramp.gov/2026/reference/cryptographic-module-use/#using-validated-cryptographic-modules) text governs, and Class D is MUST.
+</Note>
+
+<Note>
+  **RFC-0036 is open.** It proposes new definitions, changes to six rulesets and 10 new Key Security Indicators to test in the 20x Phase 4 cloud-hosted Class D pilot. It adds rules such as `FRC-CLD-PCD`, `FRC-CLD-CCH` and `FRC-FRA-FOD`. None of this is in the published rules. In [#181](https://github.com/FedRAMP/community/discussions/181), `pete-gov` said it applies to 20x only and wouldn't apply to Rev5 ([comment](https://github.com/FedRAMP/community/discussions/181#discussioncomment-19081418)). FedRAMP doesn't answer questions in the RFC threads themselves.
 </Note>
 
 RFC-0001 through RFC-0004 have no threads in this community dataset.

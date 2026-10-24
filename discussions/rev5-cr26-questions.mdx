@@ -5,7 +5,7 @@ sidebarTitle: "Rev5 CR26 Q&A (#146)"
 ---
 
 <Info>
-  **Thread:** [#146 Rev5 questions and discussion on the Consolidated Rules for 2026 (or Legacy)](https://github.com/FedRAMP/community/discussions/146), opened by `pete-gov` on 2026-06-24 and still open. This digest covers staff posts through 2026-10-14. **Last reviewed:** 2026-10-14 against upstream release `2026.10.14.01`. Staff answers are paraphrased. Follow each link for the exact wording. Staff statements don't change the published rules. Where they conflict, the [official rules](https://www.fedramp.gov/2026/) govern.
+  **Thread:** [#146 Rev5 questions and discussion on the Consolidated Rules for 2026 (or Legacy)](https://github.com/FedRAMP/community/discussions/146), opened by `pete-gov` on 2026-06-24 and still open. This digest covers staff posts through 2026-10-22. **Last reviewed:** 2026-10-24 against upstream release `2026.10.14.01`. Staff answers are paraphrased. Follow each link for the exact wording. Staff statements don't change the published rules. Where they conflict, the [official rules](https://www.fedramp.gov/2026/) govern.
 </Info>
 
 ## Bottom line
@@ -36,6 +36,26 @@ FedRAMP staff treat the Consolidated Rules for 2026 (CR26) as mandatory for ever
 
 <Note>
   **emu-gov, 2026-07-30** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-17845287)): If a Rev5 Class C provider doesn't implement CR26, the consequence is a corrective action plan, then revocation of FedRAMP Certification, on the dates in the [important deadlines](https://www.fedramp.gov/2026/providers/updating/deadlines/#important-deadlines).
+</Note>
+
+<Note>
+  **paulagosta, 2026-10-19** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-19040034)): FedRAMP has revoked a few certifications or authorizations for failures to adhere to FSI quarterly testing. Staff pointed to [Notice 16](https://www.fedramp.gov/notices/0016/) and its initial warning, and said several of those providers are no longer on the Marketplace.
+</Note>
+
+<Note>
+  **pete-gov, 2026-10-15** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18958558)): Ready Conversion providers must fully implement all CR26 rules required for a new Rev5 Certification, with a built-in grace period of about six weeks in place of 2027-01-01. All other grace periods apply only to providers that already hold a FedRAMP Certification. FedRAMP Ready isn't one.
+</Note>
+
+<Note>
+  **pete-gov, 2026-10-20** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-19078808)): FedRAMP will learn whether you've implemented CR26 by looking at the materials you produce under collaborative continuous monitoring and other rulesets. Staff said it will be obvious fairly quickly if providers aren't supplying them. All the significant change rules apply, and many significant changes don't need independent assessment.
+</Note>
+
+<Note>
+  **pete-gov, 2026-10-21** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-19108724)): For an active Rev5 provider, 2027-08-01 is when a service goes into remediation and needs corrective action under the trust center (`CDS`) rules, though staff strongly discourage waiting. The ruleset's own grace date is 2028-02-01. See [Certification data sharing](/rules/certification-data-sharing).
+</Note>
+
+<Note>
+  **pete-gov, 2026-10-22** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-19131028)): FedRAMP will confirm VDR implementation by asking you and reviewing your required VDR and VER activity reports. It won't evaluate progress along the way. Full implementation is expected by 2026-12-07, and if you miss it you supply a corrective action plan to finish by 2027-03-07. Staff warned that the grace period covers FedRAMP Certification only, and that agencies must report on BOD 26-04 compliance by 2026-12-07.
 </Note>
 
 <Note>
@@ -141,6 +161,18 @@ Rules page: [Vulnerability detection and response](/rules/vulnerability-detectio
   **pete-gov, 2026-10-14** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18923577)): This answered a question from `nathan-gov` about long-standing POA&M milestones agreed with agencies. Most can move over and be tracked as accepted vulnerabilities. No FedRAMP rule requires agency concurrence to accept vulnerabilities after initial certification, but your contracts might.
 </Note>
 
+<Note>
+  **pete-gov, 2026-10-20** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-19073144)) and **2026-10-22** ([follow-up](https://github.com/FedRAMP/community/discussions/146#discussioncomment-19131580)): Detection time is when the detection system found the vulnerability, not when a later system processed it. The `VDR-TFR-PVR` timelines run from evaluation. Whether IaC-managed resources are unlikely to drift is for your engineering team to decide. If a vendor fix isn't available, mitigate instead of only accepting the vulnerability, and explain the risk and impact to customers if you don't. A fully mitigated KEV still needs remediation, and the staff comment gave 14 days. [`VDR-TFR-KEV`](https://www.fedramp.gov/2026/reference/vulnerability-detection-and-response/#remediate-kevs) is a SHOULD that follows the CISA catalog due dates and doesn't state 14 days, so the published rule governs. In the follow-up, staff said the SHOULD can rest on valid technical reasons you can't compensate for, but agencies may not accept them.
+</Note>
+
+## Incident communications
+
+Rules page: [Incident evaluation and communication](/rules/incident-evaluation-and-communication).
+
+<Note>
+  **pete-gov, 2026-10-21** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-19108564)): Confirmed the three routes for incident reports: email `fedramp_security@fedramp.gov`, follow each agency's own procedure, and post to the trust center or USDA Connect for all necessary parties. Many agencies write notification expectations into the procurement agreement, usually as an email address.
+</Note>
+
 ## Vulnerability evaluation and reporting (VER)
 
 Rules page: [Vulnerability evaluation and reporting](/rules/vulnerability-evaluation-and-reporting).
@@ -235,6 +267,10 @@ Rules page: [Certification data sharing](/rules/certification-data-sharing).
 
 <Note>
   **pete-gov, 2026-10-07** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18799636)): [`CDS-CSO-PUB`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#public-information) makes providers own their public information. FedRAMP imports it into the Marketplace, and agencies can pull it straight from you.
+</Note>
+
+<Note>
+  **pete-gov, 2026-10-21** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-19108724)): A third-party trust center vendor doesn't need a FedRAMP certification, at Class D or any class. The Minimum Assessment Scope doesn't require FedRAMP Certified third-party resources, but you must address their potential impact on federal customer data. If you manage package information responsibly, the trust center could sit outside the scope entirely.
 </Note>
 
 ## JSON schemas

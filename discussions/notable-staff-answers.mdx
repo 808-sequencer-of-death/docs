@@ -11,8 +11,75 @@ sidebarTitle: "Notable staff answers"
 <Note>
   Several threads below were active before the Consolidated Rules for 2026 (CR26) were published on 2026-06-24, and were last updated around that date. Staff posts from before 2026-06-24 cite draft or pilot material. Check them against the current rules before relying on them.
 
-  Every thread below up to #173 was closed between 2026-06-24 and 2026-09-16. Unanswered follow-ups in those threads may never get a reply. Threads #174 through #178 were still open as of 2026-10-14.
+  Every thread below up to #173 was closed between 2026-06-24 and 2026-09-16. Unanswered follow-ups in those threads may never get a reply. Threads #174 through #178 were still open as of 2026-10-14. Threads #181 through #184 were open at the 2026-10-24 sync.
 </Note>
+
+## #184 Class A SOC 2 Type II boundary and subservice organizations
+
+[Thread](https://github.com/FedRAMP/community/discussions/184) (20x Discussion, opened 2026-10-21).
+
+**Bottom line:** For Class A, your SOC 2 Type II doesn't need a federal-specific boundary. It should cover every information resource you list under `MAS-CSO-IIR`.
+
+<Note>
+  **pete-gov, 2026-10-21** ([comment](https://github.com/FedRAMP/community/discussions/184#discussioncomment-19109011)), on [`FRC-CLA-ASF`](https://www.fedramp.gov/2026/reference/fedramp-certification/#approved-alternative-security-frameworks) and `MAS-CSO-TPR`:
+  - The boundary doesn't have to match the offering exactly. FedRAMP expects the SOC 2 Type II to cover all resources you list under [`MAS-CSO-IIR`](https://www.fedramp.gov/2026/reference/minimum-assessment-scope/#identify-information-resources). It may cover more than the scope.
+  - FedRAMP doesn't expect a federal-specific boundary. The intent for Class A is to "run what you brung."
+  - Carved-out subservice organizations are fine when documented under [`MAS-CSO-TPR`](https://www.fedramp.gov/2026/reference/minimum-assessment-scope/#third-party-information-resources), even if none has FedRAMP status. Document the information flows and risk, including what federal customer data flows to them, how that affects customers and whether they can be disabled. Document any compensating controls.
+  - A first SOC 2 Type II with a 3-month observation period "should be acceptable," and you should note it.
+</Note>
+
+**Open questions:** none raised after the staff reply. The rules don't state a minimum observation period.
+
+## #183 Metadata in legacy Rev5 systems
+
+[Thread](https://github.com/FedRAMP/community/discussions/183) (Rev5 Discussion, opened 2026-10-21).
+
+**Bottom line:** Everything in the minimum assessment scope is subject to the rest of Rev5/CR26. Whether metadata is in scope is your call under `MAS-CSO-MDI`.
+
+<Note>
+  **pete-gov, 2026-10-21** ([comment](https://github.com/FedRAMP/community/discussions/183#discussioncomment-19099299)):
+  - Yes, everything in the minimum assessment scope is subject to the rest of Rev5/CR26.
+  - [`MAS-CSO-MDI`](https://www.fedramp.gov/2026/reference/minimum-assessment-scope/#metadata-inclusion) is how you decide, and the answer varies by architecture.
+  - In general, IP addresses, URLs and server names are unlikely to affect federal customer data if managed responsibly, so they wouldn't be in scope. Names that contain federal customer data, or allow-listed IPs that could bypass controls, could be in scope.
+</Note>
+
+**Open questions:** none raised after the staff reply.
+
+## #182 Does Rev5 initial authorization need a ConMon observation period
+
+[Thread](https://github.com/FedRAMP/community/discussions/182) (Rev5 Discussion, opened 2026-10-15).
+
+**Bottom line:** Staff said no current FedRAMP rule requires 90 days of ConMon data during assessment.
+
+<Note>
+  **pete-gov, 2026-10-16** ([comment](https://github.com/FedRAMP/community/discussions/182#discussioncomment-18971284)):
+  - If an assessor cites a requirement and can't show where it is officially written, treat that as a red flag. Ask the assessor where it comes from. It may come from old vulnerability scanning guidance or from your agency sponsor.
+  - There is no current FedRAMP rule requiring 90 days of ConMon data to be reviewed during assessment. Having it is a value add.
+</Note>
+
+A community commenter, `jsantore-sf`, who isn't FedRAMP staff, said assessors have historically needed enough vulnerability history to judge consistent remediation. That is context, not guidance.
+
+**Open questions:** none raised after the staff reply.
+
+## #181 General discussion on RFC-0035 and RFC-0036
+
+[Thread](https://github.com/FedRAMP/community/discussions/181) (20x Discussion, opened 2026-10-15). This is the side thread for the open RFCs [#179](https://github.com/FedRAMP/community/discussions/179) and [#180](https://github.com/FedRAMP/community/discussions/180). See [RFC history](/discussions/rfc-history). The positions below describe proposals, not published rules.
+
+**Bottom line:** Staff said RFC-0036 is for 20x only and, if adopted, would require 20x Class C before 20x Class D across the board.
+
+<Note>
+  **pete-gov, 2026-10-16** ([comment](https://github.com/FedRAMP/community/discussions/181#discussioncomment-18970948)): "Class G" in RFC-0036 refers to a separate certification process for offerings provided by federal agencies, proposed in RFC-0032. It would become Class G if the FedRAMP Board approves it later in October.
+</Note>
+
+<Note>
+  **pete-gov, 2026-10-20** ([comment](https://github.com/FedRAMP/community/discussions/181#discussioncomment-19073971) and [comment](https://github.com/FedRAMP/community/discussions/181#discussioncomment-19081418)): The intent of `FRC-CLD-PCD` is to require a 20x Class C assessment before any move to 20x Class D, so FedRAMP never does a full Class D from scratch. Providers with Rev5 Class D keep it during the transition. All of RFC-0036 is for FedRAMP 20x and wouldn't apply to Rev5.
+</Note>
+
+<Note>
+  **pete-gov, 2026-10-21** ([comment](https://github.com/FedRAMP/community/discussions/181#discussioncomment-19099909)), on proposed `CMU-CSO-TSC` in RFC-0035: the note means you can use a CMVP-validated module and wrap it in a post-quantum algorithm that isn't CMVP-validated, or the reverse, and that likely isn't a transformative change. Staff described it as good security, though a hybrid can be expensive.
+</Note>
+
+**Open questions:** none raised after the staff replies. The RFC threads themselves have no staff answers, because FedRAMP doesn't answer questions in RFC threads.
 
 ## #178 What evidence shows a service is intended for agency use
 
