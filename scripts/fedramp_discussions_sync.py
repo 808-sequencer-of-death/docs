@@ -43,7 +43,7 @@ OWNER, REPO = "FedRAMP", "community"
 GQL_URL = "https://api.github.com/graphql"
 ANTHROPIC_URL = "https://api.anthropic.com/v1/messages"
 DEFAULT_MODEL = "claude-haiku-5-5"
-SCHEMA_VERSION = 1
+SCHEMA_VERSION = 2  # bump when extraction or the official-staff rules change; the next run rebuilds every record
 OFFICIAL_ASSOCIATIONS = {"OWNER", "MEMBER", "COLLABORATOR"}
 OFFICIAL_LABEL = "FedRAMP Official"
 
@@ -214,7 +214,8 @@ def iter_discussions(gh: GitHub, since: dt.datetime | None, page_size: int):
 
 # --------------------------------------------------------------------------- normalize + extract
 
-RULE_PREFIXES = r"KSI|FR[A-Z]"  # KSI-..., FRR-..., FRC-..., FRD-... (20x consolidated-rules style IDs)
+# CR26 ruleset trigrams (upstream/trigrams.md), plus FR[A-Z] for older 20x IDs (FRR-..., FRD-..., FRP-...).
+RULE_PREFIXES = r"AFC|AGU|CCM|CDS|CMU|CPO|IEC|IVV|KSI|MAS|MKT|REC|SCG|SCN|SDR|VDR|VER|FR[A-Z]"
 NIST_FAMILIES = "AC|AT|AU|CA|CM|CP|IA|IR|MA|MP|PE|PL|PM|PS|PT|RA|SA|SC|SI|SR"
 PATTERNS = {
     "rule_ids": re.compile(rf"\b(?:{RULE_PREFIXES})-[A-Z]{{2,5}}(?:-[A-Z0-9]{{2,5}}){{0,2}}\b"),
@@ -248,12 +249,21 @@ def _login(node: dict) -> str:
 
 
 class Officials:
+    """FedRAMP staff = members of the FedRAMP org, plus an explicit allowlist for staff whose
+    membership is private. A login ending in -gov is not enough: anyone can register one."""
+
     def __init__(self, extra_logins: set[str]):
         self.extra = {x.lower() for x in extra_logins}
 
     def is_official(self, node: dict) -> bool:
-        login = _login(node).lower()
-        return node.get("authorAssociation") in OFFICIAL_ASSOCIATIONS or login in self.extra or login.endswith("-gov")
+        return node.get("authorAssociation") in OFFICIAL_ASSOCIATIONS or _login(node).lower() in self.extra
+
+
+def load_logins_file(path: Path) -> set[str]:
+    """One login per line; blank lines and # comments are ignored."""
+    if not path.exists():
+        return set()
+    return {line.split("#", 1)[0].strip() for line in path.read_text().splitlines()} - {""}
 
 
 def _post(node: dict, officials: Officials) -> dict:
@@ -567,8 +577,13 @@ def sync(args) -> int:
     out.mkdir(parents=True, exist_ok=True)
     db = open_db(out / "state.sqlite")
     gh = GitHub(token)
-    officials = Officials(set(args.official_login or []))
+    officials = Officials(set(args.official_login or []) | load_logins_file(Path(args.official_logins_file)))
     run_at = utcnow().isoformat()
+
+    # Records written by an older schema need re-extracting, which takes a full scan plus a rebuild.
+    if meta_get(db, "schema_version") != str(SCHEMA_VERSION):
+        log.info("Schema version changed to %d; running a full rebuild", SCHEMA_VERSION)
+        args.full = args.rebuild = True
 
     high_water = parse_ts(meta_get(db, "high_water"))
     since = None if (args.full or not high_water) else high_water - dt.timedelta(days=args.lookback_days)
@@ -629,6 +644,7 @@ def sync(args) -> int:
     if max_updated:
         meta_set(db, "high_water", max_updated.isoformat())
     meta_set(db, "last_success", run_at)
+    meta_set(db, "schema_version", str(SCHEMA_VERSION))
     db.commit()
     log_changes(out, changes)
 
@@ -686,6 +702,8 @@ def main() -> int:
     ap.add_argument("--model", default=DEFAULT_MODEL)
     ap.add_argument("--max-summaries", type=int, default=25, help="cap on summaries per run (cost control)")
     ap.add_argument("--official-login", action="append", help="extra GitHub logins to treat as FedRAMP staff")
+    ap.add_argument("--official-logins-file", default=str(Path(__file__).with_name("fedramp_staff_logins.txt")),
+                    help="file of extra FedRAMP staff logins, one per line (default: fedramp_staff_logins.txt next to this script)")
     ap.add_argument("--env-file", help="load KEY=VALUE pairs (cron doesn't load your shell env)")
     ap.add_argument("--log-file")
     ap.add_argument("--healthcheck-url", help="pinged on success, <url>/fail on failure (e.g. healthchecks.io)")

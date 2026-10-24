@@ -66,6 +66,8 @@ jobs:
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           github_token: ${{ github.token }}
+          # The nightly sync starts this workflow as github-actions[bot]; the action rejects bots by default.
+          allowed_bots: "github-actions,github-actions[bot]"
           prompt: |
             You maintain this Mintlify site of FedRAMP rule summaries and discussion digests for CSP clients.
             Read CLAUDE.md first and follow it exactly, especially the content rules and the update agent procedure.
