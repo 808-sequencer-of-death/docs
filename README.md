@@ -14,7 +14,7 @@ changed? commit to main, start Update docs     open a PR for review (never pushe
 ```
 
 - `.github/workflows/sync.yml` runs nightly, or from **Actions → Nightly sync → Run workflow**. It runs a full discussions rescan on Sundays, or when you tick **Full discussions rescan**.
-- `.github/workflows/update-docs.yml` is started by the sync. You can also run it from **Actions → Update docs → Run workflow**. Leave the inputs blank to process the latest commit on `main`. Each run uses Claude Sonnet 5.5, capped at 60 turns and $5.
+- `.github/workflows/update-docs.yml` is started by the sync. You can also run it from **Actions → Update docs → Run workflow**. Leave the inputs blank to process the latest commit on `main`. Each run uses Claude Sonnet 5.5, capped at 150 turns and $5.
 
 ## Layout
 
