@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "source": "github_discussions",
   "repo": "FedRAMP/community",
   "id": "fedramp-community-discussion-158",
@@ -241,6 +241,9 @@
   ],
   "entities": {
     "rule_ids": [
+      "CCM-OCR-AVL",
+      "CCM-QTR-MTG",
+      "CDS-CSO-PUB",
       "FRD-AGY",
       "FRD-ASR",
       "FRD-CPH",
@@ -248,7 +251,15 @@
       "FRP-CLS",
       "FRP-DEC",
       "FRP-EFR",
-      "FRP-ELG"
+      "FRP-ELG",
+      "IVV-CSO-FIA",
+      "MAS-CSO-TPR",
+      "MKT-CSO-MLR",
+      "REC-IAS-ACC",
+      "REC-IAS-SEP",
+      "SCN-CSO-EVA",
+      "SCN-TRF-NAF",
+      "SCN-TRF-NAV"
     ],
     "rfc_ids": [
       "RFC-0024",
@@ -282,5 +293,5 @@
     ]
   },
   "content_hash": "764420125a0261bc1cdae9b3e1dbd25186a2bfd738959bb1fe74b70a1657b5cb",
-  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+  "synced_at": "2026-10-24T02:05:45.615762+00:00"
 }

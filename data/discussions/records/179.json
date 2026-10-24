@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "source": "github_discussions",
   "repo": "FedRAMP/community",
   "id": "fedramp-community-discussion-179",
@@ -63,7 +63,7 @@
       "is_official": false,
       "created_at": "2026-10-16T19:28:30Z",
       "updated_at": "2026-10-16T19:28:30Z",
-      "upvotes": 1,
+      "upvotes": 2,
       "minimized": false,
       "body": "Commenting as a FedRAMP 3PAO assessor who also works CMMC with DIB contractors.\r\n\r\nI support CMU-CSO-TSC and the hybrid carve-out for PQC. A few things I'd like tightened before this is final:\r\n\r\n1. FRD-CVM says \"active validation,\" and every FIPS 140-2 certificate moved to the CMVP Historical list on September 21, 2026. Plenty of packages still cite 140-2 certificates for OS-level modules the CSP never touched. Read literally, those providers just went from CMVP-validated to non-validated without making a change. Please state whether CMU-CSO-TSC applies only to provider-initiated module swaps or also to certificate status changes (Historical, revoked). My suggestion is to keep TSC for provider-initiated changes and require CMU-CSO-CMD documentation to be updated within a set window when a certificate's status changes, along with a target date for moving to an active 140-3 module. It would also help to say how FedRAMP treats Historical modules in existing systems, since NIST still allows that use.\r\n\r\n2. I agree with @az-kennedy that Class D has been the one place an agency or downstream CSP could assume validated crypto without digging. This matters a lot for DoD. DFARS 252.204-7012 (through SP 800-171 3.13.11) and CMMC SC.L2-3.13.11 require FIPS-validated cryptography for CUI, and DIB contractors already have to dig through Class C packages to confirm it. If Class D moves to SHOULD, please add a public, machine-readable field in the certification data and on the Marketplace stating whether federal customer data is protected by CMVP-validated modules: all, some, or none. Applying it to every class would solve the Class C problem too.\r\n\r\n3. CMU-CSO-CMD should spell out what an assessor actually validates. The crypto findings I write most often are certificates cited for modules that aren't running in approved mode, are outside the tested operating environment, or are a version the certificate doesn't cover. Requiring the certificate number, module version, approved-mode status, and the data flow each module protects would make the documentation testable. The update-stream note also needs an evidence standard: is a vendor attestation enough, or does the assessor need to verify lineage back to the validated version?",
       "is_answer": false,
@@ -87,6 +87,10 @@
   ],
   "entities": {
     "rule_ids": [
+      "CMU-CSO-CAT",
+      "CMU-CSO-CMD",
+      "CMU-CSO-TSC",
+      "CMU-CSO-UVM",
       "FRD-CVM"
     ],
     "rfc_ids": [
@@ -113,5 +117,5 @@
     ]
   },
   "content_hash": "38a8d5e5019820c49e33462ad7a29881e0af168dca4fc00817b42b22f0b8c49f",
-  "synced_at": "2026-10-17T07:46:06.456342+00:00"
+  "synced_at": "2026-10-24T02:05:45.615762+00:00"
 }

@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "source": "github_discussions",
   "repo": "FedRAMP/community",
   "id": "fedramp-community-discussion-184",
@@ -71,7 +71,9 @@
   "entities": {
     "rule_ids": [
       "FRC-CLA-ASF",
-      "FRC-CLA-EAM"
+      "FRC-CLA-EAM",
+      "MAS-CSO-IIR",
+      "MAS-CSO-TPR"
     ],
     "rfc_ids": [],
     "nist_controls": [],
@@ -83,5 +85,5 @@
     ]
   },
   "content_hash": "69c587c8e1ba43dd1a38ec9cf97ba3ab1484db09b8691c1813b6be8b58459d53",
-  "synced_at": "2026-10-22T13:00:55.912130+00:00"
+  "synced_at": "2026-10-24T02:05:45.615762+00:00"
 }

@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "source": "github_discussions",
   "repo": "FedRAMP/community",
   "id": "fedramp-community-discussion-128",
@@ -241,7 +241,9 @@
     }
   ],
   "entities": {
-    "rule_ids": [],
+    "rule_ids": [
+      "MKT-GEN-SPI"
+    ],
     "rfc_ids": [
       "RFC-0001",
       "RFC-0018",
@@ -282,5 +284,5 @@
     ]
   },
   "content_hash": "ac4958303e861b5a3befd76a0fbdafcf71ff11fac9a20995dc99387962a5374a",
-  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+  "synced_at": "2026-10-24T02:05:45.615762+00:00"
 }

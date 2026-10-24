@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "source": "github_discussions",
   "repo": "FedRAMP/community",
   "id": "fedramp-community-discussion-10",
@@ -13,7 +13,7 @@
   "is_official_thread": false,
   "is_rfc": false,
   "author": "emu-gov",
-  "author_is_official": true,
+  "author_is_official": false,
   "created_at": "2025-05-20T20:27:22Z",
   "updated_at": "2025-08-25T16:45:23Z",
   "last_edited_at": null,
@@ -59,8 +59,8 @@
           "id": "DC_kwDOOxfoic4AycqU",
           "url": "https://github.com/FedRAMP/community/discussions/10#discussioncomment-13224596",
           "author": "emu-gov",
-          "author_association": "MEMBER",
-          "is_official": true,
+          "author_association": "CONTRIBUTOR",
+          "is_official": false,
           "created_at": "2025-05-21T19:49:51Z",
           "updated_at": "2025-05-21T19:49:52Z",
           "upvotes": 0,
@@ -128,8 +128,8 @@
           "id": "DC_kwDOOxfoic4AyyXm",
           "url": "https://github.com/FedRAMP/community/discussions/10#discussioncomment-13313510",
           "author": "emu-gov",
-          "author_association": "MEMBER",
-          "is_official": true,
+          "author_association": "CONTRIBUTOR",
+          "is_official": false,
           "created_at": "2025-05-29T19:43:09Z",
           "updated_at": "2025-05-29T19:43:10Z",
           "upvotes": 0,
@@ -419,16 +419,6 @@
       "created_at": "2025-05-23T15:46:22Z"
     },
     {
-      "url": "https://github.com/FedRAMP/community/discussions/10#discussioncomment-13224596",
-      "author": "emu-gov",
-      "created_at": "2025-05-21T19:49:51Z"
-    },
-    {
-      "url": "https://github.com/FedRAMP/community/discussions/10#discussioncomment-13313510",
-      "author": "emu-gov",
-      "created_at": "2025-05-29T19:43:09Z"
-    },
-    {
       "url": "https://github.com/FedRAMP/community/discussions/10#discussioncomment-13369036",
       "author": "pete-gov",
       "created_at": "2025-06-04T14:47:56Z"
@@ -465,5 +455,5 @@
     ]
   },
   "content_hash": "f73ba1bd4fa1e20118e0c30b115dda7f1bd3d92f893daf10070df5f91fe93f21",
-  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+  "synced_at": "2026-10-24T02:05:45.615762+00:00"
 }

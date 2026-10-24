@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "source": "github_discussions",
   "repo": "FedRAMP/community",
   "id": "fedramp-community-discussion-170",
@@ -292,7 +292,7 @@
       "is_official": false,
       "created_at": "2026-10-09T22:08:16Z",
       "updated_at": "2026-10-09T22:08:16Z",
-      "upvotes": 1,
+      "upvotes": 2,
       "minimized": false,
       "body": "CSP-AB submits the following comments to RFC-0033:\r\n\r\n**Overall Anticipated 20x Class D Requirements.**\r\n\r\n- We ask FedRAMP to reconsider making certified status an absolute requirement for third-party information resources in Class D Minimum Assessment Scope. As written, it forces CSPs to source every dependency, even for non-federal-data workflows, from an already-certified vendor pool. This can block adoption of useful services that never touch federal or CUI data, for example third-party observability and monitoring platforms handling only synthetic or non-customer telemetry, AI-driven feature services like text-to-speech or translation used for product functionality unrelated to federal data. This mirrors a restriction from FedRAMP Rev5, where third-party services had to hold an authorization at the same level as the CSP's own. That approach proved overly restrictive in practice, often forcing CSPs into lower-quality tooling simply because the strongest available vendor hadn't yet pursued certification.\r\n\r\n- We also suggest allowing non-certified third-party resources when a CSP can demonstrate the resource never processes federal or CUI data, paired with reporting stipulations that preserve assurance: documented data flow diagrams proving isolation, a assessment scope justification reviewed at each annual assessment, ongoing monitoring and reporting on the third party's security posture (SOC 2 Type II or equivalent, incident history, patch cadence), and a commitment to monitor that provider's vulnerability disclosures as part of the CSP's own vulnerability management program. Any change in the provider's data handling would move the resource back under the standard certified-only requirement. This would let CSPs scale into useful non-federal-facing capabilities without waiting on a niche vendor's FedRAMP business case, while keeping the actual federal data boundary just as tight.\r\n\r\n- FedRAMP should ensure guidance accounts for: \r\n\r\n1.) External services that are required for ther operation of the CSO, but that are not themselves strictly CSOs - things like DNS, SMS, Mobile Notification APIs, etc.\r\n2.) External services that are optional and under the configuration and control of a specific customer of a CSO. We should not be limited in our ability to allow customers to use whatever services that want with our CSO.\r\n\r\n- Is the FedRAMP working with OMB to mandate standard APIs regarding the requirement to integrating assurance data into agency GRC systems? Individual CSOs should not be on the hook for integrating with agency-specific systems -- unless they are paying the CSP specifically for those integrations (e.g., professional services engagements).\r\n\r\n- FedRAMP should also be very clear and specific as to what \"additional assurance engineering resources\" means and whether there are any costs, service levels, or service availability expectations. What if a CSP has a large number of customer all request support at once?\r\n\r\n**Phase 4 Track 2: Expanding 20x to Self-Hosted or Hybrid-Hosted Services**\r\n\r\n- The RFC doesn't address how a currently-authorized FedRAMP Rev5 Class D (formerly High) cloud-hosted CSP would obtain a 20x Class D designation. Track 1 appears to require earning 20x Class C first, which effectively asks an already-High-authorized CSP to step down to a Class C 20x certification before re-earning Class D under 20x. It would help to confirm whether that's the intended path, or whether a direct Rev5 Class D to 20x Class D track is planned.\r\n\r\n- We request that the anticipated Class D Key Security Indicators and transition options for existing Rev5 Class D cloud-hosted CSPs specifically be included in the October 14 RFC. Many CSPs are trying to budget FY27 and FY28 compliance and engineering investment in the next 8 weeks, and it's difficult to plan responsibly without visibility into the end-state requirements or an interim path for CSPs already operating at the High baseline.\r\n\r\n- We request that FedRAMP provide greater detail on the expected level of effort, participation expectations, and any deliverables required of self-hosted/hybrid cloud service providers in the Track 2 direct engagement. Specifically: (a) the anticipated time commitment per participant and per round (e.g., preparation, number and duration of working sessions); (b) what inputs or materials providers are expected to prepare or submit (e.g., existing certifications, written responses to questions); and (c) whether any deliverables or formal work product are expected during or after the engagement. Clear expectations up front will help qualifying providers appropriately resource their participation and make an informed opt-in decision ahead of the October 16 deadline.\r\n\r\n",
       "is_answer": false,
@@ -360,6 +360,14 @@
   ],
   "entities": {
     "rule_ids": [
+      "AFC-FRP-COR",
+      "CCM-OCR-AVL",
+      "CDS-CSO-AVR",
+      "CDS-CSO-CBF",
+      "CDS-CSO-HAD",
+      "CDS-CSO-PSM",
+      "CDS-CSO-PUB",
+      "CDS-TRC-PAC",
       "FRC-APP-FIA",
       "FRC-CCL-UCC",
       "FRC-CSO-JSN",
@@ -369,15 +377,32 @@
       "FRD-CPF",
       "FRD-PFA",
       "FRD-TPR",
-      "FRP-ARP",
-      "FRP-CAP",
-      "FRP-COR",
-      "FRP-ORV",
       "FRR-IAS",
+      "IEC-FRP-ORV",
+      "IVV-CSO-SEE",
+      "IVV-IAS-VEF",
       "KSI-CED-RAT",
       "KSI-CNA-OFA",
       "KSI-RPL-RRO",
-      "KSI-RPL-TRC"
+      "KSI-RPL-TRC",
+      "MAS-CSO-IIR",
+      "MAS-CSO-TPR",
+      "REC-IAS-ADA",
+      "REC-IAS-AFI",
+      "REC-IAS-CAP",
+      "REC-IAS-CFI",
+      "REC-IAS-RQU",
+      "REC-IAS-SEP",
+      "SCN-CSO-INF",
+      "SCN-FRP-CAP",
+      "SCN-RTR-NNR",
+      "SCN-TRF-NAV",
+      "SCN-TRF-UPD",
+      "SDR-CSO-FRR",
+      "SDR-CSO-MTD",
+      "SDR-CSX-KMT",
+      "SDR-CSX-KSI",
+      "VER-FRP-ARP"
     ],
     "rfc_ids": [
       "RFC-0033"
@@ -417,5 +442,5 @@
     ]
   },
   "content_hash": "6327e3de64bfc5e82c525bf400d3ebf5800246716e43a5043131b3d3bc5d0218",
-  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+  "synced_at": "2026-10-24T02:05:45.615762+00:00"
 }

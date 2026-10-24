@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "source": "github_discussions",
   "repo": "FedRAMP/community",
   "id": "fedramp-community-discussion-180",
@@ -82,7 +82,7 @@
       "is_official": false,
       "created_at": "2026-10-20T19:12:24Z",
       "updated_at": "2026-10-20T19:19:11Z",
-      "upvotes": 2,
+      "upvotes": 3,
       "minimized": false,
       "body": "**Feedback on FRC-CLD-PCD: give active Rev5 Class D offerings a direct path to 20x Class D**\r\nWe support progressive certification for offerings that are new to FedRAMP. It's a reasonable way to vet providers and manage FedRAMP's review capacity. But it shouldn't apply to cloud service offerings that already hold an active Rev5 Class D certification. They should be able to move straight to a 20x Class D Certification without first getting a 20x Class C Certification and holding it for six months.\r\n\r\nWhy:\r\n- These providers have already shown Class D assurance. Rev5 Class D providers have put years of effort and significant money into meeting the High baseline, and they keep it up through continuous monitoring and annual assessments. They shouldn't be treated the same as an offering entering FedRAMP for the first time.\r\n- The taxpayer risk argument doesn't really apply here. Agencies already use these systems for High workloads, often under several active ATOs. Making them start at Class C doesn't reduce risk to the taxpayer. It just delays modernizing systems the government already relies on.\r\n- Reviewing twice costs FedRAMP more, not less. The note says Class D review \"requires considerable investment and commitment from FedRAMP.\" Sending an existing High offering through a Class C review and then a Class D review increases that work. A single review of a CSO transitioning from Rev5 Class D to 20x Class D would use FedRAMP's resources better.  Plus these systems have already been reviewed at least once when they first got their FedRAMP Class D (High) certification.\r\n- Contracts and agency expectations are tied to Class D (High). Many contracts require FedRAMP Class D (High). The agency customers we've talked to assume their current High offerings will move to the equivalent 20x class. A 20x Class C Certification, even for a short time, doesn't meet those contract requirements and could confuse agencies about the offering's status.  This could also slow 20x adoption as agencies won’t want to use a 20x package that is Class C when the system is also Rev 5 Class D. \r\n- Holding both certifications is a heavy burden. The note expects most Rev5 Class D offerings to keep their Rev5 certification even after getting 20x Class D. That means providers maintain two parallel compliance programs for a long time. A smoother transition would avoid this.\r\n\r\nSuggested change:\r\nAdd an exemption to FRC-CLD-PCD: providers with an active Rev5 Class D Certification in good standing (e.g. no open corrective actions and 1-5+ active agency ATOs) may apply directly for a 20x Class D Certification. ",
       "is_answer": false,
@@ -144,6 +144,8 @@
   "official_responses": [],
   "entities": {
     "rule_ids": [
+      "CDS-CSX-API",
+      "CMU-CSO-PQS",
       "FRC-CLD-CCH",
       "FRC-CLD-CTP",
       "FRC-CLD-PCD",
@@ -159,7 +161,11 @@
       "KSI-PIY-RFP",
       "KSI-RPL-MCA",
       "KSI-SVC-IED",
-      "KSI-SVC-UAS"
+      "KSI-SVC-UAS",
+      "SDR-CSX-KMT",
+      "VDR-TFR-MVX",
+      "VER-EVA-IOC",
+      "VER-TFR-MRH"
     ],
     "rfc_ids": [
       "RFC-0033",
@@ -210,5 +216,5 @@
     ]
   },
   "content_hash": "72ea7e61aca345a685724856ab5864c0e27a471e81a83921cb12d9f81e47f6c9",
-  "synced_at": "2026-10-22T13:00:55.912130+00:00"
+  "synced_at": "2026-10-24T02:05:45.615762+00:00"
 }

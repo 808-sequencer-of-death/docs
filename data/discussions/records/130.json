@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "source": "github_discussions",
   "repo": "FedRAMP/community",
   "id": "fedramp-community-discussion-130",
@@ -450,7 +450,8 @@
   ],
   "entities": {
     "rule_ids": [
-      "FRP-ADV"
+      "VDR-FRP-ADV",
+      "VDR-RPT-NID"
     ],
     "rfc_ids": [
       "RFC-0026"
@@ -506,5 +507,5 @@
     ]
   },
   "content_hash": "ae8e52a7d773af5f1ccc7f68c71f106635d24e9c03714a36bd1e186b82808e5b",
-  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+  "synced_at": "2026-10-24T02:05:45.615762+00:00"
 }

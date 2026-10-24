@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "source": "github_discussions",
   "repo": "FedRAMP/community",
   "id": "fedramp-community-discussion-112",
@@ -657,7 +657,19 @@
       "KSI-INR-RIR",
       "KSI-MLA-OSM",
       "KSI-SVC-RUD",
-      "KSI-SVC-SNT"
+      "KSI-SVC-SNT",
+      "MKT-LEF-AFM",
+      "MKT-LEF-ASF",
+      "MKT-LEF-ATO",
+      "MKT-LEF-DFV",
+      "MKT-LEF-FPS",
+      "MKT-LEF-IVV",
+      "MKT-LEF-LIO",
+      "MKT-LEF-MAP",
+      "MKT-LEF-NLR",
+      "MKT-LEF-PRE",
+      "MKT-LEF-RFM",
+      "MKT-LEF-ROQ"
     ],
     "rfc_ids": [
       "RFC-0019",
@@ -717,5 +729,5 @@
     ]
   },
   "content_hash": "03a9052675de4122467a77c4058df13d3c8334aeec0355265a722170142a25ce",
-  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+  "synced_at": "2026-10-24T02:05:45.615762+00:00"
 }

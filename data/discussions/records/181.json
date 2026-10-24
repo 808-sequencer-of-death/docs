@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "source": "github_discussions",
   "repo": "FedRAMP/community",
   "id": "fedramp-community-discussion-181",
@@ -199,6 +199,7 @@
   ],
   "entities": {
     "rule_ids": [
+      "CMU-CSO-TSC",
       "FRC-CLD-CTP",
       "FRC-CLD-PCD"
     ],
@@ -224,5 +225,5 @@
     ]
   },
   "content_hash": "e9e16f1b20280d9e8a23f151c9365402461912db9c5b2075cb79260536873772",
-  "synced_at": "2026-10-22T13:00:55.912130+00:00"
+  "synced_at": "2026-10-24T02:05:45.615762+00:00"
 }

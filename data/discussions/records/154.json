@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "source": "github_discussions",
   "repo": "FedRAMP/community",
   "id": "fedramp-community-discussion-154",
@@ -56,7 +56,9 @@
     }
   ],
   "entities": {
-    "rule_ids": [],
+    "rule_ids": [
+      "CDS-CSO-RPS"
+    ],
     "rfc_ids": [],
     "nist_controls": [],
     "discussion_refs": [],
@@ -66,5 +68,5 @@
     "topics": []
   },
   "content_hash": "70720b9c8e78aa144c29011110c3f9852c4ef0b31c4420008a96b2c30748ad6a",
-  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+  "synced_at": "2026-10-24T02:05:45.615762+00:00"
 }

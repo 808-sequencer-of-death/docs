@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "source": "github_discussions",
   "repo": "FedRAMP/community",
   "id": "fedramp-community-discussion-107",
@@ -164,7 +164,12 @@
       "KSI-AFR-RSC",
       "KSI-CNA",
       "KSI-IAM",
-      "KSI-TPR"
+      "KSI-TPR",
+      "MAS-GEN-CSO",
+      "MAS-GEN-MDI",
+      "MAS-GEN-SFT",
+      "MAS-GEN-SOF",
+      "MAS-GEN-TPR"
     ],
     "rfc_ids": [
       "RFC-0004",
@@ -197,5 +202,5 @@
     ]
   },
   "content_hash": "41d00062b46d3721fcefbaaa8fb5fe9e90e6021df411aa7b26a22a6ddc9bf4b9",
-  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+  "synced_at": "2026-10-24T02:05:45.615762+00:00"
 }

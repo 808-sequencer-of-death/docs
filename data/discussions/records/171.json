@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "source": "github_discussions",
   "repo": "FedRAMP/community",
   "id": "fedramp-community-discussion-171",
@@ -122,13 +122,26 @@
   "official_responses": [],
   "entities": {
     "rule_ids": [
+      "AGU-AGC-GRC",
+      "AGU-AGC-LIA",
+      "AGU-USE-ABU",
+      "AGU-USE-RCF",
+      "CDS-CSO-RPS",
+      "CDS-CSO-UTC",
       "FRD-ADV",
       "FRD-ANA",
       "FRD-ANP",
       "FRD-ASR",
       "FRD-CRD",
       "FRD-CRP",
-      "FRD-TRC"
+      "FRD-TRC",
+      "IVV-IAS-OSA",
+      "IVV-IAS-SUM",
+      "REC-IAS-ACC",
+      "REC-IAS-PSC",
+      "REC-IAS-PST",
+      "REC-IAS-SEP",
+      "SDR-CSO-FRR"
     ],
     "rfc_ids": [
       "RFC-0033",
@@ -154,5 +167,5 @@
     ]
   },
   "content_hash": "c4804572ffb3de8c95cbf01aa583804fb5d46bb34291768a287d015f4036d1f1",
-  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+  "synced_at": "2026-10-24T02:05:45.615762+00:00"
 }

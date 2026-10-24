@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "source": "github_discussions",
   "repo": "FedRAMP/community",
   "id": "fedramp-community-discussion-169",
@@ -98,7 +98,12 @@
     }
   ],
   "entities": {
-    "rule_ids": [],
+    "rule_ids": [
+      "IVV-CSO-ICP",
+      "IVV-IAS-SUM",
+      "IVV-IAS-VIP",
+      "SDR-CSX-KSI"
+    ],
     "rfc_ids": [],
     "nist_controls": [],
     "discussion_refs": [],
@@ -115,5 +120,5 @@
     ]
   },
   "content_hash": "7a7ca3eb02f30183750d9ffebfdecdab4f9a2a4aeb03831fe982232780bfd402",
-  "synced_at": "2026-10-14T22:04:53.868367+00:00"
+  "synced_at": "2026-10-24T02:05:45.615762+00:00"
 }
