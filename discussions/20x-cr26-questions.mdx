@@ -5,7 +5,7 @@ sidebarTitle: "20x CR26 Q&A (#147)"
 ---
 
 <Info>
-  **Thread:** [#147 20x questions and discussion on the Consolidated Rules for 2026](https://github.com/FedRAMP/community/discussions/147), opened by `pete-gov` on 2026-06-24 and still open. It has 32 staff posts through 2026-10-13. **Last reviewed:** 2026-10-14 against upstream release `2026.10.14.01`. Staff answers are paraphrased. Follow each link for the exact wording. Staff statements don't change the published rules. Where they conflict, the [official rules](https://www.fedramp.gov/2026/) govern.
+  **Thread:** [#147 20x questions and discussion on the Consolidated Rules for 2026](https://github.com/FedRAMP/community/discussions/147), opened by `pete-gov` on 2026-06-24 and still open. It has 33 staff posts through 2026-10-16. **Last reviewed:** 2026-10-24 against upstream release `2026.10.14.01`. Staff answers are paraphrased. Follow each link for the exact wording. Staff statements don't change the published rules. Where they conflict, the [official rules](https://www.fedramp.gov/2026/) govern.
 </Info>
 
 ## Bottom line
@@ -59,6 +59,8 @@ sidebarTitle: "20x CR26 Q&A (#147)"
 <Warning>
   **Rule ID changed.** emu-gov answered about `FRC-CSX-MOT`. Release `2026.10.08.01` removed that rule as a duplicate of [`SDR-CSX-KMT`](https://www.fedramp.gov/2026/reference/security-decision-record/#key-security-indicator-metrics). `SDR-CSX-KMT` carries the same initial-certification note. It is MUST for Class C, and changed from MUST to SHOULD for Class B. The answer still holds under `SDR-CSX-KMT`. See [Security decision record](/rules/security-decision-record).
 </Warning>
+
+For a Class A SOC 2 Type II boundary and subservice organizations, see the staff answers in [#184](https://github.com/FedRAMP/community/discussions/184) in [Notable staff answers](/discussions/notable-staff-answers#184-class-a-soc-2-type-ii-boundary-and-subservice-organizations).
 
 ## Secure configuration
 
@@ -121,6 +123,10 @@ Rules pages: [Minimum assessment scope](/rules/minimum-assessment-scope), [Marke
   - [`MKT-IIP-AGU`](https://www.fedramp.gov/2026/reference/marketplace-listing/#agency-use-cases), [`MKT-IIP-DCP`](https://www.fedramp.gov/2026/reference/marketplace-listing/#demonstrating-continuous-progress) and [`MKT-IIP-DLA`](https://www.fedramp.gov/2026/reference/marketplace-listing/#deadline-for-assessment).
 
   A public FedRAMP landing page with that information counts as a "basic FedRAMP-compatible Trust Center."
+</Note>
+
+<Note>
+  **pete-gov, 2026-10-16** ([comment](https://github.com/FedRAMP/community/discussions/147#discussioncomment-18978806)): An initial Marketplace listing under [`MKT-IIP-AGU`](https://www.fedramp.gov/2026/reference/marketplace-listing/#agency-use-cases) is fine if you intend agencies to use the offering, even with no named agency customer. Scope the offering to the parts you expect to make available to agencies that are likely to handle or affect confidentiality, integrity or availability of federal customer data. For agency data in agency-managed storage, everything handling it, and everything likely to affect its confidentiality, integrity or availability, is in play. A storage service added later can join the existing certified scope as a significant change, or be a separate certified offering if it's a different product. Staff said FedRAMP can't give architecture advice.
 </Note>
 
 ## Vulnerability evaluation and reporting

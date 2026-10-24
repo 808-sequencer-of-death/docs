@@ -65,6 +65,18 @@ The Minimum Assessment Scope (MAS) rules set your FedRAMP boundary. Your cloud s
 </Note>
 
 <Note>
+  **Metadata such as IP addresses, URLs and server names.** On 2026-10-21, **pete-gov** confirmed that everything in the minimum assessment scope is subject to the rest of Rev5/CR26. [`MAS-CSO-MDI`](https://www.fedramp.gov/2026/reference/minimum-assessment-scope/#metadata-inclusion) is the path for deciding, and the answer varies by architecture. In general, IP addresses, URLs and server names are unlikely to affect federal customer data if you manage them responsibly, so they wouldn't be in the scope. Metadata that contains federal customer data, or an allow-list of IPs that could bypass controls, could be in scope. [Discussion #183 comment](https://github.com/FedRAMP/community/discussions/183#discussioncomment-19099299)
+</Note>
+
+<Note>
+  **Class A boundary and third parties.** On 2026-10-21, **pete-gov** said a Class A SOC 2 Type II boundary doesn't have to match the offering exactly, but it should cover all the information resources you list under `MAS-CSO-IIR`. FedRAMP doesn't expect a federal-specific boundary. Documenting carved-out subservice organizations under [`MAS-CSO-TPR`](https://www.fedramp.gov/2026/reference/minimum-assessment-scope/#third-party-information-resources) is enough, even if none has FedRAMP status. Document the information flows, the risk, any compensating controls and whether the service can be disabled. [Discussion #184 comment](https://github.com/FedRAMP/community/discussions/184#discussioncomment-19109011)
+</Note>
+
+<Note>
+  **Scoping before you have an agency customer.** On 2026-10-16, **pete-gov** said that if you intend agencies to use the offering, an initial Marketplace listing is fine. Scope it to the parts you expect to make available to agencies that are likely to handle or affect confidentiality, integrity or availability of federal customer data. For agency data in agency-managed storage, everything handling it, and everything likely to affect its confidentiality, integrity or availability, is in play. Staff said FedRAMP can't provide architecture advice. [Discussion #147 comment](https://github.com/FedRAMP/community/discussions/147#discussioncomment-18978806)
+</Note>
+
+<Note>
   **Using other cloud services.** On 2026-09-11, answering a VER question, **pete-gov** said cloud service offerings that use other cloud services should address the risks in their MAS. [Discussion #146 comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18402431)
 </Note>
 
