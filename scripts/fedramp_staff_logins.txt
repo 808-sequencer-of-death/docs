@@ -1,6 +1,15 @@
-# FedRAMP staff whose FedRAMP org membership doesn't show on their posts (authorAssociation NONE).
-# Members of the FedRAMP org (pete-gov, emu-gov, paulagosta, dan-fedramp, ...) are detected automatically.
+# FedRAMP staff logins. Posts by these accounts get is_official = true.
+# Members of the FedRAMP org are also detected from authorAssociation, but staff can hide their org
+# membership at any time (emu-gov did in October 2026), so list every known staff login here.
 # Add a login only with evidence that it's staff, and note the evidence. A -gov suffix alone isn't evidence.
 # After editing, bump SCHEMA_VERSION in fedramp_discussions_sync.py so existing records are re-flagged.
+#
+# Source for all six: pete-gov's list of "folks from FedRAMP responding in this thread", in the
+# opening post of https://github.com/FedRAMP/community/discussions/146 (2026-06-24).
 
-nicole-gov  # posts emailed public comments "into the public comment record" and edits RFC posts (e.g. #85, #110, #138)
+pete-gov     # Pete, FedRAMP Director
+nicole-gov   # Nicole, Security Director
+dan-fedramp  # Dan, Lead Cloud Security Engineer
+paulagosta   # Paul, Lead Cloud Security Engineer (Bastion)
+emu-gov      # Emu, Lead Cloud Security Engineer (Vanguard)
+rhoesing     # Ryan, Chief of Staff & Policy Branch Chief

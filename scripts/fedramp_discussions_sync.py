@@ -43,7 +43,7 @@ OWNER, REPO = "FedRAMP", "community"
 GQL_URL = "https://api.github.com/graphql"
 ANTHROPIC_URL = "https://api.anthropic.com/v1/messages"
 DEFAULT_MODEL = "claude-haiku-5-5"
-SCHEMA_VERSION = 2  # bump when extraction or the official-staff rules change; the next run rebuilds every record
+SCHEMA_VERSION = 3  # bump when extraction or the official-staff rules change; the next run rebuilds every record
 OFFICIAL_ASSOCIATIONS = {"OWNER", "MEMBER", "COLLABORATOR"}
 OFFICIAL_LABEL = "FedRAMP Official"
 
@@ -249,8 +249,9 @@ def _login(node: dict) -> str:
 
 
 class Officials:
-    """FedRAMP staff = members of the FedRAMP org, plus an explicit allowlist for staff whose
-    membership is private. A login ending in -gov is not enough: anyone can register one."""
+    """FedRAMP staff = members of the FedRAMP org, plus the allowlist in fedramp_staff_logins.txt.
+    Staff can hide their org membership, so the allowlist should name every known staff login.
+    A login ending in -gov is not enough: anyone can register one."""
 
     def __init__(self, extra_logins: set[str]):
         self.extra = {x.lower() for x in extra_logins}
