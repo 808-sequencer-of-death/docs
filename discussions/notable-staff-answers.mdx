@@ -5,7 +5,7 @@ sidebarTitle: "Notable staff answers"
 ---
 
 <Info>
-  **Threads covered:** community discussions updated on or after 2026-06-01 that have at least one FedRAMP staff post. This excludes [#146](/discussions/rev5-cr26-questions), [#147](/discussions/20x-cr26-questions) and RFC threads, which are covered in [RFC history](/discussions/rfc-history). Newest threads come first. **Last reviewed:** 2026-10-14 against upstream release `2026.10.14.01`. Staff answers are paraphrased. Follow each link for the exact wording. Staff statements don't change the published rules. Where they conflict, the [official rules](https://www.fedramp.gov/2026/) govern.
+  **Threads covered:** community discussions updated on or after 2026-06-01 that have at least one FedRAMP staff post. This excludes [#146](/discussions/rev5-cr26-questions), [#147](/discussions/20x-cr26-questions) and RFC threads, which are covered in [RFC history](/discussions/rfc-history). Newest threads come first. **Last reviewed:** 2026-10-24 against upstream release `2026.10.14.01`. Staff answers are paraphrased. Follow each link for the exact wording. Staff statements don't change the published rules. Where they conflict, the [official rules](https://www.fedramp.gov/2026/) govern.
 </Info>
 
 <Note>
@@ -146,6 +146,23 @@ For reference, `FRC-CSX-VVK` varies by class. Class A MAY use automated methods.
 
 **Open questions:** none raised after the staff reply.
 
+## #167 20x Class B and C submissions now open
+
+[Thread](https://github.com/FedRAMP/community/discussions/167) (20x Discussion, opened 2026-08-31).
+
+**Bottom line:** The opening post, by `emu-gov`, announced that 20x Class B and C Certification submissions opened on 2026-08-31 and listed reasons a submission might be rejected. These are staff expectations for submissions. They don't change the published rules.
+
+<Note>
+  **emu-gov, 2026-08-31** ([opening post](https://github.com/FedRAMP/community/discussions/167)): A submission might be rejected if:
+  - Your Trust Center requires acknowledgement or acceptance of a privacy policy, terms of service or non-disclosure agreement. FedRAMP reviewers can't agree to those on the agency's behalf.
+  - The package is incomplete. If your SDR isn't ready, come back later. Staff want both human-readable and machine-readable files, and any rule that names a schema should have at least an example.
+  - Rules or KSIs are missing. Staff said all MUSTs and SHOULDs that apply to your class need to be addressed. If you haven't implemented something, say so and say why. Don't omit the KSI or rule.
+  - JSON files don't follow the schema. Adding more than the schemas require is fine, but the minimum structure and required fields must be present. Staff pointed to the [schema validator](https://www.fedramp.gov/schemas/validator/).
+  - Independent Assessment Service content isn't in the CPO and SDR.
+</Note>
+
+**Open questions:** none raised. The post has no replies.
+
 ## #166 Web schema validator error
 
 [Thread](https://github.com/FedRAMP/community/discussions/166) (20x Discussion, opened 2026-08-28).
@@ -198,6 +215,20 @@ For reference, `FRC-CSX-VVK` varies by class. Class A MAY use automated methods.
 
 **Open questions:** the 20x annual assessment submission and review process hadn't been published as of the staff post.
 
+## #161 No NDAs for Trust Center access
+
+[Thread](https://github.com/FedRAMP/community/discussions/161) (20x Discussion, opened 2026-08-13).
+
+**Bottom line:** Don't make FedRAMP reviewers sign an NDA or accept terms to open your Trust Center. Staff said they can't review what they can't access on those terms.
+
+<Note>
+  **emu-gov, 2026-08-13** ([opening post](https://github.com/FedRAMP/community/discussions/161)): Federal employees and FedRAMP staff are already restricted by law and policy from misusing Certification information, so they don't need a company-specific NDA. No company should expect them to agree to terms, conditions or an NDA to do a review. If you can't share information without an NDA, staff can't review the information needed for certification. The post said the language would go into an existing rule in the [Certification data sharing](/rules/certification-data-sharing) ruleset the week of 2026-08-17.
+</Note>
+
+**What it means for you:** As of release `2026.10.14.01`, no rule in the Certification data sharing ruleset mentions NDAs or terms you can require reviewers to accept. The rules don't address this. Watch the [official page](https://www.fedramp.gov/2026/reference/certification-data-sharing/) for the rule.
+
+**Open questions:** which rule would carry the NDA language, and when.
+
 ## #159 Rev5 Ready Conversion and Lost Sponsor forms
 
 [Thread](https://github.com/FedRAMP/community/discussions/159) (Rev5 Discussion, opened 2026-08-10 by `paulagosta`).
@@ -221,6 +252,21 @@ For reference, `FRC-CSX-VVK` varies by class. Class A MAY use automated methods.
 </Note>
 
 **Open questions:** none.
+
+## #155 Class A submissions online now
+
+[Thread](https://github.com/FedRAMP/community/discussions/155) (20x Discussion, opened 2026-08-03).
+
+**Bottom line:** Class A Certification submissions opened through the Certification Submission form.
+
+<Note>
+  **emu-gov, 2026-08-03** ([opening post](https://github.com/FedRAMP/community/discussions/155)):
+  - You must be listed on the FedRAMP Marketplace in Initial Implementation status before you submit for Certification.
+  - Put the FedRAMP ID you received at listing in the `fedRampPackageId` field of your Certification Package Overview (CPO) JSON file.
+  - For a Class A, fill in assessor information in the CPO only if an optional Independent Assessor performed independent verification and validation of your 20x materials. Don't use it for a SOC 2 auditor, GovRAMP assessor or Rev5 3PAO, even if they are FedRAMP recognized.
+</Note>
+
+**Open questions:** none raised.
 
 ## #154 Sharing packages with other providers
 
@@ -378,6 +424,7 @@ For reference, `FRC-CSX-VVK` varies by class. Class A MAY use automated methods.
 These threads also had staff posts but no CR26 rule positions:
 
 - [#173](https://github.com/FedRAMP/community/discussions/173): a corrected meeting link for the 2026-09-16 Assessors and Advisors Community Update.
+- [#141](https://github.com/FedRAMP/community/discussions/141): announcement of the 2026-05-13 20x Community Update special event with Independent Assessor guests. It has no rule positions.
 - [#148](https://github.com/FedRAMP/community/discussions/148): slides for the 2026-07-08 20x Community Update ([comment](https://github.com/FedRAMP/community/discussions/148#discussioncomment-17576324)).
 - [#101](https://github.com/FedRAMP/community/discussions/101) and [#100](https://github.com/FedRAMP/community/discussions/100): 20x Phase 2 pilot Q&A from 2025-11 to 2026-06. Staff closed #101 on 2026-06-24 when the pilot ended ([comment](https://github.com/FedRAMP/community/discussions/101#discussioncomment-17426385)). Pilot answers predate CR26, and staff have said legacy pilot material no longer applies ([#147 comment](https://github.com/FedRAMP/community/discussions/147#discussioncomment-17438908)).
 
