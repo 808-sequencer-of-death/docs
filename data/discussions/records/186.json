@@ -1,0 +1,64 @@
+{
+  "schema_version": 3,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-186",
+  "node_id": "D_kwDOOxfoic4AqbSO",
+  "number": 186,
+  "title": "Organizational claims do not match FedRAMP Marketplace",
+  "url": "https://github.com/FedRAMP/community/discussions/186",
+  "category": "Rev5 Discussion",
+  "category_slug": "rev5-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "LPT00-ctrl",
+  "author_is_official": false,
+  "created_at": "2026-10-24T22:33:15Z",
+  "updated_at": "2026-10-25T01:44:40Z",
+  "last_edited_at": null,
+  "closed": false,
+  "closed_at": null,
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 2,
+  "body": "I have seen websites where organizations put the FedRAMP logo on their website front page with the words \"FedRAMP Compliant\" below the logo, yet when I look on the FedRAMP Marketplace, I do not see the organization listed. Is that allowed? It seems somewhat misleading to me. ",
+  "comment_count": 1,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4BJIp0",
+      "url": "https://github.com/FedRAMP/community/discussions/186#discussioncomment-19171956",
+      "author": "severinsendaniel88-prog",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-10-25T01:44:40Z",
+      "updated_at": "2026-10-25T01:44:40Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "> I have seen websites where organizations put the FedRAMP logo on their website front page with the words \"FedRAMP Compliant\" below the logo, yet when I look on the FedRAMP Marketplace, I do not see the organization listed. Is that allowed? It seems somewhat misleading to me.\r\n\r\nA",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "LPT00-ctrl",
+    "severinsendaniel88-prog"
+  ],
+  "official_responses": [],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [],
+    "topics": [
+      "marketplace"
+    ]
+  },
+  "content_hash": "4692adbb4b6e144db5af8d6d3d495afc42a6f4022e165608d7b5e74f91e01f3e",
+  "synced_at": "2026-10-25T12:36:49.007440+00:00"
+}
