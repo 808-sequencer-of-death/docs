@@ -15,7 +15,7 @@
   "author": "LPT00-ctrl",
   "author_is_official": false,
   "created_at": "2026-10-24T22:33:15Z",
-  "updated_at": "2026-10-25T01:44:40Z",
+  "updated_at": "2026-10-25T15:20:38Z",
   "last_edited_at": null,
   "closed": false,
   "closed_at": null,
@@ -27,16 +27,16 @@
   "comment_count": 1,
   "comments": [
     {
-      "id": "DC_kwDOOxfoic4BJIp0",
-      "url": "https://github.com/FedRAMP/community/discussions/186#discussioncomment-19171956",
-      "author": "severinsendaniel88-prog",
-      "author_association": "NONE",
-      "is_official": false,
-      "created_at": "2026-10-25T01:44:40Z",
-      "updated_at": "2026-10-25T01:44:40Z",
+      "id": "DC_kwDOOxfoic4BJKmM",
+      "url": "https://github.com/FedRAMP/community/discussions/186#discussioncomment-19179916",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2026-10-25T15:20:38Z",
+      "updated_at": "2026-10-25T15:20:38Z",
       "upvotes": 1,
       "minimized": false,
-      "body": "> I have seen websites where organizations put the FedRAMP logo on their website front page with the words \"FedRAMP Compliant\" below the logo, yet when I look on the FedRAMP Marketplace, I do not see the organization listed. Is that allowed? It seems somewhat misleading to me.\r\n\r\nA",
+      "body": "> I have seen websites where organizations put the FedRAMP logo on their website front page with the words \"FedRAMP Compliant\" below the logo, yet when I look on the FedRAMP Marketplace, I do not see the organization listed. Is that allowed? It seems somewhat misleading to me.\r\n\r\nThe only official place to find FedRAMP status is the FedRAMP Marketplace. We cannot really prevent folks from claiming whatever they want as long as they aren't saying they are \"FedRAMP Certified\" or \"FedRAMP Authorized\" because it is descriptive fair use to say that someone complies with FedRAMP rules or is FedRAMP equivalent. GSA's Office of General Counsel will send trademark violation warnings in some cases if someone appears to be violating the FedRAMP trademark by claiming that FedRAMP has given them an official status that FedRAMP has not given them but there's not much to be done beyond the occasional letter.\r\n\r\nOnly source of truth is fedramp.gov. ",
       "is_answer": false,
       "replies": [],
       "replies_total": 0,
@@ -46,9 +46,15 @@
   "answer_url": null,
   "participants": [
     "LPT00-ctrl",
-    "severinsendaniel88-prog"
+    "pete-gov"
   ],
-  "official_responses": [],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/186#discussioncomment-19179916",
+      "author": "pete-gov",
+      "created_at": "2026-10-25T15:20:38Z"
+    }
+  ],
   "entities": {
     "rule_ids": [],
     "rfc_ids": [],
@@ -59,6 +65,6 @@
       "marketplace"
     ]
   },
-  "content_hash": "4692adbb4b6e144db5af8d6d3d495afc42a6f4022e165608d7b5e74f91e01f3e",
-  "synced_at": "2026-10-25T12:36:49.007440+00:00"
+  "content_hash": "a23a565b21d8709766e1606a7a4aa69fd1a6616595a60db3beb73983c0b0840d",
+  "synced_at": "2026-10-26T14:21:39.808826+00:00"
 }
