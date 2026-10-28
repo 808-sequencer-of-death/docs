@@ -15,7 +15,7 @@
   "author": "pete-gov",
   "author_is_official": true,
   "created_at": "2026-06-24T21:49:44Z",
-  "updated_at": "2026-10-27T12:25:55Z",
+  "updated_at": "2026-10-27T20:31:47Z",
   "last_edited_at": null,
   "closed": false,
   "closed_at": null,
@@ -24,7 +24,7 @@
   "answer_chosen_at": null,
   "upvotes": 1,
   "body": "## This thread is for any and all Q&A or general discussion related to FedRAMP Rev5 in general that does not need to have its own thread.\r\n\r\nFedRAMP released the [Consolidated Rules for 2026](https://www.fedramp.gov/2026/) on June 24, 2026 with a considerable set of changes for FedRAMP Rev5 that will apply to all cloud service providers.\r\n\r\nThese changes include:\r\n\r\n- Mandatory adoption of the Vulnerability Detection and Response and Vulnerability Evaluation and Reporting rules by December 6, 2026 in response to CISA BOD 26-04\r\n- Changes to assessments for Rev5 to align more like assessments for 20x - focusing on verification and validation instead of just control implementation.\r\n- Replacement of most FedRAMP templates with a new Certification Package Overview and Security Decision Record\r\n- Removal of many FedRAMP-assigned control parameters and a lot of older FedRAMP control guidance\r\n- Mandatory adoption of many other Balance Improvement Releases through 2027\r\n- A requirement to address all FedRAMP Rules within the Security Decision Record, instead of only addressing controls\r\n\r\nSome of these changes take effect for all cloud service providers on certain dates no matter what, others take effect at the next annual assessment. In general, these are sweeping changes that will require all cloud service providers to begin planning now to continue to meet FedRAMP Rev5 requirements.\r\n\r\nHistorical materials are available at [https://fedramp.gov/legacy](https://fedramp.gov/legacy).\r\n\r\n---\r\n\r\nYou may see some of the following folks from FedRAMP responding in this thread:\r\n\r\n- `pete-gov` - Pete, FedRAMP Director\r\n- `nicole-gov` - Nicole, Security Director\r\n- `dan-fedramp` - Dan, Lead Cloud Security Engineer\r\n- `paulagosta` - Paul, Lead Cloud Security Engineer (Bastion)\r\n- `emu-gov` - Emu, Lead Cloud Security Engineer (Vanguard)\r\n- `rhoesing` - Ryan, Chief of Staff & Policy Branch Chief",
-  "comment_count": 47,
+  "comment_count": 48,
   "comments": [
     {
       "id": "DC_kwDOOxfoic4BChJy",
@@ -2404,9 +2404,74 @@
           "upvotes": 0,
           "minimized": false,
           "body": "> One thing I want to flag first. You mentioned \"The first assessment starting after 2027-01-01 needs to match CPO, full stop.\", but the CR26 Rev5 deadlines page shows CPO's maintain date as 2027-07-01 with a grace period ending on the first assessment started after 2027-07-01. Can you confirm which is correct?\r\n\r\nHonestly we probably should've just set deadlines different than 07-01 - myself and many other folks struggle seeing the difference between 01-01 and 07-01. This was an especially egregious mistake considering I had originally messed up and put all of the +6mo grace periods for 01-01 maintain deadlines at 01-01 instead of 07-01 and it took many weeks for anyone to notice.\r\n\r\nThe deadlines in each ruleset are accurate. Always follow the rules as the source of truth, not something said elsewhere. :) I will edit my previous response to remove the incorrect dates.\r\n\r\n> If these rulesets are not yet required in the above scenario, how can a CSP create a partial CR26 Certification Package without them (especially CPO and SDR)? I agree the cleanest path is to do a full scope, but is there a door for a partial package without key rulesets?\r\n\r\nYes, the expectation is that the cloud service provider finds a simple way to navigate this in a customer-experienced focused way. There is a bit of over-fixation on templates in the historical approach to FedRAMP, but we have deliberately moved away from that in the modern era. Providers are welcome to provide supplemental information about addressing FedRAMP Practices within the context of a legacy package or by simply producing standalone supplemental materials.\r\n\r\nFor example, VDR/VER does not have templates with how to report that information and there is no place for it in the traditional package, but that doesn't mean a provider can't easily figure out effective ways to share that information even if they haven't adopted the Certification Data Sharing rules.\r\n\r\n> With no SDR then how is IVV met without verification and validation statements from both the IA and CSP? Where is IVV documented? Will the PMO allow discretion to the CSP with what supplementation looks like in the interim for all rulesets that have not yet hit their maintain dates? I hope you see where I am going and the source of confusion here.\r\n\r\nYes, this is intentional: [It's Not a Trap!](https://www.fedramp.gov/2026/rules/#its-not-a-trap)\r\n\r\nThis doesn't seem complicated to us. You can provide separate documents, add **Verification:** statements to the SSP control text, etc. You can progressively manage something like this with a machine-system and store it in a database/JSON/etc. while still manually doing the SSP in Word. \r\n\r\n>  I'd like to think it is one or the other until a certain date (Legacy Rev5 vs CR26 Rev5). After that, it is full CR26 then on and not partial frankenstein packages.\r\n\r\nOh no, we're definitely expecting frankenstein packages. We expect a lot of different approaches, some awesome, some incredibly poorly thought through. It's fine, it's all temporary. Our direction has been to prioritize incremental adoption among industry and government instead of setting an arbitrary cut-over date years in the future and to accept the risk of that mid-transition churn to prioritize earlier adoption of key bits. It needs to be clear that cloud service providers and assessors can't simply put everything off."
+        },
+        {
+          "id": "DC_kwDOOxfoic4BJUFz",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19218803",
+          "author": "mpg-CF",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-10-27T14:23:01Z",
+          "updated_at": "2026-10-27T14:23:01Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "This is great, @pete-gov. Thank you for explaining. \r\nJust to recap, starting in 2027, CSPs should start creating CR26 packages. For those rulesets that are not yet complete, CSPs can create supplemental items that take the place of those rulesets (SDR, CPO, CDS) but don't necessarily follow all the rules/requirements from those rulesets (since they arent due yet). However, any due rulesets need to be followed and displayed in some form or another (IVV). It is highly recommended that a CSP goes ahead and starts creating a full scope package rather than waiting and spinning wheels on temporary outputs (SSP + V&V) but that is an available route. At the end of it, FedRAMP Packages starting in 2027 should follow CR26 rules/requirements as best they can. \r\n\r\nBy frankenstein packages, I mean where CSP decides to pick and choose what CR26 requirements to follow, what Legacy FedRAMP Rev5 requirements/rules/guidance to follow (severity ratings, e,i,t statements, SAP/SAR etc.) and what to ignore from both. Therefore creating a package that doesnt fully follow either. \r\n\r\nThanks again, Pete. "
         }
       ],
-      "replies_total": 4,
+      "replies_total": 5,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BJVyE",
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19225732",
+      "author": "shon-d-dingman",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-10-27T19:09:59Z",
+      "updated_at": "2026-10-27T19:09:59Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "@pete-gov \r\n\r\nWe’d like to confirm how providers should set up their approach to PAIN ratings.\r\n\r\nWe noticed that RFC-0031 defined the N-ratings by adverse effect on agency operations, and the final CR26 rules use service-level customer-effect definitions (minimal, narrow, disruptive, debilitating) instead. With that in mind, which approach does FedRAMP expect?\r\n\r\nAgency-informed: Providers consult agency customers about how they use the service and how much they depend on it, and use that to calibrate PAIN ratings.\r\nService-based: Providers apply the customer-effect definitions directly, based on observable effects such as how many users lose access and how much federal customer data is affected. Each agency then judges what that means for its own operations.\r\n\r\nIf option 1 is acceptable, how should providers document agency input and keep it current as customers and their use of the service change?\r\n\r\nThanks!",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BJVz1",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19225845",
+          "author": "nicole-gov",
+          "author_association": "NONE",
+          "is_official": true,
+          "created_at": "2026-10-27T19:16:19Z",
+          "updated_at": "2026-10-27T19:16:49Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "FedRAMP always expects you to follow finalized rules, not what was proposed in the RFC. We use RFCs to solicit public comment about planned changes, but rules are never finalized until they're officially published in documentation (like CR26). \r\n\r\nIn this case, the final rules changed from the RFC precisely because of questions like this. We don't expect you to know the details of how agencies are using your cloud service. We only expect you to know that agencies are using it. You need to provide your customer agencies timely information about vulnerabilities that may affect them and then it's up to the agencies to determine which compensating controls to implement after that. "
+        },
+        {
+          "id": "DC_kwDOOxfoic4BJV_S",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19226578",
+          "author": "shon-d-dingman",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-10-27T19:59:49Z",
+          "updated_at": "2026-10-27T19:59:49Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Does the service-base approach mean that a vulnerability capable of causing a complete outage across multiple federal agency customers must receive PAIN-5, even when the service performs only non-mission-critical functions?"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BJWFW",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19226966",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-10-27T20:31:47Z",
+          "updated_at": "2026-10-27T20:31:47Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> Does the service-base approach mean that a vulnerability capable of causing a complete outage across multiple federal agency customers must receive PAIN-5, even when the service performs only non-mission-critical functions?\r\n\r\nNope! We recommend checking into the [Using the Consolidated Rules](https://www.fedramp.gov/2026/rules/#definitions) section of the site to read about how we use defined terms to clarify stuff like this in the rules. In the human-readable version of the site, each rule links to all of the defined terms that it uses for quick reference.\r\n\r\nThere are a bunch of specifically defined terms used in [VER-EVA-EPA (Estimate Potential Agency Impact)](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#estimate-potential-agency-impact) that should address this question in the context of the rules:\r\n\r\n- N5 specifically is \" could be expected to have a **debilitating customer effect** on more than one agency that uses the cloud service offering.\"\r\n- [Debilitating customer effect](https://www.fedramp.gov/2026/definitions/#debilitating-customer-effect) is defined as \"An unwanted customer effect that interrupts use of the cloud service for most users or compromises the integrity or confidentiality of most federal customer data. If the adverse customer effect is unknown then it should be treated as if it is debilitating until proven otherwise.\"\r\n\r\nIf you know a service isn't performing mission-critical functions such that it isn't likely to affect most users / most customer data, then you would not evaluate it as a likely debilitating customer effect at PAIN5. More likely it would be something like a [narrow customer effect ](https://www.fedramp.gov/2026/definitions/#narrow-customer-effect)on one or more agencies that use the cloud service offering at PAIN2."
+        }
+      ],
+      "replies_total": 3,
       "replies_truncated": false
     }
   ],
@@ -2452,6 +2517,7 @@
     "ricmarreycoal",
     "rrising-xai",
     "sboyce-sheidt",
+    "shon-d-dingman",
     "v-mhahnfirstinfotech",
     "zeesharfcspab"
   ],
@@ -2830,6 +2896,16 @@
       "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19216668",
       "author": "pete-gov",
       "created_at": "2026-10-27T12:25:55Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19225845",
+      "author": "nicole-gov",
+      "created_at": "2026-10-27T19:16:19Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19226966",
+      "author": "pete-gov",
+      "created_at": "2026-10-27T20:31:47Z"
     }
   ],
   "entities": {
@@ -2889,7 +2965,9 @@
       "VER-TFR-MHR",
       "VER-TFR-MRH"
     ],
-    "rfc_ids": [],
+    "rfc_ids": [
+      "RFC-0031"
+    ],
     "nist_controls": [
       "CA-1",
       "CA-5",
@@ -2913,6 +2991,8 @@
       "https://github.com/user-attachments/assets/fa7b279f-07aa-43a6-944c-43310b0bc405",
       "https://www.fedramp.gov/2026/",
       "https://www.fedramp.gov/2026/agencies/use/ongoing/poams/#:~:text=Cloud%20service%20providers%20should%20not%20be%20expected%20to%20convert%20their%20vulnerability%20lists%2C%20product%20security",
+      "https://www.fedramp.gov/2026/definitions/#debilitating-customer-effect",
+      "https://www.fedramp.gov/2026/definitions/#narrow-customer-effect",
       "https://www.fedramp.gov/2026/providers/implement/rules/",
       "https://www.fedramp.gov/2026/providers/updating/deadlines/#important-deadlines",
       "https://www.fedramp.gov/2026/providers/updating/deadlines/20x/",
@@ -2929,8 +3009,10 @@
       "https://www.fedramp.gov/2026/reference/vulnerability-detection-and-response/#sampling",
       "https://www.fedramp.gov/2026/reference/vulnerability-detection-and-response/#vulnerability-detection",
       "https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/",
+      "https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#estimate-potential-agency-impact",
       "https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#group-vulnerabilities",
       "https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#reporting",
+      "https://www.fedramp.gov/2026/rules/#definitions",
       "https://www.fedramp.gov/2026/rules/#force-of-the-rule",
       "https://www.fedramp.gov/2026/rules/#its-not-a-trap",
       "https://www.fedramp.gov/2026/timeline/",
@@ -2959,6 +3041,6 @@
       "vulnerability_mgmt"
     ]
   },
-  "content_hash": "7d209909010bdf18aa5271f260dce667a78f692990ce18f23918b3d5fceeeb10",
-  "synced_at": "2026-10-27T13:18:43.318043+00:00"
+  "content_hash": "710a0459ca941761f5035f762e5aa60f1d980c5e27eae496f63eb30abfd69206",
+  "synced_at": "2026-10-28T14:04:55.760969+00:00"
 }
