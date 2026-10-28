@@ -5,7 +5,7 @@ sidebarTitle: "Rev5 CR26 Q&A (#146)"
 ---
 
 <Info>
-  **Thread:** [#146 Rev5 questions and discussion on the Consolidated Rules for 2026 (or Legacy)](https://github.com/FedRAMP/community/discussions/146), opened by `pete-gov` on 2026-06-24 and still open. This digest covers staff posts through 2026-10-22. **Last reviewed:** 2026-10-24 against upstream release `2026.10.14.01`. Staff answers are paraphrased. Follow each link for the exact wording. Staff statements don't change the published rules. Where they conflict, the [official rules](https://www.fedramp.gov/2026/) govern.
+  **Thread:** [#146 Rev5 questions and discussion on the Consolidated Rules for 2026 (or Legacy)](https://github.com/FedRAMP/community/discussions/146), opened by `pete-gov` on 2026-06-24 and still open. This digest covers staff posts through 2026-10-27. **Last reviewed:** 2026-10-28 against upstream release `2026.10.14.01`. Staff answers are paraphrased. Follow each link for the exact wording. Staff statements don't change the published rules. Where they conflict, the [official rules](https://www.fedramp.gov/2026/) govern.
 </Info>
 
 ## Bottom line
@@ -110,6 +110,10 @@ FedRAMP staff treat the Consolidated Rules for 2026 (CR26) as mandatory for ever
 ## Scope of CR26 for Rev5, packages and certification paths
 
 <Note>
+  **pete-gov, 2026-10-27** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-19216668)): FedRAMP expects packages that mix legacy Rev5 and CR26 approaches during the transition. Staff said it's temporary, and that FedRAMP chose incremental adoption over a fixed cut-over date years away, accepting the churn. Staff said providers and assessors can't simply put everything off. A community member's [recap](https://github.com/FedRAMP/community/discussions/146#discussioncomment-19218803) (starting in 2027, create CR26 packages and substitute interim items for rulesets not yet due) is community context, not a FedRAMP position, and no staff reply confirmed it. The published dates in the [Rev5 deadlines](https://www.fedramp.gov/2026/providers/updating/deadlines/rev5/) govern.
+</Note>
+
+<Note>
   **emu-gov, 2026-08-20** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18093065)): A Rev5 certification needs only the rules with Rev5 applicability. All 15 rulesets apply to both Rev5 and 20x. The big difference is controls (Rev5) versus Key Security Indicators (20x). Each subset's applicability (type, path, class, audience) tells you which rules are in scope, and some rules also vary by class.
 </Note>
 
@@ -191,6 +195,14 @@ Rules page: [Vulnerability evaluation and reporting](/rules/vulnerability-evalua
 
 <Note>
   **pete-gov, 2026-10-15** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18957963)): The CVSS user interaction metric doesn't by itself show that a vulnerability isn't automatable under [`VER-EVA-AIA`](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#assume-its-automatable), but you can use it as evidence. A flaw that needs a specific action on one terminal you've walled off is probably not automatable. A flaw that only needs someone to open an email attachment still is, because "someone is gonna open that email." In general, high user interaction requirements are likely to reduce automatability.
+</Note>
+
+<Note>
+  **nicole-gov and pete-gov, 2026-10-27** ([nicole-gov](https://github.com/FedRAMP/community/discussions/146#discussioncomment-19225845), [pete-gov](https://github.com/FedRAMP/community/discussions/146#discussioncomment-19226966)), answering a community question on how to set PAIN ratings:
+  - Follow finalized rules, not what an RFC proposed. The community member noted that RFC-0031 defined N-ratings by adverse effect on agency operations, while the final rules use customer-effect definitions.
+  - You don't need to know how agencies use your service in detail, only that agencies use it. You must give customer agencies timely information about vulnerabilities that may affect them. Agencies then decide which compensating controls to implement.
+  - A vulnerability that could cause a complete outage across multiple agencies doesn't automatically get N5. [`VER-EVA-EPA`](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#estimate-potential-agency-impact) defines N5 as a [debilitating customer effect](https://www.fedramp.gov/2026/definitions/#debilitating-customer-effect) on more than one agency. That means interrupting use for most users, or compromising most federal customer data. If the service isn't doing mission-critical work, so it isn't likely to affect most users or most data, staff said you would not evaluate it as N5. Staff gave a [narrow customer effect](https://www.fedramp.gov/2026/definitions/#narrow-customer-effect) on one or more agencies, rated N2, as the more likely result.
+  - The definition says an unknown customer effect should be treated as debilitating until proven otherwise.
 </Note>
 
 <Info>
