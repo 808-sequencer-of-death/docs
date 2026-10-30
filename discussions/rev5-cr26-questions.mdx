@@ -5,7 +5,7 @@ sidebarTitle: "Rev5 CR26 Q&A (#146)"
 ---
 
 <Info>
-  **Thread:** [#146 Rev5 questions and discussion on the Consolidated Rules for 2026 (or Legacy)](https://github.com/FedRAMP/community/discussions/146), opened by `pete-gov` on 2026-06-24 and still open. This digest covers staff posts through 2026-10-22. **Last reviewed:** 2026-10-24 against upstream release `2026.10.14.01`. Staff answers are paraphrased. Follow each link for the exact wording. Staff statements don't change the published rules. Where they conflict, the [official rules](https://www.fedramp.gov/2026/) govern.
+  **Thread:** [#146 Rev5 questions and discussion on the Consolidated Rules for 2026 (or Legacy)](https://github.com/FedRAMP/community/discussions/146), opened by `pete-gov` on 2026-06-24 and still open. This digest covers staff posts through 2026-10-28. **Last reviewed:** 2026-10-29 against upstream release `2026.10.14.01`. Staff answers are paraphrased. Follow each link for the exact wording. Staff statements don't change the published rules. Where they conflict, the [official rules](https://www.fedramp.gov/2026/) govern.
 </Info>
 
 ## Bottom line
@@ -44,6 +44,10 @@ FedRAMP staff treat the Consolidated Rules for 2026 (CR26) as mandatory for ever
 
 <Note>
   **pete-gov, 2026-10-15** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18958558)): Ready Conversion providers must fully implement all CR26 rules required for a new Rev5 Certification, with a built-in grace period of about six weeks in place of 2027-01-01. All other grace periods apply only to providers that already hold a FedRAMP Certification. FedRAMP Ready isn't one.
+</Note>
+
+<Note>
+  **pete-gov, 2026-10-28** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-19250459)): Asked whether a Ready Conversion assessor may use a penetration test from a third party that isn't a FedRAMP-recognized assessor, staff said CR26 doesn't require a penetration test from a FedRAMP-recognized independent assessor. You can include another assessor's results in your Vulnerability Detection and Response activity reports. If you submit under the legacy rules and convert to CR26 by February, staff said they will accept a POA&M or finding for lacking a recognized penetration test. You would document what you did instead and why you see no significant resulting risk, and the finding goes away after you switch. The answer doesn't speak directly to whether the assessor may review and incorporate the results, and the rules don't address the legacy-rules arrangement.
 </Note>
 
 <Note>
@@ -173,9 +177,17 @@ Rules page: [Incident evaluation and communication](/rules/incident-evaluation-a
   **pete-gov, 2026-10-21** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-19108564)): Confirmed the three routes for incident reports: email `fedramp_security@fedramp.gov`, follow each agency's own procedure, and post to the trust center or USDA Connect for all necessary parties. Many agencies write notification expectations into the procurement agreement, usually as an email address.
 </Note>
 
+<Note>
+  **pete-gov, 2026-10-28** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-19250378)): A community member pointed out that the `IEC-CSO-IIR`, `IEC-CSO-OIR` and `IEC-CSO-FIR` rule statements say to notify "FedRAMP and directly impacted federal customer agencies," while the notification requirement also lists "all necessary parties" through the trust center. Staff called that an oversight, because these rules don't require notifying all necessary parties. They opened [FedRAMP/Rules#47](https://github.com/FedRAMP/rules/issues/47) and said they will make that notification optional. Posting incident information in the trust center remains helpful but is up to you. Staff also said an incident notification must not enable a threat actor, so sanitize it as appropriate. In most cases posting incident reports publicly should be fine. In rare cases where even the existence of an incident could create a threat, share it carefully with affected parties only. This is a stated plan, and the upstream text hasn't changed yet, so the published rule governs until FedRAMP updates it. It refines the 2026-10-21 note above.
+</Note>
+
 ## Vulnerability evaluation and reporting (VER)
 
 Rules page: [Vulnerability evaluation and reporting](/rules/vulnerability-evaluation-and-reporting).
+
+<Note>
+  **pete-gov, 2026-10-28** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-19249797)): Asked whether using only exploitability, reachability and PAIN would fall short of VER, staff said the [`VER-EVA-EFA`](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#evaluation-factors) factors help you do the evaluations the other rules require. It isn't either-or, and you can't accurately judge likely exploitability under [`VER-EVA-ELX`](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#evaluate-exploitability) without considering the relevant factors. Staff said PAIN isn't a ninth factor: reachability and exploitability are inputs, while "internet reachable," "likely exploitable" and PAIN are outcomes. Staff also pointed to the "It's Not a Trap" section of the [rules overview](https://www.fedramp.gov/2026/rules/#its-not-a-trap). For SHOULD rules, do what your engineers support, be ready to explain why it's technically right, and FedRAMP isn't going to nitpick. The published `VER-EVA-EFA` is a SHOULD.
+</Note>
 
 <Note>
   **pete-gov, 2026-09-10** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18391276)) and **2026-09-11** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18402431)): Under [`VER-EVA-EPA`](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#estimate-potential-agency-impact), PAIN is the cumulative effect on the federal government. A disruptive effect on more than one agency is N4. Derive it from your inventory with a rules engine where you can. If you have only one agency customer, N5 can't apply. With no agency customers there's no PAIN, but staff expect serious providers to simulate it. Rating everything as if it affects multiple agencies is acceptable and conservative.
