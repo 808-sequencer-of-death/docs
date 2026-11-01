@@ -159,8 +159,9 @@ jobs:
           NOT_MODIFIED=$(git diff --name-status HEAD~1 HEAD | awk '$1 != "M"')
           [ -z "$NOT_MODIFIED" ] || FAILED+=("Files were added, deleted or renamed: $(echo "$NOT_MODIFIED" | tr '\n\t' '; ')")
 
-          # 3. Every changed file is under rules/ or discussions/, or is changelog.mdx or docs.json.
-          OUTSIDE=$(git diff --name-only HEAD~1 HEAD | grep -vE '^(rules/|discussions/|changelog\.mdx$|docs\.json$)' || true)
+          # 3. Every changed file is under rules/ or discussions/, or is changelog.mdx.
+          #    docs.json is excluded: it controls branding, links and SEO site-wide.
+          OUTSIDE=$(git diff --name-only HEAD~1 HEAD | grep -vE '^(rules/|discussions/|changelog\.mdx$)' || true)
           [ -z "$OUTSIDE" ] || FAILED+=("Files outside the allowed paths changed: $(echo "$OUTSIDE" | tr '\n' ' ')")
 
           # 4. The diff is small enough to trust without review.
