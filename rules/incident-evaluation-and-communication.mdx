@@ -79,7 +79,7 @@ The upstream activity workflow:
 
 - FedRAMP, by email to `fedramp_security@fedramp.gov`
 - Agency customers, following each agency's own incident reporting procedures
-- All necessary parties, through an update in your trust center or USDA Connect
+- All necessary parties, through an update in your trust center or USDA Connect (FedRAMP staff said on 2026-10-28 they will make this route optional; see the staff note below)
 
 FedRAMP publishes an [Incident Report JSON schema](https://fedramp.gov/schemas/fedramp-incident-report-schema-2026-06-24.json) covering all three reports.
 
@@ -169,6 +169,10 @@ The reporting timeframe depends on your class and the incident's PAIN rating. Ti
 
 <Note>
   **Where to send incident reports.** On 2026-10-21, **pete-gov** confirmed a provider's plan: email FedRAMP at `fedramp_security@fedramp.gov`, follow each agency's own reporting procedure, and post reports for all necessary parties to your trust center or USDA Connect where an agency has no specific procedure. **pete-gov** added that many agencies put notification expectations in the procurement agreement, usually as an email address. [Discussion #146 comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-19108564)
+</Note>
+
+<Note>
+  **The "all necessary parties" route is an oversight.** On 2026-10-28, **pete-gov** said the `IEC-CSO-IIR`, `IEC-CSO-OIR` and `IEC-CSO-FIR` rules require notifying affected parties, not all necessary parties, so the notification requirement shouldn't list them. FedRAMP opened [FedRAMP/Rules#47](https://github.com/FedRAMP/rules/issues/47) and said it will make the all-necessary-parties notification optional. Posting incident information in the trust center is still helpful but up to you. Staff also said a notification must not enable a threat actor, so sanitize it. In most cases public posting should be fine. If even the existence of an incident could create a threat, share it carefully with affected parties only. This is a stated plan. The upstream text in release `2026.10.14.01` still lists the route, so the published rule governs until it changes. This refines the 2026-10-21 note above. [Discussion #146 comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-19250378)
 </Note>
 
 ## Related
