@@ -5,7 +5,7 @@ sidebarTitle: "Rev5 CR26 Q&A (#146)"
 ---
 
 <Info>
-  **Thread:** [#146 Rev5 questions and discussion on the Consolidated Rules for 2026 (or Legacy)](https://github.com/FedRAMP/community/discussions/146), opened by `pete-gov` on 2026-06-24 and still open. This digest covers staff posts through 2026-10-22. **Last reviewed:** 2026-10-24 against upstream release `2026.10.14.01`. Staff answers are paraphrased. Follow each link for the exact wording. Staff statements don't change the published rules. Where they conflict, the [official rules](https://www.fedramp.gov/2026/) govern.
+  **Thread:** [#146 Rev5 questions and discussion on the Consolidated Rules for 2026 (or Legacy)](https://github.com/FedRAMP/community/discussions/146), opened by `pete-gov` on 2026-06-24 and still open. This digest covers staff posts through 2026-10-27. **Last reviewed:** 2026-10-27 against upstream release `2026.10.14.01`. Staff answers are paraphrased. Follow each link for the exact wording. Staff statements don't change the published rules. Where they conflict, the [official rules](https://www.fedramp.gov/2026/) govern.
 </Info>
 
 ## Bottom line
@@ -56,6 +56,20 @@ FedRAMP staff treat the Consolidated Rules for 2026 (CR26) as mandatory for ever
 
 <Note>
   **pete-gov, 2026-10-22** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-19131028)): FedRAMP will confirm VDR implementation by asking you and reviewing your required VDR and VER activity reports. It won't evaluate progress along the way. Full implementation is expected by 2026-12-07, and if you miss it you supply a corrective action plan to finish by 2027-03-07. Staff warned that the grace period covers FedRAMP Certification only, and that agencies must report on BOD 26-04 compliance by 2026-12-07.
+</Note>
+
+<Note>
+  **pete-gov, 2026-10-26** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-19200121)), asked whether "full implementation" of VDR means meeting every SHOULD: Full implementation means all applicable rules are addressed. Addressing a rule means you show you read and understood it and implemented what it takes to follow it and explain how, or you document a decision not to follow it and your reasoning (see [Implementing the rules](https://www.fedramp.gov/2026/providers/implement/rules/)). This is for FedRAMP Certification only, and agency contracts or customers may expect more. For the December 2026 activity report, he said you submit it with that month's continuous monitoring, the same way as other ConMon information. For response times to FedRAMP requests he pointed to the [Addressing FedRAMP communication](/rules/addressing-fedramp-communication) rules, whose grace period has ended.
+</Note>
+
+<Note>
+  **pete-gov, 2026-10-26** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-19204657), [follow-up](https://github.com/FedRAMP/community/discussions/146#discussioncomment-19204705)) and **2026-10-27** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-19216668)), on when an annual assessment must use CR26 materials:
+  - Each ruleset has its own maintaining and grace dates, summarized on the [Rev5 deadlines page](https://www.fedramp.gov/2026/providers/updating/deadlines/rev5/). Some are mandatory regardless of assessment timing. The `CCM` rules for the OCR are mandatory for everyone on 2027-04-02.
+  - For an assessment starting on 2027-07-31, staff said the grace period has ended for `AFC`, `SCG`, `MKT`, `VDR`, `VER`, `CMU`, `IEC` and `SCN`. It runs through the independent assessment for `FRC`, `IVV`, `MAS` and `CPO`. You can still wait on `CCM`, `CDS` and `SDR`.
+  - By the end of 2027 everything is switched over for everyone, except `CDS`.
+  - Staff strongly encourage adopting all CR26 rules before your next independent assessment.
+  - There is no cut-over date for legacy packages. Staff expect mixed packages and said that is intended. You can add supplemental documents or **Verification:** statements to the SSP, with no template. See [It's not a trap](https://www.fedramp.gov/2026/rules/#its-not-a-trap).
+  - The 2026-10-26 comment first gave a wrong `CPO` date, and staff corrected it. On 2026-10-27 staff said the dates in each ruleset are accurate and the rules are the source of truth. The Rev5 `CPO` grace period is 2027-07-01, as noted above.
 </Note>
 
 <Note>
@@ -190,6 +204,10 @@ Rules page: [Vulnerability evaluation and reporting](/rules/vulnerability-evalua
 </Note>
 
 <Note>
+  **pete-gov, 2026-10-26** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-19203980)), on reporting false positives under `VER-EVA-EFP`: FedRAMP has no specific guidance, because several approaches fit. False positives are in `VER-RPT-PER` and the vulnerability details report by default. In `VER-RPT-VDT` you can mark fields not applicable and flag the false positive in the supplementary information item. `VER-EVA-GRV` lets you keep one "false positives" group. N0 is a reasonable but not mandatory outcome, and you should still flag the finding as a false positive. The comment wrote `VDR-RPT-VDT` once. The published rule ID is `VER-RPT-VDT`.
+</Note>
+
+<Note>
   **pete-gov, 2026-10-15** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18957963)): The CVSS user interaction metric doesn't by itself show that a vulnerability isn't automatable under [`VER-EVA-AIA`](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#assume-its-automatable), but you can use it as evidence. A flaw that needs a specific action on one terminal you've walled off is probably not automatable. A flaw that only needs someone to open an email attachment still is, because "someone is gonna open that email." In general, high user interaction requirements are likely to reduce automatability.
 </Note>
 
@@ -310,6 +328,8 @@ These were still unanswered in the thread as of 2026-10-14:
 - Check your own dates against the [Rev5 deadlines](https://www.fedramp.gov/2026/providers/updating/deadlines/rev5/). For `FRC`, `IVV`, `MAS`, `CPO` and `SDR`, the grace period ends at the first independent assessment **started** after the listed date.
 - If you plan a Rev5 uplift or new Rev5 certification, it must reach FedRAMP before 2027-06-11.
 - For `SDR-CSO-FRR` and `SDR-CSF-CTF`, give both your method and its results, and follow the rule text rather than the schema.
+- "Full implementation" means addressing every applicable rule, including SHOULD rules, by implementing it or documenting your decision and reasoning. Submit the December 2026 activity report with that month's ConMon.
+- Expect mixed legacy and CR26 packages in 2027. Check each ruleset's own dates and add supplemental material for the rulesets you have adopted.
 
 ## Related
 
