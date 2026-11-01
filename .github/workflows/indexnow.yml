@@ -3,12 +3,21 @@ name: IndexNow
 # When pages change on main, tells IndexNow (Bing, and through it ChatGPT search
 # and Copilot) which URLs at sequencerassurance.com/docs to recrawl. The key is
 # public by design: the marketing site serves it at /<key>.txt.
+#
+# Update docs also calls this workflow after it auto-merges a PR, because a merge
+# made with GITHUB_TOKEN doesn't trigger the push event below.
 
 on:
   push:
     branches: [main]
     paths:
       - "**.mdx"
+  workflow_call:
+    inputs:
+      after:
+        description: "Commit on main to ping for (its parent is the comparison base)"
+        required: true
+        type: string
 
 permissions:
   contents: read
@@ -20,15 +29,17 @@ jobs:
     steps:
       - uses: actions/checkout@v5
         with:
+          ref: ${{ inputs.after || github.sha }}
           fetch-depth: 0
 
       - name: List changed page URLs
         id: urls
         env:
-          BEFORE: ${{ github.event.before }}
-          AFTER: ${{ github.sha }}
+          # When called, github.event is the caller's event, so ignore its before.
+          BEFORE: ${{ !inputs.after && github.event.before || '' }}
+          AFTER: ${{ inputs.after || github.sha }}
         run: |
-          # First push or force push: fall back to the last commit.
+          # Called by Update docs, first push or force push: fall back to the last commit.
           git cat-file -e "$BEFORE" 2>/dev/null || BEFORE="$AFTER~1"
           git diff --name-only "$BEFORE" "$AFTER" -- '*.mdx' \
             | grep -v -E '^(upstream|data|drafts)/' \
