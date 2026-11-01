@@ -1,13 +1,29 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
-  "name": "FedRAMP 2026 Knowledge Base",
+  "theme": "sequoia",
+  "name": "FedRAMP 20x Knowledge Base",
+  "description": "Plain-English summaries of the FedRAMP Consolidated Rules for 2026 and what FedRAMP staff say about them, from Sequencer Assurance.",
   "colors": {
-    "primary": "#1D4ED8",
-    "light": "#60A5FA",
-    "dark": "#1E40AF"
+    "primary": "#c1272d",
+    "light": "#c2b499",
+    "dark": "#c1272d"
   },
-  "favicon": "/favicon.svg",
+  "background": {
+    "color": {
+      "light": "#ffffff",
+      "dark": "#000000"
+    }
+  },
+  "logo": {
+    "light": "/brand/sequencer-lockup-horizontal-black.svg",
+    "dark": "/brand/sequencer-lockup-horizontal-white.svg"
+  },
+  "favicon": "/brand/sequencer-symbol-red.svg",
+  "fonts": {
+    "body": {
+      "family": "Geist"
+    }
+  },
   "navigation": {
     "groups": [
       {
@@ -91,6 +107,30 @@
       {
         "label": "FedRAMP Help",
         "href": "https://help.fedramp.gov"
+      },
+      {
+        "label": "Sequencer Assurance",
+        "href": "https://sequencerassurance.com"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Book a call",
+      "href": "https://calendly.com/jack-sequencerassurance/30min"
+    }
+  },
+  "footer": {
+    "socials": {
+      "website": "https://sequencerassurance.com",
+      "linkedin": "https://www.linkedin.com/in/jack-rumsey-83303469/"
+    },
+    "links": [
+      {
+        "header": "Sequencer Assurance",
+        "items": [
+          { "label": "Website", "href": "https://sequencerassurance.com" },
+          { "label": "Book a call", "href": "https://calendly.com/jack-sequencerassurance/30min" }
+        ]
       }
     ]
   },
