@@ -136,5 +136,10 @@
   },
   "contextual": {
     "options": ["copy", "view", "chatgpt", "claude"]
+  },
+  "seo": {
+    "metatags": {
+      "canonical": "https://sequencerassurance.com/docs"
+    }
   }
 }
