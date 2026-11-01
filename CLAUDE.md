@@ -43,6 +43,18 @@ This repo is a Mintlify site for cloud service provider (CSP) clients. It explai
 - Use Mintlify components only where they help: `<Note>`, `<Warning>`, `<Info>`, `<Tip>`, `<Card>`, `<CardGroup>`, `<Accordion>`, `<Update>`.
 - MDX is strict. Escape `<`, `>`, `{` and `}` in prose (write "less than", or use code formatting). Close every tag.
 
+## Brand
+
+The site is published by Sequencer Assurance and styled with its brand (`docs.json`, `style.css`, `brand/`, `fonts/`). Leave those files alone during update runs. In page text:
+
+- **Voice:** precise, evidence-first, plain-spoken and current. Name the rule ID, the date and the source. Short sentences. Bad news goes in the first line. Date guidance and name the upstream release.
+- **Words to avoid:** "guaranteed ATO", "100% compliant", "bulletproof", "compliance made easy", "best-in-class".
+- **"FedRAMP 20x":** FedRAMP in capitals, lowercase x. Never "20X". Spell out "Key Security Indicators (KSIs)" on first use on a page, and write KSI IDs exactly as the rules do (`KSI-IAM-APM`, never `KSI-IAM-01`).
+- **"3PAO":** FedRAMP retired the term in the Consolidated Rules for 2026. Use the defined terms: **Assessor** (`FRD-ASR`), **FedRAMP Recognized** (`FRD-FRA`), **Advisor** (`FRD-ADV`). Use "3PAO" only when a source used it, marked as the source's term (for example: staff used the legacy term "3PAO").
+- **Independence:** Sequencer Assurance is an independent Advisor, not affiliated with or endorsed by FedRAMP or GSA. Never say or suggest that FedRAMP or GSA endorses, partners with or recommends it. Never describe it as an assessor or as FedRAMP Recognized. Never use FedRAMP or GSA logos.
+- **Certification:** it's the cloud service that earns a FedRAMP Certification, never Sequencer Assurance.
+- **No sales copy in rule or discussion pages.** The home page's "About Sequencer Assurance" section is the only place for company copy.
+
 ## Page templates
 
 ### Rule summary (`rules/<slug>.mdx`)

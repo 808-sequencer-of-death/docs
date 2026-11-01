@@ -1,0 +1,164 @@
+/* Sequencer Assurance brand layer. Tokens from sequencer-brand/tokens/tokens.json. */
+@import url("https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400..700&display=swap");
+
+/* Nohemi ships as the original .otf files in /fonts. The first source is the
+   /docs base path; the second covers local preview and a root deployment. */
+@font-face {
+  font-family: "Nohemi";
+  font-weight: 400;
+  font-display: swap;
+  src: url("/docs/fonts/Nohemi-Regular.otf") format("opentype"),
+    url("/fonts/Nohemi-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "Nohemi";
+  font-weight: 500;
+  font-display: swap;
+  src: url("/docs/fonts/Nohemi-Medium.otf") format("opentype"),
+    url("/fonts/Nohemi-Medium.otf") format("opentype");
+}
+@font-face {
+  font-family: "Nohemi";
+  font-weight: 800;
+  font-display: swap;
+  src: url("/docs/fonts/Nohemi-ExtraBold.otf") format("opentype"),
+    url("/fonts/Nohemi-ExtraBold.otf") format("opentype");
+}
+
+:root {
+  --ink: #000000;
+  --paper: #ffffff;
+  --red: #c1272d;
+  --sand: #c2b499;
+  --link: #0071bc;
+  --radius-none: 0;
+  --font-display: "Nohemi", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, Menlo, monospace;
+}
+
+html.dark {
+  --link: #c2b499;
+}
+
+/* Square corners everywhere. Logos and the favicon are SVG artwork, so their
+   pad shapes are unaffected. */
+*,
+*::before,
+*::after {
+  border-radius: var(--radius-none) !important;
+}
+
+/* No shadows or gradients. Keyboard focus rings stay. */
+*:not(:focus-visible) {
+  box-shadow: none !important;
+}
+
+/* Headings: Nohemi, ExtraBold for the page title, Medium below it. */
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+}
+h1 {
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+h2,
+h3,
+h4 {
+  font-weight: 500;
+}
+
+/* Sidebar group headers are labels: Geist Mono, uppercase, +8% tracking. */
+.sidebar-group-header,
+.sidebar-group-header .sidebar-title {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Page eyebrow is a label too, in ink, so red stays the one lit accent. */
+[data-layout-item="page-header"] .eyebrow {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+html.dark [data-layout-item="page-header"] .eyebrow {
+  color: var(--paper);
+}
+
+/* Current page in the sidebar and table of contents: ink with a sand rule,
+   not a second red. The "Book a call" button is the lit pad. */
+#sidebar-content li[data-active] > a,
+.toc-item[data-active-deepest] > a {
+  color: var(--ink) !important;
+  background-color: transparent !important;
+  box-shadow: inset 2px 0 0 var(--sand) !important;
+}
+html.dark #sidebar-content li[data-active] > a,
+html.dark .toc-item[data-active-deepest] > a {
+  color: var(--paper) !important;
+}
+
+/* Give the horizontal lockup as much room as the compact header allows
+   (the brand book's draft minimum is 140px wide). */
+img.nav-logo {
+  height: 2rem !important;
+  width: auto !important;
+}
+@media (min-width: 1024px) {
+  img.nav-logo {
+    height: 2.75rem !important;
+  }
+}
+
+/* Code and rule IDs: Geist Mono. */
+code,
+kbd,
+pre,
+pre * {
+  font-family: var(--font-mono) !important;
+}
+
+/* Body text at about 70 characters a line. Tables and cards keep the full column. */
+#content > span[data-as="p"],
+#content > ul,
+#content > ol,
+#content > p {
+  max-width: 70ch;
+}
+
+/* Content links use the brand link token, so red stays the one lit accent. */
+#content a:not([data-component-part]):not(.card) {
+  color: var(--link);
+  border-bottom-color: currentColor;
+}
+
+/* Independence statement on every page, under the footer links. */
+[data-layout-item="footer"]::after {
+  content: "Sequencer Assurance is an independent Advisor; not affiliated with or endorsed by FedRAMP or GSA.";
+  display: block;
+  max-width: 70ch;
+  margin: 0 auto;
+  padding: 0 16px 24px;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: rgb(0 0 0 / 0.6);
+}
+html.dark [data-layout-item="footer"]::after {
+  color: rgb(255 255 255 / 0.6);
+}
+
+/* "Book a call" stays Record Red in dark mode too (paper on red is 5.84:1). */
+html.dark a[href^="https://calendly.com"][class*="bg-primary"] {
+  background-color: var(--red);
+  color: var(--paper);
+}
