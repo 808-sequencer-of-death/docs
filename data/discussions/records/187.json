@@ -1,0 +1,49 @@
+{
+  "schema_version": 3,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-187",
+  "node_id": "D_kwDOOxfoic4Aqtfn",
+  "number": 187,
+  "title": "A free, agency-neutral implementation workbook built in the spirit of FedRAMP 20x",
+  "url": "https://github.com/FedRAMP/community/discussions/187",
+  "category": "20x Discussion",
+  "category_slug": "20x-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "WhalerMike",
+  "author_is_official": false,
+  "created_at": "2026-10-31T21:26:26Z",
+  "updated_at": "2026-10-31T21:26:26Z",
+  "last_edited_at": null,
+  "closed": false,
+  "closed_at": null,
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "FedRAMP 20x, along with the Federal CIO’s “Expectations for Public Tech Leadership” memo, inspired a project I’ve been building: the Federal Modernization Workbook, https://whalermike.github.io/modernization-workbook/\r\n\r\nIt’s a free, open set of books for civilian agencies on moving from AD-mastered identity to HR-driven, cloud-governed operations under CISA baselines (SCuBA, BODs, 800-53 Moderate). The gap it tries to fill is the same one 20x names: requirements arrive without a shared way to implement them, so each agency works it out alone. The workbook tries to show its work, with every claim sourced and corrections logged in the open.\r\n\r\nIt isn’t a cloud service offering and isn’t seeking authorization. I’m sharing it as a community resource and would welcome feedback from the FedRAMP team and community on two questions:\r\n\r\nWhere does the workbook’s treatment of continuous, evidence-based compliance line up with 20x, and where does it diverge?\r\nWhat would make it more useful to agencies consuming 20x-authorized services?\r\nStart here: https://whalermike.github.io/modernization-workbook/docs/start-here.html#the-start-series",
+  "comment_count": 0,
+  "comments": [],
+  "answer_url": null,
+  "participants": [
+    "WhalerMike"
+  ],
+  "official_responses": [],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://whalermike.github.io/modernization-workbook/",
+      "https://whalermike.github.io/modernization-workbook/docs/start-here.html#the-start-series"
+    ],
+    "topics": [
+      "20x"
+    ]
+  },
+  "content_hash": "a998ca02eb417367c71e3df8c1b4b3a91632ee65986cd3a65ba3a1b5691cd77e",
+  "synced_at": "2026-11-01T14:19:14.595874+00:00"
+}
