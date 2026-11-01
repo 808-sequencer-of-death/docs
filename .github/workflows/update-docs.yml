@@ -1,7 +1,9 @@
 name: Update docs
 
 # Reads what the nightly sync changed, has Claude update the affected Mintlify
-# pages and the changelog, and opens a PR for review. Never pushes to main.
+# pages and the changelog, and opens a PR. Never pushes to main directly.
+# The PR is squash-merged automatically only when every guard in the
+# "Auto-merge if the guards pass" step holds; otherwise it stays open for review.
 
 on:
   workflow_dispatch:
@@ -17,16 +19,22 @@ on:
 
 permissions:
   contents: write      # push the update branch
-  pull-requests: write # open the PR
+  pull-requests: write # open, comment on and merge the PR
 
 concurrency:
   group: update-docs
   cancel-in-progress: false
 
+env:
+  # Auto-merge only diffs up to this many changed lines (additions + deletions).
+  MAX_AUTO_MERGE_LINES: 200
+
 jobs:
   update:
     runs-on: ubuntu-latest
     timeout-minutes: 45
+    outputs:
+      merge_sha: ${{ steps.automerge.outputs.merge_sha }}
     steps:
       - uses: actions/checkout@v5
         with:
@@ -105,6 +113,7 @@ jobs:
           npx --yes mint@4 broken-links
 
       - name: Open a pull request
+        id: open
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -131,5 +140,59 @@ jobs:
           git push -u origin "${{ steps.range.outputs.branch }}"
           TITLE="Docs update: $(date -u +%Y-%m-%d)"
           [ "${{ steps.validate.outcome }}" = "success" ] || TITLE="$TITLE [build check failed]"
-          gh pr create --base main --head "${{ steps.range.outputs.branch }}" \
-            --title "$TITLE" --body-file "$RUNNER_TEMP/pr-body.md"
+          PR_URL=$(gh pr create --base main --head "${{ steps.range.outputs.branch }}" \
+            --title "$TITLE" --body-file "$RUNNER_TEMP/pr-body.md")
+          echo "$PR_URL"
+          echo "pr_url=$PR_URL" >> "$GITHUB_OUTPUT"
+
+      - name: Auto-merge if the guards pass
+        id: automerge
+        if: steps.open.outputs.pr_url != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_URL: ${{ steps.open.outputs.pr_url }}
+          BUILD_OUTCOME: ${{ steps.validate.outcome }}
+        run: |
+          FAILED=()
+
+          # 1. The Mintlify build and broken-link checks passed.
+          [ "$BUILD_OUTCOME" = "success" ] || FAILED+=("Mintlify build or broken-link check failed ($BUILD_OUTCOME).")
+
+          # 2. Only existing files changed (no new, deleted or renamed pages).
+          NOT_MODIFIED=$(git diff --name-status HEAD~1 HEAD | awk '$1 != "M"')
+          [ -z "$NOT_MODIFIED" ] || FAILED+=("Files were added, deleted or renamed: $(echo "$NOT_MODIFIED" | tr '\n\t' '; ')")
+
+          # 3. Every changed file is under rules/ or discussions/, or is changelog.mdx.
+          #    docs.json is excluded: it controls branding, links and SEO site-wide.
+          OUTSIDE=$(git diff --name-only HEAD~1 HEAD | grep -vE '^(rules/|discussions/|changelog\.mdx$)' || true)
+          [ -z "$OUTSIDE" ] || FAILED+=("Files outside the allowed paths changed: $(echo "$OUTSIDE" | tr '\n' ' ')")
+
+          # 4. The diff is small enough to trust without review.
+          LINES=$(git diff --numstat HEAD~1 HEAD | awk '{ n += $1 + $2 } END { print n + 0 }')
+          [ "$LINES" -le "$MAX_AUTO_MERGE_LINES" ] || FAILED+=("Diff has $LINES changed lines; the limit is $MAX_AUTO_MERGE_LINES.")
+
+          if [ ${#FAILED[@]} -eq 0 ]; then
+            gh pr merge "$PR_URL" --squash --delete-branch
+            MERGE_SHA=$(gh pr view "$PR_URL" --json mergeCommit --jq .mergeCommit.oid)
+            echo "merge_sha=$MERGE_SHA" >> "$GITHUB_OUTPUT"
+            echo "All guards passed; merged $PR_URL as $MERGE_SHA."
+          else
+            {
+              echo "Not auto-merged. This PR needs a human review because:"
+              echo
+              printf -- '- %s\n' "${FAILED[@]}"
+            } > "$RUNNER_TEMP/guard-comment.md"
+            gh pr comment "$PR_URL" --body-file "$RUNNER_TEMP/guard-comment.md"
+            cat "$RUNNER_TEMP/guard-comment.md"
+          fi
+
+  # A merge made with GITHUB_TOKEN doesn't trigger the IndexNow push workflow,
+  # so call it directly for auto-merged updates.
+  indexnow:
+    needs: update
+    if: needs.update.outputs.merge_sha != ''
+    permissions:
+      contents: read
+    uses: ./.github/workflows/indexnow.yml
+    with:
+      after: ${{ needs.update.outputs.merge_sha }}
