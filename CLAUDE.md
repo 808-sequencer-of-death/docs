@@ -120,4 +120,6 @@ When automation asks you to process a change:
 3. Update the affected `rules/` and `discussions/` pages, keeping their existing structure. Create a page only for a new ruleset or a significant new thread, and add it to `docs.json` navigation.
 4. Add one changelog entry for the run.
 5. Never touch `upstream/`, `data/`, `scripts/` or `.github/`.
+
+The workflow squash-merges your PR without human review only if all of these hold. The Mintlify build and broken-link checks pass. Every changed file is an existing file under `rules/` or `discussions/`, or is `changelog.mdx` or `docs.json`. No file is added, deleted or renamed. The diff is 200 lines or fewer. Otherwise the PR stays open with a comment naming the failed guard. Write `.pr-body.md` as if a person will read it either way.
 </content>

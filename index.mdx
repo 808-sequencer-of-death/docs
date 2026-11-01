@@ -20,7 +20,7 @@ This site is for teams at cloud service providers (CSPs) that hold, or are worki
 ## How this site stays current
 
 - **Nightly sync.** Every night, automation pulls the latest [FedRAMP/2026-markdown](https://github.com/FedRAMP/2026-markdown) release (the Markdown edition of the official rules) and the latest posts from the [FedRAMP community discussions](https://github.com/FedRAMP/community/discussions).
-- **Human review.** Every update to this site is reviewed by a person before it's published. Nothing goes live automatically.
+- **Review.** Each nightly update opens a pull request. It's published automatically only if the site builds with no broken links, it edits existing rule summaries, discussion digests, the changelog or site navigation, it adds no pages, and it changes 200 lines or fewer. Anything else waits for a person to review it.
 - **Staff versus community.** Discussion digests quote only FedRAMP staff posts as FedRAMP positions. Community comments are context, not guidance. A staff comment never overrides the published rule.
 - **Release tracking.** Each rule summary names the upstream release it was checked against. The current release is `2026.10.14.01`. See [What changed](/changelog) for the history.
 
