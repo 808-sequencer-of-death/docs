@@ -102,10 +102,12 @@ Links to related summaries and digests.
 
 ### Changelog entry (`changelog.mdx`)
 
-Add new entries at the top, below the frontmatter:
+Add new entries at the top, below the intro paragraph. Use one entry per date: if an entry for that date already exists, add to it. Start every entry with a `**Date:**` line that repeats the label date.
 
 ```mdx
 <Update label="2026-10-14" description="Upstream 2026.10.14.01">
+  **Date:** 2026-10-14
+
   - **Rules:** what changed and which pages were updated, with links.
   - **Discussions:** new or updated threads and staff positions, with links.
 </Update>
