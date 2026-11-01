@@ -1,0 +1,57 @@
+name: IndexNow
+
+# When pages change on main, tells IndexNow (Bing, and through it ChatGPT search
+# and Copilot) which URLs at sequencerassurance.com/docs to recrawl. The key is
+# public by design: the marketing site serves it at /<key>.txt.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "**.mdx"
+
+permissions:
+  contents: read
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: List changed page URLs
+        id: urls
+        env:
+          BEFORE: ${{ github.event.before }}
+          AFTER: ${{ github.sha }}
+        run: |
+          # First push or force push: fall back to the last commit.
+          git cat-file -e "$BEFORE" 2>/dev/null || BEFORE="$AFTER~1"
+          git diff --name-only "$BEFORE" "$AFTER" -- '*.mdx' \
+            | grep -v -E '^(upstream|data|drafts)/' \
+            | grep -v -E '\.draft\.mdx$' \
+            | sed -E 's#\.mdx$##; s#(^|/)index$##; s#^#https://sequencerassurance.com/docs/#; s#/$##' \
+            | sort -u > urls.txt
+          cat urls.txt
+          echo "count=$(wc -l < urls.txt)" >> "$GITHUB_OUTPUT"
+
+      - name: Wait for Mintlify to publish
+        if: steps.urls.outputs.count != '0'
+        run: sleep 180
+
+      - name: Ping IndexNow
+        if: steps.urls.outputs.count != '0'
+        run: |
+          jq -n --rawfile urls urls.txt '{
+            host: "sequencerassurance.com",
+            key: "b5f630d0deac4ba8b9dbe34e01f97340",
+            keyLocation: "https://sequencerassurance.com/b5f630d0deac4ba8b9dbe34e01f97340.txt",
+            urlList: ($urls | split("\n") | map(select(length > 0)))
+          }' > body.json
+          status=$(curl -s -o response.txt -w '%{http_code}' -X POST https://api.indexnow.org/indexnow \
+            -H 'Content-Type: application/json; charset=utf-8' --data @body.json)
+          echo "IndexNow: HTTP $status"; cat response.txt
+          [ "$status" = 200 ] || [ "$status" = 202 ]
