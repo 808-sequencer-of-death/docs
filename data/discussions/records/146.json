@@ -15,7 +15,7 @@
   "author": "pete-gov",
   "author_is_official": true,
   "created_at": "2026-06-24T21:49:44Z",
-  "updated_at": "2026-10-27T12:25:55Z",
+  "updated_at": "2026-10-28T20:56:52Z",
   "last_edited_at": null,
   "closed": false,
   "closed_at": null,
@@ -24,7 +24,7 @@
   "answer_chosen_at": null,
   "upvotes": 1,
   "body": "## This thread is for any and all Q&A or general discussion related to FedRAMP Rev5 in general that does not need to have its own thread.\r\n\r\nFedRAMP released the [Consolidated Rules for 2026](https://www.fedramp.gov/2026/) on June 24, 2026 with a considerable set of changes for FedRAMP Rev5 that will apply to all cloud service providers.\r\n\r\nThese changes include:\r\n\r\n- Mandatory adoption of the Vulnerability Detection and Response and Vulnerability Evaluation and Reporting rules by December 6, 2026 in response to CISA BOD 26-04\r\n- Changes to assessments for Rev5 to align more like assessments for 20x - focusing on verification and validation instead of just control implementation.\r\n- Replacement of most FedRAMP templates with a new Certification Package Overview and Security Decision Record\r\n- Removal of many FedRAMP-assigned control parameters and a lot of older FedRAMP control guidance\r\n- Mandatory adoption of many other Balance Improvement Releases through 2027\r\n- A requirement to address all FedRAMP Rules within the Security Decision Record, instead of only addressing controls\r\n\r\nSome of these changes take effect for all cloud service providers on certain dates no matter what, others take effect at the next annual assessment. In general, these are sweeping changes that will require all cloud service providers to begin planning now to continue to meet FedRAMP Rev5 requirements.\r\n\r\nHistorical materials are available at [https://fedramp.gov/legacy](https://fedramp.gov/legacy).\r\n\r\n---\r\n\r\nYou may see some of the following folks from FedRAMP responding in this thread:\r\n\r\n- `pete-gov` - Pete, FedRAMP Director\r\n- `nicole-gov` - Nicole, Security Director\r\n- `dan-fedramp` - Dan, Lead Cloud Security Engineer\r\n- `paulagosta` - Paul, Lead Cloud Security Engineer (Bastion)\r\n- `emu-gov` - Emu, Lead Cloud Security Engineer (Vanguard)\r\n- `rhoesing` - Ryan, Chief of Staff & Policy Branch Chief",
-  "comment_count": 47,
+  "comment_count": 50,
   "comments": [
     {
       "id": "DC_kwDOOxfoic4BChJy",
@@ -1442,9 +1442,33 @@
           "upvotes": 0,
           "minimized": false,
           "body": "Thanks for the clarity and your prompt response!"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BJauE",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19245956",
+          "author": "cbiggsrun",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-10-28T15:30:10Z",
+          "updated_at": "2026-10-28T15:30:10Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "@pete-gov Related to PAIN ratings, if a CSP only uses the tripod you mention above (exploitability, reachability, and PAIN/impact) to evaluate vulnerabilities and didn't include all 8 evaluation factors, would that be seen as not fulfilling the evaluation criteria for VER?  \r\n\r\nOn a side note, would it make sense to add PAIN (agency impact) as a 9th evaluation factor for VER-EVA-EFA? Since you already have reachability and exploitability included? "
+        },
+        {
+          "id": "DC_kwDOOxfoic4BJbqF",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19249797",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-10-28T18:01:01Z",
+          "updated_at": "2026-10-28T18:01:01Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> @pete-gov Related to PAIN ratings, if a CSP only uses the tripod you mention above (exploitability, reachability, and PAIN/impact) to evaluate vulnerabilities and didn't include all 8 evaluation factors, would that be seen as not fulfilling the evaluation criteria for VER?\r\n\r\nThe evaluation factors in [VER-EVA-EFA (Evaluation Factors)](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/?h=VER-EVA-ELX#evaluation-factors) _help you do the evaluation required by the other rules._ It's not an either or thing, you will not be able to accurate determine if something is likely exploitable under [VER-EVA-ELX Evaluate Exploitability](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/?h=VER-EVA-ELX#evaluate-exploitability) if you don't consider the relevant Evaluation Factors.\r\n\r\nAlso, a reminder that [It's Not a Trap!](https://www.fedramp.gov/2026/rules/#its-not-a-trap). Do the right thing that matters for your business and is supported by your security and engineering team, especially for SHOULD rules. Demonstrate why it's the right technical approach. Consider how you want to respond to a potential customer that doesn't like the way you do it or disagrees with your technical reasons. As long as you do that for the rules, FedRAMP isn't going to nit pick you.\r\n\r\n> On a side note, would it make sense to add PAIN (agency impact) as a 9th evaluation factor for VER-EVA-EFA? Since you already have reachability and exploitability included?\r\n\r\nReachability is an evaluation factor/input, \"internet reachable\" is an evaluation outcome that is based partially on reachability. Exploitability is also an evaluation factor/input, whereas \"likely exploitable\" is an evaluation outcome that is based partially on exploitability. PAIN is also an evaluation outcome, not a factor/input.\r\n\r\n## Example\r\n\r\nA playful example that is exactly the type of situation we all dream of when we're imagining compliance:\r\n\r\nYour cloud service stores master break-glass codes in a safe in the CEO's office. You find during a red team exercise that the CEO regularly leaves the safe unlocked while he is in the office and watching Tik Tok with headphones on and his back to the safe and the door. The red team suggests that anyone could walk into his office and grab the codes to own the entire business. \r\n\r\n- Criticality: Pretty critical, these could take over everything.\r\n- Reachability: Not internet-reachable. Turns out the CEO has a high grade office door that is always locked when he watches Tik Tok. He's got 6 armed guards outside because the business is a bit sketchy. It's probably not very reachable at all, internet or not.\r\n- Exploitability: Not really exploitable, and definitely not _likely_ exploitable. Maybe if all 6 guards were in on it, or John Wick got involved? This is probably not a vulnerability to worry about being exploited though.\r\n- Detectability: Fairly unlikely a threat actor would find out about this unless they visit the CEO's office on business. Monitor info on the dark web and make sure no one is talking about it and you're probably fine?\r\n- Prevalence: Full, master codes, takes over the whole cloud service offering. Bad stuff.\r\n\r\nBased on these factors you'd probably say it's not remotely likely to be exploitable and the whole thing is so unlikely that it's basically PAIN0. No one is going to waste time fighting through those six guys and rob the safe.\r\n\r\nBut...  you ignored two factors in your evaluation. Let's say you add those in, and the evaluation shows:\r\n\r\n- Proximate Vulnerabilities: Oh guess what it turns out that amazing secure door is internet connected with some known vulnerabilities so that anyone within 30 feet can unlock it with their phone. And 3 of those armed guards are brand new, just stated last week, because the previous 3 got sick all at once!\r\n- Known Threats: The CEO's son just stole John Wick's car and killed his dog. The cloud service offering just stood up a new crypto exchange with $10 billion in private keys.\r\n\r\nOkay, now you got a PAIN5 and then some. 😉  Doesn't matter if that vuln isn't internet-accessible or likely-exploitable, you are gonna get got if you don't respond appropriately.\r\n\r\n<img width=\"245\" height=\"189\" alt=\"giphy\" src=\"https://github.com/user-attachments/assets/b6526c34-cc3b-40ae-90e0-62ff512d9829\" />\r\n\r\n\r\n"
         }
       ],
-      "replies_total": 2,
+      "replies_total": 4,
       "replies_truncated": false
     },
     {
@@ -2404,9 +2428,156 @@
           "upvotes": 0,
           "minimized": false,
           "body": "> One thing I want to flag first. You mentioned \"The first assessment starting after 2027-01-01 needs to match CPO, full stop.\", but the CR26 Rev5 deadlines page shows CPO's maintain date as 2027-07-01 with a grace period ending on the first assessment started after 2027-07-01. Can you confirm which is correct?\r\n\r\nHonestly we probably should've just set deadlines different than 07-01 - myself and many other folks struggle seeing the difference between 01-01 and 07-01. This was an especially egregious mistake considering I had originally messed up and put all of the +6mo grace periods for 01-01 maintain deadlines at 01-01 instead of 07-01 and it took many weeks for anyone to notice.\r\n\r\nThe deadlines in each ruleset are accurate. Always follow the rules as the source of truth, not something said elsewhere. :) I will edit my previous response to remove the incorrect dates.\r\n\r\n> If these rulesets are not yet required in the above scenario, how can a CSP create a partial CR26 Certification Package without them (especially CPO and SDR)? I agree the cleanest path is to do a full scope, but is there a door for a partial package without key rulesets?\r\n\r\nYes, the expectation is that the cloud service provider finds a simple way to navigate this in a customer-experienced focused way. There is a bit of over-fixation on templates in the historical approach to FedRAMP, but we have deliberately moved away from that in the modern era. Providers are welcome to provide supplemental information about addressing FedRAMP Practices within the context of a legacy package or by simply producing standalone supplemental materials.\r\n\r\nFor example, VDR/VER does not have templates with how to report that information and there is no place for it in the traditional package, but that doesn't mean a provider can't easily figure out effective ways to share that information even if they haven't adopted the Certification Data Sharing rules.\r\n\r\n> With no SDR then how is IVV met without verification and validation statements from both the IA and CSP? Where is IVV documented? Will the PMO allow discretion to the CSP with what supplementation looks like in the interim for all rulesets that have not yet hit their maintain dates? I hope you see where I am going and the source of confusion here.\r\n\r\nYes, this is intentional: [It's Not a Trap!](https://www.fedramp.gov/2026/rules/#its-not-a-trap)\r\n\r\nThis doesn't seem complicated to us. You can provide separate documents, add **Verification:** statements to the SSP control text, etc. You can progressively manage something like this with a machine-system and store it in a database/JSON/etc. while still manually doing the SSP in Word. \r\n\r\n>  I'd like to think it is one or the other until a certain date (Legacy Rev5 vs CR26 Rev5). After that, it is full CR26 then on and not partial frankenstein packages.\r\n\r\nOh no, we're definitely expecting frankenstein packages. We expect a lot of different approaches, some awesome, some incredibly poorly thought through. It's fine, it's all temporary. Our direction has been to prioritize incremental adoption among industry and government instead of setting an arbitrary cut-over date years in the future and to accept the risk of that mid-transition churn to prioritize earlier adoption of key bits. It needs to be clear that cloud service providers and assessors can't simply put everything off."
+        },
+        {
+          "id": "DC_kwDOOxfoic4BJUFz",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19218803",
+          "author": "mpg-CF",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-10-27T14:23:01Z",
+          "updated_at": "2026-10-27T14:23:01Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "This is great, @pete-gov. Thank you for explaining. \r\nJust to recap, starting in 2027, CSPs should start creating CR26 packages. For those rulesets that are not yet complete, CSPs can create supplemental items that take the place of those rulesets (SDR, CPO, CDS) but don't necessarily follow all the rules/requirements from those rulesets (since they arent due yet). However, any due rulesets need to be followed and displayed in some form or another (IVV). It is highly recommended that a CSP goes ahead and starts creating a full scope package rather than waiting and spinning wheels on temporary outputs (SSP + V&V) but that is an available route. At the end of it, FedRAMP Packages starting in 2027 should follow CR26 rules/requirements as best they can. \r\n\r\nBy frankenstein packages, I mean where CSP decides to pick and choose what CR26 requirements to follow, what Legacy FedRAMP Rev5 requirements/rules/guidance to follow (severity ratings, e,i,t statements, SAP/SAR etc.) and what to ignore from both. Therefore creating a package that doesnt fully follow either. \r\n\r\nThanks again, Pete. "
         }
       ],
-      "replies_total": 4,
+      "replies_total": 5,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BJVyE",
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19225732",
+      "author": "shon-d-dingman",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-10-27T19:09:59Z",
+      "updated_at": "2026-10-27T19:09:59Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "@pete-gov \r\n\r\nWe’d like to confirm how providers should set up their approach to PAIN ratings.\r\n\r\nWe noticed that RFC-0031 defined the N-ratings by adverse effect on agency operations, and the final CR26 rules use service-level customer-effect definitions (minimal, narrow, disruptive, debilitating) instead. With that in mind, which approach does FedRAMP expect?\r\n\r\nAgency-informed: Providers consult agency customers about how they use the service and how much they depend on it, and use that to calibrate PAIN ratings.\r\nService-based: Providers apply the customer-effect definitions directly, based on observable effects such as how many users lose access and how much federal customer data is affected. Each agency then judges what that means for its own operations.\r\n\r\nIf option 1 is acceptable, how should providers document agency input and keep it current as customers and their use of the service change?\r\n\r\nThanks!",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BJVz1",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19225845",
+          "author": "nicole-gov",
+          "author_association": "NONE",
+          "is_official": true,
+          "created_at": "2026-10-27T19:16:19Z",
+          "updated_at": "2026-10-27T19:16:49Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "FedRAMP always expects you to follow finalized rules, not what was proposed in the RFC. We use RFCs to solicit public comment about planned changes, but rules are never finalized until they're officially published in documentation (like CR26). \r\n\r\nIn this case, the final rules changed from the RFC precisely because of questions like this. We don't expect you to know the details of how agencies are using your cloud service. We only expect you to know that agencies are using it. You need to provide your customer agencies timely information about vulnerabilities that may affect them and then it's up to the agencies to determine which compensating controls to implement after that. "
+        },
+        {
+          "id": "DC_kwDOOxfoic4BJV_S",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19226578",
+          "author": "shon-d-dingman",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-10-27T19:59:49Z",
+          "updated_at": "2026-10-27T19:59:49Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Does the service-base approach mean that a vulnerability capable of causing a complete outage across multiple federal agency customers must receive PAIN-5, even when the service performs only non-mission-critical functions?"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BJWFW",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19226966",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-10-27T20:31:47Z",
+          "updated_at": "2026-10-27T20:31:47Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> Does the service-base approach mean that a vulnerability capable of causing a complete outage across multiple federal agency customers must receive PAIN-5, even when the service performs only non-mission-critical functions?\r\n\r\nNope! We recommend checking into the [Using the Consolidated Rules](https://www.fedramp.gov/2026/rules/#definitions) section of the site to read about how we use defined terms to clarify stuff like this in the rules. In the human-readable version of the site, each rule links to all of the defined terms that it uses for quick reference.\r\n\r\nThere are a bunch of specifically defined terms used in [VER-EVA-EPA (Estimate Potential Agency Impact)](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#estimate-potential-agency-impact) that should address this question in the context of the rules:\r\n\r\n- N5 specifically is \" could be expected to have a **debilitating customer effect** on more than one agency that uses the cloud service offering.\"\r\n- [Debilitating customer effect](https://www.fedramp.gov/2026/definitions/#debilitating-customer-effect) is defined as \"An unwanted customer effect that interrupts use of the cloud service for most users or compromises the integrity or confidentiality of most federal customer data. If the adverse customer effect is unknown then it should be treated as if it is debilitating until proven otherwise.\"\r\n\r\nIf you know a service isn't performing mission-critical functions such that it isn't likely to affect most users / most customer data, then you would not evaluate it as a likely debilitating customer effect at PAIN5. More likely it would be something like a [narrow customer effect ](https://www.fedramp.gov/2026/definitions/#narrow-customer-effect)on one or more agencies that use the cloud service offering at PAIN2."
+        }
+      ],
+      "replies_total": 3,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BJbD4",
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19247352",
+      "author": "zeesharfcspab",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-10-28T16:27:35Z",
+      "updated_at": "2026-10-28T16:27:35Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Hello FedRAMP PMO team, \r\n\r\nHoping to get some clarification on who incident reports actually go to under the Incident Report rules (IEC-CSO-IIR / OIR / FIR). The rule statement and the notification requirement seem to point to two different, separately-defined groups:\r\n\r\nRule statement: notify all affected parties = \"FedRAMP and directly impacted federal customer agencies.\"\r\nNotification requirement: update all necessary parties via the Trust Center = \"FedRAMP and any agency customer using the offering.\"\r\nFor an incident that affects only some agencies, which one governs distribution of the incident reports?\r\n\r\nOur reading is that the affected parties receive the incident reports, while all necessary parties review certification-wide reporting like the quarterly OCR (which already summarizes incidents). Sharing full incident reports with all necessary parties would also seem to tension with CDS-CSO-RIS (don't share detail that would enable a threat actor). Could the PMO confirm which is intended?",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BJbzK",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19250378",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-10-28T18:22:14Z",
+          "updated_at": "2026-10-28T18:22:14Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> Our reading is that the affected parties receive the incident reports, while all necessary parties review certification-wide reporting like the quarterly OCR (which already summarizes incidents). \r\n\r\nAh, this is an oversight - this set of rules doesn't require require notification of `all necessary parties` so the notification requirement shouldn't have that in there either. I've created [FedRAMP/Rules#47](https://github.com/FedRAMP/rules/issues/47) to track fixing this. We will make the notification of `all necessary parties` _optional_ - it's still helpful to have incident information in the trust center but up to the business.\r\n\r\n> Sharing full incident reports with all necessary parties would also seem to tension with CDS-CSO-RIS (don't share detail that would enable a threat actor). Could the PMO confirm which is intended?\r\n\r\nWe use the defined term [**responsibly**](https://www.fedramp.gov/2026/definitions/#responsibly) when directing notifications. An incident notification really really really should not enable a threat actor. Sanitize it as much as appropriate. In most cases it should be fine to post incident reports publicly, though there may be some obscure circumstances where even the knowledge of the existence of an incident could create a threat and in that case I'd say keep it close and share carefully with only affected parties, yup.\r\n\r\n"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BJb9J",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19251017",
+          "author": "zeesharfcspab",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-10-28T18:49:11Z",
+          "updated_at": "2026-10-28T18:49:11Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thank you for the quick response, greatly appreciated Pete!"
+        }
+      ],
+      "replies_total": 2,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BJblA",
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19249472",
+      "author": "hawksjennifer",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-10-28T17:48:13Z",
+      "updated_at": "2026-10-28T17:48:13Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "For Ready Conversion applicants with a penetration test performed by an independent third party that is not a FedRAMP-recognized independent assessor, may the designated independent assessor conducting the Ready Conversion assessment review, validate, and incorporate those results into the CSP's initial certification assessment, or must the independent assessor independently execute another penetration test?",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BJb0b",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19250459",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-10-28T18:25:56Z",
+          "updated_at": "2026-10-28T18:25:56Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> For Ready Conversion applicants with a penetration test performed by an independent third party that is not a FedRAMP-recognized independent assessor, may the designated independent assessor conducting the Ready Conversion assessment review, validate, and incorporate those results into the CSP's initial certification assessment, or must the independent assessor independently execute another penetration test?\r\n\r\nFedRAMP does not _require_ a penetration test from a FR Recognized independent assessor under the Consolidated Rules for 2026. The results of your penetration test from another assessor can definitely be included in your Vulnerability Detection and Response activity reports et al. \r\n\r\nIf you're planning on submitting under the legacy rules and then converting to CR26 by February, then we'll let you take a POA&M/finding on not having a FR Recognized penetration test and you can document what you did instead and why you don't think there's a significant resulting risk. Then once you switch over to CR26 it would go poof."
+        },
+        {
+          "id": "DC_kwDOOxfoic4BJcog",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19253792",
+          "author": "hawksjennifer",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-10-28T20:56:52Z",
+          "updated_at": "2026-10-28T20:56:52Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thank you, Pete. This is exactly the kind of practical, risk-based approach we were hoping for, avoiding unnecessary costs to CSPs without compromising security outcomes. Appreciate the clarification and flexibility!"
+        }
+      ],
+      "replies_total": 2,
       "replies_truncated": false
     }
   ],
@@ -2434,6 +2605,7 @@
     "emu-gov",
     "ericmoss54",
     "gmengelberg",
+    "hawksjennifer",
     "instantn00dles",
     "jsantore-sf",
     "judgecspab-max",
@@ -2452,6 +2624,7 @@
     "ricmarreycoal",
     "rrising-xai",
     "sboyce-sheidt",
+    "shon-d-dingman",
     "v-mhahnfirstinfotech",
     "zeesharfcspab"
   ],
@@ -2677,6 +2850,11 @@
       "created_at": "2026-09-28T18:04:21Z"
     },
     {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19249797",
+      "author": "pete-gov",
+      "created_at": "2026-10-28T18:01:01Z"
+    },
+    {
       "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18716792",
       "author": "pete-gov",
       "created_at": "2026-10-02T14:24:19Z"
@@ -2830,6 +3008,26 @@
       "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19216668",
       "author": "pete-gov",
       "created_at": "2026-10-27T12:25:55Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19225845",
+      "author": "nicole-gov",
+      "created_at": "2026-10-27T19:16:19Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19226966",
+      "author": "pete-gov",
+      "created_at": "2026-10-27T20:31:47Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19250378",
+      "author": "pete-gov",
+      "created_at": "2026-10-28T18:22:14Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19250459",
+      "author": "pete-gov",
+      "created_at": "2026-10-28T18:25:56Z"
     }
   ],
   "entities": {
@@ -2837,6 +3035,7 @@
       "AGU-AGC-NAR",
       "CCM-QTR-MTG",
       "CDS-CSO-PUB",
+      "CDS-CSO-RIS",
       "CDS-TRC-USH",
       "CPO-CSO-OVR",
       "FRD-ACV",
@@ -2845,6 +3044,7 @@
       "FRD-MBI",
       "FRD-PAI",
       "FRD-VLD",
+      "IEC-CSO-IIR",
       "IVV-CSF-AIA",
       "IVV-CSF-MCA",
       "IVV-CSO-FIA",
@@ -2889,7 +3089,9 @@
       "VER-TFR-MHR",
       "VER-TFR-MRH"
     ],
-    "rfc_ids": [],
+    "rfc_ids": [
+      "RFC-0031"
+    ],
     "nist_controls": [
       "CA-1",
       "CA-5",
@@ -2908,11 +3110,16 @@
       "https://github.com/FedRAMP/community/discussions/146#discussioncomment-18391218",
       "https://github.com/FedRAMP/community/discussions/2+https://github.com/FedRAMP/community/discussions/3",
       "https://github.com/FedRAMP/community/discussions/4+https://github.com/FedRAMP/community/discussions/5",
+      "https://github.com/FedRAMP/rules/issues/47",
       "https://github.com/user-attachments/assets/1d5ff955-1a3d-4d69-909a-f017f72f3c47",
+      "https://github.com/user-attachments/assets/b6526c34-cc3b-40ae-90e0-62ff512d9829",
       "https://github.com/user-attachments/assets/f3248534-df1c-4f2b-9bf6-044c03ccdd91",
       "https://github.com/user-attachments/assets/fa7b279f-07aa-43a6-944c-43310b0bc405",
       "https://www.fedramp.gov/2026/",
       "https://www.fedramp.gov/2026/agencies/use/ongoing/poams/#:~:text=Cloud%20service%20providers%20should%20not%20be%20expected%20to%20convert%20their%20vulnerability%20lists%2C%20product%20security",
+      "https://www.fedramp.gov/2026/definitions/#debilitating-customer-effect",
+      "https://www.fedramp.gov/2026/definitions/#narrow-customer-effect",
+      "https://www.fedramp.gov/2026/definitions/#responsibly",
       "https://www.fedramp.gov/2026/providers/implement/rules/",
       "https://www.fedramp.gov/2026/providers/updating/deadlines/#important-deadlines",
       "https://www.fedramp.gov/2026/providers/updating/deadlines/20x/",
@@ -2929,8 +3136,12 @@
       "https://www.fedramp.gov/2026/reference/vulnerability-detection-and-response/#sampling",
       "https://www.fedramp.gov/2026/reference/vulnerability-detection-and-response/#vulnerability-detection",
       "https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/",
+      "https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#estimate-potential-agency-impact",
       "https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#group-vulnerabilities",
       "https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#reporting",
+      "https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/?h=VER-EVA-ELX#evaluate-exploitability",
+      "https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/?h=VER-EVA-ELX#evaluation-factors",
+      "https://www.fedramp.gov/2026/rules/#definitions",
       "https://www.fedramp.gov/2026/rules/#force-of-the-rule",
       "https://www.fedramp.gov/2026/rules/#its-not-a-trap",
       "https://www.fedramp.gov/2026/timeline/",
@@ -2959,6 +3170,6 @@
       "vulnerability_mgmt"
     ]
   },
-  "content_hash": "7d209909010bdf18aa5271f260dce667a78f692990ce18f23918b3d5fceeeb10",
-  "synced_at": "2026-10-27T13:18:43.318043+00:00"
+  "content_hash": "bfb0debdedadcadfb460fc45a9f16de8e46583d5c01dc7baec77dbfdabdb3313",
+  "synced_at": "2026-10-29T14:26:41.628056+00:00"
 }
