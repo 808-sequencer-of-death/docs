@@ -15,7 +15,7 @@
   "author": "pete-gov",
   "author_is_official": true,
   "created_at": "2026-06-24T21:49:44Z",
-  "updated_at": "2026-10-28T20:56:52Z",
+  "updated_at": "2026-11-03T14:03:33Z",
   "last_edited_at": null,
   "closed": false,
   "closed_at": null,
@@ -24,7 +24,7 @@
   "answer_chosen_at": null,
   "upvotes": 1,
   "body": "## This thread is for any and all Q&A or general discussion related to FedRAMP Rev5 in general that does not need to have its own thread.\r\n\r\nFedRAMP released the [Consolidated Rules for 2026](https://www.fedramp.gov/2026/) on June 24, 2026 with a considerable set of changes for FedRAMP Rev5 that will apply to all cloud service providers.\r\n\r\nThese changes include:\r\n\r\n- Mandatory adoption of the Vulnerability Detection and Response and Vulnerability Evaluation and Reporting rules by December 6, 2026 in response to CISA BOD 26-04\r\n- Changes to assessments for Rev5 to align more like assessments for 20x - focusing on verification and validation instead of just control implementation.\r\n- Replacement of most FedRAMP templates with a new Certification Package Overview and Security Decision Record\r\n- Removal of many FedRAMP-assigned control parameters and a lot of older FedRAMP control guidance\r\n- Mandatory adoption of many other Balance Improvement Releases through 2027\r\n- A requirement to address all FedRAMP Rules within the Security Decision Record, instead of only addressing controls\r\n\r\nSome of these changes take effect for all cloud service providers on certain dates no matter what, others take effect at the next annual assessment. In general, these are sweeping changes that will require all cloud service providers to begin planning now to continue to meet FedRAMP Rev5 requirements.\r\n\r\nHistorical materials are available at [https://fedramp.gov/legacy](https://fedramp.gov/legacy).\r\n\r\n---\r\n\r\nYou may see some of the following folks from FedRAMP responding in this thread:\r\n\r\n- `pete-gov` - Pete, FedRAMP Director\r\n- `nicole-gov` - Nicole, Security Director\r\n- `dan-fedramp` - Dan, Lead Cloud Security Engineer\r\n- `paulagosta` - Paul, Lead Cloud Security Engineer (Bastion)\r\n- `emu-gov` - Emu, Lead Cloud Security Engineer (Vanguard)\r\n- `rhoesing` - Ryan, Chief of Staff & Policy Branch Chief",
-  "comment_count": 50,
+  "comment_count": 52,
   "comments": [
     {
       "id": "DC_kwDOOxfoic4BChJy",
@@ -2579,6 +2579,51 @@
       ],
       "replies_total": 2,
       "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BJ3vM",
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19364812",
+      "author": "badgerinspace",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-11-03T02:30:18Z",
+      "updated_at": "2026-11-03T02:30:18Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Under CR26's IEC and VDR/VER reporting requirements, how should a CSP handle a vulnerability that falls within its authorization boundary but is subject to an active coordinated disclosure embargo with the affected vendor, particularly where the vulnerability meets the threshold for a FedRAMP Reportable Incident, requiring prompt notification to FedRAMP and affected agencies?\r\n\r\nDoes CR26 provide any mechanism to defer or redact CVE-specific details in government-facing reports while an embargo is in effect, and if not, what is the recommended approach to reconciling these conflicting obligations without breaking the embargo or falling out of compliance? Additionally, is there an existing FedRAMP or CISA coordination process that CSPs can leverage in these situations?",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BJ5sQ",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19372816",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-11-03T11:29:20Z",
+          "updated_at": "2026-11-03T11:29:20Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Timely question. :)\r\n\r\n> Under CR26's IEC and VDR/VER reporting requirements, how should a CSP handle a vulnerability that falls within its authorization boundary but is subject to an active coordinated disclosure embargo with the affected vendor, particularly where the vulnerability meets the threshold for a FedRAMP Reportable Incident, requiring prompt notification to FedRAMP and affected agencies?\r\n\r\nThe FedRAMP rules on this all lean heavily into the idea of **[responsible](https://www.fedramp.gov/2026/definitions/#responsibly)** disclosure. There are often times where disclosing the details of a vulnerability would be irresponsible and potentially cause much more damage; we do not want anyone to ever do so because they think FedRAMP required it. \r\n\r\nIn this case, breaking an embargo would be irresponsible so the question becomes what can you supply responsibly? It might be possible to declare an incident and report only customer actions that might be taken (\"Due to a potential thingie, please stop using feature y\"), some other form like that, or it might even be appropriate to simply not discuss it at all in rare situations as long as you have documented this internally and can provide the information once you can responsibly do so (assuming it's one of those \"the agency can't do anything and the risk isn't real yet so they can't make any decisions related to it so they don't need to know yet\" situations).\r\n\r\n> Does CR26 provide any mechanism to defer or redact CVE-specific details in government-facing reports while an embargo is in effect, and if not, what is the recommended approach to reconciling these conflicting obligations without breaking the embargo or falling out of compliance? \r\n\r\n[VER-RPT-NID (Responsible Disclosure)](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#responsible-disclosure) is the rule that provides the flexibility and the tension for vulnerabilities.\r\n\r\nFor incidents, the reporting rules all include \"responsibly notify.\" There are definitely circumstances, such as an ongoing incident where the attacker's behavior is being monitored, where it might be irresponsible to notify the government. \r\n\r\n**Please note:** These are FedRAMP's rules. Certain agencies may feel differently, and may have other notification or vulnerability reporting requirements baked into the contract.\r\n\r\n> Additionally, is there an existing FedRAMP or CISA coordination process that CSPs can leverage in these situations?\r\n\r\nCISA has teams of folks whose role is to coordinate incidents or vulns that might affect many folks in gov, and situations like this would definitely fall to them. I won't speak for them on the specific team/situation because it varies by the situation, but [they have information here](https://www.cisa.gov/topics/cyber-threats-and-response). \r\n\r\nFedRAMP generally gets involved in active scenarios when CISA asks us to help coordinate, then folks will know via their Security Inbox. :)"
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BJ6W6",
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19375546",
+      "author": "mjadali",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-11-03T14:03:33Z",
+      "updated_at": "2026-11-03T14:03:33Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Apologies in advance if some of these questions overlap with topics covered during previous community updates. However, I’d rather seek a bit more clarification than make assumptions, particularly since there are a few specific scenarios that I don’t believe have been fully addressed. \r\n\r\nPer the September A&A Community Update, the PMO suggested that assessors only need to IV&V what a CSP says they are doing to meet a control…and if a CSP disregards particular aspects of controls, then the assessor does not have to perform IV&V on those particular control requirements (https://www.youtube.com/watch?v=eU--WLLxkbE&t=2134s). \r\n\r\nThis approach meets rule IVV-IAS-VIM for verification (e.g., ensuring that the implemented measures match what’s documented by the CSP).  However, I am unclear if this approach fully meets rule IVV-IAS-VEF for validating effectiveness (e.g., ensuring that the implemented measures produce “the intended outcome for meeting FedRAMP practices”).  In the context of a rev5 assessment, it seems that the “intended outcome” has to include the elements of the control baseline.  If instead assessors limit the assessment to just what the CSP says they care about, then it’s not clear how the assessor can perform independent validation as it is defined in the rules.\r\n\r\nTo provide some context for the questions below, I want to use NIST 800-53, AC-2 (Account Management) control as an example. The Rev5 control has 14 Determine If (assessment) objectives. For simplicity, let’s focus on 4 of them:\r\n\r\ni.\tDetermine if accounts are created, enabled, modified, disabled, and removed in accordance with [organization-defined policy, procedures, prerequisites, and criteria]\r\nii.\tDetermine if account managers are notified within [organization-defined time period] when accounts are no longer required\r\niii.\tDetermine if access to the system is authorized based on a valid access authorization\r\niv.\tDetermine if accounts are reviewed for compliance with account management requirements [organization-defined frequency]\r\n\r\nUsing the above 4 objectives as examples, I'd appreciate clarification on the following scenarios:\r\n\r\nQuestion 1: If a CSP’s “Implementation” and “Verification and Validation” statements speak to objectives (i), (ii), and (iii) only, should the assessor flag a gap for the CSP not speaking to objective (iv)?\r\n\r\nQuestion 2: For the above scenario under Question 1, is the assessor still expected to independently assess objective (iv), even though the CSP did not include it in its own implementation description and verification/validation activities? Or does the assessor just note the CSP has not implemented the objective or done V&V?  Or is it the case that the assessor doesn’t even have to mention it because it wasn’t in the CSP’s implementation and V&V for AC-2 to begin with?\r\n\r\nQuestion 3: Suppose a CSP’s validation of objective (i) is insufficient or flawed…for example, the CSP only validates (and intends to validate) that a sample of terminated user accounts is currently disabled but does not determine whether those accounts were disabled within the required timeframe following their actual termination date (as defined by the CSP in their ODP).  Is the assessor's IV&V responsibility limited to only confirming that the CSP performed its stated validation activities, or is the assessor expected to identify deficiencies in the CSP’s validation approach and perform additional testing, as necessary, to determine whether the applicable control requirements are fully satisfied?\r\n\r\nQuestion 4: [Ties a bit to question 3 but want to ask it more directly] Rules IVV-CSO-SEI and IVV-CSO-SEE imply that CSPs are to gather evidence to perform their own V&V and then pass that same evidence along to the assessor for the IV&V.  Is the assessor expected to perform IV&V using only the evidence collected and evaluated by the CSP, or is the assessor expected to request additional evidence if CSP has not effectively gathered sufficient documentation?",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
     }
   ],
   "answer_url": null,
@@ -3028,6 +3073,11 @@
       "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19250459",
       "author": "pete-gov",
       "created_at": "2026-10-28T18:25:56Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19372816",
+      "author": "pete-gov",
+      "created_at": "2026-11-03T11:29:20Z"
     }
   ],
   "entities": {
@@ -3054,6 +3104,7 @@
       "IVV-IAS",
       "IVV-IAS-OSA",
       "IVV-IAS-SUM",
+      "IVV-IAS-VEF",
       "IVV-IAS-VIM",
       "IVV-IAS-VIP",
       "KSI-CNA",
@@ -3093,6 +3144,7 @@
       "RFC-0031"
     ],
     "nist_controls": [
+      "AC-2",
       "CA-1",
       "CA-5",
       "CA-7",
@@ -3115,6 +3167,7 @@
       "https://github.com/user-attachments/assets/b6526c34-cc3b-40ae-90e0-62ff512d9829",
       "https://github.com/user-attachments/assets/f3248534-df1c-4f2b-9bf6-044c03ccdd91",
       "https://github.com/user-attachments/assets/fa7b279f-07aa-43a6-944c-43310b0bc405",
+      "https://www.cisa.gov/topics/cyber-threats-and-response",
       "https://www.fedramp.gov/2026/",
       "https://www.fedramp.gov/2026/agencies/use/ongoing/poams/#:~:text=Cloud%20service%20providers%20should%20not%20be%20expected%20to%20convert%20their%20vulnerability%20lists%2C%20product%20security",
       "https://www.fedramp.gov/2026/definitions/#debilitating-customer-effect",
@@ -3139,6 +3192,7 @@
       "https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#estimate-potential-agency-impact",
       "https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#group-vulnerabilities",
       "https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#reporting",
+      "https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#responsible-disclosure",
       "https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/?h=VER-EVA-ELX#evaluate-exploitability",
       "https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/?h=VER-EVA-ELX#evaluation-factors",
       "https://www.fedramp.gov/2026/rules/#definitions",
@@ -3150,7 +3204,8 @@
       "https://www.fedramp.gov/event/FR-day-fall-26/",
       "https://www.fedramp.gov/legacy/assets/LEGACY_FedRAMP-Initial-Certification-Package-Checklist.xlsx",
       "https://www.fedramp.gov/notices/0016/",
-      "https://www.google.com/url?q=https://github.com/FedRAMP/community/discussions/146&source=chat&ust=1791028483675000&usg=AOvVaw2A_lKdilbcCGeAxGfzhOJ_"
+      "https://www.google.com/url?q=https://github.com/FedRAMP/community/discussions/146&source=chat&ust=1791028483675000&usg=AOvVaw2A_lKdilbcCGeAxGfzhOJ_",
+      "https://www.youtube.com/watch?v=eU--WLLxkbE&t=2134s"
     ],
     "topics": [
       "20x",
@@ -3170,6 +3225,6 @@
       "vulnerability_mgmt"
     ]
   },
-  "content_hash": "bfb0debdedadcadfb460fc45a9f16de8e46583d5c01dc7baec77dbfdabdb3313",
-  "synced_at": "2026-10-29T14:26:41.628056+00:00"
+  "content_hash": "c8cfba1d00957dcb7a6ab53e2bb0d6347256d35db1d386727f61ef9a70129ab3",
+  "synced_at": "2026-11-03T15:15:58.336960+00:00"
 }
