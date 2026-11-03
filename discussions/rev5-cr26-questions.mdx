@@ -5,7 +5,7 @@ sidebarTitle: "Rev5 CR26 Q&A (#146)"
 ---
 
 <Info>
-  **Thread:** [#146 Rev5 questions and discussion on the Consolidated Rules for 2026 (or Legacy)](https://github.com/FedRAMP/community/discussions/146), opened by `pete-gov` on 2026-06-24 and still open. This digest covers staff posts through 2026-10-28. **Last reviewed:** 2026-10-29 against upstream release `2026.10.14.01`. Staff answers are paraphrased. Follow each link for the exact wording. Staff statements don't change the published rules. Where they conflict, the [official rules](https://www.fedramp.gov/2026/) govern.
+  **Thread:** [#146 Rev5 questions and discussion on the Consolidated Rules for 2026 (or Legacy)](https://github.com/FedRAMP/community/discussions/146), opened by `pete-gov` on 2026-06-24 and still open. This digest covers staff posts through 2026-11-03. **Last reviewed:** 2026-11-03 against upstream release `2026.11.02.01`. Staff answers are paraphrased. Follow each link for the exact wording. Staff statements don't change the published rules. Where they conflict, the [official rules](https://www.fedramp.gov/2026/) govern.
 </Info>
 
 ## Bottom line
@@ -192,6 +192,10 @@ Rules page: [Vulnerability detection and response](/rules/vulnerability-detectio
 Rules page: [Incident evaluation and communication](/rules/incident-evaluation-and-communication).
 
 <Note>
+  **pete-gov, 2026-11-03** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-19372816)): Asked how to handle a vulnerability under a coordinated disclosure embargo, staff said the rules lean on [responsible](https://www.fedramp.gov/2026/definitions/#responsibly) disclosure, and nobody should disclose details because they think FedRAMP requires it. Breaking an embargo would be irresponsible, so ask what you can supply responsibly. Examples were declaring an incident and reporting only customer actions, or, in rare cases, not discussing it yet if you document it internally and can share it later. [`VER-RPT-NID`](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#responsible-disclosure) provides the flexibility and the tension for vulnerabilities, and the incident rules say "responsibly notify." Staff warned that agencies may have their own contract requirements. CISA coordinates incidents and vulnerabilities that affect many agencies, and FedRAMP joins when CISA asks, with contact through your Security Inbox. The rules don't define an embargo-specific deferral mechanism.
+</Note>
+
+<Note>
   **pete-gov, 2026-10-21** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-19108564)): Confirmed the three routes for incident reports: email `fedramp_security@fedramp.gov`, follow each agency's own procedure, and post to the trust center or USDA Connect for all necessary parties. Many agencies write notification expectations into the procurement agreement, usually as an email address.
 </Note>
 
@@ -336,7 +340,9 @@ Rules page: [Certification data sharing](/rules/certification-data-sharing).
 
 ## Open questions
 
-These were still unanswered in the thread as of 2026-10-14:
+These were still unanswered in the thread as of 2026-11-03:
+
+- How `IVV-IAS-VEF` (validating effectiveness) applies when an assessor tests only what the provider says it does, and whether the assessor must test control objectives the provider's statements omit or flag a gap, whether the assessor must identify flaws in the provider's validation approach, and whether the assessor may request evidence beyond what the provider gathered under `IVV-CSO-SEI` and `IVV-CSO-SEE` ([question](https://github.com/FedRAMP/community/discussions/146#discussioncomment-19375546), 2026-11-03). No staff answer yet.
 
 - Whether the rule text for `VDR-TFR-PSD` should change so it doesn't say "representative samples" when sampling is optional ([community follow-up](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18022026)). The current rule text is unchanged.
 - Whether the Rev5 control guidance should note that `VDR-TFR-NMV` applies to documentation controls ([community follow-up](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18438203)).

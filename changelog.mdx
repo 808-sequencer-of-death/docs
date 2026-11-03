@@ -6,6 +6,19 @@ sidebarTitle: "What changed"
 
 This page tracks two things: changes FedRAMP makes to the Consolidated Rules for 2026, and changes to this site. Each upstream entry summarizes FedRAMP's own [changelog](https://www.fedramp.gov/2026/changelog/) and links the official rules and our summaries. The official changelog governs if anything here differs. Each entry starts with its date. For an upstream release, that's the date FedRAMP published it.
 
+<Update label="2026-11-03" description="Upstream 2026.11.02.01">
+  **Date:** 2026-11-03
+
+  - **Rules:** FedRAMP published release `2026.11.02.01` on 2026-11-02 and said it will move to a monthly release cadence, typically in the first week of each month. See the official [changelog](https://www.fedramp.gov/2026/changelog/). Changes that matter to you:
+    - [`FRC-CLA-MFR`](https://www.fedramp.gov/2026/reference/fedramp-certification/#mandatory-fedramp-rules-for-class-a) now also makes `SDR-CSX-KSI` mandatory for Class A. [`FRC-CLA-RFR`](https://www.fedramp.gov/2026/reference/fedramp-certification/#recommended-fedramp-rules-for-class-a) no longer lists `CPO-CSF-CPM`.
+    - [`FRC-CCL-UCC`](https://www.fedramp.gov/2026/reference/fedramp-certification/#upgrading-certification-class): upgrading is obtaining a new FedRAMP Certification, so the obtain deadlines in each ruleset apply. FedRAMP may make case-by-case exceptions. `FRC-CCL-DCC` got a typo fix in its note only.
+    - [`FRD-MAS`](https://www.fedramp.gov/2026/definitions/#minimum-assessment-scope): new definition of Minimum Assessment Scope.
+    - `IEC-CSO-IIR`, `IEC-CSO-OIR` and `IEC-CSO-FIR`: the update to all necessary parties is marked optional in notification metadata. FedRAMP notes the `updated` array wasn't updated.
+    - [`MKT-CSO-PML`](https://www.fedramp.gov/2026/reference/marketplace-listing/#provider-marketplace-listing-requests): corrected form name. [`KSI-SCR-MIT`](https://www.fedramp.gov/2026/reference/key-security-indicators/#mitigating-supply-chain-risk): wording reordered with no material impact.
+    - Pages updated: [FedRAMP certification](/rules/fedramp-certification), [Minimum assessment scope](/rules/minimum-assessment-scope), [Incident evaluation and communication](/rules/incident-evaluation-and-communication), [Marketplace listing](/rules/marketplace-listing), [Key security indicators](/rules/key-security-indicators).
+  - **Discussions:** [#146](https://github.com/FedRAMP/community/discussions/146) has a new staff position from `pete-gov` on 2026-11-03 about vulnerabilities under a coordinated disclosure embargo ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-19372816)) and a new unanswered question about `IVV-IAS-VEF`. See [Rev5 CR26 questions](/discussions/rev5-cr26-questions). In the RFC threads ([#179](https://github.com/FedRAMP/community/discussions/179), [#180](https://github.com/FedRAMP/community/discussions/180), [#181](https://github.com/FedRAMP/community/discussions/181)), `pete-gov` explained that proposed `CMU-CSO-TSC` covers replacing CMVP-validated modules with non-validated ones, not patching ([comment](https://github.com/FedRAMP/community/discussions/181#discussioncomment-19359887)). Other new comments are community context. See [RFC history](/discussions/rfc-history).
+</Update>
+
 <Update label="2026-11-02" description="Upstream 2026.10.14.01">
   **Date:** 2026-11-02
 

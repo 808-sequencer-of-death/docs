@@ -5,7 +5,7 @@ sidebarTitle: "RFC history"
 ---
 
 <Info>
-  **Source:** RFC threads in [FedRAMP community discussions](https://github.com/FedRAMP/community/discussions), meaning threads flagged as RFCs or filed under an RFC category. **Last reviewed:** 2026-10-29 against upstream release `2026.10.14.01`.
+  **Source:** RFC threads in [FedRAMP community discussions](https://github.com/FedRAMP/community/discussions), meaning threads flagged as RFCs or filed under an RFC category. **Last reviewed:** 2026-11-03 against upstream release `2026.11.02.01`.
 </Info>
 
 ## What RFCs are
@@ -70,11 +70,13 @@ FedRAMP must seek public comment before it publishes guidance that affects stake
 | RFC-0035, RFC-0036 | General discussion on RFC-0035 (FIPS) and RFC-0036 (Phase 4 pilot) | Q&A (open) | 2026-10-15 | [#181](https://github.com/FedRAMP/community/discussions/181) | — |
 
 <Note>
-  **RFC-0035 is open.** It proposes changes to the current `CMU` rules, including changing `CMU-CSO-UVM` for Class D from MUST to SHOULD. Until FedRAMP publishes a change upstream, the current [`CMU-CSO-UVM`](https://www.fedramp.gov/2026/reference/cryptographic-module-use/#using-validated-cryptographic-modules) text governs, and Class D is MUST. As of 2026-10-25, the thread has four community comments and no FedRAMP staff comments. Community comments are context, not guidance.
+  **RFC-0035 is open.** It proposes changes to the current `CMU` rules, including changing `CMU-CSO-UVM` for Class D from MUST to SHOULD. Until FedRAMP publishes a change upstream, the current [`CMU-CSO-UVM`](https://www.fedramp.gov/2026/reference/cryptographic-module-use/#using-validated-cryptographic-modules) text governs, and Class D is MUST. As of 2026-11-03, the thread has eight comments. The one new staff post, from `pete-gov` on 2026-11-02, only reminds readers that FedRAMP doesn't join discussion in RFC comment threads and points to #181. It isn't a position. Community comments are context, not guidance.
+
+  **pete-gov, 2026-11-02** ([comment](https://github.com/FedRAMP/community/discussions/181#discussioncomment-19359887) in #181): The proposed `CMU-CSO-TSC` rule is intended to cover replacing a CMVP-validated module with one that isn't. Staff said "CMVP-validated modules" was defined earlier to include upstream versions of the same module, so patching to a newer upstream version doesn't trigger it, and replacing a module with a never-validated one does. This explains a proposal, not a published rule.
 </Note>
 
 <Note>
-  **RFC-0036 is open.** It proposes new definitions, changes to six rulesets and 10 new Key Security Indicators to test in the 20x Phase 4 cloud-hosted Class D pilot. It adds rules such as `FRC-CLD-PCD`, `FRC-CLD-CCH` and `FRC-FRA-FOD`. None of this is in the published rules. In [#181](https://github.com/FedRAMP/community/discussions/181), `pete-gov` said it applies to 20x only and wouldn't apply to Rev5 ([comment](https://github.com/FedRAMP/community/discussions/181#discussioncomment-19081418)). FedRAMP doesn't answer questions in the RFC threads themselves.
+  **RFC-0036 is open.** It proposes new definitions, changes to six rulesets and 10 new Key Security Indicators to test in the 20x Phase 4 cloud-hosted Class D pilot. It adds rules such as `FRC-CLD-PCD`, `FRC-CLD-CCH` and `FRC-FRA-FOD`. None of this is in the published rules. In [#181](https://github.com/FedRAMP/community/discussions/181), `pete-gov` said it applies to 20x only and wouldn't apply to Rev5 ([comment](https://github.com/FedRAMP/community/discussions/181#discussioncomment-19081418)). FedRAMP doesn't answer questions in the RFC threads themselves. On 2026-11-02, `pete-gov` repeated this in [#180](https://github.com/FedRAMP/community/discussions/180#discussioncomment-19360862) and pointed to #181 for discussion.
 </Note>
 
 <Note>
