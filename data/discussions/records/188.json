@@ -1,0 +1,76 @@
+{
+  "schema_version": 3,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-188",
+  "node_id": "D_kwDOOxfoic4Aqy9L",
+  "number": 188,
+  "title": "Submitting an FRC-CSO-PKG (FedRAMP Certification Package Overview) Rev5",
+  "url": "https://github.com/FedRAMP/community/discussions/188",
+  "category": "Rev5 Discussion",
+  "category_slug": "rev5-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "williamolson1-web",
+  "author_is_official": false,
+  "created_at": "2026-11-03T20:57:33Z",
+  "updated_at": "2026-11-04T13:19:05Z",
+  "last_edited_at": null,
+  "closed": false,
+  "closed_at": null,
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "Good afternoon, \r\n\r\nI am attempting to submit an FRC-CSP-PKG Rev5 but, I'm receive an error message stating, \"JSON Schema URL (CR26: FRC-CSO-PKG): is invalid\". I validated the JSON format and the validator states, \"Valid: Your document conforms to the FedRAMP Certification Package Overview (FRC-CSO-PKG) schema.\" Could I please get help with this?\r\n\r\nThank you",
+  "comment_count": 1,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4BJ_07",
+      "url": "https://github.com/FedRAMP/community/discussions/188#discussioncomment-19397947",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2026-11-04T13:19:05Z",
+      "updated_at": "2026-11-04T13:19:05Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "> I am attempting to submit an FRC-CSP-PKG Rev5 but, I'm receive an error message stating, \"JSON Schema URL (CR26: FRC-CSO-PKG): is invalid\". \r\n\r\nMost likely this is because of either a missing [Cross-Origin Resource Sharing or Content-Type header](https://www.fedramp.gov/2026/reference/fedramp-certification/#fedramp-json-schemas) on the JSON being served from your web server. Our app that processes these submission requests and imports this data needs standard webapp headers to process this data. We recommend working with a web app engineer to get this set up right.\r\n\r\nIf you google \"CORS Tester\" or similar you can find plenty of online tools to help debug CORS and web server headers.\r\n\r\nIf you're still having problems after testing that, go ahead and ship an email to info@fedramp.gov with the specific URL so we can help debug it for you, but most likely it's the headers.",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "pete-gov",
+    "williamolson1-web"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/188#discussioncomment-19397947",
+      "author": "pete-gov",
+      "created_at": "2026-11-04T13:19:05Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [
+      "FRC-CSO-PKG",
+      "FRC-CSP-PKG"
+    ],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://www.fedramp.gov/2026/reference/fedramp-certification/#fedramp-json-schemas"
+    ],
+    "topics": [
+      "machine_readable",
+      "rev5"
+    ]
+  },
+  "content_hash": "069794b4a1fe527b8c712936da40a0ab6a52f77daf44cc9ce846a4635d990a9f",
+  "synced_at": "2026-11-04T15:29:58.950201+00:00"
+}

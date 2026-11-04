@@ -15,7 +15,7 @@
   "author": "pete-gov",
   "author_is_official": true,
   "created_at": "2026-06-24T21:49:44Z",
-  "updated_at": "2026-11-03T14:03:33Z",
+  "updated_at": "2026-11-04T02:17:10Z",
   "last_edited_at": null,
   "closed": false,
   "closed_at": null,
@@ -24,7 +24,7 @@
   "answer_chosen_at": null,
   "upvotes": 1,
   "body": "## This thread is for any and all Q&A or general discussion related to FedRAMP Rev5 in general that does not need to have its own thread.\r\n\r\nFedRAMP released the [Consolidated Rules for 2026](https://www.fedramp.gov/2026/) on June 24, 2026 with a considerable set of changes for FedRAMP Rev5 that will apply to all cloud service providers.\r\n\r\nThese changes include:\r\n\r\n- Mandatory adoption of the Vulnerability Detection and Response and Vulnerability Evaluation and Reporting rules by December 6, 2026 in response to CISA BOD 26-04\r\n- Changes to assessments for Rev5 to align more like assessments for 20x - focusing on verification and validation instead of just control implementation.\r\n- Replacement of most FedRAMP templates with a new Certification Package Overview and Security Decision Record\r\n- Removal of many FedRAMP-assigned control parameters and a lot of older FedRAMP control guidance\r\n- Mandatory adoption of many other Balance Improvement Releases through 2027\r\n- A requirement to address all FedRAMP Rules within the Security Decision Record, instead of only addressing controls\r\n\r\nSome of these changes take effect for all cloud service providers on certain dates no matter what, others take effect at the next annual assessment. In general, these are sweeping changes that will require all cloud service providers to begin planning now to continue to meet FedRAMP Rev5 requirements.\r\n\r\nHistorical materials are available at [https://fedramp.gov/legacy](https://fedramp.gov/legacy).\r\n\r\n---\r\n\r\nYou may see some of the following folks from FedRAMP responding in this thread:\r\n\r\n- `pete-gov` - Pete, FedRAMP Director\r\n- `nicole-gov` - Nicole, Security Director\r\n- `dan-fedramp` - Dan, Lead Cloud Security Engineer\r\n- `paulagosta` - Paul, Lead Cloud Security Engineer (Bastion)\r\n- `emu-gov` - Emu, Lead Cloud Security Engineer (Vanguard)\r\n- `rhoesing` - Ryan, Chief of Staff & Policy Branch Chief",
-  "comment_count": 52,
+  "comment_count": 53,
   "comments": [
     {
       "id": "DC_kwDOOxfoic4BChJy",
@@ -2052,9 +2052,21 @@
           "upvotes": 0,
           "minimized": false,
           "body": "> On VER-EVA-AIA, is it fair to say that the user interaction metric from CVSS 3.x/4 could be used to say that a (CVE-type) vulnerability is not automatable? \r\n\r\nI don't think it's ever fair to just assume that relationship - but this could be used as evidence. If you know that the vulnerability requires a specific user action on a specific terminal but have walled off that terminal for the moment then it's probably not automatable, right? On the other hand, if the user interaction needed is for anyone in the company to open an email attachment and you can repeatedly automate sending that into people's inboxes past anti-spam then even with the user interaction limit it's still effectively automatable because _someone_ is gonna open that email.\r\n\r\nBut yes, in general, high user interactivity requirements are likely to reduce automatability."
+        },
+        {
+          "id": "DC_kwDOOxfoic4BJ9BU",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19386452",
+          "author": "vennemp",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-11-04T00:24:49Z",
+          "updated_at": "2026-11-04T00:24:49Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Is anyone actually doing anything with automatability?\n\nThe rules tell us to assume vulnerabilities are automatable. We could decide otherwise case by case, but however we get there, no rule says how a \"not automatable\" finding changes the remediation timeline. Timelines are driven by PAIN, reachability, and exploitability. Someone could argue automatability ties into exploitability, but nothing in the rules makes that connection.\n\nSo in practice it has no effect on the final disposition, and I don't see much value in tracking it as a separate label. Is anyone treating it differently?\n\nSetting the label aside doesn't mean ignoring the underlying factors. The things you'd use to decide whether something is automatable, or to downgrade it, are really exploitability factors. I'd rather fold them straight into the exploitability evaluation than attach an \"automatable\" label that seems arbitrary and changes nothing.\n\nUser interaction is a good example. UI is already part of the CVSS Exploitability sub-vector. Along with AV, AC, and PR, it could shift the EPSS threshold for \"likely exploitable.\" The bar would be lower for network-reachable, low-complexity, no-privilege, no-interaction vulnerabilities, and higher when user interaction or privileges are required."
         }
       ],
-      "replies_total": 1,
+      "replies_total": 2,
       "replies_truncated": false
     },
     {
@@ -2621,8 +2633,98 @@
       "minimized": false,
       "body": "Apologies in advance if some of these questions overlap with topics covered during previous community updates. However, I’d rather seek a bit more clarification than make assumptions, particularly since there are a few specific scenarios that I don’t believe have been fully addressed. \r\n\r\nPer the September A&A Community Update, the PMO suggested that assessors only need to IV&V what a CSP says they are doing to meet a control…and if a CSP disregards particular aspects of controls, then the assessor does not have to perform IV&V on those particular control requirements (https://www.youtube.com/watch?v=eU--WLLxkbE&t=2134s). \r\n\r\nThis approach meets rule IVV-IAS-VIM for verification (e.g., ensuring that the implemented measures match what’s documented by the CSP).  However, I am unclear if this approach fully meets rule IVV-IAS-VEF for validating effectiveness (e.g., ensuring that the implemented measures produce “the intended outcome for meeting FedRAMP practices”).  In the context of a rev5 assessment, it seems that the “intended outcome” has to include the elements of the control baseline.  If instead assessors limit the assessment to just what the CSP says they care about, then it’s not clear how the assessor can perform independent validation as it is defined in the rules.\r\n\r\nTo provide some context for the questions below, I want to use NIST 800-53, AC-2 (Account Management) control as an example. The Rev5 control has 14 Determine If (assessment) objectives. For simplicity, let’s focus on 4 of them:\r\n\r\ni.\tDetermine if accounts are created, enabled, modified, disabled, and removed in accordance with [organization-defined policy, procedures, prerequisites, and criteria]\r\nii.\tDetermine if account managers are notified within [organization-defined time period] when accounts are no longer required\r\niii.\tDetermine if access to the system is authorized based on a valid access authorization\r\niv.\tDetermine if accounts are reviewed for compliance with account management requirements [organization-defined frequency]\r\n\r\nUsing the above 4 objectives as examples, I'd appreciate clarification on the following scenarios:\r\n\r\nQuestion 1: If a CSP’s “Implementation” and “Verification and Validation” statements speak to objectives (i), (ii), and (iii) only, should the assessor flag a gap for the CSP not speaking to objective (iv)?\r\n\r\nQuestion 2: For the above scenario under Question 1, is the assessor still expected to independently assess objective (iv), even though the CSP did not include it in its own implementation description and verification/validation activities? Or does the assessor just note the CSP has not implemented the objective or done V&V?  Or is it the case that the assessor doesn’t even have to mention it because it wasn’t in the CSP’s implementation and V&V for AC-2 to begin with?\r\n\r\nQuestion 3: Suppose a CSP’s validation of objective (i) is insufficient or flawed…for example, the CSP only validates (and intends to validate) that a sample of terminated user accounts is currently disabled but does not determine whether those accounts were disabled within the required timeframe following their actual termination date (as defined by the CSP in their ODP).  Is the assessor's IV&V responsibility limited to only confirming that the CSP performed its stated validation activities, or is the assessor expected to identify deficiencies in the CSP’s validation approach and perform additional testing, as necessary, to determine whether the applicable control requirements are fully satisfied?\r\n\r\nQuestion 4: [Ties a bit to question 3 but want to ask it more directly] Rules IVV-CSO-SEI and IVV-CSO-SEE imply that CSPs are to gather evidence to perform their own V&V and then pass that same evidence along to the assessor for the IV&V.  Is the assessor expected to perform IV&V using only the evidence collected and evaluated by the CSP, or is the assessor expected to request additional evidence if CSP has not effectively gathered sufficient documentation?",
       "is_answer": false,
-      "replies": [],
-      "replies_total": 0,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BJ66X",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19377815",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-11-03T16:01:02Z",
+          "updated_at": "2026-11-03T16:01:02Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> I’d rather seek a bit more clarification than make assumptions, particularly since there are a few specific scenarios that I don’t believe have been fully addressed.\r\n\r\nNo worries - thank you for providing a detailed example as well! I'll address the questions directly but I also always remind folks that the wording of the rules are the most important bit. Comments in community updates and forums like this are intended to help interpret the rules but sometimes very similar situations might play out very differently based on the wording of the rules.\r\n \r\n> Per the September A&A Community Update, the PMO suggested that assessors only need to IV&V what a CSP says they are doing to meet a control…and if a CSP disregards particular aspects of controls, then the assessor does not have to perform IV&V on those particular control requirements (https://www.youtube.com/watch?v=eU--WLLxkbE&t=2134s).\r\n\r\nThat wasn't exactly what was intended to be conveyed, my apologies for the confusion - the FedRAMP Practices always need to be _addressed_. IV&V should always verify and validate the way they are addressed, but not necessarily what the explicit requirement says. The nuance of what that IV&V looks like will vary by what the CSP says and does but the intent is that IV&V is done on what they say and do.\r\n\r\nIf a control says \"Use garlic to keep out vampires\" and the CSP says \"our entire business model is based around vampires being inside our house so we do not hang garlic\" then you would not be expected to perform IV&V on the effectiveness of their garlic-hanging process... but you would confirm that they follow what they say and don't hang garlic. Or if they said \"We don't use garlic because we have a priest inside at all times per control HOLY-01\" then you might just confirm they don't use garlic and reference your IV&V of the effectiveness of the priest in HOLY-01.\r\n\r\n> Question 1: If a CSP’s “Implementation” and “Verification and Validation” statements speak to objectives (i), (ii), and (iii) only, should the assessor flag a gap for the CSP not speaking to objective (iv)?\r\n\r\nYes. This would be a gap per [SDR-CSF-CTF (Rev5 Controls)](https://www.fedramp.gov/2026/reference/security-decision-record/#rev5-controls) because they did not _address_ the entire control. You would flag (iv) as not being addressed, and indicate the potential risk.\r\n\r\nOn the other hand if they addressed (iv) by saying \"We don't do this because accounts are ephemeral and created per-action so that there is never an account to review\" then you would do IV&V on that and would **not** give them a gap for \"failing to implement (iv)\" even though technically they have failed to implement (iv).\r\n \r\n> Question 2: For the above scenario under Question 1, is the assessor still expected to independently assess objective (iv), even though the CSP did not include it in its own implementation description and verification/validation activities? Or does the assessor just note the CSP has not implemented the objective or done V&V? Or is it the case that the assessor doesn’t even have to mention it because it wasn’t in the CSP’s implementation and V&V for AC-2 to begin with?\r\n\r\nIf it's a straight gap, ideally you work with the CSP to fix the gap. If they refuse to fix the gap, then just note it and include it in the [IVV-IAS-OSA Overall Summary of Assessment](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#overall-summary-of-assessment) report as a failure or area of dispute.\r\n\r\nAgain though, straight gap is different from addressing it in a different way (your example is a straight gap).\r\n\r\n> Question 3: Suppose a CSP’s validation of objective (i) is insufficient or flawed…for example, the CSP only validates (and intends to validate) that a sample of terminated user accounts is currently disabled but does not determine whether those accounts were disabled within the required timeframe following their actual termination date (as defined by the CSP in their ODP). Is the assessor's IV&V responsibility limited to only confirming that the CSP performed its stated validation activities, or is the assessor expected to identify deficiencies in the CSP’s validation approach and perform additional testing, as necessary, to determine whether the applicable control requirements are fully satisfied?\r\n\r\nThat's why it's verification and validation - the first is verifying that they did what they said they did, the second is validating that it has the intended outcome. In the example above, it sounds like you would probably agree that they are doing what they say they did, but on validation would flag them for missing an intended outcome. \r\n\r\nGoing back to the \"use garlic to keep out vampires\" example, if they say \"I put garlic over all my doors to keep out vampires\" you would verify whether or not they do this and if it works, but almost certainly flag that putting garlic over _only_ the doors means that vampires are just going through the windows instead so they are not being kept out (validation).\r\n\r\n> Question 4: [Ties a bit to question 3 but want to ask it more directly] Rules IVV-CSO-SEI and IVV-CSO-SEE imply that CSPs are to gather evidence to perform their own V&V and then pass that same evidence along to the assessor for the IV&V. Is the assessor expected to perform IV&V using only the evidence collected and evaluated by the CSP, or is the assessor expected to request additional evidence if CSP has not effectively gathered sufficient documentation?\r\n\r\nThe assessor is IV&Ving the provider's V&V process - so if you think the CSP is missing critical documentation necessary for them to complete their own V&V consistently then it would be a gap you would work with them on, for sure. But this can get a little weird, which is why we're not too specific - I worry sometimes about an assessor saying \"I want to see X in this exact way because that's how I've seen it before\" and this shouldn't open the door to that. The assessor would need to explain the gap from their perspective and allow the CSP to address it or not, and if the assessor still disagrees when the assessment is ending then it'd be written up with the overall assessment summary flagging it.\r\n\r\nI'll add an example Question 5 you didn't ask:\r\n\r\n> Question 5: The cloud service provider just says \"N/A\" on all of these controls and explains it by saying that the company is a 5 people with very little turnover and they just handle this on a case by case basis because it's literally just 5 accounts in the entire system to manage (and they just have 1 service account).\r\n\r\nThat's a situation closer to what I thought I was speaking to in that community update - you'd confirm they just have 5 people and 1 service account and probably be like \"yeah confirmed they have 5 people and don't do this stuff and we can't really find any problems with it.\" Or maybe ding them on (iii) still or something.\r\n\r\nIn the _old way_, you'd give them a bunch of findings and force them to implement all of those things and they'd build a whole big fake machine up to satisfy that control but the practice is intended to make sure accounts are managed securely and they don't need to do all of that stuff with 5 people to manage accounts securely.\r\n\r\n---\r\n\r\nHopefully all of this helps. The shift is to enable the assessor to focus on the security outcomes desired by the control rather than the \"letter of the control.\" Quoting from the SP 800-53A Assessing Security and Privacy Controls in Information Systems and Organizations:\r\n\r\n\"During the assessment process, assessors obtain the evidence needed to allow the appropriate organizational officials to make objective determinations about the effectiveness of the security and privacy controls and the overall security and privacy state of the system. \"\r\n\r\nYou're assessing _effectiveness_ of the control implementation, not \"are the controls met.\""
+        },
+        {
+          "id": "DC_kwDOOxfoic4BJ74s",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19381804",
+          "author": "khanssen",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-11-03T19:22:04Z",
+          "updated_at": "2026-11-03T19:29:10Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thanks, this is helpful. To make sure we apply it consistently, here are two example Class C scenarios we're seeing. An answer in terms of the specific rules would help.\r\n\r\n**Scenario A - KSI-IAM-APM**\r\n\r\nThe CSP documents phishing-resistant MFA (FIDO2) for all human users. We've verified both methods against the IdP directly and they're accurate. The output shows 3% non compliance, which the CSP intends to fix before sharing their trust center with an agency.  The automated mechanisms correctly report the non compliance. The CSP is tracking this as a vulnerability with a remediation date 45 days out.\r\n\r\n**Scenario B - KSI-INR-RIR**\r\n\r\nThe CSP's SDR states incident response procedures are reviewed semiannually. Two automated methods both work correctly and report the KSI as failing: the last review was 9 months ago. Persistent validation data exists for about 5 weeks; not six months.\r\n\r\n**Questions**\r\n\r\n1. In the per-practice summary required by IVV-IAS-SUM, which is the correct result for each scenario: (a) practice not met, (b) practice met with a failed condition observed or (c) a statement limited to the validation mechanisms being accurate?\r\n2. Do these go in the IVV-IAS-OSA overall summary as failures? Are they validation issues or verification issues?\r\n3. Should the assessor hold the assessment open until remediation, or complete it and leave the certification decision to FedRAMP? (Given the 3-month freshness requirement in FRC-APP-MLF, holding is costly.)\r\n4. Does the answer change if the failure is being handled within required vulnerability timeframes (Scenario A) versus overdue (Scenario B)?\r\n5. For Scenario B: is confirming that FRC-CSX-MOT's 6 months of history exists part of the assessor's IV&V, or is that checked by FedRAMP at submission? Interpreted literally, this means that all CSPs would need to wait until they had 6 months' worth of KSI data for criteria that were only finalized in June.\r\n"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BJ9Zq",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19388010",
+          "author": "mjadali",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-11-04T02:17:10Z",
+          "updated_at": "2026-11-04T02:17:10Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thanks @pete-gov\r\nLet me spend some time sinking my teeth into what you wrote.\r\nAnd your question 5 example makes sense. There has to be some sensibility and reasonability in assessing the implementation of a control. "
+        }
+      ],
+      "replies_total": 3,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BJ7EZ",
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19378457",
+      "author": "patnichols79",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-11-03T16:32:53Z",
+      "updated_at": "2026-11-03T16:32:53Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Good morning.  I've been looking everywhere, but I cannot seem to find the answer.  If a CSP is wanting to go for a 20x certification, but already has a Rev5 ATO, for the next AA, can they do a 20x to get certified or do they need to still do a Rev5 while trying to obtain a 20x?  What is the process for transitioning from Rev5 to 20x?  Sorry if this has been asked and answered however I am not able to locate this process anywhere.  Thank you. ",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BJ7uF",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19381125",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-11-03T18:43:08Z",
+          "updated_at": "2026-11-03T18:43:08Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Cloud service offerings with a FedRAMP Rev5 Certification from the Agency Certification path are allowed to separately obtain a FedRAMP 20x Certification via the Program Certification path. We haven't encountered someone who wanted to literally cut over from Rev5 to 20x in one go yet and were expecting most providers to run both with some overlap to begin with since a CR26 20x implementation mostly builds on top of a CR26 Rev5 in effect. Ultimately it's up to how they want to deal with their customers though.\r\n\r\nIf the cloud service provider has no agency customers I could definitely see them just dropping the Rev5 or pausing it to switch to 20x though. Overall this is a situation where if you have a specific scenario in mind it might be worth reaching out to info@fedramp.gov to see if we can help you navigate (assuming the specifics aren't really sharable publicly)."
+        },
+        {
+          "id": "DC_kwDOOxfoic4BJ8YE",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19383812",
+          "author": "patnichols79",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-11-03T21:19:59Z",
+          "updated_at": "2026-11-03T21:19:59Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thank you for the response. However, I'm still a bit confused.\r\n\r\nKnowing that 20x is the end goal for FR, and that the messaging has consistently been that Rev. 5 packages will terminate in December 2028, I would expect there to be a defined transition strategy for CSPs currently operating under Rev. 5. Specifically, there must be some consideration for how these CSPs will move to 20x while still meeting the annual assessment requirements associated with Rev. 5.\r\n\r\nPlanning for and executing both efforts simultaneously is time-consuming, costly, and burdensome. Nevertheless, based on your response, it sounds like CSPs need to consider two potential paths:\r\n\r\n1. The agency requires an Annual Assessment (AA) while the CSP pursues a 20x authorization. In this scenario, the CSP would need to maintain a Rev. 5 package while also developing a separate 20x package.\r\n2. The agency agrees to forego the Annual Assessment while the CSP pursues 20x authorization. In this case, only the 20x package would be required, assuming the agency has the tools, expertise, and organizational buy-in necessary to evaluate a 20x authorization rather than relying solely on a Trust Center review.\r\n\r\nAm I understanding this correctly, or am I missing another transition path that FR has contemplated?"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BJ9AF",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19386373",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-11-04T00:18:47Z",
+          "updated_at": "2026-11-04T00:19:24Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> However, I'm still a bit confused.\r\n\r\nThat's fair, because I don't have a precise answer for you.\r\n\r\nWe're not planning to develop the **formal** transition path to move folks from Rev5 to 20x until after the Rev5 pipeline is closed and we have at least a few months of real-world data on FedRAMP 20x. Developing the transition path is currently slated for [FedRAMP 20x Phase 5 in FY27 Q3 to FY27 Q4](https://www.fedramp.gov/20x/#phased-implementation:~:text=FedRAMP%20will%20stop%20accepting%20new%20Rev5%20Certifications%20on%20June%2011%2C%202027%2C%20and%20provide%20a%20clear%20transition%20path%20and%20timeline%20for%20existing%20Rev5%20offerings%20by%20the%20end%20of%20Phase%205). \r\n\r\nAll of our current data shows that the vast majority of Rev5 Certified cloud service providers intend to avoid transitioning to 20x until as late as possible after multiple years of transition planning, which absolutely makes sense. Remember that FedRAMP 20x just opened officially two months ago and there is 1 single full FedRAMP 20x Class C. Established parties are best served to delay transition unless 20x is in their direct business interest.\r\n\r\n> ... the messaging has consistently been that Rev. 5 packages will terminate in December 2028\r\n\r\nTo be pedantic, FR has been saying that we negotiated for Rev5 to last until at least December 2028, and that it would be wise to prepare for it to go away sometime soon after that. Personally I would like to be entirely confident that 20x is meeting the government's needs with a couple years of data before halting Rev5 entirely, however decisions of this magnitude are made by high-level political appointees based on their priorities... not by mid-level career program managers. For the last two years FedRAMP has been under intense pressure to eliminate Rev5 as quickly as possible though, so I am being sure to clearly indicate that people should plan for Rev5 not to be included in CR28 in case the direction goes that way.\r\n\r\n> Am I understanding this correctly, or am I missing another transition path that FR has contemplated?\r\n\r\nThere will be many rounds of RFCs and public discussion before the details of the formal mandatory transition paths are settled on. I would expect we'll work towards a _lot more flexibility_ than is available today, such as the ability to forego a Rev5 annual but carry it in temporary legacy status if you obtain a 20x. We don't expect anyone to transition from Rev5 to 20x without support and time, unless we receive orders outside our control."
+        }
+      ],
+      "replies_total": 3,
       "replies_truncated": false
     }
   ],
@@ -2654,6 +2756,7 @@
     "instantn00dles",
     "jsantore-sf",
     "judgecspab-max",
+    "khanssen",
     "lesley-hess",
     "mattguy101",
     "mjadali",
@@ -2671,6 +2774,7 @@
     "sboyce-sheidt",
     "shon-d-dingman",
     "v-mhahnfirstinfotech",
+    "vennemp",
     "zeesharfcspab"
   ],
   "official_responses": [
@@ -3078,6 +3182,21 @@
       "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19372816",
       "author": "pete-gov",
       "created_at": "2026-11-03T11:29:20Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19377815",
+      "author": "pete-gov",
+      "created_at": "2026-11-03T16:01:02Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19381125",
+      "author": "pete-gov",
+      "created_at": "2026-11-03T18:43:08Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19386373",
+      "author": "pete-gov",
+      "created_at": "2026-11-04T00:18:47Z"
     }
   ],
   "entities": {
@@ -3088,6 +3207,8 @@
       "CDS-CSO-RIS",
       "CDS-TRC-USH",
       "CPO-CSO-OVR",
+      "FRC-APP-MLF",
+      "FRC-CSX-MOT",
       "FRD-ACV",
       "FRD-DET",
       "FRD-FPV",
@@ -3108,6 +3229,8 @@
       "IVV-IAS-VIM",
       "IVV-IAS-VIP",
       "KSI-CNA",
+      "KSI-IAM-APM",
+      "KSI-INR-RIR",
       "MAS-CSO-IIR",
       "SCN-ADP-NTF",
       "SCN-CSO-INF",
@@ -3180,9 +3303,11 @@
       "https://www.fedramp.gov/2026/providers/updating/deadlines/rev5/",
       "https://www.fedramp.gov/2026/providers/updating/deadlines/rev5/#rev5-deadlines",
       "https://www.fedramp.gov/2026/reference/addressing-fedramp-communication/",
+      "https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#overall-summary-of-assessment",
       "https://www.fedramp.gov/2026/reference/minimum-assessment-scope/",
       "https://www.fedramp.gov/2026/reference/rev5-control-guidance/",
       "https://www.fedramp.gov/2026/reference/rev5/d/significant-change-notification/",
+      "https://www.fedramp.gov/2026/reference/security-decision-record/#rev5-controls",
       "https://www.fedramp.gov/2026/reference/vulnerability-detection-and-response/",
       "https://www.fedramp.gov/2026/reference/vulnerability-detection-and-response/#non-machine-verification-and-validation",
       "https://www.fedramp.gov/2026/reference/vulnerability-detection-and-response/#persistent-sample-detection",
@@ -3199,6 +3324,7 @@
       "https://www.fedramp.gov/2026/rules/#force-of-the-rule",
       "https://www.fedramp.gov/2026/rules/#its-not-a-trap",
       "https://www.fedramp.gov/2026/timeline/",
+      "https://www.fedramp.gov/20x/#phased-implementation:~:text=FedRAMP%20will%20stop%20accepting%20new%20Rev5%20Certifications%20on%20June%2011%2C%202027%2C%20and%20provide%20a%20clear%20transition%20path%20and%20timeline%20for%20existing%20Rev5%20offerings%20by%20the%20end%20of%20Phase%205",
       "https://www.fedramp.gov/changelog/rss.xml",
       "https://www.fedramp.gov/event/20x-cwg-2026-08-12/",
       "https://www.fedramp.gov/event/FR-day-fall-26/",
@@ -3225,6 +3351,6 @@
       "vulnerability_mgmt"
     ]
   },
-  "content_hash": "c8cfba1d00957dcb7a6ab53e2bb0d6347256d35db1d386727f61ef9a70129ab3",
-  "synced_at": "2026-11-03T15:15:58.336960+00:00"
+  "content_hash": "c03f98afc0e17cd7f2b7241267b28fa5f85f491d53ec16e68e650ae903cb81b4",
+  "synced_at": "2026-11-04T15:29:58.950201+00:00"
 }
