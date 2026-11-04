@@ -5,14 +5,34 @@ sidebarTitle: "Notable staff answers"
 ---
 
 <Info>
-  **Threads covered:** community discussions updated on or after 2026-06-01 that have at least one FedRAMP staff post. This excludes [#146](/discussions/rev5-cr26-questions), [#147](/discussions/20x-cr26-questions) and RFC threads, which are covered in [RFC history](/discussions/rfc-history). Newest threads come first. **Last reviewed:** 2026-10-26 against upstream release `2026.10.14.01`. Staff answers are paraphrased. Follow each link for the exact wording. Staff statements don't change the published rules. Where they conflict, the [official rules](https://www.fedramp.gov/2026/) govern.
+  **Threads covered:** community discussions updated on or after 2026-06-01 that have at least one FedRAMP staff post. This excludes [#146](/discussions/rev5-cr26-questions), [#147](/discussions/20x-cr26-questions) and RFC threads, which are covered in [RFC history](/discussions/rfc-history). Newest threads come first. **Last reviewed:** 2026-11-04 against upstream release `2026.11.02.01`. Staff answers are paraphrased. Follow each link for the exact wording. Staff statements don't change the published rules. Where they conflict, the [official rules](https://www.fedramp.gov/2026/) govern.
 </Info>
 
 <Note>
   Several threads below were active before the Consolidated Rules for 2026 (CR26) were published on 2026-06-24, and were last updated around that date. Staff posts from before 2026-06-24 cite draft or pilot material. Check them against the current rules before relying on them.
 
-  Every thread below up to #173 was closed between 2026-06-24 and 2026-09-16. Unanswered follow-ups in those threads may never get a reply. Threads #174 through #178 were still open as of 2026-10-14. Threads #181 through #184 were open at the 2026-10-24 sync, and #186 was open at the 2026-10-26 sync.
+  Every thread below up to #173 was closed between 2026-06-24 and 2026-09-16. Unanswered follow-ups in those threads may never get a reply. Threads #174 through #178 were still open as of 2026-10-14. Threads #181 through #184 were open at the 2026-10-24 sync, #186 was open at the 2026-10-26 sync, and #188 was open at the 2026-11-04 sync.
 </Note>
+
+## #188 Submitting an FRC-CSO-PKG Rev5
+
+[Thread](https://github.com/FedRAMP/community/discussions/188) (Rev5 Discussion, opened 2026-11-03).
+
+**Bottom line:** If a Rev5 certification package submission fails with "JSON Schema URL ... is invalid" even though the JSON passes the schema validator, FedRAMP's first suspect is the web server headers on your hosted JSON.
+
+The question: a provider submitting an `FRC-CSO-PKG` package got the error "JSON Schema URL (CR26: FRC-CSO-PKG): is invalid" although the validator said the document conforms to the schema. The post wrote the rule ID as `FRC-CSP-PKG` once. The rule is `FRC-CSO-PKG`.
+
+<Note>
+  **pete-gov, 2026-11-04** ([comment](https://github.com/FedRAMP/community/discussions/188#discussioncomment-19397947)):
+  - The cause is "most likely" a missing Cross-Origin Resource Sharing (CORS) or `Content-Type` header on the JSON your web server serves. See [`FRC-CSO-JSN`](https://www.fedramp.gov/2026/reference/fedramp-certification/#fedramp-json-schemas).
+  - FedRAMP's submission app needs standard web app headers to process and import the data. Staff recommend working with a web app engineer.
+  - Staff suggest using an online CORS tester to debug.
+  - If the problem continues, email `info@fedramp.gov` with the specific URL.
+</Note>
+
+**Open questions:** none raised. The thread has no reply from the author yet.
+
+**What it means for you:** passing the schema validator isn't enough. Under [`FRC-CSO-JSN`](https://www.fedramp.gov/2026/reference/fedramp-certification/#fedramp-json-schemas), public JSON MUST work with web applications. See [FedRAMP certification](/rules/fedramp-certification). This is a staff position, not a published rule.
 
 ## #186 Organizational claims do not match FedRAMP Marketplace
 

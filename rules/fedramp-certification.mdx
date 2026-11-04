@@ -243,6 +243,14 @@ Staff answers explain how FedRAMP applies the rules. They don't change the publi
   **Reusing recent assessments.** CR26 rules allow reuse of assessment results if there are no major changes and a "fresh" assessment confirms this. Assessments for a new certification are meant to focus on the deltas. Existing LI-SaaS authorizations are grandfathered into Rev5 Class B for now, and an RFC on LI-SaaS migration is planned (pete-gov, 2026-10-08, [discussion #146](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18817999)). Related rules: `FRC-APP-FIA`, `FRC-APP-USA`.
 </Note>
 
+<Note>
+  **Submission errors on hosted JSON.** When a Rev5 package submission failed with a "JSON Schema URL ... is invalid" error even though the JSON passed the validator, `pete-gov` said on `2026-11-04` that the cause is most likely a missing CORS or `Content-Type` header on the web server. Staff pointed to `FRC-CSO-JSN`. [Discussion #188 comment](https://github.com/FedRAMP/community/discussions/188#discussioncomment-19397947)
+</Note>
+
+<Note>
+  **Rev5 and 20x together.** On `2026-11-03`, `pete-gov` said a service with a Rev5 Certification from the Agency Certification path can separately obtain a FedRAMP 20x Certification through the Program Certification path. Staff expect most providers to run both for a while. This matches `FRC-CSO-POP`, which doesn't prohibit that combination. On `2026-11-04`, `pete-gov` said FedRAMP hasn't defined a formal Rev5-to-20x transition path. It is slated for FedRAMP 20x Phase 5 (FY27 Q3 to FY27 Q4). [Discussion #146 comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-19381125), [follow-up](https://github.com/FedRAMP/community/discussions/146#discussioncomment-19386373)
+</Note>
+
 ## Related
 
 - [Marketplace listing](/rules/marketplace-listing): the listing you need before you apply (`FRC-APP-MLF`)
