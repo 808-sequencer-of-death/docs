@@ -152,6 +152,8 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           PR_URL: ${{ steps.open.outputs.pr_url }}
           BUILD_OUTCOME: ${{ steps.validate.outcome }}
+          SYNC_BASE: ${{ steps.range.outputs.base }}
+          SYNC_HEAD: ${{ steps.range.outputs.head }}
         run: |
           FAILED=()
 
@@ -170,6 +172,11 @@ jobs:
           # 4. The diff is small enough to trust without review.
           LINES=$(git diff --numstat HEAD~1 HEAD | awk '{ n += $1 + $2 } END { print n + 0 }')
           [ "$LINES" -le "$MAX_AUTO_MERGE_LINES" ] || FAILED+=("Diff has $LINES changed lines; the limit is $MAX_AUTO_MERGE_LINES.")
+
+          # 5. Nothing in this sync came from community discussions, only official FedRAMP sources.
+          #    Discussion posts are public, so anything drawn from them gets a human review.
+          DISCUSSIONS=$(git diff --name-only "$SYNC_BASE" "$SYNC_HEAD" -- data/discussions ':(exclude)data/discussions/state.sqlite')
+          [ -z "$DISCUSSIONS" ] || FAILED+=("This sync includes community discussion changes, which need a human review.")
 
           if [ ${#FAILED[@]} -eq 0 ]; then
             gh pr merge "$PR_URL" --squash --delete-branch
