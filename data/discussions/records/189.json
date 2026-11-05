@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-189",
+  "node_id": "D_kwDOOxfoic4Aq0vD",
+  "number": 189,
+  "title": "VDR/VER treatment of vulnerabilities in reusable EC2 AMIs",
+  "url": "https://github.com/FedRAMP/community/discussions/189",
+  "category": "Rev5 Discussion",
+  "category_slug": "rev5-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "Scott-Beauregard",
+  "author_is_official": false,
+  "created_at": "2026-11-04T18:57:24Z",
+  "updated_at": "2026-11-04T18:57:24Z",
+  "last_edited_at": null,
+  "closed": false,
+  "closed_at": null,
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "\r\nWe're looking for clarification on how the VDR and VER rules apply to vulnerabilities in internally maintained Amazon Machine Images (AMIs), particularly when those images are used to provision production resources for multiple federal agencies.\r\n\r\n**Example environment**\r\n\r\nConsider a Rev. 5 Class C SaaS offering that uses internally maintained Windows Server AMIs to provision customer-specific EC2 web servers.\r\n\r\nThe AMIs are periodically rebuilt using newer Windows Server base images, but some installed application components remain at older patch levels. Newly provisioned servers subsequently receive the missing security updates through WSUS, generally within a few days of deployment.\r\n\r\nThe AMIs themselves are immutable, do not execute application workloads, and do not store or process federal customer data while stored. However, they are actively used to provision production servers that do process agency data.\r\n\r\nUnder the traditional Rev. 5 vulnerability scanning guidance, these internally maintained AMIs were not explicitly identified as separate scanning targets, unlike operating systems, databases, web applications, and container images.\r\n\r\nWe're trying to understand how the broader VDR/VER requirements apply to these reusable deployment artifacts.\r\n\r\n**Questions**\r\n\r\n1. **Detection scope:** Should an internally maintained EC2 AMI be treated as a separate, non-drifting information resource under VDR-TFR-PCD, subject to periodic vulnerability detection independently of the EC2 instances launched from it? Or can detection performed against deployed instances satisfy the applicable requirements for the underlying image?\r\n\r\n2. **Vulnerability evaluation:** When a CVE affects software installed in the AMI, should the vulnerability be evaluated separately for the stored image, even though the vulnerable software is not executing? Or should the evaluation consider the actual exploitation conditions of the production instances created from the image?\r\n\r\n3. **Potential Agency Impact:** If a common AMI is used to deploy independently operated, tenant-isolated environments for multiple federal agencies, should its potential agency impact be evaluated against the cumulative consequences across those agencies? Or should potential agency impact be determined from the realistic exploitation scenarios affecting the individual deployed environments?\r\n\r\n4. **Grouping and remediation:** Under VER-EVA-GRV, can vulnerabilities in the source AMI and its deployed instances be managed as a consolidated vulnerability group, provided that differences in exploitability and agency impact are documented? If the deployed instances are patched but the source AMI remains vulnerable, does the continued existence and use of the image prevent the grouped vulnerability from being considered remediated?\r\n\r\nWe recognize that the VDR rules encourage secure deployment practices, detection after changes, and avoidance of known exploited vulnerabilities. Our question concerns the **unit of vulnerability evaluation and reporting** for reusable machine images, rather than whether maintaining updated images is a desirable security practice.\r\n\r\nClarification would help CSPs distinguish vulnerabilities in dormant deployment artifacts from vulnerabilities in active workloads, avoid duplicative reporting, and accurately represent the potential impact to federal agencies.",
+  "comment_count": 0,
+  "comments": [],
+  "answer_url": null,
+  "participants": [
+    "Scott-Beauregard"
+  ],
+  "official_responses": [],
+  "entities": {
+    "rule_ids": [
+      "VDR-TFR-PCD",
+      "VER-EVA-GRV"
+    ],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [],
+    "topics": [
+      "class_c",
+      "rev5",
+      "vulnerability_mgmt"
+    ]
+  },
+  "content_hash": "0e6098e0dac7001a5622404e79f98f061dc1e8aed92e38f6da7309a03e211707",
+  "synced_at": "2026-11-05T15:33:56.677151+00:00"
+}
