@@ -5,7 +5,7 @@ sidebarTitle: "Notable staff answers"
 ---
 
 <Info>
-  **Threads covered:** community discussions updated on or after 2026-06-01 that have at least one FedRAMP staff post. This excludes [#146](/discussions/rev5-cr26-questions), [#147](/discussions/20x-cr26-questions) and RFC threads, which are covered in [RFC history](/discussions/rfc-history). Newest threads come first. **Last reviewed:** 2026-11-04 against upstream release `2026.11.02.01`. Staff answers are paraphrased. Follow each link for the exact wording. Staff statements don't change the published rules. Where they conflict, the [official rules](https://www.fedramp.gov/2026/) govern.
+  **Threads covered:** community discussions updated on or after 2026-06-01 that have at least one FedRAMP staff post. This excludes [#146](/discussions/rev5-cr26-questions), [#147](/discussions/20x-cr26-questions) and RFC threads, which are covered in [RFC history](/discussions/rfc-history). Newest threads come first. **Last reviewed:** 2026-11-05 against upstream release `2026.11.02.01`. Staff answers are paraphrased. Follow each link for the exact wording. Staff statements don't change the published rules. Where they conflict, the [official rules](https://www.fedramp.gov/2026/) govern.
 </Info>
 
 <Note>
@@ -13,6 +13,28 @@ sidebarTitle: "Notable staff answers"
 
   Every thread below up to #173 was closed between 2026-06-24 and 2026-09-16. Unanswered follow-ups in those threads may never get a reply. Threads #174 through #178 were still open as of 2026-10-14. Threads #181 through #184 were open at the 2026-10-24 sync, #186 was open at the 2026-10-26 sync, and #188 was open at the 2026-11-04 sync.
 </Note>
+
+## #190 Complete list of Class A requirements
+
+[Thread](https://github.com/FedRAMP/community/discussions/190) (20x Discussion, opened 2026-11-04).
+
+**Bottom line:** There is no single flat page of Class A rules. FedRAMP points to the Related Rules page and says you can build a full list from the rules JSON.
+
+The question: a community member wanted one list of every MUST and SHOULD for Class A, including rules pulled in by references. They said the JSON tags some Class A rules as Class B, C and D only.
+
+<Note>
+  **pete-gov, 2026-11-05** ([comment](https://github.com/FedRAMP/community/discussions/190#discussioncomment-19421046)):
+  - The Ruleset Reference page [Related Rules](https://www.fedramp.gov/2026/reference/20x/a/related/) puts the rules referenced by `FRC-CLA-MFR` and similar rules on one page, labeled Mandatory, Recommended or Optional.
+  - You still click through to the Marketplace Listing, FedRAMP Certification and Certification Package Overview rulesets. Staff didn't put everything on one page because it would be huge.
+  - Class A has subsets that apply to it and specific rules that list other rules. Class B, C and D rely on subset applicability only. Staff pointed to [rules issue 43](https://github.com/FedRAMP/rules/issues/43).
+  - To build a full list programmatically, take the subsets that apply to Class A. Within them, take the rules that list related rules: `FRC-CLA-MFR`, `FRC-CLA-RFR` and `FRC-CLA-OFR`.
+</Note>
+
+A second `pete-gov` comment on 2026-11-05 ([comment](https://github.com/FedRAMP/community/discussions/190#discussioncomment-19421095)) said staff would transfer the thread to the FedRAMP community discussions. It isn't a rule position.
+
+**Open questions:** none. Staff asked whether Related Rules meets the author's needs, and the author hasn't replied.
+
+**What it means for you:** for Class A, start at [`FRC-CLA-MFR`](https://www.fedramp.gov/2026/reference/fedramp-certification/#mandatory-fedramp-rules-for-class-a), [`FRC-CLA-RFR`](https://www.fedramp.gov/2026/reference/fedramp-certification/#recommended-fedramp-rules-for-class-a) and `FRC-CLA-OFR`, and keep the force each rule lists. See [FedRAMP certification](/rules/fedramp-certification). This is a staff position, not a published rule.
 
 ## #188 Submitting an FRC-CSO-PKG Rev5
 
