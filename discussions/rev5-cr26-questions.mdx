@@ -5,7 +5,7 @@ sidebarTitle: "Rev5 CR26 Q&A (#146)"
 ---
 
 <Info>
-  **Thread:** [#146 Rev5 questions and discussion on the Consolidated Rules for 2026 (or Legacy)](https://github.com/FedRAMP/community/discussions/146), opened by `pete-gov` on 2026-06-24 and still open. This digest covers staff posts through 2026-11-04. **Last reviewed:** 2026-11-04 against upstream release `2026.11.02.01`. Staff answers are paraphrased. Follow each link for the exact wording. Staff statements don't change the published rules. Where they conflict, the [official rules](https://www.fedramp.gov/2026/) govern.
+  **Thread:** [#146 Rev5 questions and discussion on the Consolidated Rules for 2026 (or Legacy)](https://github.com/FedRAMP/community/discussions/146), opened by `pete-gov` on 2026-06-24 and still open. This digest covers staff posts through 2026-11-05. **Last reviewed:** 2026-11-06 against upstream release `2026.11.02.01`. Staff answers are paraphrased. Follow each link for the exact wording. Staff statements don't change the published rules. Where they conflict, the [official rules](https://www.fedramp.gov/2026/) govern.
 </Info>
 
 ## Bottom line
@@ -159,6 +159,10 @@ FedRAMP staff treat the Consolidated Rules for 2026 (CR26) as mandatory for ever
   **pete-gov, 2026-10-08** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18817999)): All Li-SaaS authorizations are grandfathered into Rev5 Class B for now. The plan is for them to move to 20x Class B or full Rev5 Class B, and an RFC is expected. Until then, continue with legacy Li-SaaS. Migration timelines will give at least a year of runway. CR26 lets new certifications reuse recent assessment results and focus on what changed.
 </Note>
 
+<Note>
+  **pete-gov, 2026-11-05** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-19422059)), on supporting agency adoption: FedRAMP's only requirement of providers is to address all the rules by the implementation deadlines. Agencies layer on their own contract terms, and FedRAMP has no insight into them. Staff said you don't have to track agency adoption of CR26. If an agency doesn't respond to your transition communications, FedRAMP wouldn't expect anything special for that agency and would expect you to switch it over, unless your contract with the agency says otherwise. Staff recommended, but don't require, temporary reports in both the legacy and CR26 styles where that helps the agency. Staff also suggested that telling your agency customers about the changes is the most effective way to spread the word, and pointed to the [Agencies section of CR26](https://www.fedramp.gov/2026/agencies/). A follow-up on 2026-11-05 ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-19424546)) said FedRAMP can't brief every agency team individually. The published rules don't address agency outreach. Your contracts govern.
+</Note>
+
 ## Vulnerability detection and response (VDR)
 
 Rules page: [Vulnerability detection and response](/rules/vulnerability-detection-and-response).
@@ -297,6 +301,20 @@ Rules pages: [Security decision record](/rules/security-decision-record), [Indep
 </Warning>
 
 <Note>
+  **pete-gov, 2026-11-05** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-19421460)), answering `khanssen`'s two Class C scenarios (`KSI-IAM-APM` at 3% non-compliance, `KSI-INR-RIR` with a semiannual review 9 months old). Staff said the answer depends on the details of the actual scenario, so treat these as illustrations:
+  - **Scenario A:** staff said the practice is met because the tooling and process exist and 3% is a reasonable margin while finalizing, but the non-compliance is also a vulnerability being worked. Flagging it as partially failing on verification would also be reasonable.
+  - **Scenario B:** staff said it fails on verification because the semiannual review didn't happen. If the provider recorded a vulnerability when the automated mechanism failed and is fixing it, the assessor doesn't need a new one. Five weeks of validation data isn't a problem at application, but check the provider can and intends to store 6 months.
+  - Both go in the [`IVV-IAS-OSA`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#overall-summary-of-assessment) overall summary, referencing the vulnerabilities.
+  - A provider may submit an application with assessment failures if they are tied to vulnerabilities with response plans, in place before submission. Staff compared this to submitting a Rev5 package with POA&M items. The assessor isn't deciding pass or fail. Staff said FedRAMP recently rejected an application with a very large number of assessor comments about things not implemented well.
+  - Whether the failure is inside or past the vulnerability timeframes shouldn't change what the assessor marks. Mark what you observe at that moment.
+  - `FRC-CSX-MOT` was removed in release `2026.10.08.01`. For [`SDR-CSX-KMT`](https://www.fedramp.gov/2026/reference/security-decision-record/#key-security-indicator-metrics), staff pointed to the rule's note that FedRAMP doesn't expect 6 months of metrics at submission, but does expect you to show you can collect and store them.
+</Note>
+
+<Warning>
+  Staff said they were unwell when writing the answer above and that anything contradicting the rules may be a mistake. The answer is an interpretation, not rule text. Rely on the wording of `IVV-IAS-SUM`, `IVV-IAS-OSA` and `SDR-CSX-KMT`.
+</Warning>
+
+<Note>
   **dan-fedramp, 2026-09-01** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18235313)): You may organize SDR responses however communicates best, including combining fields. Don't use [`SDR-CSO-FRR`](https://www.fedramp.gov/2026/reference/security-decision-record/#fedramp-rules) and [`SDR-CSF-CTF`](https://www.fedramp.gov/2026/reference/security-decision-record/#rev5-controls) to re-list every response. Your answers to those rules should describe the process that keeps the SDR compliant. For example, implementation could be your GRC tool generating the SDR, verification a completeness script, and validation that script's output.
 </Note>
 
@@ -340,6 +358,10 @@ Rules page: [Certification data sharing](/rules/certification-data-sharing).
   **pete-gov, 2026-10-21** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-19108724)): A third-party trust center vendor doesn't need a FedRAMP certification, at Class D or any class. The Minimum Assessment Scope doesn't require FedRAMP Certified third-party resources, but you must address their potential impact on federal customer data. If you manage package information responsibly, the trust center could sit outside the scope entirely.
 </Note>
 
+<Note>
+  **pete-gov, 2026-11-05** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-19421628)), on additional contacts in the certification package overview: FedRAMP hasn't designed how the Marketplace will show additional contacts or extra fields, and uptake so far is low, so it's on the back burner. Agencies are expected to pull the data into their GRC tools, which will display it their own way. For several security contacts, staff said FedRAMP would in theory use the first one as the FedRAMP Security Inbox, but they would double-check the code. Providers can ask FedRAMP to use a specific email address instead, which is useful if you don't want it published. Staff said the request form is broken and they have asked the team to look. See [Certification package overview](/rules/certification-package-overview).
+</Note>
+
 ## JSON schemas
 
 <Note>
@@ -352,17 +374,18 @@ Rules page: [Certification data sharing](/rules/certification-data-sharing).
 
 ## Other staff posts
 
+- On 2026-11-05, `pete-gov` answered a new thread, [#191](https://github.com/FedRAMP/community/discussions/191), on US-only locations for Rev5. See [Notable staff answers](/discussions/notable-staff-answers).
 - On 2026-11-04, `pete-gov` answered a new thread, [#188](https://github.com/FedRAMP/community/discussions/188), asked about a failed `FRC-CSO-PKG` submission. See [Notable staff answers](/discussions/notable-staff-answers).
 - **pete-gov, 2026-06-25** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-17438832), [fix](https://github.com/FedRAMP/community/discussions/146#discussioncomment-17439148)): A fedramp.gov bug briefly returned 404 errors on CR26 links. Staff fixed it the same day.
 - **paulagosta, 2026-08-25** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18150707)) and **2026-08-26** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18165762)): an event pointer and a hand-off to `dan-fedramp`. Neither is a rule position.
 
 ## Open questions
 
-These were still unanswered in the thread as of 2026-11-04:
+Questions answered since the last review:
 
-- For two Class C scenarios (`KSI-IAM-APM` at 3% non-compliance with remediation tracked 45 days out, and `KSI-INR-RIR` where a semiannual review is 9 months old and persistent validation data covers about 5 weeks), how the assessor should report the result under `IVV-IAS-SUM` and `IVV-IAS-OSA`, whether to hold the assessment open given the 3-month freshness requirement in `FRC-APP-MLF`, and whether the assessor or FedRAMP checks the 6 months of history in `FRC-CSX-MOT` ([question](https://github.com/FedRAMP/community/discussions/146#discussioncomment-19381804) from `khanssen`, 2026-11-03). No staff answer yet.
+The `khanssen` Class C scenarios question ([question](https://github.com/FedRAMP/community/discussions/146#discussioncomment-19381804), 2026-11-03) and the earlier `IVV-IAS-VEF` question from `mjadali` were answered by `pete-gov` on 2026-11-05 and 2026-11-03. See the [IV&V section](#security-decision-record-and-independent-verification-and-validation).
 
-The earlier `IVV-IAS-VEF` question from `mjadali` was answered by `pete-gov` on 2026-11-03. See the [IV&V section](#security-decision-record-and-independent-verification-and-validation).
+Still unanswered as of 2026-11-05:
 
 - Whether the rule text for `VDR-TFR-PSD` should change so it doesn't say "representative samples" when sampling is optional ([community follow-up](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18022026)). The current rule text is unchanged.
 - Whether the Rev5 control guidance should note that `VDR-TFR-NMV` applies to documentation controls ([community follow-up](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18438203)).
@@ -377,6 +400,7 @@ The earlier `IVV-IAS-VEF` question from `mjadali` was answered by `pete-gov` on 
 - Handle the VDR and VER transition through your significant change process (`SCN` or legacy SCR). Record where your new reports live.
 - Check your own dates against the [Rev5 deadlines](https://www.fedramp.gov/2026/providers/updating/deadlines/rev5/). For `FRC`, `IVV`, `MAS`, `CPO` and `SDR`, the grace period ends at the first independent assessment **started** after the listed date.
 - If you plan a Rev5 uplift or new Rev5 certification, it must reach FedRAMP before 2027-06-11.
+- Staff said a package may go to FedRAMP with assessment failures if each is tied to a vulnerability with a response plan. That is a staff position, not rule text.
 - For `SDR-CSO-FRR` and `SDR-CSF-CTF`, give both your method and its results, and follow the rule text rather than the schema.
 - "Full implementation" means addressing every applicable rule, including SHOULD rules, by implementing it or documenting your decision and reasoning. Submit the December 2026 activity report with that month's ConMon.
 - Expect mixed legacy and CR26 packages in 2027. Check each ruleset's own dates and add supplemental material for the rulesets you have adopted.

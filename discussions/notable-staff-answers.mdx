@@ -5,14 +5,61 @@ sidebarTitle: "Notable staff answers"
 ---
 
 <Info>
-  **Threads covered:** community discussions updated on or after 2026-06-01 that have at least one FedRAMP staff post. This excludes [#146](/discussions/rev5-cr26-questions), [#147](/discussions/20x-cr26-questions) and RFC threads, which are covered in [RFC history](/discussions/rfc-history). Newest threads come first. **Last reviewed:** 2026-11-04 against upstream release `2026.11.02.01`. Staff answers are paraphrased. Follow each link for the exact wording. Staff statements don't change the published rules. Where they conflict, the [official rules](https://www.fedramp.gov/2026/) govern.
+  **Threads covered:** community discussions updated on or after 2026-06-01 that have at least one FedRAMP staff post. This excludes [#146](/discussions/rev5-cr26-questions), [#147](/discussions/20x-cr26-questions) and RFC threads, which are covered in [RFC history](/discussions/rfc-history). Newest threads come first. **Last reviewed:** 2026-11-06 against upstream release `2026.11.02.01`. Staff answers are paraphrased. Follow each link for the exact wording. Staff statements don't change the published rules. Where they conflict, the [official rules](https://www.fedramp.gov/2026/) govern.
 </Info>
 
 <Note>
   Several threads below were active before the Consolidated Rules for 2026 (CR26) were published on 2026-06-24, and were last updated around that date. Staff posts from before 2026-06-24 cite draft or pilot material. Check them against the current rules before relying on them.
 
-  Every thread below up to #173 was closed between 2026-06-24 and 2026-09-16. Unanswered follow-ups in those threads may never get a reply. Threads #174 through #178 were still open as of 2026-10-14. Threads #181 through #184 were open at the 2026-10-24 sync, #186 was open at the 2026-10-26 sync, and #188 was open at the 2026-11-04 sync.
+  Every thread below up to #173 was closed between 2026-06-24 and 2026-09-16. Unanswered follow-ups in those threads may never get a reply. Threads #174 through #178 were still open as of 2026-10-14. Threads #181 through #184 were open at the 2026-10-24 sync, #186 was open at the 2026-10-26 sync, #188 was open at the 2026-11-04 sync, and #190 and #191 were open at the 2026-11-06 sync.
 </Note>
+
+## #191 Restricted to US locations
+
+[Thread](https://github.com/FedRAMP/community/discussions/191) (Rev5 Discussion, opened 2026-11-05).
+
+**Bottom line:** For Rev5, the US-location restriction is an Organization-Defined Parameter (ODP) in the NIST control `SA-09(05)`. Staff said it applies only to Class D. For other classes, you document your locations in that control.
+
+The question: does CR26 prohibit processing, transmitting or storing data in non-US locations, and what happens in a Rev5 Ready Conversion if the system has a non-US region in its boundary?
+
+<Note>
+  **pete-gov, 2026-11-05** ([comment](https://github.com/FedRAMP/community/discussions/191#discussioncomment-19427565)):
+  - The restriction is the ODP in [`SA-09(05)`](https://www.fedramp.gov/2026/reference/controls/system-and-services-acquisition/#sa-09-05), limited to Class D.
+  - Staff said the ODP didn't change in CR26 and has only ever applied to Class D (High) for agency authorizations.
+  - For the other classes, document the locations in that control as normal.
+</Note>
+
+**Open questions:** none raised. The Ready Conversion part of the question wasn't addressed separately. Staff's answer gives the class-based rule only.
+
+**What it means for you:** if you are Class D, expect the US-only restriction in `SA-09(05)`. For other classes, document your locations in the control. This is a staff reading of the control parameter. No rule ID in the sources covers it, and the rules don't address Ready Conversion handling of non-US regions.
+
+## #190 Complete list of Class A requirements
+
+[Thread](https://github.com/FedRAMP/community/discussions/190) (20x Discussion, opened 2026-11-04).
+
+**Bottom line:** FedRAMP doesn't publish a flat list of Class A rules. Staff said they will add Class A metadata to the rules data and update the human-readable pages. Until then, the thread leaves one question open: whether the rules referenced from `CPO-CSO-OVR` and `IEC-CSO-IIR` apply to Class A.
+
+The question: how can a provider list every MUST and SHOULD for Class A, including rules pulled in by references?
+
+<Note>
+  **pete-gov, 2026-11-05** ([comment](https://github.com/FedRAMP/community/discussions/190#discussioncomment-19421046)):
+  - The [Related Rules page](https://www.fedramp.gov/2026/reference/20x/a/related/) gathers the rules referenced by `FRC-CLA-MFR`, `FRC-CLA-RFR` and `FRC-CLA-OFR` and labels each as Mandatory, Recommended or Optional. You still click through to the Marketplace Listing, FedRAMP Certification and Certification Package Overview rulesets.
+  - Staff said a full Class A list can be generated from the JSON: take the subsets that apply to Class A, then within them the rules that list related rules (`FRC-CLA-MFR`, `FRC-CLA-RFR`, `FRC-CLA-OFR`). Staff gave an example LLM prompt for this. See [rules issue #43](https://github.com/FedRAMP/rules/issues/43) for background.
+</Note>
+
+<Note>
+  **pete-gov, 2026-11-05** ([comment](https://github.com/FedRAMP/community/discussions/190#discussioncomment-19427122)), after the author reported that two LLMs gave inconsistent lists and missed rules reached through references such as `FRC-CSO-PKG` and `CPO-CSO-OVR`:
+  - Staff said Class A was shoehorned into rules designed for subset-based applicability, and the thread clarified the problem.
+  - Staff plan to add Class A metadata to some rules, tagging the rules for the Security Decision Record with their force and marking others as informative. They then plan to publish a Class A version of the human-readable pages.
+  - Staff also plan a general review of Class A after 10 reviews and a possible tune-up of the process.
+  - These are plans, with no dates.
+</Note>
+
+**Open questions:** on 2026-11-05 the author asked ([comment](https://github.com/FedRAMP/community/discussions/190#discussioncomment-19429103)), with no staff answer yet:
+- Whether Class A providers must address the seven rules that `CPO-CSO-OVR` requires (`CPO-CSO-MTD`, `CDS-CSO-IRP`, `CDS-CSO-SVC`, `CMU-CSO-CMD`, `MAS-CSO-FLO`, `MAS-CSO-TPR`, `IVV-CSO-ICP`). `CPO-CSO-OVR` is under "Other Related Rules" and those seven sit in subsets tagged Class B, C and D.
+- Whether `IEC-CSO-EFI` and `IEC-CSO-DPR` apply to Class A, since the Class A version of `IEC-CSO-IIR` is SHOULD and refers to them "(if applicable)".
+
+**What it means for you:** the rules don't answer those two questions in the sources reviewed, so read the Class A rules in [FedRAMP certification](/rules/fedramp-certification) and the [official Class A pages](https://www.fedramp.gov/2026/reference/20x/a/related/) directly, and ask FedRAMP if unsure. `FRC-CLA-MFR` governs what is mandatory for Class A. Staff plans for Class A metadata are not published rules.
 
 ## #188 Submitting an FRC-CSO-PKG Rev5
 
