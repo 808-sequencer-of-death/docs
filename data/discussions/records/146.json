@@ -15,7 +15,7 @@
   "author": "pete-gov",
   "author_is_official": true,
   "created_at": "2026-06-24T21:49:44Z",
-  "updated_at": "2026-11-04T20:48:24Z",
+  "updated_at": "2026-11-05T18:36:42Z",
   "last_edited_at": null,
   "closed": false,
   "closed_at": null,
@@ -2681,9 +2681,33 @@
           "upvotes": 0,
           "minimized": false,
           "body": "Thanks @pete-gov\r\nLet me spend some time sinking my teeth into what you wrote.\r\nAnd your question 5 example makes sense. There has to be some sensibility and reasonability in assessing the implementation of a control. "
+        },
+        {
+          "id": "DC_kwDOOxfoic4BKFkU",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19421460",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-11-05T15:41:20Z",
+          "updated_at": "2026-11-05T15:41:20Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> Thanks, this is helpful. To make sure we apply it consistently, here are two example Class C scenarios we're seeing. An answer in terms of the specific rules would help.\r\n\r\nOoof, this is a lot. :) I want to be clear up front that there are always going to be nuances in these situations and that examples that get too concrete can cause problems, so please consider the caveat of \"this depends on the actual scenario in detail.\"\r\n\r\nFor example, Scenario A varies wildly if there's 3000 high level system administrators and 100 of them aren't using MFA vs if there's 30 developers and 1 of them isn't using MFA.\r\n\r\n> **Scenario A - KSI-IAM-APM**\r\n> \r\n> The CSP documents phishing-resistant MFA (FIDO2) for all human users. We've verified both methods against the IdP directly and they're accurate. The output shows 3% non compliance, which the CSP intends to fix before sharing their trust center with an agency. The automated mechanisms correctly report the non compliance. The CSP is tracking this as a vulnerability with a remediation date 45 days out.\r\n> \r\n> **Scenario B - KSI-INR-RIR**\r\n> \r\n> The CSP's SDR states incident response procedures are reviewed semiannually. Two automated methods both work correctly and report the KSI as failing: the last review was 9 months ago. Persistent validation data exists for about 5 weeks; not six months.\r\n> \r\n> **Questions**\r\n> \r\n>     1. In the per-practice summary required by IVV-IAS-SUM, which is the correct result for each scenario: (a) practice not met, (b) practice met with a failed condition observed or (c) a statement limited to the validation mechanisms being accurate?\r\n\r\nFor Scenario A, I'd say the practice is met because they have the tooling and process in place to ensure this happens in general and 3% is within a reasonable margin of error for finalizing an implementation like this, but they also have a vulnerability in the 3% non-compliance that they are working to respond to. It would be reasonable to also flag this as partially failing on verification though if you wanted to be precise.\r\n\r\nScenario B, fails on verification (they aren't doing the semiannual review) - but if they detected that as a vulnerability the moment the automated mechanism triggered a fail and are working to fix that vulnerability then they don't need to create a new one based on your assessment. The persistent validation data existing for 5 weeks isn't a problem on application, but you should check to ensure they have the ability and intent to store 6mo of data (see answer to 5 below for more detail). \r\n\r\n>     2. Do these go in the IVV-IAS-OSA overall summary as failures? Are they validation issues or verification issues?\r\n\r\nYes, referencing the vulnerabilities as appropriate. \r\n\r\n>     3. Should the assessor hold the assessment open until remediation, or complete it and leave the certification decision to FedRAMP? (Given the 3-month freshness requirement in FRC-APP-MLF, holding is costly.)\r\n\r\nIt's okay for the cloud service provider to submit an application to FedRAMP that has some failures in the assessment as long as they are tied to vulnerabilities with plans to address. It's similar to submitting in Rev5 with some gaps where we'd tell the cloud service provider to take a POA&M but in this case we'd expect that vulnerability and response plan in place before submission.\r\n\r\nRemember the IAS isn't deciding pass/fail, just providing supplemental information. That said, we did recently reject an application that had a LOT LOT of comments from the IAS setting things weren't implemented well and it was so prevalent that we told the CSP to try again. That was an example of a poor choice on the CSPs part to submit the package, a few vulns with response plans is fine but like half the rules? Nah. \r\n\r\n>     4. Does the answer change if the failure is being handled within required vulnerability timeframes (Scenario A) versus overdue (Scenario B)?\r\n\r\nIt shouldn't, just mark based on what you observe in the moment. \r\n\r\n>     5. For Scenario B: is confirming that FRC-CSX-MOT's 6 months of history exists part of the assessor's IV&V, or is that checked by FedRAMP at submission? Interpreted literally, this means that all CSPs would need to wait until they had 6 months' worth of KSI data for criteria that were only finalized in June.\r\n\r\n[FRC-CSX-MOT is gone! It was removed October 8.](https://www.fedramp.gov/2026/changelog/?h=FRC-CSX-MOT#2026100801-october-8-2026) For [SDR-CSX-KMT](https://www.fedramp.gov/2026/reference/security-decision-record/#key-security-indicator-metrics) there is a clarifying note that we do not expect 6 months of metrics on submission, but rather expect demonstration of the ability to collect and store 6 months of metrics. That can honestly be as simple as just double checking \"hey you're gonna store at least 6mo right?\" kinda thing.\r\n\r\nI am a little under the weather so apologies if I misunderstood any of your questions or missed something - if you believe anything I said contradicts the rules it may be the fever talking. ;)\r\n"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BKF4_",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19422783",
+          "author": "khanssen",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-11-05T16:58:39Z",
+          "updated_at": "2026-11-05T16:58:39Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "This is great, thanks, and hope you feel better!\r\n"
         }
       ],
-      "replies_total": 3,
+      "replies_total": 5,
       "replies_truncated": false
     },
     {
@@ -2751,8 +2775,21 @@
       "minimized": false,
       "body": "Question on FedRAMP's handling of the JSON from CDS-CSO-PUB.\r\n\r\nThe rule and schema require a Sales and a Security contact (matches Marketplace).\r\n\r\nBoth rule and schema:\r\n- allow additional contacts to be listed\r\n- support additional contact types (\"Primary\" is listed as an example)\r\n- support adding more data (e.g. a \"contactRole\" field to describe the function)\r\n- and support multiple contacts of a given type.\r\n\r\nHow will the Marketplace handle additional contacts and additional contact types?  For example: will it list all types as headings, with all contacts of that type under the heading?\r\n\r\nWill the Marketplace use the JSON's additional fields (phone, or custom fields we add)?  Or only continue to display name + email?\r\n\r\nOur current security contact is our Certifications team, which is also our FedRAMP Security Inbox.  If we add our PSIRT team as a second Security contact, how will the FSI be identified?  The schema doesn't support multiple types (e.g. Security + Primary) for a given contact to denote it as the FSI.  And without additional context (e.g. a \"contactRole\" field to describe the function) it won't be clear on Marketplace when to engage which \"security\" contact.\r\n\r\nThanks",
       "is_answer": false,
-      "replies": [],
-      "replies_total": 0,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BKFm8",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19421628",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-11-05T15:51:24Z",
+          "updated_at": "2026-11-05T15:51:24Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> How will the Marketplace handle additional contacts and additional contact types? For example: will it list all types as headings, with all contacts of that type under the heading?\r\n\r\nWe haven't yet worked out the design for adding all of this additional metadata, and are doing so piece by piece depending on priority and interest as we see what folks are putting into them (for example, we just added the Third-Party Resources tab based on CDS-CSO-PUB data, but it's empty for most cloud services because they haven't supplied it yet). So far there hasn't been considerable uptake on additional contacts so it's on the back burner, but we'll get to it!\r\n\r\nWe do expect agencies to eventually be grabbing this information too in their GRC tools, so it will display for them however their GRC tool handles it.\r\n \r\n> Will the Marketplace use the JSON's additional fields (phone, or custom fields we add)? Or only continue to display name + email?\r\n\r\nSame answer as above - depends on uptake but the intent long term is to have a responsive Marketplace that shows all the data a cloud service provider supplies in a meaningful way.\r\n\r\n> Our current security contact is our Certifications team, which is also our FedRAMP Security Inbox. If we add our PSIRT team as a second Security contact, how will the FSI be identified? \r\n\r\nWe will in theory use the first security contact but I will have someone double check the code that pulls these - we also allow cloud service providers to specifically designate an FSI email by requesting it. A number of providers did not want the FSI email public so we did not include it in the public Certification Package Overview. You can contact us directly to have us use a specific email address, especially if you don't want to publish it. \r\n\r\n(I noticed when writing this that the form to do so is broken and poked the team to look into that)"
+        }
+      ],
+      "replies_total": 1,
       "replies_truncated": false
     },
     {
@@ -2767,8 +2804,45 @@
       "minimized": false,
       "body": "We are planning the CR26 transition and would appreciate clarification on what FedRAMP expects from CSPs in supporting agency adoption. \r\n\r\nCould you clarify:\r\n\r\n- What specific agency adoption activities are CSPs required to perform, versus activities owned by the agencies or FedRAMP?\r\n- Beyond implementing the applicable CR26 requirements and providing access and notifications to the required reporting and evidence, are CSPs expected to educate or actively track each customer agency's adoption? If so, which activities are mandatory versus recommended?\r\n- If a customer agency does not respond to transition communications or has not adopted the new processes, what follow-up is required of the CSP? Must the CSP continue traditional POA&M/ConMon reporting alongside VDR/VER, and what determines when parallel reporting can end?\r\n\r\nWe want to support agencies appropriately while avoiding unnecessary duplicate reporting and open-ended follow-up. What level of outreach and agency education is expected from CSPs, and should unresolved agency adoption be referred to FedRAMP? In my recent discussions with multiple agencies, the contacts I spoke with were unfamiliar with CR26. What communications or guidance has FedRAMP provided to agencies, and what additional outreach and education will FedRAMP perform?",
       "is_answer": false,
-      "replies": [],
-      "replies_total": 0,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BKFtr",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19422059",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-11-05T16:18:39Z",
+          "updated_at": "2026-11-05T16:18:53Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> We are planning the CR26 transition and would appreciate clarification on what FedRAMP expects from CSPs in supporting agency adoption.\r\n\r\nThere isn't a simple globally applicable black-and-white set of expectations here, and I want to level set on that up front. It is going to vary from CSP to CSP and agency customer to agency customer. \r\n\r\nFedRAMP sets the rules for FedRAMP Certification. Agencies apply additional expectations on top of that. I have never heard of a contract with an agency that just said \"meet all the rules for FedRAMP\" without adding on additional specific requirements, and what those are vary from agency to agency. \r\n\r\nCSPs must understand their contract and what they committed to doing, and may need to ask for changes to that contract or provide different artifacts from agency to agency depending on what their individual contracts say. FedRAMP has no insight into these individual contracts.\r\n\r\n>  * What specific agency adoption activities are CSPs required to perform, versus activities owned by the agencies or FedRAMP?\r\n\r\nFrom FedRAMP's perspective, CSPs are required to address all of the rules in alignment with the implementation deadlines. That is the only requirement FedRAMP expects out of any CSP.\r\n\r\nFedRAMP does not require activities from agencies - FedRAMP establishes a process that agencies follow or not in accordance with the FedRAMP Authorization Act and OMB Memorandum M-24-15. OMB and Inspectors General enforces compliance with OMB memorandums, not GSA. For example, M-24-15 says they have to have procured GRC automation tools by now but most have not done so or are just in early stages - FedRAMP still needs to proceed with the expectation that agencies will follow that requirement though because we've been ordered to do so.\r\n\r\nThat said, it's always in the cloud service provider's interest to provide support to agencies when they have to do new stuff. For example, some cloud service providers have been spending extra time with their contacts at agencies walking them through new VDR/VER reports and explaining how the transition from old POA&Ms benefit the agency, and we've heard incredibly positive feedback about this from agencies.\r\n\r\nFedRAMP always recommends that cloud service providers consider how to improve the customer experience for their compliance customers, it's always in their best interest to do so. We don't require it, but it's probably a good idea to make both legacy-style reports available alongside CR26-style reports, for example, so that agencies can see the value and improvement over time.\r\n\r\n> * Beyond implementing the applicable CR26 requirements and providing access and notifications to the required reporting and evidence, are CSPs expected to educate or actively track each customer agency's adoption? If so, which activities are mandatory versus recommended?\r\n\r\nWe do not expect cloud service providers to track customer agency adoption. It would be interesting if some providers did so and shared this information with FedRAMP, but we see customer agency adoption of CR26 as inevitable due to the way government regulations work, it will just take some time for everyone to update their policies and switch over.\r\n\r\n> * If a customer agency does not respond to transition communications or has not adopted the new processes, what follow-up is required of the CSP? Must the CSP continue traditional POA&M/ConMon reporting alongside VDR/VER, and what determines when parallel reporting can end?\r\n\r\nAgencies that are not responsive to security communciations from the cloud services they use are effectively accepting the risk of the cloud service doing whatever. FedRAMP would not expect you to provide anything special to an agency that is not responding to such communications, and would instead expect you to just switch them over... _unless_ you have a contract obligation with them that says otherwise. Never violate your contracts with agencies.\r\n\r\n> We want to support agencies appropriately while avoiding unnecessary duplicate reporting and open-ended follow-up. What level of outreach and agency education is expected from CSPs, and should unresolved agency adoption be referred to FedRAMP? \r\n\r\nFedRAMP's general guidance is that the most effective method here is simply to meet FedRAMP requirements and tell agencies that you are doing so, providing temporary duplicative reporting if it is in your best interest to do so based on providing an optimal customer experience (especially since in many cases it should be trivial to automate one from the other).\r\n\r\nAgencies are slow to respond to regulatory changes and in general many of them will not respond until they start seeing CR26 stuff coming in. That said, again, always consult your lawyers about your contracts and take action appropriately.\r\n\r\n> In my recent discussions with multiple agencies, the contacts I spoke with were unfamiliar with CR26. What communications or guidance has FedRAMP provided to agencies, and what additional outreach and education will FedRAMP perform?\r\n\r\nIn your conversations with agency contacts, if they are unfamiliar with the changes to FedRAMP please refer them directly to FedRAMP and point them to the [Agencies section of CR26](https://www.fedramp.gov/2026/agencies/).\r\n\r\nFedRAMP provides a **massive** amount of agency communication, including a mailing list, monthly government-wide meetings, quarterly government-wide in-person events, agency pilot support, and public communications that go out to the entire world including agencies. Over a hundred agencies have representatives that participate in these activities, but there are still wide-scale gaps in knowledge in contractors, executives, and other folks because the federal government is an absolutely-freakin'-massive conglomerate of 500+ agencies with over a million people that all do things their own way.\r\n\r\nMost agency personnel are used to things not changing, and doing things the same way they did forever. It takes a long time for changes to trickle out. Cloud service providers communicating with agencies and telling them about these changes is honestly probably the most effective way for the word to get out that everyone needs to start doing things differently. FedRAMP has liaisons at many agencies but that's usually one person on a massive team with contractors/etc. that have no idea about any of this stuff.\r\n\r\nWe'll continue to do everything we can on our side to communicate this information out, and we anticipate OMB support on some updated formal policies, but at the end of the day it's just going to take CSP adoption and agencies responding to that for this to settle out. \r\n"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BKF45",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19422777",
+          "author": "nathan-gov",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-11-05T16:58:12Z",
+          "updated_at": "2026-11-05T16:58:12Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thanks, Pete. Your distinction between helping agencies through the transition and tracking each agency’s adoption answers my question.\r\n\r\nOne practical challenge for CSPs is preparing the people who work directly with agency customers to explain what’s changing. That takes time to brief those teams, answer their questions, and prepare plain-language guidance they can share. Our first CCM call to discuss the OCR could be a good opportunity to walk interested agencies through the new VDR/VER reports and show them where to find vulnerability information they’re used to seeing in the POA&M.\r\n\r\nI also appreciate the clarification that each agency’s contract determines whether we need to continue providing legacy reports alongside the new ones."
+        },
+        {
+          "id": "DC_kwDOOxfoic4BKGUi",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19424546",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-11-05T18:36:42Z",
+          "updated_at": "2026-11-05T18:36:42Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> One practical challenge for CSPs is preparing the people who work directly with agency customers to explain what’s changing. That takes time to brief those teams, answer their questions, and prepare plain-language guidance they can share. \r\n\r\nYeah, totally understood - we run into the same issues, but scaled up for the whole of government. The reality is that 500+ cloud services working with their specific agency customers is the most effective way to end up with every in government understanding these changes (even the hyperscalers have a lot of overlap at agencies, so no one CSP needs to take on more than a few agencies). FR's government-wide work only reaches those who have opted-in to receive it and are sending participants with the authority to share that information to others in their agencies, we don't meet with execs/etc. \r\n\r\nOne of the things we hear often is something like \"FedRAMP should meet with every agency team individually to train them on this\" - something like that is even a draft recommendation from the Federal Secure Cloud Advisory Committee. This sounds extremely logical until you look at the actual scale of it, which is an effectively impossible task: we have almost 300 different component authorizing officials that have used FedRAMP across a hundred departments and agencies, and hundreds who have not. Reaching all of them for direct engagement isn't realistic without a 50% budget increase for FR and a reasonably sized team of people whose full-time job is to do that, and it would take years to build out and employ that capability. We had hoped changing the Technical Advisory Group up a bit to involve detailees from agencies would help us jump start something like this but we're having issues with the support for that approach inside government."
+        }
+      ],
+      "replies_total": 3,
       "replies_truncated": false
     }
   ],
@@ -3234,6 +3308,11 @@
       "created_at": "2026-11-03T16:01:02Z"
     },
     {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19421460",
+      "author": "pete-gov",
+      "created_at": "2026-11-05T15:41:20Z"
+    },
+    {
       "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19381125",
       "author": "pete-gov",
       "created_at": "2026-11-03T18:43:08Z"
@@ -3242,6 +3321,21 @@
       "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19386373",
       "author": "pete-gov",
       "created_at": "2026-11-04T00:18:47Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19421628",
+      "author": "pete-gov",
+      "created_at": "2026-11-05T15:51:24Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19422059",
+      "author": "pete-gov",
+      "created_at": "2026-11-05T16:18:39Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19424546",
+      "author": "pete-gov",
+      "created_at": "2026-11-05T18:36:42Z"
     }
   ],
   "entities": {
@@ -3282,6 +3376,7 @@
       "SDR-CSF-CTF",
       "SDR-CSO-CRF",
       "SDR-CSO-FRR",
+      "SDR-CSX-KMT",
       "VDR-CSO-DET",
       "VDR-CSO-SIR",
       "VDR-RPT-VDT",
@@ -3337,7 +3432,9 @@
       "https://github.com/user-attachments/assets/fa7b279f-07aa-43a6-944c-43310b0bc405",
       "https://www.cisa.gov/topics/cyber-threats-and-response",
       "https://www.fedramp.gov/2026/",
+      "https://www.fedramp.gov/2026/agencies/",
       "https://www.fedramp.gov/2026/agencies/use/ongoing/poams/#:~:text=Cloud%20service%20providers%20should%20not%20be%20expected%20to%20convert%20their%20vulnerability%20lists%2C%20product%20security",
+      "https://www.fedramp.gov/2026/changelog/?h=FRC-CSX-MOT#2026100801-october-8-2026",
       "https://www.fedramp.gov/2026/definitions/#debilitating-customer-effect",
       "https://www.fedramp.gov/2026/definitions/#narrow-customer-effect",
       "https://www.fedramp.gov/2026/definitions/#responsibly",
@@ -3352,6 +3449,7 @@
       "https://www.fedramp.gov/2026/reference/minimum-assessment-scope/",
       "https://www.fedramp.gov/2026/reference/rev5-control-guidance/",
       "https://www.fedramp.gov/2026/reference/rev5/d/significant-change-notification/",
+      "https://www.fedramp.gov/2026/reference/security-decision-record/#key-security-indicator-metrics",
       "https://www.fedramp.gov/2026/reference/security-decision-record/#rev5-controls",
       "https://www.fedramp.gov/2026/reference/vulnerability-detection-and-response/",
       "https://www.fedramp.gov/2026/reference/vulnerability-detection-and-response/#non-machine-verification-and-validation",
@@ -3396,6 +3494,6 @@
       "vulnerability_mgmt"
     ]
   },
-  "content_hash": "f27d5ed3eb48409b3f9214e40071a6ccce6e735bb7d959e38c1c5edb5a9289a0",
-  "synced_at": "2026-11-05T15:33:56.677151+00:00"
+  "content_hash": "b4068417403aeb0981ebac715ab9f88c6d6de169f7a7cd305f5ada86a9cf5ceb",
+  "synced_at": "2026-11-06T15:09:07.560621+00:00"
 }

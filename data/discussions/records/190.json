@@ -15,7 +15,7 @@
   "author": "not-too-sweet",
   "author_is_official": false,
   "created_at": "2026-11-04T22:25:48Z",
-  "updated_at": "2026-11-05T15:22:23Z",
+  "updated_at": "2026-11-05T23:47:40Z",
   "last_edited_at": null,
   "closed": false,
   "closed_at": null,
@@ -38,8 +38,45 @@
       "minimized": false,
       "body": "> I wish there was one page with a flat list, no clicking through nested rules to find out what each one pulls in.\r\n\r\nThe Ruleset Reference page has all of the related rules (the ones referenced by FRC-CLA-MFR etc.) all in one page under [Related Rules](https://www.fedramp.gov/2026/reference/20x/a/related/), with a title edit indicating if the rule is Mandatory, Recommended, or Optional. I think that's 90% of what you're looking for?\r\n\r\nIt still requires you to click through to the Marketplace Listing, FedRAMP Certification, and Certification Package Overview rulesets so it's not ALL on one page, but the Related Rules was designed to address the \"I want to read through the text of the extra rules in one go\" itch.\r\n\r\nI didn't put them ALL on one page because that would be huge, but it's a relatively simple task to do so. I think the layout would need to work differently. Let me know if the Related Rules bit in the reference and the other options near it meet your needs or not!\r\n\r\n> The JSON. Some subset that hold mandatory Class A rules are tagged Class B, C, and D only. So I am not sure if its required for Class A.\r\n\r\nClass A is a bit weird because it has both subsets that apply specifically to it and specific rules that list other rules - unlike Class B/C/D which all just are based on subset applicability. There's a bit of discussion about this in [this discussion in the rules issues](https://github.com/FedRAMP/rules/issues/43).\r\n\r\nIn short, a full list of Class A rules can be easily generated programmatically by:\r\n\r\n1. Referencing the subsets that apply to Class A\r\n2. Within those subsets, referencing the rules that contain lists of related rules (FRC-CLA-MFR, FRC-CLA-RFR, and FRC-CLA-OFR)\r\n\r\nCreating a checklist in the preferred format of your choice is thus a trivial programmatic task using the rules JSON data. Any LLM/agent system that uses context and has a sufficient window to process the json can do this for you with ease, or write you a script/program to generate the list. Here's an example prompt you can use in a context that has the rules JSON loaded:\r\n\r\n\"List all rules related to Class A and their force, both because they are in a subset that applies to Class A or because they are mentioned in one of the Class A rules that lists related rules.\"\r\n\r\n",
       "is_answer": false,
-      "replies": [],
-      "replies_total": 0,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BKGn8",
+          "url": "https://github.com/FedRAMP/community/discussions/190#discussioncomment-19425788",
+          "author": "not-too-sweet",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-11-05T19:52:07Z",
+          "updated_at": "2026-11-05T19:52:07Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thank you, Pete, this is really helpful context. \r\n\r\nMy ultimate wish is if FedRAMP could publish a flat list of just rule IDs that Class A providers need to address, including rules pulled in by references.\r\n\r\nOn the Related Rules page, it's useful for reading the rule text, but we're after is shorter, a flat list of rule IDs for Class A providers, with the force for each (MUST / SHOULD / MAY). IDs only, no text. We'd look up each rule ourselves.\r\n\r\nOn generating it from the JSON, we did try with both Claude Opus and Gemini Pro and had both write a script and read from the JSON multiple times, and the results didn't match each other. Following an example prompt you provided shows the following challenges:\r\n\r\n1. It pulls the AGU rules\r\n2. It misses rules that a listed rule requires. FRC-CSO-PKG is a MUST for Class A and requires CPO-CSO-OVR and SDR-CSO-FRR. CPO-CSO-OVR in turn requires CPO-CSO-MTD, CDS-CSO-IRP, CDS-CSO-SVC, CMU-CSO-CMD, MAS-CSO-FLO, MAS-CSO-TPR, and IVV-CSO-ICP. None of these come back, because their subsets are tagged B, C, and D and they aren't named in MFR, RFR, or OFR. The Related Rules page does include CPO-CSO-OVR and SDR-CSO-FRR, but the seven rules under CPO-CSO-OVR appear only as links inside its text.\r\n\r\nI appreciate you taking this seriously. It means a lot that the FedRAMP team is engaged and responsive. Please bear with us, since we're still a bit deer-in-headlights on this side. I see that you and your team is working to make this easier for us. Thank you for the quick reply."
+        },
+        {
+          "id": "DC_kwDOOxfoic4BKG8y",
+          "url": "https://github.com/FedRAMP/community/discussions/190#discussioncomment-19427122",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-11-05T21:13:59Z",
+          "updated_at": "2026-11-05T21:13:59Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Ah, this is helpful. We've just focused on the primary rules that need to be in the SDR for Class A, and that's what I've primarily replicated with the LLM tools I have access too because it's more straightforward. I hadn't considered the confusion with rules like FRC-CSO-PKG or CPO-CSO-OVR, especially since those have other rules and a bunch of \"if applicable\" and all that stuff flying around. \r\n\r\nThe reality is that the we way shoehorned Class A into the rules isn't great - they were designed for applicability based on subset, not individual rules being pulled out. This conversation has clarified to me some of the confusion and reasons behind why it needs to be addressed. \r\n\r\nI'll give this some thought and change the approach - maybe to align with the other discussion about the JSON data, the right solution here is to add metadata to some of the rules specific to Class A tagging rules for the SDR with their force, then adding if others are informative. That should provide the necessary data directly, then I can update the official human-readable pages with a custom version for Class A.\r\n\r\nOutcome would be:\r\n\r\n- Special metadata for Class A allowing you to build a human-readable (or machine-readable) set of materials of your choice\r\n- Clarity on what needs to be in the SDR for Class A vs what rules are just informative\r\n- A better FedRAMP-provided human-readable page to help folks dig into this\r\n- Better support for AI assist to navigate this\r\n\r\nI'm also planning on a general review of Class A to-date now that we have completed 10 reviews with the team, and we might combine that with a small-scale tuneup of the whole process based on lessons learned."
+        },
+        {
+          "id": "DC_kwDOOxfoic4BKHbv",
+          "url": "https://github.com/FedRAMP/community/discussions/190#discussioncomment-19429103",
+          "author": "not-too-sweet",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-11-05T23:47:40Z",
+          "updated_at": "2026-11-06T04:03:34Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thank you, Pete, and the planned changes sound great.\r\n\r\nTwo more questions in the meantime. We're building our Class A package now and want to make sure we've scoped it correctly.\r\n\r\n1. Reading the rule text, FRC-CSO-PKG requires CPO-CSO-OVR, which in turn requires these seven rules:\r\n\r\nCPO-CSO-MTD\r\nCDS-CSO-IRP\r\nCDS-CSO-SVC\r\nCMU-CSO-CMD\r\nMAS-CSO-FLO\r\nMAS-CSO-TPR\r\nIVV-CSO-ICP\r\n\r\nSo our read is that Class A providers need to address all seven. What gives us pause is that CPO-CSO-OVR is listed under ('Other Related Rules') rather than ('Mandatory') on the Related Rules page, and the seven sit in subsets tagged Class B, C, and D. \r\n\r\nCan you confirm our read is correct? \r\n\r\n2. The Class A version of IEC-CSO-IIR is a SHOULD on the Recommended list. It asks for the incident's PAIN rating ('following the requirements in IEC-CSO-EFI (Estimate Federal Impact) (if applicable)'), and its reporting timeframes depend on that rating.\r\nIEC-CSO-EFI is a SHOULD. Its note says that if no rating is estimated, the incident must default to PAIN 5 under IEC-CSO-DPR (Default PAIN Rating), which is a MUST.\r\n\r\nNeither IEC-CSO-EFI nor IEC-CSO-DPR is on a Class A list, and both sit in a subset tagged Class B, C, and D. So we aren't sure:\r\n- Do IEC-CSO-EFI and IEC-CSO-DPR apply to Class A at all, or does \"(if applicable)\" mean they don't?\r\n- If they do apply, is IEC-CSO-DPR a MUST for Class A, even though we only reach it through IEC-CSO-IIR, which is a SHOULD for Class A?\r\n\r\nThanks again."
+        }
+      ],
+      "replies_total": 3,
       "replies_truncated": false
     },
     {
@@ -74,13 +111,31 @@
       "url": "https://github.com/FedRAMP/community/discussions/190#discussioncomment-19421095",
       "author": "pete-gov",
       "created_at": "2026-11-05T15:22:15Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/190#discussioncomment-19427122",
+      "author": "pete-gov",
+      "created_at": "2026-11-05T21:13:59Z"
     }
   ],
   "entities": {
     "rule_ids": [
+      "CDS-CSO-IRP",
+      "CDS-CSO-SVC",
+      "CMU-CSO-CMD",
+      "CPO-CSO-MTD",
+      "CPO-CSO-OVR",
       "FRC-CLA-MFR",
       "FRC-CLA-OFR",
-      "FRC-CLA-RFR"
+      "FRC-CLA-RFR",
+      "FRC-CSO-PKG",
+      "IEC-CSO-DPR",
+      "IEC-CSO-EFI",
+      "IEC-CSO-IIR",
+      "IVV-CSO-ICP",
+      "MAS-CSO-FLO",
+      "MAS-CSO-TPR",
+      "SDR-CSO-FRR"
     ],
     "rfc_ids": [],
     "nist_controls": [],
@@ -100,6 +155,6 @@
       "marketplace"
     ]
   },
-  "content_hash": "1bc9150c3e8b8285488446794b711d9cd344d3fc370003c228d104ab92ae96f3",
-  "synced_at": "2026-11-05T15:33:56.677151+00:00"
+  "content_hash": "3fa507c797c9cc010feeba807f45ee55c63619adcebb0c07d33dc2f1ea58f433",
+  "synced_at": "2026-11-06T15:09:07.560621+00:00"
 }

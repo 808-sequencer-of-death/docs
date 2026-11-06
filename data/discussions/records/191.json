@@ -1,0 +1,75 @@
+{
+  "schema_version": 3,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-191",
+  "node_id": "D_kwDOOxfoic4Aq3Ad",
+  "number": 191,
+  "title": "Restricted to US Locations",
+  "url": "https://github.com/FedRAMP/community/discussions/191",
+  "category": "Rev5 Discussion",
+  "category_slug": "rev5-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "dgrundmeyeraprio",
+  "author_is_official": false,
+  "created_at": "2026-11-05T21:14:34Z",
+  "updated_at": "2026-11-05T21:50:06Z",
+  "last_edited_at": null,
+  "closed": false,
+  "closed_at": null,
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "Does CR26 prohibit processing/transmitting/storing data in non-US locations?  If not, what should happen when doing a Rev5 Ready Conversion and the system has a non-US region in boundary?",
+  "comment_count": 1,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4BKHDt",
+      "url": "https://github.com/FedRAMP/community/discussions/191#discussioncomment-19427565",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2026-11-05T21:50:06Z",
+      "updated_at": "2026-11-05T21:50:06Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "> Does CR26 prohibit processing/transmitting/storing data in non-US locations? If not, what should happen when doing a Rev5 Ready Conversion and the system has a non-US region in boundary?\r\n\r\nFor Rev5, this is an [Organization-Defined Parameter in SA-09(05)](https://www.fedramp.gov/2026/reference/controls/system-and-services-acquisition/#sa-09-05). The restriction to U.S. locations is only for Class D. This ODP did not change in CR26, it's the same as it has been historically. This only ever applied to Class D/High for agency authorizations.\r\n\r\nFor the other classes, you would be expected to document the locations in that control as normal.",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "dgrundmeyeraprio",
+    "pete-gov"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/191#discussioncomment-19427565",
+      "author": "pete-gov",
+      "created_at": "2026-11-05T21:50:06Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [
+      "SA-09(05)"
+    ],
+    "discussion_refs": [],
+    "urls": [
+      "https://www.fedramp.gov/2026/reference/controls/system-and-services-acquisition/#sa-09-05"
+    ],
+    "topics": [
+      "class_d",
+      "rev5"
+    ]
+  },
+  "content_hash": "a793f3f9c4b40cb5535c827180df4a9f3779d13a4fe1493696bedbbfd744f879",
+  "synced_at": "2026-11-06T15:09:07.560621+00:00"
+}
