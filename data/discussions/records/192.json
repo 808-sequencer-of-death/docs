@@ -1,0 +1,79 @@
+{
+  "schema_version": 3,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-192",
+  "node_id": "D_kwDOOxfoic4Aq454",
+  "number": 192,
+  "title": "A few typos in 2026.11.02.01 (SCN-FRP-CAP, FRD-IIR, SCN-CSO-EVA)",
+  "url": "https://github.com/FedRAMP/community/discussions/192",
+  "category": "20x Discussion",
+  "category_slug": "20x-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "kevinraymond",
+  "author_is_official": false,
+  "created_at": "2026-11-06T17:42:39Z",
+  "updated_at": "2026-11-06T17:52:14Z",
+  "last_edited_at": null,
+  "closed": true,
+  "closed_at": "2026-11-06T17:52:14Z",
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "I've been processing `fedramp-consolidated-rules.json` with a small script and it turned up a few typos. Minor but dropping here anyway. All of these are in 2026.11.02.01.\r\n\r\n**SCN-FRP-CAP**\r\n\r\n- field `note` currently reads \"... will vary and be documented in the _Correcive_ Action Plan.\"\r\n- it should read: \"... will vary and be documented in the _Corrective_ Action Plan.\"\r\n\r\n**FRD-IIR**\r\n\r\n- field `definition` currently reads: \"... following _FedRAMP FedRAMP_ Incident Evaluation and Communication rules.\"\r\n- it should read: \"... following _FedRAMP_ Incident Evaluation and Communication rules.\"\r\n\r\n**SCN-CSO-EVA**\r\n\r\n- field `following_information`, second item, currently reads: \"If it is, is it _an_ FedRAMP Certification class change?\"\r\n- it should read: \"If it is, is it _a_ FedRAMP Certification class change?\"\r\n\r\nFor completeness, two more in the update history if those matter:\r\n\r\n- the 2026-07-01 comment on VDR-TFR-PVR shows \"relevent\"\r\n- the CMU-CSO-UVM comment has a double space in \"updates to  validated\".\r\n\r\nI didn't see any other issues - thanks!",
+  "comment_count": 1,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4BKLjg",
+      "url": "https://github.com/FedRAMP/community/discussions/192#discussioncomment-19445984",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2026-11-06T17:48:49Z",
+      "updated_at": "2026-11-06T17:52:11Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Oh sweet, thank you! I'm going to move this over to the rules repository and will fix these in the next version.\r\n\r\nI forgive myself for not catching the occasional mistake like \"FedRAMP FedRAMP\" (lol) but typos... alas. \r\n\r\nEdit: Oops. Can't transfer a discussion into an issue. Created [FedRAMP/rules#53](https://github.com/FedRAMP/rules/issues/53) to track and fix this. I'll go ahead and close this discussion item. Really appreciate it!",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "kevinraymond",
+    "pete-gov"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/192#discussioncomment-19445984",
+      "author": "pete-gov",
+      "created_at": "2026-11-06T17:48:49Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [
+      "CMU-CSO-UVM",
+      "FRD-IIR",
+      "SCN-CSO-EVA",
+      "SCN-FRP-CAP",
+      "VDR-TFR-PVR"
+    ],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://github.com/FedRAMP/rules/issues/53"
+    ],
+    "topics": [
+      "machine_readable",
+      "vulnerability_mgmt"
+    ]
+  },
+  "content_hash": "35b4cda32a259b4663dbe6c5ece4a226b53594cee0c92aff77abd95e4a101a5b",
+  "synced_at": "2026-11-07T14:07:33.762130+00:00"
+}

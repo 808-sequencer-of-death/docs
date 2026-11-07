@@ -1,0 +1,86 @@
+{
+  "schema_version": 3,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-193",
+  "node_id": "D_kwDOOxfoic4Aq46-",
+  "number": 193,
+  "title": "Five rules have two requirement levels but one force value",
+  "url": "https://github.com/FedRAMP/community/discussions/193",
+  "category": "20x Discussion",
+  "category_slug": "20x-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "kevinraymond",
+  "author_is_official": false,
+  "created_at": "2026-11-06T17:52:55Z",
+  "updated_at": "2026-11-06T18:20:30Z",
+  "last_edited_at": null,
+  "closed": false,
+  "closed_at": null,
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "Five rules in 2026.11.02.01 use two requirement keywords in one statement, and `force` in `fedramp-consolidated-rules.json` can only have one.\r\n\r\n| Rule | `force` | The statement also says |\r\n|---|---|---|\r\n| CDS-CSO-RIS | MUST | \"... but SHOULD NOT include sensitive information ...\" |\r\n| CDS-TRC-ACL | MUST | \"... SHOULD be made available upon request by those parties.\" |\r\n| MAS-CSO-SUP | MAY | \"... MUST be clearly marked and separated from the cloud service offering.\" |\r\n| SCN-CSO-EMG | MAY | \"In such emergencies, providers MUST follow all relevant procedures ...\" |\r\n| VER-RPT-NID | MUST NOT | \"... but MUST disclose sufficient information ...\" |\r\n\r\nAnything that reads `force` to build a requirement list gets half of each rule. For example, filtering on MUST misses the MUST in MAS-CSO-SUP and SCN-CSO-EMG, because those are filed under MAY.\r\n\r\nThe new rule proposed in FedRAMP/rules#52 (IEC-CSO-RID) looks the same \"MUST NOT ... but MUST\" pattern as VER-RPT-NID, so that would be another.\r\n\r\nI'm not sure what the correct way to handle it should be, but I can think of a few options:\r\n\r\n1. Split each of these into two rules, one per requirement level.\r\n2. Keep one rule and let `force` have more than one value.\r\n3. Add a note to AGENTS.md that `force` is the primary level but the statement can carry a second one (doesn't touch the data).\r\n\r\nI'm mentioning this because #190 asks for a flat list of rule IDs with the force for each, and that list would miss the second keyword for these rules.\r\n\r\nThanks for your great work!",
+  "comment_count": 1,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4BKLsS",
+      "url": "https://github.com/FedRAMP/community/discussions/193#discussioncomment-19446546",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2026-11-06T18:20:30Z",
+      "updated_at": "2026-11-06T18:20:30Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "These edge cases in particular have always been a bit of a complicated thorn - they are specific situations where we felt that having the secondary requirement directly inside the rule was critical because it applied _specifically to the rule_ in a way that it needed to be directly in there to avoid confusion.\r\n\r\nThe trick is that they're secondary, contingent on the first part, so the core force of the rule is still the main thing that matters for determining the approach to implementation.\r\n\r\n- [CDS-CSO-RIS (Responsible Information Sharing)](https://www.fedramp.gov/2026/reference/certification-data-sharing/#responsible-information-sharing) - In short, Providers MUST supply information but SHOULD NOT include dangerous stuff when they do. We have separate rules about responsible sharing etc. in other rulesets but wanted to be very explicit in this top level rule because historically people include dangerous stuff. Separating this out risks a situation where someone feels like they need to folow the \"MUST supply information\" but can ignore the \"SHOULD NOT include dangerous stuff.\"\r\n\r\n- [CDS-TRC-ACL (Access Logging)](https://www.fedramp.gov/2026/reference/certification-data-sharing/#access-logging) - we could probably have separated these out without too much confusion, but having a random rule sitting around saying \"access information should be made available upon request to parties that it pertains to\" is a little scary. \r\n\r\n- [MAS-CSO-SUP (Supplemental Information)](https://www.fedramp.gov/2026/reference/minimum-assessment-scope/#supplemental-information) the MUST part is entirely irrelevant unless you've done the MAY part, creating an extra rule out of this would get weird.\r\n\r\n- [SCN-CSO-EMG (Emergency Changes)](https://www.fedramp.gov/2026/reference/significant-change-notification/#emergency-changes) another situation there the MUST part is entirely irrelevant if the MAY part is done.\r\n\r\n- [VER-RPT-NID (Responsible Disclosure)](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#responsible-disclosure) - these are so explicitly in tension that having them be separate rules would create a blocking loop for many compliance folks, but putting them together provides a structured approach. \r\n\r\nSo I think the right approach for CR26 maintenance is your third suggestion \"Add a note to AGENTS.md that force is the primary level but the statement can carry a second one (doesn't touch the data).\" And to explain this in [Using the FedRAMP Consolidated Rules](https://www.fedramp.gov/2026/rules/).\r\n\r\nCreated [FedRAMP/rules#54](https://github.com/FedRAMP/rules/issues/54) to track this, thank you!",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "kevinraymond",
+    "pete-gov"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/193#discussioncomment-19446546",
+      "author": "pete-gov",
+      "created_at": "2026-11-06T18:20:30Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [
+      "CDS-CSO-RIS",
+      "CDS-TRC-ACL",
+      "IEC-CSO-RID",
+      "MAS-CSO-SUP",
+      "SCN-CSO-EMG",
+      "VER-RPT-NID"
+    ],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://github.com/FedRAMP/rules/issues/54",
+      "https://www.fedramp.gov/2026/reference/certification-data-sharing/#access-logging",
+      "https://www.fedramp.gov/2026/reference/certification-data-sharing/#responsible-information-sharing",
+      "https://www.fedramp.gov/2026/reference/minimum-assessment-scope/#supplemental-information",
+      "https://www.fedramp.gov/2026/reference/significant-change-notification/#emergency-changes",
+      "https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#responsible-disclosure",
+      "https://www.fedramp.gov/2026/rules/"
+    ],
+    "topics": [
+      "machine_readable",
+      "vulnerability_mgmt"
+    ]
+  },
+  "content_hash": "d9356b11cdaa4c7486fb48f1348574774f847a48720330cd2172cd2baab6c041",
+  "synced_at": "2026-11-07T14:07:33.762130+00:00"
+}

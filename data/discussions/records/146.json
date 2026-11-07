@@ -15,7 +15,7 @@
   "author": "pete-gov",
   "author_is_official": true,
   "created_at": "2026-06-24T21:49:44Z",
-  "updated_at": "2026-11-05T18:36:42Z",
+  "updated_at": "2026-11-06T20:15:47Z",
   "last_edited_at": null,
   "closed": false,
   "closed_at": null,
@@ -24,7 +24,7 @@
   "answer_chosen_at": null,
   "upvotes": 1,
   "body": "## This thread is for any and all Q&A or general discussion related to FedRAMP Rev5 in general that does not need to have its own thread.\r\n\r\nFedRAMP released the [Consolidated Rules for 2026](https://www.fedramp.gov/2026/) on June 24, 2026 with a considerable set of changes for FedRAMP Rev5 that will apply to all cloud service providers.\r\n\r\nThese changes include:\r\n\r\n- Mandatory adoption of the Vulnerability Detection and Response and Vulnerability Evaluation and Reporting rules by December 6, 2026 in response to CISA BOD 26-04\r\n- Changes to assessments for Rev5 to align more like assessments for 20x - focusing on verification and validation instead of just control implementation.\r\n- Replacement of most FedRAMP templates with a new Certification Package Overview and Security Decision Record\r\n- Removal of many FedRAMP-assigned control parameters and a lot of older FedRAMP control guidance\r\n- Mandatory adoption of many other Balance Improvement Releases through 2027\r\n- A requirement to address all FedRAMP Rules within the Security Decision Record, instead of only addressing controls\r\n\r\nSome of these changes take effect for all cloud service providers on certain dates no matter what, others take effect at the next annual assessment. In general, these are sweeping changes that will require all cloud service providers to begin planning now to continue to meet FedRAMP Rev5 requirements.\r\n\r\nHistorical materials are available at [https://fedramp.gov/legacy](https://fedramp.gov/legacy).\r\n\r\n---\r\n\r\nYou may see some of the following folks from FedRAMP responding in this thread:\r\n\r\n- `pete-gov` - Pete, FedRAMP Director\r\n- `nicole-gov` - Nicole, Security Director\r\n- `dan-fedramp` - Dan, Lead Cloud Security Engineer\r\n- `paulagosta` - Paul, Lead Cloud Security Engineer (Bastion)\r\n- `emu-gov` - Emu, Lead Cloud Security Engineer (Vanguard)\r\n- `rhoesing` - Ryan, Chief of Staff & Policy Branch Chief",
-  "comment_count": 55,
+  "comment_count": 58,
   "comments": [
     {
       "id": "DC_kwDOOxfoic4BChJy",
@@ -2844,6 +2844,92 @@
       ],
       "replies_total": 3,
       "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BKK3N",
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19443149",
+      "author": "cbaerschellman",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-11-06T15:17:57Z",
+      "updated_at": "2026-11-06T15:17:57Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Good morning, FedRAMP team.\r\n \r\nWe have a few CSPs reaching out about uplift requirements from Rev5 Class C to Rev5 Class D. We understand that the uplift will have to be submitted to FedRAMP prior to the June 11, 2027 deadline, but wanted to get clarity on what's required to be submitted.\r\n \r\nBased on SCN-CSO-EVA and FRC-CCL-UCC, it states that an uplift assessment cannot be considered a significant change and would require a new assessment and the provider would need to apply for a new FedRAMP Certification.\r\n \r\nDoes that mean that a CSP with an established FedRAMP Certification would need to have a full initial assessment done by an independent assessor or could they submit their most recent (or upcoming) annual assessment and test results against the additional Class D FRRs and Rev. 5 controls assessed?\r\n\r\nThank you!",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BKK_t",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19443693",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-11-06T15:39:30Z",
+          "updated_at": "2026-11-06T15:39:30Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> Based on SCN-CSO-EVA and FRC-CCL-UCC, it states that an uplift assessment cannot be considered a significant change and would require a new assessment and the provider would need to apply for a new FedRAMP Certification.\r\n\r\nIndeed - and if submitted after January 1, 2027, that uplift would need to be entirely CR26-compliant or with every gap including a POA&M. \r\n\r\n> Does that mean that a CSP with an established FedRAMP Certification would need to have a full initial assessment done by an independent assessor or could they submit their most recent (or upcoming) annual assessment and test results against the additional Class D FRRs and Rev. 5 controls assessed?\r\n\r\nYes, the CSP would need to supply a fresh initial assessment completed within the previous 3 months, as required by [FRC-APP-FIA (Fresh Independent Assessment)](https://www.fedramp.gov/2026/reference/fedramp-certification/#fresh-independent-assessment). They also need to supply a fresh certification package that has all of the changes/etc. to uplift incorporated directly into the package as required by [FRC-APP-FCP (Fresh FedRAMP Certification Package)](https://www.fedramp.gov/2026/reference/fedramp-certification/#fresh-fedramp-certification-package)\r\n\r\nThat said, we built in some flexibility for the situation you're describing via [FRC-APP-USA (Updating Stale Assessments)](https://www.fedramp.gov/2026/reference/fedramp-certification/#updating-stale-assessments), which is intended to allow an initial FedRAMP assessment for a different class to focus entirely on the changes to avoid a rote repeat of everything in the last assessment.\r\n\r\nFor example, take someone that is currently Rev5 Class C and wants to go to Rev5 Class D. Their last annual assessment was in July, 2026. Instead of planning a Rev5 Class C annual assessment in July, 2026, they would complete all the changes necessary for Class D by ~February, 2027 and coordinate a fresh independent assessment to update their stale annual (from July 2026) to be completed sometime in March/April, 2027. They'd also coordinate with an agency sponsor (which they must have for the new Class D Certification) to run the agency ATO process immediately after, and hopefully finish it by June, 2027 so it can be submitted to FedRAMP. \r\n\r\nRealistically, this is achievable only if they have an agency sponsor that has a critical mission need for that cloud service at Class D. That can happen, but it's rare, and without that locked in (and probably a contract to back it up) the cloud service provider would be taking a massive risk to start that process now."
+        },
+        {
+          "id": "DC_kwDOOxfoic4BKL9A",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19447616",
+          "author": "cbaerschellman",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-11-06T19:25:04Z",
+          "updated_at": "2026-11-06T19:25:04Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Thank you, Pete!"
+        }
+      ],
+      "replies_total": 2,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BKLM6",
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19444538",
+      "author": "cbiggsrun",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-11-06T16:24:35Z",
+      "updated_at": "2026-11-06T16:24:35Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Thanks for the info about the VDR-VER enforcement process in this week's townhall. In anticipation of more details being released next week, I have a question for the CSPs who will be in limbo in December (kinda like FedRAMP purgatory), which is where they will have just finished their initial Rev 5 assessment or be in the middle of one in early December and are most likely still trying to implement a VDR-VER process. Will they get the email you mentioned during the townhall and have to submit the mini-SDR and sample vuln report, even though they officially aren't FedRAMP Certified yet? I assume yes, but just wanted to check.",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BKLUz",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19445043",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-11-06T16:53:49Z",
+          "updated_at": "2026-11-06T16:53:49Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> Will they get the email you mentioned during the townhall and have to submit the mini-SDR and sample vuln report, even though they officially aren't FedRAMP Certified yet? \r\n\r\nWe only send emergency tests to folks with a FedRAMP Certification. \r\n\r\nI'll update the Public Notice to explicitly handle the case where folks don't have a Certification yet but are planning on applying soon to ensure they know they also have to produce the same materials and have them available _when they apply for Certification._ They simply won't be eligible to receive the FedRAMP Certification after Dec 7 until the VDR/VER are fully implemented."
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BKMJK",
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19448394",
+      "author": "emoss-firstinfotech",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-11-06T20:15:47Z",
+      "updated_at": "2026-11-06T20:15:47Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Our independent assessor team is putting together our templates and processes for doing CR26 rev 5 assessments and would appreciate some clarified expectations. As a base, our IA write-ups will probably be phrased around verification and validation, with a pass or fail for each of those. Just for context, we are asking because previous reviewers got VERY particular with what they wanted to see in writing and kicked work back to the team until it met their (unpublished) expectations. We would prefer to not repeat this experience. \r\n\r\n1.\tHow much information are you looking for in terms of write ups from an IA and do they need to address every component of the rev 5 control or is a simple statement at the control level sufficient?\r\na.\tIn previous FedRAMP review sessions, rev 5 controls are broken down to sub components which usually get multiple paragraphs each. Its worth noting that a write up for AC-2 is naturally going to be a lot more complex than a write up for SC-2. \r\n\r\n2.\tThe SDR JSON schema doesn’t appear to have a place for assessment results or independent verification/validation in the security controls section. Is this by design? If so, how are they to be included in the certification package?\r\n",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
     }
   ],
   "answer_url": null,
@@ -2864,10 +2950,12 @@
     "adamstc1",
     "alexmellott",
     "badgerinspace",
+    "cbaerschellman",
     "cbiggsrun",
     "cmp-cal-842",
     "dan-fedramp",
     "eatkinson-trackvia",
+    "emoss-firstinfotech",
     "emu-gov",
     "ericmoss54",
     "gmengelberg",
@@ -3336,6 +3424,16 @@
       "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19424546",
       "author": "pete-gov",
       "created_at": "2026-11-05T18:36:42Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19443693",
+      "author": "pete-gov",
+      "created_at": "2026-11-06T15:39:30Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19445043",
+      "author": "pete-gov",
+      "created_at": "2026-11-06T16:53:49Z"
     }
   ],
   "entities": {
@@ -3346,7 +3444,11 @@
       "CDS-CSO-RIS",
       "CDS-TRC-USH",
       "CPO-CSO-OVR",
+      "FRC-APP-FCP",
+      "FRC-APP-FIA",
       "FRC-APP-MLF",
+      "FRC-APP-USA",
+      "FRC-CCL-UCC",
       "FRC-CSX-MOT",
       "FRD-ACV",
       "FRD-DET",
@@ -3372,6 +3474,7 @@
       "KSI-INR-RIR",
       "MAS-CSO-IIR",
       "SCN-ADP-NTF",
+      "SCN-CSO-EVA",
       "SCN-CSO-INF",
       "SDR-CSF-CTF",
       "SDR-CSO-CRF",
@@ -3387,6 +3490,7 @@
       "VDR-TFR-PDD",
       "VDR-TFR-PSD",
       "VDR-TFR-PVR",
+      "VDR-VER",
       "VER-AGM-RVR",
       "VER-EVA-AIA",
       "VER-EVA-EFA",
@@ -3411,7 +3515,8 @@
       "CA-1",
       "CA-5",
       "CA-7",
-      "RA-05"
+      "RA-05",
+      "SC-2"
     ],
     "discussion_refs": [
       2,
@@ -3445,6 +3550,9 @@
       "https://www.fedramp.gov/2026/providers/updating/deadlines/rev5/",
       "https://www.fedramp.gov/2026/providers/updating/deadlines/rev5/#rev5-deadlines",
       "https://www.fedramp.gov/2026/reference/addressing-fedramp-communication/",
+      "https://www.fedramp.gov/2026/reference/fedramp-certification/#fresh-fedramp-certification-package",
+      "https://www.fedramp.gov/2026/reference/fedramp-certification/#fresh-independent-assessment",
+      "https://www.fedramp.gov/2026/reference/fedramp-certification/#updating-stale-assessments",
       "https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#overall-summary-of-assessment",
       "https://www.fedramp.gov/2026/reference/minimum-assessment-scope/",
       "https://www.fedramp.gov/2026/reference/rev5-control-guidance/",
@@ -3494,6 +3602,6 @@
       "vulnerability_mgmt"
     ]
   },
-  "content_hash": "b4068417403aeb0981ebac715ab9f88c6d6de169f7a7cd305f5ada86a9cf5ceb",
-  "synced_at": "2026-11-06T15:09:07.560621+00:00"
+  "content_hash": "99ee3d786ffc564769f1b4239ad66c294d5dead964777718d70cef6df325abfa",
+  "synced_at": "2026-11-07T14:07:33.762130+00:00"
 }

@@ -15,7 +15,7 @@
   "author": "pete-gov",
   "author_is_official": true,
   "created_at": "2026-06-24T21:52:47Z",
-  "updated_at": "2026-10-16T17:29:59Z",
+  "updated_at": "2026-11-06T19:50:35Z",
   "last_edited_at": null,
   "closed": false,
   "closed_at": null,
@@ -24,7 +24,7 @@
   "answer_chosen_at": null,
   "upvotes": 1,
   "body": "## This thread is for any and all Q&A or general discussion related to FedRAMP 20x in general that does not need to have its own thread.\r\n\r\nFedRAMP released the [Consolidated Rules for 2026](https://www.fedramp.gov/2026/) on June 24, 2026 with all requirements for FedRAMP 20x Class A, B, and C.\r\n\r\nThis includes:\r\n\r\n- When each certification is available for application\r\n- All the rules and expectations for a FedRAMP 20x Certification\r\n- Basic JSON schemas for providing some high level machine-readable data\r\n- So much more\r\n\r\nWe're excited for folks to continue digging in after the Public Preview and begin preparing. We're happy to answer any general questions that don't need their own thread here!\r\n\r\n---\r\n\r\nYou may see some of the following folks from FedRAMP responding in this thread:\r\n\r\n- `pete-gov` - Pete, FedRAMP Director\r\n- `nicole-gov` - Nicole, Security Director\r\n- `dan-fedramp` - Dan, Lead Cloud Security Engineer\r\n- `paulagosta` - Paul, Lead Cloud Security Engineer (Bastion)\r\n- `emu-gov` - Emu, Lead Cloud Security Engineer (Vanguard)\r\n- `rhoesing` - Ryan, Chief of Staff & Policy Branch Chief",
-  "comment_count": 18,
+  "comment_count": 19,
   "comments": [
     {
       "id": "DC_kwDOOxfoic4BChim",
@@ -966,6 +966,35 @@
       ],
       "replies_total": 1,
       "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BKLo1",
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-19446325",
+      "author": "apolaniaklaus",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-11-06T18:08:49Z",
+      "updated_at": "2026-11-06T18:08:49Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Hi FedRAMP Team, a few questions here to obtain specific guidance hopefully.                                                                                                   KSI- SVC-SIN: Does “otherwise secured” in SIN allow plaintext east-west traffic inside a VPC that relies on the cloud provider’s inherited protections?\r\nSKI-SVC-VMC- Does VCM, for Class C, effectively require cryptographic authentication between services in the internal network?  any feedback on this is greatly appreciated!",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BKMDR",
+          "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-19448017",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-11-06T19:50:35Z",
+          "updated_at": "2026-11-06T19:50:35Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> KSI- SVC-SIN: Does “otherwise secured” in SIN allow plaintext east-west traffic inside a VPC that relies on the cloud provider’s inherited protections? \r\n\r\nThis needs to be a technical decision made by a security engineer with full awareness of the environment, context, and risks. The answer to that question will vary depending on a lot of factors, and FedRAMP doesn't weigh in by default to avoid confusion caused by an informal opinion that should only be used to help make an informed technical decision.\r\n\r\nExample 1: If there are two EC2 nodes inside a cluster placement group within the same AZ and a special security group set up to limit access to those nodes and controls in place to prevent other nodes from being added to the cluster or security group that are launched at the same time that only communicate via local IP addresses and don't have the ability to send traffic publicly then I could see a world where someone might argue that plain text communication between them has been \"otherwise secured.\"\r\n\r\nExample 2: Two EC2 nodes on a big network with 500 other EC2 nodes all routing traffic through the same API node in plain text inside a \"secure VPC\" would almost certainly NOT be considered \"otherwise secured\" by any reasonable security engineer.\r\n\r\n> SKI-SVC-VMC- Does VCM, for Class C, effectively require cryptographic authentication between services in the internal network? any feedback on this is greatly appreciated!\r\n\r\n\"Cryptographic authentication\" covers a pretty massive range of approaches, but generally I'm not really aware of a good way to verify authenticity or integrity of resources without doing something that would probably fall under the definition of cryptographic authentication. That doesn't mean there isn't a way, just that I'm not familiar with other options."
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
     }
   ],
   "answer_url": null,
@@ -976,6 +1005,7 @@
     "KHFedR",
     "TM-Microsoft",
     "aaronhbridges",
+    "apolaniaklaus",
     "cclements05",
     "daclevenger",
     "dan-fedramp",
@@ -1157,6 +1187,11 @@
       "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18978806",
       "author": "pete-gov",
       "created_at": "2026-10-16T17:29:59Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-19448017",
+      "author": "pete-gov",
+      "created_at": "2026-11-06T19:50:35Z"
     }
   ],
   "entities": {
@@ -1228,6 +1263,6 @@
       "vulnerability_mgmt"
     ]
   },
-  "content_hash": "db9a3586c3021262cf5486b7a5be8a2ee7bd17b418a4d946408e538da4af3f3e",
-  "synced_at": "2026-10-24T02:20:11.900157+00:00"
+  "content_hash": "32e6206807ce197181489edcfe38e0399d5808e01bb9864363d2650446e90b4d",
+  "synced_at": "2026-11-07T14:07:33.762130+00:00"
 }
