@@ -5,7 +5,7 @@ sidebarTitle: "20x CR26 Q&A (#147)"
 ---
 
 <Info>
-  **Thread:** [#147 20x questions and discussion on the Consolidated Rules for 2026](https://github.com/FedRAMP/community/discussions/147), opened by `pete-gov` on 2026-06-24 and still open. It has 33 staff posts through 2026-10-16. **Last reviewed:** 2026-10-24 against upstream release `2026.10.14.01`. Staff answers are paraphrased. Follow each link for the exact wording. Staff statements don't change the published rules. Where they conflict, the [official rules](https://www.fedramp.gov/2026/) govern.
+  **Thread:** [#147 20x questions and discussion on the Consolidated Rules for 2026](https://github.com/FedRAMP/community/discussions/147), opened by `pete-gov` on 2026-06-24 and still open. It has 34 staff posts through 2026-11-06. **Last reviewed:** 2026-11-07 against upstream release `2026.11.02.01`. Staff answers are paraphrased. Follow each link for the exact wording. Staff statements don't change the published rules. Where they conflict, the [official rules](https://www.fedramp.gov/2026/) govern.
 </Info>
 
 ## Bottom line
@@ -137,9 +137,15 @@ Rules page: [Vulnerability evaluation and reporting](/rules/vulnerability-evalua
   **pete-gov, 2026-10-13** ([comment](https://github.com/FedRAMP/community/discussions/147#discussioncomment-18903585)): PAIN N0 and accepted vulnerabilities aren't linked. You may accept the risk of a vulnerability at any PAIN. Track a vulnerability until it's **remediated**. A fully mitigated vulnerability is still present, so keep tracking it. See [`VER-TFR-MAV`](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#mark-accepted-vulnerabilities): you MUST categorize any vulnerability not fully mitigated or remediated within 192 days of evaluation as accepted.
 </Note>
 
+## Key Security Indicators
+
+<Note>
+  **pete-gov, 2026-11-06** ([comment](https://github.com/FedRAMP/community/discussions/147#discussioncomment-19448017)), on `KSI-SVC-SIN` and `KSI-SVC-VMC`: Whether plaintext east-west traffic inside a VPC is "otherwise secured" is a technical decision for a security engineer who knows your environment. FedRAMP doesn't weigh in by default. Staff gave two illustrations only. Two nodes in a tightly controlled placement group might arguably qualify. Two nodes on a large shared network routing through one plaintext API node almost certainly wouldn't. On whether `KSI-SVC-VMC` at Class C effectively requires cryptographic authentication between services, staff said the term covers a wide range of approaches and they know of no good way to verify authenticity or integrity without something that likely falls under it. Staff did not state this as a requirement. See [Key security indicators](/rules/key-security-indicators).
+</Note>
+
 ## Open questions
 
-These were still unanswered in the thread as of 2026-10-14:
+These were still unanswered in the thread as of 2026-11-07:
 
 - Whether a provider with an outdated cryptographic module can track it as an open vulnerability past the grace date, and whether that triggers a corrective action plan or revocation ([question](https://github.com/FedRAMP/community/discussions/147#discussioncomment-17937426)). For current crypto rules and the open [RFC-0035](https://github.com/FedRAMP/community/discussions/179), see [Cryptographic module use](/rules/cryptographic-module-use).
 - Whether [`IVV-CSO-RAA`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#receiving-assessor-advice) lets a firm with a firewall between its advisory and assessment teams assess a provider it advised ([question](https://github.com/FedRAMP/community/discussions/147#discussioncomment-18165225)).

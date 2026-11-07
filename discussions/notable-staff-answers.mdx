@@ -5,14 +5,61 @@ sidebarTitle: "Notable staff answers"
 ---
 
 <Info>
-  **Threads covered:** community discussions updated on or after 2026-06-01 that have at least one FedRAMP staff post. This excludes [#146](/discussions/rev5-cr26-questions), [#147](/discussions/20x-cr26-questions) and RFC threads, which are covered in [RFC history](/discussions/rfc-history). Newest threads come first. **Last reviewed:** 2026-11-04 against upstream release `2026.11.02.01`. Staff answers are paraphrased. Follow each link for the exact wording. Staff statements don't change the published rules. Where they conflict, the [official rules](https://www.fedramp.gov/2026/) govern.
+  **Threads covered:** community discussions updated on or after 2026-06-01 that have at least one FedRAMP staff post. This excludes [#146](/discussions/rev5-cr26-questions), [#147](/discussions/20x-cr26-questions) and RFC threads, which are covered in [RFC history](/discussions/rfc-history). Newest threads come first. **Last reviewed:** 2026-11-07 against upstream release `2026.11.02.01`. Staff answers are paraphrased. Follow each link for the exact wording. Staff statements don't change the published rules. Where they conflict, the [official rules](https://www.fedramp.gov/2026/) govern.
 </Info>
 
 <Note>
   Several threads below were active before the Consolidated Rules for 2026 (CR26) were published on 2026-06-24, and were last updated around that date. Staff posts from before 2026-06-24 cite draft or pilot material. Check them against the current rules before relying on them.
 
-  Every thread below up to #173 was closed between 2026-06-24 and 2026-09-16. Unanswered follow-ups in those threads may never get a reply. Threads #174 through #178 were still open as of 2026-10-14. Threads #181 through #184 were open at the 2026-10-24 sync, #186 was open at the 2026-10-26 sync, and #188 was open at the 2026-11-04 sync.
+  Every thread below up to #173 was closed between 2026-06-24 and 2026-09-16. Unanswered follow-ups in those threads may never get a reply. Threads #174 through #178 were still open as of 2026-10-14. Threads #181 through #184 were open at the 2026-10-24 sync, #186 was open at the 2026-10-26 sync, #188 was open at the 2026-11-04 sync, and #189 and #193 were open at the 2026-11-07 sync. #192 was closed on 2026-11-06.
 </Note>
+
+## #193 Five rules have two requirement levels but one force value
+
+[Thread](https://github.com/FedRAMP/community/discussions/193) (20x Discussion, opened 2026-11-06).
+
+**Bottom line:** Rules with a second requirement keyword keep it inside the rule text. The rule's main force still sets how you implement it.
+
+<Note>
+  **pete-gov, 2026-11-06** ([comment](https://github.com/FedRAMP/community/discussions/193#discussioncomment-19446546)): A community member noted that five rules carry two keywords but only one `force` value in the machine-readable rules. Staff said the second requirement is secondary and contingent on the first, so the core force is what matters for implementation. Staff said they will explain this in [Using the FedRAMP Consolidated Rules](https://www.fedramp.gov/2026/rules/) and track it in [FedRAMP/rules#54](https://github.com/FedRAMP/rules/issues/54). The five rules are:
+
+  - [`CDS-CSO-RIS`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#responsible-information-sharing): MUST supply information, but SHOULD NOT include sensitive information.
+  - [`CDS-TRC-ACL`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#access-logging): MUST, plus a SHOULD to make access information available on request.
+  - [`MAS-CSO-SUP`](https://www.fedramp.gov/2026/reference/minimum-assessment-scope/#supplemental-information): MAY, and the MUST on marking and separating the information applies only if you do it.
+  - [`SCN-CSO-EMG`](https://www.fedramp.gov/2026/reference/significant-change-notification/#emergency-changes): MAY, and the MUST on following procedures applies only in such an emergency.
+  - [`VER-RPT-NID`](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#responsible-disclosure): MUST NOT, with a MUST to disclose sufficient information.
+</Note>
+
+**Open questions:** none. Read the full rule text, not just the force value, for these five rules.
+
+## #192 Typos in 2026.11.02.01
+
+[Thread](https://github.com/FedRAMP/community/discussions/192) (20x Discussion, opened and closed 2026-11-06).
+
+**Bottom line:** A community member reported typos in `SCN-FRP-CAP`, `FRD-IIR` and `SCN-CSO-EVA`. Staff will fix them in the next version.
+
+<Note>
+  **pete-gov, 2026-11-06** ([comment](https://github.com/FedRAMP/community/discussions/192#discussioncomment-19445984)): Thanked the reporter and said the fixes would come in the next version. Staff created [FedRAMP/rules#53](https://github.com/FedRAMP/rules/issues/53) to track them and closed the discussion.
+</Note>
+
+**Open questions:** none.
+
+## #189 Reusable EC2 AMIs under VDR and VER
+
+[Thread](https://github.com/FedRAMP/community/discussions/189) (Rev5 Discussion, opened 2026-11-04).
+
+**Bottom line:** Staff gave no fixed treatment for reusable machine images. They said you decide based on your architecture, document why it's appropriate, and own the result. Staff called their answers illustrative, not formal direction.
+
+<Note>
+  **pete-gov, 2026-11-06** ([comment](https://github.com/FedRAMP/community/discussions/189#discussioncomment-19444953)), on [`VDR-TFR-PCD`](https://www.fedramp.gov/2026/reference/vulnerability-detection-and-response/) and [`VER-EVA-GRV`](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/):
+
+  - **Detection scope:** Truly immutable AMIs might reasonably be treated as information resources that are not likely to drift, grouped by version. If you can show they haven't been modified, you might check them by manifest comparison or sampling instead of scanning running instances. How far you can go depends on how certain you are that they can't drift.
+  - **Evaluation:** Evaluate against actual conditions, with the specific vulnerability and your implementation in mind. Consider both a compromised source image and vulnerabilities in single-tenant deployed instances.
+  - **Grouping:** Grouping is designed for this situation. You can group by image and instances, resize the group as nodes are redeployed, and manage groups of groups.
+  - **Remediation:** If the source AMI could still be deployed unpatched, the vulnerability isn't remediated. If the AMI is disabled and won't be deployed again, that's fine.
+</Note>
+
+**Open questions:** none.
 
 ## #188 Submitting an FRC-CSO-PKG Rev5
 
