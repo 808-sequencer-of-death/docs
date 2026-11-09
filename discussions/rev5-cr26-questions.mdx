@@ -5,7 +5,7 @@ sidebarTitle: "Rev5 CR26 Q&A (#146)"
 ---
 
 <Info>
-  **Thread:** [#146 Rev5 questions and discussion on the Consolidated Rules for 2026 (or Legacy)](https://github.com/FedRAMP/community/discussions/146), opened by `pete-gov` on 2026-06-24 and still open. This digest covers staff posts through 2026-11-04. **Last reviewed:** 2026-11-04 against upstream release `2026.11.02.01`. Staff answers are paraphrased. Follow each link for the exact wording. Staff statements don't change the published rules. Where they conflict, the [official rules](https://www.fedramp.gov/2026/) govern.
+  **Thread:** [#146 Rev5 questions and discussion on the Consolidated Rules for 2026 (or Legacy)](https://github.com/FedRAMP/community/discussions/146), opened by `pete-gov` on 2026-06-24 and still open. This digest covers staff posts through 2026-11-09. **Last reviewed:** 2026-11-09 against upstream release `2026.11.02.01`. Staff answers are paraphrased. Follow each link for the exact wording. Staff statements don't change the published rules. Where they conflict, the [official rules](https://www.fedramp.gov/2026/) govern.
 </Info>
 
 ## Bottom line
@@ -313,6 +313,13 @@ Rules pages: [Security decision record](/rules/security-decision-record), [Indep
 </Note>
 
 <Note>
+  **pete-gov, 2026-11-09** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-19496128)), answering an assessor team's questions about write-ups and the SDR schema:
+  - FedRAMP doesn't set how much detail your assessor gives you. That is a contract matter between you and the assessor. Staff said they would expect a provider to ask for a point-by-point breakdown and write it into the contract. Staff also said the assessor no longer makes a determination, and the assessment is meant to help the provider attest that it met the requirements.
+  - What FedRAMP wants is set by [`IVV-IAS-SUM`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#assessment-summary): a "high-level summary of their assessment process and findings" for each practice. Staff said FedRAMP doesn't need a point-by-point breakdown. They want to know the assessor looked at everything in the rule, broadly what they did and broadly what they found. Staff expect "a couple paragraphs" for most practices, and pages for some complicated ones.
+  - Staff called the SDR JSON schema "a minimal data structure," not a template, and encouraged trying different ways of supplying assessment results within it. The rules set what the SDR must contain: [`SDR-CSO-FRR`](https://www.fedramp.gov/2026/reference/security-decision-record/#fedramp-rules) for rules and [`SDR-CSF-CTF`](https://www.fedramp.gov/2026/reference/security-decision-record/#rev5-controls) for Rev5 controls. Staff also pointed to requirements for an overall assessment summary, and for the assessor to supply the information and you to include it without inappropriate modification.
+</Note>
+
+<Note>
   **pete-gov, 2026-10-13** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18903643), [follow-up](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18904451)): [`IVV-IAS-SUM`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#assessment-summary) is the assessor's summary for each FedRAMP Practice. It tells the assessor to supply items 4 and 5 (independent verification and validation) of `SDR-CSO-FRR`. [`IVV-IAS-OSA`](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#overall-summary-of-assessment) is the summary of the whole assessment.
 </Note>
 
@@ -352,13 +359,14 @@ Rules page: [Certification data sharing](/rules/certification-data-sharing).
 
 ## Other staff posts
 
+- On 2026-11-09, `pete-gov` answered two new threads: [#194](https://github.com/FedRAMP/community/discussions/194) on agency use of 20x and [#195](https://github.com/FedRAMP/community/discussions/195) on the Unique Entity ID. See [Notable staff answers](/discussions/notable-staff-answers).
 - On 2026-11-04, `pete-gov` answered a new thread, [#188](https://github.com/FedRAMP/community/discussions/188), asked about a failed `FRC-CSO-PKG` submission. See [Notable staff answers](/discussions/notable-staff-answers).
 - **pete-gov, 2026-06-25** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-17438832), [fix](https://github.com/FedRAMP/community/discussions/146#discussioncomment-17439148)): A fedramp.gov bug briefly returned 404 errors on CR26 links. Staff fixed it the same day.
 - **paulagosta, 2026-08-25** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18150707)) and **2026-08-26** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18165762)): an event pointer and a hand-off to `dan-fedramp`. Neither is a rule position.
 
 ## Open questions
 
-These were still unanswered in the thread as of 2026-11-04:
+These were still unanswered in the thread as of 2026-11-09:
 
 - For two Class C scenarios (`KSI-IAM-APM` at 3% non-compliance with remediation tracked 45 days out, and `KSI-INR-RIR` where a semiannual review is 9 months old and persistent validation data covers about 5 weeks), how the assessor should report the result under `IVV-IAS-SUM` and `IVV-IAS-OSA`, whether to hold the assessment open given the 3-month freshness requirement in `FRC-APP-MLF`, and whether the assessor or FedRAMP checks the 6 months of history in `FRC-CSX-MOT` ([question](https://github.com/FedRAMP/community/discussions/146#discussioncomment-19381804) from `khanssen`, 2026-11-03). No staff answer yet.
 
@@ -378,6 +386,7 @@ The earlier `IVV-IAS-VEF` question from `mjadali` was answered by `pete-gov` on 
 - Check your own dates against the [Rev5 deadlines](https://www.fedramp.gov/2026/providers/updating/deadlines/rev5/). For `FRC`, `IVV`, `MAS`, `CPO` and `SDR`, the grace period ends at the first independent assessment **started** after the listed date.
 - If you plan a Rev5 uplift or new Rev5 certification, it must reach FedRAMP before 2027-06-11.
 - For `SDR-CSO-FRR` and `SDR-CSF-CTF`, give both your method and its results, and follow the rule text rather than the schema.
+- Agree your assessor's level of detail in your contract. Staff said FedRAMP asks only for the `IVV-IAS-SUM` high-level summary per practice (staff position, 2026-11-09).
 - "Full implementation" means addressing every applicable rule, including SHOULD rules, by implementing it or documenting your decision and reasoning. Submit the December 2026 activity report with that month's ConMon.
 - Expect mixed legacy and CR26 packages in 2027. Check each ruleset's own dates and add supplemental material for the rulesets you have adopted.
 
