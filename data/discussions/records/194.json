@@ -1,0 +1,70 @@
+{
+  "schema_version": 3,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-194",
+  "node_id": "D_kwDOOxfoic4Aq8gF",
+  "number": 194,
+  "title": "Agencies and 20X",
+  "url": "https://github.com/FedRAMP/community/discussions/194",
+  "category": "20x Discussion",
+  "category_slug": "20x-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "LPT00-ctrl",
+  "author_is_official": false,
+  "created_at": "2026-11-08T19:16:22Z",
+  "updated_at": "2026-11-09T16:30:52Z",
+  "last_edited_at": null,
+  "closed": false,
+  "closed_at": null,
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "How will the FedRAMP PMO ensure that agencies are using 20X?",
+  "comment_count": 1,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4BKX9j",
+      "url": "https://github.com/FedRAMP/community/discussions/194#discussioncomment-19496803",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2026-11-09T16:30:52Z",
+      "updated_at": "2026-11-09T16:30:52Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "> How will the FedRAMP PMO ensure that agencies are using 20X?\r\n\r\nThe U.S. federal government is a massively complex system of bureaucracy including hundreds of agencies and thousands of authorizing officials who are all responsible for creating their own policies based on statute and regulation. FedRAMP has no authority or responsibility to \"ensure\" that agencies use FedRAMP Certified cloud services or leverage the FedRAMP process; the extent of FedRAMP's responsibility for agency use is to supply that process and support it with templates, best practices, technical assistance, and other materials. \r\n\r\nOversight of agencies and their adherence to statute and regulation is provided by entities that are specifically designed for that. At a board level, this includes:\r\n\r\n- Congress, including via the Government Accountability Office, who monitors agency compliance with regulations and frequently enforces them.\r\n- The Executive Office of the President, especially via the Office of Management and Budget, who also monitors agency compliance (especially with OMB directives, such as OMB Memorandum M-24-15) and frequently uses the President's budget process to enforce priorities.\r\n- Inspectors General, who audit larger agencies on a frequent basis to ensure they are acting efficiently and effectively in compliance with the law and policy.\r\n\r\nAll of these entities have in the past and likely will continue to provide oversight that includes monitoring how effectively agencies use FedRAMP Certified cloud services.\r\n\r\n**In reality,** what dictates agency use is agency need. When agencies need a cloud service, they will find a way to use it. It will be considerably easier for them to use it if it has a FedRAMP Certification, especially a FedRAMP 20x Certification. But FedRAMP doesn't create that demand - cloud services do, by providing a service that is critical enough to agency operations for the agency to want to use it.",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "LPT00-ctrl",
+    "pete-gov"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/194#discussioncomment-19496803",
+      "author": "pete-gov",
+      "created_at": "2026-11-09T16:30:52Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [],
+    "topics": [
+      "20x"
+    ]
+  },
+  "content_hash": "44e2e7b33fdbb974ddd214663953515b8c01edc511c02709a1edc1a292ec9a94",
+  "synced_at": "2026-11-09T17:37:08.412325+00:00"
+}

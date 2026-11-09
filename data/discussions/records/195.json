@@ -1,0 +1,75 @@
+{
+  "schema_version": 3,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-195",
+  "node_id": "D_kwDOOxfoic4Aq-Tg",
+  "number": 195,
+  "title": "UEI Definition",
+  "url": "https://github.com/FedRAMP/community/discussions/195",
+  "category": "Rev5 Discussion",
+  "category_slug": "rev5-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "windwalk59-blip",
+  "author_is_official": false,
+  "created_at": "2026-11-09T16:03:19Z",
+  "updated_at": "2026-11-09T16:20:35Z",
+  "last_edited_at": null,
+  "closed": false,
+  "closed_at": null,
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 1,
+  "body": "What is the UEI?   I assume it is Unique Entity Identifier, but is it CAGE code, DUNS number, a FEDRAMP generated ID#, etc.?   I do not see UEI listed in the FedRAMP Definitions.     I only see a reference to in is a discussion by [mblanco474](https://github.com/mblanco474)\r\n[on Jun 3](https://github.com/FedRAMP/community/discussions/38#discussioncomment-17168964). ",
+  "comment_count": 1,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4BKX6W",
+      "url": "https://github.com/FedRAMP/community/discussions/195#discussioncomment-19496598",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2026-11-09T16:20:35Z",
+      "updated_at": "2026-11-09T16:20:35Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "> What is the UEI?\r\n\r\nAh, this isn't a FedRAMP/infosec thing, it's a government procurement thing.\r\n\r\nThe Unique Entity ID is a 12 character alphanumeric code [assigned by GSA through SAM.gov](https://sam.gov/entity-registration) to identify companies that do business with the government. It's not required for FedRAMP Certification but is a core part of actually doing any procurement with the government. \r\n\r\nAdditional information about the UEI can be found at the [Federal Service Desk](https://www.fsd.gov/gsafsd_sp/en/entity-registration-what-s-the-difference-between-only-getting-a-unique?id=kb_article_view&sysparm_article=KB0051214) here.\r\n",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "pete-gov",
+    "windwalk59-blip"
+  ],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/195#discussioncomment-19496598",
+      "author": "pete-gov",
+      "created_at": "2026-11-09T16:20:35Z"
+    }
+  ],
+  "entities": {
+    "rule_ids": [],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [
+      38
+    ],
+    "urls": [
+      "https://github.com/FedRAMP/community/discussions/38#discussioncomment-17168964",
+      "https://github.com/mblanco474",
+      "https://sam.gov/entity-registration",
+      "https://www.fsd.gov/gsafsd_sp/en/entity-registration-what-s-the-difference-between-only-getting-a-unique?id=kb_article_view&sysparm_article=KB0051214"
+    ],
+    "topics": []
+  },
+  "content_hash": "7e30d4a60570f3351c201432f995b4b307597df6b389dd37a5238ebf349b65c2",
+  "synced_at": "2026-11-09T17:37:08.412325+00:00"
+}

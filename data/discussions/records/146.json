@@ -15,7 +15,7 @@
   "author": "pete-gov",
   "author_is_official": true,
   "created_at": "2026-06-24T21:49:44Z",
-  "updated_at": "2026-11-06T20:15:47Z",
+  "updated_at": "2026-11-09T16:00:20Z",
   "last_edited_at": null,
   "closed": false,
   "closed_at": null,
@@ -2923,12 +2923,25 @@
       "is_official": false,
       "created_at": "2026-11-06T20:15:47Z",
       "updated_at": "2026-11-06T20:15:47Z",
-      "upvotes": 1,
+      "upvotes": 2,
       "minimized": false,
       "body": "Our independent assessor team is putting together our templates and processes for doing CR26 rev 5 assessments and would appreciate some clarified expectations. As a base, our IA write-ups will probably be phrased around verification and validation, with a pass or fail for each of those. Just for context, we are asking because previous reviewers got VERY particular with what they wanted to see in writing and kicked work back to the team until it met their (unpublished) expectations. We would prefer to not repeat this experience. \r\n\r\n1.\tHow much information are you looking for in terms of write ups from an IA and do they need to address every component of the rev 5 control or is a simple statement at the control level sufficient?\r\na.\tIn previous FedRAMP review sessions, rev 5 controls are broken down to sub components which usually get multiple paragraphs each. Its worth noting that a write up for AC-2 is naturally going to be a lot more complex than a write up for SC-2. \r\n\r\n2.\tThe SDR JSON schema doesn’t appear to have a place for assessment results or independent verification/validation in the security controls section. Is this by design? If so, how are they to be included in the certification package?\r\n",
       "is_answer": false,
-      "replies": [],
-      "replies_total": 0,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BKXzA",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19496128",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-11-09T16:00:20Z",
+          "updated_at": "2026-11-09T16:00:20Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> Just for context, we are asking because previous reviewers got VERY particular with what they wanted to see in writing and kicked work back to the team until it met their (unpublished) expectations. We would prefer to not repeat this experience.\r\n\r\nThere are two separate issues here:\r\n\r\n(1) What level of detail is valuable and useful to the cloud service provider who is paying an independent assessor a considerable amount of money to help the cloud service ensure that their implementation is high quality and complete.\r\n\r\n(2) What level of detail FedRAMP wants about this whole process.\r\n\r\nFedRAMP does not set the requirements for #1. Those are set in the contract between two private businesses, and should be whatever the private business feels is appropriate. I would expect cloud service providers to request a lot of information from their assessor, supplied in a way that allows the provider to change things up and dial things in and learn from the assessment. I would expect a good independent assessor to design engagements like this, to be supportive and useful and provide considerable business value that offers the best customer experience.\r\n\r\nRemember, the assessor is no longer making a determination. It is not an \"audit\" where they might bully a business around until the business does what they want in order to get a pass. The purpose of the assessment is to help the provider confidently attest that it has met the requirements. \r\n\r\n> How much information are you looking for in terms of write ups from an IA and do they need to address every component of the rev 5 control or is a simple statement at the control level sufficient?\r\n\r\n[IVV-IAS-SUM (Assessment Summary)](https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#assessment-summary) indicates the amount of information we're looking for per-practice: \"high-level summary of their assessment process and findings.\"\r\n\r\nWe (FedRAMP) do not need a point-by-point detailed breakdown of everything. We want to know that you look at everything in the rule, broadly what you did, and broadly what you found. Some FedRAMP Practices are complicated enough that pages may be necessary even at a high-level but I would expect it to be more like a couple paragraphs for most. \r\n\r\nThat's for FR. If I was a cloud service provider paying an assessor, I would expect a point-by-point detailed breakdown be supplied to me, as the customer, though, and would certainly write that into the contract.\r\n\r\n> The SDR JSON schema doesn’t appear to have a place for assessment results or independent verification/validation in the security controls section. Is this by design? If so, how are they to be included in the certification package?\r\n\r\nThe schema isn't a template, it's a minimal data structure. We expect folks are going to experiment with different ways of supplying this information within the minimal data structure, and encourage them to do so. The best way to do this will vary from environment to environment and tool to tool right now.\r\n\r\nThe rules set the requirements for what needs to be in the SDR:\r\n\r\n1. [SDR-CSO-FRR (FedRAMP Rules)](https://www.fedramp.gov/2026/reference/security-decision-record/#fedramp-rules) says how to supply independent verification and validation summaries for rules.\r\n2. [SDR-CSF-CTF (Rev5 Controls)](https://www.fedramp.gov/2026/reference/security-decision-record/#rev5-controls) says how to supply the same for controls.\r\n3. There are also requirements for an overall summary of the assessment, and requirements that the information be supplied by the independent assessor and included by the cloud service provider without inappropriate modification.\r\n\r\n"
+        }
+      ],
+      "replies_total": 1,
       "replies_truncated": false
     }
   ],
@@ -3434,6 +3447,11 @@
       "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19445043",
       "author": "pete-gov",
       "created_at": "2026-11-06T16:53:49Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19496128",
+      "author": "pete-gov",
+      "created_at": "2026-11-09T16:00:20Z"
     }
   ],
   "entities": {
@@ -3553,10 +3571,12 @@
       "https://www.fedramp.gov/2026/reference/fedramp-certification/#fresh-fedramp-certification-package",
       "https://www.fedramp.gov/2026/reference/fedramp-certification/#fresh-independent-assessment",
       "https://www.fedramp.gov/2026/reference/fedramp-certification/#updating-stale-assessments",
+      "https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#assessment-summary",
       "https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#overall-summary-of-assessment",
       "https://www.fedramp.gov/2026/reference/minimum-assessment-scope/",
       "https://www.fedramp.gov/2026/reference/rev5-control-guidance/",
       "https://www.fedramp.gov/2026/reference/rev5/d/significant-change-notification/",
+      "https://www.fedramp.gov/2026/reference/security-decision-record/#fedramp-rules",
       "https://www.fedramp.gov/2026/reference/security-decision-record/#key-security-indicator-metrics",
       "https://www.fedramp.gov/2026/reference/security-decision-record/#rev5-controls",
       "https://www.fedramp.gov/2026/reference/vulnerability-detection-and-response/",
@@ -3602,6 +3622,6 @@
       "vulnerability_mgmt"
     ]
   },
-  "content_hash": "99ee3d786ffc564769f1b4239ad66c294d5dead964777718d70cef6df325abfa",
-  "synced_at": "2026-11-07T14:07:33.762130+00:00"
+  "content_hash": "bb4845d43a68d73bb7c53ff9f4829e0998f99d582ad612b208cd4ab69fd16e5f",
+  "synced_at": "2026-11-09T17:37:08.412325+00:00"
 }
