@@ -15,7 +15,7 @@
   "author": "pete-gov",
   "author_is_official": true,
   "created_at": "2026-06-24T21:49:44Z",
-  "updated_at": "2026-11-09T16:00:20Z",
+  "updated_at": "2026-11-10T20:29:32Z",
   "last_edited_at": null,
   "closed": false,
   "closed_at": null,
@@ -24,7 +24,7 @@
   "answer_chosen_at": null,
   "upvotes": 1,
   "body": "## This thread is for any and all Q&A or general discussion related to FedRAMP Rev5 in general that does not need to have its own thread.\r\n\r\nFedRAMP released the [Consolidated Rules for 2026](https://www.fedramp.gov/2026/) on June 24, 2026 with a considerable set of changes for FedRAMP Rev5 that will apply to all cloud service providers.\r\n\r\nThese changes include:\r\n\r\n- Mandatory adoption of the Vulnerability Detection and Response and Vulnerability Evaluation and Reporting rules by December 6, 2026 in response to CISA BOD 26-04\r\n- Changes to assessments for Rev5 to align more like assessments for 20x - focusing on verification and validation instead of just control implementation.\r\n- Replacement of most FedRAMP templates with a new Certification Package Overview and Security Decision Record\r\n- Removal of many FedRAMP-assigned control parameters and a lot of older FedRAMP control guidance\r\n- Mandatory adoption of many other Balance Improvement Releases through 2027\r\n- A requirement to address all FedRAMP Rules within the Security Decision Record, instead of only addressing controls\r\n\r\nSome of these changes take effect for all cloud service providers on certain dates no matter what, others take effect at the next annual assessment. In general, these are sweeping changes that will require all cloud service providers to begin planning now to continue to meet FedRAMP Rev5 requirements.\r\n\r\nHistorical materials are available at [https://fedramp.gov/legacy](https://fedramp.gov/legacy).\r\n\r\n---\r\n\r\nYou may see some of the following folks from FedRAMP responding in this thread:\r\n\r\n- `pete-gov` - Pete, FedRAMP Director\r\n- `nicole-gov` - Nicole, Security Director\r\n- `dan-fedramp` - Dan, Lead Cloud Security Engineer\r\n- `paulagosta` - Paul, Lead Cloud Security Engineer (Bastion)\r\n- `emu-gov` - Emu, Lead Cloud Security Engineer (Vanguard)\r\n- `rhoesing` - Ryan, Chief of Staff & Policy Branch Chief",
-  "comment_count": 58,
+  "comment_count": 59,
   "comments": [
     {
       "id": "DC_kwDOOxfoic4BChJy",
@@ -2566,7 +2566,7 @@
     {
       "id": "DC_kwDOOxfoic4BJblA",
       "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19249472",
-      "author": "hawksjennifer",
+      "author": "assessing-not-judging",
       "author_association": "NONE",
       "is_official": false,
       "created_at": "2026-10-28T17:48:13Z",
@@ -2591,7 +2591,7 @@
         {
           "id": "DC_kwDOOxfoic4BJcog",
           "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19253792",
-          "author": "hawksjennifer",
+          "author": "assessing-not-judging",
           "author_association": "NONE",
           "is_official": false,
           "created_at": "2026-10-28T20:56:52Z",
@@ -2881,9 +2881,21 @@
           "upvotes": 0,
           "minimized": false,
           "body": "Thank you, Pete!"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BKfqZ",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19528345",
+          "author": "cbaerschellman",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-11-10T20:29:32Z",
+          "updated_at": "2026-11-10T20:29:32Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Hi Pete / PMO team,\r\n \r\nWe just wanted to seek further clarification on this.  \r\n \r\nFRC-APP-FIA requires a Class D provider to supply a fresh initial independent assessment, completed by a FedRAMP Recognized assessment service within the previous 3 months. FRC-APP-USA allows a stale initial assessment to be freshened by reviewing changes instead of a full re-assessment, but only if that assessment is no more than 9 months old. The rule refers to initial assessments and does not mention annual assessments. For a CSO that is in the Rev5 annual assessment cycle, they most likely have an initial assessment that is more than 9 months old and it's not clear if FRC-APP-USA applies.\r\n \r\nWould this change anything about your response (as far as the recommended pathway to uplift from a Rev5 Class C to Rev5 Class D)?\r\n \r\nThank you."
         }
       ],
-      "replies_total": 2,
+      "replies_total": 3,
       "replies_truncated": false
     },
     {
@@ -2943,6 +2955,22 @@
       ],
       "replies_total": 1,
       "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BKfoa",
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19528218",
+      "author": "adamstc1",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-11-10T20:19:44Z",
+      "updated_at": "2026-11-10T20:24:01Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "I have a very specific Accepted Vulnerability question.\r\n\r\nPer Rule VER-TFR-MAV: Providers MUST categorize any vulnerability that is not or will not be fully mitigated or remediated within 192 days of evaluation as an accepted vulnerability.\r\n\r\nGiven the following:\r\n- Definition of Fully Mitigated vulnerability: A vulnerability where the **likelihood of exploitation** or **Potential Agency Impact N-rating has been reduced from the original evaluation until either are negligible**, but the vulnerability is still detected.\r\n- PAIN-1 and PAIN-0 have no specific remediation deadline under rule VDR-TFR-PVR, consistent with CISA's \"fix as part of normal patching\" guidance.\r\n\r\nIs this following statement correct:\r\n\"Only PAIN2 and above vulnerabilities open for 192 days from original evaluation are automatically marked accepted. PAIN-0 and PAIN-1 vulnerabilities are not automatically marked accepted after 192 days.\"",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
     }
   ],
   "answer_url": null,
@@ -2962,6 +2990,7 @@
     "TM-Microsoft",
     "adamstc1",
     "alexmellott",
+    "assessing-not-judging",
     "badgerinspace",
     "cbaerschellman",
     "cbiggsrun",
@@ -2972,7 +3001,6 @@
     "emu-gov",
     "ericmoss54",
     "gmengelberg",
-    "hawksjennifer",
     "instantn00dles",
     "jsantore-sf",
     "judgecspab-max",
@@ -3522,6 +3550,7 @@
       "VER-RPT-PER",
       "VER-RPT-VDT",
       "VER-TFR-EVU",
+      "VER-TFR-MAV",
       "VER-TFR-MHR",
       "VER-TFR-MRH"
     ],
@@ -3622,6 +3651,6 @@
       "vulnerability_mgmt"
     ]
   },
-  "content_hash": "bb4845d43a68d73bb7c53ff9f4829e0998f99d582ad612b208cd4ab69fd16e5f",
-  "synced_at": "2026-11-09T17:37:08.412325+00:00"
+  "content_hash": "80b03ad7a3310bd7112bbae2d94ebff3a14e42c914432b6b70d1f1f8a7e5ffde",
+  "synced_at": "2026-11-11T15:20:15.495992+00:00"
 }

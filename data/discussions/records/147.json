@@ -15,7 +15,7 @@
   "author": "pete-gov",
   "author_is_official": true,
   "created_at": "2026-06-24T21:52:47Z",
-  "updated_at": "2026-11-06T19:50:35Z",
+  "updated_at": "2026-11-10T19:58:38Z",
   "last_edited_at": null,
   "closed": false,
   "closed_at": null,
@@ -24,7 +24,7 @@
   "answer_chosen_at": null,
   "upvotes": 1,
   "body": "## This thread is for any and all Q&A or general discussion related to FedRAMP 20x in general that does not need to have its own thread.\r\n\r\nFedRAMP released the [Consolidated Rules for 2026](https://www.fedramp.gov/2026/) on June 24, 2026 with all requirements for FedRAMP 20x Class A, B, and C.\r\n\r\nThis includes:\r\n\r\n- When each certification is available for application\r\n- All the rules and expectations for a FedRAMP 20x Certification\r\n- Basic JSON schemas for providing some high level machine-readable data\r\n- So much more\r\n\r\nWe're excited for folks to continue digging in after the Public Preview and begin preparing. We're happy to answer any general questions that don't need their own thread here!\r\n\r\n---\r\n\r\nYou may see some of the following folks from FedRAMP responding in this thread:\r\n\r\n- `pete-gov` - Pete, FedRAMP Director\r\n- `nicole-gov` - Nicole, Security Director\r\n- `dan-fedramp` - Dan, Lead Cloud Security Engineer\r\n- `paulagosta` - Paul, Lead Cloud Security Engineer (Bastion)\r\n- `emu-gov` - Emu, Lead Cloud Security Engineer (Vanguard)\r\n- `rhoesing` - Ryan, Chief of Staff & Policy Branch Chief",
-  "comment_count": 19,
+  "comment_count": 22,
   "comments": [
     {
       "id": "DC_kwDOOxfoic4BChim",
@@ -912,7 +912,7 @@
     {
       "id": "DC_kwDOOxfoic4BIB8Z",
       "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-18882329",
-      "author": "dfulleradsk",
+      "author": "dfullerfedramp",
       "author_association": "NONE",
       "is_official": false,
       "created_at": "2026-10-12T14:24:48Z",
@@ -995,6 +995,80 @@
       ],
       "replies_total": 1,
       "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BKfWm",
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-19527078",
+      "author": "assessing-not-judging",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-11-10T19:24:39Z",
+      "updated_at": "2026-11-10T19:24:39Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Can a FedRAMP Moderate Equivalency (FRME) assessment satisfy FRC-CLA-ASF for Class A Certification? Assume the FRME assessment was completed within the last 12 months by a FedRAMP-recognized 3PAO/IAS that will attest to full coverage of the Rev. 5 Moderate requirements and assessment methods. ",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BKfaj",
+          "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-19527331",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-11-10T19:36:46Z",
+          "updated_at": "2026-11-10T19:36:46Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> Can a FedRAMP Moderate Equivalency (FRME) assessment satisfy FRC-CLA-ASF for Class A Certification? \r\n\r\nWe haven't reviewed the requirements or expectations of an FRME assessment and aren't familiar with how those are conducted, since their requirements are set by the Department of Defense and as far as we know do not align with modern FedRAMP Rev5 requirements.\r\n\r\nThat said, if the cloud service provider and assessor attest that it was done following FedRAMP Rev5 rules I think we'd consider it if all other requirements for FedRAMP Certification were met (especially [MKT-IIP-AGU Agency Use Cases](https://www.fedramp.gov/2026/reference/marketplace-listing/#agency-use-cases)). I'd be willing to take to the team about piloting use of an FRME assessment. You can email me directly at pete@fedramp.gov if you are serious about giving this a shot towards FedRAMP 20x Class A and want to talk next steps - I would expect we'd want to review your FRME assessment to make sure it is consistent with Rev5 requirements in advance so nobody wastes any time."
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BKfYQ",
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-19527184",
+      "author": "jfarr-sb",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-11-10T19:30:39Z",
+      "updated_at": "2026-11-10T19:30:39Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Good question\nFrom: Jen ***@***.***>\nDate: Tuesday, November 10, 2026 at 1:25 PM\nTo: FedRAMP/community ***@***.***>\nCc: Subscribed ***@***.***>\nSubject: Re: [FedRAMP/community] 20x questions and discussion on the Consolidated Rules for 2026 (Discussion #147)\nExternal Email - Be Cautious!\nCan a FedRAMP Moderate Equivalency (FRME) assessment satisfy FRC-CLA-ASF for Class A Certification? Assume the FRME assessment was completed within the last 12 months by a FedRAMP-recognized 3PAO/IAS that will attest to full coverage of the Rev. 5 Moderate requirements and assessment methods.\n—\nReply to this email directly, [view it on GitHub] <https://github.com/FedRAMP/community/discussions/147?email_source=notifications&email_token=B5JTM5G2RSJCY7ZYDB23MYD5YNTRZA5CNFSNUABIM5UWIORPF5TWS5BNNB2WEL2ENFZWG5LTONUW63SDN5WW2ZLOOQXTCOJVGI3TANZYUZZGKYLTN5XKU43VMJZWG4TJMJSWJJLFOZSW45FMMZXW65DFOJPWG3DJMNVQ#discussioncomment-19527078>\n, or [unsubscribe] <https://github.com/notifications/unsubscribe-auth/B5JTM5H4O4LJA4Q6DVZX52L5YNTRZAVCNFSNUABIKJSXA33TNF2G64TZHM4TSMJUGIZDMMBRHNCGS43DOVZXG2LPNY5TCMBTGE2TINZUUF3AE>\n.\nYou are receiving this because you are subscribed to this thread.",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BKfcj",
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-19527459",
+      "author": "jfarr-sb",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-11-10T19:43:10Z",
+      "updated_at": "2026-11-10T19:43:10Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Pete - chiming in uninvited.\nFR Mod Equiv - is 800-53 Moderate with NO POAM items and full independent Pen Test to the FR standard, assessed by a FR 3PAO and then a letter of attestation issued. Full re-assessment annually.\nIt would be a strong package for A.\nThanks, Jeff\nFrom: Pete Waterman ***@***.***>\nDate: Tuesday, November 10, 2026 at 1:37 PM\nTo: FedRAMP/community ***@***.***>\nCc: Jeff Farr ***@***.***>; Comment ***@***.***>\nSubject: Re: [FedRAMP/community] 20x questions and discussion on the Consolidated Rules for 2026 (Discussion #147)\nExternal Email - Be Cautious!\n> Can a FedRAMP Moderate Equivalency (FRME) assessment satisfy FRC-CLA-ASF for Class A Certification?We haven't reviewed the requirements or expectations of an FRME assessment and aren't familiar with how those are conducted, since their requirements are set by the Department of Defense and as far as we know do not align with modern FedRAMP Rev5 requirements.\nThat said, if the cloud service provider and assessor attest that it was done following FedRAMP Rev5 rules I think we'd consider it if all other requirements for FedRAMP Certification were met (especially [MKT-IIP-AGU Agency Use Cases] <https://www.fedramp.gov/2026/reference/marketplace-listing/#agency-use-cases>\n). I'd be willing to take to the team about piloting use of an FRME assessment. You can email me directly at ***@***.***\nif you are serious about giving this a shot towards FedRAMP 20x Class A and want to talk next steps - I would expect we'd want to review your FRME assessment to make sure it is consistent with Rev5 requirements in advance so nobody wastes any time.\n—\nReply to this email directly, [view it on GitHub] <https://github.com/FedRAMP/community/discussions/147?email_source=notifications&email_token=B5JTM5GGKS4YY46N7N5D2VD5YNU6TA5CNFSNUABIM5UWIORPF5TWS5BNNB2WEL2ENFZWG5LTONUW63SDN5WW2ZLOOQXTCOJVGI3TGMZRUZZGKYLTN5XKOY3PNVWWK3TUUVSXMZLOOSWGM33PORSXEX3DNRUWG2Y#discussioncomment-19527331>\n, or [unsubscribe] <https://github.com/notifications/unsubscribe-auth/B5JTM5ED3FDBX7KL3C2GXKD5YNU6TAVCNFSNUABIKJSXA33TNF2G64TZHM4TSMJUGIZDMMBRHNCGS43DOVZXG2LPNY5TCMBTGE2TINZUUF3AE>\n.\nYou are receiving this because you commented.",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BKfij",
+          "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-19527843",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-11-10T19:58:37Z",
+          "updated_at": "2026-11-10T19:58:37Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> FR Mod Equiv - is 800-53 Moderate with NO POAM items and full independent Pen Test to the FR standard, assessed by a FR 3PAO and then a letter of attestation issued. Full re-assessment annually.\r\n\r\nI'm aware of what people **say** an FRME assessment is, but FR wasn't involved in setting the rules for that assessment or ensuring it'ss accurate or overseeing formal review of them, so we'd need to actually look at them to make that assessment, and that requires an investment of government resources/etc. that we haven't been able to justify historically. It's different from an assessment that we know follows a process that has formal approval from an accountable body."
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
     }
   ],
   "answer_url": null,
@@ -1006,14 +1080,16 @@
     "TM-Microsoft",
     "aaronhbridges",
     "apolaniaklaus",
+    "assessing-not-judging",
     "cclements05",
     "daclevenger",
     "dan-fedramp",
-    "dfulleradsk",
+    "dfullerfedramp",
     "ekraft-coalfire",
     "emu-gov",
     "ghempton",
     "jbrenton-fits",
+    "jfarr-sb",
     "jnguyen1294",
     "nicole-gov",
     "pallakatos",
@@ -1192,6 +1268,16 @@
       "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-19448017",
       "author": "pete-gov",
       "created_at": "2026-11-06T19:50:35Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-19527331",
+      "author": "pete-gov",
+      "created_at": "2026-11-10T19:36:46Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/147#discussioncomment-19527843",
+      "author": "pete-gov",
+      "created_at": "2026-11-10T19:58:37Z"
     }
   ],
   "entities": {
@@ -1199,6 +1285,7 @@
       "CDS-CSF-TCM",
       "CDS-CSO-PSM",
       "CDS-CSO-PUB",
+      "FRC-CLA-ASF",
       "FRC-CSX-MOT",
       "IVV-CSO-RAA",
       "MAS-CSO-IIR",
@@ -1221,9 +1308,15 @@
       "SA-04",
       "SA-04(5)"
     ],
-    "discussion_refs": [],
+    "discussion_refs": [
+      147
+    ],
     "urls": [
+      "https://github.com/FedRAMP/community/discussions/147?email_source=notifications&email_token=B5JTM5G2RSJCY7ZYDB23MYD5YNTRZA5CNFSNUABIM5UWIORPF5TWS5BNNB2WEL2ENFZWG5LTONUW63SDN5WW2ZLOOQXTCOJVGI3TANZYUZZGKYLTN5XKU43VMJZWG4TJMJSWJJLFOZSW45FMMZXW65DFOJPWG3DJMNVQ#discussioncomment-19527078",
+      "https://github.com/FedRAMP/community/discussions/147?email_source=notifications&email_token=B5JTM5GGKS4YY46N7N5D2VD5YNU6TA5CNFSNUABIM5UWIORPF5TWS5BNNB2WEL2ENFZWG5LTONUW63SDN5WW2ZLOOQXTCOJVGI3TGMZRUZZGKYLTN5XKOY3PNVWWK3TUUVSXMZLOOSWGM33PORSXEX3DNRUWG2Y#discussioncomment-19527331",
       "https://github.com/FedRAMP/docs-legacy",
+      "https://github.com/notifications/unsubscribe-auth/B5JTM5ED3FDBX7KL3C2GXKD5YNU6TAVCNFSNUABIKJSXA33TNF2G64TZHM4TSMJUGIZDMMBRHNCGS43DOVZXG2LPNY5TCMBTGE2TINZUUF3AE",
+      "https://github.com/notifications/unsubscribe-auth/B5JTM5H4O4LJA4Q6DVZX52L5YNTRZAVCNFSNUABIKJSXA33TNF2G64TZHM4TSMJUGIZDMMBRHNCGS43DOVZXG2LPNY5TCMBTGE2TINZUUF3AE",
       "https://github.com/user-attachments/assets/21387f29-b69f-48e3-92d9-528041a25b7b",
       "https://help.fedramp.gov/hc/en-us/requests/new?ticket_form_id=52069750514459",
       "https://preview.fedramp.gov/2026/reference/secure-configuration-guide/",
@@ -1232,6 +1325,7 @@
       "https://www.fedramp.gov/2026/providers/implement/marketplace/",
       "https://www.fedramp.gov/2026/providers/rev5/controls/",
       "https://www.fedramp.gov/2026/providers/start/path/#temporary-rev5-program-certification-availability-for-class-b-and-c",
+      "https://www.fedramp.gov/2026/reference/marketplace-listing/#agency-use-cases",
       "https://www.fedramp.gov/2026/reference/minimum-assessment-scope/#supplemental-information",
       "https://www.fedramp.gov/2026/reference/security-decision-record/?h=security+decis#security-decision-record-metadata",
       "https://www.fedramp.gov/2026/rules/#force-of-the-rule",
@@ -1263,6 +1357,6 @@
       "vulnerability_mgmt"
     ]
   },
-  "content_hash": "32e6206807ce197181489edcfe38e0399d5808e01bb9864363d2650446e90b4d",
-  "synced_at": "2026-11-07T14:07:33.762130+00:00"
+  "content_hash": "2d2beb33491519f1876c47c4692b0651e01cb859a5d594c43c8d44688334fe4e",
+  "synced_at": "2026-11-11T15:20:15.495992+00:00"
 }

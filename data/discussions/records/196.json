@@ -1,0 +1,77 @@
+{
+  "schema_version": 3,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-196",
+  "node_id": "D_kwDOOxfoic4ArAbc",
+  "number": 196,
+  "title": "VDR/VER migration progress reporting Q&A/feedback/etc.",
+  "url": "https://github.com/FedRAMP/community/discussions/196",
+  "category": "Official Threads",
+  "category_slug": "official-threads",
+  "labels": [
+    "FedRAMP Official"
+  ],
+  "is_official_thread": true,
+  "is_rfc": false,
+  "author": "pete-gov",
+  "author_is_official": true,
+  "created_at": "2026-11-10T16:27:07Z",
+  "updated_at": "2026-11-10T22:25:02Z",
+  "last_edited_at": "2026-11-10T20:07:35Z",
+  "closed": false,
+  "closed_at": null,
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 2,
+  "body": "# VDR/VER Migration Reporting Q&A / General Discussion\r\n\r\nOn Tue Nov 10, 2026, FedRAMP released [Public Notice NTC-0017 VDR/VER Migration Progress Reporting and Upcoming FY27 Q1 FedRAMP Security Inbox Test](https://www.fedramp.gov/notices/0017/). \r\n\r\nThis Notice explained that FedRAMP will be collecting Progress Reports from all FedRAMP Certified cloud service providers who are expected to migrate to the VDR/VER rules and explained how that information will be collected.\r\n\r\nIt included the [VDR/VER Migration Resources](https://www.fedramp.gov/vdr-migration/) website for additional information on Progress Report collection, including deadlines, corrective action plans, schemas, and more.\r\n\r\n---\r\n\r\nCollecting progress reports from nearly 600 cloud services is obviously a massive undertaking. We weren't even sure if it was feasible, to be honest. This is partially a test to see how it goes. In the future when folks have adopted CR26 or future consolidated rules things will be much easier as we can simply programmatically monitor everyone's information but today we still need to ask for progress reports.\r\n\r\n**This thread is dedicated to questions or feedback about this process, including the content, instructions, schemas, etc.**",
+  "comment_count": 1,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4BKgGb",
+      "url": "https://github.com/FedRAMP/community/discussions/196#discussioncomment-19530139",
+      "author": "iteuscher",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-11-10T22:25:01Z",
+      "updated_at": "2026-11-10T22:25:01Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "We noticed that [VDR-TFR-MVF](https://www.fedramp.gov/2026/reference/vulnerability-detection-and-response/#persistent-machine-verification-and-validation-for-rev5) is included as required on the [mini-SDR schema](https://www.fedramp.gov/vdr-migration/assets/implementation-status.schema.json) but the requirement seems only applicable to Rev5 CSPs not 20x CSPs. \r\n\r\n> Persistent Machine Verification and Validation for Rev5\r\n> VDR-TFR-MVF\r\n> Providers of FedRAMP Rev5 Class B/C/D offerings SHOULD/MUST verify and validate the status of machine-based information resources at least once every month.\r\n\r\nShould 20x CSPs include VDR-TFR-MVF as Not Applicable in their mini-SDR or leave it out? \r\n\r\nThanks,\r\nIsaac & Paramify Team ",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
+    }
+  ],
+  "answer_url": null,
+  "participants": [
+    "iteuscher",
+    "pete-gov"
+  ],
+  "official_responses": [],
+  "entities": {
+    "rule_ids": [
+      "VDR-TFR-MVF"
+    ],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://www.fedramp.gov/2026/reference/vulnerability-detection-and-response/#persistent-machine-verification-and-validation-for-rev5",
+      "https://www.fedramp.gov/notices/0017/",
+      "https://www.fedramp.gov/vdr-migration/",
+      "https://www.fedramp.gov/vdr-migration/assets/implementation-status.schema.json"
+    ],
+    "topics": [
+      "20x",
+      "class_b",
+      "machine_readable",
+      "rev5",
+      "vulnerability_mgmt"
+    ]
+  },
+  "content_hash": "a7e9732a4c9a61038f5e770f0ffbcd38f33beaba44ed0f61e3c6a21b7fa7bbe8",
+  "synced_at": "2026-11-11T15:20:15.495992+00:00"
+}

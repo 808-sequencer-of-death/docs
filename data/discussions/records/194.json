@@ -15,7 +15,7 @@
   "author": "LPT00-ctrl",
   "author_is_official": false,
   "created_at": "2026-11-08T19:16:22Z",
-  "updated_at": "2026-11-09T16:30:52Z",
+  "updated_at": "2026-11-10T23:43:40Z",
   "last_edited_at": null,
   "closed": false,
   "closed_at": null,
@@ -24,7 +24,7 @@
   "answer_chosen_at": null,
   "upvotes": 1,
   "body": "How will the FedRAMP PMO ensure that agencies are using 20X?",
-  "comment_count": 1,
+  "comment_count": 2,
   "comments": [
     {
       "id": "DC_kwDOOxfoic4BKX9j",
@@ -41,11 +41,77 @@
       "replies": [],
       "replies_total": 0,
       "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BKfXH",
+      "url": "https://github.com/FedRAMP/community/discussions/194#discussioncomment-19527111",
+      "author": "jsantore-sf",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-11-10T19:26:52Z",
+      "updated_at": "2026-11-10T19:26:52Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "I recall in one of the recent monthly 20x meetings when someone asked about '20x systems with agency ATOs' (and that it was a pretty low number.  3 CSPs if I recall correctly), that @pete-gov, you mentioned that unlike in the past, FedRAMP is no longer receiving or tracking those ATO letters, and so usage was likely more prevalent than the marketplace would indicate.  \r\n\r\nI think this information would be massively helpful for all of us to understand the agency adoption rate.  If we can't outright require agency ATOs to be filed with FedRAMP (as they were in the previous FedRAMP iteration), I wonder if you could require CSPs to provide that.  Having accurate agency ATO statistics in the marketplace is a pretty important piece of information, particularly in these early days of 20x adoption as we collectively figure out how some of this works in practice.\r\n\r\nI do recall back in the JAB days, the JAB would periodically audit JAB authorized systems to confirm that CSPs had the requisite 6 ATOs to maintain their JAB authorization.  Worst case, I would think FedRAMP could do something similar here to ensure the marketplace statistics are accurate.  \r\n",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BKfar",
+          "url": "https://github.com/FedRAMP/community/discussions/194#discussioncomment-19527339",
+          "author": "jsantore-sf",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-11-10T19:37:47Z",
+          "updated_at": "2026-11-10T19:37:47Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Actually, a reply-to-self thing.  I just looked at the marketplace with 20x, and it looks like this has changed and there are no longer 3 systems with agency ATOs, but just one.\r\n\r\nFrom memory, if I recall:\r\nPerplexity had:\r\nDepartment of Agriculture\r\nUS Election Assistance Commission\r\n\r\nGemini had:\r\nUS Election Assistance Commission\r\n\r\nOpenAI had:\r\nVeterans' Administration\r\nUS Election Assistance Commission\r\n\r\nI think at the time, all three CSPs were 20x pilots.  \r\n\r\nJust out of curiosity, what changed?  I know I've been looking at this list pretty regularly to advise potential customers, so again, if at all possible, we'd love to have these statistics.  \r\n\r\nThanks.\r\n"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BKfe9",
+          "url": "https://github.com/FedRAMP/community/discussions/194#discussioncomment-19527613",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-11-10T19:48:59Z",
+          "updated_at": "2026-11-10T19:48:59Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> ... unlike in the past, FedRAMP is no longer receiving or tracking those ATO letters, and so usage was likely more prevalent than the marketplace would indicate.\r\n\r\nThere's a lot that goes into this - the [FedRAMP Authorization Act](https://www.fedramp.gov/2026/authority/law/agencies/#c-submission-of-authorizations-to-operate-required) requires agencies to tell us when they ATO a FedRAMP Certified cloud service, and when that act passed and OMB was doing a ton of engagement with agencies about FedRAMP in the lead up to M-24-15, we had a HUGE spike in notifications. Lots of agencies were shipping us literal buckets full of old ATO letters so they didn't get yelled at by OMB or their IG. \r\n\r\nAfterwards though, the same thing happened that always happens... lots of agencies never established a whole workflow or policy to do this and only use a couple new cloud services a year (if that), so when they ATO'd a new cloud service 9 months later they didn't send us the letter. Then last year there were pretty big changes in staffing and we have to train up more folks across agencies and they don't always want to send us letters, plus in general agency usage of new cloud services has dropped dramatically.\r\n\r\nResult is the current situation - we have a few stalwart agencies that let us know, a few more that tell us back-channel, and a lot of folks that simply don't let us know at all and we find out about usage from the cloud service provider. \r\n\r\nIt **is** required by the law. Again though, FedRAMP has no enforcement authority or responsibility. All we can do is keep reminding folks. We expect a GAO audit might catch this, and some agency IG audits would catch it, but they'll all be coming out over the next year+ and agencies might not pay attention. Is what it is.\r\n\r\nAnyone looking at 20x usage should also look at Rev5 usage. You'll see for example that something like 2/3 of the cloud services that got a Rev5 in 2025 have seen no reuse according to Marketplace data, and that around a third of all-time Rev5 services have no reuse at all.\r\n\r\nLooking at reuse data for 20x certifications that are weeks old is silly."
+        },
+        {
+          "id": "DC_kwDOOxfoic4BKfhY",
+          "url": "https://github.com/FedRAMP/community/discussions/194#discussioncomment-19527768",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-11-10T19:54:51Z",
+          "updated_at": "2026-11-10T19:54:51Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> Just out of curiosity, what changed?\r\n\r\nThe back-end system that we use to track ATOs and funnel them to the Marketplace is going through some migrations that is causing this data to be a bit glitchy right now. A number of agencies have dropped off because of some issues with the name being different in one system and other stuff like that. I would've just stopped displaying this information in the marketplace entirely until all those issues are sorted out but I didn't want to trigger conspiracy theories. 🤣 \r\n\r\nThe team **thought** they fixed the last of these issues with the push to production that just happened right now, but I'm pretty sure US Election Assistance Commission should still be on those. I'll let them know to double check."
+        },
+        {
+          "id": "DC_kwDOOxfoic4BKgYb",
+          "url": "https://github.com/FedRAMP/community/discussions/194#discussioncomment-19531291",
+          "author": "LPT00-ctrl",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-11-10T23:43:40Z",
+          "updated_at": "2026-11-10T23:43:40Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "1) Why is \"reuse\" no longer listed on FedRAMP.gov?\r\n\r\n2) What is meant by Third-Party Resources listed under a particular cloud?"
+        }
+      ],
+      "replies_total": 4,
+      "replies_truncated": false
     }
   ],
   "answer_url": null,
   "participants": [
     "LPT00-ctrl",
+    "jsantore-sf",
     "pete-gov"
   ],
   "official_responses": [
@@ -53,6 +119,16 @@
       "url": "https://github.com/FedRAMP/community/discussions/194#discussioncomment-19496803",
       "author": "pete-gov",
       "created_at": "2026-11-09T16:30:52Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/194#discussioncomment-19527613",
+      "author": "pete-gov",
+      "created_at": "2026-11-10T19:48:59Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/194#discussioncomment-19527768",
+      "author": "pete-gov",
+      "created_at": "2026-11-10T19:54:51Z"
     }
   ],
   "entities": {
@@ -60,11 +136,15 @@
     "rfc_ids": [],
     "nist_controls": [],
     "discussion_refs": [],
-    "urls": [],
+    "urls": [
+      "https://www.fedramp.gov/2026/authority/law/agencies/#c-submission-of-authorizations-to-operate-required"
+    ],
     "topics": [
-      "20x"
+      "20x",
+      "marketplace",
+      "rev5"
     ]
   },
-  "content_hash": "44e2e7b33fdbb974ddd214663953515b8c01edc511c02709a1edc1a292ec9a94",
-  "synced_at": "2026-11-09T17:37:08.412325+00:00"
+  "content_hash": "62372c5ea9e9b290182fc0e5c817d672f1173deec393a8874d5a6f7e55f1aefa",
+  "synced_at": "2026-11-11T15:20:15.495992+00:00"
 }
