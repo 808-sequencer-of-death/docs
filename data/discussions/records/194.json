@@ -15,7 +15,7 @@
   "author": "LPT00-ctrl",
   "author_is_official": false,
   "created_at": "2026-11-08T19:16:22Z",
-  "updated_at": "2026-11-10T23:43:40Z",
+  "updated_at": "2026-11-11T18:49:48Z",
   "last_edited_at": null,
   "closed": false,
   "closed_at": null,
@@ -102,9 +102,21 @@
           "upvotes": 0,
           "minimized": false,
           "body": "1) Why is \"reuse\" no longer listed on FedRAMP.gov?\r\n\r\n2) What is meant by Third-Party Resources listed under a particular cloud?"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BKkra",
+          "url": "https://github.com/FedRAMP/community/discussions/194#discussioncomment-19548890",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-11-11T18:49:48Z",
+          "updated_at": "2026-11-11T18:49:48Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> 1. Why is \"reuse\" no longer listed on FedRAMP.gov?\r\n\r\nWe stopped using this term because it was used too many different ways that created confusion, especially prior to the FedRAMP Authorization Act. Reuse had both \"direct\" and \"indirect\" calculations that included nested use but did not reflect actual agency use - for example, an agency ATO for a SaaS built on IaaS MegaCloud would show as use for IaaS MegaCloud but in many cases the agency didn't even look at or ATO IaaS MegaCloud. The third-party information resources lists also had to be managed manually, which meant they immediately became inaccurate and out of date at scale.\r\n\r\nInstead, FR just shows Agency Authorization Details on the Marketplace, which was formerly referred to as the Direct Reuse.\r\n\r\n> 2. What is meant by Third-Party Resources listed under a particular cloud?\r\n\r\nThe pages explain that it's referring to [third-party information resources](https://www.fedramp.gov/2026/definitions/#third-party-information-resource) used by the cloud service offering. This information only displays for folks that have adopted the new [Certification Package Overview](https://www.fedramp.gov/2026/reference/certification-package-overview/) rules. These rules will be required for everyone in June 2027 and we'll have much more complete data then.\r\n\r\nIn plain language, it's other cloud services used by the cloud service.\r\n"
         }
       ],
-      "replies_total": 4,
+      "replies_total": 5,
       "replies_truncated": false
     }
   ],
@@ -129,6 +141,11 @@
       "url": "https://github.com/FedRAMP/community/discussions/194#discussioncomment-19527768",
       "author": "pete-gov",
       "created_at": "2026-11-10T19:54:51Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/194#discussioncomment-19548890",
+      "author": "pete-gov",
+      "created_at": "2026-11-11T18:49:48Z"
     }
   ],
   "entities": {
@@ -137,14 +154,17 @@
     "nist_controls": [],
     "discussion_refs": [],
     "urls": [
-      "https://www.fedramp.gov/2026/authority/law/agencies/#c-submission-of-authorizations-to-operate-required"
+      "https://www.fedramp.gov/2026/authority/law/agencies/#c-submission-of-authorizations-to-operate-required",
+      "https://www.fedramp.gov/2026/definitions/#third-party-information-resource",
+      "https://www.fedramp.gov/2026/reference/certification-package-overview/"
     ],
     "topics": [
       "20x",
+      "agency_authorization",
       "marketplace",
       "rev5"
     ]
   },
-  "content_hash": "62372c5ea9e9b290182fc0e5c817d672f1173deec393a8874d5a6f7e55f1aefa",
-  "synced_at": "2026-11-11T15:20:15.495992+00:00"
+  "content_hash": "c01f8f849dd2e2d5e2cee3e127832d00c7cd0f1d3de0087412b6f1a8ecf0240e",
+  "synced_at": "2026-11-12T16:03:42.643727+00:00"
 }

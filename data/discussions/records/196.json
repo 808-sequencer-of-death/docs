@@ -17,7 +17,7 @@
   "author": "pete-gov",
   "author_is_official": true,
   "created_at": "2026-11-10T16:27:07Z",
-  "updated_at": "2026-11-10T22:25:02Z",
+  "updated_at": "2026-11-11T18:39:52Z",
   "last_edited_at": "2026-11-10T20:07:35Z",
   "closed": false,
   "closed_at": null,
@@ -40,8 +40,21 @@
       "minimized": false,
       "body": "We noticed that [VDR-TFR-MVF](https://www.fedramp.gov/2026/reference/vulnerability-detection-and-response/#persistent-machine-verification-and-validation-for-rev5) is included as required on the [mini-SDR schema](https://www.fedramp.gov/vdr-migration/assets/implementation-status.schema.json) but the requirement seems only applicable to Rev5 CSPs not 20x CSPs. \r\n\r\n> Persistent Machine Verification and Validation for Rev5\r\n> VDR-TFR-MVF\r\n> Providers of FedRAMP Rev5 Class B/C/D offerings SHOULD/MUST verify and validate the status of machine-based information resources at least once every month.\r\n\r\nShould 20x CSPs include VDR-TFR-MVF as Not Applicable in their mini-SDR or leave it out? \r\n\r\nThanks,\r\nIsaac & Paramify Team ",
       "is_answer": false,
-      "replies": [],
-      "replies_total": 0,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BKkn8",
+          "url": "https://github.com/FedRAMP/community/discussions/196#discussioncomment-19548668",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-11-11T18:39:52Z",
+          "updated_at": "2026-11-11T18:39:52Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Yes, I intended to put some conditional logic into the JSON schema so [I only flagged this issue for the CSV but woops](https://www.fedramp.gov/vdr-migration/schemas/#not-applicable-rules). Please mark the 20x-specific rule `Not Applicable` (with `capStatus` `Not Applicable`) for Rev5 and vice versa."
+        }
+      ],
+      "replies_total": 1,
       "replies_truncated": false
     }
   ],
@@ -50,7 +63,13 @@
     "iteuscher",
     "pete-gov"
   ],
-  "official_responses": [],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/196#discussioncomment-19548668",
+      "author": "pete-gov",
+      "created_at": "2026-11-11T18:39:52Z"
+    }
+  ],
   "entities": {
     "rule_ids": [
       "VDR-TFR-MVF"
@@ -62,7 +81,8 @@
       "https://www.fedramp.gov/2026/reference/vulnerability-detection-and-response/#persistent-machine-verification-and-validation-for-rev5",
       "https://www.fedramp.gov/notices/0017/",
       "https://www.fedramp.gov/vdr-migration/",
-      "https://www.fedramp.gov/vdr-migration/assets/implementation-status.schema.json"
+      "https://www.fedramp.gov/vdr-migration/assets/implementation-status.schema.json",
+      "https://www.fedramp.gov/vdr-migration/schemas/#not-applicable-rules"
     ],
     "topics": [
       "20x",
@@ -72,6 +92,6 @@
       "vulnerability_mgmt"
     ]
   },
-  "content_hash": "a7e9732a4c9a61038f5e770f0ffbcd38f33beaba44ed0f61e3c6a21b7fa7bbe8",
-  "synced_at": "2026-11-11T15:20:15.495992+00:00"
+  "content_hash": "d4cda878e37babeacbd541da0288cf050d3841c5c25480dd7278250165d73ee1",
+  "synced_at": "2026-11-12T16:03:42.643727+00:00"
 }

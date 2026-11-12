@@ -15,7 +15,7 @@
   "author": "LPT00-ctrl",
   "author_is_official": false,
   "created_at": "2026-11-10T23:46:14Z",
-  "updated_at": "2026-11-10T23:46:14Z",
+  "updated_at": "2026-11-12T11:38:16Z",
   "last_edited_at": null,
   "closed": false,
   "closed_at": null,
@@ -24,21 +24,77 @@
   "answer_chosen_at": null,
   "upvotes": 1,
   "body": "What happens when a cloud with numerous authorizations becomes insecure? Can it become too big to de-certify? How will the FedRAMP PMO be able to de-certify a cloud with 50-100 authorizations if it becomes insecure? ",
-  "comment_count": 0,
-  "comments": [],
+  "comment_count": 1,
+  "comments": [
+    {
+      "id": "DC_kwDOOxfoic4BKkwl",
+      "url": "https://github.com/FedRAMP/community/discussions/197#discussioncomment-19549221",
+      "author": "pete-gov",
+      "author_association": "MEMBER",
+      "is_official": true,
+      "created_at": "2026-11-11T19:03:30Z",
+      "updated_at": "2026-11-11T19:03:30Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "> What happens when a cloud with numerous authorizations becomes insecure? Can it become too big to de-certify? How will the FedRAMP PMO be able to de-certify a cloud with 50-100 authorizations if it becomes insecure?\r\n\r\nThe important thing in a situation like that wouldn't be whether or not the service has a FedRAMP Certification, it would be the massive risk of federal government agencies using it. In the event that FedRAMP itself believes a cloud service used by 50-100 agencies is a risk, we would work with the FedRAMP Board and CISA to initiate a red team assessment of that service. If the risk was more tangible, FR would report the issues to the FedRAMP Board, OMB, CISA, DOJ, ONCD, and the CIO Council as appropriate... but it is usually one of the national security or law enforcement agencies that first identify insecure behaviors because they are related to fraud/etc. and they come to FR with that information.\r\n\r\nIf a cloud service with 50-100 authorizations to operate government-wide made security decisions that led to it being too insecure to use, we can pretty much guarantee that CISA would release an Emergency Directive banning its use by federal agencies or the Federal Acquisition Security Council would order its removal from federal information systems (similar to how [they recently did for Acronis](https://www.federalregister.gov/documents/2026/10/30/2026-22215/notice-of-order-regarding-exclusion-and-removal-of-acronis-products-from-federal-civilian-executive)). FedRAMP would de-certify such services as directed.\r\n\r\n",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BKlac",
+          "url": "https://github.com/FedRAMP/community/discussions/197#discussioncomment-19551900",
+          "author": "LPT00-ctrl",
+          "author_association": "NONE",
+          "is_official": false,
+          "created_at": "2026-11-11T21:45:14Z",
+          "updated_at": "2026-11-11T21:45:14Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "Was Acronis a FedRAMP cloud?"
+        },
+        {
+          "id": "DC_kwDOOxfoic4BKoNt",
+          "url": "https://github.com/FedRAMP/community/discussions/197#discussioncomment-19563373",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-11-12T11:38:16Z",
+          "updated_at": "2026-11-12T11:38:16Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> Was Acronis a FedRAMP cloud?\r\n\r\nNope, just an example of the second time the government used gov-wide authority to ban products from use due to security risks."
+        }
+      ],
+      "replies_total": 2,
+      "replies_truncated": false
+    }
+  ],
   "answer_url": null,
   "participants": [
-    "LPT00-ctrl"
+    "LPT00-ctrl",
+    "pete-gov"
   ],
-  "official_responses": [],
+  "official_responses": [
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/197#discussioncomment-19549221",
+      "author": "pete-gov",
+      "created_at": "2026-11-11T19:03:30Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/197#discussioncomment-19563373",
+      "author": "pete-gov",
+      "created_at": "2026-11-12T11:38:16Z"
+    }
+  ],
   "entities": {
     "rule_ids": [],
     "rfc_ids": [],
     "nist_controls": [],
     "discussion_refs": [],
-    "urls": [],
+    "urls": [
+      "https://www.federalregister.gov/documents/2026/10/30/2026-22215/notice-of-order-regarding-exclusion-and-removal-of-acronis-products-from-federal-civilian-executive"
+    ],
     "topics": []
   },
-  "content_hash": "6aa90f3db9438a58fdeec724ed30590636b9e0ccc7796c5138803245b5476b2d",
-  "synced_at": "2026-11-11T15:20:15.495992+00:00"
+  "content_hash": "999334bb8fdcf06c352188d3e1b0f0ad52c0d751c7a8df83d3a55977879997f3",
+  "synced_at": "2026-11-12T16:03:42.643727+00:00"
 }

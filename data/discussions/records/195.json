@@ -15,7 +15,7 @@
   "author": "windwalk59-blip",
   "author_is_official": false,
   "created_at": "2026-11-09T16:03:19Z",
-  "updated_at": "2026-11-09T16:20:35Z",
+  "updated_at": "2026-11-12T11:40:16Z",
   "last_edited_at": null,
   "closed": false,
   "closed_at": null,
@@ -24,7 +24,7 @@
   "answer_chosen_at": null,
   "upvotes": 1,
   "body": "What is the UEI?   I assume it is Unique Entity Identifier, but is it CAGE code, DUNS number, a FEDRAMP generated ID#, etc.?   I do not see UEI listed in the FedRAMP Definitions.     I only see a reference to in is a discussion by [mblanco474](https://github.com/mblanco474)\r\n[on Jun 3](https://github.com/FedRAMP/community/discussions/38#discussioncomment-17168964). ",
-  "comment_count": 1,
+  "comment_count": 2,
   "comments": [
     {
       "id": "DC_kwDOOxfoic4BKX6W",
@@ -41,10 +41,40 @@
       "replies": [],
       "replies_total": 0,
       "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BKl81",
+      "url": "https://github.com/FedRAMP/community/discussions/195#discussioncomment-19554101",
+      "author": "PeterWeiler",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-11-12T00:56:13Z",
+      "updated_at": "2026-11-12T00:56:13Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "We have two UEI numbers (multiple records in sam.gov).  I can list both in the human-readable version of CDS-CSO-PUB since it is free-form; but the JSON schema requires a single string.  What is the recommendation for handling this?  Is a comma or semicolon separated list provided as a single string preferred?  Should I provide an array of strings regardless of validation failure?",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BKoOK",
+          "url": "https://github.com/FedRAMP/community/discussions/195#discussioncomment-19563402",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-11-12T11:40:16Z",
+          "updated_at": "2026-11-12T11:40:16Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> We have two UEI numbers (multiple records in sam.gov). I can list both in the human-readable version of CDS-CSO-PUB since it is free-form; but the JSON schema requires a single string. What is the recommendation for handling this? \r\n\r\nThe UEI on the Marketplace is purely for the convenience of agencies and isn't something FedRAMP has a particular stake in - many (if not most) cloud services don't even supply it. I'd just pick one and then have your alternate numbers displayed on the human-readable version on your website. We'd have to rework stuff to support multiple UEI's and I don't think that juice is worth the squeeze. :)\r\n"
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
     }
   ],
   "answer_url": null,
   "participants": [
+    "PeterWeiler",
     "pete-gov",
     "windwalk59-blip"
   ],
@@ -53,10 +83,17 @@
       "url": "https://github.com/FedRAMP/community/discussions/195#discussioncomment-19496598",
       "author": "pete-gov",
       "created_at": "2026-11-09T16:20:35Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/195#discussioncomment-19563402",
+      "author": "pete-gov",
+      "created_at": "2026-11-12T11:40:16Z"
     }
   ],
   "entities": {
-    "rule_ids": [],
+    "rule_ids": [
+      "CDS-CSO-PUB"
+    ],
     "rfc_ids": [],
     "nist_controls": [],
     "discussion_refs": [
@@ -68,8 +105,11 @@
       "https://sam.gov/entity-registration",
       "https://www.fsd.gov/gsafsd_sp/en/entity-registration-what-s-the-difference-between-only-getting-a-unique?id=kb_article_view&sysparm_article=KB0051214"
     ],
-    "topics": []
+    "topics": [
+      "machine_readable",
+      "marketplace"
+    ]
   },
-  "content_hash": "7e30d4a60570f3351c201432f995b4b307597df6b389dd37a5238ebf349b65c2",
-  "synced_at": "2026-11-09T17:37:08.412325+00:00"
+  "content_hash": "add308f1f18a4857e106b3f056f9eea748de15c14c44021257c4dbca2e67003d",
+  "synced_at": "2026-11-12T16:03:42.643727+00:00"
 }
