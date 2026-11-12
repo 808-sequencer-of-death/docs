@@ -6,6 +6,16 @@ sidebarTitle: "What changed"
 
 This page tracks two things: changes FedRAMP makes to the Consolidated Rules for 2026, and changes to this site. Each upstream entry summarizes FedRAMP's own [changelog](https://www.fedramp.gov/2026/changelog/) and links the official rules and our summaries. The official changelog governs if anything here differs. Each entry starts with its date. For an upstream release, that's the date FedRAMP published it.
 
+<Update label="2026-11-12" description="Upstream 2026.11.02.01">
+  **Date:** 2026-11-12
+
+  - **Rules:** no upstream rule text changed since release `2026.11.02.01`. See the official [changelog](https://www.fedramp.gov/2026/changelog/). Staff positions were added to [Vulnerability evaluation and reporting](/rules/vulnerability-evaluation-and-reporting) and [Certification data sharing](/rules/certification-data-sharing).
+  - **Discussions:** `pete-gov` posted new staff positions. See [Rev5 CR26 questions](/discussions/rev5-cr26-questions) and [Notable staff answers](/discussions/notable-staff-answers).
+    - [#146](https://github.com/FedRAMP/community/discussions/146): a PAIN1 vulnerability still becomes an Accepted Vulnerability after 192 days under [`VER-TFR-MAV`](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#mark-accepted-vulnerabilities) ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-19548618)). A single `VER-TFR-MRH` artifact can carry the `VER-RPT-VDT` and `VER-RPT-AVI` data, and [`CDS-CSO-HAD`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#historical-fedramp-certification-data) means you keep and share snapshots of it ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-19551658), [follow-up](https://github.com/FedRAMP/community/discussions/146#discussioncomment-19563598)).
+    - [#194](https://github.com/FedRAMP/community/discussions/194), [#195](https://github.com/FedRAMP/community/discussions/195), [#196](https://github.com/FedRAMP/community/discussions/196) and [#197](https://github.com/FedRAMP/community/discussions/197) are new to the digests: agency use of certified services, a single UEI in the `CDS-CSO-PUB` JSON, marking the other path's rules `Not Applicable` in VDR/VER migration progress reports, and escalation for a widely used insecure service.
+    - [RFC-0035 (#179)](https://github.com/FedRAMP/community/discussions/179) has one new community comment proposing a CycloneDX cryptography bill of materials for `CMU-CSO-CMD`. It isn't a staff position. See [RFC history](/discussions/rfc-history).
+</Update>
+
 <Update label="2026-11-04" description="Upstream 2026.11.02.01">
   **Date:** 2026-11-04
 

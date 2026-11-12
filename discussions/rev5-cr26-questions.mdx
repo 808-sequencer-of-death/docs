@@ -5,7 +5,7 @@ sidebarTitle: "Rev5 CR26 Q&A (#146)"
 ---
 
 <Info>
-  **Thread:** [#146 Rev5 questions and discussion on the Consolidated Rules for 2026 (or Legacy)](https://github.com/FedRAMP/community/discussions/146), opened by `pete-gov` on 2026-06-24 and still open. This digest covers staff posts through 2026-11-04. **Last reviewed:** 2026-11-04 against upstream release `2026.11.02.01`. Staff answers are paraphrased. Follow each link for the exact wording. Staff statements don't change the published rules. Where they conflict, the [official rules](https://www.fedramp.gov/2026/) govern.
+  **Thread:** [#146 Rev5 questions and discussion on the Consolidated Rules for 2026 (or Legacy)](https://github.com/FedRAMP/community/discussions/146), opened by `pete-gov` on 2026-06-24 and still open. This digest covers staff posts through 2026-11-04, plus the `VER` posts from 2026-11-11 and 2026-11-12 below. Staff posts from 2026-11-05 through 2026-11-10 aren't summarized here yet, so check the thread for those. **Last reviewed:** 2026-11-12 against upstream release `2026.11.02.01`. Staff answers are paraphrased. Follow each link for the exact wording. Staff statements don't change the published rules. Where they conflict, the [official rules](https://www.fedramp.gov/2026/) govern.
 </Info>
 
 ## Bottom line
@@ -261,6 +261,22 @@ Rules page: [Vulnerability evaluation and reporting](/rules/vulnerability-evalua
 
 <Note>
   **paulagosta, 2026-10-02** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18714482), [follow-up](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18719569)): This answered `nathan-gov`'s question about providers that haven't moved to a CDS trust center. Keep using your current ConMon sharing method, which for most Class B and C providers is USDA Connect. Posting the [`VER-TFR-MRH`](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#historical-activity) JSON there on the required cadence is acceptable for now. The long-term goal is programmatic access. FedRAMP won't create new Connect folders. Document where the files go in your SCN or SCR for the VDR and VER transition, or in your monthly ConMon brief.
+</Note>
+
+<Note>
+  **pete-gov, 2026-11-11** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-19548618)): A community member asked whether only PAIN2 and above vulnerabilities open for 192 days are automatically marked accepted, and PAIN0 and PAIN1 are not. Staff answered "Negative."
+  - "Negligible" in the PAIN ratings is used in its plain-language meaning. A PAIN1 vulnerability isn't negligible, because it is by definition an expected narrow customer effect. It still becomes an Accepted Vulnerability if you haven't fully mitigated or remediated it within 192 days. This matches [`VER-TFR-MAV`](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#mark-accepted-vulnerabilities), which has no PAIN exception.
+  - A PAIN0 vulnerability could in many cases be considered close to fully mitigated. Staff cautioned that the PAIN rating uses a different calculus, so negligible potential agency impact may be less than "extremely unlikely to have any adverse effects."
+  - Staff said to treat this as a security question more than a compliance one. If you plan to keep working a vulnerability, keep tracking it as an Accepted Vulnerability or similar. If you are certain the potential agency impact is negligible, you don't need to include it in reports for government oversight as an Accepted Vulnerability unless you want to. That last point isn't in the rule text.
+</Note>
+
+<Note>
+  **pete-gov, 2026-11-11** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-19551658)) and **2026-11-12** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-19563598)), answering `alexmellott` and `PeterWeiler` on how the `VER` reports fit together:
+  - Staff designed the `VER` so persistent reporting shares only deltas. You share the full list of accepted vulnerabilities as a snapshot with the quarterly Ongoing Certification Report. Staff said enforcing VDR/VER without the [`CDS`](/rules/certification-data-sharing) and [`CCM`](/rules/collaborative-continuous-monitoring) rules makes this confusing, because the rules are designed to work together.
+  - [`VER-TFR-MHR`](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#monthly-activity-report) is the monthly human-readable report. [`VER-TFR-MRH`](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#historical-activity) is the machine-readable report Class D providers should update at least every 7 days. Each covers what changed since the last report, so you don't need history outside the persistent cycle you define. Staff acknowledged the two IDs are easy to transpose.
+  - `VER-RPT-VDT` and `VER-RPT-AVI` say what to include in those reports. They don't create separate reports. A single machine-readable artifact that meets the `VER-TFR-MRH` schema is enough. You can embed the VDT and AVI data as bundled schemas, attach them separately or link to them. Staff said they kept the schemas loose on purpose.
+  - `VER-RPT-PER` makes the report FedRAMP Certification Data. [`CDS-CSO-HAD`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#historical-fedramp-certification-data) therefore requires a snapshot with each Ongoing Certification Report. The easiest way is to save and share every `VER-TFR-MRH` report. Staff said there is no explicit requirement beyond that today, but giving agencies access to all your reports is the best customer experience.
+  - An API, message queue or publish/subscribe approach would be best for consumers. Staff described it as not required.
 </Note>
 
 ## Significant changes when adopting VDR and VER
