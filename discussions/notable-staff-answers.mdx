@@ -5,14 +5,90 @@ sidebarTitle: "Notable staff answers"
 ---
 
 <Info>
-  **Threads covered:** community discussions updated on or after 2026-06-01 that have at least one FedRAMP staff post. This excludes [#146](/discussions/rev5-cr26-questions), [#147](/discussions/20x-cr26-questions) and RFC threads, which are covered in [RFC history](/discussions/rfc-history). Newest threads come first. **Last reviewed:** 2026-11-04 against upstream release `2026.11.02.01`. Staff answers are paraphrased. Follow each link for the exact wording. Staff statements don't change the published rules. Where they conflict, the [official rules](https://www.fedramp.gov/2026/) govern.
+  **Threads covered:** community discussions updated on or after 2026-06-01 that have at least one FedRAMP staff post. This excludes [#146](/discussions/rev5-cr26-questions), [#147](/discussions/20x-cr26-questions) and RFC threads, which are covered in [RFC history](/discussions/rfc-history). Newest threads come first. **Last reviewed:** 2026-11-12 against upstream release `2026.11.02.01`. Staff answers are paraphrased. Follow each link for the exact wording. Staff statements don't change the published rules. Where they conflict, the [official rules](https://www.fedramp.gov/2026/) govern.
 </Info>
 
 <Note>
   Several threads below were active before the Consolidated Rules for 2026 (CR26) were published on 2026-06-24, and were last updated around that date. Staff posts from before 2026-06-24 cite draft or pilot material. Check them against the current rules before relying on them.
 
-  Every thread below up to #173 was closed between 2026-06-24 and 2026-09-16. Unanswered follow-ups in those threads may never get a reply. Threads #174 through #178 were still open as of 2026-10-14. Threads #181 through #184 were open at the 2026-10-24 sync, #186 was open at the 2026-10-26 sync, and #188 was open at the 2026-11-04 sync.
+  Every thread below up to #173 was closed between 2026-06-24 and 2026-09-16. Unanswered follow-ups in those threads may never get a reply. Threads #174 through #178 were still open as of 2026-10-14. Threads #181 through #184 were open at the 2026-10-24 sync, #186 was open at the 2026-10-26 sync, #188 was open at the 2026-11-04 sync, and #194 through #197 were open at the 2026-11-12 sync.
 </Note>
+
+## #197 Too Big to De-Certify?
+
+[Thread](https://github.com/FedRAMP/community/discussions/197) (General Discussion, opened 2026-11-10).
+
+**Bottom line:** FedRAMP says the question for a widely used cloud service that becomes insecure is the risk to government, not its certification status. Staff said FedRAMP would act as other federal bodies direct.
+
+The question: can a cloud service with 50 to 100 authorizations become too big to de-certify?
+
+<Note>
+  **pete-gov, 2026-11-11** ([comment](https://github.com/FedRAMP/community/discussions/197#discussioncomment-19549221)) and **2026-11-12** ([comment](https://github.com/FedRAMP/community/discussions/197#discussioncomment-19563373)):
+  - If FedRAMP itself believes a service used by 50 to 100 agencies is a risk, staff said they would work with the FedRAMP Board and CISA to start a red team assessment of it.
+  - If the risk were more tangible, FedRAMP would report it to the FedRAMP Board, OMB, CISA, DOJ, ONCD and the CIO Council as appropriate. Staff said national security or law enforcement agencies usually identify insecure behavior first.
+  - Staff expect that CISA would issue an Emergency Directive banning such a service, or the Federal Acquisition Security Council would order its removal. FedRAMP would de-certify the service as directed.
+  - Staff cited a recent removal order for a vendor that wasn't a FedRAMP cloud, as an example of the government using government-wide authority to ban products.
+</Note>
+
+**Open questions:** none raised.
+
+**What it means for you:** this is a staff view of escalation, not a published rule. The sources don't set a de-certification process for widely used services.
+
+## #196 VDR/VER migration progress reporting Q&A
+
+[Thread](https://github.com/FedRAMP/community/discussions/196) (Official Threads, opened by `pete-gov` on 2026-11-10). The opening post says FedRAMP released Public Notice NTC-0017 on 2026-11-10. It covers collecting VDR/VER migration progress reports and the FY27 Q1 FedRAMP Security Inbox test. See the [VDR/VER migration resources](https://www.fedramp.gov/vdr-migration/).
+
+**Bottom line:** in the progress-report schema, mark the rule for the other path as `Not Applicable`.
+
+The question: a community member noted the mini-SDR schema lists [`VDR-TFR-MVF`](https://www.fedramp.gov/2026/reference/vulnerability-detection-and-response/#persistent-machine-verification-and-validation-for-rev5), which applies to Rev5, and asked whether 20x providers should mark it Not Applicable or leave it out.
+
+<Note>
+  **pete-gov, 2026-11-11** ([comment](https://github.com/FedRAMP/community/discussions/196#discussioncomment-19548668)): Staff meant to add conditional logic to the JSON schema but flagged the issue only for the CSV. Mark the 20x-specific rule `Not Applicable`, with `capStatus` set to `Not Applicable`, for Rev5 providers, and the reverse for 20x providers. See the [schema notes](https://www.fedramp.gov/vdr-migration/schemas/#not-applicable-rules).
+</Note>
+
+**Open questions:** none raised.
+
+**What it means for you:** this is a staff instruction for a progress report, not a rule. See [Vulnerability detection and response](/rules/vulnerability-detection-and-response).
+
+## #195 UEI Definition
+
+[Thread](https://github.com/FedRAMP/community/discussions/195) (Rev5 Discussion, opened 2026-11-09).
+
+**Bottom line:** the Unique Entity ID (UEI) is a procurement identifier, not a FedRAMP one. If you have more than one, publish one in the JSON.
+
+<Note>
+  **pete-gov, 2026-11-09** ([comment](https://github.com/FedRAMP/community/discussions/195#discussioncomment-19496598)): The UEI is a 12-character alphanumeric code that GSA assigns through SAM.gov to identify companies that do business with the government. It isn't required for FedRAMP Certification.
+</Note>
+
+<Note>
+  **pete-gov, 2026-11-12** ([comment](https://github.com/FedRAMP/community/discussions/195#discussioncomment-19563402)): A provider with two UEIs asked how to fill the JSON field for [`CDS-CSO-PUB`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#public-information), which takes a single string. Staff said the Marketplace UEI is only a convenience for agencies, and many services don't supply one. They recommended picking one for the JSON and showing the alternates in the human-readable version on your website. Supporting several would need rework that staff didn't think was worth it.
+</Note>
+
+**Open questions:** none raised.
+
+**What it means for you:** the `CDS-CSO-PUB` JSON takes one UEI. This is a staff position, not a rule. See [Certification data sharing](/rules/certification-data-sharing).
+
+## #194 Agencies and 20X
+
+[Thread](https://github.com/FedRAMP/community/discussions/194) (20x Discussion, opened 2026-11-08).
+
+**Bottom line:** FedRAMP says it has no authority to make agencies use FedRAMP Certified services. Agency need drives use.
+
+<Note>
+  **pete-gov, 2026-11-09** ([comment](https://github.com/FedRAMP/community/discussions/194#discussioncomment-19496803)): FedRAMP's role is to supply the process and support it with templates, best practices and technical assistance. Oversight of agencies sits with Congress (including the GAO), the Executive Office of the President (especially OMB) and Inspectors General. Staff said agencies will find a way to use services they need, and a FedRAMP Certification, especially a 20x one, makes that easier.
+</Note>
+
+<Note>
+  **pete-gov, 2026-11-10** ([comment](https://github.com/FedRAMP/community/discussions/194#discussioncomment-19527613), [follow-up](https://github.com/FedRAMP/community/discussions/194#discussioncomment-19527768)): The law requires agencies to tell FedRAMP when they authorize a FedRAMP Certified service, but many don't, so Marketplace agency-use data is incomplete. Staff said FedRAMP has no enforcement authority. They said the Marketplace data was glitchy because of back-end migrations, and that readers shouldn't judge 20x use from certifications that are weeks old.
+</Note>
+
+<Note>
+  **pete-gov, 2026-11-11** ([comment](https://github.com/FedRAMP/community/discussions/194#discussioncomment-19548890)): FedRAMP stopped using the term "reuse" because it was used in too many ways. The Marketplace now shows Agency Authorization Details, formerly called direct reuse. Third-Party Resources are [third-party information resources](https://www.fedramp.gov/2026/definitions/#third-party-information-resource) the service uses. They show only for providers that have adopted the [Certification Package Overview](https://www.fedramp.gov/2026/reference/certification-package-overview/) rules, which staff said will be required for everyone in June 2027.
+</Note>
+
+**Open questions:** whether FedRAMP will require providers to report agency authorizations. A community member suggested it ([comment](https://github.com/FedRAMP/community/discussions/194#discussioncomment-19527111)), and staff said only that the law requires agencies to notify FedRAMP.
+
+**What it means for you:** Marketplace agency-use figures may under-count. These are staff positions, not rules. See [Certification package overview](/rules/certification-package-overview).
 
 ## #188 Submitting an FRC-CSO-PKG Rev5
 
