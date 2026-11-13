@@ -5,7 +5,7 @@ sidebarTitle: "20x CR26 Q&A (#147)"
 ---
 
 <Info>
-  **Thread:** [#147 20x questions and discussion on the Consolidated Rules for 2026](https://github.com/FedRAMP/community/discussions/147), opened by `pete-gov` on 2026-06-24 and still open. It has 33 staff posts through 2026-10-16. **Last reviewed:** 2026-10-24 against upstream release `2026.10.14.01`. Staff answers are paraphrased. Follow each link for the exact wording. Staff statements don't change the published rules. Where they conflict, the [official rules](https://www.fedramp.gov/2026/) govern.
+  **Thread:** [#147 20x questions and discussion on the Consolidated Rules for 2026](https://github.com/FedRAMP/community/discussions/147), opened by `pete-gov` on 2026-06-24 and still open. It has 35 staff posts through 2026-11-10. **Last reviewed:** 2026-11-11 against upstream release `2026.11.02.01`. Staff answers are paraphrased. Follow each link for the exact wording. Staff statements don't change the published rules. Where they conflict, the [official rules](https://www.fedramp.gov/2026/) govern.
 </Info>
 
 ## Bottom line
@@ -59,6 +59,10 @@ sidebarTitle: "20x CR26 Q&A (#147)"
 <Warning>
   **Rule ID changed.** emu-gov answered about `FRC-CSX-MOT`. Release `2026.10.08.01` removed that rule as a duplicate of [`SDR-CSX-KMT`](https://www.fedramp.gov/2026/reference/security-decision-record/#key-security-indicator-metrics). `SDR-CSX-KMT` carries the same initial-certification note. It is MUST for Class C, and changed from MUST to SHOULD for Class B. The answer still holds under `SDR-CSX-KMT`. See [Security decision record](/rules/security-decision-record).
 </Warning>
+
+<Note>
+  **pete-gov, 2026-11-10** ([comment](https://github.com/FedRAMP/community/discussions/147#discussioncomment-19527331), [follow-up](https://github.com/FedRAMP/community/discussions/147#discussioncomment-19527843)), on whether a FedRAMP Moderate Equivalency (FRME) assessment can satisfy [`FRC-CLA-ASF`](https://www.fedramp.gov/2026/reference/fedramp-certification/#approved-alternative-security-frameworks): Staff haven't reviewed FRME requirements, which the Department of Defense sets, and said they aren't familiar with how those assessments are conducted. If the provider and assessor attest it followed FedRAMP Rev5 rules, staff said they'd consider it, provided all other requirements for FedRAMP Certification are met, especially [`MKT-IIP-AGU`](https://www.fedramp.gov/2026/reference/marketplace-listing/#agency-use-cases). Staff offered to take a pilot of FRME use to the team and said they'd want to review the FRME assessment in advance. In a follow-up, staff said FedRAMP wasn't involved in setting FRME rules or overseeing their review, so it would need to examine an assessment itself, which takes resources it hasn't been able to justify. The published `FRC-CLA-ASF` list doesn't name FRME, and the published rule governs. Community comments describing FRME are context only.
+</Note>
 
 For a Class A SOC 2 Type II boundary and subservice organizations, see the staff answers in [#184](https://github.com/FedRAMP/community/discussions/184) in [Notable staff answers](/discussions/notable-staff-answers#184-class-a-soc-2-type-ii-boundary-and-subservice-organizations).
 
@@ -148,6 +152,7 @@ These were still unanswered in the thread as of 2026-10-14:
 
 - If your service isn't cloud-native on a certified IaaS or PaaS, Class A is your 20x entry point today. Moving higher means Rev5 Class B or above until rules for self-hosted services exist.
 - For Class A, an independent assessment is optional. Check the Class A rules listed in [`FRC-CLA-MFR`](https://www.fedramp.gov/2026/reference/fedramp-certification/#mandatory-fedramp-rules-for-class-a).
+- Don't assume an FRME assessment satisfies Class A. Staff said on 2026-11-10 they'd consider one if it's attested as following Rev5 rules, and they'd want to review it first. Contact FedRAMP before relying on it.
 - Write your secure configuration guide for agency customers configuring your service, not as an OS hardening benchmark.
 - Treat rule adoption as a significant change and notify customers.
 - In your SDR, use machine-readable answers with direct artifact links, not pointers to legacy documents.
