@@ -15,7 +15,7 @@
   "author": "pete-gov",
   "author_is_official": true,
   "created_at": "2026-06-24T21:49:44Z",
-  "updated_at": "2026-11-12T11:53:11Z",
+  "updated_at": "2026-11-12T21:48:25Z",
   "last_edited_at": null,
   "closed": false,
   "closed_at": null,
@@ -24,7 +24,7 @@
   "answer_chosen_at": null,
   "upvotes": 1,
   "body": "## This thread is for any and all Q&A or general discussion related to FedRAMP Rev5 in general that does not need to have its own thread.\r\n\r\nFedRAMP released the [Consolidated Rules for 2026](https://www.fedramp.gov/2026/) on June 24, 2026 with a considerable set of changes for FedRAMP Rev5 that will apply to all cloud service providers.\r\n\r\nThese changes include:\r\n\r\n- Mandatory adoption of the Vulnerability Detection and Response and Vulnerability Evaluation and Reporting rules by December 6, 2026 in response to CISA BOD 26-04\r\n- Changes to assessments for Rev5 to align more like assessments for 20x - focusing on verification and validation instead of just control implementation.\r\n- Replacement of most FedRAMP templates with a new Certification Package Overview and Security Decision Record\r\n- Removal of many FedRAMP-assigned control parameters and a lot of older FedRAMP control guidance\r\n- Mandatory adoption of many other Balance Improvement Releases through 2027\r\n- A requirement to address all FedRAMP Rules within the Security Decision Record, instead of only addressing controls\r\n\r\nSome of these changes take effect for all cloud service providers on certain dates no matter what, others take effect at the next annual assessment. In general, these are sweeping changes that will require all cloud service providers to begin planning now to continue to meet FedRAMP Rev5 requirements.\r\n\r\nHistorical materials are available at [https://fedramp.gov/legacy](https://fedramp.gov/legacy).\r\n\r\n---\r\n\r\nYou may see some of the following folks from FedRAMP responding in this thread:\r\n\r\n- `pete-gov` - Pete, FedRAMP Director\r\n- `nicole-gov` - Nicole, Security Director\r\n- `dan-fedramp` - Dan, Lead Cloud Security Engineer\r\n- `paulagosta` - Paul, Lead Cloud Security Engineer (Bastion)\r\n- `emu-gov` - Emu, Lead Cloud Security Engineer (Vanguard)\r\n- `rhoesing` - Ryan, Chief of Staff & Policy Branch Chief",
-  "comment_count": 60,
+  "comment_count": 62,
   "comments": [
     {
       "id": "DC_kwDOOxfoic4BChJy",
@@ -3049,6 +3049,76 @@
       ],
       "replies_total": 4,
       "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BKprD",
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19569347",
+      "author": "williamolson1-web",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-11-12T16:26:08Z",
+      "updated_at": "2026-11-12T16:26:08Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "We have recently listed PowerTrain Government Enclave Azure on the FedRAMP Marketplace. We are working with our sponsor to complete the FedRAMP Agency Authorization - In-Process Request form to send to intake@fedramp.gov. The form specifies that a WWBS is required. However, when clicking the link in the form for the WBS template, it's a dead link. We have already completed the 3PAO assessment, and we have the final SAR which was completed less than 6 months ago. We will be providing our Sponsor with the SAR and other security documentation who will then review them and issue an ATO for the system. Questions:\r\n\r\n- Is a WBS still required? If so, where can we obtain the WBS template>\r\n- Are we required to complete the LEGACY_FedRAMP-Initial-Certification-Package-Checklist?\r\n- If this is required, where on OMB Max.gov can we upload the documents? \r\n- Once this is ATO's, how much time will we be provided to migrate this system to the FedRAMP 20x?\r\n\r\nWe also have an existing Government Learning Enclave in FedRAMP. How much time will we be provided to migrate this system to the FedRAMP 20x?",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BKrDd",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19575005",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-11-12T21:20:37Z",
+          "updated_at": "2026-11-12T21:20:37Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "I'm going to tag @paulagosta to answer this when he's back from vacation (since we don't have the WBS on the [legacy documentation](https://www.fedramp.gov/legacy/) I thought we weren't requiring it, but there might be some leftover confusion)."
+        },
+        {
+          "id": "DC_kwDOOxfoic4BKrMC",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19575554",
+          "author": "paulagosta",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-11-12T21:48:25Z",
+          "updated_at": "2026-11-12T21:56:16Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "1. If a WBS is not supplied, we need the Agency to confirm their anticipated completion of ATO-issuance is before the 11 June timeline.  \r\n2. Yes, the checklist is required. You will attach it to your submission form. The link is embedded on the submission form here.  https://help.fedramp.gov/hc/en-us/requests/new?ticket_form_id=54032864806811\r\n3. 20x Certification is a separate process.  You can maintain your Rev 5 Certification until you either are ready for 20x or until Rev 5 phases out completely (date not identified yet).\r\n4. Please make sure you have a valid marketplace listing as IPR means nothing if we cannot designate you as such anywhere. It looks like you do in this instance, but this is a common issue.  \r\nHope this helps."
+        }
+      ],
+      "replies_total": 2,
+      "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BKpyK",
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19569802",
+      "author": "RenD-CMD",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-11-12T16:44:43Z",
+      "updated_at": "2026-11-12T16:44:43Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "We are an existing FedRAMP Rev5 Moderate/Class-C CSP. \r\nLooking at the FedRAMP Certification ruleset\r\n<img width=\"848\" height=\"570\" alt=\"Fed\" src=\"https://github.com/user-attachments/assets/3d528d4f-6b7e-41a3-b887-b85f138b36d3\" />\r\n\r\nPlease confirm if our scope is accurate:\r\n1. On that page, as an existing Rev5 Moderate CSP staying at Class C, do we only need to address General Provider Responsibilities and Rev5-Specific Provider Responsibilities (skipping Class A, 20x-Specific, and Applying for FedRAMP Certification)?\r\n2. If this is correct, For the rules under Class A, 20x-Specific, and Applying for FedRAMP Certification, do we need to explicitly list them in our Security Decision Record (SDR) marked as \"Not Applicable / Not Implemented\" with a rationale, or can we omit those subsets entirely from our documentation?\r\nThank you!",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BKrEW",
+          "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19575062",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-11-12T21:24:41Z",
+          "updated_at": "2026-11-12T21:24:41Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "The [Using the Consolidated Rules page explains a bit of how to approach this](https://www.fedramp.gov/2026/rules/#fedramp-rulesets) - ruleset subsets have specific class and type applicability. If you're a Rev5 Class C you can also just hit the reference page here: https://www.fedramp.gov/2026/reference/rev5/c/\r\n\r\nIdeally you would extract a custom ruleset from the machine-readable consolidated rules though, the human-readable ones are just for quick and easy reference and shouldn't be worked off of.\r\n\r\n> On that page, as an existing Rev5 Moderate CSP staying at Class C, do we only need to address General Provider Responsibilities and Rev5-Specific Provider Responsibilities (skipping Class A, 20x-Specific, and Applying for FedRAMP Certification)?\r\n\r\nI don't know what page you linked but probably. :)\r\n\r\n> If this is correct, For the rules under Class A, 20x-Specific, and Applying for FedRAMP Certification, do we need to explicitly list them in our Security Decision Record (SDR) marked as \"Not Applicable / Not Implemented\" with a rationale, or can we omit those subsets entirely from our documentation?\r\n\r\nIf you are a FedRAMP Rev5 Class C then you should only include the rules that apply to FedRAMP Rev5 Class C in your SDR, yep (please omit others)."
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
     }
   ],
   "answer_url": null,
@@ -3101,6 +3171,7 @@
     "shon-d-dingman",
     "v-mhahnfirstinfotech",
     "vennemp",
+    "williamolson1-web",
     "zeesharfcspab"
   ],
   "official_responses": [
@@ -3573,6 +3644,21 @@
       "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19563598",
       "author": "pete-gov",
       "created_at": "2026-11-12T11:53:10Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19575005",
+      "author": "pete-gov",
+      "created_at": "2026-11-12T21:20:37Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19575554",
+      "author": "paulagosta",
+      "created_at": "2026-11-12T21:48:25Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/146#discussioncomment-19575062",
+      "author": "pete-gov",
+      "created_at": "2026-11-12T21:24:41Z"
     }
   ],
   "entities": {
@@ -3676,9 +3762,11 @@
       "https://github.com/FedRAMP/community/discussions/4+https://github.com/FedRAMP/community/discussions/5",
       "https://github.com/FedRAMP/rules/issues/47",
       "https://github.com/user-attachments/assets/1d5ff955-1a3d-4d69-909a-f017f72f3c47",
+      "https://github.com/user-attachments/assets/3d528d4f-6b7e-41a3-b887-b85f138b36d3",
       "https://github.com/user-attachments/assets/b6526c34-cc3b-40ae-90e0-62ff512d9829",
       "https://github.com/user-attachments/assets/f3248534-df1c-4f2b-9bf6-044c03ccdd91",
       "https://github.com/user-attachments/assets/fa7b279f-07aa-43a6-944c-43310b0bc405",
+      "https://help.fedramp.gov/hc/en-us/requests/new?ticket_form_id=54032864806811",
       "https://www.cisa.gov/topics/cyber-threats-and-response",
       "https://www.fedramp.gov/2026/",
       "https://www.fedramp.gov/2026/agencies/",
@@ -3704,6 +3792,7 @@
       "https://www.fedramp.gov/2026/reference/independent-verification-and-validation/#overall-summary-of-assessment",
       "https://www.fedramp.gov/2026/reference/minimum-assessment-scope/",
       "https://www.fedramp.gov/2026/reference/rev5-control-guidance/",
+      "https://www.fedramp.gov/2026/reference/rev5/c/",
       "https://www.fedramp.gov/2026/reference/rev5/d/significant-change-notification/",
       "https://www.fedramp.gov/2026/reference/security-decision-record/#fedramp-rules",
       "https://www.fedramp.gov/2026/reference/security-decision-record/#key-security-indicator-metrics",
@@ -3721,6 +3810,7 @@
       "https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/?h=VER-EVA-ELX#evaluate-exploitability",
       "https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/?h=VER-EVA-ELX#evaluation-factors",
       "https://www.fedramp.gov/2026/rules/#definitions",
+      "https://www.fedramp.gov/2026/rules/#fedramp-rulesets",
       "https://www.fedramp.gov/2026/rules/#force-of-the-rule",
       "https://www.fedramp.gov/2026/rules/#its-not-a-trap",
       "https://www.fedramp.gov/2026/timeline/",
@@ -3728,6 +3818,7 @@
       "https://www.fedramp.gov/changelog/rss.xml",
       "https://www.fedramp.gov/event/20x-cwg-2026-08-12/",
       "https://www.fedramp.gov/event/FR-day-fall-26/",
+      "https://www.fedramp.gov/legacy/",
       "https://www.fedramp.gov/legacy/assets/LEGACY_FedRAMP-Initial-Certification-Package-Checklist.xlsx",
       "https://www.fedramp.gov/notices/0016/",
       "https://www.google.com/url?q=https://github.com/FedRAMP/community/discussions/146&source=chat&ust=1791028483675000&usg=AOvVaw2A_lKdilbcCGeAxGfzhOJ_",
@@ -3737,6 +3828,7 @@
       "20x",
       "3pao",
       "agency_authorization",
+      "class_a",
       "class_b",
       "class_c",
       "class_d",
@@ -3751,6 +3843,6 @@
       "vulnerability_mgmt"
     ]
   },
-  "content_hash": "8bd6713784245bc4ff9a00239fee71fb60e90e8e3a42e1169cc56b693d3d098b",
-  "synced_at": "2026-11-12T16:03:42.643727+00:00"
+  "content_hash": "d3919e55be2bec416a6464a62b86b69b770d68590c9356d3843cf51e0a718d0f",
+  "synced_at": "2026-11-13T15:28:09.956346+00:00"
 }

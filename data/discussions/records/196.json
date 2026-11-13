@@ -17,7 +17,7 @@
   "author": "pete-gov",
   "author_is_official": true,
   "created_at": "2026-11-10T16:27:07Z",
-  "updated_at": "2026-11-11T18:39:52Z",
+  "updated_at": "2026-11-12T21:35:33Z",
   "last_edited_at": "2026-11-10T20:07:35Z",
   "closed": false,
   "closed_at": null,
@@ -26,7 +26,7 @@
   "answer_chosen_at": null,
   "upvotes": 2,
   "body": "# VDR/VER Migration Reporting Q&A / General Discussion\r\n\r\nOn Tue Nov 10, 2026, FedRAMP released [Public Notice NTC-0017 VDR/VER Migration Progress Reporting and Upcoming FY27 Q1 FedRAMP Security Inbox Test](https://www.fedramp.gov/notices/0017/). \r\n\r\nThis Notice explained that FedRAMP will be collecting Progress Reports from all FedRAMP Certified cloud service providers who are expected to migrate to the VDR/VER rules and explained how that information will be collected.\r\n\r\nIt included the [VDR/VER Migration Resources](https://www.fedramp.gov/vdr-migration/) website for additional information on Progress Report collection, including deadlines, corrective action plans, schemas, and more.\r\n\r\n---\r\n\r\nCollecting progress reports from nearly 600 cloud services is obviously a massive undertaking. We weren't even sure if it was feasible, to be honest. This is partially a test to see how it goes. In the future when folks have adopted CR26 or future consolidated rules things will be much easier as we can simply programmatically monitor everyone's information but today we still need to ask for progress reports.\r\n\r\n**This thread is dedicated to questions or feedback about this process, including the content, instructions, schemas, etc.**",
-  "comment_count": 1,
+  "comment_count": 2,
   "comments": [
     {
       "id": "DC_kwDOOxfoic4BKgGb",
@@ -56,11 +56,41 @@
       ],
       "replies_total": 1,
       "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BKpz5",
+      "url": "https://github.com/FedRAMP/community/discussions/196#discussioncomment-19569913",
+      "author": "mmaesc1",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-11-12T16:47:53Z",
+      "updated_at": "2026-11-12T16:47:53Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Quick sanity check on the Rev5 timing, since the pieces are spread across NTC-0017 and several pages of the migration site. Here’s our reading:\r\n\r\nThe VDR/VER rules apply December 7, 2026. A Rev5 offering that hasn’t fully migrated owes a per-rule CAP, but nothing gets sent to FedRAMP on December 7 itself.\r\n\r\nBetween December 1 and 10 (current target December 3), FedRAMP sends the Security Inbox Emergency Test to each certified offering, with its FedRAMP ID and unique code.\r\n\r\nThat message sets the deadline, anticipated as December 17 at 2pm Eastern. The response goes through the web form and includes the Progress Report Mini-SDR (CSV or JSON). The CAPs are the per-rule CAP fields inside it, with no separate CAP document.\r\n\r\nThere’s no way to file a Progress Report or CAP before the Emergency Test arrives. Providers should prepare and test early, but filing happens through the test. A VDR/VER CAP sent to FedRAMP some other way before then still has to go in through the Emergency Test.\r\n\r\nIs that right?\r\n\r\nOne piece of feedback: the deadlines table on the site’s front page lists December 7 but not December 17, which is where we got tangled. A row for the Emergency Test there would help.",
+      "is_answer": false,
+      "replies": [
+        {
+          "id": "DC_kwDOOxfoic4BKrIA",
+          "url": "https://github.com/FedRAMP/community/discussions/196#discussioncomment-19575296",
+          "author": "pete-gov",
+          "author_association": "MEMBER",
+          "is_official": true,
+          "created_at": "2026-11-12T21:35:32Z",
+          "updated_at": "2026-11-12T21:35:44Z",
+          "upvotes": 0,
+          "minimized": false,
+          "body": "> Is that right?\r\n\r\nGenerally, yes. There's nuance lost in the summary (for example, if we sent out the Emergency Test on December 3 then you **could** choose to submit a progress report before December 7), but it captures the spirit of the game. \r\n\r\n> One piece of feedback: the deadlines table on the site’s front page lists December 7 but not December 17, which is where we got tangled. A row for the Emergency Test there would help.\r\n\r\nAh, I didn't put it here because it's on the [next page down](https://www.fedramp.gov/vdr-migration/emergency-test/), and all the Emergency Test date stuff is subject to change whereas the Important Deadlines on the Overview page were already fixed.\r\n\r\nI want folks to plan around those two sets of things separately:\r\n\r\n(1) There are deadlines for migrating to the VDR/VER, which are on the overview page. These deadlines are set and extremely unlikely to shift from outside pressure.\r\n\r\n(2) There are **expected / anticipated** timeframes for FedRAMP to collect VDR/VER migration progress reports. They might shift, though hopefully the chances of them shifting become less and less as we get closer I can't entirely guarantee it (if CISA orders a data call via Emergency Directive, then we'll have to shift).\r\n\r\nThat said, if more folks confirm having these dates separate is causing confusion I can revisit the approach.\r\n\r\n"
+        }
+      ],
+      "replies_total": 1,
+      "replies_truncated": false
     }
   ],
   "answer_url": null,
   "participants": [
     "iteuscher",
+    "mmaesc1",
     "pete-gov"
   ],
   "official_responses": [
@@ -68,6 +98,11 @@
       "url": "https://github.com/FedRAMP/community/discussions/196#discussioncomment-19548668",
       "author": "pete-gov",
       "created_at": "2026-11-11T18:39:52Z"
+    },
+    {
+      "url": "https://github.com/FedRAMP/community/discussions/196#discussioncomment-19575296",
+      "author": "pete-gov",
+      "created_at": "2026-11-12T21:35:32Z"
     }
   ],
   "entities": {
@@ -82,6 +117,7 @@
       "https://www.fedramp.gov/notices/0017/",
       "https://www.fedramp.gov/vdr-migration/",
       "https://www.fedramp.gov/vdr-migration/assets/implementation-status.schema.json",
+      "https://www.fedramp.gov/vdr-migration/emergency-test/",
       "https://www.fedramp.gov/vdr-migration/schemas/#not-applicable-rules"
     ],
     "topics": [
@@ -92,6 +128,6 @@
       "vulnerability_mgmt"
     ]
   },
-  "content_hash": "d4cda878e37babeacbd541da0288cf050d3841c5c25480dd7278250165d73ee1",
-  "synced_at": "2026-11-12T16:03:42.643727+00:00"
+  "content_hash": "8bf6f8f345bf6d76c72135358de0aa95be6506c0ca6d4118f04f83a4c9eccf2a",
+  "synced_at": "2026-11-13T15:28:09.956346+00:00"
 }
