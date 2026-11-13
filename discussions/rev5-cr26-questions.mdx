@@ -5,7 +5,7 @@ sidebarTitle: "Rev5 CR26 Q&A (#146)"
 ---
 
 <Info>
-  **Thread:** [#146 Rev5 questions and discussion on the Consolidated Rules for 2026 (or Legacy)](https://github.com/FedRAMP/community/discussions/146), opened by `pete-gov` on 2026-06-24 and still open. This digest covers staff posts through 2026-11-04. **Last reviewed:** 2026-11-04 against upstream release `2026.11.02.01`. Staff answers are paraphrased. Follow each link for the exact wording. Staff statements don't change the published rules. Where they conflict, the [official rules](https://www.fedramp.gov/2026/) govern.
+  **Thread:** [#146 Rev5 questions and discussion on the Consolidated Rules for 2026 (or Legacy)](https://github.com/FedRAMP/community/discussions/146), opened by `pete-gov` on 2026-06-24 and still open. This digest covers staff posts through 2026-11-06. **Last reviewed:** 2026-11-07 against upstream release `2026.11.02.01`. Staff answers are paraphrased. Follow each link for the exact wording. Staff statements don't change the published rules. Where they conflict, the [official rules](https://www.fedramp.gov/2026/) govern.
 </Info>
 
 ## Bottom line
@@ -126,6 +126,10 @@ FedRAMP staff treat the Consolidated Rules for 2026 (CR26) as mandatory for ever
 </Note>
 
 ## Scope of CR26 for Rev5, packages and certification paths
+
+<Note>
+  **pete-gov, 2026-11-06** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-19443693)), on a Rev5 Class C to Class D uplift: An uplift is a new assessment and a new FedRAMP Certification under `SCN-CSO-EVA` and [`FRC-CCL-UCC`](https://www.fedramp.gov/2026/reference/fedramp-certification/#upgrading-certification-class). Staff said an uplift submitted after 2027-01-01 would need to be entirely CR26-compliant, or have every gap covered by a POA&M. You can't submit your latest annual assessment instead. You need a fresh initial assessment completed within the previous 3 months ([`FRC-APP-FIA`](https://www.fedramp.gov/2026/reference/fedramp-certification/#fresh-independent-assessment)) and a fresh package that includes the uplift changes ([`FRC-APP-FCP`](https://www.fedramp.gov/2026/reference/fedramp-certification/#fresh-fedramp-certification-package)). [`FRC-APP-USA`](https://www.fedramp.gov/2026/reference/fedramp-certification/#updating-stale-assessments) lets that assessment focus on the changes since your stale annual assessment. Staff gave a worked timeline ending with an agency ATO by about June 2027. They called it realistic only with an agency sponsor that has a critical mission need at Class D, which is rare, and said starting without that sponsor locked in is a "massive risk."
+</Note>
 
 <Note>
   **pete-gov, 2026-11-03** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-19381125)) and **2026-11-04** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-19386373)), on moving from Rev5 to 20x: A service with a Rev5 Certification from the Agency Certification path can separately obtain a FedRAMP 20x Certification through the Program Certification path. Staff expect most providers to run both with some overlap, and the provider decides how to handle its customers. FedRAMP has no formal Rev5-to-20x transition path yet. Staff said it's slated for [FedRAMP 20x Phase 5](https://www.fedramp.gov/20x/#phased-implementation) (FY27 Q3 to FY27 Q4), after the Rev5 pipeline closes, with RFCs first. Staff said Rev5 will last "at least" December 2028 and that providers should plan for Rev5 not being in CR28, but the decision isn't staff's to make. A possible future option is to forego a Rev5 annual assessment and carry the Rev5 certification in temporary legacy status once you obtain a 20x certification. Staff gave this as an expectation, not a commitment. A community member's two-path summary (maintain both packages, or an agency waives the annual assessment) got no staff confirmation.
@@ -352,13 +356,20 @@ Rules page: [Certification data sharing](/rules/certification-data-sharing).
 
 ## Other staff posts
 
+- On 2026-11-06, `pete-gov` answered a post in [#189](https://github.com/FedRAMP/community/discussions/189) on vulnerabilities in reusable EC2 AMIs. See [Notable staff answers](/discussions/notable-staff-answers).
 - On 2026-11-04, `pete-gov` answered a new thread, [#188](https://github.com/FedRAMP/community/discussions/188), asked about a failed `FRC-CSO-PKG` submission. See [Notable staff answers](/discussions/notable-staff-answers).
 - **pete-gov, 2026-06-25** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-17438832), [fix](https://github.com/FedRAMP/community/discussions/146#discussioncomment-17439148)): A fedramp.gov bug briefly returned 404 errors on CR26 links. Staff fixed it the same day.
 - **paulagosta, 2026-08-25** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18150707)) and **2026-08-26** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-18165762)): an event pointer and a hand-off to `dan-fedramp`. Neither is a rule position.
 
+<Note>
+  **pete-gov, 2026-11-06** ([comment](https://github.com/FedRAMP/community/discussions/146#discussioncomment-19445043)), on the `VDR` and `VER` enforcement process described in the townhall: FedRAMP sends emergency tests only to providers that hold a FedRAMP Certification. Staff said they would update the Public Notice so providers who don't yet have a certification but plan to apply know they must produce the same materials (the mini-SDR and sample vulnerability report the asker named) and have them available when they apply. Staff also said these providers won't be eligible to receive a FedRAMP Certification after 2026-12-07 until `VDR` and `VER` are fully implemented. The updated notice wasn't in the sources at this review. Check [FedRAMP Public Notices](https://www.fedramp.gov/notices) for the final wording.
+</Note>
+
 ## Open questions
 
-These were still unanswered in the thread as of 2026-11-04:
+These were still unanswered in the thread as of 2026-11-07:
+
+- What level of detail Rev5 assessor write-ups need, whether they must address each control component or can use a control-level statement, and where assessment results and independent verification and validation go given that the SDR JSON schema doesn't appear to have a place for them ([question](https://github.com/FedRAMP/community/discussions/146#discussioncomment-19448394) from `emoss-firstinfotech`, 2026-11-06). No staff answer yet.
 
 - For two Class C scenarios (`KSI-IAM-APM` at 3% non-compliance with remediation tracked 45 days out, and `KSI-INR-RIR` where a semiannual review is 9 months old and persistent validation data covers about 5 weeks), how the assessor should report the result under `IVV-IAS-SUM` and `IVV-IAS-OSA`, whether to hold the assessment open given the 3-month freshness requirement in `FRC-APP-MLF`, and whether the assessor or FedRAMP checks the 6 months of history in `FRC-CSX-MOT` ([question](https://github.com/FedRAMP/community/discussions/146#discussioncomment-19381804) from `khanssen`, 2026-11-03). No staff answer yet.
 
@@ -376,7 +387,7 @@ The earlier `IVV-IAS-VEF` question from `mjadali` was answered by `pete-gov` on 
 - Plan to meet every applicable VDR and VER rule by 2026-12-07. Staff say the VER [Reporting](https://www.fedramp.gov/2026/reference/vulnerability-evaluation-and-reporting/#reporting) outputs are your evidence until you update your SDR.
 - Handle the VDR and VER transition through your significant change process (`SCN` or legacy SCR). Record where your new reports live.
 - Check your own dates against the [Rev5 deadlines](https://www.fedramp.gov/2026/providers/updating/deadlines/rev5/). For `FRC`, `IVV`, `MAS`, `CPO` and `SDR`, the grace period ends at the first independent assessment **started** after the listed date.
-- If you plan a Rev5 uplift or new Rev5 certification, it must reach FedRAMP before 2027-06-11.
+- If you plan a Rev5 uplift or new Rev5 certification, it must reach FedRAMP before 2027-06-11. Staff say an uplift needs a fresh independent assessment and a fresh package.
 - For `SDR-CSO-FRR` and `SDR-CSF-CTF`, give both your method and its results, and follow the rule text rather than the schema.
 - "Full implementation" means addressing every applicable rule, including SHOULD rules, by implementing it or documenting your decision and reasoning. Submit the December 2026 activity report with that month's ConMon.
 - Expect mixed legacy and CR26 packages in 2027. Check each ruleset's own dates and add supplemental material for the rulesets you have adopted.
