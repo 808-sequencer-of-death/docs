@@ -5,14 +5,85 @@ sidebarTitle: "Notable staff answers"
 ---
 
 <Info>
-  **Threads covered:** community discussions updated on or after 2026-06-01 that have at least one FedRAMP staff post. This excludes [#146](/discussions/rev5-cr26-questions), [#147](/discussions/20x-cr26-questions) and RFC threads, which are covered in [RFC history](/discussions/rfc-history). Newest threads come first. **Last reviewed:** 2026-11-04 against upstream release `2026.11.02.01`. Staff answers are paraphrased. Follow each link for the exact wording. Staff statements don't change the published rules. Where they conflict, the [official rules](https://www.fedramp.gov/2026/) govern.
+  **Threads covered:** community discussions updated on or after 2026-06-01 that have at least one FedRAMP staff post. This excludes [#146](/discussions/rev5-cr26-questions), [#147](/discussions/20x-cr26-questions) and RFC threads, which are covered in [RFC history](/discussions/rfc-history). Newest threads come first. **Last reviewed:** 2026-11-09 against upstream release `2026.11.02.01`. Staff answers are paraphrased. Follow each link for the exact wording. Staff statements don't change the published rules. Where they conflict, the [official rules](https://www.fedramp.gov/2026/) govern.
 </Info>
 
 <Note>
   Several threads below were active before the Consolidated Rules for 2026 (CR26) were published on 2026-06-24, and were last updated around that date. Staff posts from before 2026-06-24 cite draft or pilot material. Check them against the current rules before relying on them.
 
-  Every thread below up to #173 was closed between 2026-06-24 and 2026-09-16. Unanswered follow-ups in those threads may never get a reply. Threads #174 through #178 were still open as of 2026-10-14. Threads #181 through #184 were open at the 2026-10-24 sync, #186 was open at the 2026-10-26 sync, and #188 was open at the 2026-11-04 sync.
+  Every thread below up to #173 was closed between 2026-06-24 and 2026-09-16. Unanswered follow-ups in those threads may never get a reply. Threads #174 through #178 were still open as of 2026-10-14. Threads #181 through #184 were open at the 2026-10-24 sync, #186 was open at the 2026-10-26 sync, and #188 was open at the 2026-11-04 sync. Threads #190, #194 and #195 were open at the 2026-11-09 sync.
 </Note>
+
+## #195 UEI definition
+
+[Thread](https://github.com/FedRAMP/community/discussions/195) (Rev5 Discussion, opened 2026-11-09).
+
+**Bottom line:** The Unique Entity ID (UEI) is a government procurement identifier, not a FedRAMP one, and FedRAMP Certification doesn't require it.
+
+The question: what the UEI is, and whether it's a CAGE code, a DUNS number or a FedRAMP-generated ID. The asker didn't find it in the FedRAMP definitions.
+
+<Note>
+  **pete-gov, 2026-11-09** ([comment](https://github.com/FedRAMP/community/discussions/195#discussioncomment-19496598)):
+  - The UEI is a 12-character alphanumeric code that GSA assigns through [SAM.gov](https://sam.gov/entity-registration) to identify companies that do business with the government.
+  - It is "not required for FedRAMP Certification" but is a core part of doing procurement with the government.
+  - The [Federal Service Desk](https://www.fsd.gov/gsafsd_sp/en/entity-registration-what-s-the-difference-between-only-getting-a-unique?id=kb_article_view&sysparm_article=KB0051214) has more information.
+</Note>
+
+**Open questions:** none raised.
+
+**What it means for you:** [`CDS-CSO-PUB`](https://www.fedramp.gov/2026/reference/certification-data-sharing/#public-information) lists a UEI number among the public information, "where available and applicable" (see [Certification data sharing](/rules/certification-data-sharing)). Staff said the UEI isn't required for FedRAMP Certification. The rules don't say when a UEI is "available and applicable," so check the official text if you have no UEI.
+
+## #194 Agencies and 20x
+
+[Thread](https://github.com/FedRAMP/community/discussions/194) (20x Discussion, opened 2026-11-08).
+
+**Bottom line:** FedRAMP says it can't make agencies use FedRAMP Certified services. Agency need drives agency use.
+
+The question: how the FedRAMP PMO will ensure that agencies use 20x.
+
+<Note>
+  **pete-gov, 2026-11-09** ([comment](https://github.com/FedRAMP/community/discussions/194#discussioncomment-19496803)):
+  - FedRAMP has no authority or responsibility to "ensure" that agencies use FedRAMP Certified services or the FedRAMP process. Its role is to supply the process and support it with templates, best practices, technical assistance and other materials.
+  - Oversight of agencies comes from other bodies: Congress (including through the Government Accountability Office), the Executive Office of the President (especially the Office of Management and Budget, including OMB Memorandum M-24-15) and Inspectors General.
+  - "In reality," agency need dictates agency use. Staff said using a service is considerably easier with a FedRAMP Certification, "especially a FedRAMP 20x Certification," but FedRAMP doesn't create that demand.
+</Note>
+
+**Open questions:** none raised.
+
+**What it means for you:** this is a staff position, and no rule ID is cited. The rules don't address agency adoption mandates. Don't plan around FedRAMP driving agency demand for your service.
+
+## #190 Complete list of Class A requirements
+
+[Thread](https://github.com/FedRAMP/community/discussions/190) (20x Discussion, opened 2026-11-04). Related rules: `FRC-CLA-MFR`, `FRC-CLA-RFR`, `FRC-CLA-OFR`, `FRC-CSO-PKG`, `CPO-CSO-OVR`, `IEC-CSO-IIR`.
+
+**Bottom line:** There is no flat list of Class A rules. FedRAMP staff say the Class A structure is confusing and are reworking it, with a target of the end of November 2026. Until then, the published rules govern, and staff readings below are not rule changes.
+
+The question: how to get one list of every MUST and SHOULD for Class A, including rules pulled in by references.
+
+<Note>
+  **pete-gov, 2026-11-05** ([comment](https://github.com/FedRAMP/community/discussions/190#discussioncomment-19421046)):
+  - The Ruleset Reference page lists the rules related to Class A in one place under [Related Rules](https://www.fedramp.gov/2026/reference/20x/a/related/), with the title marked Mandatory, Recommended or Optional.
+  - Class A is unusual: it has subsets that apply to it and rules that list other rules (`FRC-CLA-MFR`, `FRC-CLA-RFR`, `FRC-CLA-OFR`). Staff said you can build a full list from the rules JSON by taking the subsets that apply to Class A and the rules those three rules list.
+</Note>
+
+<Note>
+  **pete-gov, 2026-11-05** ([comment](https://github.com/FedRAMP/community/discussions/190#discussioncomment-19427122)): Staff said the way Class A was fitted into the rules "isn't great." Staff plan to add Class A metadata to some rules, tag which rules belong in the SDR and with what force, and publish a better human-readable Class A page. Staff also plan a review of Class A after 10 reviews.
+</Note>
+
+<Note>
+  **pete-gov, 2026-11-09** ([comment](https://github.com/FedRAMP/community/discussions/190#discussioncomment-19497183)):
+  - Staff opened [FedRAMP/rules#59](https://github.com/FedRAMP/rules/issues/59) to rework this, aiming for clearer Class A guidance and a separate process for those rules by the end of the month.
+  - On whether Class A providers must address all seven rules listed under `CPO-CSO-OVR`: staff called this "super confusing" and said the cause is relying on "applicable" rules. Staff expect you to address `CPO-CSO-MTD`, plus `CDS-CSO-PUB` and `MAS-CSO-IIR` because `FRC-CLA-MFR` requires them. Staff said the others aren't "applicable."
+  - On `IEC-CSO-IIR`: staff said the key words are "that is available" and "(if applicable)." You don't have to evaluate the incident to set a PAIN rating, so that information isn't available and needn't be included. `IEC-CSO-EFI` doesn't apply.
+</Note>
+
+<Warning>
+  The published [`CPO-CSO-OVR`](https://www.fedramp.gov/2026/reference/certification-package-overview/#overview-of-the-cloud-service-offering) says providers MUST include at least all information required by the rules it lists, and [`FRC-CSO-PKG`](https://www.fedramp.gov/2026/reference/fedramp-certification/#fedramp-certification-package) is on the Class A mandatory list. Staff's narrower reading is not in the rule text. The published rules govern. Watch [FedRAMP/rules#59](https://github.com/FedRAMP/rules/issues/59) for the rework.
+</Warning>
+
+**Open questions:** whether the reworked rules will carry a flat list of rule IDs with force, which the asker requested ([comment](https://github.com/FedRAMP/community/discussions/190#discussioncomment-19425788)). The thread doesn't answer this.
+
+**What it means for you:** `FRC-CLA-MFR` is your starting list of Class A MUSTs, and `FRC-CLA-RFR` and `FRC-CLA-OFR` give the SHOULD and MAY rules. See [FedRAMP certification](/rules/fedramp-certification). If you follow the staff reading to scope your package, record that you did and recheck after the rework lands.
 
 ## #188 Submitting an FRC-CSO-PKG Rev5
 
