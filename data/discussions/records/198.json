@@ -1,0 +1,56 @@
+{
+  "schema_version": 3,
+  "source": "github_discussions",
+  "repo": "FedRAMP/community",
+  "id": "fedramp-community-discussion-198",
+  "node_id": "D_kwDOOxfoic4ArHtw",
+  "number": 198,
+  "title": "How does advisory separation (REC-IAS-SEP) apply to other frameworks and products within a company?",
+  "url": "https://github.com/FedRAMP/community/discussions/198",
+  "category": "Rev5 Discussion",
+  "category_slug": "rev5-discussion",
+  "labels": [],
+  "is_official_thread": false,
+  "is_rfc": false,
+  "author": "ajpaulette",
+  "author_is_official": false,
+  "created_at": "2026-11-13T18:45:22Z",
+  "updated_at": "2026-11-13T20:37:29Z",
+  "last_edited_at": "2026-11-13T20:37:29Z",
+  "closed": false,
+  "closed_at": null,
+  "locked": false,
+  "is_answered": null,
+  "answer_chosen_at": null,
+  "upvotes": 3,
+  "body": "**TL;DR** - Can a 3PAO serving as a FedRAMP assessor validate PCI SAQs for a cloud service provider for the same cloud service offering? What about other cloud service offerings? Our 3PAO said they could not for either, though they could perform a full ROC. That doesn't line up (in my opinion) with the language in REC-IAS-SEP.\r\n\r\n---\r\n\r\nHello to the FedRAMP PMO! Long time listener, first time caller.\r\n\r\nI had a meeting with my 3PAO about engagements under other compliance frameworks, and their inability to provide certain services because they serve my company as an assessor. This didn't make sense to me, so I wanted to ask for clarity. My understanding is that our 3PAO checked with FedRAMP and was told SAQs count as advisory, which would not be allowed under [REC-IAS-SEP (Advisory Separation)](https://github.com/FedRAMP/rules/blob/64fa769510416fa75fd00a4689466094265b8083/fedramp-consolidated-rules.json#L8051-L8053):\r\n\r\n> Assessors MUST NOT perform a FedRAMP independent assessment of the same cloud service offering within 2 years after supplying advisory or consulting services for that offering, unless FedRAMP publishes a specific exception for a limited pilot or other explicitly scoped process.\r\n\r\n### Details on our situation\r\n\r\nWe hold a FedRAMP Rev5 authorization, and our 3PAO performs the annual assessment. We asked the same firm, acting as a PCI QSA, to validate PCI DSS self-assessment questionnaires (SAQ A, and SAQ D for service providers) for our company. At the moment, these are for products that are not included in our FedRAMP offering. Our 3PAO has told us it can't take on SAQ validations because they count as advisory work, but it could do a full Report on Compliance (ROC). We'd like to confirm FedRAMP's position.\r\n\r\n### My questions\r\n\r\nThese are written to start broad and get more specific. It could be that the answer to 1 is \"yes\" (more restrictive), but later answers shift to \"no\" (more permissive).\r\n\r\n1. Does REC-IAS-SEP apply to work under other frameworks, such as PCI DSS/ SOC 2/ ISO, or only to FedRAMP-related advisory work?\r\n2. Does FedRAMP consider a QSA's validation of a PCI self-assessment questionnaire to be \"advisory or consulting services\"? If so, how does that differ from a ROC, which our 3PAO says it can perform?\r\n3. Does the rule apply when the PCI work covers a different offering from the same provider, on separate infrastructure and outside the FedRAMP authorization boundary?\r\n\r\nAs I read it, REC-IAS-SEP applies to the \"same cloud service offering\", and it limits the FedRAMP assessment that follows advisory work, not other work the 3PAO does. It also doesn't treat a QSA's validation of an SAQ as advisory. At a minimum, it shouldn't be an issue for a 3PAO to provide services for a different product under a different framework.\r\n\r\nWroth noting - FedRAMP's own [advisors page](https://www.fedramp.gov/2026/advisors/) and the [related markdown in GitHub](https://github.com/FedRAMP/2026-markdown/blob/888be032e1290ec6bc7a01b7de4acc4da885575b/advisors/index.md?plain=1#L22-L24) seems to point the same way:\r\n\r\n> The same company may provide both advisory services and independent assessment services, but must take care to clearly specify which capacity they are acting under at all times while participating in the FedRAMP Certification process.\r\n\r\nThe language above feels a bit confusing, but not necessarily contradictory to rule REC-IAS-SEP.  If one company can be both a FedRAMP advisor and a FedRAMP assessor (as long as it isn't advising and assessing the same offering), it's hard to see why PCI work on a different product would be off limits. If that's not the intent, it would help to know how the page and REC-IAS-SEP fit together.\r\n\r\nPersonally, the language as written on the page feels confusing enough that written clarification on how it works with REC-IAS-SEP would be appreciated.\r\n\r\n### PCI context, in case it helps\r\n\r\nAn SAQ is the entity's own self-assessment, which the entity signs. A QSA can optionally take part, and the SAQ's QSA Acknowledgement section asks which role the QSA played: \"QSA performed testing procedures\" or \"QSA provided other assistance\".   The PCI SSC explains how to document a QSA's role in [FAQ 1445](https://www.pcisecuritystandards.org/faqs/1445/), and the SAQs themselves are in the [PCI SSC document library](https://www.pcisecuritystandards.org/document_library/?category=saqs).\r\n\r\nThanks in advance. A clear answer here would help other providers who use one firm for several frameworks (and the 3PAOs who provide them!).",
+  "comment_count": 0,
+  "comments": [],
+  "answer_url": null,
+  "participants": [
+    "ajpaulette"
+  ],
+  "official_responses": [],
+  "entities": {
+    "rule_ids": [
+      "REC-IAS-SEP"
+    ],
+    "rfc_ids": [],
+    "nist_controls": [],
+    "discussion_refs": [],
+    "urls": [
+      "https://github.com/FedRAMP/2026-markdown/blob/888be032e1290ec6bc7a01b7de4acc4da885575b/advisors/index.md?plain=1#L22-L24",
+      "https://github.com/FedRAMP/rules/blob/64fa769510416fa75fd00a4689466094265b8083/fedramp-consolidated-rules.json#L8051-L8053",
+      "https://www.fedramp.gov/2026/advisors/",
+      "https://www.pcisecuritystandards.org/document_library/?category=saqs",
+      "https://www.pcisecuritystandards.org/faqs/1445/"
+    ],
+    "topics": [
+      "3pao",
+      "machine_readable",
+      "rev5"
+    ]
+  },
+  "content_hash": "2e32ce68a8accbbb6712cc32f46713314fbc73b928dc805fbf5da673a79a32b8",
+  "synced_at": "2026-11-14T14:14:29.422486+00:00"
+}

@@ -17,7 +17,7 @@
   "author": "pete-gov",
   "author_is_official": true,
   "created_at": "2026-11-10T16:27:07Z",
-  "updated_at": "2026-11-12T21:35:33Z",
+  "updated_at": "2026-11-13T20:49:25Z",
   "last_edited_at": "2026-11-10T20:07:35Z",
   "closed": false,
   "closed_at": null,
@@ -26,7 +26,7 @@
   "answer_chosen_at": null,
   "upvotes": 2,
   "body": "# VDR/VER Migration Reporting Q&A / General Discussion\r\n\r\nOn Tue Nov 10, 2026, FedRAMP released [Public Notice NTC-0017 VDR/VER Migration Progress Reporting and Upcoming FY27 Q1 FedRAMP Security Inbox Test](https://www.fedramp.gov/notices/0017/). \r\n\r\nThis Notice explained that FedRAMP will be collecting Progress Reports from all FedRAMP Certified cloud service providers who are expected to migrate to the VDR/VER rules and explained how that information will be collected.\r\n\r\nIt included the [VDR/VER Migration Resources](https://www.fedramp.gov/vdr-migration/) website for additional information on Progress Report collection, including deadlines, corrective action plans, schemas, and more.\r\n\r\n---\r\n\r\nCollecting progress reports from nearly 600 cloud services is obviously a massive undertaking. We weren't even sure if it was feasible, to be honest. This is partially a test to see how it goes. In the future when folks have adopted CR26 or future consolidated rules things will be much easier as we can simply programmatically monitor everyone's information but today we still need to ask for progress reports.\r\n\r\n**This thread is dedicated to questions or feedback about this process, including the content, instructions, schemas, etc.**",
-  "comment_count": 2,
+  "comment_count": 3,
   "comments": [
     {
       "id": "DC_kwDOOxfoic4BKgGb",
@@ -85,13 +85,30 @@
       ],
       "replies_total": 1,
       "replies_truncated": false
+    },
+    {
+      "id": "DC_kwDOOxfoic4BKxEc",
+      "url": "https://github.com/FedRAMP/community/discussions/196#discussioncomment-19599644",
+      "author": "vennemp",
+      "author_association": "NONE",
+      "is_official": false,
+      "created_at": "2026-11-13T20:49:25Z",
+      "updated_at": "2026-11-13T20:49:25Z",
+      "upvotes": 1,
+      "minimized": false,
+      "body": "Could you clarify how **MUST/MUST NOT** vs. **SHOULD/SHOULD NOT** rules—and **partial implementations**—will be evaluated in the December Progress Report (Mini-SDR) and during February CAP adjudication?\n\nRight now, the migration guidance has a couple of nuances we want to be sure we interpret correctly:\n\n1. **MUST / MUST NOT rules (`Partially Implemented` or `Not Implemented`):**\n   - Our reading is that every applicable `MUST`/`MUST NOT` rule is expected to be `Fully Implemented` by December 7, and any `Partially Implemented` or `Not Implemented` `MUST`/`MUST NOT` rule **must** include `customerRisk`, `providerCompensation`, `agencyCompensation`, and an active CAP (`Planned`, `In Progress`, or `Pending Plan`)—with `capStatus: Not Applicable` never permitted to waive an incomplete `MUST`/`MUST NOT` rule. Is that exact?\n\n2. **SHOULD / SHOULD NOT rules (`Fully Implemented` vs. `Partially Implemented` vs. `Not Implemented`):**\n   - `index.md` defines *\"fully migrated\"* as: all `MUST`/`MUST NOT` rules fully implemented, and all `SHOULD`/`SHOULD NOT` rules *\"fully implemented **OR otherwise addressed**.\"*\n   - `reference.md` notes that incomplete `SHOULD`/`SHOULD NOT` rules need an explanation, resulting risk, and compensation options, while `schemas.md` states that *\"a justified SHOULD departure ... can also use CAP status `Not Applicable`\"* (as shown in the `harbor.json` example for `VER-EVA-GRV`).\n   - Could you clarify:\n     1. Is `Partially Implemented` or `Not Implemented` on a `SHOULD`/`SHOULD NOT` rule—paired with `explanation`, `customerRisk`, `providerCompensation`, `agencyCompensation`, and `capStatus: Not Applicable`—considered *\"otherwise addressed\"* (and therefore **\"fully migrated\"** without needing a remediation target date or risking *\"In Remediation\"* status in February)?\n     2. Or are there specific `SHOULD` rules / scenarios where FedRAMP expects a `Planned`/`In Progress` CAP rather than a documented departure (`capStatus: Not Applicable`), and what makes a `SHOULD` departure sufficiently justified during February review?\n",
+      "is_answer": false,
+      "replies": [],
+      "replies_total": 0,
+      "replies_truncated": false
     }
   ],
   "answer_url": null,
   "participants": [
     "iteuscher",
     "mmaesc1",
-    "pete-gov"
+    "pete-gov",
+    "vennemp"
   ],
   "official_responses": [
     {
@@ -107,7 +124,8 @@
   ],
   "entities": {
     "rule_ids": [
-      "VDR-TFR-MVF"
+      "VDR-TFR-MVF",
+      "VER-EVA-GRV"
     ],
     "rfc_ids": [],
     "nist_controls": [],
@@ -128,6 +146,6 @@
       "vulnerability_mgmt"
     ]
   },
-  "content_hash": "8bf6f8f345bf6d76c72135358de0aa95be6506c0ca6d4118f04f83a4c9eccf2a",
-  "synced_at": "2026-11-13T15:28:09.956346+00:00"
+  "content_hash": "d585c9b67b374255d4ad5e8fcf29081de1c19767268ed4c03c61c540d70cfd84",
+  "synced_at": "2026-11-14T14:14:29.422486+00:00"
 }
